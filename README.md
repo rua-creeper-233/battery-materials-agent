@@ -5,7 +5,7 @@
 ## 当前可用能力
 
 - 证据库共 40 篇：16 篇核心论文完成 DOI 与 WOS Core Collection 核验，另有 24 篇方法路线论文完成 DOI 与出版社记录核验；
-- 16/40 篇已有用户合法取得或公开可访问的本地正文，共 743 个带页码文本块；其余条目明确标记为全文待获取；
+- 39/40 篇已有用户合法取得或公开可访问的本地正文，共 2281 个带页码文本块；仅 Nature Protocols 的 VASPKIT 2025 论文仍明确标记为全文待获取；
 - 中文检索电压、稳定性、扩散、固态电解质、界面、高通量和机器学习势；
 - 回答中给出论文级证据、DOI、精确 WOS 记录和本地全文页码；
 - 为 DFT / NEB / AIMD / MLIP 任务生成带质量控制项的工作流；
@@ -80,7 +80,7 @@ python .\extract_method_evidence.py
 - AI4S：机器学习势选型、数据和验证实用指南；
 - 热力学/后处理：phonopy 与 sumo。
 
-这 12 篇已经核对 DOI、题名、作者、期刊和出版社记录，但尚未冒充为“已取得 WOS UT”或“已有本地全文”。核验清单见 [PAPER_AUDIT.md](PAPER_AUDIT.md)。
+这 12 篇已经核对 DOI、题名、作者、期刊和出版社记录；其 WOS 状态仍不会冒充为“已取得 WOS UT”。本地全文状态以 [FULLTEXT_AUDIT.md](FULLTEXT_AUDIT.md) 为准，书目核验见 [PAPER_AUDIT.md](PAPER_AUDIT.md)。
 
 Ceder et al. 1998 与 Shi et al. 2013 的 PDF 已由用户从有权访问的来源下载并导入 Zotero，随后作为 `user_supplied_zotero_attachment` 纳入本地全文索引。PDF 本身继续由 `.gitignore` 排除，不会上传 GitHub。
 
@@ -199,7 +199,7 @@ GitHub Pages 只托管 HTML/CSS/JavaScript，不能运行 Python。Quick Tunnel 
 
 ## 下一步
 
-1. 对 16 篇全文做“方法参数—结果数值—页码/图表”的结构化人工复核，并逐步合法取得 24 篇方法路线论文正文；
+1. 对 39 篇全文做“方法参数—结果数值—页码/图表”的结构化人工复核，并通过学校机构访问或作者公开稿合法补齐 VASPKIT 2025 正文；
 2. 接入 Materials Project/COD 的结构 ID 与可追溯 CIF；
 3. 生成可审查而非自动执行的 VASP 输入草案；
 4. 增加 VASP 收敛、NEB 势垒、MSD/D/σ 的结果检查器；

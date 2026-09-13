@@ -6,34 +6,19 @@
       "title": "Computational understanding of Li-ion batteries",
       "doi": "10.1038/npjcompumats.2016.2",
       "wos_uid": "WOS:000426821500008",
-      "checked_at": "2026-09-12T17:54:45+00:00",
+      "checked_at": "2026-09-13T18:11:09+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W2621656911",
-        "is_oa": true,
-        "oa_status": "gold",
-        "oa_url": "https://www.nature.com/articles/npjcompumats20162.pdf",
-        "best_landing_page": "https://doi.org/10.1038/npjcompumats.2016.2"
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
           "url": "https://www.nature.com/articles/npjcompumats20162.pdf",
-          "basis": "openalex_open_access_pdf"
-        },
-        {
-          "url": "https://www.osti.gov/biblio/1474909",
-          "basis": "openalex_open_access_pdf"
-        },
-        {
-          "url": "https://www.osti.gov/servlets/purl/1474909",
-          "basis": "open_access_landing_page"
-        },
-        {
-          "url": "https://research-repository.st-andrews.ac.uk/bitstream/10023/12860/1/Urban_2016_CM_Li_ionbatteries_CC.pdf",
-          "basis": "open_access_landing_page"
-        },
-        {
-          "url": "https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/12860/Urban_2016_CM_Li_ionbatteries_CC.pdf?sequence=1&isAllowed=y",
-          "basis": "open_access_landing_page"
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -69,26 +54,31 @@
         "chunks": 63,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:11:54+00:00"
+        "updated_at": "2026-09-13T18:41:31+00:00"
       },
-      "audited_at": "2026-09-13T13:11:42+00:00"
+      "audited_at": "2026-09-13T18:41:11+00:00"
     },
     "aydinol1997_voltage": {
       "title": "Ab initio study of lithium intercalation in metal oxides and metal dichalcogenides",
       "doi": "10.1103/PhysRevB.56.1354",
       "wos_uid": "WOS:A1997XM76600066",
-      "checked_at": "2026-09-12T18:11:01+00:00",
+      "checked_at": "2026-09-13T18:11:19+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W2092098411",
-        "is_oa": true,
-        "oa_status": "green",
-        "oa_url": "https://hdl.handle.net/11511/44083",
-        "best_landing_page": "https://hdl.handle.net/11511/44083"
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
           "url": "https://ceder.berkeley.edu/publications/prb-56-1354-1997.pdf",
           "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://journals.aps.org/prb/pdf/10.1103/PhysRevB.56.1354",
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -125,21 +115,22 @@
         "chunks": 40,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:11:55+00:00"
+        "updated_at": "2026-09-13T18:41:32+00:00"
       },
-      "audited_at": "2026-09-13T13:11:42+00:00"
+      "audited_at": "2026-09-13T18:41:11+00:00"
     },
     "ceder1998_cathode_design": {
       "title": "Identification of cathode materials for lithium batteries guided by first-principles calculations",
       "doi": "10.1038/33647",
       "wos_uid": "WOS:000073129000051",
-      "checked_at": "2026-09-12T18:16:43+00:00",
+      "checked_at": "2026-09-13T18:11:22+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W1854827278",
-        "is_oa": true,
-        "oa_status": "green",
-        "oa_url": "https://hdl.handle.net/11511/37447",
-        "best_landing_page": "https://hdl.handle.net/11511/37447"
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
@@ -148,7 +139,7 @@
         },
         {
           "url": "https://www.nature.com/articles/33647.pdf",
-          "basis": "open_access_landing_page"
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -186,14 +177,14 @@
         "document_kind": "article",
         "supplementary_signals": 0
       },
-      "audited_at": "2026-09-13T13:11:43+00:00",
+      "audited_at": "2026-09-13T18:41:12+00:00",
       "text_extraction": {
         "pages": 3,
         "text_chars": 21170,
         "chunks": 15,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:11:56+00:00"
+        "updated_at": "2026-09-13T18:41:32+00:00"
       },
       "uploaded_at": "2026-09-13T07:59:31.045741+00:00",
       "original_filename": "ceder1998_cathode_design.pdf"
@@ -202,18 +193,23 @@
       "title": "First-principles theory of ionic diffusion with nondilute carriers",
       "doi": "10.1103/PhysRevB.64.184307",
       "wos_uid": "WOS:000172239400054",
-      "checked_at": "2026-09-12T18:13:39+00:00",
+      "checked_at": "2026-09-13T18:11:31+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W1986211266",
+        "openalex_id": null,
         "is_oa": false,
-        "oa_status": "closed",
+        "oa_status": null,
         "oa_url": null,
-        "best_landing_page": null
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
           "url": "https://ceder.berkeley.edu/publications/prb-64-184307-2001.pdf",
           "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://journals.aps.org/prb/pdf/10.1103/PhysRevB.64.184307",
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -250,26 +246,31 @@
         "chunks": 61,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:11:57+00:00"
+        "updated_at": "2026-09-13T18:41:34+00:00"
       },
-      "audited_at": "2026-09-13T13:11:43+00:00"
+      "audited_at": "2026-09-13T18:41:12+00:00"
     },
     "ong2011_li_na": {
       "title": "Voltage, stability and diffusion barrier differences between sodium-ion and lithium-ion intercalation materials",
       "doi": "10.1039/C1EE01782A",
       "wos_uid": "WOS:000294306900068",
-      "checked_at": "2026-09-12T18:18:28+00:00",
+      "checked_at": "2026-09-13T18:11:33+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W2067381514",
+        "openalex_id": null,
         "is_oa": false,
-        "oa_status": "closed",
+        "oa_status": null,
         "oa_url": null,
-        "best_landing_page": null
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
           "url": "https://ceder.berkeley.edu/publications/Sodium_Energy_Environment.pdf",
           "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://pubs.rsc.org/en/content/articlepdf/2011/ee/c1ee01782a",
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -306,26 +307,31 @@
         "chunks": 37,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:11:57+00:00"
+        "updated_at": "2026-09-13T18:41:34+00:00"
       },
-      "audited_at": "2026-09-13T13:11:43+00:00"
+      "audited_at": "2026-09-13T18:41:12+00:00"
     },
     "ong2013_lgps": {
       "title": "Phase stability, electrochemical stability and ionic conductivity of the Li10±1MP2X12 family of superionic conductors",
       "doi": "10.1039/C2EE23355J",
       "wos_uid": "WOS:000312337700019",
-      "checked_at": "2026-09-12T18:18:31+00:00",
+      "checked_at": "2026-09-13T18:11:36+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W2096694960",
+        "openalex_id": null,
         "is_oa": false,
-        "oa_status": "closed",
+        "oa_status": null,
         "oa_url": null,
-        "best_landing_page": null
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
           "url": "https://ceder.berkeley.edu/publications/Shyue_2012_Li10MP2X12.pdf",
           "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://pubs.rsc.org/en/content/articlepdf/2013/ee/c2ee23355j",
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -362,21 +368,22 @@
         "chunks": 33,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:11:58+00:00"
+        "updated_at": "2026-09-13T18:41:35+00:00"
       },
-      "audited_at": "2026-09-13T13:11:43+00:00"
+      "audited_at": "2026-09-13T18:41:12+00:00"
     },
     "shi2013_sei_li2co3": {
       "title": "Defect Thermodynamics and Diffusion Mechanisms in Li2CO3 and Implications for the Solid Electrolyte Interphase in Li-Ion Batteries",
       "doi": "10.1021/jp310591u",
       "wos_uid": "WOS:000318536600001",
-      "checked_at": "2026-09-12T17:59:12+00:00",
+      "checked_at": "2026-09-13T18:11:39+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W2256422229",
+        "openalex_id": null,
         "is_oa": false,
-        "oa_status": "closed",
+        "oa_status": null,
         "oa_url": null,
-        "best_landing_page": null
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
@@ -409,27 +416,28 @@
         "document_kind": "article",
         "supplementary_signals": 0
       },
-      "audited_at": "2026-09-13T13:11:44+00:00",
+      "audited_at": "2026-09-13T18:41:12+00:00",
       "text_extraction": {
         "pages": 15,
         "text_chars": 93347,
         "chunks": 66,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:12:00+00:00"
+        "updated_at": "2026-09-13T18:41:37+00:00"
       }
     },
     "sendek2017_sse_screening": {
       "title": "Holistic computational structure screening of more than 12,000 candidates for solid lithium-ion conductor materials",
       "doi": "10.1039/C6EE02697D",
       "wos_uid": "WOS:000395208000028",
-      "checked_at": "2026-09-12T18:23:58+00:00",
+      "checked_at": "2026-09-13T18:11:42+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W2559612475",
+        "openalex_id": null,
         "is_oa": false,
-        "oa_status": "closed",
+        "oa_status": null,
         "oa_url": null,
-        "best_landing_page": null
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
@@ -439,6 +447,10 @@
         {
           "url": "https://drive.usercontent.google.com/download?id=1QysXRQ9tcEOYUyxhfFQNrErNgPgl0Zy8&export=download&confirm=t",
           "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://pubs.rsc.org/en/content/articlepdf/2017/ee/c6ee02697d",
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -475,34 +487,27 @@
         "chunks": 59,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:12:01+00:00"
+        "updated_at": "2026-09-13T18:41:38+00:00"
       },
-      "audited_at": "2026-09-13T13:11:44+00:00"
+      "audited_at": "2026-09-13T18:41:13+00:00"
     },
     "baktash2020_argyrodite_aimd": {
       "title": "Diffusion of lithium ions in Lithium-argyrodite solid-state electrolytes",
       "doi": "10.1038/s41524-020-00432-1",
       "wos_uid": "WOS:000584639000001",
-      "checked_at": "2026-09-12T17:59:21+00:00",
+      "checked_at": "2026-09-13T18:11:45+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W3095613010",
-        "is_oa": true,
-        "oa_status": "gold",
-        "oa_url": "https://www.nature.com/articles/s41524-020-00432-1.pdf",
-        "best_landing_page": "https://doi.org/10.1038/s41524-020-00432-1"
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
           "url": "https://www.nature.com/articles/s41524-020-00432-1.pdf",
-          "basis": "openalex_open_access_pdf"
-        },
-        {
-          "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41524-020-00432-1/MediaObjects/41524_2020_432_MOESM1_ESM.pdf",
-          "basis": "open_access_landing_page"
-        },
-        {
-          "url": "https://arxiv.org/pdf/1912.02971",
-          "basis": "openalex_open_access_pdf"
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -538,26 +543,31 @@
         "chunks": 45,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:12:02+00:00"
+        "updated_at": "2026-09-13T18:41:39+00:00"
       },
-      "audited_at": "2026-09-13T13:11:44+00:00"
+      "audited_at": "2026-09-13T18:41:13+00:00"
     },
     "chen2022_m3gnet": {
       "title": "A universal graph deep learning interatomic potential for the periodic table",
       "doi": "10.1038/s43588-022-00349-3",
       "wos_uid": "WOS:000890324500016",
-      "checked_at": "2026-09-12T18:26:28+00:00",
+      "checked_at": "2026-09-13T18:11:54+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W4310135808",
+        "openalex_id": null,
         "is_oa": false,
-        "oa_status": "closed",
+        "oa_status": null,
         "oa_url": null,
-        "best_landing_page": null
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
           "url": "https://arxiv.org/pdf/2202.02450",
           "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://www.nature.com/articles/s43588-022-00349-3.pdf",
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -593,32 +603,29 @@
         "chunks": 92,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:13:22+00:00"
+        "updated_at": "2026-09-13T18:43:00+00:00"
       },
       "supplementary_pdf": "literature/supplementary/chen2022_m3gnet_supplementary.pdf",
       "local_pdf": "literature/pdfs/chen2022_m3gnet.pdf",
-      "audited_at": "2026-09-13T13:11:44+00:00"
+      "audited_at": "2026-09-13T18:41:13+00:00"
     },
     "sawada2024_nnp_sse": {
       "title": "High-throughput investigation of stability and Li diffusion of doped solid electrolytes via neural network potential without configurational knowledge",
       "doi": "10.1038/s41598-024-62054-7",
       "wos_uid": "WOS:001229023500115",
-      "checked_at": "2026-09-12T18:02:46+00:00",
+      "checked_at": "2026-09-13T18:12:01+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W4398168460",
-        "is_oa": true,
-        "oa_status": "gold",
-        "oa_url": "https://doi.org/10.1038/s41598-024-62054-7",
-        "best_landing_page": "https://doi.org/10.1038/s41598-024-62054-7"
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
           "url": "https://www.nature.com/articles/s41598-024-62054-7.pdf",
-          "basis": "open_access_landing_page"
-        },
-        {
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11637207/pdf/41598_2024_Article_62054.pdf",
-          "basis": "openalex_open_access_pdf"
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -654,26 +661,27 @@
         "chunks": 23,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:13:23+00:00"
+        "updated_at": "2026-09-13T18:43:01+00:00"
       },
-      "audited_at": "2026-09-13T13:11:45+00:00"
+      "audited_at": "2026-09-13T18:41:14+00:00"
     },
     "ling2022_battery_informatics": {
       "title": "A review of the recent progress in battery informatics",
       "doi": "10.1038/s41524-022-00713-x",
       "wos_uid": "WOS:000757839700001",
-      "checked_at": "2026-09-12T18:03:50+00:00",
+      "checked_at": "2026-09-13T18:12:10+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W4213140999",
-        "is_oa": true,
-        "oa_status": "gold",
-        "oa_url": "https://www.nature.com/articles/s41524-022-00713-x.pdf",
-        "best_landing_page": "https://doi.org/10.1038/s41524-022-00713-x"
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
           "url": "https://www.nature.com/articles/s41524-022-00713-x.pdf",
-          "basis": "openalex_open_access_pdf"
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -709,21 +717,22 @@
         "chunks": 108,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:13:26+00:00"
+        "updated_at": "2026-09-13T18:43:04+00:00"
       },
-      "audited_at": "2026-09-13T13:11:45+00:00"
+      "audited_at": "2026-09-13T18:41:14+00:00"
     },
     "henkelman2000_cineb": {
       "title": "A climbing image nudged elastic band method for finding saddle points and minimum energy paths",
       "doi": "10.1063/1.1329672",
       "wos_uid": "WOS:000165584900005",
-      "checked_at": "2026-09-12T18:14:11+00:00",
+      "checked_at": "2026-09-13T18:12:19+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W2122427541",
+        "openalex_id": null,
         "is_oa": false,
-        "oa_status": "closed",
+        "oa_status": null,
         "oa_url": null,
-        "best_landing_page": null
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
@@ -765,26 +774,27 @@
         "chunks": 30,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:13:26+00:00"
+        "updated_at": "2026-09-13T18:43:04+00:00"
       },
-      "audited_at": "2026-09-13T13:11:45+00:00"
+      "audited_at": "2026-09-13T18:41:14+00:00"
     },
     "leung2010_sei_aimd": {
       "title": "Ab initio molecular dynamics simulations of the initial stages of solid-electrolyte interphase formation on lithium ion battery graphitic anodes",
       "doi": "10.1039/B925853A",
       "wos_uid": "WOS:000278824400004",
-      "checked_at": "2026-09-12T18:04:55+00:00",
+      "checked_at": "2026-09-13T18:12:22+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W2147023814",
-        "is_oa": true,
-        "oa_status": "green",
-        "oa_url": "https://arxiv.org/pdf/1009.4154",
-        "best_landing_page": "http://arxiv.org/abs/1009.4154"
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
           "url": "https://arxiv.org/pdf/1009.4154",
-          "basis": "openalex_open_access_pdf"
+          "basis": "vetted_public_author_or_repository_copy"
         },
         {
           "url": "https://pubs.rsc.org/en/content/articlepdf/2010/cp/b925853a",
@@ -824,26 +834,31 @@
         "chunks": 15,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:13:32+00:00"
+        "updated_at": "2026-09-13T18:43:11+00:00"
       },
-      "audited_at": "2026-09-13T13:11:52+00:00"
+      "audited_at": "2026-09-13T18:41:20+00:00"
     },
     "mo2012_lgps_aimd": {
       "title": "First Principles Study of the Li10GeP2S12 Lithium Super Ionic Conductor Material",
       "doi": "10.1021/cm203303y",
       "wos_uid": "WOS:000298908400006",
-      "checked_at": "2026-09-12T18:14:15+00:00",
+      "checked_at": "2026-09-13T18:12:37+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W2007361815",
+        "openalex_id": null,
         "is_oa": false,
-        "oa_status": "closed",
+        "oa_status": null,
         "oa_url": null,
-        "best_landing_page": null
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
           "url": "https://ceder.berkeley.edu/publications/YiFei_Lithium_Conductor.pdf",
           "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://pubs.acs.org/doi/pdf/10.1021/cm203303y",
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -880,70 +895,31 @@
         "chunks": 12,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:13:33+00:00"
+        "updated_at": "2026-09-13T18:43:11+00:00"
       },
-      "audited_at": "2026-09-13T13:11:52+00:00"
+      "audited_at": "2026-09-13T18:41:21+00:00"
     },
     "deng2023_chgnet": {
       "title": "CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling",
       "doi": "10.1038/s42256-023-00716-3",
       "wos_uid": "WOS:001085170400007",
-      "checked_at": "2026-09-12T18:07:59+00:00",
+      "checked_at": "2026-09-13T18:12:40+00:00",
       "open_access": {
-        "openalex_id": "https://openalex.org/W4386740800",
-        "is_oa": true,
-        "oa_status": "hybrid",
-        "oa_url": "https://www.nature.com/articles/s42256-023-00716-3.pdf",
-        "best_landing_page": "https://doi.org/10.1038/s42256-023-00716-3"
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
       },
       "candidates": [
         {
+          "url": "https://arxiv.org/pdf/2302.14231",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
           "url": "https://www.nature.com/articles/s42256-023-00716-3.pdf",
-          "basis": "openalex_open_access_pdf"
-        },
-        {
-          "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs42256-023-00716-3/MediaObjects/42256_2023_716_MOESM1_ESM.pdf",
-          "basis": "open_access_landing_page"
-        },
-        {
-          "url": "https://escholarship.org/content/qt6qb0x6rr/qt6qb0x6rr.pdf",
-          "basis": "openalex_open_access_pdf"
-        },
-        {
-          "url": "https://www.osti.gov/servlets/purl/2281218",
-          "basis": "openalex_open_access_pdf"
-        },
-        {
-          "url": "https://www.repository.cam.ac.uk/bitstreams/8c2961f8-8f7c-43f7-ba6a-b758fea22b6e/download",
-          "basis": "openalex_open_access_pdf"
-        },
-        {
-          "url": "https://www.repository.cam.ac.uk/bitstreams/f7ecc91e-8ca9-49b4-b46b-189554888121/download",
-          "basis": "open_access_landing_page"
-        },
-        {
-          "url": "https://www.repository.cam.ac.uk/bitstreams/bc8272ae-3489-47d5-9dd6-37ce214b6230/download",
-          "basis": "open_access_landing_page"
-        },
-        {
-          "url": "https://www.repository.cam.ac.uk/bitstreams/4bd4a634-3669-45f0-856d-c2945620a80e/download",
-          "basis": "open_access_landing_page"
-        },
-        {
-          "url": "https://www.repository.cam.ac.uk/bitstreams/c3b5a0bd-275a-4e53-afa9-c06521000623/download",
-          "basis": "openalex_open_access_pdf"
-        },
-        {
-          "url": "https://www.repository.cam.ac.uk/bitstreams/a8a28bff-e572-4721-9fe7-8ed78070d0cd/download",
-          "basis": "open_access_landing_page"
-        },
-        {
-          "url": "https://www.repository.cam.ac.uk/bitstreams/918537d7-13c2-4aea-ae6d-d77c11797443/download",
-          "basis": "open_access_landing_page"
-        },
-        {
-          "url": "https://www.repository.cam.ac.uk/bitstreams/9e30662d-ce0b-45d7-b4b4-5b4db97ee7e8/download",
-          "basis": "open_access_landing_page"
+          "basis": "official_publisher_current_network"
         }
       ],
       "status": "downloaded",
@@ -979,168 +955,1473 @@
         "chunks": 44,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T13:13:36+00:00"
+        "updated_at": "2026-09-13T18:43:15+00:00"
       },
-      "audited_at": "2026-09-13T13:11:53+00:00"
+      "audited_at": "2026-09-13T18:41:21+00:00"
     },
     "geng2025_vaspkit_protocol": {
       "title": "Empowering materials science with VASPKIT: a toolkit for enhanced simulation and analysis",
       "doi": "10.1038/s41596-025-01160-w",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "not_downloaded",
+      "checked_at": "2026-09-13T18:12:48+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41596-025-01160-w.pdf",
+          "basis": "official_publisher_current_network",
+          "ok": false,
+          "reason": "response_is_not_pdf",
+          "content_type": "text/html",
+          "final_url": "https://www.nature.com/articles/s41596-025-01160-w?error=cookies_not_supported&code=675f7c04-6529-47f0-8119-b0e0e5821caa",
+          "bytes": 337713,
+          "attempted_at": "2026-09-13T18:13:06+00:00"
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://www.nature.com/articles/s41596-025-01160-w.pdf",
+          "basis": "official_publisher_current_network"
+        }
+      ]
     },
     "wang2021_vaspkit": {
       "title": "VASPKIT: A user-friendly interface facilitating high-throughput computing and analysis using VASP code",
       "doi": "10.1016/j.cpc.2021.108033",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:13:07+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/1908.08269",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/1908.08269",
+          "content_type": "application/pdf",
+          "bytes": 10989556,
+          "sha256": "51e63db20c1edc3cc3361e6318f6b0781e140d1354826415dc164b814b0e81f4",
+          "attempted_at": "2026-09-13T18:13:14+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/1908.08269",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://arxiv.org/pdf/1908.08269",
+      "local_pdf": "literature/pdfs/wang2021_vaspkit.pdf",
+      "sha256": "51e63db20c1edc3cc3361e6318f6b0781e140d1354826415dc164b814b0e81f4",
+      "bytes": 10989556,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 33,
+        "encrypted": false,
+        "first_pages_text_chars": 9743,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 33,
+        "text_chars": 95128,
+        "chunks": 77,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:23+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:22+00:00"
     },
     "ong2013_pymatgen": {
       "title": "Python Materials Genomics (pymatgen): A robust, open-source python library for materials analysis",
       "doi": "10.1016/j.commatsci.2012.10.028",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:13:15+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://perssongroup.lbl.gov/papers/compmatsci2013-pymatgen.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://perssongroup.lbl.gov/papers/compmatsci2013-pymatgen.pdf",
+          "content_type": "application/pdf",
+          "bytes": 1285759,
+          "sha256": "7d2ebf7ed7325b30421b44e208dbdbb8f6d7b324b84ecd24619994a560658f8e",
+          "attempted_at": "2026-09-13T18:13:18+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://perssongroup.lbl.gov/papers/compmatsci2013-pymatgen.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://ceder.berkeley.edu/publications/2012_Python_materials_genomics.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://perssongroup.lbl.gov/papers/compmatsci2013-pymatgen.pdf",
+      "local_pdf": "literature/pdfs/ong2013_pymatgen.pdf",
+      "sha256": "7d2ebf7ed7325b30421b44e208dbdbb8f6d7b324b84ecd24619994a560658f8e",
+      "bytes": 1285759,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 6,
+        "encrypted": false,
+        "first_pages_text_chars": 15846,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 6,
+        "text_chars": 34578,
+        "chunks": 26,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:23+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:22+00:00"
     },
     "larsen2017_ase": {
       "title": "The atomic simulation environment—a Python library for working with atoms",
       "doi": "10.1088/1361-648X/aa680e",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:19:35+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/130802447/main.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/130802447/main.pdf",
+          "content_type": "application/pdf",
+          "bytes": 3225579,
+          "sha256": "0e43d179a85bd8782f8e0ce5f8bd5f28e5dd6a2d96ec5059e59eee430fa50adf",
+          "attempted_at": "2026-09-13T18:19:42+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/130802447/main.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://backend.orbit.dtu.dk/ws/portalfiles/portal/130802447/main.pdf",
+      "local_pdf": "literature/pdfs/larsen2017_ase.pdf",
+      "sha256": "0e43d179a85bd8782f8e0ce5f8bd5f28e5dd6a2d96ec5059e59eee430fa50adf",
+      "bytes": 3225579,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 60,
+        "encrypted": false,
+        "first_pages_text_chars": 7431,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 60,
+        "text_chars": 154051,
+        "chunks": 119,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:28+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:22+00:00"
     },
     "ganose2025_atomate2": {
       "title": "Atomate2: modular workflows for materials science",
       "doi": "10.1039/D5DD00019J",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:13:28+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://escholarship.org/content/qt9d78f7qc/qt9d78f7qc_noSplash_a24b5abd10df0845fb7110c53fbe8a8f.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://escholarship.org/content/qt9d78f7qc/qt9d78f7qc_noSplash_a24b5abd10df0845fb7110c53fbe8a8f.pdf",
+          "content_type": "application/pdf",
+          "bytes": 2591525,
+          "sha256": "78b775f56b7e31a067e6135ecacf7a5d07c6281c274f138ebab6f6c3b364d9f6",
+          "attempted_at": "2026-09-13T18:13:31+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://escholarship.org/content/qt9d78f7qc/qt9d78f7qc_noSplash_a24b5abd10df0845fb7110c53fbe8a8f.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://pubs.rsc.org/en/content/articlepdf/2025/ee/d5dd00019j",
+          "basis": "official_publisher_current_network"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://escholarship.org/content/qt9d78f7qc/qt9d78f7qc_noSplash_a24b5abd10df0845fb7110c53fbe8a8f.pdf",
+      "local_pdf": "literature/pdfs/ganose2025_atomate2.pdf",
+      "sha256": "78b775f56b7e31a067e6135ecacf7a5d07c6281c274f138ebab6f6c3b364d9f6",
+      "bytes": 2591525,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 73,
+        "encrypted": false,
+        "first_pages_text_chars": 6520,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 73,
+        "text_chars": 137376,
+        "chunks": 118,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:31+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:22+00:00"
     },
     "jain2013_materials_project": {
       "title": "Commentary: The Materials Project: A materials genome approach to accelerating materials innovation",
       "doi": "10.1063/1.4812323",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:37:56+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://web.mit.edu/ceder/publications/2013_Jain_Materials_Project.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": false,
+          "reason": "HTTPError",
+          "http_status": 404,
+          "detail": "HTTP Error 404: Not Found",
+          "attempted_at": "2026-09-13T18:37:58+00:00"
+        },
+        {
+          "url": "https://iric.imet-db.ru/PDF/161.pdf",
+          "basis": "vetted_open_licensed_redistribution_copy",
+          "ok": true,
+          "final_url": "https://iric.imet-db.ru/PDF/161.pdf",
+          "content_type": "application/pdf",
+          "bytes": 1755622,
+          "sha256": "cc441850e34b9f63516148d51b941027174fba13acd75c821109945c879fcc6d",
+          "attempted_at": "2026-09-13T18:38:01+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://web.mit.edu/ceder/publications/2013_Jain_Materials_Project.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://iric.imet-db.ru/PDF/161.pdf",
+          "basis": "vetted_open_licensed_redistribution_copy"
+        }
+      ],
+      "access_basis": "vetted_open_licensed_redistribution_copy",
+      "source_url": "https://iric.imet-db.ru/PDF/161.pdf",
+      "local_pdf": "literature/pdfs/jain2013_materials_project.pdf",
+      "sha256": "cc441850e34b9f63516148d51b941027174fba13acd75c821109945c879fcc6d",
+      "bytes": 1755622,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 12,
+        "encrypted": false,
+        "first_pages_text_chars": 8058,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 12,
+        "text_chars": 35032,
+        "chunks": 27,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:32+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:23+00:00"
     },
     "smidstrup2014_idpp": {
       "title": "Improved initial guess for minimum energy path calculations",
       "doi": "10.1063/1.4878664",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:13:35+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/1406.1512",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/1406.1512",
+          "content_type": "application/pdf",
+          "bytes": 2596067,
+          "sha256": "aa53a833f537d0e4c11e01d7db684e1331f64ee28fddd9cbb26e2ca2e113732d",
+          "attempted_at": "2026-09-13T18:13:38+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/1406.1512",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://arxiv.org/pdf/1406.1512",
+      "local_pdf": "literature/pdfs/smidstrup2014_idpp.pdf",
+      "sha256": "aa53a833f537d0e4c11e01d7db684e1331f64ee28fddd9cbb26e2ca2e113732d",
+      "bytes": 2596067,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 14,
+        "encrypted": false,
+        "first_pages_text_chars": 7061,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 14,
+        "text_chars": 24800,
+        "chunks": 21,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:33+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:23+00:00"
     },
     "he2018_aimd_statistics": {
       "title": "Statistical variances of diffusional properties from ab initio molecular dynamics simulations",
       "doi": "10.1038/s41524-018-0074-y",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:13:39+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://api.drum.lib.umd.edu/server/api/core/bitstreams/ef25575f-9594-4e80-8543-caaae487c530/content",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://api.drum.lib.umd.edu/server/api/core/bitstreams/ef25575f-9594-4e80-8543-caaae487c530/content",
+          "content_type": "application/pdf",
+          "bytes": 1902841,
+          "sha256": "ce5782d278006be431c5416ec03eeaa75abcdf4e8ab70343934e987bdaff7eff",
+          "attempted_at": "2026-09-13T18:13:47+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://api.drum.lib.umd.edu/server/api/core/bitstreams/ef25575f-9594-4e80-8543-caaae487c530/content",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41524-018-0074-y.pdf",
+          "basis": "official_publisher_current_network"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://api.drum.lib.umd.edu/server/api/core/bitstreams/ef25575f-9594-4e80-8543-caaae487c530/content",
+      "local_pdf": "literature/pdfs/he2018_aimd_statistics.pdf",
+      "sha256": "ce5782d278006be431c5416ec03eeaa75abcdf4e8ab70343934e987bdaff7eff",
+      "bytes": 1902841,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 9,
+        "encrypted": false,
+        "first_pages_text_chars": 19136,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 9,
+        "text_chars": 56400,
+        "chunks": 40,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:34+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:23+00:00"
     },
     "zhou2004_dftu_voltage": {
       "title": "First-principles prediction of redox potentials in transition-metal compounds with LDA+U",
       "doi": "10.1103/PhysRevB.70.235121",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:13:48+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://web.mit.edu/ceder/publications/PhysRevB_70_235121.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": false,
+          "reason": "HTTPError",
+          "http_status": 404,
+          "detail": "HTTP Error 404: Not Found",
+          "attempted_at": "2026-09-13T18:13:52+00:00"
+        },
+        {
+          "url": "https://arxiv.org/pdf/cond-mat/0406382",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/cond-mat/0406382",
+          "content_type": "application/pdf",
+          "bytes": 253899,
+          "sha256": "8cd8dc191c6e05224e006452959cbba04022b636b4d8b8ea4e78527bf8c9ff8e",
+          "attempted_at": "2026-09-13T18:13:52+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://web.mit.edu/ceder/publications/PhysRevB_70_235121.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://arxiv.org/pdf/cond-mat/0406382",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://journals.aps.org/prb/pdf/10.1103/PhysRevB.70.235121",
+          "basis": "official_publisher_current_network"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://arxiv.org/pdf/cond-mat/0406382",
+      "local_pdf": "literature/pdfs/zhou2004_dftu_voltage.pdf",
+      "sha256": "8cd8dc191c6e05224e006452959cbba04022b636b4d8b8ea4e78527bf8c9ff8e",
+      "bytes": 253899,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 21,
+        "encrypted": false,
+        "first_pages_text_chars": 5914,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 21,
+        "text_chars": 35394,
+        "chunks": 33,
+        "empty_text_pages": [
+          21
+        ],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:35+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:23+00:00"
     },
     "jacobs2025_mlip_guide": {
       "title": "A practical guide to machine learning interatomic potentials – Status and future",
       "doi": "10.1016/j.cossms.2025.101214",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:13:53+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/2503.09814",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/2503.09814",
+          "content_type": "application/pdf",
+          "bytes": 1497874,
+          "sha256": "1ef4fbe54f2d7cd324b8aacbccdc00fbf0b833eacd2bb7d43d183f3a7260ec9a",
+          "attempted_at": "2026-09-13T18:13:56+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/2503.09814",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://arxiv.org/pdf/2503.09814",
+      "local_pdf": "literature/pdfs/jacobs2025_mlip_guide.pdf",
+      "sha256": "1ef4fbe54f2d7cd324b8aacbccdc00fbf0b833eacd2bb7d43d183f3a7260ec9a",
+      "bytes": 1497874,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 83,
+        "encrypted": false,
+        "first_pages_text_chars": 3753,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 83,
+        "text_chars": 218808,
+        "chunks": 165,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:43+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:23+00:00"
     },
     "togo2015_phonopy": {
       "title": "First principles phonon calculations in materials science",
       "doi": "10.1016/j.scriptamat.2015.07.021",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:13:57+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/1506.08498",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/1506.08498",
+          "content_type": "application/pdf",
+          "bytes": 567710,
+          "sha256": "9a844031f768892ee3e0b3df1da26780891887c5807e0a62f0f4d3c0051a1724",
+          "attempted_at": "2026-09-13T18:14:00+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/1506.08498",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://arxiv.org/pdf/1506.08498",
+      "local_pdf": "literature/pdfs/togo2015_phonopy.pdf",
+      "sha256": "9a844031f768892ee3e0b3df1da26780891887c5807e0a62f0f4d3c0051a1724",
+      "bytes": 567710,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 6,
+        "encrypted": false,
+        "first_pages_text_chars": 12812,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 6,
+        "text_chars": 29653,
+        "chunks": 21,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:44+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:24+00:00"
     },
     "ganose2018_sumo": {
       "title": "sumo: Command-line tools for plotting and analysis of periodic ab initio calculations",
       "doi": "10.21105/joss.00717",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:14:01+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://joss.theoj.org/papers/10.21105/joss.00717.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://joss.theoj.org/papers/10.21105/joss.00717.pdf",
+          "content_type": "application/pdf",
+          "bytes": 508601,
+          "sha256": "9d66b45592093bb490688edcee6b3bfb086c33a0fbe5de1350a0d4f0545f9602",
+          "attempted_at": "2026-09-13T18:14:05+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://joss.theoj.org/papers/10.21105/joss.00717.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://joss.theoj.org/papers/10.21105/joss.00717.pdf",
+      "local_pdf": "literature/pdfs/ganose2018_sumo.pdf",
+      "sha256": "9d66b45592093bb490688edcee6b3bfb086c33a0fbe5de1350a0d4f0545f9602",
+      "bytes": 508601,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 3,
+        "encrypted": false,
+        "first_pages_text_chars": 7527,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 3,
+        "text_chars": 7525,
+        "chunks": 6,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:44+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:24+00:00"
     },
     "wang2018_deepmdkit": {
       "title": "DeePMD-kit: A deep learning package for many-body potential energy representation and molecular dynamics",
       "doi": "10.1016/j.cpc.2018.03.016",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:14:06+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/1712.03641",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/1712.03641",
+          "content_type": "application/pdf",
+          "bytes": 674933,
+          "sha256": "c4805bac22be1943dbebb6901c43f09b3ed13343bbf990fb4f8d52acd7961de1",
+          "attempted_at": "2026-09-13T18:14:08+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/1712.03641",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://arxiv.org/pdf/1712.03641",
+      "local_pdf": "literature/pdfs/wang2018_deepmdkit.pdf",
+      "sha256": "c4805bac22be1943dbebb6901c43f09b3ed13343bbf990fb4f8d52acd7961de1",
+      "bytes": 674933,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 22,
+        "encrypted": false,
+        "first_pages_text_chars": 4662,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 22,
+        "text_chars": 38794,
+        "chunks": 35,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:45+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:24+00:00"
     },
     "zhang2020_dpgen": {
       "title": "DP-GEN: A concurrent learning platform for the generation of reliable deep learning based potential energy models",
       "doi": "10.1016/j.cpc.2020.107206",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:14:09+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/1910.12690",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/1910.12690",
+          "content_type": "application/pdf",
+          "bytes": 1133509,
+          "sha256": "f04791ff076d491ac361d332ad2a6c756eb55c26899b91794232553874c25008",
+          "attempted_at": "2026-09-13T18:14:12+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/1910.12690",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://arxiv.org/pdf/1910.12690",
+      "local_pdf": "literature/pdfs/zhang2020_dpgen.pdf",
+      "sha256": "f04791ff076d491ac361d332ad2a6c756eb55c26899b91794232553874c25008",
+      "bytes": 1133509,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 29,
+        "encrypted": false,
+        "first_pages_text_chars": 5403,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 29,
+        "text_chars": 57227,
+        "chunks": 48,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:47+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:24+00:00"
     },
     "batzner2022_nequip": {
       "title": "E(3)-equivariant graph neural networks for data-efficient and accurate interatomic potentials",
       "doi": "10.1038/s41467-022-29939-5",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:14:13+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41467-022-29939-5.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://www.nature.com/articles/s41467-022-29939-5.pdf?error=cookies_not_supported&code=a8b481db-152e-488a-b8a4-132f3eb90ff1",
+          "content_type": "application/pdf",
+          "bytes": 1510696,
+          "sha256": "f0807bc69ea44a907354c022a5834d2eb330554d336e98a996c6c51f7c4885b9",
+          "attempted_at": "2026-09-13T18:14:22+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://www.nature.com/articles/s41467-022-29939-5.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2101.03164",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://www.nature.com/articles/s41467-022-29939-5.pdf?error=cookies_not_supported&code=a8b481db-152e-488a-b8a4-132f3eb90ff1",
+      "local_pdf": "literature/pdfs/batzner2022_nequip.pdf",
+      "sha256": "f0807bc69ea44a907354c022a5834d2eb330554d336e98a996c6c51f7c4885b9",
+      "bytes": 1510696,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 11,
+        "encrypted": false,
+        "first_pages_text_chars": 16331,
+        "title_token_match": 0.889,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 11,
+        "text_chars": 75728,
+        "chunks": 54,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:49+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:25+00:00"
     },
     "musaelian2023_allegro": {
       "title": "Learning local equivariant representations for large-scale atomistic dynamics",
       "doi": "10.1038/s41467-023-36329-y",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:14:24+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41467-023-36329-y.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://www.nature.com/articles/s41467-023-36329-y.pdf?error=cookies_not_supported&code=619f2e7a-e051-4cdc-a666-0db5cde6e785",
+          "content_type": "application/pdf",
+          "bytes": 1189812,
+          "sha256": "c20c1c4fb543ce9994d45c2ef56059508c9f8d95289f3c00f01e73459518e2ab",
+          "attempted_at": "2026-09-13T18:14:35+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://www.nature.com/articles/s41467-023-36329-y.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2204.05249",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2105.14655.pdf",
+          "basis": "official_publisher_current_network"
+        },
+        {
+          "url": "https://arxiv.org/pdf/1802.08219.pdf",
+          "basis": "official_publisher_current_network"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://www.nature.com/articles/s41467-023-36329-y.pdf?error=cookies_not_supported&code=619f2e7a-e051-4cdc-a666-0db5cde6e785",
+      "local_pdf": "literature/pdfs/musaelian2023_allegro.pdf",
+      "sha256": "c20c1c4fb543ce9994d45c2ef56059508c9f8d95289f3c00f01e73459518e2ab",
+      "bytes": 1189812,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 15,
+        "encrypted": false,
+        "first_pages_text_chars": 15748,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 15,
+        "text_chars": 91360,
+        "chunks": 65,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:51+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:26+00:00"
     },
     "deringer2021_gpr_gap": {
       "title": "Gaussian Process Regression for Materials and Molecules",
       "doi": "10.1021/acs.chemrev.1c00022",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:14:36+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://wrap.warwick.ac.uk/155761/1/WRAP-Gaussian-process-regression-materials-molecules-Bart%C3%B3k-2021.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://wrap.warwick.ac.uk/id/eprint/155761/1/WRAP-Gaussian-process-regression-materials-molecules-Bart%C3%B3k-2021.pdf",
+          "content_type": "application/pdf",
+          "bytes": 14661442,
+          "sha256": "399d83209303a71afedbdacb07182b70b59318359d393d28b6b2897d534d0a61",
+          "attempted_at": "2026-09-13T18:14:46+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://wrap.warwick.ac.uk/155761/1/WRAP-Gaussian-process-regression-materials-molecules-Bart%C3%B3k-2021.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://pubs.acs.org/doi/pdf/10.1021/acs.chemrev.1c00022",
+          "basis": "official_publisher_current_network"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://wrap.warwick.ac.uk/id/eprint/155761/1/WRAP-Gaussian-process-regression-materials-molecules-Bart%C3%B3k-2021.pdf",
+      "local_pdf": "literature/pdfs/deringer2021_gpr_gap.pdf",
+      "sha256": "399d83209303a71afedbdacb07182b70b59318359d393d28b6b2897d534d0a61",
+      "bytes": 14661442,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 87,
+        "encrypted": false,
+        "first_pages_text_chars": 10838,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 87,
+        "text_chars": 393565,
+        "chunks": 278,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:43:58+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:26+00:00"
     },
     "thompson2022_lammps": {
       "title": "LAMMPS - a flexible simulation tool for particle-based materials modeling at the atomic, meso, and continuum scales",
       "doi": "10.1016/j.cpc.2021.108171",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:38:01+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://www.osti.gov/servlets/purl/1821775",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": false,
+          "reason": "HTTPError",
+          "http_status": 404,
+          "detail": "HTTP Error 404: ",
+          "attempted_at": "2026-09-13T18:38:02+00:00"
+        },
+        {
+          "url": "https://chris256.com/papers/molecular_dynamics/2021-thompson-LAMMPS_particle_based_materials_modeling.pdf",
+          "basis": "vetted_open_licensed_redistribution_copy",
+          "ok": true,
+          "final_url": "https://chris256.com/papers/molecular_dynamics/2021-thompson-LAMMPS_particle_based_materials_modeling.pdf",
+          "content_type": "application/pdf",
+          "bytes": 2530439,
+          "sha256": "0261a9f27171680e9b9a97e2456b1bccb3edb197eb55e5c09a190da409b090af",
+          "attempted_at": "2026-09-13T18:38:04+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://www.osti.gov/servlets/purl/1821775",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://chris256.com/papers/molecular_dynamics/2021-thompson-LAMMPS_particle_based_materials_modeling.pdf",
+          "basis": "vetted_open_licensed_redistribution_copy"
+        }
+      ],
+      "access_basis": "vetted_open_licensed_redistribution_copy",
+      "source_url": "https://chris256.com/papers/molecular_dynamics/2021-thompson-LAMMPS_particle_based_materials_modeling.pdf",
+      "local_pdf": "literature/pdfs/thompson2022_lammps.pdf",
+      "sha256": "0261a9f27171680e9b9a97e2456b1bccb3edb197eb55e5c09a190da409b090af",
+      "bytes": 2530439,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 34,
+        "encrypted": false,
+        "first_pages_text_chars": 19089,
+        "title_token_match": 0.917,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 34,
+        "text_chars": 239121,
+        "chunks": 169,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:44:11+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:27+00:00"
     },
     "pizzi2016_aiida": {
       "title": "AiiDA: automated interactive infrastructure and database for computational science",
       "doi": "10.1016/j.commatsci.2015.09.013",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:14:49+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/1504.01163",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/1504.01163",
+          "content_type": "application/pdf",
+          "bytes": 1476980,
+          "sha256": "f3f32ed849eabce6f9917b84908e395a2c542037113d97bd0d11b83368069edc",
+          "attempted_at": "2026-09-13T18:14:52+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/1504.01163",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://arxiv.org/pdf/1504.01163",
+      "local_pdf": "literature/pdfs/pizzi2016_aiida.pdf",
+      "sha256": "f3f32ed849eabce6f9917b84908e395a2c542037113d97bd0d11b83368069edc",
+      "bytes": 1476980,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 30,
+        "encrypted": false,
+        "first_pages_text_chars": 8232,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 30,
+        "text_chars": 84231,
+        "chunks": 61,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:44:13+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:28+00:00"
     },
     "himanen2020_dscribe": {
       "title": "DScribe: Library of descriptors for machine learning in materials science",
       "doi": "10.1016/j.cpc.2019.106949",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:14:54+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/1904.08875",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/1904.08875",
+          "content_type": "application/pdf",
+          "bytes": 1502686,
+          "sha256": "a6deea1fd42bd8437d26feb9572b935e75e3672158071f66fd1cc6a25c4461c1",
+          "attempted_at": "2026-09-13T18:14:56+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/1904.08875",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://arxiv.org/pdf/1904.08875",
+      "local_pdf": "literature/pdfs/himanen2020_dscribe.pdf",
+      "sha256": "a6deea1fd42bd8437d26feb9572b935e75e3672158071f66fd1cc6a25c4461c1",
+      "bytes": 1502686,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 17,
+        "encrypted": false,
+        "first_pages_text_chars": 10865,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 1
+      },
+      "text_extraction": {
+        "pages": 17,
+        "text_chars": 73249,
+        "chunks": 55,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:44:17+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:28+00:00"
     },
     "xie2018_cgcnn": {
       "title": "Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties",
       "doi": "10.1103/PhysRevLett.120.145301",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:14:57+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/1710.10324",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/1710.10324",
+          "content_type": "application/pdf",
+          "bytes": 1856793,
+          "sha256": "e9b5693d1a5b4daa25f7bf61c8f97d5f55657669581a8208e2e8637b226d0970",
+          "attempted_at": "2026-09-13T18:15:00+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/1710.10324",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://arxiv.org/pdf/1710.10324",
+      "local_pdf": "literature/pdfs/xie2018_cgcnn.pdf",
+      "sha256": "e9b5693d1a5b4daa25f7bf61c8f97d5f55657669581a8208e2e8637b226d0970",
+      "bytes": 1856793,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 15,
+        "encrypted": false,
+        "first_pages_text_chars": 15448,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 15,
+        "text_chars": 40058,
+        "chunks": 33,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:44:18+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:29+00:00"
     },
     "dunn2020_matbench": {
       "title": "Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm",
       "doi": "10.1038/s41524-020-00406-3",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:15:01+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41524-020-00406-3.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://www.nature.com/articles/s41524-020-00406-3.pdf?error=cookies_not_supported&code=79bec866-d5c3-4cdb-8aca-b47db288f5d9",
+          "content_type": "application/pdf",
+          "bytes": 1511319,
+          "sha256": "003a1bf09c4f7e2959a5cabef0910ec7d91e739836c13cdcf575c4d121539830",
+          "attempted_at": "2026-09-13T18:15:11+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://www.nature.com/articles/s41524-020-00406-3.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://www.nature.com/articles/s41524-020-00406-3.pdf?error=cookies_not_supported&code=79bec866-d5c3-4cdb-8aca-b47db288f5d9",
+      "local_pdf": "literature/pdfs/dunn2020_matbench.pdf",
+      "sha256": "003a1bf09c4f7e2959a5cabef0910ec7d91e739836c13cdcf575c4d121539830",
+      "bytes": 1511319,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 10,
+        "encrypted": false,
+        "first_pages_text_chars": 19537,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 10,
+        "text_chars": 65625,
+        "chunks": 45,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:44:19+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:29+00:00"
     },
     "persson2010_graphite": {
       "title": "Thermodynamic and kinetic properties of the Li-graphite system from first-principles calculations",
       "doi": "10.1103/PhysRevB.82.125416",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:19:49+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://perssongroup.lbl.gov/papers/physrevb2010-ligraphite.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://perssongroup.lbl.gov/papers/physrevb2010-ligraphite.pdf",
+          "content_type": "application/pdf",
+          "bytes": 699321,
+          "sha256": "0eb4f7d3f61cc472c5b2bb90947b0dd85c50aaaa24c198d37f5dd19370fa7414",
+          "attempted_at": "2026-09-13T18:19:52+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://perssongroup.lbl.gov/papers/physrevb2010-ligraphite.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://journals.aps.org/prb/pdf/10.1103/PhysRevB.82.125416",
+          "basis": "official_publisher_current_network"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://perssongroup.lbl.gov/papers/physrevb2010-ligraphite.pdf",
+      "local_pdf": "literature/pdfs/persson2010_graphite.pdf",
+      "sha256": "0eb4f7d3f61cc472c5b2bb90947b0dd85c50aaaa24c198d37f5dd19370fa7414",
+      "bytes": 699321,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 9,
+        "encrypted": false,
+        "first_pages_text_chars": 17220,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 9,
+        "text_chars": 49029,
+        "chunks": 34,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:44:20+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:29+00:00"
     },
     "shen2024_pymatgen_defects": {
       "title": "pymatgen-analysis-defects: A Python package for analyzing point defects in crystalline materials",
       "doi": "10.21105/joss.05941",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "checked_at": "2026-09-13T18:15:14+00:00",
+      "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests",
+      "attempts": [
+        {
+          "url": "https://joss.theoj.org/papers/10.21105/joss.05941.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://joss.theoj.org/papers/10.21105/joss.05941.pdf",
+          "content_type": "application/pdf",
+          "bytes": 839130,
+          "sha256": "ca7ba21238bef3a4254ddcc7bee014574d0c8e8458917a4530367a82b919e28d",
+          "attempted_at": "2026-09-13T18:15:18+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "open_access": {
+        "openalex_id": null,
+        "is_oa": false,
+        "oa_status": null,
+        "oa_url": null,
+        "best_landing_page": null,
+        "discovery_error": "HTTPError: HTTP Error 429: Too Many Requests"
+      },
+      "candidates": [
+        {
+          "url": "https://joss.theoj.org/papers/10.21105/joss.05941.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://joss.theoj.org/papers/10.21105/joss.05941.pdf",
+      "local_pdf": "literature/pdfs/shen2024_pymatgen_defects.pdf",
+      "sha256": "ca7ba21238bef3a4254ddcc7bee014574d0c8e8458917a4530367a82b919e28d",
+      "bytes": 839130,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 4,
+        "encrypted": false,
+        "first_pages_text_chars": 8378,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 4,
+        "text_chars": 9892,
+        "chunks": 8,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T18:44:20+00:00"
+      },
+      "audited_at": "2026-09-13T18:41:30+00:00"
     }
   },
   "fulltext_index": {
     "path": "data/fulltext_chunks.jsonl",
-    "papers": 16,
-    "chunks": 743,
-    "updated_at": "2026-09-13T13:13:36+00:00"
+    "papers": 39,
+    "chunks": 2281,
+    "updated_at": "2026-09-13T18:44:20+00:00"
   },
-  "updated_at": "2026-09-13T13:13:36+00:00",
+  "updated_at": "2026-09-13T18:44:20+00:00",
   "integrity_audit": {
-    "audited_at": "2026-09-13T13:13:36+00:00",
+    "audited_at": "2026-09-13T18:44:20+00:00",
     "library_papers": 40,
     "doi_verified": 40,
     "wos_uid_verified": 16,
-    "downloaded_main_texts": 16,
+    "downloaded_main_texts": 39,
     "duplicate_pdf_hashes": 0,
     "checks": [
       "PDF magic/parse",

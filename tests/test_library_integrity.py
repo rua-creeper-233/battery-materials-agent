@@ -56,13 +56,13 @@ class LibraryIntegrityTests(unittest.TestCase):
         audit = manifest["integrity_audit"]
         self.assertEqual(audit["library_papers"], 40)
         self.assertEqual(audit["doi_verified"], 40)
-        self.assertEqual(audit["downloaded_main_texts"], 16)
+        self.assertGreaterEqual(audit["downloaded_main_texts"], 16)
         self.assertEqual(audit["wos_uid_verified"], 16)
         self.assertEqual(audit["duplicate_pdf_hashes"], 0)
         downloaded = [
             row for row in manifest["papers"].values() if row.get("status") == "downloaded"
         ]
-        self.assertEqual(len(downloaded), 16)
+        self.assertEqual(len(downloaded), audit["downloaded_main_texts"])
         self.assertTrue(
             all(
                 (row.get("validation") or {}).get("document_kind") == "article"
@@ -72,7 +72,10 @@ class LibraryIntegrityTests(unittest.TestCase):
         self.assertTrue(all((ROOT / row["local_pdf"]).is_file() for row in downloaded))
 
         agent = BatteryResearchAgent()
-        self.assertEqual(len({row["paper_id"] for row in agent.fulltext_chunks}), 16)
+        self.assertEqual(
+            len({row["paper_id"] for row in agent.fulltext_chunks}),
+            audit["downloaded_main_texts"],
+        )
         hits = agent.search_fulltext("锂离子扩散 势垒", limit=6)
         self.assertTrue(hits)
         self.assertTrue(

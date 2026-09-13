@@ -36,9 +36,11 @@ USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36"
 )
 
-# Public copies explicitly exposed by an author, laboratory, university, or
-# preprint server.  These are deliberately small and human-vetted: do not add
-# mirrors whose redistribution status is unclear.
+# Public copies explicitly exposed by an author, laboratory, university,
+# preprint server, or a public host carrying an openly licensed article. These
+# are deliberately small and human-vetted: do not add a redistribution copy
+# unless the article's open licence is clear and the PDF is independently
+# checked against the target title.
 PUBLIC_PDF_OVERRIDES: dict[str, list[str]] = {
     "aydinol1997_voltage": [
         "https://ceder.berkeley.edu/publications/prb-56-1354-1997.pdf",
@@ -74,6 +76,86 @@ PUBLIC_PDF_OVERRIDES: dict[str, list[str]] = {
     "deng2023_chgnet": [
         "https://arxiv.org/pdf/2302.14231",
     ],
+    "wang2021_vaspkit": [
+        "https://arxiv.org/pdf/1908.08269",
+    ],
+    "ong2013_pymatgen": [
+        "https://perssongroup.lbl.gov/papers/compmatsci2013-pymatgen.pdf",
+        "https://ceder.berkeley.edu/publications/2012_Python_materials_genomics.pdf",
+    ],
+    "larsen2017_ase": [
+        "https://backend.orbit.dtu.dk/ws/portalfiles/portal/130802447/main.pdf",
+    ],
+    "ganose2025_atomate2": [
+        "https://escholarship.org/content/qt9d78f7qc/qt9d78f7qc_noSplash_a24b5abd10df0845fb7110c53fbe8a8f.pdf",
+    ],
+    "jain2013_materials_project": [
+        "https://web.mit.edu/ceder/publications/2013_Jain_Materials_Project.pdf",
+        "https://iric.imet-db.ru/PDF/161.pdf",
+    ],
+    "smidstrup2014_idpp": [
+        "https://arxiv.org/pdf/1406.1512",
+    ],
+    "he2018_aimd_statistics": [
+        "https://api.drum.lib.umd.edu/server/api/core/bitstreams/ef25575f-9594-4e80-8543-caaae487c530/content",
+    ],
+    "zhou2004_dftu_voltage": [
+        "https://web.mit.edu/ceder/publications/PhysRevB_70_235121.pdf",
+        "https://arxiv.org/pdf/cond-mat/0406382",
+    ],
+    "jacobs2025_mlip_guide": [
+        "https://arxiv.org/pdf/2503.09814",
+    ],
+    "togo2015_phonopy": [
+        "https://arxiv.org/pdf/1506.08498",
+    ],
+    "ganose2018_sumo": [
+        "https://joss.theoj.org/papers/10.21105/joss.00717.pdf",
+    ],
+    "wang2018_deepmdkit": [
+        "https://arxiv.org/pdf/1712.03641",
+    ],
+    "zhang2020_dpgen": [
+        "https://arxiv.org/pdf/1910.12690",
+    ],
+    "batzner2022_nequip": [
+        "https://www.nature.com/articles/s41467-022-29939-5.pdf",
+        "https://arxiv.org/pdf/2101.03164",
+    ],
+    "musaelian2023_allegro": [
+        "https://www.nature.com/articles/s41467-023-36329-y.pdf",
+        "https://arxiv.org/pdf/2204.05249",
+    ],
+    "deringer2021_gpr_gap": [
+        "https://wrap.warwick.ac.uk/155761/1/WRAP-Gaussian-process-regression-materials-molecules-Bart%C3%B3k-2021.pdf",
+    ],
+    "thompson2022_lammps": [
+        "https://www.osti.gov/servlets/purl/1821775",
+        "https://chris256.com/papers/molecular_dynamics/2021-thompson-LAMMPS_particle_based_materials_modeling.pdf",
+    ],
+    "pizzi2016_aiida": [
+        "https://arxiv.org/pdf/1504.01163",
+    ],
+    "himanen2020_dscribe": [
+        "https://arxiv.org/pdf/1904.08875",
+    ],
+    "xie2018_cgcnn": [
+        "https://arxiv.org/pdf/1710.10324",
+    ],
+    "dunn2020_matbench": [
+        "https://www.nature.com/articles/s41524-020-00406-3.pdf",
+    ],
+    "persson2010_graphite": [
+        "https://perssongroup.lbl.gov/papers/physrevb2010-ligraphite.pdf",
+    ],
+    "shen2024_pymatgen_defects": [
+        "https://joss.theoj.org/papers/10.21105/joss.05941.pdf",
+    ],
+}
+
+OPEN_LICENSED_REDISTRIBUTION_COPIES = {
+    "https://iric.imet-db.ru/PDF/161.pdf",
+    "https://chris256.com/papers/molecular_dynamics/2021-thompson-LAMMPS_particle_based_materials_modeling.pdf",
 }
 
 
@@ -194,13 +276,26 @@ def unique(values: Iterable[str]) -> list[str]:
 
 
 def candidate_sources(paper: dict[str, Any], allow_publisher: bool) -> tuple[dict[str, Any], list[dict[str, str]]]:
-    oa = openalex_record(paper["doi"])
+    # OpenAlex is useful for discovery but is not a single point of failure. Its
+    # public API can rate-limit a batch, while a vetted repository copy or the
+    # official publisher PDF remains independently available.
+    oa: dict[str, Any] = {}
+    openalex_error: str | None = None
+    try:
+        oa = openalex_record(paper["doi"])
+    except (OSError, urllib.error.URLError, urllib.error.HTTPError) as exc:
+        openalex_error = f"{type(exc).__name__}: {exc}"[:400]
     access = oa.get("open_access") or {}
     best = oa.get("best_oa_location") or {}
     locations = oa.get("locations") or []
     candidates: list[dict[str, str]] = []
     for public_url in PUBLIC_PDF_OVERRIDES.get(paper["id"], []):
-        candidates.append({"url": public_url, "basis": "vetted_public_author_or_repository_copy"})
+        basis = (
+            "vetted_open_licensed_redistribution_copy"
+            if public_url in OPEN_LICENSED_REDISTRIBUTION_COPIES
+            else "vetted_public_author_or_repository_copy"
+        )
+        candidates.append({"url": public_url, "basis": basis})
     if access.get("is_oa"):
         for location in [best, *locations]:
             pdf_url = location.get("pdf_url") if isinstance(location, dict) else None
@@ -230,6 +325,8 @@ def candidate_sources(paper: dict[str, Any], allow_publisher: bool) -> tuple[dic
         "oa_url": access.get("oa_url"),
         "best_landing_page": best.get("landing_page_url"),
     }
+    if openalex_error:
+        summary["discovery_error"] = openalex_error
     return summary, deduped
 
 
