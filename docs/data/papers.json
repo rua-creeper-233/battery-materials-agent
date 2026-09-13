@@ -1,0 +1,418 @@
+[
+  {
+    "id": "urban2016_computational_review",
+    "title": "Computational understanding of Li-ion batteries",
+    "authors": ["Alexander Urban", "Dong-Hwa Seo", "Gerbrand Ceder"],
+    "year": 2016,
+    "journal": "npj Computational Materials",
+    "document_type": "Review",
+    "doi": "10.1038/npjcompumats.2016.2",
+    "url": "https://www.nature.com/articles/npjcompumats20162",
+    "role": "电池第一性原理方法总览",
+    "systems": ["Li-ion battery", "cathode", "anode", "solid electrolyte", "electrode-electrolyte interface"],
+    "methods": ["DFT", "phase diagram", "voltage calculation", "NEB", "AIMD", "interface thermodynamics"],
+    "properties": ["equilibrium voltage", "phase stability", "ionic mobility", "thermal stability", "electrochemical stability"],
+    "tags_zh": ["锂离子电池", "第一性原理", "电压", "相稳定性", "离子扩散", "界面"],
+    "summary": "适合作为知识库入口：系统串联电压、相图、扩散、稳定性与界面计算，并明确第一性原理在不同电池组件上的适用边界。",
+    "evidence": [
+      {"claim": "DFT可预测许多电池材料关键性质，但分子电解液、无序相和非晶相仍具挑战。", "basis": "出版社摘要", "strength": "high"},
+      {"claim": "电压、离子迁移率、热/电化学稳定性是可组织为标准工作流的核心性质。", "basis": "开放综述正文", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "DFT total energies", "relation": "derive", "target": "voltage and phase stability"},
+      {"source": "NEB/AIMD", "relation": "estimate", "target": "ion transport"}
+    ],
+    "wos_uid": "WOS:000426821500008",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "aydinol1997_voltage",
+    "title": "Ab initio study of lithium intercalation in metal oxides and metal dichalcogenides",
+    "authors": ["M. K. Aydinol", "A. F. Kohan", "G. Ceder", "K. Cho", "J. D. Joannopoulos"],
+    "year": 1997,
+    "journal": "Physical Review B",
+    "document_type": "Article",
+    "doi": "10.1103/PhysRevB.56.1354",
+    "url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.56.1354",
+    "role": "由总能和热力学计算嵌锂平均电压的奠基工作",
+    "systems": ["Li intercalation", "metal oxides", "metal sulfides", "metal selenides"],
+    "methods": ["ab initio pseudopotential", "DFT total energy", "thermodynamic cycle"],
+    "properties": ["average intercalation voltage", "charge transfer", "density of states"],
+    "tags_zh": ["嵌锂", "正极", "平均电压", "总能", "热力学", "态密度"],
+    "summary": "建立从充放电两端相的第一性原理总能推导平均嵌锂电压的经典路线，是VASP电池计算最值得先复现的论文之一。",
+    "evidence": [
+      {"claim": "平均嵌锂电压可由第一性原理能量与基本热力学在无实验输入下预测。", "basis": "APS摘要", "strength": "high"},
+      {"claim": "阴离子化学与电荷转移会显著影响电压。", "basis": "APS摘要", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "lithiated/delithiated total energies", "relation": "determine", "target": "average voltage"},
+      {"source": "anion chemistry", "relation": "shifts", "target": "redox voltage"}
+    ],
+    "wos_uid": "WOS:A1997XM76600066",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "ceder1998_cathode_design",
+    "title": "Identification of cathode materials for lithium batteries guided by first-principles calculations",
+    "authors": ["G. Ceder", "Y.-M. Chiang", "D. R. Sadoway", "M. K. Aydinol", "Y.-I. Jang", "B. Huang"],
+    "year": 1998,
+    "journal": "Nature",
+    "document_type": "Letter",
+    "doi": "10.1038/33647",
+    "url": "https://www.nature.com/articles/33647",
+    "role": "第一性原理指导并由实验验证正极材料设计",
+    "systems": ["LiCoO2", "Li(Co,Al)O2", "layered oxides", "cathode substitution"],
+    "methods": ["first-principles screening", "charge-density analysis", "experimental validation"],
+    "properties": ["cell voltage", "density", "cost-relevant composition", "redox center"],
+    "tags_zh": ["正极筛选", "层状氧化物", "掺杂", "电荷密度", "实验验证"],
+    "summary": "展示计算并非只解释实验：先用第一性原理提出Al取代的层状正极候选，再由实验验证电压趋势，形成早期计算—实验闭环。",
+    "evidence": [
+      {"claim": "计算识别出非过渡金属取代的候选材料，并预测Al取代提高电压。", "basis": "Nature摘要", "strength": "high"},
+      {"claim": "论文用实验验证了Li(Co,Al)O2的关键预测。", "basis": "Nature摘要", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "Al substitution in LiCoO2", "relation": "predicted_to_raise", "target": "cell voltage"},
+      {"source": "first-principles candidate", "relation": "validated_by", "target": "experiment"}
+    ],
+    "wos_uid": "WOS:000073129000051",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "vanderven2001_diffusion",
+    "title": "First-principles theory of ionic diffusion with nondilute carriers",
+    "authors": ["A. Van der Ven", "G. Ceder", "M. Asta", "P. D. Tepesch"],
+    "year": 2001,
+    "journal": "Physical Review B",
+    "document_type": "Article",
+    "doi": "10.1103/PhysRevB.64.184307",
+    "url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.64.184307",
+    "role": "把DFT迁移势垒、簇展开与动力学蒙特卡洛连接起来",
+    "systems": ["layered lithium transition-metal oxide", "lithium-vacancy disorder", "nondilute ion conductor"],
+    "methods": ["DFT migration barriers", "local cluster expansion", "kinetic Monte Carlo", "detailed balance"],
+    "properties": ["activation barrier", "diffusion coefficient", "concentration dependence", "migration mechanism"],
+    "tags_zh": ["离子扩散", "迁移势垒", "簇展开", "动力学蒙特卡洛", "浓度效应"],
+    "summary": "提醒不能把单一稀释极限NEB势垒当成全浓度扩散性质；局域Li/空位构型会改变机制与势垒。",
+    "evidence": [
+      {"claim": "局域Li-空位排列会显著改变迁移机制和势垒。", "basis": "APS摘要", "strength": "high"},
+      {"claim": "扩散系数可随锂浓度变化多个数量级。", "basis": "APS摘要", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "local Li/vacancy configuration", "relation": "changes", "target": "migration barrier"},
+      {"source": "DFT barriers + cluster expansion", "relation": "feed", "target": "kinetic Monte Carlo diffusion"}
+    ],
+    "wos_uid": "WOS:000172239400054",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "ong2011_li_na",
+    "title": "Voltage, stability and diffusion barrier differences between sodium-ion and lithium-ion intercalation materials",
+    "authors": ["Shyue Ping Ong", "Vincent L. Chevrier", "Geoffroy Hautier", "Anubhav Jain", "Charles Moore", "Sangtae Kim", "Xiaohua Ma", "Gerbrand Ceder"],
+    "year": 2011,
+    "journal": "Energy & Environmental Science",
+    "document_type": "Article",
+    "doi": "10.1039/C1EE01782A",
+    "url": "https://pubs.rsc.org/en/content/articlelanding/2011/ee/c1ee01782a",
+    "role": "Li/Na材料中电压、相稳定性与扩散的系统对比",
+    "systems": ["layered AMO2", "AMS2", "olivine AMPO4", "maricite AMPO4", "NASICON A3V2(PO4)3"],
+    "methods": ["DFT", "phase stability", "voltage calculation", "migration barrier calculation"],
+    "properties": ["voltage", "phase stability", "diffusion barrier", "structure preference"],
+    "tags_zh": ["钠离子电池", "锂离子电池", "结构对比", "电压", "稳定性", "扩散势垒"],
+    "summary": "同一套计算框架比较Li/Na嵌入化学，适合训练智能体回答“换离子后哪些趋势可迁移、哪些不可简单类比”。",
+    "evidence": [
+      {"claim": "研究所覆盖体系的Na电压通常比相应Li体系低0.18–0.57 V。", "basis": "RSC摘要；只适用于文中体系", "strength": "high"},
+      {"claim": "开放结构更易容纳更大的Na离子，扩散势垒趋势仍依赖具体结构。", "basis": "RSC摘要", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "working-ion identity", "relation": "changes", "target": "voltage and phase preference"},
+      {"source": "host structure", "relation": "controls", "target": "diffusion barrier"}
+    ],
+    "wos_uid": "WOS:000294306900068",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "ong2013_lgps",
+    "title": "Phase stability, electrochemical stability and ionic conductivity of the Li10±1MP2X12 family of superionic conductors",
+    "authors": ["Shyue Ping Ong", "Yifei Mo", "William Davidson Richards", "Lincoln Miara", "Hyo Sug Lee", "Gerbrand Ceder"],
+    "year": 2013,
+    "journal": "Energy & Environmental Science",
+    "document_type": "Article",
+    "doi": "10.1039/C2EE23355J",
+    "url": "https://pubs.rsc.org/en/content/articlelanding/2013/ee/c2ee23355j",
+    "role": "固态电解质稳定性与Li离子输运的第一性原理标杆",
+    "systems": ["Li10GeP2S12", "LGPS", "Li10±1MP2X12", "sulfide solid electrolyte", "oxide solid electrolyte"],
+    "methods": ["DFT phase diagram", "electrochemical stability analysis", "AIMD", "ionic conductivity estimation"],
+    "properties": ["phase stability", "electrochemical window", "Li diffusivity", "ionic conductivity"],
+    "tags_zh": ["固态电解质", "LGPS", "电化学窗口", "离子电导率", "AIMD"],
+    "summary": "把相稳定性、电化学稳定窗口和离子电导同时纳入评估，避免只以高电导率判断固态电解质。",
+    "evidence": [
+      {"claim": "该工作以第一性原理系统评估Li10±1MP2X12家族的相稳定、电化学稳定与Li电导。", "basis": "RSC摘要", "strength": "high"},
+      {"claim": "材料筛选必须同时检查导电性与热力学/界面稳定性。", "basis": "论文评价框架归纳", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "composition substitution", "relation": "changes", "target": "phase/electrochemical stability"},
+      {"source": "AIMD trajectories", "relation": "derive", "target": "Li diffusivity"}
+    ],
+    "wos_uid": "WOS:000312337700019",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "shi2013_sei_li2co3",
+    "title": "Defect Thermodynamics and Diffusion Mechanisms in Li2CO3 and Implications for the Solid Electrolyte Interphase in Li-Ion Batteries",
+    "authors": ["Siqi Shi", "Yue Qi", "Hong Li", "Louis G. Hector Jr."],
+    "year": 2013,
+    "journal": "The Journal of Physical Chemistry C",
+    "document_type": "Article",
+    "doi": "10.1021/jp310591u",
+    "url": "https://pubs.acs.org/doi/10.1021/jp310591u",
+    "role": "SEI组分的缺陷热力学＋CI-NEB扩散完整案例",
+    "systems": ["Li2CO3", "solid electrolyte interphase", "SEI", "Li interstitial", "Li vacancy"],
+    "methods": ["DFT defect formation energy", "chemical potentials", "CI-NEB", "conductivity model"],
+    "properties": ["defect concentration", "migration barrier", "ionic conductivity", "voltage dependence"],
+    "tags_zh": ["SEI", "碳酸锂", "点缺陷", "缺陷形成能", "CI-NEB", "电导率"],
+    "summary": "把电压/化学势、缺陷形成能、载流子浓度、迁移势垒和电导率串成证据链，是电池界面计算数据模式的好模板。",
+    "evidence": [
+      {"claim": "Li2CO3中的主导Li载流缺陷随电压区间发生变化。", "basis": "ACS摘要", "strength": "high"},
+      {"claim": "计算电导率需同时考虑缺陷浓度和迁移势垒，不能只看NEB势垒。", "basis": "ACS摘要与方法链归纳", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "electrode voltage / Li chemical potential", "relation": "sets", "target": "dominant defect"},
+      {"source": "defect concentration + migration barrier", "relation": "determine", "target": "ionic conductivity"}
+    ],
+    "wos_uid": "WOS:000318536600001",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "sendek2017_sse_screening",
+    "title": "Holistic computational structure screening of more than 12,000 candidates for solid lithium-ion conductor materials",
+    "authors": ["Austin D. Sendek", "Qian Yang", "Ekin D. Cubuk", "Karel-Alexander N. Duerloo", "Yi Cui", "Evan J. Reed"],
+    "year": 2017,
+    "journal": "Energy & Environmental Science",
+    "document_type": "Article",
+    "doi": "10.1039/C6EE02697D",
+    "url": "https://pubs.rsc.org/en/content/articlehtml/2017/ee/c6ee02697d",
+    "role": "晶体结构描述符＋机器学习筛选固态Li导体",
+    "systems": ["more than 12000 inorganic crystals", "solid lithium-ion conductor", "Materials Project candidates"],
+    "methods": ["structure screening", "logistic regression", "materials descriptors", "thermodynamic filtering", "literature validation"],
+    "properties": ["superionic probability", "energy above hull", "structural similarity", "ionic conductivity class"],
+    "tags_zh": ["高通量筛选", "固态离子导体", "机器学习", "结构描述符", "凸包能"],
+    "summary": "示范如何用廉价结构/稳定性特征先筛一万级候选，再把昂贵AIMD/NEB集中到少量高价值材料。",
+    "evidence": [
+      {"claim": "工作筛选超过12,000个固态Li导体候选，并给出高置信候选与外部文献交叉检查。", "basis": "RSC开放正文", "strength": "high"},
+      {"claim": "分类阈值、数据来源与实验微结构差异会影响模型标签。", "basis": "论文误差讨论", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "structure/stability descriptors", "relation": "feed", "target": "superionic classifier"},
+      {"source": "screened shortlist", "relation": "prioritizes", "target": "expensive validation"}
+    ],
+    "wos_uid": "WOS:000395208000028",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "baktash2020_argyrodite_aimd",
+    "title": "Diffusion of lithium ions in Lithium-argyrodite solid-state electrolytes",
+    "authors": ["Ardeshir Baktash", "James C. Reid", "Tanglaw Roman", "Debra J. Searles"],
+    "year": 2020,
+    "journal": "npj Computational Materials",
+    "document_type": "Article",
+    "doi": "10.1038/s41524-020-00432-1",
+    "url": "https://www.nature.com/articles/s41524-020-00432-1",
+    "role": "平衡/非平衡AIMD求固态电解质扩散系数的案例",
+    "systems": ["Li6PS5Cl", "Li5PS4Cl2", "lithium argyrodite", "solid electrolyte"],
+    "methods": ["equilibrium AIMD", "nonequilibrium AIMD", "diffusion coefficient estimation", "trajectory analysis"],
+    "properties": ["Li diffusion coefficient", "ionic transport", "statistical uncertainty"],
+    "tags_zh": ["硫银锗矿型电解质", "AIMD", "非平衡分子动力学", "扩散系数", "统计误差"],
+    "summary": "比较平衡与非平衡AIMD，并处理慢扩散在有限轨迹中难以采样的问题，适合作为扩散计算质量控制案例。",
+    "evidence": [
+      {"claim": "非平衡AIMD可在平衡AIMD采样不足时估计较慢的Li扩散。", "basis": "开放论文摘要", "strength": "high"},
+      {"claim": "扩散系数必须结合轨迹长度、温度和统计不确定性报告。", "basis": "论文问题设定与方法论归纳", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "AIMD trajectory", "relation": "yields", "target": "mean-squared displacement"},
+      {"source": "MSD slope", "relation": "estimates", "target": "Li diffusion coefficient"}
+    ],
+    "wos_uid": "WOS:000584639000001",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "chen2022_m3gnet",
+    "title": "A universal graph deep learning interatomic potential for the periodic table",
+    "authors": ["Chi Chen", "Shyue Ping Ong"],
+    "year": 2022,
+    "journal": "Nature Computational Science",
+    "document_type": "Article",
+    "doi": "10.1038/s43588-022-00349-3",
+    "url": "https://www.nature.com/articles/s43588-022-00349-3",
+    "role": "通用图神经网络机器学习势与材料发现方法",
+    "systems": ["periodic crystals", "lithium superionic conductors", "broad chemical space"],
+    "methods": ["M3GNet", "graph neural network", "machine-learning interatomic potential", "structure relaxation", "molecular dynamics"],
+    "properties": ["energy", "force", "stress", "structure stability", "ion transport"],
+    "tags_zh": ["机器学习势", "图神经网络", "M3GNet", "结构弛豫", "分子动力学", "固态电解质"],
+    "summary": "代表从DFT能量/力/应力数据训练通用势，再用于结构弛豫和大尺度动力学；适合智能体判断何时可用预训练势、何时必须微调。",
+    "evidence": [
+      {"claim": "M3GNet以图深度学习构建跨元素的通用原子间势，训练数据与代码公开。", "basis": "出版社数据和代码可用性说明", "strength": "high"},
+      {"claim": "通用势可作预筛与初始化，但目标电池体系的能量、力、应力和动力学仍需独立验证。", "basis": "模型适用域原则归纳", "strength": "medium"}
+    ],
+    "relations": [
+      {"source": "DFT energies/forces/stresses", "relation": "train", "target": "M3GNet potential"},
+      {"source": "M3GNet potential", "relation": "accelerates", "target": "relaxation and MD"}
+    ],
+    "wos_uid": "WOS:000890324500016",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "sawada2024_nnp_sse",
+    "title": "High-throughput investigation of stability and Li diffusion of doped solid electrolytes via neural network potential without configurational knowledge",
+    "authors": ["Ryohto Sawada", "Kosuke Nakago", "Chikashi Shinagawa", "So Takamoto"],
+    "year": 2024,
+    "journal": "Scientific Reports",
+    "document_type": "Article",
+    "doi": "10.1038/s41598-024-62054-7",
+    "url": "https://www.nature.com/articles/s41598-024-62054-7",
+    "role": "NNP优化掺杂构型并进行固态电解质MD",
+    "systems": ["Li10MP2S12-xOx", "M = Ge, Si, Sn", "doped LGPS", "solid electrolyte"],
+    "methods": ["neural network potential", "configuration optimization", "molecular dynamics", "diffusion pathway analysis"],
+    "properties": ["configuration stability", "Li diffusivity", "activation energy", "percolation behavior"],
+    "tags_zh": ["神经网络势", "掺杂构型", "LGPS", "扩散路径", "活化能", "高通量"],
+    "summary": "贴近可落地AI4S课题：用NNP处理大量掺杂构型，再做MD分析Li扩散并与实验趋势比较。",
+    "evidence": [
+      {"claim": "NNP支持同时搜索掺杂构型稳定性并用MD评估扩散。", "basis": "开放论文摘要", "strength": "high"},
+      {"claim": "在Li10MP2S12-xOx系列上结果再现实验趋势，并提出扩散活化能的渗流转变。", "basis": "开放论文摘要", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "dopant configuration", "relation": "optimized_by", "target": "NNP"},
+      {"source": "NNP molecular dynamics", "relation": "reveals", "target": "Li diffusion network"}
+    ],
+    "wos_uid": "WOS:001229023500115",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "ling2022_battery_informatics",
+    "title": "A review of the recent progress in battery informatics",
+    "authors": ["Chen Ling"],
+    "year": 2022,
+    "journal": "npj Computational Materials",
+    "document_type": "Review",
+    "doi": "10.1038/s41524-022-00713-x",
+    "url": "https://www.nature.com/articles/s41524-022-00713-x",
+    "role": "电池数据、文本挖掘、ML与闭环研究总览",
+    "systems": ["battery materials", "electrodes", "electrolytes", "interfaces", "cell data"],
+    "methods": ["machine learning", "text mining", "high-throughput calculation", "machine-learning potential", "active learning"],
+    "properties": ["capacity", "voltage", "conductivity", "Coulombic efficiency", "energy", "cycle life"],
+    "tags_zh": ["电池信息学", "文献挖掘", "数据库", "机器学习", "数据质量", "闭环"],
+    "summary": "为子智能体的数据治理定规则：计算/实验/文本数据必须记录来源、保真度、处理条件与不确定性，避免把不同尺度的数据直接混合。",
+    "evidence": [
+      {"claim": "电池信息学的核心瓶颈之一是高质量数据可得性。", "basis": "开放综述摘要与正文", "strength": "high"},
+      {"claim": "同一材料的宏观性能受合成、微结构和测试条件影响，知识库需保留条件与数据保真度。", "basis": "开放综述数据偏差讨论", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "literature text", "relation": "mined_into", "target": "structured battery data"},
+      {"source": "data provenance and fidelity", "relation": "condition", "target": "trustworthy ML"}
+    ],
+    "wos_uid": "WOS:000757839700001",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "henkelman2000_cineb",
+    "title": "A climbing image nudged elastic band method for finding saddle points and minimum energy paths",
+    "authors": ["Graeme Henkelman", "Blas P. Uberuaga", "Hannes Jónsson"],
+    "year": 2000,
+    "journal": "The Journal of Chemical Physics",
+    "document_type": "Article",
+    "doi": "10.1063/1.1329672",
+    "url": "https://doi.org/10.1063/1.1329672",
+    "role": "Li/Na迁移势垒计算所用CI-NEB方法的奠基论文",
+    "systems": ["minimum-energy path", "solid-state diffusion", "chemical reaction"],
+    "methods": ["climbing-image NEB", "nudged elastic band", "saddle-point search"],
+    "properties": ["minimum-energy path", "saddle-point energy", "activation barrier"],
+    "tags_zh": ["CI-NEB", "过渡态", "最小能量路径", "扩散势垒", "中间像"],
+    "summary": "CI-NEB使最高能量像沿路径上爬到鞍点，是VASP中计算Li/Na扩散单跳势垒的标准方法来源。",
+    "evidence": [
+      {"claim": "climbing image通过修改最高能量像的受力，使其收敛到最小能量路径上的鞍点。", "basis": "JCP论文方法与出版元数据", "strength": "high"},
+      {"claim": "势垒可信度仍取决于初末态、路径、中间像、超胞和收敛设置。", "basis": "方法适用条件归纳", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "initial/final states + NEB images", "relation": "optimize_to", "target": "minimum-energy path"},
+      {"source": "climbing image", "relation": "converges_to", "target": "saddle point"}
+    ],
+    "wos_uid": "WOS:000165584900005",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "leung2010_sei_aimd",
+    "title": "Ab initio molecular dynamics simulations of the initial stages of solid-electrolyte interphase formation on lithium ion battery graphitic anodes",
+    "authors": ["Kevin Leung", "Joanne L. Budzien"],
+    "year": 2010,
+    "journal": "Physical Chemistry Chemical Physics",
+    "document_type": "Article",
+    "doi": "10.1039/B925853A",
+    "url": "https://pubs.rsc.org/en/content/articlelanding/2010/cp/b925853a",
+    "role": "显式石墨/碳酸酯界面AIMD研究早期SEI反应",
+    "systems": ["lithiated graphite", "ethylene carbonate", "liquid-solid interface", "SEI"],
+    "methods": ["DFT-AIMD", "explicit interface", "bond-breaking analysis", "electron transfer"],
+    "properties": ["reaction pathway", "initial SEI products", "interfacial electron transfer", "reaction timescale"],
+    "tags_zh": ["石墨负极", "碳酸乙烯酯", "SEI", "显式界面", "AIMD", "分解反应"],
+    "summary": "用显式液/固界面AIMD观察电解液初始分解，适合定义界面模型、轨迹事件和反应产物的抽取字段。",
+    "evidence": [
+      {"claim": "DFT-AIMD能够在显式锂化石墨/EC界面观察早期SEI反应事件。", "basis": "RSC论文摘要与公开版本", "strength": "high"},
+      {"claim": "皮秒轨迹可揭示候选初始反应，但不能直接代表完整电池循环时间尺度。", "basis": "时间尺度限制归纳", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "lithiated graphite electrons", "relation": "drive", "target": "EC decomposition"},
+      {"source": "AIMD trajectory", "relation": "records", "target": "bond-breaking events and products"}
+    ],
+    "wos_uid": "WOS:000278824400004",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "mo2012_lgps_aimd",
+    "title": "First Principles Study of the Li10GeP2S12 Lithium Super Ionic Conductor Material",
+    "authors": ["Yifei Mo", "Shyue Ping Ong", "Gerbrand Ceder"],
+    "year": 2012,
+    "journal": "Chemistry of Materials",
+    "document_type": "Article",
+    "doi": "10.1021/cm203303y",
+    "url": "https://pubs.acs.org/doi/10.1021/cm203303y",
+    "role": "LGPS三维Li输运与稳定性的早期第一性原理研究",
+    "systems": ["Li10GeP2S12", "LGPS", "sulfide solid electrolyte"],
+    "methods": ["DFT", "AIMD", "Li trajectory analysis", "phase diagram", "electrochemical stability"],
+    "properties": ["Li diffusivity", "ionic conductivity", "diffusion dimensionality", "phase stability", "electrochemical stability"],
+    "tags_zh": ["LGPS", "固态电解质", "AIMD", "三维扩散", "离子电导率", "相稳定性"],
+    "summary": "通过AIMD揭示LGPS的Li迁移网络，并把动力学与热力学/电化学稳定性放在同一材料评估中。",
+    "evidence": [
+      {"claim": "AIMD轨迹可用于识别LGPS中的Li迁移网络并估算输运性质。", "basis": "ACS论文与作者公开版本", "strength": "high"},
+      {"claim": "高离子电导并不自动意味着与电极相容或电化学稳定。", "basis": "论文评价框架归纳", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "LGPS atomic structure", "relation": "supports", "target": "3D Li migration network"},
+      {"source": "AIMD MSD", "relation": "estimates", "target": "Li diffusivity/conductivity"}
+    ],
+    "wos_uid": "WOS:000298908400006",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "deng2023_chgnet",
+    "title": "CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling",
+    "authors": ["Bowen Deng", "Peichen Zhong", "KyuJung Jun", "Janosh Riebesell", "Kevin Han", "Christopher J. Bartel", "Gerbrand Ceder"],
+    "year": 2023,
+    "journal": "Nature Machine Intelligence",
+    "document_type": "Article",
+    "doi": "10.1038/s42256-023-00716-3",
+    "url": "https://www.nature.com/articles/s42256-023-00716-3",
+    "role": "面向电荷/磁矩材料的预训练通用机器学习势",
+    "systems": ["LixMnO2", "LixFePO4", "Li3La3Te2O12", "Na2V2(PO4)3", "MPtrj"],
+    "methods": ["CHGNet", "graph neural network", "pretrained machine-learning potential", "molecular dynamics", "structure relaxation"],
+    "properties": ["energy", "force", "stress", "magnetic moment", "phase behavior", "ion diffusion"],
+    "tags_zh": ["CHGNet", "机器学习势", "预训练模型", "电荷", "磁矩", "电池材料", "MD"],
+    "summary": "利用大规模Materials Project轨迹预训练能量/力/应力/磁矩模型，并展示多种电池固体应用；是当前入门MLP最实用的种子之一。",
+    "evidence": [
+      {"claim": "CHGNet联合学习原子环境与磁矩相关信息，并公开模型与代码。", "basis": "Nature Machine Intelligence论文与官方代码仓库", "strength": "high"},
+      {"claim": "预训练模型可用于快速弛豫/MD，但对目标缺陷、界面或高温构型仍需DFT验证和可能微调。", "basis": "通用势适用域原则归纳", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "MPtrj DFT trajectories", "relation": "pretrain", "target": "CHGNet"},
+      {"source": "CHGNet", "relation": "accelerates", "target": "battery structure relaxation and MD"}
+    ],
+    "wos_uid": "WOS:001085170400007",
+    "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  }
+]

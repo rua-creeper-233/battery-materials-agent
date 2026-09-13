@@ -1,0 +1,964 @@
+{
+  "schema_version": 1,
+  "policy": "read-only retrieval; no paywall bypass",
+  "papers": {
+    "urban2016_computational_review": {
+      "title": "Computational understanding of Li-ion batteries",
+      "doi": "10.1038/npjcompumats.2016.2",
+      "wos_uid": "WOS:000426821500008",
+      "checked_at": "2026-09-12T17:54:45+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W2621656911",
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://www.nature.com/articles/npjcompumats20162.pdf",
+        "best_landing_page": "https://doi.org/10.1038/npjcompumats.2016.2"
+      },
+      "candidates": [
+        {
+          "url": "https://www.nature.com/articles/npjcompumats20162.pdf",
+          "basis": "openalex_open_access_pdf"
+        },
+        {
+          "url": "https://www.osti.gov/biblio/1474909",
+          "basis": "openalex_open_access_pdf"
+        },
+        {
+          "url": "https://www.osti.gov/servlets/purl/1474909",
+          "basis": "open_access_landing_page"
+        },
+        {
+          "url": "https://research-repository.st-andrews.ac.uk/bitstream/10023/12860/1/Urban_2016_CM_Li_ionbatteries_CC.pdf",
+          "basis": "open_access_landing_page"
+        },
+        {
+          "url": "https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/12860/Urban_2016_CM_Li_ionbatteries_CC.pdf?sequence=1&isAllowed=y",
+          "basis": "open_access_landing_page"
+        }
+      ],
+      "status": "downloaded",
+      "access_basis": "openalex_open_access_pdf",
+      "source_url": "https://www.nature.com/articles/npjcompumats20162.pdf?error=cookies_not_supported&code=c3306e22-b8f2-4345-83e2-a26a9c845d79",
+      "local_pdf": "literature/pdfs/urban2016_computational_review.pdf",
+      "sha256": "ad4869bc7a13c0e5a97f367a170ec63791e1b2ca7cc2365ed98ec798f866e1ac",
+      "bytes": 1628007,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 13,
+        "encrypted": false,
+        "first_pages_text_chars": 20463,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/npjcompumats20162.pdf",
+          "basis": "openalex_open_access_pdf",
+          "ok": true,
+          "final_url": "https://www.nature.com/articles/npjcompumats20162.pdf?error=cookies_not_supported&code=c3306e22-b8f2-4345-83e2-a26a9c845d79",
+          "content_type": "application/pdf",
+          "bytes": 1628007,
+          "sha256": "ad4869bc7a13c0e5a97f367a170ec63791e1b2ca7cc2365ed98ec798f866e1ac",
+          "attempted_at": "2026-09-12T17:55:58+00:00"
+        }
+      ],
+      "text_extraction": {
+        "pages": 13,
+        "text_chars": 88902,
+        "chunks": 63,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:21:27+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:14+00:00"
+    },
+    "aydinol1997_voltage": {
+      "title": "Ab initio study of lithium intercalation in metal oxides and metal dichalcogenides",
+      "doi": "10.1103/PhysRevB.56.1354",
+      "wos_uid": "WOS:A1997XM76600066",
+      "checked_at": "2026-09-12T18:11:01+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W2092098411",
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://hdl.handle.net/11511/44083",
+        "best_landing_page": "https://hdl.handle.net/11511/44083"
+      },
+      "candidates": [
+        {
+          "url": "https://ceder.berkeley.edu/publications/prb-56-1354-1997.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "status": "downloaded",
+      "attempts": [
+        {
+          "url": "https://ceder.berkeley.edu/publications/prb-56-1354-1997.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://ceder.berkeley.edu/publications/prb-56-1354-1997.pdf",
+          "content_type": "application/pdf",
+          "bytes": 567289,
+          "sha256": "50a24060195f48942a1a312b8d2c7873ab995bb592d1ffb4b6fe427f427fdfe5",
+          "attempted_at": "2026-09-12T18:11:49+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://ceder.berkeley.edu/publications/prb-56-1354-1997.pdf",
+      "local_pdf": "literature/pdfs/aydinol1997_voltage.pdf",
+      "sha256": "50a24060195f48942a1a312b8d2c7873ab995bb592d1ffb4b6fe427f427fdfe5",
+      "bytes": 567289,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 12,
+        "encrypted": false,
+        "first_pages_text_chars": 17471,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 12,
+        "text_chars": 55839,
+        "chunks": 40,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:21:28+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:15+00:00"
+    },
+    "ceder1998_cathode_design": {
+      "title": "Identification of cathode materials for lithium batteries guided by first-principles calculations",
+      "doi": "10.1038/33647",
+      "wos_uid": "WOS:000073129000051",
+      "checked_at": "2026-09-12T18:16:43+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W1854827278",
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://hdl.handle.net/11511/37447",
+        "best_landing_page": "https://hdl.handle.net/11511/37447"
+      },
+      "candidates": [
+        {
+          "url": "https://web.mit.edu/dsadoway/www/79.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://www.nature.com/articles/33647.pdf",
+          "basis": "open_access_landing_page"
+        }
+      ],
+      "status": "not_downloaded",
+      "attempts": [
+        {
+          "url": "https://web.mit.edu/dsadoway/www/79.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": false,
+          "reason": "HTTPError",
+          "http_status": 403,
+          "detail": "HTTP Error 403: Forbidden",
+          "attempted_at": "2026-09-12T18:18:18+00:00"
+        },
+        {
+          "url": "https://www.nature.com/articles/33647.pdf",
+          "basis": "open_access_landing_page",
+          "ok": false,
+          "reason": "response_is_not_pdf",
+          "content_type": "text/html",
+          "final_url": "https://www.nature.com/articles/33647?error=cookies_not_supported&code=e614c440-0968-4797-95c1-abce63219538",
+          "bytes": 268972,
+          "attempted_at": "2026-09-12T18:18:28+00:00"
+        }
+      ]
+    },
+    "vanderven2001_diffusion": {
+      "title": "First-principles theory of ionic diffusion with nondilute carriers",
+      "doi": "10.1103/PhysRevB.64.184307",
+      "wos_uid": "WOS:000172239400054",
+      "checked_at": "2026-09-12T18:13:39+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W1986211266",
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "best_landing_page": null
+      },
+      "candidates": [
+        {
+          "url": "https://ceder.berkeley.edu/publications/prb-64-184307-2001.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "status": "downloaded",
+      "attempts": [
+        {
+          "url": "https://ceder.berkeley.edu/publications/prb-64-184307-2001.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://ceder.berkeley.edu/publications/prb-64-184307-2001.pdf",
+          "content_type": "application/pdf",
+          "bytes": 215266,
+          "sha256": "0ea561c6439f437fb185869f43e8c5f579a3b818227e133afb92f922429d1b2e",
+          "attempted_at": "2026-09-12T18:13:42+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://ceder.berkeley.edu/publications/prb-64-184307-2001.pdf",
+      "local_pdf": "literature/pdfs/vanderven2001_diffusion.pdf",
+      "sha256": "0ea561c6439f437fb185869f43e8c5f579a3b818227e133afb92f922429d1b2e",
+      "bytes": 215266,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 17,
+        "encrypted": false,
+        "first_pages_text_chars": 16829,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 17,
+        "text_chars": 85865,
+        "chunks": 61,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:21:29+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:15+00:00"
+    },
+    "ong2011_li_na": {
+      "title": "Voltage, stability and diffusion barrier differences between sodium-ion and lithium-ion intercalation materials",
+      "doi": "10.1039/C1EE01782A",
+      "wos_uid": "WOS:000294306900068",
+      "checked_at": "2026-09-12T18:18:28+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W2067381514",
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "best_landing_page": null
+      },
+      "candidates": [
+        {
+          "url": "https://ceder.berkeley.edu/publications/Sodium_Energy_Environment.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "status": "downloaded",
+      "attempts": [
+        {
+          "url": "https://ceder.berkeley.edu/publications/Sodium_Energy_Environment.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://ceder.berkeley.edu/publications/Sodium_Energy_Environment.pdf",
+          "content_type": "application/pdf",
+          "bytes": 328009,
+          "sha256": "71ac7369378f5cfbed5cbf8ae2175abd6e537e2064c14d33a973157885904926",
+          "attempted_at": "2026-09-12T18:18:30+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://ceder.berkeley.edu/publications/Sodium_Energy_Environment.pdf",
+      "local_pdf": "literature/pdfs/ong2011_li_na.pdf",
+      "sha256": "71ac7369378f5cfbed5cbf8ae2175abd6e537e2064c14d33a973157885904926",
+      "bytes": 328009,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 9,
+        "encrypted": false,
+        "first_pages_text_chars": 17249,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 9,
+        "text_chars": 53310,
+        "chunks": 37,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:21:29+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:16+00:00"
+    },
+    "ong2013_lgps": {
+      "title": "Phase stability, electrochemical stability and ionic conductivity of the Li10±1MP2X12 family of superionic conductors",
+      "doi": "10.1039/C2EE23355J",
+      "wos_uid": "WOS:000312337700019",
+      "checked_at": "2026-09-12T18:18:31+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W2096694960",
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "best_landing_page": null
+      },
+      "candidates": [
+        {
+          "url": "https://ceder.berkeley.edu/publications/Shyue_2012_Li10MP2X12.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "status": "downloaded",
+      "attempts": [
+        {
+          "url": "https://ceder.berkeley.edu/publications/Shyue_2012_Li10MP2X12.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://ceder.berkeley.edu/publications/Shyue_2012_Li10MP2X12.pdf",
+          "content_type": "application/pdf",
+          "bytes": 437620,
+          "sha256": "56f224d4ec5c1313c118d463f5e2891c3e72f5d8dc0228d63bf1d0029624b4a4",
+          "attempted_at": "2026-09-12T18:18:34+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://ceder.berkeley.edu/publications/Shyue_2012_Li10MP2X12.pdf",
+      "local_pdf": "literature/pdfs/ong2013_lgps.pdf",
+      "sha256": "56f224d4ec5c1313c118d463f5e2891c3e72f5d8dc0228d63bf1d0029624b4a4",
+      "bytes": 437620,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 9,
+        "encrypted": false,
+        "first_pages_text_chars": 17812,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 1
+      },
+      "text_extraction": {
+        "pages": 9,
+        "text_chars": 44418,
+        "chunks": 33,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:21:30+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:16+00:00"
+    },
+    "shi2013_sei_li2co3": {
+      "title": "Defect Thermodynamics and Diffusion Mechanisms in Li2CO3 and Implications for the Solid Electrolyte Interphase in Li-Ion Batteries",
+      "doi": "10.1021/jp310591u",
+      "wos_uid": "WOS:000318536600001",
+      "checked_at": "2026-09-12T17:59:12+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W2256422229",
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "best_landing_page": null
+      },
+      "candidates": [
+        {
+          "url": "https://pubs.acs.org/doi/pdf/10.1021/jp310591u",
+          "basis": "official_publisher_current_network"
+        }
+      ],
+      "status": "not_downloaded",
+      "attempts": [
+        {
+          "url": "https://pubs.acs.org/doi/pdf/10.1021/jp310591u",
+          "basis": "official_publisher_current_network",
+          "ok": false,
+          "reason": "HTTPError",
+          "http_status": 403,
+          "detail": "HTTP Error 403: Forbidden",
+          "attempted_at": "2026-09-12T17:59:16+00:00"
+        }
+      ]
+    },
+    "sendek2017_sse_screening": {
+      "title": "Holistic computational structure screening of more than 12,000 candidates for solid lithium-ion conductor materials",
+      "doi": "10.1039/C6EE02697D",
+      "wos_uid": "WOS:000395208000028",
+      "checked_at": "2026-09-12T18:23:58+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W2559612475",
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "best_landing_page": null
+      },
+      "candidates": [
+        {
+          "url": "https://web.stanford.edu/group/cui_group/papers/Austin_Cui_Reed_EES_2016.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        },
+        {
+          "url": "https://drive.usercontent.google.com/download?id=1QysXRQ9tcEOYUyxhfFQNrErNgPgl0Zy8&export=download&confirm=t",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "status": "downloaded",
+      "attempts": [
+        {
+          "url": "https://web.stanford.edu/group/cui_group/papers/Austin_Cui_Reed_EES_2016.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://web.stanford.edu/group/cui_group/papers/Austin_Cui_Reed_EES_2016.pdf",
+          "content_type": "application/pdf",
+          "bytes": 2871011,
+          "sha256": "addb031cd6c87dd58019a5f18739cbdbf0d5a3827115030d2b7de8c3153c21d0",
+          "attempted_at": "2026-09-12T18:24:34+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://web.stanford.edu/group/cui_group/papers/Austin_Cui_Reed_EES_2016.pdf",
+      "local_pdf": "literature/pdfs/sendek2017_sse_screening.pdf",
+      "sha256": "addb031cd6c87dd58019a5f18739cbdbf0d5a3827115030d2b7de8c3153c21d0",
+      "bytes": 2871011,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 15,
+        "encrypted": false,
+        "first_pages_text_chars": 15190,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 1
+      },
+      "text_extraction": {
+        "pages": 15,
+        "text_chars": 84124,
+        "chunks": 59,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:21:31+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:17+00:00"
+    },
+    "baktash2020_argyrodite_aimd": {
+      "title": "Diffusion of lithium ions in Lithium-argyrodite solid-state electrolytes",
+      "doi": "10.1038/s41524-020-00432-1",
+      "wos_uid": "WOS:000584639000001",
+      "checked_at": "2026-09-12T17:59:21+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W3095613010",
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://www.nature.com/articles/s41524-020-00432-1.pdf",
+        "best_landing_page": "https://doi.org/10.1038/s41524-020-00432-1"
+      },
+      "candidates": [
+        {
+          "url": "https://www.nature.com/articles/s41524-020-00432-1.pdf",
+          "basis": "openalex_open_access_pdf"
+        },
+        {
+          "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41524-020-00432-1/MediaObjects/41524_2020_432_MOESM1_ESM.pdf",
+          "basis": "open_access_landing_page"
+        },
+        {
+          "url": "https://arxiv.org/pdf/1912.02971",
+          "basis": "openalex_open_access_pdf"
+        }
+      ],
+      "status": "downloaded",
+      "access_basis": "openalex_open_access_pdf",
+      "source_url": "https://www.nature.com/articles/s41524-020-00432-1.pdf?error=cookies_not_supported&code=959c69aa-16c2-4b0b-885a-dfa834925e16",
+      "local_pdf": "literature/pdfs/baktash2020_argyrodite_aimd.pdf",
+      "sha256": "bae7610d6988822d361fcddd7c0be184fe914c03194d323ea2a26226342a6d3f",
+      "bytes": 3360247,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 10,
+        "encrypted": false,
+        "first_pages_text_chars": 16470,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41524-020-00432-1.pdf",
+          "basis": "openalex_open_access_pdf",
+          "ok": true,
+          "final_url": "https://www.nature.com/articles/s41524-020-00432-1.pdf?error=cookies_not_supported&code=959c69aa-16c2-4b0b-885a-dfa834925e16",
+          "content_type": "application/pdf",
+          "bytes": 3360247,
+          "sha256": "bae7610d6988822d361fcddd7c0be184fe914c03194d323ea2a26226342a6d3f",
+          "attempted_at": "2026-09-12T18:01:45+00:00"
+        }
+      ],
+      "text_extraction": {
+        "pages": 10,
+        "text_chars": 63017,
+        "chunks": 45,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:21:32+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:17+00:00"
+    },
+    "chen2022_m3gnet": {
+      "title": "A universal graph deep learning interatomic potential for the periodic table",
+      "doi": "10.1038/s43588-022-00349-3",
+      "wos_uid": "WOS:000890324500016",
+      "checked_at": "2026-09-12T18:26:28+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W4310135808",
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "best_landing_page": null
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/2202.02450",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "status": "downloaded",
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://arxiv.org/pdf/2202.02450",
+      "sha256": "82956a518414e2c396c6c959a2e485a04f4cabe45f2943c12daece0500ee5659",
+      "bytes": 12990152,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 58,
+        "encrypted": false,
+        "first_pages_text_chars": 4825,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/2202.02450",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/2202.02450",
+          "content_type": "application/pdf",
+          "bytes": 12990152,
+          "sha256": "82956a518414e2c396c6c959a2e485a04f4cabe45f2943c12daece0500ee5659",
+          "attempted_at": "2026-09-12T18:26:40+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "text_extraction": {
+        "pages": 58,
+        "text_chars": 99773,
+        "chunks": 92,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:22:41+00:00"
+      },
+      "supplementary_pdf": "literature/supplementary/chen2022_m3gnet_supplementary.pdf",
+      "local_pdf": "literature/pdfs/chen2022_m3gnet.pdf",
+      "audited_at": "2026-09-13T02:21:17+00:00"
+    },
+    "sawada2024_nnp_sse": {
+      "title": "High-throughput investigation of stability and Li diffusion of doped solid electrolytes via neural network potential without configurational knowledge",
+      "doi": "10.1038/s41598-024-62054-7",
+      "wos_uid": "WOS:001229023500115",
+      "checked_at": "2026-09-12T18:02:46+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W4398168460",
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://doi.org/10.1038/s41598-024-62054-7",
+        "best_landing_page": "https://doi.org/10.1038/s41598-024-62054-7"
+      },
+      "candidates": [
+        {
+          "url": "https://www.nature.com/articles/s41598-024-62054-7.pdf",
+          "basis": "open_access_landing_page"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11637207/pdf/41598_2024_Article_62054.pdf",
+          "basis": "openalex_open_access_pdf"
+        }
+      ],
+      "status": "downloaded",
+      "access_basis": "open_access_landing_page",
+      "source_url": "https://www.nature.com/articles/s41598-024-62054-7.pdf?error=cookies_not_supported&code=533cd0a8-e48d-4f3b-b312-f57fb1e0b06a",
+      "local_pdf": "literature/pdfs/sawada2024_nnp_sse.pdf",
+      "sha256": "d958c910cbb20c5bda189a0bedb433da965f14a06e279ba054b9e9811197bfc0",
+      "bytes": 1736809,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 8,
+        "encrypted": false,
+        "first_pages_text_chars": 11981,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41598-024-62054-7.pdf",
+          "basis": "open_access_landing_page",
+          "ok": true,
+          "final_url": "https://www.nature.com/articles/s41598-024-62054-7.pdf?error=cookies_not_supported&code=533cd0a8-e48d-4f3b-b312-f57fb1e0b06a",
+          "content_type": "application/pdf",
+          "bytes": 1736809,
+          "sha256": "d958c910cbb20c5bda189a0bedb433da965f14a06e279ba054b9e9811197bfc0",
+          "attempted_at": "2026-09-12T18:03:49+00:00"
+        }
+      ],
+      "text_extraction": {
+        "pages": 8,
+        "text_chars": 28353,
+        "chunks": 23,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:22:42+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:18+00:00"
+    },
+    "ling2022_battery_informatics": {
+      "title": "A review of the recent progress in battery informatics",
+      "doi": "10.1038/s41524-022-00713-x",
+      "wos_uid": "WOS:000757839700001",
+      "checked_at": "2026-09-12T18:03:50+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W4213140999",
+        "is_oa": true,
+        "oa_status": "gold",
+        "oa_url": "https://www.nature.com/articles/s41524-022-00713-x.pdf",
+        "best_landing_page": "https://doi.org/10.1038/s41524-022-00713-x"
+      },
+      "candidates": [
+        {
+          "url": "https://www.nature.com/articles/s41524-022-00713-x.pdf",
+          "basis": "openalex_open_access_pdf"
+        }
+      ],
+      "status": "downloaded",
+      "access_basis": "openalex_open_access_pdf",
+      "source_url": "https://www.nature.com/articles/s41524-022-00713-x.pdf?error=cookies_not_supported&code=485996d1-cc78-426d-bc4a-c7bec6356fb4",
+      "local_pdf": "literature/pdfs/ling2022_battery_informatics.pdf",
+      "sha256": "2b0252af2329a340f9f0ed6aef4535b07ee6c5816690b57766ab69a961e1b6ba",
+      "bytes": 3844243,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 22,
+        "encrypted": false,
+        "first_pages_text_chars": 20359,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41524-022-00713-x.pdf",
+          "basis": "openalex_open_access_pdf",
+          "ok": true,
+          "final_url": "https://www.nature.com/articles/s41524-022-00713-x.pdf?error=cookies_not_supported&code=485996d1-cc78-426d-bc4a-c7bec6356fb4",
+          "content_type": "application/pdf",
+          "bytes": 3844243,
+          "sha256": "2b0252af2329a340f9f0ed6aef4535b07ee6c5816690b57766ab69a961e1b6ba",
+          "attempted_at": "2026-09-12T18:04:50+00:00"
+        }
+      ],
+      "text_extraction": {
+        "pages": 22,
+        "text_chars": 150567,
+        "chunks": 108,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:22:45+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:19+00:00"
+    },
+    "henkelman2000_cineb": {
+      "title": "A climbing image nudged elastic band method for finding saddle points and minimum energy paths",
+      "doi": "10.1063/1.1329672",
+      "wos_uid": "WOS:000165584900005",
+      "checked_at": "2026-09-12T18:14:11+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W2122427541",
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "best_landing_page": null
+      },
+      "candidates": [
+        {
+          "url": "https://theory.cm.utexas.edu/henkelman/pubs/henkelman00_9978.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "status": "downloaded",
+      "attempts": [
+        {
+          "url": "https://theory.cm.utexas.edu/henkelman/pubs/henkelman00_9978.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://theory.cm.utexas.edu/henkelman/pubs/henkelman00_9978.pdf",
+          "content_type": "application/pdf",
+          "bytes": 403733,
+          "sha256": "aaaf11605d2293f1d2a4b15d2ad67139bb0ad8065e81a769204ff65d75390244",
+          "attempted_at": "2026-09-12T18:14:15+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://theory.cm.utexas.edu/henkelman/pubs/henkelman00_9978.pdf",
+      "local_pdf": "literature/pdfs/henkelman2000_cineb.pdf",
+      "sha256": "aaaf11605d2293f1d2a4b15d2ad67139bb0ad8065e81a769204ff65d75390244",
+      "bytes": 403733,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 8,
+        "encrypted": false,
+        "first_pages_text_chars": 15753,
+        "title_token_match": 0.917,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "text_extraction": {
+        "pages": 8,
+        "text_chars": 42977,
+        "chunks": 30,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:22:45+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:19+00:00"
+    },
+    "leung2010_sei_aimd": {
+      "title": "Ab initio molecular dynamics simulations of the initial stages of solid-electrolyte interphase formation on lithium ion battery graphitic anodes",
+      "doi": "10.1039/B925853A",
+      "wos_uid": "WOS:000278824400004",
+      "checked_at": "2026-09-12T18:04:55+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W2147023814",
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/1009.4154",
+        "best_landing_page": "http://arxiv.org/abs/1009.4154"
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/1009.4154",
+          "basis": "openalex_open_access_pdf"
+        },
+        {
+          "url": "https://pubs.rsc.org/en/content/articlepdf/2010/cp/b925853a",
+          "basis": "official_publisher_current_network"
+        }
+      ],
+      "status": "downloaded",
+      "access_basis": "openalex_open_access_pdf",
+      "source_url": "https://arxiv.org/pdf/1009.4154",
+      "local_pdf": "literature/pdfs/leung2010_sei_aimd.pdf",
+      "sha256": "cae1049a09105cc392000ca064cb6ec28202a9331d526f97295fd90b9b9dfc8e",
+      "bytes": 1554162,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 5,
+        "encrypted": false,
+        "first_pages_text_chars": 13989,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/1009.4154",
+          "basis": "openalex_open_access_pdf",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/1009.4154",
+          "content_type": "application/pdf",
+          "bytes": 1554162,
+          "sha256": "cae1049a09105cc392000ca064cb6ec28202a9331d526f97295fd90b9b9dfc8e",
+          "attempted_at": "2026-09-12T18:07:53+00:00"
+        }
+      ],
+      "text_extraction": {
+        "pages": 5,
+        "text_chars": 20863,
+        "chunks": 15,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:22:51+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:25+00:00"
+    },
+    "mo2012_lgps_aimd": {
+      "title": "First Principles Study of the Li10GeP2S12 Lithium Super Ionic Conductor Material",
+      "doi": "10.1021/cm203303y",
+      "wos_uid": "WOS:000298908400006",
+      "checked_at": "2026-09-12T18:14:15+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W2007361815",
+        "is_oa": false,
+        "oa_status": "closed",
+        "oa_url": null,
+        "best_landing_page": null
+      },
+      "candidates": [
+        {
+          "url": "https://ceder.berkeley.edu/publications/YiFei_Lithium_Conductor.pdf",
+          "basis": "vetted_public_author_or_repository_copy"
+        }
+      ],
+      "status": "downloaded",
+      "attempts": [
+        {
+          "url": "https://ceder.berkeley.edu/publications/YiFei_Lithium_Conductor.pdf",
+          "basis": "vetted_public_author_or_repository_copy",
+          "ok": true,
+          "final_url": "https://ceder.berkeley.edu/publications/YiFei_Lithium_Conductor.pdf",
+          "content_type": "application/pdf",
+          "bytes": 213558,
+          "sha256": "8be835632fd76e9339ced7f2949325da58f6cb5c2dbfa7cd716c2fe7f911852f",
+          "attempted_at": "2026-09-12T18:14:17+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "access_basis": "vetted_public_author_or_repository_copy",
+      "source_url": "https://ceder.berkeley.edu/publications/YiFei_Lithium_Conductor.pdf",
+      "local_pdf": "literature/pdfs/mo2012_lgps_aimd.pdf",
+      "sha256": "8be835632fd76e9339ced7f2949325da58f6cb5c2dbfa7cd716c2fe7f911852f",
+      "bytes": 213558,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 3,
+        "encrypted": false,
+        "first_pages_text_chars": 15965,
+        "title_token_match": 0.889,
+        "document_kind": "article",
+        "supplementary_signals": 1
+      },
+      "text_extraction": {
+        "pages": 3,
+        "text_chars": 15963,
+        "chunks": 12,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:22:51+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:25+00:00"
+    },
+    "deng2023_chgnet": {
+      "title": "CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling",
+      "doi": "10.1038/s42256-023-00716-3",
+      "wos_uid": "WOS:001085170400007",
+      "checked_at": "2026-09-12T18:07:59+00:00",
+      "open_access": {
+        "openalex_id": "https://openalex.org/W4386740800",
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://www.nature.com/articles/s42256-023-00716-3.pdf",
+        "best_landing_page": "https://doi.org/10.1038/s42256-023-00716-3"
+      },
+      "candidates": [
+        {
+          "url": "https://www.nature.com/articles/s42256-023-00716-3.pdf",
+          "basis": "openalex_open_access_pdf"
+        },
+        {
+          "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs42256-023-00716-3/MediaObjects/42256_2023_716_MOESM1_ESM.pdf",
+          "basis": "open_access_landing_page"
+        },
+        {
+          "url": "https://escholarship.org/content/qt6qb0x6rr/qt6qb0x6rr.pdf",
+          "basis": "openalex_open_access_pdf"
+        },
+        {
+          "url": "https://www.osti.gov/servlets/purl/2281218",
+          "basis": "openalex_open_access_pdf"
+        },
+        {
+          "url": "https://www.repository.cam.ac.uk/bitstreams/8c2961f8-8f7c-43f7-ba6a-b758fea22b6e/download",
+          "basis": "openalex_open_access_pdf"
+        },
+        {
+          "url": "https://www.repository.cam.ac.uk/bitstreams/f7ecc91e-8ca9-49b4-b46b-189554888121/download",
+          "basis": "open_access_landing_page"
+        },
+        {
+          "url": "https://www.repository.cam.ac.uk/bitstreams/bc8272ae-3489-47d5-9dd6-37ce214b6230/download",
+          "basis": "open_access_landing_page"
+        },
+        {
+          "url": "https://www.repository.cam.ac.uk/bitstreams/4bd4a634-3669-45f0-856d-c2945620a80e/download",
+          "basis": "open_access_landing_page"
+        },
+        {
+          "url": "https://www.repository.cam.ac.uk/bitstreams/c3b5a0bd-275a-4e53-afa9-c06521000623/download",
+          "basis": "openalex_open_access_pdf"
+        },
+        {
+          "url": "https://www.repository.cam.ac.uk/bitstreams/a8a28bff-e572-4721-9fe7-8ed78070d0cd/download",
+          "basis": "open_access_landing_page"
+        },
+        {
+          "url": "https://www.repository.cam.ac.uk/bitstreams/918537d7-13c2-4aea-ae6d-d77c11797443/download",
+          "basis": "open_access_landing_page"
+        },
+        {
+          "url": "https://www.repository.cam.ac.uk/bitstreams/9e30662d-ce0b-45d7-b4b4-5b4db97ee7e8/download",
+          "basis": "open_access_landing_page"
+        }
+      ],
+      "status": "downloaded",
+      "access_basis": "openalex_open_access_pdf",
+      "source_url": "https://www.nature.com/articles/s42256-023-00716-3.pdf?error=cookies_not_supported&code=b925d548-0456-4944-a249-513c7a46028e",
+      "local_pdf": "literature/pdfs/deng2023_chgnet.pdf",
+      "sha256": "fa4a98d6e4bd6560b1fdc85c5676ab8587e2db5a4602394d0f0df8a6a388444f",
+      "bytes": 2664200,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 11,
+        "encrypted": false,
+        "first_pages_text_chars": 15107,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s42256-023-00716-3.pdf",
+          "basis": "openalex_open_access_pdf",
+          "ok": true,
+          "final_url": "https://www.nature.com/articles/s42256-023-00716-3.pdf?error=cookies_not_supported&code=b925d548-0456-4944-a249-513c7a46028e",
+          "content_type": "application/pdf",
+          "bytes": 2664200,
+          "sha256": "fa4a98d6e4bd6560b1fdc85c5676ab8587e2db5a4602394d0f0df8a6a388444f",
+          "attempted_at": "2026-09-12T18:09:11+00:00"
+        }
+      ],
+      "text_extraction": {
+        "pages": 11,
+        "text_chars": 62827,
+        "chunks": 44,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T02:22:54+00:00"
+      },
+      "audited_at": "2026-09-13T02:21:26+00:00"
+    }
+  },
+  "fulltext_index": {
+    "path": "data/fulltext_chunks.jsonl",
+    "papers": 14,
+    "chunks": 662,
+    "updated_at": "2026-09-13T02:22:54+00:00"
+  },
+  "updated_at": "2026-09-13T02:22:54+00:00",
+  "integrity_audit": {
+    "audited_at": "2026-09-13T02:22:54+00:00",
+    "seed_papers": 16,
+    "wos_uid_verified": 16,
+    "downloaded_main_texts": 14,
+    "duplicate_pdf_hashes": 0,
+    "checks": [
+      "PDF magic/parse",
+      "title token match",
+      "main text vs supplementary",
+      "SHA-256",
+      "unique DOI",
+      "unique WOS UID",
+      "page-level text extraction"
+    ]
+  }
+}

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Battery Evidence Lab</title>
+  <style>
+    :root {
+      --ink: #172520; --muted: #67746f; --paper: #f6f4ee; --card: #fffefa;
+      --line: #d9ded7; --green: #166647; --mint: #d9eee2; --orange: #c65f25;
+      --shadow: 0 18px 48px rgba(28, 53, 43, .11);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: Inter, "Noto Sans SC", "Microsoft YaHei", sans-serif; }
+    body::before { content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .45; background-image: radial-gradient(#294e3e18 1px, transparent 1px); background-size: 22px 22px; }
+    a { color: var(--green); }
+    .shell { position: relative; max-width: 1420px; margin: 0 auto; padding: 34px; }
+    header { display: flex; justify-content: space-between; align-items: end; gap: 24px; padding: 18px 4px 30px; border-bottom: 1px solid var(--line); }
+    .eyebrow { color: var(--orange); font: 700 12px/1.2 ui-monospace, monospace; letter-spacing: .13em; text-transform: uppercase; }
+    h1 { margin: 8px 0 7px; font: 680 clamp(31px, 4vw, 58px)/1.05 Georgia, "Noto Serif SC", serif; letter-spacing: -.035em; }
+    .sub { color: var(--muted); max-width: 760px; line-height: 1.7; }
+    .stats { display: flex; gap: 9px; flex-wrap: wrap; justify-content: flex-end; }
+    .stat { padding: 8px 12px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; font-size: 12px; white-space: nowrap; }
+    main { display: grid; grid-template-columns: minmax(0, 1fr) 370px; gap: 24px; padding-top: 26px; }
+    .panel { background: color-mix(in srgb, var(--card) 94%, transparent); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+    .workspace { padding: 24px; }
+    .composer { display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+    textarea { width: 100%; min-height: 88px; resize: vertical; border: 1px solid #bdc9c1; border-radius: 13px; padding: 15px 16px; background: white; color: var(--ink); font: inherit; line-height: 1.6; outline: none; }
+    textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px #16664718; }
+    button { border: 0; border-radius: 12px; padding: 0 20px; background: var(--green); color: white; font: 700 14px/1 sans-serif; cursor: pointer; }
+    button:hover { filter: brightness(.96); transform: translateY(-1px); }
+    button:disabled { opacity: .55; cursor: wait; transform: none; }
+    .examples { display: flex; flex-wrap: wrap; gap: 8px; margin: 13px 0 4px; }
+    .chip { border: 1px solid var(--line); background: #fbfbf7; color: #45534d; border-radius: 999px; padding: 8px 11px; font-size: 12px; cursor: pointer; }
+    .chip:hover { border-color: #91aa9b; color: var(--green); }
+    .empty { min-height: 430px; display: grid; place-content: center; text-align: center; color: var(--muted); padding: 50px; }
+    .empty .mark { margin: auto; width: 76px; height: 76px; display: grid; place-content: center; border-radius: 22px; background: var(--mint); color: var(--green); font: 700 29px Georgia, serif; transform: rotate(-4deg); }
+    .empty h2 { color: var(--ink); margin: 20px 0 8px; font: 600 23px Georgia, "Noto Serif SC", serif; }
+    .result { margin-top: 22px; border-top: 1px solid var(--line); padding-top: 20px; }
+    .result h3 { font: 650 21px Georgia, "Noto Serif SC", serif; margin: 22px 0 10px; }
+    .result p, .result li { line-height: 1.76; }
+    .result ol, .result ul { padding-left: 23px; }
+    .notice { padding: 11px 13px; border-left: 3px solid var(--orange); background: #fff3e9; color: #744324; border-radius: 5px 11px 11px 5px; font-size: 13px; line-height: 1.55; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 10px; margin-top: 18px; }
+    .e-card { padding: 15px; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
+    .e-card .year { font: 700 11px ui-monospace, monospace; color: var(--orange); }
+    .e-card h4 { font-size: 14px; line-height: 1.42; margin: 7px 0; }
+    .e-card p { font-size: 12px; color: var(--muted); line-height: 1.5; margin: 0; }
+    .e-card .doi { display: inline-block; margin-top: 10px; font-size: 11px; }
+    .paper-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+    .paper-actions a, .paper-actions button { min-height: 34px; display: inline-flex; align-items: center; border-radius: 9px; padding: 0 11px; font: 700 11px/1 sans-serif; text-decoration: none; }
+    .paper-actions .zotero { background: var(--green); color: white; }
+    .paper-actions .local-pdf { background: #245a8d; color: white; }
+    .paper-actions .wos { background: #edf0ec; color: var(--ink); border: 1px solid var(--line); }
+    .paper-actions .doi-link { background: #fff4ea; color: #8c451e; border: 1px solid #ecd3c2; }
+    aside { padding: 18px; height: max-content; position: sticky; top: 18px; max-height: calc(100vh - 36px); display: flex; flex-direction: column; }
+    .aside-head { padding: 5px 4px 14px; display: flex; align-items: center; justify-content: space-between; }
+    .aside-head h2 { font: 650 19px Georgia, "Noto Serif SC", serif; margin: 0; }
+    .count { color: var(--muted); font-size: 12px; }
+    #filter { width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: #fff; }
+    .paper-list { overflow: auto; padding: 10px 2px 2px; }
+    .paper { padding: 13px 10px; border-bottom: 1px solid #e6e9e4; cursor: pointer; }
+    .paper:hover { background: #f1f7f2; border-radius: 10px; }
+    .paper .meta { color: var(--orange); font: 700 10px ui-monospace, monospace; }
+    .paper h3 { font-size: 13px; line-height: 1.4; margin: 5px 0; }
+    .paper p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
+    .modal { position: fixed; inset: 0; background: #102018b8; padding: 5vw; display: none; place-items: center; z-index: 10; }
+    .modal.open { display: grid; }
+    .modal-card { max-width: 850px; max-height: 85vh; overflow: auto; padding: 28px; background: var(--card); border-radius: 18px; box-shadow: 0 30px 100px #0006; }
+    .modal-card h2 { font: 650 26px/1.3 Georgia, "Noto Serif SC", serif; }
+    .close { float: right; background: #e9ede9; color: var(--ink); height: 36px; padding: 0 13px; }
+    .tag { display: inline-block; margin: 4px 4px 0 0; padding: 5px 8px; background: var(--mint); color: var(--green); border-radius: 999px; font-size: 11px; }
+    .relation { font: 12px/1.5 ui-monospace, monospace; padding: 8px 10px; background: #f1f3ef; margin: 6px 0; border-radius: 8px; }
+    @media (max-width: 950px) { main { grid-template-columns: 1fr; } aside { position: static; max-height: none; } .paper-list { max-height: 480px; } }
+    @media (max-width: 620px) { .shell { padding: 18px; } header { align-items: start; flex-direction: column; } .stats { justify-content: flex-start; } .composer { grid-template-columns: 1fr; } button { min-height: 48px; } .workspace { padding: 17px; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div>
+        <div class="eyebrow">Computational Battery Materials · Evidence First</div>
+        <h1>Battery Evidence Lab</h1>
+        <div class="sub">面向 DFT、VASP、NEB、AIMD 与机器学习势的材料科研子智能体。回答必须能追到论文和 DOI，计算建议必须带质量检查。</div>
+      </div>
+      <div class="stats">
+        <span class="stat"><b id="paperCount">—</b> 篇种子论文</span>
+        <span class="stat">DFT → MD → AI4S</span>
+        <span class="stat">本地运行 · 无需密钥</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel workspace">
+        <div class="composer">
+          <textarea id="question" placeholder="例如：我想用 VASP 计算 LGPS 中的锂离子扩散，NEB 和 AIMD 应该怎样选择？"></textarea>
+          <button id="ask">生成证据回答</button>
+        </div>
+        <div class="examples">
+          <span class="chip">如何计算正极平均嵌锂电压？</span>
+          <span class="chip">NEB 和 AIMD 研究扩散有什么区别？</span>
+          <span class="chip">给我一个 LGPS 机器学习势的落地流程</span>
+          <span class="chip">怎么判断电极和固态电解质界面稳定？</span>
+        </div>
+        <div id="answer" class="empty">
+          <div class="mark">Li</div>
+          <h2>从可追溯证据开始</h2>
+          <div>先问一个材料计算问题。系统会检索论文、生成工作流，并把不能自动确定的参数明确留下。</div>
+        </div>
+      </section>
+
+      <aside class="panel">
+        <div class="aside-head"><h2>论文证据库</h2><span class="count">点击查看数据卡</span></div>
+        <input id="filter" placeholder="筛选：LGPS、界面、CHGNet…" />
+        <div id="paperList" class="paper-list"></div>
+      </aside>
+    </main>
+  </div>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close" id="close">关闭</button>
+      <div id="detail"></div>
+    </div>
+  </div>
+
+  <script src="./browser_agent.js"></script>
+  <script>
+    const state = { papers: [], zotero: {}, literature: {}, methods: {} };
+    const staticMode = location.protocol === "file:" || location.hostname.endsWith("github.io");
+    const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
+    const inline = text => escapeHtml(text)
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>')
+      .replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1</a>');
+    function markdown(text) {
+      const lines = text.split('\n'); let html = '', list = null;
+      const close = () => { if (list) { html += `</${list}>`; list = null; } };
+      for (const raw of lines) {
+        const line = raw.trim();
+        if (!line) { close(); continue; }
+        if (line.startsWith('### ')) { close(); html += `<h3>${inline(line.slice(4))}</h3>`; continue; }
+        const ordered = line.match(/^\d+\.\s+(.*)$/);
+        if (ordered) { if (list !== 'ol') { close(); list='ol'; html += '<ol>'; } html += `<li>${inline(ordered[1])}</li>`; continue; }
+        if (line.startsWith('- ')) { if (list !== 'ul') { close(); list='ul'; html += '<ul>'; } html += `<li>${inline(line.slice(2))}</li>`; continue; }
+        close(); html += `<p>${inline(line)}</p>`;
+      }
+      close(); return html;
+    }
+    function zoteroRecord(p) { return state.zotero[(p.doi || '').toLowerCase()] || null; }
+    function linkButtons(p) {
+      const record = zoteroRecord(p);
+      const localRecord = state.literature[p.id] || {};
+      const localPdf = !staticMode && localRecord.status === 'downloaded'
+        ? `<a class="local-pdf" target="_blank" rel="noreferrer" href="/local-pdf/${encodeURIComponent(p.id)}.pdf">打开本地 PDF${localRecord.pages ? ` · ${localRecord.pages}页` : ''}</a>`
+        : '';
+      const zotero = record?.attachment_key
+        ? `<a class="zotero" href="zotero://open-pdf/library/items/${encodeURIComponent(record.attachment_key)}">在 Zotero 打开原文</a>`
+        : record?.item_key
+          ? `<a class="zotero" href="zotero://select/library/items/${encodeURIComponent(record.item_key)}">在 Zotero 查看条目</a>`
+          : '';
+      const wosLabel = record?.attachment_key ? 'WOS 备用入口' : record?.item_key ? 'WOS 补全文' : 'WOS 查找全文';
+      const wos = p.wos_uid
+        ? `<a class="wos" target="_blank" rel="noreferrer" href="https://www.webofscience.com/wos/woscc/full-record/${encodeURIComponent(p.wos_uid)}">${wosLabel}</a>`
+        : `<button class="wos" onclick="openWos('${escapeHtml(p.doi)}')">${wosLabel}</button>`;
+      return `<div class="paper-actions">${localPdf}${zotero}${wos}<a class="doi-link" target="_blank" rel="noreferrer" href="https://doi.org/${encodeURIComponent(p.doi)}">出版社 / DOI</a></div>`;
+    }
+    async function openWos(doi) {
+      try { await navigator.clipboard.writeText(doi); } catch (_) {}
+      window.open('https://www.webofscience.com/wos/woscc/basic-search', '_blank', 'noopener');
+      alert(`DOI 已复制：${doi}\n请在 WOS 基本检索中选择“DOI”字段后粘贴。`);
+    }
+    window.openWos = openWos;
+    function paperCard(p) {
+      return `<article class="e-card"><span class="year">${p.year} · ${escapeHtml(p.journal)}</span><h4>${escapeHtml(p.role)}</h4><p>${escapeHtml(p.summary)}</p>${linkButtons(p)}</article>`;
+    }
+    function renderList(filter='') {
+      const q = filter.toLowerCase();
+      const papers = state.papers.filter(p => JSON.stringify(p).toLowerCase().includes(q));
+      document.querySelector('#paperList').innerHTML = papers.map(p => `<div class="paper" data-id="${escapeHtml(p.id)}"><span class="meta">${p.year} · ${escapeHtml(p.journal)}</span><h3>${escapeHtml(p.title)}</h3><p>${escapeHtml(p.role)}</p></div>`).join('');
+      document.querySelectorAll('.paper').forEach(el => el.onclick = () => showPaper(el.dataset.id));
+    }
+    function showPaper(id) {
+      const p = state.papers.find(item => item.id === id); if (!p) return;
+      const tags = [...(p.tags_zh || []), ...(p.methods || [])].map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('');
+      const evidence = (p.evidence || []).map(e => `<li>${escapeHtml(e.claim)} <small>（${escapeHtml(e.basis)}；${escapeHtml(e.strength)}）</small></li>`).join('');
+      const relations = (p.relations || []).map(r => `<div class="relation">${escapeHtml(r.source)} —[${escapeHtml(r.relation)}]→ ${escapeHtml(r.target)}</div>`).join('');
+      const local = state.literature[p.id] || {};
+      const localStatus = local.status === 'downloaded' ? `本地全文：已下载${local.pages ? `，${local.pages}页` : ''}${local.text_chunks ? `，${local.text_chunks}个检索片段` : ''}` : '本地全文：尚未下载';
+      const methodRecord = state.methods[p.id] || {};
+      const methods = (methodRecord.evidence || []).slice(0, 12).map(item => {
+        const locator = !staticMode && local.status === 'downloaded'
+          ? `<a target="_blank" rel="noreferrer" href="${escapeHtml(item.local_pdf_url)}">PDF p.${item.page}</a>`
+          : `p.${item.page}`;
+        return `<li><strong>${escapeHtml(item.label_zh)}</strong> · ${locator} · <code>${escapeHtml(item.signal)}</code></li>`;
+      }).join('');
+      const methodBlock = methods
+        ? `<h3>自动方法证据（待人工核对）</h3><ul>${methods}</ul><div class="notice">这里只显示前 12 条定位信号。用于 INCAR、KPOINTS、分子动力学设置、论文或汇报前，必须回到标注页核对上下文。</div>`
+        : `<h3>自动方法证据（待人工核对）</h3><p>当前没有可显示的本地正文方法信号。</p>`;
+      document.querySelector('#detail').innerHTML = `<div class="eyebrow">${p.year} · ${escapeHtml(p.journal)} · ${escapeHtml(p.document_type)}</div><h2>${escapeHtml(p.title)}</h2><p>${escapeHtml((p.authors || []).join('；'))}</p><p>${escapeHtml(p.summary)}</p><div>${tags}</div>${linkButtons(p)}<h3>已抽取证据</h3><ul>${evidence}</ul><h3>知识关系</h3>${relations}${methodBlock}<div class="notice">WOS：${escapeHtml(p.wos_uid || p.verification?.wos || '未记录')}；${escapeHtml(localStatus)}。论文级证据与全文自动命中仍需回到原文人工核对。</div>`;
+      document.querySelector('#modal').classList.add('open');
+    }
+    async function ask() {
+      const question = document.querySelector('#question').value.trim(); if (!question) return;
+      const btn = document.querySelector('#ask'); btn.disabled = true; btn.textContent = '检索中…';
+      const target = document.querySelector('#answer'); target.className = 'result'; target.innerHTML = '<p>正在组织证据和计算检查项…</p>';
+      try {
+        let data;
+        try {
+          if (staticMode) throw new Error('静态站点使用浏览器内代理');
+          const response = await fetch('/api/chat', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({question})});
+          if (!response.ok) throw new Error('静态站点无后端');
+          data = await response.json();
+        } catch (_) {
+          data = window.BatteryBrowserAgent.answer(question, state.papers);
+        }
+        target.innerHTML = `<div class="notice">${escapeHtml(data.provenance.wos_note)}</div>${markdown(data.answer_markdown)}<div class="evidence-grid">${data.papers.map(paperCard).join('')}</div>`;
+      } catch (error) { target.innerHTML = `<div class="notice">${escapeHtml(error.message)}</div>`; }
+      finally { btn.disabled = false; btn.textContent = '生成证据回答'; }
+    }
+    document.querySelector('#ask').onclick = ask;
+    document.querySelector('#question').addEventListener('keydown', e => { if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') ask(); });
+    document.querySelectorAll('.chip').forEach(chip => chip.onclick = () => { document.querySelector('#question').value = chip.textContent; ask(); });
+    document.querySelector('#filter').oninput = e => renderList(e.target.value);
+    document.querySelector('#close').onclick = () => document.querySelector('#modal').classList.remove('open');
+    document.querySelector('#modal').onclick = e => { if (e.target.id === 'modal') e.currentTarget.classList.remove('open'); };
+    async function loadData() {
+      try {
+        if (staticMode) throw new Error('静态站点');
+        const api = await fetch('/api/papers');
+        if (!api.ok) throw new Error('no api');
+        state.papers = (await api.json()).papers;
+      } catch (_) {
+        state.papers = await fetch('./data/papers.json').then(r => r.json());
+      }
+      try {
+        const zoteroPayload = await fetch('./data/zotero-links.json', {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
+        state.zotero = zoteroPayload.items || zoteroPayload;
+      } catch (_) { state.zotero = {}; }
+      try {
+        const methodUrl = staticMode ? './data/method_evidence.auto.json' : '/api/methods';
+        const methodPayload = await fetch(methodUrl, {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
+        state.methods = methodPayload.papers || {};
+      } catch (_) { state.methods = {}; }
+      if (!staticMode) {
+        try {
+          const literaturePayload = await fetch('/api/literature', {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
+          state.literature = literaturePayload.papers || {};
+        } catch (_) { state.literature = {}; }
+      }
+      document.querySelector('#paperCount').textContent = state.papers.length;
+      renderList();
+    }
+    loadData();
+  </script>
+</body>
+</html>
