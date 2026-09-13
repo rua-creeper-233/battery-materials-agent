@@ -9,7 +9,10 @@
     '固态电解质': ['solid electrolyte', 'superionic', 'lgps', 'ionic conductivity'],
     '机器学习势': ['machine-learning potential', 'neural network potential', 'm3gnet', 'chgnet', 'nnp'],
     '神经网络势': ['neural network potential', 'nnp', 'mlip'],
-    '高通量': ['high-throughput', 'screening', 'materials project'],
+    '高通量': ['high-throughput', 'screening', 'materials project', 'atomate2'],
+    '入门': ['starter', 'protocol', 'vaspkit', 'pymatgen', 'ase', 'sumo'],
+    '声子': ['phonon', 'phonopy', 'finite displacement', 'force constants'],
+    '后处理': ['post-processing', 'vaspkit', 'sumo', 'band structure', 'dos'],
     '钠': ['sodium', 'na-ion'], '锂': ['lithium', 'li-ion']
   };
   const taskRules = [
@@ -106,7 +109,9 @@
     lines.push('', '### 证据来源', '');
     found.forEach((p,i) => lines.push('- ' + citation(p,i+1)));
     lines.push('', '### 边界与下一步', '', '具体INCAR/KPOINTS、U值、赝势、超胞和温度不能自动猜定；必须回到全文/补充信息并重新收敛。');
-    return {question, task, answer_markdown:lines.join('\n'), papers:found, provenance:{wos_note:'16篇种子论文已于2026-09-13在华南师范大学机构会话中逐条取得WOS UT；静态版不包含受版权保护的PDF。'}};
+    const wosCount = papers.filter(p => p.wos_uid).length;
+    const starterCount = papers.filter(p => p.collection === 'starter').length;
+    return {question, task, answer_markdown:lines.join('\n'), papers:found, provenance:{wos_note:`当前 ${papers.length} 篇：${wosCount} 篇核心论文已取得 WOS UT，${starterCount} 篇入门论文已核对 DOI 与出版社记录；静态版不包含受版权保护的 PDF。`}};
   }
   window.BatteryBrowserAgent = {answer, search};
 })();

@@ -4,19 +4,26 @@
 
 ## 当前可用能力
 
-- 16 篇代表性种子论文全部完成 DOI 与 WOS Core Collection 核验，并保存唯一 WOS UT；
-- 16/16 篇已有用户合法取得或公开可访问的本地正文，共 743 个带页码文本块；
+- 证据库共 28 篇：16 篇核心论文完成 DOI 与 WOS Core Collection 核验，另有 12 篇入门方法论文完成 DOI 与出版社记录核验；
+- 16/28 篇已有用户合法取得或公开可访问的本地正文，共 743 个带页码文本块；其余条目明确标记为全文待获取；
 - 中文检索电压、稳定性、扩散、固态电解质、界面、高通量和机器学习势；
 - 回答中给出论文级证据、DOI、精确 WOS 记录和本地全文页码；
 - 为 DFT / NEB / AIMD / MLIP 任务生成带质量控制项的工作流；
 - 从本地正文中自动定位软件、泛函、截断能、k 点、超胞、MD 条件、NEB 和机器学习训练信号，并逐条保留 PDF 页码；
 - 本地有 PDF 时显示“打开本地 PDF”，没有时回退到 WOS 与 DOI；
-- 支持按 DOI 幂等写入 Zotero；当前已核验 16/16 条目，16 条均已关联本地 PDF，并生成可点击的 Zotero 深链；
+- 支持按 DOI 幂等写入 Zotero；当前 16 篇核心条目均已关联本地 PDF，并生成可点击的 Zotero 深链；
 - 支持从网页上传 PDF：校验正文、识别/补充元数据、建立全文索引并返回关键词；用户上传的新增条目保存在本机私有库，不进入 GitHub Pages 发布包。
 
 全文状态与审计证据见 [FULLTEXT_AUDIT.md](FULLTEXT_AUDIT.md)，自动方法信号见 [METHOD_EVIDENCE_AUDIT.md](METHOD_EVIDENCE_AUDIT.md)，书目真实性和 WOS UT 见 [PAPER_AUDIT.md](PAPER_AUDIT.md)。
 
 ## 启动
+
+Windows 下可直接双击：
+
+- `start.bat`：一键启动仅本机使用的网页；
+- `start-share.bat`：一键启动本地服务、临时 HTTPS 隧道并打开 GitHub Pages，供导师临时访问上传和 API。
+
+批处理文件只负责启动和给出明确报错，不会自动安装 Python 包、Cloudflare 客户端或修改系统设置。
 
 在 PowerShell 中进入本目录并运行：
 
@@ -62,6 +69,19 @@ python .\extract_method_evidence.py
 
 当前结果包含 128 条信号，覆盖其中 15 篇本地正文。程序会排除参考文献区，并限制每篇每类最多 3 条；所有结果都标为 `auto_extracted_needs_human_review`。页面中的参数只能帮助你快速跳到原文，不能直接作为 VASP、NEB、AIMD 或 MLIP 的最终设置。
 
+## 入门方法论文集
+
+新增 12 篇“能照着学习和复现”的方法论文，网页数据卡内附建议复现步骤：
+
+- VASPKIT：2025 年 Nature Protocols 逐步协议＋2021 年主软件论文；
+- Python/自动化：pymatgen、ASE、atomate2、Materials Project；
+- 扩散：IDPP 初始路径和 AIMD 扩散统计误差；
+- 电池 DFT：过渡金属正极的 DFT+U 电压；
+- AI4S：机器学习势选型、数据和验证实用指南；
+- 热力学/后处理：phonopy 与 sumo。
+
+这 12 篇已经核对 DOI、题名、作者、期刊和出版社记录，但尚未冒充为“已取得 WOS UT”或“已有本地全文”。核验清单见 [PAPER_AUDIT.md](PAPER_AUDIT.md)。
+
 Ceder et al. 1998 与 Shi et al. 2013 的 PDF 已由用户从有权访问的来源下载并导入 Zotero，随后作为 `user_supplied_zotero_attachment` 纳入本地全文索引。PDF 本身继续由 `.gitignore` 排除，不会上传 GitHub。
 
 ## 上传文献与关键词 API
@@ -100,7 +120,7 @@ python .\build_pages.py
 
 `sync_zotero_links.py` 只读取本机 Zotero API 的 DOI、条目键和 PDF 附件键，不读取账号密码。导师没有你的本地 Zotero 文库时，应使用网页一直保留的 WOS 或 DOI 入口。
 
-要先预览、再按 DOI 幂等导入 16 篇书目并附加本地 PDF：
+要先预览、再按 DOI 幂等导入当前证据库书目；已有本地 PDF 的核心论文会附加原文，新加入的入门论文先只导入书目：
 
 ```powershell
 python .\import_zotero_library.py
@@ -179,7 +199,7 @@ GitHub Pages 只托管 HTML/CSS/JavaScript，不能运行 Python。Quick Tunnel 
 
 ## 下一步
 
-1. 对 14 篇全文做“方法参数—结果数值—页码/图表”的结构化人工复核；
+1. 对 16 篇全文做“方法参数—结果数值—页码/图表”的结构化人工复核，并逐步合法取得 12 篇入门论文正文；
 2. 接入 Materials Project/COD 的结构 ID 与可追溯 CIF；
 3. 生成可审查而非自动执行的 VASP 输入草案；
 4. 增加 VASP 收敛、NEB 势垒、MSD/D/σ 的结果检查器；

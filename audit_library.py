@@ -38,6 +38,7 @@ def main() -> int:
     entries = manifest.setdefault("papers", {})
     seen_dois: set[str] = set()
     seen_uids: set[str] = set()
+    verified_dois = 0
     duplicate_hashes: dict[str, list[str]] = {}
 
     for paper in papers:
@@ -45,10 +46,14 @@ def main() -> int:
         uid = paper.get("wos_uid")
         if doi in seen_dois:
             raise SystemExit(f"duplicate DOI: {doi}")
-        if not uid or uid in seen_uids:
-            raise SystemExit(f"missing/duplicate WOS UID: {paper['id']} {uid}")
+        if not paper.get("verification", {}).get("doi", "").startswith("verified"):
+            raise SystemExit(f"unverified DOI: {paper['id']} {doi}")
+        verified_dois += 1
+        if uid and uid in seen_uids:
+            raise SystemExit(f"duplicate WOS UID: {paper['id']} {uid}")
         seen_dois.add(doi)
-        seen_uids.add(uid)
+        if uid:
+            seen_uids.add(uid)
 
         entry = entries.setdefault(paper["id"], {})
         entry.update({"title": paper["title"], "doi": paper["doi"], "wos_uid": uid})
@@ -82,7 +87,8 @@ def main() -> int:
     rebuild_fulltext_index(papers, manifest)
     manifest["integrity_audit"] = {
         "audited_at": utc_now(),
-        "seed_papers": len(papers),
+        "library_papers": len(papers),
+        "doi_verified": verified_dois,
         "wos_uid_verified": len(seen_uids),
         "downloaded_main_texts": sum(
             entry.get("status") == "downloaded" for entry in entries.values()
@@ -126,7 +132,7 @@ def main() -> int:
     missing_lines = (
         [f"- {paper['title']}，DOI `{paper['doi']}`：本地未保存正文，使用 WOS/DOI 回退。" for paper in missing]
         if missing
-        else ["当前 16 篇种子论文均已有经校验的本地正文。"]
+        else ["当前证据库中的论文均已有经校验的本地正文。"]
     )
     report = "\n".join(
         [
@@ -134,7 +140,7 @@ def main() -> int:
             "",
             f"审计时间：{manifest['integrity_audit']['audited_at']}",
             "",
-            f"结论：16 篇种子论文和 WOS UT 均已核验；本地可检索正文 {downloaded}/16 篇，共 {chunks} 个页级文本块。未下载项不会伪装成全文，会回退到精确 WOS 记录和 DOI 页面。",
+            f"结论：证据库共 {len(papers)} 篇，DOI/出版社记录已核验 {verified_dois}/{len(papers)}；其中 {len(seen_uids)} 篇核心论文已取得 WOS UT。本地可检索正文 {downloaded}/{len(papers)} 篇，共 {chunks} 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。",
             "",
             "所有保留文件均通过 PDF 解析、标题匹配、正文/补充材料区分、SHA-256 和重复文件检查。M3GNet 的补充材料单独放在 `literature/supplementary/`，不进入正文索引。",
             "",
@@ -153,7 +159,7 @@ def main() -> int:
         ]
     )
     REPORT_PATH.write_text(report, encoding="utf-8")
-    print(f"Audited {downloaded}/16 local main-text PDFs; {chunks} chunks")
+    print(f"Audited {downloaded}/{len(papers)} local main-text PDFs; {chunks} chunks")
     print(REPORT_PATH)
     return 0
 

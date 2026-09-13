@@ -66,6 +66,7 @@
     .paper { padding: 13px 10px; border-bottom: 1px solid #e6e9e4; cursor: pointer; }
     .paper:hover { background: #f1f7f2; border-radius: 10px; }
     .paper .meta { color: var(--orange); font: 700 10px ui-monospace, monospace; }
+    .paper .level { display: inline-block; margin-left: 6px; padding: 3px 6px; border-radius: 999px; background: var(--mint); color: var(--green); font: 700 10px/1 sans-serif; }
     .paper h3 { font-size: 13px; line-height: 1.4; margin: 5px 0; }
     .paper p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
     .modal { position: fixed; inset: 0; background: #102018b8; padding: 5vw; display: none; place-items: center; z-index: 10; }
@@ -107,6 +108,7 @@
       <div class="header-actions">
         <div class="stats">
           <span class="stat"><b id="paperCount">—</b> 篇论文</span>
+          <span class="stat" id="starterStat">入门路线 · 检测中</span>
           <span class="stat" id="zoteroStat">Zotero 深链 · 检测中</span>
           <span class="stat" id="apiStat">本地服务 · 未连接</span>
           <span class="stat">DFT → MD → AI4S</span>
@@ -291,14 +293,22 @@
     function renderList(filter='') {
       const q = filter.toLowerCase();
       const papers = state.papers.filter(p => JSON.stringify(p).toLowerCase().includes(q));
-      document.querySelector('#paperList').innerHTML = papers.map(p => `<div class="paper" data-id="${escapeHtml(p.id)}"><span class="meta">${p.year} · ${escapeHtml(p.journal)}</span><h3>${escapeHtml(p.title)}</h3><p>${escapeHtml(p.role)}</p></div>`).join('');
+      document.querySelector('#paperList').innerHTML = papers.map(p => `<div class="paper" data-id="${escapeHtml(p.id)}"><span class="meta">${p.year} · ${escapeHtml(p.journal)}</span>${p.difficulty ? `<span class="level">${escapeHtml(p.difficulty)}</span>` : ''}<h3>${escapeHtml(p.title)}</h3><p>${escapeHtml(p.role)}</p></div>`).join('');
       document.querySelectorAll('.paper').forEach(el => el.onclick = () => showPaper(el.dataset.id));
     }
     function showPaper(id) {
       const p = state.papers.find(item => item.id === id); if (!p) return;
+      const authorNames = p.authors || [];
+      const authorLine = authorNames.length > 12
+        ? `${authorNames.slice(0, 12).join('；')}；等（共 ${authorNames.length} 位，完整名单见出版社页面）`
+        : authorNames.join('；');
       const tags = [...(p.tags_zh || []), ...(p.methods || [])].map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('');
       const evidence = (p.evidence || []).map(e => `<li>${escapeHtml(e.claim)} <small>（${escapeHtml(e.basis)}；${escapeHtml(e.strength)}）</small></li>`).join('');
       const relations = (p.relations || []).map(r => `<div class="relation">${escapeHtml(r.source)} —[${escapeHtml(r.relation)}]→ ${escapeHtml(r.target)}</div>`).join('');
+      const protocolSteps = (p.protocol_steps || []).map(step => `<li>${escapeHtml(step)}</li>`).join('');
+      const protocolBlock = protocolSteps
+        ? `<h3>建议复现步骤</h3><ol>${protocolSteps}</ol><div class="notice">这些步骤是基于论文范围整理的入门路线，不替代原文、补充信息、软件手册和你自己的收敛测试。</div>`
+        : '';
       const local = state.literature[p.id] || {};
       const localStatus = local.status === 'downloaded' ? `本地全文：已下载${local.pages ? `，${local.pages}页` : ''}${local.text_chunks ? `，${local.text_chunks}个检索片段` : ''}` : '本地全文：尚未下载';
       const methodRecord = state.methods[p.id] || {};
@@ -311,7 +321,8 @@
       const methodBlock = methods
         ? `<h3>自动方法证据（待人工核对）</h3><ul>${methods}</ul><div class="notice">这里只显示前 12 条定位信号。用于 INCAR、KPOINTS、分子动力学设置、论文或汇报前，必须回到标注页核对上下文。</div>`
         : `<h3>自动方法证据（待人工核对）</h3><p>当前没有可显示的本地正文方法信号。</p>`;
-      document.querySelector('#detail').innerHTML = `<div class="eyebrow">${p.year} · ${escapeHtml(p.journal)} · ${escapeHtml(p.document_type)}</div><h2>${escapeHtml(p.title)}</h2><p>${escapeHtml((p.authors || []).join('；'))}</p><p>${escapeHtml(p.summary)}</p><div>${tags}</div>${linkButtons(p)}<h3>已抽取证据</h3><ul>${evidence}</ul><h3>知识关系</h3>${relations}${methodBlock}<div class="notice">WOS：${escapeHtml(p.wos_uid || p.verification?.wos || '未记录')}；${escapeHtml(localStatus)}。论文级证据与全文自动命中仍需回到原文人工核对。</div>`;
+      const verification = p.wos_uid ? `WOS：${p.wos_uid}` : `书目核验：${p.verification?.doi || '待核验'}；WOS：${p.verification?.wos || '未记录'}`;
+      document.querySelector('#detail').innerHTML = `<div class="eyebrow">${p.year} · ${escapeHtml(p.journal)} · ${escapeHtml(p.document_type)}${p.difficulty ? ` · ${escapeHtml(p.difficulty)}` : ''}</div><h2>${escapeHtml(p.title)}</h2><p>${escapeHtml(authorLine)}</p><p>${escapeHtml(p.summary)}</p><div>${tags}</div>${linkButtons(p)}${protocolBlock}<h3>已抽取证据</h3><ul>${evidence}</ul><h3>知识关系</h3>${relations}${methodBlock}<div class="notice">${escapeHtml(verification)}；${escapeHtml(localStatus)}。论文级证据与全文自动命中仍需回到原文人工核对。</div>`;
       document.querySelector('#modal').classList.add('open');
     }
     async function ask() {
@@ -425,6 +436,8 @@
         } catch (_) { state.literature = {}; }
       }
       document.querySelector('#paperCount').textContent = state.papers.length;
+      const starterCount = state.papers.filter(p => p.collection === 'starter').length;
+      document.querySelector('#starterStat').textContent = `入门路线 · ${starterCount} 篇`;
       const zoteroRows = Object.values(state.zotero);
       document.querySelector('#zoteroStat').textContent = !localMode
         ? 'Zotero 深链 · 仅本机版显示'

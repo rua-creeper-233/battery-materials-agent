@@ -42,6 +42,9 @@ ALIASES = {
     "钠": ["sodium", "na-ion", "na"],
     "锂": ["lithium", "li-ion", "li"],
     "文献": ["paper", "review", "article", "doi"],
+    "入门": ["starter", "protocol", "vaspkit", "pymatgen", "ase", "sumo"],
+    "声子": ["phonon", "phonopy", "finite displacement", "force constants"],
+    "后处理": ["post-processing", "vaspkit", "sumo", "band structure", "dos"],
 }
 
 TOKEN_RE = re.compile(r"[a-zA-Z][a-zA-Z0-9+_.:/-]*|\d+(?:\.\d+)?|[\u4e00-\u9fff]{2,}")
@@ -341,6 +344,8 @@ class BatteryResearchAgent:
             "",
             "工作流建议来自已入库的论文级证据；上面的全文命中只作为回到原文核对的入口，不自动等同于经过人工复核的结论。具体INCAR/KPOINTS、U值、赝势、超胞和温度不能由题目自动猜定；应在锁定材料、价态与目标性质后，再从原文方法和补充信息抽取并做收敛测试。",
         ]
+        wos_count = sum(bool(paper.get("wos_uid")) for paper in self.papers)
+        starter_count = sum(paper.get("collection") == "starter" for paper in self.papers)
         return {
             "question": question,
             "task": task,
@@ -355,7 +360,10 @@ class BatteryResearchAgent:
                 "fulltext_file": str(self.fulltext_path) if self.fulltext_path else None,
                 "fulltext_paper_count": len({row["paper_id"] for row in self.fulltext_chunks}),
                 "fulltext_chunk_count": len(self.fulltext_chunks),
-                "wos_note": "16篇种子论文已于2026-09-13在华南师范大学机构会话中逐条取得WOS UT。",
+                "wos_note": (
+                    f"当前 {len(self.papers)} 篇：{wos_count} 篇核心论文已取得 WOS UT，"
+                    f"{starter_count} 篇入门论文已核对 DOI 与出版社记录。"
+                ),
             },
         }
 

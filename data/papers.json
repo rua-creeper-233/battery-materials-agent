@@ -414,5 +414,413 @@
     ],
     "wos_uid": "WOS:001085170400007",
     "verification": {"publisher": "verified", "doi": "verified", "wos": "verified_institution_session_2026-09-13"}
+  },
+  {
+    "id": "geng2025_vaspkit_protocol",
+    "title": "Empowering materials science with VASPKIT: a toolkit for enhanced simulation and analysis",
+    "authors": ["Wen-Tong Geng", "Ya-Chao Liu", "Nan Xu", "Gang Tang", "Yoshiyuki Kawazoe", "Vei Wang"],
+    "year": 2025,
+    "journal": "Nature Protocols",
+    "document_type": "Protocol",
+    "doi": "10.1038/s41596-025-01160-w",
+    "url": "https://www.nature.com/articles/s41596-025-01160-w",
+    "collection": "starter",
+    "difficulty": "入门",
+    "role": "VASP输入生成、计算执行与结果分析的逐步协议",
+    "systems": ["graphene", "Pt", "CsPbI3", "liquid water", "periodic materials"],
+    "methods": ["VASP", "VASPKIT", "pre-processing", "post-processing", "band structure", "DOS", "phonon", "MD analysis"],
+    "properties": ["elastic constants", "electronic structure", "phonons", "optical properties", "molecular dynamics"],
+    "tags_zh": ["VASP入门", "VASPKIT", "操作协议", "前处理", "后处理", "能带", "声子", "分子动力学"],
+    "summary": "Nature Protocols 的操作型文章，明确提供逐步指南、示例数据和从输入准备到后处理的完整路线；适合第一次把 VASP 结果做成可检查图表时对照。",
+    "protocol_steps": [
+      "先确定目标性质并准备经过检查的晶体结构，不要把示例参数直接搬到电池材料。",
+      "用 VASPKIT 完成结构、对称性、高对称 k 路径及所需 VASP 输入的预处理。",
+      "运行 VASP 并分别检查电子步、离子步和目标性质所需文件是否收敛且完整。",
+      "按任务选择能带、态密度、弹性、声子、光学或 MD 轨迹后处理模块。",
+      "把输出与文章提供的示例和排错说明对照，再迁移到自己的材料体系。"
+    ],
+    "evidence": [
+      {"claim": "文章自述提供 VASPKIT 的详细使用指南和实际示例，并覆盖 VASP 前处理与后处理。", "basis": "Nature Protocols 出版社页面与摘要", "strength": "high"},
+      {"claim": "论文示例数据公开在作者给出的 GitHub 仓库，可作为操作练习的参照。", "basis": "Nature Protocols 数据可用性声明", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "crystal structure", "relation": "preprocessed_by", "target": "VASPKIT VASP inputs"},
+      {"source": "VASP raw outputs", "relation": "analyzed_by", "target": "VASPKIT property workflows"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "wang2021_vaspkit",
+    "title": "VASPKIT: A user-friendly interface facilitating high-throughput computing and analysis using VASP code",
+    "authors": ["Vei Wang", "Nan Xu", "Jin-Cheng Liu", "Gang Tang", "Wen-Tong Geng"],
+    "year": 2021,
+    "journal": "Computer Physics Communications",
+    "document_type": "Software Article",
+    "doi": "10.1016/j.cpc.2021.108033",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0010465521001454",
+    "collection": "starter",
+    "difficulty": "入门",
+    "role": "VASPKIT功能地图与典型前后处理示例",
+    "systems": ["periodic materials", "VASP calculations"],
+    "methods": ["VASPKIT", "VASP", "input generation", "symmetry analysis", "supercell", "k-path", "batch processing"],
+    "properties": ["electronic structure", "elasticity", "charge density", "electrostatic potential", "optical coefficients"],
+    "tags_zh": ["VASPKIT", "VASP入门", "输入生成", "超胞", "k路径", "结果提取", "批处理"],
+    "summary": "VASPKIT 的主软件论文，解释前处理、后处理与命令行批处理模块，并给出若干使用示例；适合先建立工具能力地图，再查官方教程执行具体任务。",
+    "protocol_steps": [
+      "安装 VASPKIT 并用官方示例确认程序和环境变量可用。",
+      "从 POSCAR 开始，先练习结构检查、超胞变换和高对称 k 路径生成。",
+      "生成输入后人工核对 INCAR、KPOINTS 与赝势选择，不能把工具默认值当成收敛结论。",
+      "VASP 运行完成后再练习提取能带、DOS、弹性或电势等单一性质。",
+      "最后用命令行模式和脚本批量处理一组结构，并保留日志与失败项。"
+    ],
+    "evidence": [
+      {"claim": "VASPKIT包含生成输入、对称性分析、超胞和k路径等前处理，以及多类VASP结果后处理。", "basis": "Computer Physics Communications 出版社摘要", "strength": "high"},
+      {"claim": "软件同时提供交互界面和命令行模式，后者可与脚本组合进行高通量任务。", "basis": "Computer Physics Communications 出版社摘要", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "POSCAR", "relation": "transformed_by", "target": "VASPKIT preprocessing"},
+      {"source": "VASP output", "relation": "converted_by", "target": "human-readable properties"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "ong2013_pymatgen",
+    "title": "Python Materials Genomics (pymatgen): A robust, open-source python library for materials analysis",
+    "authors": ["Shyue Ping Ong", "William Davidson Richards", "Anubhav Jain", "Geoffroy Hautier", "Michael Kocher", "Shreyas Cholia", "Dan Gunter", "Vincent L. Chevrier", "Kristin A. Persson", "Gerbrand Ceder"],
+    "year": 2013,
+    "journal": "Computational Materials Science",
+    "document_type": "Software Article",
+    "doi": "10.1016/j.commatsci.2012.10.028",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0927025612006295",
+    "collection": "starter",
+    "difficulty": "入门",
+    "role": "用 Python 处理结构、VASP 输入输出和电池相稳定性",
+    "systems": ["Li4SnS4", "Li-Sn-S", "battery materials", "crystal structures"],
+    "methods": ["pymatgen", "Materials Project API", "phase diagram", "VASP input/output", "thermodynamic analysis"],
+    "properties": ["phase stability", "electrochemical stability", "chemical potential", "structure data"],
+    "tags_zh": ["pymatgen", "Python", "Materials Project", "相图", "电化学稳定性", "VASP输入输出"],
+    "summary": "pymatgen 奠基软件论文，以 Li4SnS4 为例展示如何结合 Materials Project API 和相图模块判断相稳定与电化学稳定性，是电池计算 Python 入门的直接案例。",
+    "protocol_steps": [
+      "先学习 Structure、Composition 和 ComputedEntry 等核心对象，并读取一个 POSCAR/CIF。",
+      "用 pymatgen 生成或解析一套 VASP 输入输出，核对单位、元素顺序和计算设置。",
+      "从 Materials Project 获取同一化学空间的条目，并记录数据库版本与材料 ID。",
+      "构建相图，先判断材料是否在凸包上，再分析分解产物。",
+      "把锂化学势范围转换为电化学稳定区间，并对照 Li4SnS4 示例。"
+    ],
+    "evidence": [
+      {"claim": "pymatgen提供材料数据对象、结构和热力学分析以及Materials Project REST API接口。", "basis": "Computational Materials Science 出版社摘要", "strength": "high"},
+      {"claim": "论文用Li4SnS4展示了相稳定性和电化学稳定性分析。", "basis": "Computational Materials Science 出版社摘要", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "Materials Project entries", "relation": "assembled_into", "target": "phase diagram"},
+      {"source": "Li chemical potential range", "relation": "maps_to", "target": "electrochemical stability"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "larsen2017_ase",
+    "title": "The atomic simulation environment—a Python library for working with atoms",
+    "authors": ["Ask Hjorth Larsen", "Jens Jørgen Mortensen", "Jakob Blomqvist", "Ivano E Castelli", "Rune Christensen", "Marcin Dułak", "Jesper Friis", "Michael N Groves", "Bjørk Hammer", "Cory Hargus", "Eric D Hermes", "Paul C Jennings", "Peter Bjerre Jensen", "James Kermode", "John R Kitchin", "Esben Leonhard Kolsbjerg", "Joseph Kubal", "Kristen Kaasbjerg", "Steen Lysgaard", "Jón Bergmann Maronsson", "Tristan Maxson", "Thomas Olsen", "Lars Pastewka", "Andrew Peterson", "Carsten Rostgaard", "Jakob Schiøtz", "Ole Schütt", "Mikkel Strange", "Kristian S Thygesen", "Tejs Vegge", "Lasse Vilhelmsen", "Michael Walter", "Zhenhua Zeng", "Karsten W Jacobsen"],
+    "year": 2017,
+    "journal": "Journal of Physics: Condensed Matter",
+    "document_type": "Software Article",
+    "doi": "10.1088/1361-648X/aa680e",
+    "url": "https://doi.org/10.1088/1361-648X/aa680e",
+    "collection": "starter",
+    "difficulty": "入门",
+    "role": "用统一 Python 接口搭建结构优化、MD 和 NEB",
+    "systems": ["atoms", "molecules", "periodic crystals"],
+    "methods": ["ASE", "Python", "calculator interface", "geometry optimization", "molecular dynamics", "NEB"],
+    "properties": ["energy", "forces", "stress", "trajectory", "minimum-energy path"],
+    "tags_zh": ["ASE", "Python", "结构优化", "分子动力学", "NEB", "轨迹", "自动化"],
+    "summary": "ASE 软件论文介绍 Atoms—Calculator—Optimizer 的统一抽象，可用同一种 Python 写法驱动结构优化、分子动力学与 NEB；适合作为 VASP 自动化之前的编程训练。",
+    "protocol_steps": [
+      "创建或读取 Atoms 对象，检查晶胞、周期边界和元素顺序。",
+      "先用无需许可证的简单 calculator 跑通能量和力，再替换为实际电子结构接口。",
+      "用 optimizer 完成结构弛豫，并把轨迹和日志写入独立文件。",
+      "分别练习约束、MD 与 NEB，理解它们共享结构对象但解决不同问题。",
+      "加入循环、异常处理与结果解析，再考虑连接 VASP 批量任务。"
+    ],
+    "evidence": [
+      {"claim": "ASE通过统一calculator接口连接多种电子结构程序和力场，并支持优化、MD、约束和NEB。", "basis": "IOP 出版社摘要", "strength": "high"},
+      {"claim": "ASE任务可完全用Python脚本组织，适合串联多个计算步骤。", "basis": "IOP 出版社摘要", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "ASE Atoms", "relation": "coupled_to", "target": "calculator"},
+      {"source": "energy and forces", "relation": "drive", "target": "optimization, MD or NEB"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "ganose2025_atomate2",
+    "title": "Atomate2: modular workflows for materials science",
+    "authors": ["Alex M. Ganose", "Hrushikesh Sahasrabuddhe", "Mark Asta", "Kevin Beck", "Tathagata Biswas", "Alexander Bonkowski", "Joana Bustamante", "Xin Chen", "Yuan Chiang", "Daryl C. Chrzan", "Jacob Clary", "Orion A. Cohen", "Christina Ertural", "Max C. Gallant", "Janine George", "Sophie Gerits", "Rhys E. A. Goodall", "Rishabh D. Guha", "Geoffroy Hautier", "Matthew Horton", "T. J. Inizan", "Aaron D. Kaplan", "Ryan S. Kingsbury", "Matthew C. Kuner", "Bryant Li", "Xavier Linn", "Matthew J. McDermott", "Rohith Srinivaas Mohanakrishnan", "Aakash N. Naik", "Jeffrey B. Neaton", "Shehan M. Parmar", "Kristin A. Persson", "Guido Petretto", "Thomas A. R. Purcell", "Francesco Ricci", "Benjamin Rich", "Janosh Riebesell", "Gian-Marco Rignanese", "Andrew S. Rosen", "Matthias Scheffler", "Jonathan Schmidt", "Jimmy-Xuan Shen", "Andrei Sobolev", "Ravishankar Sundararaman", "Cooper Tezak", "Victor Trinquet", "Joel B. Varley", "Derek Vigil-Fowler", "Duo Wang", "David Waroquiers", "Mingjian Wen", "Han Yang", "Hui Zheng", "Jiongzhi Zheng", "Zhuoying Zhu", "Anubhav Jain"],
+    "year": 2025,
+    "journal": "Digital Discovery",
+    "document_type": "Software Article",
+    "doi": "10.1039/D5DD00019J",
+    "url": "https://pubs.rsc.org/en/content/articlelanding/2025/dd/d5dd00019j",
+    "collection": "starter",
+    "difficulty": "入门进阶",
+    "role": "把 VASP、AIMD、声子和机器学习势组织成可复现工作流",
+    "systems": ["periodic materials", "amorphous materials", "defects", "high-throughput materials"],
+    "methods": ["atomate2", "jobflow", "pymatgen", "custodian", "VASP", "AIMD", "phonon", "MLIP"],
+    "properties": ["relaxation", "band structure", "DOS", "equation of state", "phonons", "molecular dynamics"],
+    "tags_zh": ["atomate2", "工作流", "高通量", "VASP", "AIMD", "MLIP", "自动纠错", "数据库"],
+    "summary": "当前 atomate2 主论文，系统展示结构输入、任务生成、调度、错误处理、解析和数据库归档的端到端流程，并覆盖 VASP、AIMD、声子与 MLIP。",
+    "protocol_steps": [
+      "先用本地、小体系和无需队列的示例理解 Maker、Job、Flow 与 JobStore。",
+      "配置 pymatgen 输入集和计算程序命令，明确赝势许可与路径不进入版本库。",
+      "选择单一成熟工作流，例如结构弛豫接静态计算，不要一开始就搭全套高通量平台。",
+      "检查 custodian 的错误修复记录和每一步的 task document，确认失败没有被静默掩盖。",
+      "最后再接入队列、数据库、分块 AIMD 或 MLIP，并固定软件和输入集版本。"
+    ],
+    "evidence": [
+      {"claim": "atomate2提供模块化端到端材料工作流，并支持VASP、AIMD、声子、状态方程和MLIP等任务。", "basis": "Digital Discovery 开放全文与流程图", "strength": "high"},
+      {"claim": "文章明确展示结构输入到任务执行、错误处理、解析和结果存储的数据流。", "basis": "Digital Discovery 开放全文 Fig. 1 及方法部分", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "pymatgen structure", "relation": "enters", "target": "atomate2 workflow"},
+      {"source": "task outputs", "relation": "parsed_and_stored_as", "target": "reproducible documents"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "jain2013_materials_project",
+    "title": "Commentary: The Materials Project: A materials genome approach to accelerating materials innovation",
+    "authors": ["Anubhav Jain", "Shyue Ping Ong", "Geoffroy Hautier", "Wei Chen", "William Davidson Richards", "Stephen Dacek", "Shreyas Cholia", "Dan Gunter", "David Skinner", "Gerbrand Ceder", "Kristin A. Persson"],
+    "year": 2013,
+    "journal": "APL Materials",
+    "document_type": "Commentary",
+    "doi": "10.1063/1.4812323",
+    "url": "https://doi.org/10.1063/1.4812323",
+    "collection": "starter",
+    "difficulty": "入门",
+    "role": "理解 Materials Project 数据从哪里来以及如何用于筛选",
+    "systems": ["inorganic materials", "battery materials", "computed materials database"],
+    "methods": ["Materials Project", "high-throughput DFT", "database", "materials screening", "VASP"],
+    "properties": ["structure", "energy", "electronic properties", "computed provenance"],
+    "tags_zh": ["Materials Project", "材料数据库", "高通量DFT", "VASP", "筛选", "数据来源"],
+    "summary": "Materials Project 奠基论文，解释高通量 DFT 数据库的目标、计算基础和材料筛选思路；适合在调用 API 前理解数据库值不是实验真值，也不是任意设置下的 VASP 结果。",
+    "protocol_steps": [
+      "在 Materials Project 用化学式或元素体系定位候选，并记录材料 ID。",
+      "查看结构、能量和计算来源，区分数据库计算值、实验条目与派生性质。",
+      "用 API 批量取得同一化学空间的条目，固定 API/数据库版本和查询条件。",
+      "先做低成本筛选和去重，再对少量候选用一致设置重新计算。",
+      "把数据库结果当作候选与基线，而不是替代目标体系的收敛和实验验证。"
+    ],
+    "evidence": [
+      {"claim": "Materials Project以高通量计算建立开放的结构、电子和能量数据生态。", "basis": "APL Materials 出版社全文与摘要", "strength": "high"},
+      {"claim": "该数据库使用VASP生成大规模计算数据并服务于材料筛选。", "basis": "APL Materials 出版社全文", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "high-throughput VASP calculations", "relation": "populate", "target": "Materials Project"},
+      {"source": "database filters", "relation": "prioritize", "target": "DFT validation candidates"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "smidstrup2014_idpp",
+    "title": "Improved initial guess for minimum energy path calculations",
+    "authors": ["Søren Smidstrup", "Andreas Pedersen", "Kurt Stokbro", "Hannes Jónsson"],
+    "year": 2014,
+    "journal": "The Journal of Chemical Physics",
+    "document_type": "Article",
+    "doi": "10.1063/1.4878664",
+    "url": "https://doi.org/10.1063/1.4878664",
+    "collection": "starter",
+    "difficulty": "入门进阶",
+    "role": "用 IDPP 生成更可靠的 NEB 初始路径",
+    "systems": ["minimum-energy path", "solid diffusion", "atomic exchange", "amorphous silicon"],
+    "methods": ["IDPP", "NEB", "initial path", "distance interpolation", "DFT"],
+    "properties": ["minimum-energy path", "saddle point", "activation barrier", "NEB convergence"],
+    "tags_zh": ["IDPP", "NEB", "初始路径", "中间像", "扩散势垒", "收敛"],
+    "summary": "IDPP 方法论文解决线性插值可能让原子靠得过近、导致电子结构计算难收敛的问题，是第一次做锂离子 NEB 时非常实用的路径准备材料。",
+    "protocol_steps": [
+      "分别充分弛豫扩散初态和终态，并确保两端原子编号一一对应。",
+      "生成若干中间像，先用 IDPP 优化几何路径而不调用昂贵 DFT 能量。",
+      "逐像检查最短原子间距、迁移离子通道和周期边界映射。",
+      "以 IDPP 路径启动普通 NEB，达到稳定路径后再使用 climbing image 精修鞍点。",
+      "对中间像数量、超胞、力阈值和可能的替代通道分别做检查。"
+    ],
+    "evidence": [
+      {"claim": "IDPP利用成对距离插值生成NEB初始路径，可避免线性笛卡尔插值中的非物理近距离。", "basis": "Journal of Chemical Physics 摘要与作者公开稿", "strength": "high"},
+      {"claim": "论文三个示例中，IDPP降低了寻找DFT最小能量路径的计算工作量。", "basis": "Journal of Chemical Physics 摘要", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "relaxed endpoints", "relation": "interpolated_by", "target": "IDPP path"},
+      {"source": "IDPP path", "relation": "initializes", "target": "DFT NEB"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "he2018_aimd_statistics",
+    "title": "Statistical variances of diffusional properties from ab initio molecular dynamics simulations",
+    "authors": ["Xingfeng He", "Yizhou Zhu", "Alexander Epstein", "Yifei Mo"],
+    "year": 2018,
+    "journal": "npj Computational Materials",
+    "document_type": "Article",
+    "doi": "10.1038/s41524-018-0074-y",
+    "url": "https://www.nature.com/articles/s41524-018-0074-y",
+    "collection": "starter",
+    "difficulty": "入门进阶",
+    "role": "从 AIMD 轨迹正确计算扩散系数、电导率和误差",
+    "systems": ["Li superionic conductors", "LGPS", "LLZO", "mobile ions"],
+    "methods": ["AIMD", "MSD", "Einstein relation", "Nernst-Einstein", "Arrhenius fit", "uncertainty analysis"],
+    "properties": ["diffusivity", "ionic conductivity", "activation energy", "statistical variance"],
+    "tags_zh": ["AIMD", "MSD", "扩散系数", "离子电导率", "活化能", "误差分析", "有效跃迁"],
+    "summary": "开放获取的 AIMD 数据分析方法论文，明确给出从轨迹到 MSD、扩散系数、电导率、有效跃迁数和 Arrhenius 误差的流程，是固态电解质模拟最值得先精读的操作文献之一。",
+    "protocol_steps": [
+      "对多个温度准备平衡后的独立轨迹，并正确展开跨周期边界的离子坐标。",
+      "计算移动离子的总均方位移和单离子 MSD，先识别局域振动与真正扩散区。",
+      "只在线性扩散区拟合 Einstein 关系，排除早期弹道区和轨迹尾部低统计区。",
+      "根据总扩散位移与相邻位点距离估计有效跃迁数，并据此报告 D 和电导率的不确定性。",
+      "用各温度误差作为权重拟合 Arrhenius 关系，同时报告活化能与室温外推误差。"
+    ],
+    "evidence": [
+      {"claim": "文章建立了从AIMD轨迹提取扩散系数和离子电导率并评估统计方差的系统流程。", "basis": "npj Computational Materials 开放全文", "strength": "high"},
+      {"claim": "仅用MSD线性拟合优度不能代表统计可靠性，误差应联系实际采样到的有效离子跃迁。", "basis": "npj Computational Materials 结果与讨论", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "AIMD trajectory", "relation": "yields", "target": "MSD and diffusivity"},
+      {"source": "effective ion hops", "relation": "quantify", "target": "diffusion uncertainty"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "zhou2004_dftu_voltage",
+    "title": "First-principles prediction of redox potentials in transition-metal compounds with LDA+U",
+    "authors": ["F. Zhou", "M. Cococcioni", "C. A. Marianetti", "D. Morgan", "G. Ceder"],
+    "year": 2004,
+    "journal": "Physical Review B",
+    "document_type": "Article",
+    "doi": "10.1103/PhysRevB.70.235121",
+    "url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.70.235121",
+    "collection": "starter",
+    "difficulty": "进阶",
+    "role": "理解过渡金属正极为什么需要一致且可解释的 DFT+U",
+    "systems": ["LixMPO4", "LixMO2", "LixM2O4", "transition-metal cathodes"],
+    "methods": ["LDA+U", "GGA+U", "linear response U", "DFT total energy", "redox voltage"],
+    "properties": ["redox potential", "intercalation voltage", "electron localization", "self-interaction error"],
+    "tags_zh": ["DFT+U", "正极", "氧化还原电压", "过渡金属", "自相互作用", "参数一致性"],
+    "summary": "经典电池 DFT+U 论文，解释普通 LDA/GGA 对过渡金属氧化还原电压的系统误差，并用自洽 U 改进多类正极的电压预测。",
+    "protocol_steps": [
+      "确定氧化还原中心、候选磁序和相邻锂含量端点，并分别充分弛豫。",
+      "从可信文献或线性响应得到 U；不同端点和竞争相保持同一理论框架。",
+      "用一致赝势、截断能、k 点和磁设置计算各端点与锂金属参比总能。",
+      "按反应能换算平均电压，并检查U、磁序与相稳定端点对结果的敏感性。",
+      "同时与无U结果和实验平台比较，避免把经验吻合误写成参数普适性。"
+    ],
+    "evidence": [
+      {"claim": "普通LDA/GGA会低估多类过渡金属锂化合物的氧化还原电压。", "basis": "Physical Review B 出版社摘要", "strength": "high"},
+      {"claim": "自洽评估U的DFT+U方法改善了橄榄石、层状和尖晶石正极电压。", "basis": "Physical Review B 出版社摘要", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "self-interaction error", "relation": "biases", "target": "redox voltage"},
+      {"source": "consistent DFT+U energies", "relation": "improve", "target": "intercalation voltage"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "jacobs2025_mlip_guide",
+    "title": "A practical guide to machine learning interatomic potentials – Status and future",
+    "authors": ["Ryan Jacobs", "Dane Morgan", "Siamak Attarian", "Jun Meng", "Chen Shen", "Zhenghao Wu", "Clare Yijia Xie", "Julia H. Yang", "Nongnuch Artrith", "Ben Blaiszik", "Gerbrand Ceder", "Kamal Choudhary", "Gabor Csanyi", "Ekin Dogus Cubuk", "Bowen Deng", "Ralf Drautz", "Xiang Fu", "Jonathan Godwin", "Vasant Honavar", "Olexandr Isayev", "Anders Johansson", "Boris Kozinsky", "Stefano Martiniani", "Shyue Ping Ong", "Igor Poltavsky", "KJ Schmidt", "So Takamoto", "Aidan P. Thompson", "Julia Westermayr", "Brandon M. Wood"],
+    "year": 2025,
+    "journal": "Current Opinion in Solid State and Materials Science",
+    "document_type": "Review",
+    "doi": "10.1016/j.cossms.2025.101214",
+    "url": "https://doi.org/10.1016/j.cossms.2025.101214",
+    "collection": "starter",
+    "difficulty": "入门",
+    "role": "机器学习势选型、数据、速度与验证的实用入门指南",
+    "systems": ["organic systems", "inorganic materials", "universal MLIP", "atomistic simulation"],
+    "methods": ["MLIP", "universal potential", "training data", "model selection", "benchmarking", "hardware assessment"],
+    "properties": ["energy", "forces", "stress", "execution speed", "accuracy", "transferability"],
+    "tags_zh": ["机器学习势", "实用指南", "模型选型", "训练数据", "预训练模型", "速度", "验证", "适用域"],
+    "summary": "专门面向非 MLIP 专家的实用综述，讨论如何按硬件、速度、能量/力精度、体系规模与任务选择预训练势或自训练势，并系统列出训练数据和失效边界。",
+    "protocol_steps": [
+      "先写清元素、相、缺陷/界面、温压和目标性质，形成可检验的适用域。",
+      "按体系与硬件评估预训练通用势是否足够；若不足，再决定微调或从头训练。",
+      "收集覆盖平衡、扰动、高温和反应相关构型的一致DFT能量、力与应力标签。",
+      "按结构家族和轨迹分组切分训练、验证与测试，避免相邻帧泄漏。",
+      "除MAE外验证弛豫、能量差、缺陷/界面、NEB势垒和扩散，并设置OOD测试。"
+    ],
+    "evidence": [
+      {"claim": "综述明确提供按硬件、速度、精度和应用需求选择MLIP的实践指南。", "basis": "期刊记录、作者公开全文与摘要", "strength": "high"},
+      {"claim": "文章系统讨论训练数据来源、预训练势、适用限制与缓解策略。", "basis": "作者公开全文与摘要", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "application and hardware requirements", "relation": "determine", "target": "MLIP choice"},
+      {"source": "representative DFT labels", "relation": "condition", "target": "MLIP reliability"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "togo2015_phonopy",
+    "title": "First principles phonon calculations in materials science",
+    "authors": ["Atsushi Togo", "Isao Tanaka"],
+    "year": 2015,
+    "journal": "Scripta Materialia",
+    "document_type": "Viewpoint",
+    "doi": "10.1016/j.scriptamat.2015.07.021",
+    "url": "https://doi.org/10.1016/j.scriptamat.2015.07.021",
+    "collection": "starter",
+    "difficulty": "入门进阶",
+    "role": "用 phonopy 与 VASP 从有限位移计算声子和热力学量",
+    "systems": ["crystalline solids", "Al", "phonons"],
+    "methods": ["phonopy", "finite displacement", "DFT forces", "force constants", "phonon band structure"],
+    "properties": ["phonon frequency", "dynamic stability", "free energy", "entropy", "heat capacity"],
+    "tags_zh": ["phonopy", "声子", "有限位移", "力常数", "动力学稳定性", "自由能", "热容"],
+    "summary": "phonopy 入门论文，从谐近似和有限位移出发解释如何用第一性原理力得到声子谱及温度相关热力学量，适合连接静态 DFT 与热力学模拟。",
+    "protocol_steps": [
+      "先把原胞充分弛豫到足够小的残余力和应力，并检查基态结构。",
+      "选择并收敛声子超胞，用 phonopy 生成对称性不等价的有限位移结构。",
+      "对每个位移结构用完全一致的VASP设置计算力，避免再次做离子弛豫。",
+      "收集力并构建二阶力常数，计算声子能带和态密度。",
+      "先检查虚频与超胞/k点收敛，再报告自由能、熵和定容热容。"
+    ],
+    "evidence": [
+      {"claim": "论文说明有限位移第一性原理力可用于构建力常数并计算声子性质。", "basis": "Scripta Materialia 开放全文", "strength": "high"},
+      {"claim": "文章给出声子频率到自由能、熵和热容等热力学量的关系与示例。", "basis": "Scripta Materialia 开放全文", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "finite-displacement DFT forces", "relation": "construct", "target": "force constants"},
+      {"source": "phonon frequencies", "relation": "derive", "target": "vibrational thermodynamics"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "ganose2018_sumo",
+    "title": "sumo: Command-line tools for plotting and analysis of periodic ab initio calculations",
+    "authors": ["Alex M Ganose", "Adam J Jackson", "David O Scanlon"],
+    "year": 2018,
+    "journal": "Journal of Open Source Software",
+    "document_type": "Software Article",
+    "doi": "10.21105/joss.00717",
+    "url": "https://joss.theoj.org/papers/10.21105/joss.00717",
+    "collection": "starter",
+    "difficulty": "入门",
+    "role": "把 VASP 能带、DOS 和光学结果快速做成可发表图",
+    "systems": ["periodic materials", "electronic structure", "phonons"],
+    "methods": ["sumo", "VASP post-processing", "band structure", "DOS", "optical absorption", "effective mass"],
+    "properties": ["band dispersion", "density of states", "effective mass", "optical absorption", "phonon bands"],
+    "tags_zh": ["sumo", "VASP后处理", "能带", "态密度", "光学吸收", "有效质量", "绘图"],
+    "summary": "轻量开放软件论文，介绍面向 VASP 的能带、态密度、光学吸收、有效质量与声子绘图工具；适合在理解计算流程后减少重复绘图代码。",
+    "protocol_steps": [
+      "先完成自洽计算并保留完整的结构、能量和投影相关输出。",
+      "按目标生成高对称路径或均匀k网格，并完成相应非自洽计算。",
+      "用 sumo 对单个结果生成能带或DOS图，先核对费米能、路径和投影元素。",
+      "再调整图形样式、能量范围与轨道投影，保存命令和配置以便复现。",
+      "把图与原始VASP输出及独立工具交叉检查，避免把绘图便利误当成结果验证。"
+    ],
+    "evidence": [
+      {"claim": "sumo提供周期性第一性原理计算的能带、DOS、光学吸收、有效质量和声子绘图分析。", "basis": "Journal of Open Source Software 论文与官方代码库", "strength": "high"},
+      {"claim": "软件主要支持VASP并建立在pymatgen、NumPy、SciPy和Matplotlib等开源工具上。", "basis": "JOSS论文与官方仓库", "strength": "high"}
+    ],
+    "relations": [
+      {"source": "VASP electronic outputs", "relation": "plotted_by", "target": "sumo"},
+      {"source": "reproducible commands", "relation": "produce", "target": "publication-ready figures"}
+    ],
+    "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
   }
 ]

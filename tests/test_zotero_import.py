@@ -31,6 +31,23 @@ class ZoteroImportTests(unittest.TestCase):
         self.assertIn("WOS:123", item["extra"])
         self.assertIn(COMMON_TAG, {tag["tag"] for tag in item["tags"]})
 
+    def test_non_wos_paper_is_not_mislabeled(self) -> None:
+        paper = {
+            "title": "A DOI-verified starter paper",
+            "authors": ["Alex Example"],
+            "summary": "Summary",
+            "journal": "Journal",
+            "year": 2025,
+            "doi": "10.1000/starter",
+            "url": "https://doi.org/10.1000/starter",
+            "tags_zh": ["入门"],
+        }
+        item = build_zotero_item(paper, "connector-id")
+        tags = {tag["tag"] for tag in item["tags"]}
+        self.assertIn("DOI-publisher-verified", tags)
+        self.assertNotIn("WOS-verified", tags)
+        self.assertIn("WOS not checked", item["extra"])
+
 
 if __name__ == "__main__":
     unittest.main()

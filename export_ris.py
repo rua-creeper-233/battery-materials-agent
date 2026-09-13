@@ -43,8 +43,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
-    papers = json.loads((ROOT / "data" / "papers.json").read_text(encoding="utf-8"))
-    if len(papers) != 16 or any(not paper.get("wos_uid") for paper in papers):
+    library = json.loads((ROOT / "data" / "papers.json").read_text(encoding="utf-8"))
+    papers = [paper for paper in library if paper.get("wos_uid")]
+    if len(papers) != 16:
         raise SystemExit("expected 16 WOS-verified seed papers")
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text("\n\n".join(render(paper) for paper in papers) + "\n", encoding="utf-8")

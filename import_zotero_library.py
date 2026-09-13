@@ -53,7 +53,8 @@ def _split_author(name: str) -> dict[str, str]:
 
 
 def build_zotero_item(paper: dict[str, Any], connector_id: str) -> dict[str, Any]:
-    tags = [COMMON_TAG, "WOS-verified"] + list(paper.get("tags_zh", []))
+    verification_tag = "WOS-verified" if paper.get("wos_uid") else "DOI-publisher-verified"
+    tags = [COMMON_TAG, verification_tag] + list(paper.get("tags_zh", []))
     seen: set[str] = set()
     unique_tags = []
     for tag in tags:
@@ -71,7 +72,11 @@ def build_zotero_item(paper: dict[str, Any], connector_id: str) -> dict[str, Any
         "DOI": paper.get("doi", ""),
         "url": paper.get("url") or f"https://doi.org/{paper.get('doi', '')}",
         "language": "en",
-        "extra": f"WOS: {paper.get('wos_uid', '')}\nEvidence status: WOS verified 2026-09-13",
+        "extra": (
+            f"WOS: {paper['wos_uid']}\nEvidence status: WOS verified 2026-09-13"
+            if paper.get("wos_uid")
+            else "Evidence status: DOI and publisher record verified 2026-09-13; WOS not checked"
+        ),
         "tags": unique_tags,
     }
 

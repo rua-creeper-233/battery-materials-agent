@@ -1,8 +1,10 @@
-# 16 篇种子论文真实性与 WOS 核验
+# 28 篇论文真实性与分级核验
 
 核验日期：2026-09-13
 
-结论：16 条均为真实、正式发表的论文；标题、作者、期刊、年份和 DOI 已与出版记录对应，并在华南师范大学机构会话下以 DOI 精确检索，在 Web of Science Core Collection 得到 16/16 条记录及唯一 UT。这里的“WOS 已核验”只指书目记录存在，不代表所有出版社 PDF 都可无条件下载。
+结论：当前 28 条均已核对 DOI 与出版社/正式期刊记录。原有 16 篇核心论文还在华南师范大学机构会话下以 DOI 精确检索过 Web of Science Core Collection，并取得 16/16 个唯一 UT；新增的 12 篇入门方法论文本轮没有冒充为 WOS 已核验，状态明确记录为 `not_checked`。这里的书目核验不代表出版社 PDF 都可无条件下载。
+
+## 核心论文：16 篇 DOI＋WOS UT 已核验
 
 | # | 年份 | 简称 | DOI | WOS UT |
 |---:|---:|---|---|---|
@@ -23,10 +25,27 @@
 | 15 | 2012 | Mo：LGPS first-principles study | [10.1021/cm203303y](https://doi.org/10.1021/cm203303y) | `WOS:000298908400006` |
 | 16 | 2023 | Deng：CHGNet | [10.1038/s42256-023-00716-3](https://doi.org/10.1038/s42256-023-00716-3) | `WOS:001085170400007` |
 
-本地全文的来源、页数、哈希与缺失项另见 [FULLTEXT_AUDIT.md](FULLTEXT_AUDIT.md)。当前正文为 14/16；缺失正文仍提供精确 WOS 记录和 DOI 回退，不会被系统伪装成已有全文。
+本地全文的来源、页数、哈希与缺失项另见 [FULLTEXT_AUDIT.md](FULLTEXT_AUDIT.md)。当前核心正文为 16/16；新增方法论文尚未保存的正文仍提供 DOI/出版社回退，不会被系统伪装成已有全文或 WOS 已核验。
+
+## 入门方法论文：12 篇 DOI＋出版社记录已核验
+
+| # | 年份 | 用途 | 论文 | DOI | 核验入口 |
+|---:|---:|---|---|---|---|
+| 17 | 2025 | VASPKIT逐步协议 | Empowering materials science with VASPKIT | [10.1038/s41596-025-01160-w](https://doi.org/10.1038/s41596-025-01160-w) | [Nature Protocols](https://www.nature.com/articles/s41596-025-01160-w) |
+| 18 | 2021 | VASPKIT功能与示例 | VASPKIT: A user-friendly interface… | [10.1016/j.cpc.2021.108033](https://doi.org/10.1016/j.cpc.2021.108033) | [Computer Physics Communications](https://www.sciencedirect.com/science/article/pii/S0010465521001454) |
+| 19 | 2013 | pymatgen与电池相图 | Python Materials Genomics (pymatgen)… | [10.1016/j.commatsci.2012.10.028](https://doi.org/10.1016/j.commatsci.2012.10.028) | [Computational Materials Science](https://www.sciencedirect.com/science/article/pii/S0927025612006295) |
+| 20 | 2017 | ASE结构、MD与NEB | The atomic simulation environment… | [10.1088/1361-648X/aa680e](https://doi.org/10.1088/1361-648X/aa680e) | [IOP](https://doi.org/10.1088/1361-648X/aa680e) |
+| 21 | 2025 | atomate2可复现工作流 | Atomate2: modular workflows for materials science | [10.1039/D5DD00019J](https://doi.org/10.1039/D5DD00019J) | [Digital Discovery](https://pubs.rsc.org/en/content/articlelanding/2025/dd/d5dd00019j) |
+| 22 | 2013 | Materials Project数据来源 | Commentary: The Materials Project… | [10.1063/1.4812323](https://doi.org/10.1063/1.4812323) | [APL Materials](https://doi.org/10.1063/1.4812323) |
+| 23 | 2014 | IDPP-NEB初始路径 | Improved initial guess for minimum energy path calculations | [10.1063/1.4878664](https://doi.org/10.1063/1.4878664) | [Journal of Chemical Physics](https://doi.org/10.1063/1.4878664) |
+| 24 | 2018 | AIMD扩散统计流程 | Statistical variances of diffusional properties… | [10.1038/s41524-018-0074-y](https://doi.org/10.1038/s41524-018-0074-y) | [npj Computational Materials](https://www.nature.com/articles/s41524-018-0074-y) |
+| 25 | 2004 | 正极电压与DFT+U | First-principles prediction of redox potentials… | [10.1103/PhysRevB.70.235121](https://doi.org/10.1103/PhysRevB.70.235121) | [Physical Review B](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.70.235121) |
+| 26 | 2025 | MLIP实用选型指南 | A practical guide to machine learning interatomic potentials… | [10.1016/j.cossms.2025.101214](https://doi.org/10.1016/j.cossms.2025.101214) | [作者公开稿](https://arxiv.org/abs/2503.09814) |
+| 27 | 2015 | phonopy与声子热力学 | First principles phonon calculations in materials science | [10.1016/j.scriptamat.2015.07.021](https://doi.org/10.1016/j.scriptamat.2015.07.021) | [Scripta Materialia](https://doi.org/10.1016/j.scriptamat.2015.07.021) |
+| 28 | 2018 | VASP能带/DOS后处理 | sumo: Command-line tools for plotting… | [10.21105/joss.00717](https://doi.org/10.21105/joss.00717) | [JOSS](https://joss.theoj.org/papers/10.21105/joss.00717) |
 
 ## “已核验”不等于什么
 
-- 不等于 16 篇都可以免费获得出版社 PDF；全文权限取决于开放获取或学校订阅。
+- 不等于 28 篇都可以免费获得出版社 PDF；全文权限取决于开放获取、作者公开稿或学校订阅。
 - 不等于每篇都是任何具体问题的唯一最佳论文；它们是覆盖电压、扩散、界面、固态电解质、高通量和机器学习势的首批方法学语料。
 - 不等于摘要和正文中的结论已经复现；计算参数与数值仍需从原文、补充信息和实际复算中验证。
