@@ -3,18 +3,19 @@ param(
 )
 
 $projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$pythonCommand = Get-Command python -ErrorAction SilentlyContinue
-$pythonExe = if ($pythonCommand) { $pythonCommand.Source } else { $null }
-
-if (-not $pythonExe) {
-    $bundledPython = Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe"
-    if (Test-Path -LiteralPath $bundledPython) {
-        $pythonExe = $bundledPython
-    }
+$pythonCandidates = @(
+    (Join-Path $projectRoot ".venv\Scripts\python.exe"),
+    ((Get-Command python -ErrorAction SilentlyContinue).Source),
+    (Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe")
+) | Where-Object { $_ -and (Test-Path -LiteralPath $_) } | Select-Object -Unique
+$pythonExe = $null
+foreach ($candidate in $pythonCandidates) {
+    & $candidate -c "import pypdf" 2>$null
+    if ($LASTEXITCODE -eq 0) { $pythonExe = $candidate; break }
 }
 
 if (-not $pythonExe) {
-    Write-Error "未找到 Python。请安装 Python 3.10+，或在终端中用可用的 Python 运行 server.py。"
+    Write-Error "未找到带 pypdf 的 Python。请在项目目录运行：python -m pip install -r requirements.txt"
     exit 1
 }
 

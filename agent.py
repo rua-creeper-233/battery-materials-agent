@@ -15,6 +15,8 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
+from library_store import USER_PAPERS, load_library_papers
+
 
 ROOT = Path(__file__).resolve().parent
 DEFAULT_DATA = ROOT / "data" / "papers.json"
@@ -62,10 +64,12 @@ class BatteryResearchAgent:
         self,
         data_path: str | Path = DEFAULT_DATA,
         fulltext_path: str | Path | None = DEFAULT_FULLTEXT,
+        extra_data_path: str | Path | None = USER_PAPERS,
     ):
         self.data_path = Path(data_path)
-        self.papers: list[dict[str, Any]] = json.loads(
-            self.data_path.read_text(encoding="utf-8")
+        self.extra_data_path = Path(extra_data_path) if extra_data_path else None
+        self.papers: list[dict[str, Any]] = load_library_papers(
+            self.data_path, self.extra_data_path
         )
         self._documents = [_flatten(paper).lower() for paper in self.papers]
         self._doc_tokens = [Counter(_tokens(document)) for document in self._documents]
@@ -74,6 +78,10 @@ class BatteryResearchAgent:
         self.fulltext_chunks = self._load_fulltext()
         self._chunk_tokens = [Counter(_tokens(row.get("text", ""))) for row in self.fulltext_chunks]
         self._chunk_idf = self._build_idf_for(self._chunk_tokens)
+
+    def reload(self) -> None:
+        """Reload paper metadata and the full-text index after local ingestion."""
+        self.__init__(self.data_path, self.fulltext_path, self.extra_data_path)
 
     def _build_idf(self) -> dict[str, float]:
         return self._build_idf_for(self._doc_tokens)
@@ -186,9 +194,11 @@ class BatteryResearchAgent:
     def citation(paper: dict[str, Any], index: int) -> str:
         first_author = paper.get("authors", ["Unknown"])[0]
         citation = (
-            f"[{index}] {first_author} 等, {paper['year']}, *{paper['title']}*, "
-            f"{paper['journal']}. DOI: [{paper['doi']}](https://doi.org/{paper['doi']})"
+            f"[{index}] {first_author} 等, {paper.get('year', '未知年份')}, "
+            f"*{paper['title']}*, {paper.get('journal', '来源待补充')}."
         )
+        if paper.get("doi"):
+            citation += f" DOI: [{paper['doi']}](https://doi.org/{paper['doi']})"
         if paper.get("wos_uid"):
             citation += f"；[WOS记录](https://www.webofscience.com/wos/woscc/full-record/{paper['wos_uid']})"
         return citation

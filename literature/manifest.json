@@ -69,9 +69,9 @@
         "chunks": 63,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:21:27+00:00"
+        "updated_at": "2026-09-13T07:59:32+00:00"
       },
-      "audited_at": "2026-09-13T02:21:14+00:00"
+      "audited_at": "2026-09-13T07:57:37+00:00"
     },
     "aydinol1997_voltage": {
       "title": "Ab initio study of lithium intercalation in metal oxides and metal dichalcogenides",
@@ -125,9 +125,9 @@
         "chunks": 40,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:21:28+00:00"
+        "updated_at": "2026-09-13T07:59:32+00:00"
       },
-      "audited_at": "2026-09-13T02:21:15+00:00"
+      "audited_at": "2026-09-13T07:57:38+00:00"
     },
     "ceder1998_cathode_design": {
       "title": "Identification of cathode materials for lithium batteries guided by first-principles calculations",
@@ -151,7 +151,9 @@
           "basis": "open_access_landing_page"
         }
       ],
-      "status": "not_downloaded",
+      "status": "downloaded",
+      "access_basis": "user_supplied_authorized_copy",
+      "local_pdf": "literature/pdfs/ceder1998_cathode_design.pdf",
       "attempts": [
         {
           "url": "https://web.mit.edu/dsadoway/www/79.pdf",
@@ -172,7 +174,29 @@
           "bytes": 268972,
           "attempted_at": "2026-09-12T18:18:28+00:00"
         }
-      ]
+      ],
+      "bytes": 395463,
+      "sha256": "07b4fb3019c8caa55be3563d3fefb58ab0de0812728bb69a56447666a213f214",
+      "validation": {
+        "valid_pdf": true,
+        "pages": 3,
+        "encrypted": false,
+        "first_pages_text_chars": 21172,
+        "title_token_match": 0.889,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "audited_at": "2026-09-13T07:57:38+00:00",
+      "text_extraction": {
+        "pages": 3,
+        "text_chars": 21170,
+        "chunks": 15,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T07:59:33+00:00"
+      },
+      "uploaded_at": "2026-09-13T07:59:31.045741+00:00",
+      "original_filename": "ceder1998_cathode_design.pdf"
     },
     "vanderven2001_diffusion": {
       "title": "First-principles theory of ionic diffusion with nondilute carriers",
@@ -226,9 +250,9 @@
         "chunks": 61,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:21:29+00:00"
+        "updated_at": "2026-09-13T07:59:34+00:00"
       },
-      "audited_at": "2026-09-13T02:21:15+00:00"
+      "audited_at": "2026-09-13T07:57:38+00:00"
     },
     "ong2011_li_na": {
       "title": "Voltage, stability and diffusion barrier differences between sodium-ion and lithium-ion intercalation materials",
@@ -282,9 +306,9 @@
         "chunks": 37,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:21:29+00:00"
+        "updated_at": "2026-09-13T07:59:34+00:00"
       },
-      "audited_at": "2026-09-13T02:21:16+00:00"
+      "audited_at": "2026-09-13T07:57:38+00:00"
     },
     "ong2013_lgps": {
       "title": "Phase stability, electrochemical stability and ionic conductivity of the Li10±1MP2X12 family of superionic conductors",
@@ -338,9 +362,9 @@
         "chunks": 33,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:21:30+00:00"
+        "updated_at": "2026-09-13T07:59:35+00:00"
       },
-      "audited_at": "2026-09-13T02:21:16+00:00"
+      "audited_at": "2026-09-13T07:57:39+00:00"
     },
     "shi2013_sei_li2co3": {
       "title": "Defect Thermodynamics and Diffusion Mechanisms in Li2CO3 and Implications for the Solid Electrolyte Interphase in Li-Ion Batteries",
@@ -360,7 +384,9 @@
           "basis": "official_publisher_current_network"
         }
       ],
-      "status": "not_downloaded",
+      "status": "downloaded",
+      "access_basis": "user_supplied_zotero_attachment",
+      "local_pdf": "literature/pdfs/shi2013_sei_li2co3.pdf",
       "attempts": [
         {
           "url": "https://pubs.acs.org/doi/pdf/10.1021/jp310591u",
@@ -371,7 +397,27 @@
           "detail": "HTTP Error 403: Forbidden",
           "attempted_at": "2026-09-12T17:59:16+00:00"
         }
-      ]
+      ],
+      "bytes": 7272305,
+      "sha256": "f3dd8fa8af807021f88e3b0ece543b98b8450f75fa225ca6ae62cdad5fc1db3e",
+      "validation": {
+        "valid_pdf": true,
+        "pages": 15,
+        "encrypted": false,
+        "first_pages_text_chars": 20137,
+        "title_token_match": 0.9,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "audited_at": "2026-09-13T07:57:39+00:00",
+      "text_extraction": {
+        "pages": 15,
+        "text_chars": 93347,
+        "chunks": 66,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-13T07:59:36+00:00"
+      }
     },
     "sendek2017_sse_screening": {
       "title": "Holistic computational structure screening of more than 12,000 candidates for solid lithium-ion conductor materials",
@@ -429,9 +475,9 @@
         "chunks": 59,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:21:31+00:00"
+        "updated_at": "2026-09-13T07:59:37+00:00"
       },
-      "audited_at": "2026-09-13T02:21:17+00:00"
+      "audited_at": "2026-09-13T07:57:39+00:00"
     },
     "baktash2020_argyrodite_aimd": {
       "title": "Diffusion of lithium ions in Lithium-argyrodite solid-state electrolytes",
@@ -492,9 +538,9 @@
         "chunks": 45,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:21:32+00:00"
+        "updated_at": "2026-09-13T07:59:38+00:00"
       },
-      "audited_at": "2026-09-13T02:21:17+00:00"
+      "audited_at": "2026-09-13T07:57:40+00:00"
     },
     "chen2022_m3gnet": {
       "title": "A universal graph deep learning interatomic potential for the periodic table",
@@ -547,11 +593,11 @@
         "chunks": 92,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:22:41+00:00"
+        "updated_at": "2026-09-13T08:00:41+00:00"
       },
       "supplementary_pdf": "literature/supplementary/chen2022_m3gnet_supplementary.pdf",
       "local_pdf": "literature/pdfs/chen2022_m3gnet.pdf",
-      "audited_at": "2026-09-13T02:21:17+00:00"
+      "audited_at": "2026-09-13T07:57:40+00:00"
     },
     "sawada2024_nnp_sse": {
       "title": "High-throughput investigation of stability and Li diffusion of doped solid electrolytes via neural network potential without configurational knowledge",
@@ -608,9 +654,9 @@
         "chunks": 23,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:22:42+00:00"
+        "updated_at": "2026-09-13T08:00:42+00:00"
       },
-      "audited_at": "2026-09-13T02:21:18+00:00"
+      "audited_at": "2026-09-13T07:57:40+00:00"
     },
     "ling2022_battery_informatics": {
       "title": "A review of the recent progress in battery informatics",
@@ -663,9 +709,9 @@
         "chunks": 108,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:22:45+00:00"
+        "updated_at": "2026-09-13T08:00:44+00:00"
       },
-      "audited_at": "2026-09-13T02:21:19+00:00"
+      "audited_at": "2026-09-13T07:57:41+00:00"
     },
     "henkelman2000_cineb": {
       "title": "A climbing image nudged elastic band method for finding saddle points and minimum energy paths",
@@ -719,9 +765,9 @@
         "chunks": 30,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:22:45+00:00"
+        "updated_at": "2026-09-13T08:00:45+00:00"
       },
-      "audited_at": "2026-09-13T02:21:19+00:00"
+      "audited_at": "2026-09-13T07:57:41+00:00"
     },
     "leung2010_sei_aimd": {
       "title": "Ab initio molecular dynamics simulations of the initial stages of solid-electrolyte interphase formation on lithium ion battery graphitic anodes",
@@ -778,9 +824,9 @@
         "chunks": 15,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:22:51+00:00"
+        "updated_at": "2026-09-13T08:00:50+00:00"
       },
-      "audited_at": "2026-09-13T02:21:25+00:00"
+      "audited_at": "2026-09-13T07:57:46+00:00"
     },
     "mo2012_lgps_aimd": {
       "title": "First Principles Study of the Li10GeP2S12 Lithium Super Ionic Conductor Material",
@@ -834,9 +880,9 @@
         "chunks": 12,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:22:51+00:00"
+        "updated_at": "2026-09-13T08:00:50+00:00"
       },
-      "audited_at": "2026-09-13T02:21:25+00:00"
+      "audited_at": "2026-09-13T07:57:46+00:00"
     },
     "deng2023_chgnet": {
       "title": "CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling",
@@ -933,23 +979,23 @@
         "chunks": 44,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-13T02:22:54+00:00"
+        "updated_at": "2026-09-13T08:00:53+00:00"
       },
-      "audited_at": "2026-09-13T02:21:26+00:00"
+      "audited_at": "2026-09-13T07:57:47+00:00"
     }
   },
   "fulltext_index": {
     "path": "data/fulltext_chunks.jsonl",
-    "papers": 14,
-    "chunks": 662,
-    "updated_at": "2026-09-13T02:22:54+00:00"
+    "papers": 16,
+    "chunks": 743,
+    "updated_at": "2026-09-13T08:00:53+00:00"
   },
-  "updated_at": "2026-09-13T02:22:54+00:00",
+  "updated_at": "2026-09-13T08:00:53.139490+00:00",
   "integrity_audit": {
-    "audited_at": "2026-09-13T02:22:54+00:00",
+    "audited_at": "2026-09-13T07:59:11+00:00",
     "seed_papers": 16,
     "wos_uid_verified": 16,
-    "downloaded_main_texts": 14,
+    "downloaded_main_texts": 16,
     "duplicate_pdf_hashes": 0,
     "checks": [
       "PDF magic/parse",

@@ -5,13 +5,14 @@
 ## 当前可用能力
 
 - 16 篇代表性种子论文全部完成 DOI 与 WOS Core Collection 核验，并保存唯一 WOS UT；
-- 14/16 篇已有合法可访问的本地正文，共 662 个带页码文本块；
+- 16/16 篇已有用户合法取得或公开可访问的本地正文，共 743 个带页码文本块；
 - 中文检索电压、稳定性、扩散、固态电解质、界面、高通量和机器学习势；
 - 回答中给出论文级证据、DOI、精确 WOS 记录和本地全文页码；
 - 为 DFT / NEB / AIMD / MLIP 任务生成带质量控制项的工作流；
 - 从本地正文中自动定位软件、泛函、截断能、k 点、超胞、MD 条件、NEB 和机器学习训练信号，并逐条保留 PDF 页码；
 - 本地有 PDF 时显示“打开本地 PDF”，没有时回退到 WOS 与 DOI；
-- 支持按 DOI 幂等写入 Zotero；当前已核验 16/16 条目，其中 14 条已关联本地 PDF，并生成可点击的 Zotero 深链。
+- 支持按 DOI 幂等写入 Zotero；当前已核验 16/16 条目，16 条均已关联本地 PDF，并生成可点击的 Zotero 深链；
+- 支持从网页上传 PDF：校验正文、识别/补充元数据、建立全文索引并返回关键词；用户上传的新增条目保存在本机私有库，不进入 GitHub Pages 发布包。
 
 全文状态与审计证据见 [FULLTEXT_AUDIT.md](FULLTEXT_AUDIT.md)，自动方法信号见 [METHOD_EVIDENCE_AUDIT.md](METHOD_EVIDENCE_AUDIT.md)，书目真实性和 WOS UT 见 [PAPER_AUDIT.md](PAPER_AUDIT.md)。
 
@@ -59,14 +60,26 @@ python .\audit_library.py
 python .\extract_method_evidence.py
 ```
 
-当前结果包含 115 条信号，覆盖 14 篇本地正文。程序会排除参考文献区，并限制每篇每类最多 3 条；所有结果都标为 `auto_extracted_needs_human_review`。页面中的参数只能帮助你快速跳到原文，不能直接作为 VASP、NEB、AIMD 或 MLIP 的最终设置。
+当前结果包含 128 条信号，覆盖其中 15 篇本地正文。程序会排除参考文献区，并限制每篇每类最多 3 条；所有结果都标为 `auto_extracted_needs_human_review`。页面中的参数只能帮助你快速跳到原文，不能直接作为 VASP、NEB、AIMD 或 MLIP 的最终设置。
 
-当前尚未保存本地正文的两篇：
+Ceder et al. 1998 与 Shi et al. 2013 的 PDF 已由用户从有权访问的来源下载并导入 Zotero，随后作为 `user_supplied_zotero_attachment` 纳入本地全文索引。PDF 本身继续由 `.gitignore` 排除，不会上传 GitHub。
 
-- Ceder et al. 1998，DOI `10.1038/33647`：书目及高校公开页面已确认，但本地下载链路被远端拒绝；
-- Shi et al. 2013，DOI `10.1021/jp310591u`：出版社为订阅访问。
+## 上传文献与关键词 API
 
-两者在网页中保留精确 WOS/DOI 入口。
+本机启动服务后，网页右上角选择“上传文献”。支持 PDF 正文、标题、DOI、年份、期刊和作者；标题、DOI、年份留空时会尝试从 PDF 元数据或首页识别。单文件上限 50 MiB。
+
+新增文献的元数据写入 `private/user-papers.local.json`，PDF 写入 `literature/pdfs/`，随后更新全文索引。已存在 DOI 会补充原条目，不创建重复记录；已有不同 PDF 时拒绝静默覆盖。
+
+当前保留以下稳定接口，便于以后把内置关键词规则替换成 LLM、KeyBERT 或领域模型，而不改网页调用方式：
+
+| 接口 | 方法 | 用途 |
+|---|---|---|
+| `/api/capabilities` | GET | 查询上传限制、关键词接口版本和隐私策略 |
+| `/api/upload` | POST multipart | 上传 PDF、补充元数据、建立索引并返回关键词 |
+| `/api/keywords` | POST JSON | 按 `text` 或 `paper_id` 提取关键词，当前版本 `v1` |
+| `/api/chat` | POST JSON | 使用本地全文库回答问题 |
+
+通过公网隧道调用写接口时必须提供 `Authorization: Bearer <临时访问密钥>`。访问密钥不写入 Git 或浏览器持久存储，只保存在当前标签页的 `sessionStorage`。
 
 ## Zotero
 
@@ -87,7 +100,7 @@ python .\build_pages.py
 
 `sync_zotero_links.py` 只读取本机 Zotero API 的 DOI、条目键和 PDF 附件键，不读取账号密码。导师没有你的本地 Zotero 文库时，应使用网页一直保留的 WOS 或 DOI 入口。
 
-要先预览、再按 DOI 幂等导入 16 篇书目并附加 14 篇本地 PDF：
+要先预览、再按 DOI 幂等导入 16 篇书目并附加本地 PDF：
 
 ```powershell
 python .\import_zotero_library.py
@@ -98,7 +111,7 @@ python .\build_pages.py
 
 导入器通过 Zotero 本机 Connector 接口写入，不读取账号密码；已存在 DOI 会跳过，避免重复。新条目统一带 `battery-materials-agent` 与 `WOS-verified` 标签。Zotero 9 无需为此创建 Web API 密钥；若文库开启同步，新增书目和存储型附件可能在下一次同步时上传到 Zotero 云端。
 
-`sync_zotero_links.py` 把条目键和附件键写入被 Git 忽略的 `private/zotero-links.local.json`。本地服务器只向回环地址提供这些深链；GitHub Pages 公开包不含个人文库内部标识，因此导师端显示 WOS/DOI 入口，你自己的本地页面仍可直接打开 Zotero/PDF。
+`sync_zotero_links.py` 把条目键和附件键写入被 Git 忽略的 `private/zotero-links.local.json`。本地服务器只向真正的本机页面提供这些深链；即使请求经公网隧道回到 `127.0.0.1`，Host/Origin 双重检查也会阻止 Zotero 键和本地 PDF 外泄。导师端显示 WOS/DOI 入口，你自己的本地页面仍可直接打开 Zotero/PDF。
 
 ## GitHub Pages
 
@@ -109,6 +122,36 @@ python .\build_pages.py
 ```
 
 把仓库推送到 GitHub 后，在 `Settings → Pages` 选择 `main` 分支和 `/docs` 文件夹。不要提交 WOS 密码、学校 VPN 信息、Cookie、Zotero 数据库/条目键、受版权保护的 PDF 或全文转储；`.gitignore` 已排除私有 Zotero 映射、PDF、全文 JSONL、RIS 和 Zotero 数据库。静态站只发布书目、短方法信号与页码，不发布论文正文。
+
+### 让导师访问，同时让服务跑在你的电脑上
+
+公开网页固定使用：
+
+```text
+https://rua-creeper-233.github.io/battery-materials-agent/
+```
+
+导师只浏览种子库和静态问答时，你不需要启动电脑或服务器。若要让导师上传论文、使用刚加入的本地全文或调用关键词 API，需要在你的电脑上建立 HTTPS 隧道：
+
+1. 首次安装 Cloudflare Tunnel 客户端：
+
+   ```powershell
+   winget install --id Cloudflare.cloudflared
+   ```
+
+2. 在项目目录运行：
+
+   ```powershell
+   .\start-share.ps1
+   ```
+
+3. 保持该窗口开启。脚本会显示一个临时访问密钥，Cloudflare 随后显示一个 `https://...trycloudflare.com` 地址。
+4. 在 GitHub 页面点击“上传文献”，填入隧道地址和临时访问密钥，先点“测试连接”。把同一地址和密钥通过可信渠道发给导师。
+5. 使用结束后按 `Ctrl+C`；本地服务、隧道和本次访问密钥随即失效。
+
+GitHub Pages 只托管 HTML/CSS/JavaScript，不能运行 Python。Quick Tunnel 只适合演示和短期协作，地址每次启动都会变化；如果以后需要长期稳定的 API 地址，应准备一个托管在 Cloudflare 的自有域名并建立 named tunnel。无论哪种隧道，当前实现都不允许远程打开本地 PDF 或 Zotero 私有深链。
+
+完整架构、安全边界和逐步操作见 [SHARING_GUIDE.md](SHARING_GUIDE.md)。
 
 为了便于回退，每完成一轮可运行且测试通过的改进，就创建一个独立 Git 提交并推送。`main` 上的提交记录就是版本时间线；需要固定里程碑时可额外创建标签。
 

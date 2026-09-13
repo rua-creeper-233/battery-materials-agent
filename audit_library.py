@@ -122,6 +122,12 @@ def main() -> int:
 
     downloaded = manifest["integrity_audit"]["downloaded_main_texts"]
     chunks = manifest.get("fulltext_index", {}).get("chunks", 0)
+    missing = [paper for paper in papers if entries[paper["id"]].get("status") != "downloaded"]
+    missing_lines = (
+        [f"- {paper['title']}，DOI `{paper['doi']}`：本地未保存正文，使用 WOS/DOI 回退。" for paper in missing]
+        if missing
+        else ["当前 16 篇种子论文均已有经校验的本地正文。"]
+    )
     report = "\n".join(
         [
             "# 本地全文与证据索引审计",
@@ -138,8 +144,7 @@ def main() -> int:
             "",
             "## 尚未保存的正文",
             "",
-            "- Ceder et al. (1998), DOI `10.1038/33647`：WOS 与高校公开页面均已确认，但当前本地下载链路被远端服务器拒绝；保留精确 WOS/DOI 回退。",
-            "- Shi et al. (2013), DOI `10.1021/jp310591u`：出版社为订阅访问；未绕过权限，保留精确 WOS/DOI 回退。",
+            *missing_lines,
             "",
             "## 使用边界",
             "",

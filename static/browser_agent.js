@@ -88,7 +88,8 @@
   }
   function citation(p, i) {
     const wos = p.wos_uid ? `；[WOS记录](https://www.webofscience.com/wos/woscc/full-record/${p.wos_uid})` : '';
-    return `[${i}] ${p.authors[0]} 等, ${p.year}, *${p.title}*, ${p.journal}. DOI: [${p.doi}](https://doi.org/${p.doi})${wos}`;
+    const doi = p.doi ? ` DOI: [${p.doi}](https://doi.org/${p.doi})` : '';
+    return `[${i}] ${(p.authors || ['Unknown'])[0]} 等, ${p.year || '未知年份'}, *${p.title}*, ${p.journal || '来源待补充'}.${doi}${wos}`;
   }
   function answer(question, papers) {
     const task = taskType(question);

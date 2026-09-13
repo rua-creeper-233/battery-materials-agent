@@ -2,9 +2,9 @@
 
 > 所有条目均为“自动抽取、待人工核对”。它们是原文定位器，不是可直接复制到 VASP/MD 输入文件的最终参数。
 
-- 本地有正文的论文：14
-- 抽取到至少一条方法信号的论文：14
-- 方法信号总数：115
+- 本地有正文的论文：16
+- 抽取到至少一条方法信号的论文：15
+- 方法信号总数：128
 - 参考文献区：已排除
 - 每篇每类上限：3 条
 - 公开数据只保存短方法信号与页码，不保存连续正文上下文
@@ -46,7 +46,11 @@
 
 ### Defect Thermodynamics and Diffusion Mechanisms in Li2CO3 and Implications for the Solid Electrolyte Interphase in Li-Ion Batteries
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 扩散与迁移势垒方法：p.1 `CI-NEB`；p.1 `climbing image nudged elastic band`；p.4 `nudged elastic band`
+- 超胞与模型规模：p.3 `2 × 2 × 2 supercell`；p.3 `2 × 2 × 4 supercell`；p.4 `2 × 2 × 2 supercell`
+- 泛函与电子结构近似：p.3 `local density approximation`；p.3 `PAW`；p.3 `projector augmented wave`
+- 计算软件：p.3 `VASP`；p.3 `Vienna ab initio simulation package`；p.4 `VASP`
+- k 点采样：p.15 `Brillouin-Zone Integration`
 
 ### Holistic computational structure screening of more than 12,000 candidates for solid lithium-ion conductor materials
 

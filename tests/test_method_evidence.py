@@ -19,8 +19,8 @@ class MethodEvidenceTests(unittest.TestCase):
 
     def test_scope_and_review_boundary(self) -> None:
         self.assertEqual(self.payload["review_status"], REVIEW_STATUS)
-        self.assertEqual(self.payload["fulltext_paper_count"], 14)
-        self.assertEqual(len(self.payload["fulltext_paper_ids"]), 14)
+        self.assertEqual(self.payload["fulltext_paper_count"], 16)
+        self.assertEqual(len(self.payload["fulltext_paper_ids"]), 16)
         self.assertEqual(len(self.payload["papers"]), 16)
         all_items = [
             item

@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-09-13T02:30:49.605257+00:00",
+  "generated_at": "2026-09-13T07:53:06.128995+00:00",
   "review_status": "auto_extracted_needs_human_review",
   "notice_zh": "自动结果只用于定位原文；用于计算输入、论文或汇报前，必须打开对应 PDF 页人工核对。",
   "rules_version": 1,
-  "fulltext_paper_count": 14,
+  "fulltext_paper_count": 16,
   "fulltext_paper_ids": [
     "aydinol1997_voltage",
     "baktash2020_argyrodite_aimd",
+    "ceder1998_cathode_design",
     "chen2022_m3gnet",
     "deng2023_chgnet",
     "henkelman2000_cineb",
@@ -17,6 +18,7 @@
     "ong2013_lgps",
     "sawada2024_nnp_sse",
     "sendek2017_sse_screening",
+    "shi2013_sei_li2co3",
     "urban2016_computational_review",
     "vanderven2001_diffusion"
   ],
@@ -389,8 +391,139 @@
       "doi": "10.1021/jp310591u",
       "wos_uid": "WOS:000318536600001",
       "review_status": "auto_extracted_needs_human_review",
-      "evidence_count": 0,
-      "evidence": []
+      "evidence_count": 13,
+      "evidence": [
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 1,
+          "section": "body",
+          "signal": "CI-NEB",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=1"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 1,
+          "section": "body",
+          "signal": "climbing image nudged elastic band",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=1"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 3,
+          "section": "body",
+          "signal": "2 × 2 × 2 supercell",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=3"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 3,
+          "section": "body",
+          "signal": "2 × 2 × 4 supercell",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=3"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 3,
+          "section": "body",
+          "signal": "local density approximation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=3"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 3,
+          "section": "body",
+          "signal": "PAW",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=3"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 3,
+          "section": "body",
+          "signal": "projector augmented wave",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=3"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 3,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=3"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 3,
+          "section": "body",
+          "signal": "Vienna ab initio simulation package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=3"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 4,
+          "section": "body",
+          "signal": "2 × 2 × 2 supercell",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=4"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "nudged elastic band",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=4"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 4,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=4"
+        },
+        {
+          "category": "k_points",
+          "label_zh": "k 点采样",
+          "page": 15,
+          "section": "body",
+          "signal": "Brillouin-Zone Integration",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shi2013_sei_li2co3.pdf#page=15"
+        }
+      ]
     },
     "sendek2017_sse_screening": {
       "title": "Holistic computational structure screening of more than 12,000 candidates for solid lithium-ion conductor materials",

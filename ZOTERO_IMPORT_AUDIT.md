@@ -1,9 +1,9 @@
 # Zotero 导入审计
 
-- 核验时间：2026-09-13T03:02:47.823440+00:00
+- 核验时间：2026-09-13T03:48:06.998391+00:00
 - 目标记录：16
 - Zotero 中核验到的目标 DOI：16
-- 带 PDF 附件的目标记录：14
+- 带 PDF 附件的目标记录：16
 - 统一标签：`battery-materials-agent`
 - 写入策略：按 DOI 幂等；已存在条目不重复创建；只附加本地审计通过的主文 PDF。
 
@@ -11,11 +11,11 @@
 
 - Computational understanding of Li-ion batteries — `10.1038/npjcompumats.2016.2` — skipped_existing；已核验，有 PDF
 - Ab initio study of lithium intercalation in metal oxides and metal dichalcogenides — `10.1103/physrevb.56.1354` — skipped_existing；已核验，有 PDF
-- Identification of cathode materials for lithium batteries guided by first-principles calculations — `10.1038/33647` — skipped_existing；已核验，无 PDF
+- Identification of cathode materials for lithium batteries guided by first-principles calculations — `10.1038/33647` — 用户补充附件；已核验，有 PDF
 - First-principles theory of ionic diffusion with nondilute carriers — `10.1103/physrevb.64.184307` — skipped_existing；已核验，有 PDF
 - Voltage, stability and diffusion barrier differences between sodium-ion and lithium-ion intercalation materials — `10.1039/c1ee01782a` — skipped_existing；已核验，有 PDF
 - Phase stability, electrochemical stability and ionic conductivity of the Li10±1MP2X12 family of superionic conductors — `10.1039/c2ee23355j` — skipped_existing；已核验，有 PDF
-- Defect Thermodynamics and Diffusion Mechanisms in Li2CO3 and Implications for the Solid Electrolyte Interphase in Li-Ion Batteries — `10.1021/jp310591u` — skipped_existing；已核验，无 PDF
+- Defect Thermodynamics and Diffusion Mechanisms in Li2CO3 and Implications for the Solid Electrolyte Interphase in Li-Ion Batteries — `10.1021/jp310591u` — 用户补充附件；已核验，有 PDF
 - Holistic computational structure screening of more than 12,000 candidates for solid lithium-ion conductor materials — `10.1039/c6ee02697d` — skipped_existing；已核验，有 PDF
 - Diffusion of lithium ions in Lithium-argyrodite solid-state electrolytes — `10.1038/s41524-020-00432-1` — skipped_existing；已核验，有 PDF
 - A universal graph deep learning interatomic potential for the periodic table — `10.1038/s43588-022-00349-3` — skipped_existing；已核验，有 PDF

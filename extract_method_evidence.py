@@ -15,7 +15,6 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-
 ROOT = Path(__file__).resolve().parent
 PAPERS_PATH = ROOT / "data" / "papers.json"
 FULLTEXT_PATH = ROOT / "data" / "fulltext_chunks.jsonl"
@@ -105,6 +104,9 @@ def extract(
     papers_path: Path = PAPERS_PATH,
     fulltext_path: Path = FULLTEXT_PATH,
 ) -> dict[str, Any]:
+    # Keep this versioned/public artifact restricted to the curated seed set.
+    # User-uploaded papers stay in private/user-papers.local.json and are never
+    # copied into the GitHub Pages bundle.
     papers = json.loads(papers_path.read_text(encoding="utf-8"))
     chunks = load_jsonl(fulltext_path)
     chunks_by_paper: dict[str, list[dict[str, Any]]] = defaultdict(list)

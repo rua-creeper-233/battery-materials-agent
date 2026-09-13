@@ -19,8 +19,12 @@
     .eyebrow { color: var(--orange); font: 700 12px/1.2 ui-monospace, monospace; letter-spacing: .13em; text-transform: uppercase; }
     h1 { margin: 8px 0 7px; font: 680 clamp(31px, 4vw, 58px)/1.05 Georgia, "Noto Serif SC", serif; letter-spacing: -.035em; }
     .sub { color: var(--muted); max-width: 760px; line-height: 1.7; }
+    .header-actions { display: grid; justify-items: end; gap: 12px; }
     .stats { display: flex; gap: 9px; flex-wrap: wrap; justify-content: flex-end; }
     .stat { padding: 8px 12px; background: var(--card); border: 1px solid var(--line); border-radius: 999px; font-size: 12px; white-space: nowrap; }
+    .stat.connected { border-color: #65a784; background: #e9f7ee; color: #11563b; }
+    .header-buttons { display: flex; gap: 9px; }
+    .outline-btn { min-height: 42px; border: 1px solid #9eb2a6; background: #fff; color: var(--green); }
     main { display: grid; grid-template-columns: minmax(0, 1fr) 370px; gap: 24px; padding-top: 26px; }
     .panel { background: color-mix(in srgb, var(--card) 94%, transparent); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
     .workspace { padding: 24px; }
@@ -67,12 +71,29 @@
     .modal { position: fixed; inset: 0; background: #102018b8; padding: 5vw; display: none; place-items: center; z-index: 10; }
     .modal.open { display: grid; }
     .modal-card { max-width: 850px; max-height: 85vh; overflow: auto; padding: 28px; background: var(--card); border-radius: 18px; box-shadow: 0 30px 100px #0006; }
+    .modal-card.narrow { width: min(720px, 100%); }
     .modal-card h2 { font: 650 26px/1.3 Georgia, "Noto Serif SC", serif; }
     .close { float: right; background: #e9ede9; color: var(--ink); height: 36px; padding: 0 13px; }
+    .upload-intro { color: var(--muted); line-height: 1.65; margin: 0 0 20px; }
+    .connection-box { padding: 15px; margin-bottom: 18px; border: 1px solid var(--line); border-radius: 13px; background: #f1f6f2; }
+    .connection-box h3, .upload-form h3 { margin: 0 0 12px; font: 650 17px Georgia, "Noto Serif SC", serif; }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+    .form-grid .wide { grid-column: 1 / -1; }
+    .field { display: grid; gap: 6px; color: #435149; font-size: 13px; font-weight: 650; }
+    .field input { width: 100%; min-height: 43px; padding: 10px 11px; border: 1px solid #bdc9c1; border-radius: 9px; background: #fff; color: var(--ink); font: 500 14px/1.4 inherit; }
+    .field input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px #16664718; }
+    .field small { color: var(--muted); font-weight: 400; line-height: 1.5; }
+    .connection-actions, .upload-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+    .connection-actions button, .upload-actions button { min-height: 42px; }
+    .service-message { color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .service-message.good { color: var(--green); font-weight: 700; }
+    .service-message.bad { color: #a23e2a; font-weight: 700; }
+    .upload-result { display: none; margin-top: 16px; padding: 14px; border-radius: 11px; background: #eef6f0; line-height: 1.65; }
+    .upload-result.show { display: block; }
     .tag { display: inline-block; margin: 4px 4px 0 0; padding: 5px 8px; background: var(--mint); color: var(--green); border-radius: 999px; font-size: 11px; }
     .relation { font: 12px/1.5 ui-monospace, monospace; padding: 8px 10px; background: #f1f3ef; margin: 6px 0; border-radius: 8px; }
     @media (max-width: 950px) { main { grid-template-columns: 1fr; } aside { position: static; max-height: none; } .paper-list { max-height: 480px; } }
-    @media (max-width: 620px) { .shell { padding: 18px; } header { align-items: start; flex-direction: column; } .stats { justify-content: flex-start; } .composer { grid-template-columns: 1fr; } button { min-height: 48px; } .workspace { padding: 17px; } }
+    @media (max-width: 620px) { .shell { padding: 18px; } header { align-items: start; flex-direction: column; } .header-actions { justify-items: start; } .stats { justify-content: flex-start; } .composer, .form-grid { grid-template-columns: 1fr; } .form-grid .wide { grid-column: auto; } button { min-height: 48px; } .workspace { padding: 17px; } }
   </style>
 </head>
 <body>
@@ -83,11 +104,16 @@
         <h1>Battery Evidence Lab</h1>
         <div class="sub">面向 DFT、VASP、NEB、AIMD 与机器学习势的材料科研子智能体。回答必须能追到论文和 DOI，计算建议必须带质量检查。</div>
       </div>
-      <div class="stats">
-        <span class="stat"><b id="paperCount">—</b> 篇种子论文</span>
-        <span class="stat" id="zoteroStat">Zotero 深链 · 检测中</span>
-        <span class="stat">DFT → MD → AI4S</span>
-        <span class="stat">本地运行 · 无需密钥</span>
+      <div class="header-actions">
+        <div class="stats">
+          <span class="stat"><b id="paperCount">—</b> 篇论文</span>
+          <span class="stat" id="zoteroStat">Zotero 深链 · 检测中</span>
+          <span class="stat" id="apiStat">本地服务 · 未连接</span>
+          <span class="stat">DFT → MD → AI4S</span>
+        </div>
+        <div class="header-buttons">
+          <button class="outline-btn" id="openUpload" type="button">＋ 上传文献</button>
+        </div>
       </div>
     </header>
 
@@ -125,10 +151,94 @@
     </div>
   </div>
 
+  <div id="uploadModal" class="modal" aria-hidden="true">
+    <div class="modal-card narrow">
+      <button class="close" id="closeUpload" type="button">关闭</button>
+      <h2>上传文献到本地证据库</h2>
+      <p class="upload-intro">PDF 会发送到你自己启动的本地服务，完成格式校验、元数据识别、全文索引和关键词提取。GitHub 仓库与公开静态页面不会保存 PDF。</p>
+      <div class="connection-box">
+        <h3>连接本地服务</h3>
+        <div class="form-grid">
+          <label class="field wide">HTTPS 服务地址
+            <input id="apiBase" type="url" placeholder="https://随机名称.trycloudflare.com" autocomplete="url" />
+            <small>本机直接打开 127.0.0.1 页面时可留空；从 GitHub Pages 使用时填写隧道地址。</small>
+          </label>
+          <label class="field wide">本次访问密钥
+            <input id="apiToken" type="password" placeholder="启动共享服务时显示的临时密钥" autocomplete="off" />
+            <small>仅保存在当前浏览器标签页，关闭标签页后自动清除。</small>
+          </label>
+        </div>
+        <div class="connection-actions">
+          <button id="testApi" type="button">测试连接</button>
+          <span id="serviceMessage" class="service-message">尚未测试</span>
+        </div>
+      </div>
+      <form id="uploadForm" class="upload-form">
+        <h3>论文信息</h3>
+        <div class="form-grid">
+          <label class="field wide">PDF 文件
+            <input id="paperFile" name="file" type="file" accept="application/pdf,.pdf" required />
+          </label>
+          <label class="field wide">标题（可选）
+            <input name="title" placeholder="留空时尝试从 PDF 元数据或首页识别" />
+          </label>
+          <label class="field">DOI（可选）
+            <input name="doi" placeholder="10.xxxx/xxxxx" />
+          </label>
+          <label class="field">年份（可选）
+            <input name="year" inputmode="numeric" placeholder="2025" />
+          </label>
+          <label class="field">期刊（可选）
+            <input name="journal" placeholder="Journal name" />
+          </label>
+          <label class="field">作者（可选）
+            <input name="authors" placeholder="作者之间使用分号" />
+          </label>
+        </div>
+        <div class="upload-actions">
+          <button id="submitUpload" type="submit">上传、校验并加入库</button>
+          <span class="service-message">单个 PDF 最大 50 MiB</span>
+        </div>
+        <div id="uploadResult" class="upload-result" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
   <script src="./browser_agent.js"></script>
   <script>
-    const state = { papers: [], zotero: {}, literature: {}, methods: {} };
     const staticMode = location.protocol === "file:" || location.hostname.endsWith("github.io");
+    const localMode = ['127.0.0.1', 'localhost', '::1'].includes(location.hostname);
+    const readStorage = (store, key) => { try { return store.getItem(key) || ''; } catch (_) { return ''; } };
+    const state = {
+      papers: [], zotero: {}, literature: {}, methods: {},
+      apiBase: readStorage(localStorage, 'battery-agent-api-base'),
+      apiToken: readStorage(sessionStorage, 'battery-agent-api-token'),
+      backendConnected: localMode
+    };
+    const normalizeApiBase = value => String(value || '').trim().replace(/\/+$/, '');
+    function saveConnection() {
+      state.apiBase = normalizeApiBase(document.querySelector('#apiBase').value);
+      state.apiToken = document.querySelector('#apiToken').value.trim();
+      try { localStorage.setItem('battery-agent-api-base', state.apiBase); } catch (_) {}
+      try { sessionStorage.setItem('battery-agent-api-token', state.apiToken); } catch (_) {}
+    }
+    function hasBackend() { return localMode || Boolean(state.apiBase); }
+    function apiUrl(path) { return localMode ? path : `${state.apiBase}${path}`; }
+    function apiHeaders(extra={}) {
+      const headers = {...extra};
+      if (state.apiToken) headers.Authorization = `Bearer ${state.apiToken}`;
+      return headers;
+    }
+    async function apiFetch(path, options={}) {
+      if (!hasBackend()) throw new Error('尚未填写本地服务地址。');
+      const response = await fetch(apiUrl(path), {...options, headers: apiHeaders(options.headers || {})});
+      if (!response.ok) {
+        let message = `服务返回 HTTP ${response.status}`;
+        try { message = (await response.json()).error || message; } catch (_) {}
+        throw new Error(message);
+      }
+      return response;
+    }
     const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
     const inline = text => escapeHtml(text)
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
@@ -152,7 +262,7 @@
     function linkButtons(p) {
       const record = zoteroRecord(p);
       const localRecord = state.literature[p.id] || {};
-      const localPdf = !staticMode && localRecord.status === 'downloaded'
+      const localPdf = localMode && localRecord.status === 'downloaded'
         ? `<a class="local-pdf" target="_blank" rel="noreferrer" href="/local-pdf/${encodeURIComponent(p.id)}.pdf">打开本地 PDF${localRecord.pages ? ` · ${localRecord.pages}页` : ''}</a>`
         : '';
       const zotero = record?.attachment_key
@@ -163,8 +273,11 @@
       const wosLabel = record?.attachment_key ? 'WOS 备用入口' : record?.item_key ? 'WOS 补全文' : 'WOS 查找全文';
       const wos = p.wos_uid
         ? `<a class="wos" target="_blank" rel="noreferrer" href="https://www.webofscience.com/wos/woscc/full-record/${encodeURIComponent(p.wos_uid)}">${wosLabel}</a>`
-        : `<button class="wos" onclick="openWos('${escapeHtml(p.doi)}')">${wosLabel}</button>`;
-      return `<div class="paper-actions">${localPdf}${zotero}${wos}<a class="doi-link" target="_blank" rel="noreferrer" href="https://doi.org/${encodeURIComponent(p.doi)}">出版社 / DOI</a></div>`;
+        : p.doi
+          ? `<button class="wos" onclick="openWos('${escapeHtml(p.doi)}')">${wosLabel}</button>`
+          : `<span class="wos">待补 DOI / WOS</span>`;
+      const doi = p.doi ? `<a class="doi-link" target="_blank" rel="noreferrer" href="https://doi.org/${encodeURIComponent(p.doi)}">出版社 / DOI</a>` : '';
+      return `<div class="paper-actions">${localPdf}${zotero}${wos}${doi}</div>`;
     }
     async function openWos(doi) {
       try { await navigator.clipboard.writeText(doi); } catch (_) {}
@@ -190,7 +303,7 @@
       const localStatus = local.status === 'downloaded' ? `本地全文：已下载${local.pages ? `，${local.pages}页` : ''}${local.text_chunks ? `，${local.text_chunks}个检索片段` : ''}` : '本地全文：尚未下载';
       const methodRecord = state.methods[p.id] || {};
       const methods = (methodRecord.evidence || []).slice(0, 12).map(item => {
-        const locator = !staticMode && local.status === 'downloaded'
+        const locator = localMode && local.status === 'downloaded'
           ? `<a target="_blank" rel="noreferrer" href="${escapeHtml(item.local_pdf_url)}">PDF p.${item.page}</a>`
           : `p.${item.page}`;
         return `<li><strong>${escapeHtml(item.label_zh)}</strong> · ${locator} · <code>${escapeHtml(item.signal)}</code></li>`;
@@ -208,9 +321,7 @@
       try {
         let data;
         try {
-          if (staticMode) throw new Error('静态站点使用浏览器内代理');
-          const response = await fetch('/api/chat', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({question})});
-          if (!response.ok) throw new Error('静态站点无后端');
+          const response = await apiFetch('/api/chat', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({question})});
           data = await response.json();
         } catch (_) {
           data = window.BatteryBrowserAgent.answer(question, state.papers);
@@ -219,42 +330,106 @@
       } catch (error) { target.innerHTML = `<div class="notice">${escapeHtml(error.message)}</div>`; }
       finally { btn.disabled = false; btn.textContent = '生成证据回答'; }
     }
+    function setServiceMessage(text, kind='') {
+      const target = document.querySelector('#serviceMessage');
+      target.textContent = text;
+      target.className = `service-message ${kind}`.trim();
+    }
+    function updateApiStat() {
+      const stat = document.querySelector('#apiStat');
+      stat.textContent = state.backendConnected ? '本地服务 · 已连接' : '本地服务 · 未连接';
+      stat.classList.toggle('connected', state.backendConnected);
+    }
+    function openUploadModal() {
+      document.querySelector('#apiBase').value = state.apiBase;
+      document.querySelector('#apiToken').value = state.apiToken;
+      document.querySelector('#uploadModal').classList.add('open');
+    }
+    async function testConnection() {
+      saveConnection();
+      setServiceMessage('正在连接…');
+      try {
+        const response = await apiFetch('/api/papers', {cache:'no-store'});
+        const payload = await response.json();
+        state.backendConnected = true;
+        setServiceMessage(`连接成功：当前 ${payload.papers.length} 篇论文`, 'good');
+        updateApiStat();
+        await loadData();
+      } catch (error) {
+        state.backendConnected = false;
+        setServiceMessage(error.message, 'bad');
+        updateApiStat();
+      }
+    }
+    async function uploadPaper(event) {
+      event.preventDefault();
+      saveConnection();
+      const file = document.querySelector('#paperFile').files[0];
+      const resultBox = document.querySelector('#uploadResult');
+      if (!file) { resultBox.className = 'upload-result show'; resultBox.textContent = '请选择 PDF 文件。'; return; }
+      if (!localMode && !state.apiBase) { resultBox.className = 'upload-result show'; resultBox.textContent = '请先填写 HTTPS 服务地址并测试连接。'; return; }
+      const button = document.querySelector('#submitUpload');
+      button.disabled = true; button.textContent = '正在校验与建立索引…';
+      resultBox.className = 'upload-result show'; resultBox.textContent = '上传完成前请保持本地服务运行。';
+      try {
+        const form = new FormData(event.currentTarget);
+        const response = await apiFetch('/api/upload', {method:'POST', body:form});
+        const payload = await response.json();
+        const keywords = (payload.keywords || []).map(row => `<span class="tag">${escapeHtml(row.term)}</span>`).join('');
+        resultBox.innerHTML = `<strong>${payload.created ? '已新增论文' : '已补充现有条目'}</strong><br>${escapeHtml(payload.paper.title)}<br>${payload.paper.doi ? `DOI：${escapeHtml(payload.paper.doi)}<br>` : ''}PDF：${payload.pdf.pages} 页，已加入全文索引。<div style="margin-top:8px">${keywords || '未提取到关键词'}</div>`;
+        state.backendConnected = true;
+        updateApiStat();
+        await loadData();
+      } catch (error) {
+        resultBox.textContent = `上传失败：${error.message}`;
+      } finally {
+        button.disabled = false; button.textContent = '上传、校验并加入库';
+      }
+    }
     document.querySelector('#ask').onclick = ask;
     document.querySelector('#question').addEventListener('keydown', e => { if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') ask(); });
     document.querySelectorAll('.chip').forEach(chip => chip.onclick = () => { document.querySelector('#question').value = chip.textContent; ask(); });
     document.querySelector('#filter').oninput = e => renderList(e.target.value);
     document.querySelector('#close').onclick = () => document.querySelector('#modal').classList.remove('open');
     document.querySelector('#modal').onclick = e => { if (e.target.id === 'modal') e.currentTarget.classList.remove('open'); };
+    document.querySelector('#openUpload').onclick = openUploadModal;
+    document.querySelector('#closeUpload').onclick = () => document.querySelector('#uploadModal').classList.remove('open');
+    document.querySelector('#uploadModal').onclick = e => { if (e.target.id === 'uploadModal') e.currentTarget.classList.remove('open'); };
+    document.querySelector('#testApi').onclick = testConnection;
+    document.querySelector('#uploadForm').onsubmit = uploadPaper;
     async function loadData() {
       try {
-        if (staticMode) throw new Error('静态站点');
-        const api = await fetch('/api/papers');
-        if (!api.ok) throw new Error('no api');
+        const api = await apiFetch('/api/papers', {cache:'no-store'});
         state.papers = (await api.json()).papers;
+        state.backendConnected = true;
       } catch (_) {
         state.papers = await fetch('./data/papers.json').then(r => r.json());
+        state.backendConnected = localMode;
       }
       try {
-        const zoteroUrl = staticMode ? './data/zotero-links.json' : '/api/zotero-links';
-        const zoteroPayload = await fetch(zoteroUrl, {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
+        const zoteroPayload = localMode
+          ? await apiFetch('/api/zotero-links', {cache:'no-store'}).then(r => r.json())
+          : await fetch('./data/zotero-links.json', {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
         state.zotero = zoteroPayload.items || zoteroPayload;
       } catch (_) { state.zotero = {}; }
       try {
-        const methodUrl = staticMode ? './data/method_evidence.auto.json' : '/api/methods';
-        const methodPayload = await fetch(methodUrl, {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
+        const methodPayload = hasBackend()
+          ? await apiFetch('/api/methods', {cache:'no-store'}).then(r => r.json())
+          : await fetch('./data/method_evidence.auto.json', {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
         state.methods = methodPayload.papers || {};
       } catch (_) { state.methods = {}; }
-      if (!staticMode) {
+      if (hasBackend()) {
         try {
-          const literaturePayload = await fetch('/api/literature', {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
+          const literaturePayload = await apiFetch('/api/literature', {cache:'no-store'}).then(r => r.json());
           state.literature = literaturePayload.papers || {};
         } catch (_) { state.literature = {}; }
       }
       document.querySelector('#paperCount').textContent = state.papers.length;
       const zoteroRows = Object.values(state.zotero);
-      document.querySelector('#zoteroStat').textContent = staticMode
+      document.querySelector('#zoteroStat').textContent = !localMode
         ? 'Zotero 深链 · 仅本机版显示'
-        : `Zotero ${zoteroRows.length}/16 · PDF ${zoteroRows.filter(row => row.attachment_key).length}`;
+        : `Zotero ${zoteroRows.length} · PDF ${zoteroRows.filter(row => row.attachment_key).length}`;
+      updateApiStat();
       renderList();
     }
     loadData();
