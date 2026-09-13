@@ -7,10 +7,12 @@
     '界面': ['interface', 'sei', 'electrode-electrolyte'],
     '稳定性': ['stability', 'phase diagram', 'electrochemical window'],
     '固态电解质': ['solid electrolyte', 'superionic', 'lgps', 'ionic conductivity'],
-    '机器学习势': ['machine-learning potential', 'neural network potential', 'm3gnet', 'chgnet', 'nnp'],
-    '神经网络势': ['neural network potential', 'nnp', 'mlip'],
-    '高通量': ['high-throughput', 'screening', 'materials project', 'atomate2'],
-    '入门': ['starter', 'protocol', 'vaspkit', 'pymatgen', 'ase', 'sumo'],
+    '机器学习势': ['machine-learning potential', 'neural network potential', 'm3gnet', 'chgnet', 'deepmd', 'dp-gen', 'nequip', 'allegro', 'gap', 'nnp'],
+    '神经网络势': ['neural network potential', 'nnp', 'mlip', 'deepmd', 'nequip', 'allegro'],
+    '主动学习': ['active learning', 'concurrent learning', 'dp-gen', 'model deviation'],
+    '高通量': ['high-throughput', 'screening', 'materials project', 'atomate2', 'aiida'],
+    '缺陷': ['defect', 'vacancy', 'interstitial', 'formation energy', 'pymatgen-analysis-defects'],
+    '入门': ['starter', 'protocol', 'vaspkit', 'pymatgen', 'ase', 'sumo', 'lammps', 'dscribe', 'matbench'],
     '声子': ['phonon', 'phonopy', 'finite displacement', 'force constants'],
     '后处理': ['post-processing', 'vaspkit', 'sumo', 'band structure', 'dos'],
     '钠': ['sodium', 'na-ion'], '锂': ['lithium', 'li-ion']
@@ -111,7 +113,7 @@
     lines.push('', '### 边界与下一步', '', '具体INCAR/KPOINTS、U值、赝势、超胞和温度不能自动猜定；必须回到全文/补充信息并重新收敛。');
     const wosCount = papers.filter(p => p.wos_uid).length;
     const starterCount = papers.filter(p => p.collection === 'starter').length;
-    return {question, task, answer_markdown:lines.join('\n'), papers:found, provenance:{wos_note:`当前 ${papers.length} 篇：${wosCount} 篇核心论文已取得 WOS UT，${starterCount} 篇入门论文已核对 DOI 与出版社记录；静态版不包含受版权保护的 PDF。`}};
+    return {question, task, answer_markdown:lines.join('\n'), papers:found, provenance:{wos_note:`当前 ${papers.length} 篇：${wosCount} 篇核心论文已取得 WOS UT，${starterCount} 篇方法路线论文已核对 DOI 与出版社记录；静态版不包含受版权保护的 PDF。`}};
   }
   window.BatteryBrowserAgent = {answer, search};
 })();

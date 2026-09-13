@@ -13,14 +13,14 @@ ROOT = Path(__file__).resolve().parents[1]
 class LibraryIntegrityTests(unittest.TestCase):
     def test_library_has_verified_core_and_starter_sets(self) -> None:
         papers = json.loads((ROOT / "data" / "papers.json").read_text(encoding="utf-8"))
-        self.assertEqual(len(papers), 28)
+        self.assertEqual(len(papers), 40)
         dois = [paper["doi"].lower() for paper in papers]
         wos_papers = [paper for paper in papers if paper.get("wos_uid")]
         starter_papers = [paper for paper in papers if paper.get("collection") == "starter"]
         uids = [paper["wos_uid"] for paper in wos_papers]
-        self.assertEqual(len(set(dois)), 28)
+        self.assertEqual(len(set(dois)), 40)
         self.assertEqual(len(wos_papers), 16)
-        self.assertEqual(len(starter_papers), 12)
+        self.assertEqual(len(starter_papers), 24)
         self.assertTrue(all(uid.startswith("WOS:") for uid in uids))
         self.assertEqual(len(set(uids)), 16)
         self.assertTrue(
@@ -30,7 +30,18 @@ class LibraryIntegrityTests(unittest.TestCase):
                 for paper in wos_papers
             )
         )
-        self.assertTrue(all(paper.get("protocol_steps") for paper in starter_papers))
+        self.assertTrue(
+            all(len(paper.get("protocol_steps", [])) >= 5 for paper in starter_papers)
+        )
+        self.assertTrue(
+            {
+                "10.1016/j.cpc.2018.03.016",
+                "10.1016/j.cpc.2020.107206",
+                "10.1038/s41467-022-29939-5",
+                "10.1103/physrevb.82.125416",
+                "10.21105/joss.05941",
+            }.issubset(set(dois))
+        )
         self.assertTrue(
             all(
                 paper.get("verification", {}).get("doi", "").startswith("verified")
@@ -43,8 +54,8 @@ class LibraryIntegrityTests(unittest.TestCase):
             (ROOT / "literature" / "manifest.json").read_text(encoding="utf-8")
         )
         audit = manifest["integrity_audit"]
-        self.assertEqual(audit["library_papers"], 28)
-        self.assertEqual(audit["doi_verified"], 28)
+        self.assertEqual(audit["library_papers"], 40)
+        self.assertEqual(audit["doi_verified"], 40)
         self.assertEqual(audit["downloaded_main_texts"], 16)
         self.assertEqual(audit["wos_uid_verified"], 16)
         self.assertEqual(audit["duplicate_pdf_hashes"], 0)

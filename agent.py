@@ -30,19 +30,20 @@ ALIASES = {
     "迁移": ["diffusion", "migration", "barrier", "neb"],
     "势垒": ["barrier", "migration", "neb", "ci-neb"],
     "分子动力学": ["molecular dynamics", "md", "aimd", "trajectory", "msd"],
-    "机器学习势": ["machine-learning potential", "neural network potential", "m3gnet", "nnp", "mlip"],
-    "神经网络势": ["neural network potential", "nnp", "mlip"],
+    "机器学习势": ["machine-learning potential", "neural network potential", "m3gnet", "chgnet", "deepmd", "dp-gen", "nequip", "allegro", "gap", "nnp", "mlip"],
+    "神经网络势": ["neural network potential", "nnp", "mlip", "deepmd", "nequip", "allegro"],
+    "主动学习": ["active learning", "concurrent learning", "dp-gen", "model deviation"],
     "稳定性": ["stability", "phase diagram", "electrochemical window", "energy above hull"],
     "界面": ["interface", "sei", "electrode-electrolyte", "surface"],
     "固态电解质": ["solid electrolyte", "superionic", "lgps", "argyrodite", "ionic conductivity"],
     "正极": ["cathode", "intercalation", "layered oxide"],
     "负极": ["anode", "sei", "lithium metal"],
     "缺陷": ["defect", "vacancy", "interstitial", "chemical potential"],
-    "高通量": ["high-throughput", "screening", "classifier", "materials project"],
+    "高通量": ["high-throughput", "screening", "classifier", "materials project", "atomate2", "aiida"],
     "钠": ["sodium", "na-ion", "na"],
     "锂": ["lithium", "li-ion", "li"],
     "文献": ["paper", "review", "article", "doi"],
-    "入门": ["starter", "protocol", "vaspkit", "pymatgen", "ase", "sumo"],
+    "入门": ["starter", "protocol", "vaspkit", "pymatgen", "ase", "sumo", "lammps", "dscribe", "matbench"],
     "声子": ["phonon", "phonopy", "finite displacement", "force constants"],
     "后处理": ["post-processing", "vaspkit", "sumo", "band structure", "dos"],
 }
@@ -362,7 +363,7 @@ class BatteryResearchAgent:
                 "fulltext_chunk_count": len(self.fulltext_chunks),
                 "wos_note": (
                     f"当前 {len(self.papers)} 篇：{wos_count} 篇核心论文已取得 WOS UT，"
-                    f"{starter_count} 篇入门论文已核对 DOI 与出版社记录。"
+                    f"{starter_count} 篇方法路线论文已核对 DOI 与出版社记录。"
                 ),
             },
         }

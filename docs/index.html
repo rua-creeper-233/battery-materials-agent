@@ -108,7 +108,7 @@
       <div class="header-actions">
         <div class="stats">
           <span class="stat"><b id="paperCount">—</b> 篇论文</span>
-          <span class="stat" id="starterStat">入门路线 · 检测中</span>
+          <span class="stat" id="starterStat">方法路线 · 检测中</span>
           <span class="stat" id="zoteroStat">Zotero 深链 · 检测中</span>
           <span class="stat" id="apiStat">本地服务 · 未连接</span>
           <span class="stat">DFT → MD → AI4S</span>
@@ -307,7 +307,7 @@
       const relations = (p.relations || []).map(r => `<div class="relation">${escapeHtml(r.source)} —[${escapeHtml(r.relation)}]→ ${escapeHtml(r.target)}</div>`).join('');
       const protocolSteps = (p.protocol_steps || []).map(step => `<li>${escapeHtml(step)}</li>`).join('');
       const protocolBlock = protocolSteps
-        ? `<h3>建议复现步骤</h3><ol>${protocolSteps}</ol><div class="notice">这些步骤是基于论文范围整理的入门路线，不替代原文、补充信息、软件手册和你自己的收敛测试。</div>`
+        ? `<h3>建议复现步骤</h3><ol>${protocolSteps}</ol><div class="notice">这些步骤是基于论文范围整理的方法路线，不替代原文、补充信息、软件手册和你自己的收敛测试。</div>`
         : '';
       const local = state.literature[p.id] || {};
       const localStatus = local.status === 'downloaded' ? `本地全文：已下载${local.pages ? `，${local.pages}页` : ''}${local.text_chunks ? `，${local.text_chunks}个检索片段` : ''}` : '本地全文：尚未下载';
@@ -437,7 +437,7 @@
       }
       document.querySelector('#paperCount').textContent = state.papers.length;
       const starterCount = state.papers.filter(p => p.collection === 'starter').length;
-      document.querySelector('#starterStat').textContent = `入门路线 · ${starterCount} 篇`;
+      document.querySelector('#starterStat').textContent = `方法路线 · ${starterCount} 篇`;
       const zoteroRows = Object.values(state.zotero);
       document.querySelector('#zoteroStat').textContent = !localMode
         ? 'Zotero 深链 · 仅本机版显示'

@@ -1,8 +1,8 @@
 # 本地全文与证据索引审计
 
-审计时间：2026-09-13T09:20:06+00:00
+审计时间：2026-09-13T13:13:36+00:00
 
-结论：证据库共 28 篇，DOI/出版社记录已核验 28/28；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 16/28 篇，共 743 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
+结论：证据库共 40 篇，DOI/出版社记录已核验 40/40；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 16/40 篇，共 743 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
 
 所有保留文件均通过 PDF 解析、标题匹配、正文/补充材料区分、SHA-256 和重复文件检查。M3GNet 的补充材料单独放在 `literature/supplementary/`，不进入正文索引。
 
@@ -36,6 +36,18 @@
 | 26 | 2025 | A practical guide to machine learning interatomic potentials – Status and future | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 27 | 2015 | First principles phonon calculations in materials science | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 28 | 2018 | sumo: Command-line tools for plotting and analysis of periodic ab initio calculations | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 29 | 2018 | DeePMD-kit: A deep learning package for many-body potential energy representation and molecular dynamics | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 30 | 2020 | DP-GEN: A concurrent learning platform for the generation of reliable deep learning based potential energy models | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 31 | 2022 | E(3)-equivariant graph neural networks for data-efficient and accurate interatomic potentials | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 32 | 2023 | Learning local equivariant representations for large-scale atomistic dynamics | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 33 | 2021 | Gaussian Process Regression for Materials and Molecules | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 34 | 2022 | LAMMPS - a flexible simulation tool for particle-based materials modeling at the atomic, meso, and continuum scales | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 35 | 2016 | AiiDA: automated interactive infrastructure and database for computational science | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 36 | 2020 | DScribe: Library of descriptors for machine learning in materials science | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 37 | 2018 | Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 38 | 2020 | Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 39 | 2010 | Thermodynamic and kinetic properties of the Li-graphite system from first-principles calculations | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 40 | 2024 | pymatgen-analysis-defects: A Python package for analyzing point defects in crystalline materials | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 
 ## 尚未保存的正文
 
@@ -51,6 +63,18 @@
 - A practical guide to machine learning interatomic potentials – Status and future，DOI `10.1016/j.cossms.2025.101214`：本地未保存正文，使用 WOS/DOI 回退。
 - First principles phonon calculations in materials science，DOI `10.1016/j.scriptamat.2015.07.021`：本地未保存正文，使用 WOS/DOI 回退。
 - sumo: Command-line tools for plotting and analysis of periodic ab initio calculations，DOI `10.21105/joss.00717`：本地未保存正文，使用 WOS/DOI 回退。
+- DeePMD-kit: A deep learning package for many-body potential energy representation and molecular dynamics，DOI `10.1016/j.cpc.2018.03.016`：本地未保存正文，使用 WOS/DOI 回退。
+- DP-GEN: A concurrent learning platform for the generation of reliable deep learning based potential energy models，DOI `10.1016/j.cpc.2020.107206`：本地未保存正文，使用 WOS/DOI 回退。
+- E(3)-equivariant graph neural networks for data-efficient and accurate interatomic potentials，DOI `10.1038/s41467-022-29939-5`：本地未保存正文，使用 WOS/DOI 回退。
+- Learning local equivariant representations for large-scale atomistic dynamics，DOI `10.1038/s41467-023-36329-y`：本地未保存正文，使用 WOS/DOI 回退。
+- Gaussian Process Regression for Materials and Molecules，DOI `10.1021/acs.chemrev.1c00022`：本地未保存正文，使用 WOS/DOI 回退。
+- LAMMPS - a flexible simulation tool for particle-based materials modeling at the atomic, meso, and continuum scales，DOI `10.1016/j.cpc.2021.108171`：本地未保存正文，使用 WOS/DOI 回退。
+- AiiDA: automated interactive infrastructure and database for computational science，DOI `10.1016/j.commatsci.2015.09.013`：本地未保存正文，使用 WOS/DOI 回退。
+- DScribe: Library of descriptors for machine learning in materials science，DOI `10.1016/j.cpc.2019.106949`：本地未保存正文，使用 WOS/DOI 回退。
+- Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties，DOI `10.1103/PhysRevLett.120.145301`：本地未保存正文，使用 WOS/DOI 回退。
+- Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm，DOI `10.1038/s41524-020-00406-3`：本地未保存正文，使用 WOS/DOI 回退。
+- Thermodynamic and kinetic properties of the Li-graphite system from first-principles calculations，DOI `10.1103/PhysRevB.82.125416`：本地未保存正文，使用 WOS/DOI 回退。
+- pymatgen-analysis-defects: A Python package for analyzing point defects in crystalline materials，DOI `10.21105/joss.05941`：本地未保存正文，使用 WOS/DOI 回退。
 
 ## 使用边界
 

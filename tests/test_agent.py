@@ -39,6 +39,12 @@ class AgentTests(unittest.TestCase):
         self.assertIn("DFT", answer)
         self.assertIn("DOI", answer)
 
+    def test_deepmd_query_finds_new_method_papers(self) -> None:
+        result = self.agent.search("DeepMD DP-GEN 主动学习 LAMMPS", limit=8)
+        joined = " ".join(item["id"] for item in result)
+        self.assertIn("wang2018_deepmdkit", joined)
+        self.assertIn("zhang2020_dpgen", joined)
+
     def test_answer_has_provenance_and_graph(self) -> None:
         result = self.agent.answer("怎么判断固态电解质界面稳定？")
         self.assertGreater(len(result["papers"]), 0)
