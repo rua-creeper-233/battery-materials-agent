@@ -18,6 +18,7 @@ LITERATURE = ROOT / "literature"
 PDF_DIR = LITERATURE / "pdfs"
 MANIFEST = LITERATURE / "manifest.json"
 METHOD_EVIDENCE = ROOT / "data" / "method_evidence.auto.json"
+ZOTERO_LINKS = ROOT / "private" / "zotero-links.local.json"
 AGENT = BatteryResearchAgent()
 
 
@@ -28,6 +29,17 @@ def _load_method_evidence() -> dict[str, object]:
         return json.loads(METHOD_EVIDENCE.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return {"review_status": "invalid", "papers": {}}
+
+
+def _load_zotero_links() -> dict[str, object]:
+    if not ZOTERO_LINKS.exists():
+        return {"visibility": "local_private", "items": {}}
+    try:
+        payload = json.loads(ZOTERO_LINKS.read_text(encoding="utf-8"))
+        payload["visibility"] = "local_private"
+        return payload
+    except (OSError, json.JSONDecodeError):
+        return {"visibility": "local_private_invalid", "items": {}}
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -93,6 +105,14 @@ class Handler(BaseHTTPRequestHandler):
                 except (OSError, json.JSONDecodeError):
                     pass
             self._json(payload)
+            return
+        if path == "/api/zotero-links":
+            # Zotero item/attachment keys are local library identifiers.  Never
+            # expose them when the server is deliberately bound to a LAN host.
+            if self.client_address[0] not in {"127.0.0.1", "::1"}:
+                self._json({"visibility": "local_private", "items": {}})
+            else:
+                self._json(_load_zotero_links())
             return
         if path.startswith("/api/papers/"):
             paper_id = unquote(path.removeprefix("/api/papers/"))

@@ -99,12 +99,7 @@ def main() -> int:
     parser.add_argument(
         "--output",
         type=Path,
-        default=ROOT / "static" / "data" / "zotero-links.json",
-    )
-    parser.add_argument(
-        "--pages-output",
-        type=Path,
-        default=ROOT / "docs" / "data" / "zotero-links.json",
+        default=ROOT / "private" / "zotero-links.local.json",
     )
     args = parser.parse_args()
 
@@ -118,7 +113,7 @@ def main() -> int:
         )
         return 1
 
-    write_mapping(mapping, [args.output, args.pages_output])
+    write_mapping(mapping, [args.output])
     with_pdf = sum(1 for item in mapping.values() if item["has_pdf"])
     print(f"已同步 {len(mapping)} 个 DOI 条目，其中 {with_pdf} 个包含 PDF。")
     return 0

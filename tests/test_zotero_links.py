@@ -1,6 +1,11 @@
+import json
 import unittest
+from pathlib import Path
 
 from sync_zotero_links import collect_links, normalize_doi
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class ZoteroLinkTests(unittest.TestCase):
@@ -33,6 +38,15 @@ class ZoteroLinkTests(unittest.TestCase):
         self.assertEqual(mapping["10.1000/example"]["item_key"], "PARENT01")
         self.assertEqual(mapping["10.1000/example"]["attachment_key"], "PDF00001")
         self.assertTrue(mapping["10.1000/example"]["has_pdf"])
+
+    def test_public_site_map_never_contains_local_library_keys(self) -> None:
+        payload = json.loads(
+            (ROOT / "static" / "data" / "zotero-links.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        self.assertEqual(payload.get("visibility"), "public_sanitized")
+        self.assertEqual(payload["items"], {})
 
 
 if __name__ == "__main__":

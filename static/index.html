@@ -85,6 +85,7 @@
       </div>
       <div class="stats">
         <span class="stat"><b id="paperCount">—</b> 篇种子论文</span>
+        <span class="stat" id="zoteroStat">Zotero 深链 · 检测中</span>
         <span class="stat">DFT → MD → AI4S</span>
         <span class="stat">本地运行 · 无需密钥</span>
       </div>
@@ -234,7 +235,8 @@
         state.papers = await fetch('./data/papers.json').then(r => r.json());
       }
       try {
-        const zoteroPayload = await fetch('./data/zotero-links.json', {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
+        const zoteroUrl = staticMode ? './data/zotero-links.json' : '/api/zotero-links';
+        const zoteroPayload = await fetch(zoteroUrl, {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
         state.zotero = zoteroPayload.items || zoteroPayload;
       } catch (_) { state.zotero = {}; }
       try {
@@ -249,6 +251,10 @@
         } catch (_) { state.literature = {}; }
       }
       document.querySelector('#paperCount').textContent = state.papers.length;
+      const zoteroRows = Object.values(state.zotero);
+      document.querySelector('#zoteroStat').textContent = staticMode
+        ? 'Zotero 深链 · 仅本机版显示'
+        : `Zotero ${zoteroRows.length}/16 · PDF ${zoteroRows.filter(row => row.attachment_key).length}`;
       renderList();
     }
     loadData();

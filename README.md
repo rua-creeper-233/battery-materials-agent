@@ -11,7 +11,7 @@
 - 为 DFT / NEB / AIMD / MLIP 任务生成带质量控制项的工作流；
 - 从本地正文中自动定位软件、泛函、截断能、k 点、超胞、MD 条件、NEB 和机器学习训练信号，并逐条保留 PDF 页码；
 - 本地有 PDF 时显示“打开本地 PDF”，没有时回退到 WOS 与 DOI；
-- 可生成 Zotero 可导入的 RIS，但不会自动改动或同步 Zotero 文库。
+- 支持按 DOI 幂等写入 Zotero；当前已核验 16/16 条目，其中 14 条已关联本地 PDF，并生成可点击的 Zotero 深链。
 
 全文状态与审计证据见 [FULLTEXT_AUDIT.md](FULLTEXT_AUDIT.md)，自动方法信号见 [METHOD_EVIDENCE_AUDIT.md](METHOD_EVIDENCE_AUDIT.md)，书目真实性和 WOS UT 见 [PAPER_AUDIT.md](PAPER_AUDIT.md)。
 
@@ -87,6 +87,19 @@ python .\build_pages.py
 
 `sync_zotero_links.py` 只读取本机 Zotero API 的 DOI、条目键和 PDF 附件键，不读取账号密码。导师没有你的本地 Zotero 文库时，应使用网页一直保留的 WOS 或 DOI 入口。
 
+要先预览、再按 DOI 幂等导入 16 篇书目并附加 14 篇本地 PDF：
+
+```powershell
+python .\import_zotero_library.py
+python .\import_zotero_library.py --apply
+python .\sync_zotero_links.py
+python .\build_pages.py
+```
+
+导入器通过 Zotero 本机 Connector 接口写入，不读取账号密码；已存在 DOI 会跳过，避免重复。新条目统一带 `battery-materials-agent` 与 `WOS-verified` 标签。Zotero 9 无需为此创建 Web API 密钥；若文库开启同步，新增书目和存储型附件可能在下一次同步时上传到 Zotero 云端。
+
+`sync_zotero_links.py` 把条目键和附件键写入被 Git 忽略的 `private/zotero-links.local.json`。本地服务器只向回环地址提供这些深链；GitHub Pages 公开包不含个人文库内部标识，因此导师端显示 WOS/DOI 入口，你自己的本地页面仍可直接打开 Zotero/PDF。
+
 ## GitHub Pages
 
 生成静态发布包：
@@ -95,7 +108,7 @@ python .\build_pages.py
 python .\build_pages.py
 ```
 
-把仓库推送到 GitHub 后，在 `Settings → Pages` 选择 `main` 分支和 `/docs` 文件夹。不要提交 WOS 密码、学校 VPN 信息、Cookie、Zotero 数据库、受版权保护的 PDF 或全文转储；`.gitignore` 已排除 PDF、全文 JSONL、RIS 和 Zotero 数据库。静态站只发布书目、短方法信号与页码，不发布论文正文。
+把仓库推送到 GitHub 后，在 `Settings → Pages` 选择 `main` 分支和 `/docs` 文件夹。不要提交 WOS 密码、学校 VPN 信息、Cookie、Zotero 数据库/条目键、受版权保护的 PDF 或全文转储；`.gitignore` 已排除私有 Zotero 映射、PDF、全文 JSONL、RIS 和 Zotero 数据库。静态站只发布书目、短方法信号与页码，不发布论文正文。
 
 为了便于回退，每完成一轮可运行且测试通过的改进，就创建一个独立 Git 提交并推送。`main` 上的提交记录就是版本时间线；需要固定里程碑时可额外创建标签。
 

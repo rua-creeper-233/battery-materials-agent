@@ -12,3 +12,4 @@ papers/
 zotero.sqlite*
 data/fulltext_chunks.jsonl
 literature/text/
+private/
