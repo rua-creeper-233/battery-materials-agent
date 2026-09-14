@@ -58,6 +58,21 @@ class AgentTests(unittest.TestCase):
         self.assertGreater(len(result["graph"]["edges"]), 0)
         self.assertIn("wos_note", result["provenance"])
 
+    def test_tag_filter_and_retrieval_reason_are_exposed(self) -> None:
+        result = self.agent.search("tag:VASP 入门", limit=20)
+        self.assertGreater(len(result), 0)
+        self.assertTrue(all("VASP" in paper["display_tags"] for paper in result))
+        self.assertTrue(all(paper["retrieval"]["reason"] for paper in result))
+
+    def test_unknown_query_does_not_fall_back_to_latest_papers(self) -> None:
+        self.assertEqual(self.agent.search("zzzz-not-a-real-material-token", limit=5), [])
+
+    def test_vasp_question_has_dedicated_setup_workflow(self) -> None:
+        result = self.agent.answer("VASP 入门如何设置 INCAR 和 KPOINTS？")
+        self.assertEqual(result["task"], "dft_setup")
+        self.assertIn("查询扩展", result["answer_markdown"])
+        self.assertIn("为什么命中", result["answer_markdown"])
+
 
 class WosImportTests(unittest.TestCase):
     def test_parse_and_merge(self) -> None:

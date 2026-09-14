@@ -23,6 +23,8 @@ def main() -> None:
     copy(ROOT / "static" / "index.html", DOCS / "index.html")
     copy(ROOT / "static" / "browser_agent.js", DOCS / "browser_agent.js")
     copy(papers_path, DOCS / "data" / "papers.json")
+    copy(ROOT / "data" / "paper_tags.json", DOCS / "data" / "paper_tags.json")
+    copy(ROOT / "data" / "search_config.json", DOCS / "data" / "search_config.json")
     method_path = ROOT / "data" / "method_evidence.auto.json"
     json.loads(method_path.read_text(encoding="utf-8"))
     copy(method_path, DOCS / "data" / "method_evidence.auto.json")

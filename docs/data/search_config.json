@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "mode": "explainable_weighted_retrieval",
+  "trained_on": "data/search_training.json",
+  "training_examples": 14,
+  "held_out_examples": 0,
+  "warning": "Small in-library relevance set; retrieval weight tuning only, not LLM training or an unbiased benchmark.",
+  "objective": 0.883988,
+  "metrics": {
+    "mrr_at_5": 0.928571,
+    "recall_at_5": 0.80119,
+    "top1_accuracy": 0.928571
+  },
+  "weights": {
+    "title": 4.0,
+    "role": 4.5,
+    "methods": 7.0,
+    "tags": 3.0,
+    "systems_properties": 2.5,
+    "summary_evidence": 2.0,
+    "phrase_bonus": 8.0,
+    "alias_factor": 0.65,
+    "doi_bonus": 50.0
+  }
+}

@@ -30,6 +30,7 @@ LITERATURE = ROOT / "literature"
 PDF_DIR = LITERATURE / "pdfs"
 MANIFEST = LITERATURE / "manifest.json"
 METHOD_EVIDENCE = ROOT / "data" / "method_evidence.auto.json"
+PAPER_TAGS = ROOT / "data" / "paper_tags.json"
 ZOTERO_LINKS = ROOT / "private" / "zotero-links.local.json"
 DEFAULT_ALLOWED_ORIGIN = "https://rua-creeper-233.github.io"
 AGENT = BatteryResearchAgent()
@@ -159,6 +160,12 @@ class Handler(BaseHTTPRequestHandler):
             return
         if path == "/api/papers":
             self._json({"papers": AGENT.papers})
+            return
+        if path == "/api/paper-tags":
+            self._json(_load_json(PAPER_TAGS, {"counts": {}, "papers": {}}))
+            return
+        if path == "/api/search-config":
+            self._json(AGENT.search_config)
             return
         if path == "/api/literature":
             raw = _load_json(MANIFEST, {"papers": {}})

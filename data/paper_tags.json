@@ -1,0 +1,716 @@
+{
+  "schema_version": 1,
+  "definitions": {
+    "MS": "BIOVIA Materials Studio；仅方法或精选标签明确使用时标注",
+    "DFT": "包含密度泛函理论或第一性原理计算",
+    "MD": "包含经典MD、AIMD、MLMD或LAMMPS分子动力学",
+    "VASP": "精选元数据明确使用或教授VASP/VASPKIT",
+    "方法论文": "本库starter方法路线集",
+    "进展论文": "本库核心电池材料计算研究集"
+  },
+  "counts": {
+    "DFT": 20,
+    "MD": 16,
+    "VASP": 9,
+    "方法论文": 27,
+    "综述": 4,
+    "进展论文": 16
+  },
+  "papers": {
+    "urban2016_computational_review": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "综述",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "AIMD"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "aydinol1997_voltage": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "ab initio",
+          "Ab initio",
+          "DFT"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "ceder1998_cathode_design": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "first-principles"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "vanderven2001_diffusion": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT",
+          "First-principles"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "ong2011_li_na": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "ong2013_lgps": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "AIMD"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "shi2013_sei_li2co3": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "sendek2017_sse_screening": {
+      "paper_kind": "进展论文",
+      "method_tags": [],
+      "display_tags": [
+        "进展论文"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "baktash2020_argyrodite_aimd": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "MD"
+      ],
+      "tag_basis": {
+        "MD": [
+          "AIMD"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "chen2022_m3gnet": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "MD"
+      ],
+      "tag_basis": {
+        "MD": [
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "sawada2024_nnp_sse": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "MD"
+      ],
+      "tag_basis": {
+        "MD": [
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "ling2022_battery_informatics": {
+      "paper_kind": "进展论文",
+      "method_tags": [],
+      "display_tags": [
+        "进展论文",
+        "综述"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "henkelman2000_cineb": {
+      "paper_kind": "进展论文",
+      "method_tags": [],
+      "display_tags": [
+        "进展论文"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "leung2010_sei_aimd": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "Ab initio",
+          "DFT"
+        ],
+        "MD": [
+          "AIMD",
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "mo2012_lgps_aimd": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT",
+          "First Principles"
+        ],
+        "MD": [
+          "AIMD"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "deng2023_chgnet": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "MD"
+      ],
+      "tag_basis": {
+        "MD": [
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "geng2025_vaspkit_protocol": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "VASP"
+      ],
+      "display_tags": [
+        "方法论文",
+        "VASP"
+      ],
+      "tag_basis": {
+        "VASP": [
+          "VASP",
+          "VASPKIT"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "wang2021_vaspkit": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "VASP"
+      ],
+      "display_tags": [
+        "方法论文",
+        "VASP"
+      ],
+      "tag_basis": {
+        "VASP": [
+          "VASP",
+          "VASPKIT"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "ong2013_pymatgen": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "VASP"
+      ],
+      "display_tags": [
+        "方法论文",
+        "VASP"
+      ],
+      "tag_basis": {
+        "VASP": [
+          "VASP"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "larsen2017_ase": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "MD",
+        "VASP"
+      ],
+      "display_tags": [
+        "方法论文",
+        "MD",
+        "VASP"
+      ],
+      "tag_basis": {
+        "MD": [
+          "molecular dynamics"
+        ],
+        "VASP": [
+          "VASP"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "ganose2025_atomate2": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "MD",
+        "VASP"
+      ],
+      "display_tags": [
+        "方法论文",
+        "MD",
+        "VASP"
+      ],
+      "tag_basis": {
+        "MD": [
+          "AIMD"
+        ],
+        "VASP": [
+          "VASP"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "jain2013_materials_project": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT",
+        "VASP"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT",
+        "VASP"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "VASP": [
+          "VASP"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "smidstrup2014_idpp": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "he2018_aimd_statistics": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "ab initio"
+        ],
+        "MD": [
+          "AIMD",
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "zhou2004_dftu_voltage": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT",
+          "DFT+U",
+          "First-principles"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "jacobs2025_mlip_guide": {
+      "paper_kind": "方法论文",
+      "method_tags": [],
+      "display_tags": [
+        "方法论文",
+        "综述"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "togo2015_phonopy": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT",
+        "VASP"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT",
+        "VASP"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT",
+          "First principles"
+        ],
+        "VASP": [
+          "VASP"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "ganose2018_sumo": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT",
+        "VASP"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT",
+        "VASP"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "ab initio"
+        ],
+        "VASP": [
+          "VASP"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "wang2018_deepmdkit": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT",
+        "MD",
+        "VASP"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT",
+        "MD",
+        "VASP"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "LAMMPS",
+          "molecular dynamics"
+        ],
+        "VASP": [
+          "VASP"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "zhang2020_dpgen": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "batzner2022_nequip": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "musaelian2023_allegro": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "MD"
+      ],
+      "display_tags": [
+        "方法论文",
+        "MD"
+      ],
+      "tag_basis": {
+        "MD": [
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "deringer2021_gpr_gap": {
+      "paper_kind": "方法论文",
+      "method_tags": [],
+      "display_tags": [
+        "方法论文",
+        "综述"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "thompson2022_lammps": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "MD"
+      ],
+      "display_tags": [
+        "方法论文",
+        "MD"
+      ],
+      "tag_basis": {
+        "MD": [
+          "LAMMPS",
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "pizzi2016_aiida": {
+      "paper_kind": "方法论文",
+      "method_tags": [],
+      "display_tags": [
+        "方法论文"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "himanen2020_dscribe": {
+      "paper_kind": "方法论文",
+      "method_tags": [],
+      "display_tags": [
+        "方法论文"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "xie2018_cgcnn": {
+      "paper_kind": "方法论文",
+      "method_tags": [],
+      "display_tags": [
+        "方法论文"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "dunn2020_matbench": {
+      "paper_kind": "方法论文",
+      "method_tags": [],
+      "display_tags": [
+        "方法论文"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "persson2010_graphite": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT",
+          "first-principles"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "shen2024_pymatgen_defects": {
+      "paper_kind": "方法论文",
+      "method_tags": [],
+      "display_tags": [
+        "方法论文"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "batatia2025_mace_mp": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "MD"
+      ],
+      "display_tags": [
+        "方法论文",
+        "MD"
+      ],
+      "tag_basis": {
+        "MD": [
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "radova2025_frozen_transfer": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "bilbrey2025_uq": {
+      "paper_kind": "方法论文",
+      "method_tags": [],
+      "display_tags": [
+        "方法论文"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    }
+  }
+}

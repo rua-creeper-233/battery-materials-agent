@@ -7,6 +7,8 @@
 - 证据库共 43 篇：16 篇核心论文完成 DOI 与 WOS Core Collection 核验，另有 27 篇方法路线论文完成 DOI 与出版社记录核验；
 - 42/43 篇已有用户合法取得或公开可访问的本地正文，共 2682 个带页码文本块；仅 Nature Protocols 的 VASPKIT 2025 论文仍明确标记为全文待获取；
 - 中文检索电压、稳定性、扩散、固态电解质、界面、高通量和机器学习势；
+- 论文卡片显示 `MS / DFT / MD / VASP` 与“方法论文 / 进展论文”标签，并支持右栏一键筛选；
+- 检索采用可解释的字段加权、同义词扩展与 `tag:` / `type:` 语法，回答会显示查询理解和逐篇命中理由；无匹配时不再用最新论文凑答案；
 - 回答中给出论文级证据、DOI、精确 WOS 记录和本地全文页码；
 - 为 DFT / NEB / AIMD / MLIP 任务生成带质量控制项的工作流；
 - 从本地正文中自动定位软件、泛函、截断能、k 点、超胞、MD 条件、NEB 和机器学习训练信号，并逐条保留 PDF 页码；
@@ -73,6 +75,10 @@ python .\extract_method_evidence.py
 
 新增 MACE-MP-0（正式发表版2025）、冻结层迁移学习、不确定性量化三篇方法论文。新卡片提供“适用范围与迁移边界”和“代码、数据与复现入口”，并区分原文体系与迁移到电池的建议步骤。
 
+新增可审计标签与检索权重训练：当前 43 篇中，DFT 20 篇、MD 16 篇、VASP 9 篇、方法论文 27 篇、进展论文 16 篇。`MS` 专指 BIOVIA Materials Studio；当前精选元数据没有论文明确把它作为方法使用，因此严格计数为 0，而不是根据背景提及误标。标签规则与命中依据在 `data/paper_tags.json`。
+
+网页现在支持 `tag:DFT`、`tag:MD`、`tag:VASP`、`tag:MS`、`type:方法论文` 和 `type:进展论文`。可编辑的 14 条标注问题位于 `data/search_training.json`，运行 `python train_search.py` 会重新选择字段权重并生成 `data/search_config.json`。这只是检索排序调参，不是大模型微调；完整说明见 [SEARCH_TRAINING.md](SEARCH_TRAINING.md)。
+
 导出全库书目供 Zotero 导入：`python export_ris.py --all-curated`。输出为 `exports/battery_materials_all_curated.ris`，只有实际存在 WOS UT 的16篇会标注WOS核验，其余保留DOI/出版社核验状态。导出不会自动写入Zotero，不含PDF。
 
 前端方法卡回归检查：`node tests/test_learning_ui.mjs`。Python回归检查：`python -m unittest discover -s tests`。
@@ -106,6 +112,8 @@ Ceder et al. 1998 与 Shi et al. 2013 的 PDF 已由用户从有权访问的来�
 | `/api/upload` | POST multipart | 上传 PDF、补充元数据、建立索引并返回关键词 |
 | `/api/keywords` | POST JSON | 按 `text` 或 `paper_id` 提取关键词，当前版本 `v1` |
 | `/api/chat` | POST JSON | 使用本地全文库回答问题 |
+| `/api/paper-tags` | GET | 读取标签定义、计数与逐篇标签依据 |
+| `/api/search-config` | GET | 读取当前可解释检索权重与训练指标 |
 
 通过公网隧道调用写接口时必须提供 `Authorization: Bearer <临时访问密钥>`。访问密钥不写入 Git 或浏览器持久存储，只保存在当前标签页的 `sessionStorage`。
 
@@ -211,4 +219,4 @@ GitHub Pages 只托管 HTML/CSS/JavaScript，不能运行 Python。Quick Tunnel 
 2. 接入 Materials Project/COD 的结构 ID 与可追溯 CIF；
 3. 生成可审查而非自动执行的 VASP 输入草案；
 4. 增加 VASP 收敛、NEB 势垒、MSD/D/σ 的结果检查器；
-5. 在全文证据之上接入受引用约束的 LLM，禁止引用库外虚构来源。
+5. 积累 30—50 个真实问题并划分独立测试集，再评估检索；随后在全文证据之上接入受引用约束的 LLM，禁止引用库外虚构来源。

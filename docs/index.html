@@ -37,6 +37,9 @@
     .examples { display: flex; flex-wrap: wrap; gap: 8px; margin: 13px 0 4px; }
     .chip { border: 1px solid var(--line); background: #fbfbf7; color: #45534d; border-radius: 999px; padding: 8px 11px; font-size: 12px; cursor: pointer; }
     .chip:hover { border-color: #91aa9b; color: var(--green); }
+    .search-guide { margin: 12px 0 0; padding: 11px 13px; border: 1px solid var(--line); border-radius: 11px; background: #fbfcf8; color: var(--muted); font-size: 12px; line-height: 1.65; }
+    .search-guide summary { color: var(--green); font-weight: 750; cursor: pointer; }
+    .search-guide code { padding: 2px 5px; border-radius: 5px; background: #edf3ee; color: #294b3c; }
     .empty { min-height: 430px; display: grid; place-content: center; text-align: center; color: var(--muted); padding: 50px; }
     .empty .mark { margin: auto; width: 76px; height: 76px; display: grid; place-content: center; border-radius: 22px; background: var(--mint); color: var(--green); font: 700 29px Georgia, serif; transform: rotate(-4deg); }
     .empty h2 { color: var(--ink); margin: 20px 0 8px; font: 600 23px Georgia, "Noto Serif SC", serif; }
@@ -62,6 +65,12 @@
     .aside-head h2 { font: 650 19px Georgia, "Noto Serif SC", serif; margin: 0; }
     .count { color: var(--muted); font-size: 12px; }
     #filter { width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 10px; font: inherit; background: #fff; }
+    .tag-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+    .filter-chip { min-height: 30px; padding: 0 9px; border: 1px solid var(--line); border-radius: 999px; background: #fafbf8; color: #53615a; font: 700 10px/1 sans-serif; }
+    .filter-chip:hover { border-color: #7ba18c; color: var(--green); }
+    .filter-chip.active { background: var(--green); border-color: var(--green); color: white; }
+    .filter-chip:disabled { opacity: .52; cursor: not-allowed; }
+    .filter-note { margin: 8px 2px 0; color: var(--muted); font-size: 10px; line-height: 1.45; }
     .paper-list { overflow: auto; padding: 10px 2px 2px; }
     .paper { padding: 13px 10px; border-bottom: 1px solid #e6e9e4; cursor: pointer; }
     .paper:hover { background: #f1f7f2; border-radius: 10px; }
@@ -69,6 +78,10 @@
     .paper .level { display: inline-block; margin-left: 6px; padding: 3px 6px; border-radius: 999px; background: var(--mint); color: var(--green); font: 700 10px/1 sans-serif; }
     .paper h3 { font-size: 13px; line-height: 1.4; margin: 5px 0; }
     .paper p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
+    .paper-tags { display: flex; flex-wrap: wrap; gap: 4px; margin: 7px 0 6px; }
+    .paper-tag { display: inline-flex; align-items: center; min-height: 21px; padding: 0 7px; border-radius: 999px; background: #edf3ef; color: #315849; font: 750 9px/1 sans-serif; }
+    .paper-tag.kind { background: #fff0e4; color: #9a4a21; }
+    .paper-tag.method { background: #e7f0f8; color: #245a82; }
     .modal { position: fixed; inset: 0; background: #102018b8; padding: 5vw; display: none; place-items: center; z-index: 10; }
     .modal.open { display: grid; }
     .modal-card { max-width: 850px; max-height: 85vh; overflow: auto; padding: 28px; background: var(--card); border-radius: 18px; box-shadow: 0 30px 100px #0006; }
@@ -123,7 +136,7 @@
       <section class="panel workspace">
         <div class="composer">
           <textarea id="question" placeholder="例如：我想用 VASP 计算 LGPS 中的锂离子扩散，NEB 和 AIMD 应该怎样选择？"></textarea>
-          <button id="ask">生成证据回答</button>
+          <button id="ask">检索并生成回答</button>
         </div>
         <div class="examples">
           <span class="chip">如何计算正极平均嵌锂电压？</span>
@@ -131,16 +144,31 @@
           <span class="chip">给我一个 LGPS 机器学习势的落地流程</span>
           <span class="chip">怎么判断电极和固态电解质界面稳定？</span>
         </div>
+        <details class="search-guide">
+          <summary>怎样让检索更准？查看查询语法</summary>
+          按“材料＋任务＋方法＋输出量”提问，例如 <code>LGPS + 锂扩散 + AIMD + 扩散系数</code>。可加
+          <code>tag:DFT</code>、<code>tag:MD</code>、<code>tag:VASP</code>、<code>tag:MS</code>，以及
+          <code>type:方法论文</code> 或 <code>type:进展论文</code>。系统会显示查询扩展和每篇论文的命中理由。
+        </details>
         <div id="answer" class="empty">
           <div class="mark">Li</div>
           <h2>从可追溯证据开始</h2>
-          <div>先问一个材料计算问题。系统会检索论文、生成工作流，并把不能自动确定的参数明确留下。</div>
+          <div>这是可解释检索＋规则工作流：会展示查询扩展、命中理由和论文证据，并把不能自动确定的参数明确留下。</div>
         </div>
       </section>
 
       <aside class="panel">
         <div class="aside-head"><h2>论文证据库</h2><span class="count">点击查看数据卡</span></div>
-        <input id="filter" placeholder="筛选：LGPS、界面、CHGNet…" />
+        <input id="filter" placeholder="关键词，或 tag:DFT / type:方法论文" />
+        <div id="tagFilters" class="tag-filters">
+          <button class="filter-chip" type="button" data-tag="DFT">DFT</button>
+          <button class="filter-chip" type="button" data-tag="MD">MD</button>
+          <button class="filter-chip" type="button" data-tag="VASP">VASP</button>
+          <button class="filter-chip" type="button" data-tag="MS">MS</button>
+          <button class="filter-chip" type="button" data-tag="方法论文">方法论文</button>
+          <button class="filter-chip" type="button" data-tag="进展论文">进展论文</button>
+        </div>
+        <div class="filter-note">MS = BIOVIA Materials Studio；仅方法明确使用才标注。<span id="listCount"></span></div>
         <div id="paperList" class="paper-list"></div>
       </aside>
     </main>
@@ -212,7 +240,7 @@
     const localMode = ['127.0.0.1', 'localhost', '::1'].includes(location.hostname);
     const readStorage = (store, key) => { try { return store.getItem(key) || ''; } catch (_) { return ''; } };
     const state = {
-      papers: [], zotero: {}, literature: {}, methods: {},
+      papers: [], zotero: {}, literature: {}, methods: {}, paperTags: {}, searchConfig: {}, activeTag: '',
       apiBase: readStorage(localStorage, 'battery-agent-api-base'),
       apiToken: readStorage(sessionStorage, 'battery-agent-api-token'),
       backendConnected: localMode
@@ -287,13 +315,26 @@
       alert(`DOI 已复制：${doi}\n请在 WOS 基本检索中选择“DOI”字段后粘贴。`);
     }
     window.openWos = openWos;
+    function paperTagPills(p) {
+      return (p.display_tags || []).map(tag => {
+        const kind = ['方法论文','进展论文','综述'].includes(tag) ? 'kind' : 'method';
+        return `<span class="paper-tag ${kind}">${escapeHtml(tag)}</span>`;
+      }).join('');
+    }
     function paperCard(p) {
-      return `<article class="e-card"><span class="year">${p.year} · ${escapeHtml(p.journal)}</span><h4>${escapeHtml(p.role)}</h4><p>${escapeHtml(p.summary)}</p>${linkButtons(p)}</article>`;
+      return `<article class="e-card"><span class="year">${p.year} · ${escapeHtml(p.journal)}</span><div class="paper-tags">${paperTagPills(p)}</div><h4>${escapeHtml(p.role)}</h4><p>${escapeHtml(p.summary)}</p>${linkButtons(p)}</article>`;
     }
     function renderList(filter='') {
-      const q = filter.toLowerCase();
-      const papers = state.papers.filter(p => JSON.stringify(p).toLowerCase().includes(q));
-      document.querySelector('#paperList').innerHTML = papers.map(p => `<div class="paper" data-id="${escapeHtml(p.id)}"><span class="meta">${p.year} · ${escapeHtml(p.journal)}</span>${p.difficulty ? `<span class="level">${escapeHtml(p.difficulty)}</span>` : ''}<h3>${escapeHtml(p.title)}</h3><p>${escapeHtml(p.role)}</p></div>`).join('');
+      const typed = String(filter || '').trim();
+      const activeFilter = state.activeTag
+        ? `${['方法论文','进展论文'].includes(state.activeTag) ? 'type' : 'tag'}:${state.activeTag}`
+        : '';
+      const query = [typed, activeFilter].filter(Boolean).join(' ');
+      const papers = query
+        ? window.BatteryBrowserAgent.searchDetailed(query, state.papers, state.papers.length, state.searchConfig).results
+        : state.papers;
+      document.querySelector('#paperList').innerHTML = papers.map(p => `<div class="paper" data-id="${escapeHtml(p.id)}"><span class="meta">${p.year} · ${escapeHtml(p.journal)}</span>${p.difficulty ? `<span class="level">${escapeHtml(p.difficulty)}</span>` : ''}<div class="paper-tags">${paperTagPills(p)}</div><h3>${escapeHtml(p.title)}</h3><p>${escapeHtml(p.role)}</p></div>`).join('') || '<div class="notice">没有满足当前关键词和标签的论文。</div>';
+      document.querySelector('#listCount').textContent = `当前 ${papers.length}/${state.papers.length} 篇`;
       document.querySelectorAll('.paper').forEach(el => el.onclick = () => showPaper(el.dataset.id));
     }
     function showPaper(id) {
@@ -302,7 +343,7 @@
       const authorLine = authorNames.length > 12
         ? `${authorNames.slice(0, 12).join('；')}；等（共 ${authorNames.length} 位，完整名单见出版社页面）`
         : authorNames.join('；');
-      const tags = [...(p.tags_zh || []), ...(p.methods || [])].map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('');
+      const tags = [...(p.display_tags || []), ...(p.tags_zh || []), ...(p.methods || [])].map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('');
       const evidence = (p.evidence || []).map(e => `<li>${escapeHtml(e.claim)} <small>（${escapeHtml(e.basis)}；${escapeHtml(e.strength)}）</small></li>`).join('');
       const relations = (p.relations || []).map(r => `<div class="relation">${escapeHtml(r.source)} —[${escapeHtml(r.relation)}]→ ${escapeHtml(r.target)}</div>`).join('');
       const protocolSteps = (p.protocol_steps || []).map(step => `<li>${escapeHtml(step)}</li>`).join('');
@@ -339,11 +380,11 @@
           const response = await apiFetch('/api/chat', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({question})});
           data = await response.json();
         } catch (_) {
-          data = window.BatteryBrowserAgent.answer(question, state.papers);
+          data = window.BatteryBrowserAgent.answer(question, state.papers, state.searchConfig);
         }
         target.innerHTML = `<div class="notice">${escapeHtml(data.provenance.wos_note)}</div>${markdown(data.answer_markdown)}<div class="evidence-grid">${data.papers.map(paperCard).join('')}</div>`;
       } catch (error) { target.innerHTML = `<div class="notice">${escapeHtml(error.message)}</div>`; }
-      finally { btn.disabled = false; btn.textContent = '生成证据回答'; }
+      finally { btn.disabled = false; btn.textContent = '检索并生成回答'; }
     }
     function setServiceMessage(text, kind='') {
       const target = document.querySelector('#serviceMessage');
@@ -405,6 +446,11 @@
     document.querySelector('#question').addEventListener('keydown', e => { if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') ask(); });
     document.querySelectorAll('.chip').forEach(chip => chip.onclick = () => { document.querySelector('#question').value = chip.textContent; ask(); });
     document.querySelector('#filter').oninput = e => renderList(e.target.value);
+    document.querySelectorAll('.filter-chip').forEach(button => button.onclick = () => {
+      state.activeTag = state.activeTag === button.dataset.tag ? '' : button.dataset.tag;
+      document.querySelectorAll('.filter-chip').forEach(item => item.classList.toggle('active', item.dataset.tag === state.activeTag));
+      renderList(document.querySelector('#filter').value);
+    });
     document.querySelector('#close').onclick = () => document.querySelector('#modal').classList.remove('open');
     document.querySelector('#modal').onclick = e => { if (e.target.id === 'modal') e.currentTarget.classList.remove('open'); };
     document.querySelector('#openUpload').onclick = openUploadModal;
@@ -421,6 +467,18 @@
         state.papers = await fetch('./data/papers.json').then(r => r.json());
         state.backendConnected = localMode;
       }
+      try {
+        const tagPayload = hasBackend()
+          ? await apiFetch('/api/paper-tags', {cache:'no-store'}).then(r => r.json())
+          : await fetch('./data/paper_tags.json', {cache:'no-store'}).then(r => r.json());
+        state.paperTags = tagPayload.papers || {};
+      } catch (_) { state.paperTags = {}; }
+      state.papers = state.papers.map(p => ({...p, ...(state.paperTags[p.id] || {})}));
+      try {
+        state.searchConfig = hasBackend()
+          ? await apiFetch('/api/search-config', {cache:'no-store'}).then(r => r.json())
+          : await fetch('./data/search_config.json', {cache:'no-store'}).then(r => r.json());
+      } catch (_) { state.searchConfig = {}; }
       try {
         const zoteroPayload = localMode
           ? await apiFetch('/api/zotero-links', {cache:'no-store'}).then(r => r.json())
@@ -442,6 +500,12 @@
       document.querySelector('#paperCount').textContent = state.papers.length;
       const starterCount = state.papers.filter(p => p.collection === 'starter').length;
       document.querySelector('#starterStat').textContent = `方法路线 · ${starterCount} 篇`;
+      document.querySelectorAll('.filter-chip').forEach(button => {
+        const count = state.papers.filter(p => (p.display_tags || []).includes(button.dataset.tag)).length;
+        button.textContent = `${button.dataset.tag} · ${count}`;
+        button.disabled = count === 0;
+        button.title = count ? `筛选 ${button.dataset.tag}` : `当前库没有严格满足 ${button.dataset.tag} 定义的论文`;
+      });
       const zoteroRows = Object.values(state.zotero);
       document.querySelector('#zoteroStat').textContent = !localMode
         ? 'Zotero 深链 · 仅本机版显示'

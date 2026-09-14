@@ -16,11 +16,25 @@ from pathlib import Path
 from typing import Any
 
 from library_store import USER_PAPERS, load_library_papers
+from paper_tagging import attach_tags
 
 
 ROOT = Path(__file__).resolve().parent
 DEFAULT_DATA = ROOT / "data" / "papers.json"
 DEFAULT_FULLTEXT = ROOT / "data" / "fulltext_chunks.jsonl"
+DEFAULT_SEARCH_CONFIG = ROOT / "data" / "search_config.json"
+
+DEFAULT_SEARCH_WEIGHTS = {
+    "title": 6.0,
+    "role": 4.5,
+    "methods": 5.0,
+    "tags": 4.0,
+    "systems_properties": 2.5,
+    "summary_evidence": 1.5,
+    "phrase_bonus": 8.0,
+    "alias_factor": 0.65,
+    "doi_bonus": 50.0,
+}
 
 
 ALIASES = {
@@ -48,6 +62,11 @@ ALIASES = {
     "入门": ["starter", "protocol", "vaspkit", "pymatgen", "ase", "sumo", "lammps", "dscribe", "matbench"],
     "声子": ["phonon", "phonopy", "finite displacement", "force constants"],
     "后处理": ["post-processing", "vaspkit", "sumo", "band structure", "dos"],
+    "dft": ["density functional", "first-principles", "total energy"],
+    "vasp": ["incar", "kpoints", "potcar", "plane-wave"],
+    "aimd": ["ab initio molecular dynamics", "molecular dynamics", "msd", "diffusion"],
+    "md": ["molecular dynamics", "trajectory", "msd"],
+    "ms": ["materials studio"],
 }
 
 TOKEN_RE = re.compile(r"[a-zA-Z][a-zA-Z0-9+_.:/-]*|\d+(?:\.\d+)?|[\u4e00-\u9fff]{2,}")
@@ -65,18 +84,31 @@ def _flatten(value: Any) -> str:
     return str(value)
 
 
+def _triggered(text: str, trigger: str) -> bool:
+    """Match Chinese aliases as substrings and short ASCII aliases as words."""
+    if trigger.isascii():
+        return bool(re.search(rf"(?<![a-z0-9]){re.escape(trigger)}(?![a-z0-9])", text, re.I))
+    return trigger in text
+
+
 class BatteryResearchAgent:
     def __init__(
         self,
         data_path: str | Path = DEFAULT_DATA,
         fulltext_path: str | Path | None = DEFAULT_FULLTEXT,
         extra_data_path: str | Path | None = USER_PAPERS,
+        search_config_path: str | Path | None = DEFAULT_SEARCH_CONFIG,
+        search_weights: dict[str, float] | None = None,
     ):
         self.data_path = Path(data_path)
         self.extra_data_path = Path(extra_data_path) if extra_data_path else None
-        self.papers: list[dict[str, Any]] = load_library_papers(
-            self.data_path, self.extra_data_path
+        self.search_config_path = Path(search_config_path) if search_config_path else None
+        self.papers: list[dict[str, Any]] = attach_tags(
+            load_library_papers(self.data_path, self.extra_data_path)
         )
+        self.search_config = self._load_search_config(search_weights)
+        self.search_weights = self.search_config["weights"]
+        self._search_fields = [self._paper_search_fields(paper) for paper in self.papers]
         self._documents = [_flatten(paper).lower() for paper in self.papers]
         self._doc_tokens = [Counter(_tokens(document)) for document in self._documents]
         self._idf = self._build_idf()
@@ -87,7 +119,53 @@ class BatteryResearchAgent:
 
     def reload(self) -> None:
         """Reload paper metadata and the full-text index after local ingestion."""
-        self.__init__(self.data_path, self.fulltext_path, self.extra_data_path)
+        self.__init__(
+            self.data_path,
+            self.fulltext_path,
+            self.extra_data_path,
+            self.search_config_path,
+        )
+
+    def _load_search_config(self, override: dict[str, float] | None) -> dict[str, Any]:
+        payload: dict[str, Any] = {}
+        if self.search_config_path and self.search_config_path.exists():
+            try:
+                raw = json.loads(self.search_config_path.read_text(encoding="utf-8"))
+                if isinstance(raw, dict):
+                    payload = raw
+            except (OSError, json.JSONDecodeError):
+                payload = {}
+        weights = {**DEFAULT_SEARCH_WEIGHTS, **payload.get("weights", {})}
+        if override:
+            weights.update(override)
+        return {
+            **payload,
+            "schema_version": payload.get("schema_version", 1),
+            "mode": "explainable_weighted_retrieval",
+            "weights": weights,
+        }
+
+    @staticmethod
+    def _paper_search_fields(paper: dict[str, Any]) -> dict[str, str]:
+        return {
+            "title": _flatten(paper.get("title", "")).lower(),
+            "role": _flatten(paper.get("role", "")).lower(),
+            "methods": _flatten(paper.get("methods", [])).lower(),
+            "tags": _flatten(
+                [paper.get("tags_zh", []), paper.get("display_tags", [])]
+            ).lower(),
+            "systems_properties": _flatten(
+                [paper.get("systems", []), paper.get("properties", [])]
+            ).lower(),
+            "summary_evidence": _flatten(
+                [
+                    paper.get("summary", ""),
+                    paper.get("evidence", []),
+                    paper.get("protocol_steps", []),
+                    paper.get("scope_note", ""),
+                ]
+            ).lower(),
+        }
 
     def _build_idf(self) -> dict[str, float]:
         return self._build_idf_for(self._doc_tokens)
@@ -115,36 +193,111 @@ class BatteryResearchAgent:
                 rows.append(row)
         return rows
 
-    def _expanded_query(self, question: str) -> str:
+    def _expanded_query_parts(self, question: str) -> tuple[str, list[str]]:
         expanded = [question]
+        added: list[str] = []
         lowered = question.lower()
-        for trigger, additions in ALIASES.items():
-            if trigger in lowered:
-                expanded.extend(additions)
-        return " ".join(expanded)
+        for trigger, terms in ALIASES.items():
+            if _triggered(lowered, trigger):
+                expanded.extend(terms)
+                added.extend(terms)
+        return " ".join(expanded), list(dict.fromkeys(added))
+
+    def _expanded_query(self, question: str) -> str:
+        return self._expanded_query_parts(question)[0]
+
+    @staticmethod
+    def _parse_filters(query: str) -> tuple[str, dict[str, list[str]]]:
+        tag_filters = re.findall(r"(?:tag|标签)\s*[:：]\s*(MS|DFT|MD|VASP)\b", query, re.I)
+        kind_filters = re.findall(r"(?:type|类型)\s*[:：]\s*(方法论文|进展论文|综述)", query, re.I)
+        clean = re.sub(r"(?:tag|标签)\s*[:：]\s*(?:MS|DFT|MD|VASP)\b", " ", query, flags=re.I)
+        clean = re.sub(r"(?:type|类型)\s*[:：]\s*(?:方法论文|进展论文|综述)", " ", clean, flags=re.I)
+        return re.sub(r"\s+", " ", clean).strip(), {
+            "tags": list(dict.fromkeys(tag.upper() for tag in tag_filters)),
+            "types": list(dict.fromkeys(kind_filters)),
+        }
+
+    def search_detailed(self, query: str, limit: int = 5) -> dict[str, Any]:
+        clean_query, filters = self._parse_filters(query)
+        expanded, alias_terms = self._expanded_query_parts(clean_query)
+        original_tokens = set(_tokens(clean_query))
+        expanded_tokens = Counter(_tokens(expanded))
+        weights = self.search_weights
+        scored: list[tuple[float, dict[str, Any]]] = []
+        for paper, fields in zip(self.papers, self._search_fields):
+            display_tags = set(paper.get("display_tags", []))
+            if filters["tags"] and not all(tag in display_tags for tag in filters["tags"]):
+                continue
+            if filters["types"] and not all(tag in display_tags for tag in filters["types"]):
+                continue
+            score = 0.001 if any(filters.values()) else 0.0
+            hits: dict[str, list[str]] = {}
+            for field, document in fields.items():
+                field_hits: list[str] = []
+                field_weight = float(weights.get(field, 1.0))
+                token_counts = Counter(_tokens(document))
+                for token, q_count in expanded_tokens.items():
+                    frequency = token_counts.get(token, 0)
+                    if not frequency:
+                        continue
+                    factor = 1.0 if token in original_tokens else float(weights.get("alias_factor", 0.65))
+                    score += field_weight * factor * (1 + math.log(frequency)) * self._idf.get(token, 1.0) * q_count
+                    field_hits.append(token)
+                # Multi-word alias phrases carry meaning that token matching can dilute.
+                for phrase in alias_terms:
+                    if " " in phrase and phrase in document:
+                        score += field_weight * float(weights.get("alias_factor", 0.65))
+                        field_hits.append(phrase)
+                if field_hits:
+                    hits[field] = list(dict.fromkeys(field_hits))[:8]
+            lowered_doc = " ".join(fields.values())
+            if clean_query and clean_query.lower() in lowered_doc:
+                score += float(weights.get("phrase_bonus", 8.0))
+            doi = str(paper.get("doi", "")).lower()
+            if doi and doi in query.lower():
+                score += float(weights.get("doi_bonus", 50.0))
+                hits["doi"] = [doi]
+            if score <= 0:
+                continue
+            matched_terms = list(dict.fromkeys(term for terms in hits.values() for term in terms))[:8]
+            field_labels = {
+                "title": "标题", "role": "定位", "methods": "方法", "tags": "标签",
+                "systems_properties": "体系/性质", "summary_evidence": "摘要/证据", "doi": "DOI",
+            }
+            matched_fields = [field_labels.get(field, field) for field in hits]
+            reason_parts = []
+            if filters["tags"]:
+                reason_parts.append("满足标签 " + "/".join(filters["tags"]))
+            if filters["types"]:
+                reason_parts.append("满足类型 " + "/".join(filters["types"]))
+            if matched_fields:
+                reason_parts.append("命中" + "、".join(matched_fields))
+            if matched_terms:
+                reason_parts.append("关键词：" + " / ".join(matched_terms[:5]))
+            enriched = {
+                **paper,
+                "retrieval": {
+                    "score": round(score, 4),
+                    "matched_terms": matched_terms,
+                    "matched_fields": matched_fields,
+                    "reason": "；".join(reason_parts) or "满足筛选条件",
+                },
+            }
+            scored.append((score, enriched))
+        scored.sort(key=lambda row: (row[0], row[1].get("year", 0)), reverse=True)
+        return {
+            "results": [paper for _, paper in scored[:limit]],
+            "query": {
+                "original": query,
+                "clean": clean_query,
+                "expanded_terms": alias_terms,
+                "filters": filters,
+                "mode": self.search_config.get("mode", "explainable_weighted_retrieval"),
+            },
+        }
 
     def search(self, query: str, limit: int = 5) -> list[dict[str, Any]]:
-        expanded = self._expanded_query(query)
-        query_tokens = Counter(_tokens(expanded))
-        lowered = expanded.lower()
-        scored: list[tuple[float, dict[str, Any]]] = []
-        for paper, document, token_counts in zip(self.papers, self._documents, self._doc_tokens):
-            score = 0.0
-            for token, q_count in query_tokens.items():
-                if token in token_counts:
-                    score += (1 + math.log(token_counts[token])) * self._idf.get(token, 1.0) * q_count
-            for phrase in ALIASES.values():
-                for item in phrase:
-                    if item in lowered and item in document:
-                        score += 1.3
-            if str(paper.get("doi", "")).lower() in lowered:
-                score += 50
-            if score > 0:
-                scored.append((score, paper))
-        scored.sort(key=lambda row: (row[0], row[1].get("year", 0)), reverse=True)
-        if not scored:
-            return sorted(self.papers, key=lambda p: p.get("year", 0), reverse=True)[:limit]
-        return [paper for _, paper in scored[:limit]]
+        return self.search_detailed(query, limit)["results"]
 
     @staticmethod
     def _short_excerpt(text: str, query_tokens: set[str], max_words: int = 24) -> str:
@@ -218,6 +371,7 @@ class BatteryResearchAgent:
             ("diffusion", ["扩散", "迁移", "势垒", "neb", "aimd", "msd", "电导率"]),
             ("voltage", ["电压", "容量", "嵌锂", "脱锂", "开路"]),
             ("stability", ["稳定性", "相图", "凸包", "分解", "电化学窗口"]),
+            ("dft_setup", ["dft", "vasp", "incar", "kpoints", "potcar", "截断能", "k点", "赝势", "第一性原理"]),
             ("screening", ["筛选", "高通量", "候选", "数据库"]),
         ]
         for name, words in rules:
@@ -271,6 +425,13 @@ class BatteryResearchAgent:
                 "除MAE外验证RDF、声子/弹性、缺陷能、NEB势垒、扩散系数与崩溃测试。",
                 "只有通过目标性质验证后才进行大体系长时间MLMD，并保留超出适用域的报警阈值。",
             ],
+            "dft_setup": [
+                "先用原始晶胞完成赝势、ENCUT、k点、展宽方法与电子收敛测试，并记录总能和目标性质的共同收敛。",
+                "再确定磁性初态、DFT+U、范德华修正与自旋轨道耦合；这些选择必须由元素价态和目标性质驱动。",
+                "按“弛豫→高精度静态计算→性质后处理”分开设置任务，避免直接用弛豫精度解释能带、态密度或微小能差。",
+                "用 VASPKIT、pymatgen 或 sumo 做后处理时保留原始 VASP 输出，并检查软件版本、路径和单位约定。",
+                "最后用已知材料或文献基准验证晶格常数、磁矩、能隙/电压等目标量，再迁移到新体系。",
+            ],
         }
         checks = {
             "voltage": ["能量/原子与力收敛", "磁序和U值敏感性", "凸包端点正确", "参比相一致"],
@@ -279,6 +440,7 @@ class BatteryResearchAgent:
             "stability": ["竞争相完整", "数据库版本一致", "零温近似说明", "动力学/热力学区分"],
             "screening": ["数据去重", "分组外推测试", "不确定性", "负样本", "最终DFT复核"],
             "mlp": ["OOD检测", "能量/力/应力", "目标性质", "长时稳定性", "主动学习停止准则"],
+            "dft_setup": ["ENCUT/k点收敛", "赝势一致", "磁序/U值", "静态与弛豫分离", "原始输出可追溯"],
         }
         return {"task": task, "steps": common + specific[task], "checks": checks[task]}
 
@@ -300,7 +462,8 @@ class BatteryResearchAgent:
         question = question.strip()
         if not question:
             question = "电池材料计算有哪些核心任务？"
-        papers = self.search(question, limit=limit)
+        retrieval = self.search_detailed(question, limit=limit)
+        papers = retrieval["results"]
         fulltext_hits = self.search_fulltext(question, limit=min(limit + 1, 8))
         task = self._task_type(question)
         wants_plan = any(word in question.lower() for word in ["怎么", "如何", "方案", "路线", "流程", "计划", "workflow", "复现"])
@@ -313,10 +476,29 @@ class BatteryResearchAgent:
             "stability": "稳定性至少分为体相、相对竞争相、电化学窗口和界面反应四层，不能用单一形成能替代。",
             "screening": "高通量最有效的做法是分层筛选：便宜指标先缩小空间，昂贵DFT动力学最后验证。",
             "mlp": "机器学习势的价值是把DFT精度近似扩展到更大体系和更长时间，但适用域验证比模型名称更重要。",
+            "dft_setup": "VASP/DFT 入门应先建立一套可复现的收敛与验证流程，再计算电压、扩散或界面；软件参数不能脱离材料和目标性质单独照抄。",
         }[task]
 
-        lines = ["### 结论", "", lead]
-        if wants_compare and len(papers) >= 2:
+        query_info = retrieval["query"]
+        intent = "工作流" if wants_plan else "对比" if wants_compare else "证据检索"
+        filter_labels = query_info["filters"]["tags"] + query_info["filters"]["types"]
+        lines = [
+            "### 检索理解",
+            "",
+            f"- **意图**：{intent}；**任务**：{task}。",
+            f"- **查询扩展**：{' / '.join(query_info['expanded_terms'][:8]) if query_info['expanded_terms'] else '无'}。",
+            f"- **显式筛选**：{' / '.join(filter_labels) if filter_labels else '无'}。",
+            "",
+            "### 结论",
+            "",
+            lead,
+        ]
+        if not papers:
+            lines += [
+                "",
+                "当前证据库没有达到最低匹配条件的论文，因此不自动拿最新论文填充答案。请增加“材料＋任务＋方法＋输出量”，例如“LGPS＋锂扩散＋AIMD＋扩散系数”，或使用 `tag:DFT`、`tag:MD`、`tag:VASP`、`type:方法论文` 缩小范围。",
+            ]
+        elif wants_compare and len(papers) >= 2:
             lines += ["", "### 对比抓手", ""]
             for index, paper in enumerate(papers[:3], 1):
                 lines.append(f"- **{paper['role']}**：{paper['summary']} 〔{index}〕")
@@ -332,8 +514,12 @@ class BatteryResearchAgent:
                 claim = paper.get("evidence", [{}])[0].get("claim", paper["summary"])
                 lines.append(f"- **〔{index}〕{paper['role']}**：{claim}")
 
-        lines += ["", "### 证据来源", ""]
-        lines.extend(f"- {self.citation(paper, index)}" for index, paper in enumerate(papers, 1))
+        if papers:
+            lines += ["", "### 为什么命中", ""]
+            for index, paper in enumerate(papers, 1):
+                lines.append(f"- **〔{index}〕{paper['title']}**：{paper['retrieval']['reason']}（分数 {paper['retrieval']['score']}）。")
+            lines += ["", "### 证据来源", ""]
+            lines.extend(f"- {self.citation(paper, index)}" for index, paper in enumerate(papers, 1))
         if fulltext_hits:
             lines += ["", "### 本地全文命中（用于回到原文核对）", ""]
             for hit in fulltext_hits:
@@ -357,6 +543,7 @@ class BatteryResearchAgent:
             "workflow": self.workflow(question) if wants_plan else None,
             "graph": self.graph(papers),
             "fulltext_hits": fulltext_hits,
+            "retrieval": query_info,
             "provenance": {
                 "data_file": str(self.data_path),
                 "paper_count": len(self.papers),

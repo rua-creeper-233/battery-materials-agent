@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "description": "Small human-labelled retrieval set. It tunes ranking weights; it is not LLM fine-tuning.",
+  "examples": [
+    {"query": "VASP 入门 后处理", "relevant": ["geng2025_vaspkit_protocol", "wang2021_vaspkit", "ganose2018_sumo", "ong2013_pymatgen"]},
+    {"query": "固态电解质 AIMD 锂扩散系数", "relevant": ["mo2012_lgps_aimd", "baktash2020_argyrodite_aimd", "ong2013_lgps", "he2018_aimd_statistics"]},
+    {"query": "DFT+U 正极平均电压", "relevant": ["aydinol1997_voltage", "zhou2004_dftu_voltage", "urban2016_computational_review"]},
+    {"query": "NEB 锂离子迁移势垒", "relevant": ["henkelman2000_cineb", "smidstrup2014_idpp", "vanderven2001_diffusion", "persson2010_graphite"]},
+    {"query": "机器学习势 固态电解质", "relevant": ["sawada2024_nnp_sse", "chen2022_m3gnet", "deng2023_chgnet"]},
+    {"query": "MACE 微调 不确定性", "relevant": ["radova2025_frozen_transfer", "bilbrey2025_uq", "batatia2025_mace_mp"]},
+    {"query": "高通量 电池材料筛选", "relevant": ["sendek2017_sse_screening", "jain2013_materials_project", "ganose2025_atomate2", "dunn2020_matbench"]},
+    {"query": "缺陷形成能 固态电解质", "relevant": ["shi2013_sei_li2co3", "shen2024_pymatgen_defects"]},
+    {"query": "界面 SEI AIMD", "relevant": ["leung2010_sei_aimd", "shi2013_sei_li2co3", "urban2016_computational_review"]},
+    {"query": "声子 热力学 VASP", "relevant": ["togo2015_phonopy", "ganose2025_atomate2", "ganose2018_sumo"]},
+    {"query": "type:方法论文 DP-GEN DeepMD", "relevant": ["zhang2020_dpgen", "wang2018_deepmdkit"]},
+    {"query": "tag:VASP 入门", "relevant": ["geng2025_vaspkit_protocol", "wang2021_vaspkit", "ong2013_pymatgen", "ganose2025_atomate2", "ganose2018_sumo"]},
+    {"query": "tag:MD 锂扩散", "relevant": ["mo2012_lgps_aimd", "baktash2020_argyrodite_aimd", "leung2010_sei_aimd", "he2018_aimd_statistics"]},
+    {"query": "电池信息学综述", "relevant": ["ling2022_battery_informatics"]}
+  ]
+}
