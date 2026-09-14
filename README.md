@@ -4,8 +4,8 @@
 
 ## 当前可用能力
 
-- 证据库共 40 篇：16 篇核心论文完成 DOI 与 WOS Core Collection 核验，另有 24 篇方法路线论文完成 DOI 与出版社记录核验；
-- 39/40 篇已有用户合法取得或公开可访问的本地正文，共 2281 个带页码文本块；仅 Nature Protocols 的 VASPKIT 2025 论文仍明确标记为全文待获取；
+- 证据库共 43 篇：16 篇核心论文完成 DOI 与 WOS Core Collection 核验，另有 27 篇方法路线论文完成 DOI 与出版社记录核验；
+- 42/43 篇已有用户合法取得或公开可访问的本地正文，共 2682 个带页码文本块；仅 Nature Protocols 的 VASPKIT 2025 论文仍明确标记为全文待获取；
 - 中文检索电压、稳定性、扩散、固态电解质、界面、高通量和机器学习势；
 - 回答中给出论文级证据、DOI、精确 WOS 记录和本地全文页码；
 - 为 DFT / NEB / AIMD / MLIP 任务生成带质量控制项的工作流；
@@ -67,7 +67,15 @@ python .\audit_library.py
 python .\extract_method_evidence.py
 ```
 
-当前结果包含 128 条信号，覆盖其中 15 篇本地正文。程序会排除参考文献区，并限制每篇每类最多 3 条；所有结果都标为 `auto_extracted_needs_human_review`。页面中的参数只能帮助你快速跳到原文，不能直接作为 VASP、NEB、AIMD 或 MLIP 的最终设置。
+方法信号数与覆盖篇数以 [METHOD_EVIDENCE_AUDIT.md](METHOD_EVIDENCE_AUDIT.md) 为准，新增正文后必须重新抽取。程序排除参考文献区及不属于公开精选库的私有论文，并限制每篇每类最多 3 条；所有结果都标为 `auto_extracted_needs_human_review`。页面中的参数只能帮助你快速跳到原文，不能直接作为 VASP、NEB、AIMD 或 MLIP 的最终设置。
+
+## 2026-09-14 新版
+
+新增 MACE-MP-0（正式发表版2025）、冻结层迁移学习、不确定性量化三篇方法论文。新卡片提供“适用范围与迁移边界”和“代码、数据与复现入口”，并区分原文体系与迁移到电池的建议步骤。
+
+导出全库书目供 Zotero 导入：`python export_ris.py --all-curated`。输出为 `exports/battery_materials_all_curated.ris`，只有实际存在 WOS UT 的16篇会标注WOS核验，其余保留DOI/出版社核验状态。导出不会自动写入Zotero，不含PDF。
+
+前端方法卡回归检查：`node tests/test_learning_ui.mjs`。Python回归检查：`python -m unittest discover -s tests`。
 
 ## 入门方法论文集
 

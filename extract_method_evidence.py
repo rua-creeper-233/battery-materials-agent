@@ -108,10 +108,11 @@ def extract(
     # User-uploaded papers stay in private/user-papers.local.json and are never
     # copied into the GitHub Pages bundle.
     papers = json.loads(papers_path.read_text(encoding="utf-8"))
+    curated_ids = {paper["id"] for paper in papers}
     chunks = load_jsonl(fulltext_path)
     chunks_by_paper: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for chunk in chunks:
-        if chunk.get("section") == "body":
+        if chunk.get("section") == "body" and chunk.get("paper_id") in curated_ids:
             chunks_by_paper[chunk["paper_id"]].append(chunk)
     fulltext_paper_ids = sorted(chunks_by_paper)
 

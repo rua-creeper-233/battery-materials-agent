@@ -1230,5 +1230,318 @@
       {"source": "defect energetics", "relation": "determine", "target": "charge stability and concentration"}
     ],
     "verification": {"publisher": "verified_2026-09-13", "doi": "verified_crossref_2026-09-13", "wos": "not_checked"}
+  },
+  {
+    "id": "batatia2025_mace_mp",
+    "doi": "10.1063/5.0297006",
+    "title": "A foundation model for atomistic materials chemistry",
+    "role": "从预训练MACE势出发开展材料模拟和目标体系验证",
+    "difficulty": "入门进阶",
+    "systems": [
+      "materials chemistry",
+      "solids",
+      "liquids",
+      "interfaces"
+    ],
+    "methods": [
+      "MACE-MP-0",
+      "machine learning interatomic potential",
+      "molecular dynamics",
+      "fine-tuning"
+    ],
+    "properties": [
+      "energy",
+      "forces",
+      "structure",
+      "dynamics"
+    ],
+    "tags_zh": [
+      "机器学习势",
+      "MACE",
+      "分子动力学",
+      "预训练",
+      "电池材料",
+      "适用域"
+    ],
+    "summary": "MACE-MP-0为多种原子体系提供预训练势起点。适合练习推理、弛豫和短MD；在特定电池体系上的定量可靠性仍需DFT和目标物性验证。",
+    "scope_note": "通用原子模拟方法论文，不是任意电池电压、扩散或寿命预测的现成保证。预印本与正式发表版可能有差异。",
+    "protocol_steps": [
+      "从作者仓库固定模型、软件版本与权重校验值，先运行已有小体系示例。",
+      "用ASE读取结构并计算能量和力，核对单位、周期边界与原子序数。",
+      "对同一结构进行弛豫和短时间MD，记录时间步、温控、能量漂移及异常近邻。",
+      "在自选电池体系上准备独立DFT构型，比较能量、力以及目标物性，不把示例成功当作泛化证明。",
+      "验证不足时补充目标域数据再微调，保留独立测试集与原模型基线。"
+    ],
+    "resources": [
+      {
+        "label": "作者预印本与全文",
+        "url": "https://arxiv.org/abs/2401.00096"
+      }
+    ],
+    "authors": [
+      "Ilyes Batatia",
+      "Philipp Benner",
+      "Yuan Chiang",
+      "Alin M. Elena",
+      "Dávid P. Kovács",
+      "Janosh Riebesell",
+      "Xavier R. Advincula",
+      "Mark Asta",
+      "Matthew Avaylon",
+      "William J. Baldwin",
+      "Fabian Berger",
+      "Noam Bernstein",
+      "Arghya Bhowmik",
+      "Filippo Bigi",
+      "Samuel M. Blau",
+      "Vlad Cărare",
+      "Michele Ceriotti",
+      "Sanggyu Chong",
+      "James P. Darby",
+      "Sandip De",
+      "Flaviano Della Pia",
+      "Volker L. Deringer",
+      "Rokas Elijošius",
+      "Zakariya El-Machachi",
+      "Edvin Fako",
+      "Fabio Falcioni",
+      "Andrea C. Ferrari",
+      "John L. A. Gardner",
+      "Mikołaj J. Gawkowski",
+      "Annalena Genreith-Schriever",
+      "Janine George",
+      "Rhys E. A. Goodall",
+      "Jonas Grandel",
+      "Clare P. Grey",
+      "Petr Grigorev",
+      "Shuang Han",
+      "Will Handley",
+      "Hendrik H. Heenen",
+      "Kersti Hermansson",
+      "Cheuk Hin Ho",
+      "Stephan Hofmann",
+      "Christian Holm",
+      "Jad Jaafar",
+      "Konstantin S. Jakob",
+      "Hyunwook Jung",
+      "Venkat Kapil",
+      "Aaron D. Kaplan",
+      "Nima Karimitari",
+      "James R. Kermode",
+      "Panagiotis Kourtis",
+      "Namu Kroupa",
+      "Jolla Kullgren",
+      "Matthew C. Kuner",
+      "Domantas Kuryla",
+      "Guoda Liepuoniute",
+      "Chen Lin",
+      "Johannes T. Margraf",
+      "Ioan-Bogdan Magdău",
+      "Angelos Michaelides",
+      "J. Harry Moore",
+      "Aakash A. Naik",
+      "Samuel P. Niblett",
+      "Sam Walton Norwood",
+      "Niamh O’Neill",
+      "Christoph Ortner",
+      "Kristin A. Persson",
+      "Karsten Reuter",
+      "Andrew S. Rosen",
+      "Louise A. M. Rosset",
+      "Lars L. Schaaf",
+      "Christoph Schran",
+      "Benjamin X. Shi",
+      "Eric Sivonxay",
+      "Tamás K. Stenczel",
+      "Christopher Sutton",
+      "Viktor Svahn",
+      "Thomas D. Swinburne",
+      "Jules Tilly",
+      "Cas van der Oord",
+      "Santiago Vargas",
+      "Eszter Varga-Umbrich",
+      "Tejs Vegge",
+      "Martin Vondrák",
+      "Yangshuai Wang",
+      "William C. Witt",
+      "Thomas Wolf",
+      "Fabian Zills",
+      "Gábor Csányi"
+    ],
+    "year": 2025,
+    "journal": "The Journal of Chemical Physics",
+    "document_type": "Article",
+    "url": "https://doi.org/10.1063/5.0297006",
+    "collection": "starter",
+    "evidence": [
+      {
+        "claim": "MACE-MP-0为多种原子体系提供预训练势起点。适合练习推理、弛豫和短MD；在特定电池体系上的定量可靠性仍需DFT和目标物性验证。",
+        "basis": "出版社/作者摘要；适用范围说明为本库整理",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "verification": {
+      "doi": "verified_crossref_2026-09-14",
+      "publisher": "verified_2026-09-14",
+      "wos": "not_checked",
+      "sources": [
+        "https://api.crossref.org/works/10.1063/5.0297006",
+        "https://doi.org/10.1063/5.0297006"
+      ]
+    }
+  },
+  {
+    "id": "radova2025_frozen_transfer",
+    "doi": "10.1038/s41524-025-01727-x",
+    "title": "Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning",
+    "role": "练习少量DFT数据微调，比较冻结层与从头训练",
+    "difficulty": "进阶",
+    "systems": [
+      "hydrogen on copper surfaces",
+      "Ti-Al-V alloys"
+    ],
+    "methods": [
+      "MACE-freeze",
+      "frozen transfer learning",
+      "ACE",
+      "machine learning interatomic potential"
+    ],
+    "properties": [
+      "energy",
+      "forces",
+      "reaction barrier",
+      "elastic properties"
+    ],
+    "tags_zh": [
+      "迁移学习",
+      "冻结层",
+      "小数据",
+      "机器学习势",
+      "学习曲线",
+      "DFT"
+    ],
+    "summary": "论文以氢/铜表面和三元合金展示冻结部分参数的迁移学习流程，适合设计小数据对照实验。不能把论文中特定体系的数据效率结论直接套用到锂电材料。",
+    "scope_note": "原文案例为表面反应与合金，不是电池。以下为基于论文范围整理的学习路线，电池迁移需重新验证。",
+    "protocol_steps": [
+      "从论文Code/Data availability获取代码与原始数据，固定版本并读取数据划分说明。",
+      "先复现一个原文小数据子集，核对能量、力、应力单位与DFT参考方法。",
+      "固定测试集，分别训练原模型基线、从头训练、全量微调与冻结层微调。",
+      "画不同数据量下的能量/力误差和目标物性曲线，禁止利用测试集选择冻结层数。",
+      "迁移到电池体系时重新采样缺陷、温度和非平衡构型，验证势垒及MD稳定性。"
+    ],
+    "resources": [
+      {
+        "label": "出版社全文、代码与数据入口",
+        "url": "https://www.nature.com/articles/s41524-025-01727-x"
+      }
+    ],
+    "authors": [
+      "Mariia Radova",
+      "Wojciech G. Stark",
+      "Connor S. Allen",
+      "Reinhard J. Maurer",
+      "Albert P. Bartók"
+    ],
+    "year": 2025,
+    "journal": "npj Computational Materials",
+    "document_type": "Article",
+    "url": "https://doi.org/10.1038/s41524-025-01727-x",
+    "collection": "starter",
+    "evidence": [
+      {
+        "claim": "论文以氢/铜表面和三元合金展示冻结部分参数的迁移学习流程，适合设计小数据对照实验。不能把论文中特定体系的数据效率结论直接套用到锂电材料。",
+        "basis": "出版社/作者摘要；适用范围说明为本库整理",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "verification": {
+      "doi": "verified_crossref_2026-09-14",
+      "publisher": "verified_2026-09-14",
+      "wos": "not_checked",
+      "sources": [
+        "https://api.crossref.org/works/10.1038/s41524-025-01727-x",
+        "https://doi.org/10.1038/s41524-025-01727-x"
+      ]
+    }
+  },
+  {
+    "id": "bilbrey2025_uq",
+    "doi": "10.1038/s41524-025-01572-y",
+    "title": "Uncertainty quantification for neural network potential foundation models",
+    "role": "检查机器学习势是否过度自信，为主动学习选择补算构型",
+    "difficulty": "进阶",
+    "systems": [
+      "MPtrj",
+      "high entropy alloys",
+      "hydrated zeolites"
+    ],
+    "methods": [
+      "MACE-MP-0",
+      "readout ensemble",
+      "quantile regression",
+      "uncertainty quantification"
+    ],
+    "properties": [
+      "energy uncertainty",
+      "prediction error",
+      "interval coverage"
+    ],
+    "tags_zh": [
+      "不确定性",
+      "校准",
+      "主动学习",
+      "机器学习势",
+      "分布外",
+      "MACE"
+    ],
+    "summary": "比较读出层集成和分位数回归两类不确定性方法，强调不确定性与实际预测误差不能混为一谈。适合为MLMD补充风险识别与校准实验。",
+    "scope_note": "原文基准不是锂电池。不确定性小不代表预测一定正确，需用独立DFT误差检查覆盖率和过度自信。",
+    "protocol_steps": [
+      "读取作者SNAP代码及数据说明，先复现原文模型设置和一个公开基准。",
+      "把训练、校准和最终测试数据分开，避免轨迹相邻帧泄漏。",
+      "运行读出层集成与分位数模型，对同一测试集保存预测及区间。",
+      "比较误差与不确定性关系、区间覆盖率和分布外失效案例，不只展示平均误差。",
+      "在电池MLMD中把高风险构型列为DFT补算候选，校准阈值后再接入主动学习。"
+    ],
+    "resources": [
+      {
+        "label": "作者代码 SNAP",
+        "url": "https://github.com/pnnl/SNAP"
+      },
+      {
+        "label": "论文与数据来源说明",
+        "url": "https://www.nature.com/articles/s41524-025-01572-y"
+      }
+    ],
+    "authors": [
+      "Jenna A. Bilbrey",
+      "Jesun S. Firoz",
+      "Mal-Soon Lee",
+      "Sutanay Choudhury"
+    ],
+    "year": 2025,
+    "journal": "npj Computational Materials",
+    "document_type": "Article",
+    "url": "https://doi.org/10.1038/s41524-025-01572-y",
+    "collection": "starter",
+    "evidence": [
+      {
+        "claim": "比较读出层集成和分位数回归两类不确定性方法，强调不确定性与实际预测误差不能混为一谈。适合为MLMD补充风险识别与校准实验。",
+        "basis": "出版社/作者摘要；适用范围说明为本库整理",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "verification": {
+      "doi": "verified_crossref_2026-09-14",
+      "publisher": "verified_2026-09-14",
+      "wos": "not_checked",
+      "sources": [
+        "https://api.crossref.org/works/10.1038/s41524-025-01572-y",
+        "https://doi.org/10.1038/s41524-025-01572-y"
+      ]
+    }
   }
 ]

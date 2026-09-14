@@ -1,8 +1,18 @@
-# 40 篇论文真实性与分级核验
+# 43 篇论文真实性与分级核验
 
-核验日期：2026-09-13
+核验日期：2026-09-14（新增3篇；既有40篇保留原核验记录）
 
-结论：当前 40 条均已核对 DOI 与出版社/正式期刊记录。原有 16 篇核心论文还在华南师范大学机构会话下以 DOI 精确检索过 Web of Science Core Collection，并取得 16/16 个唯一 UT；其余 24 篇方法路线论文没有冒充为 WOS 已核验，状态明确记录为 `not_checked`。这里的书目核验不代表出版社 PDF 都可无条件下载。
+结论：当前 43 条均已核对 DOI 与出版社/正式期刊记录。原有 16 篇核心论文还在华南师范大学机构会话下以 DOI 精确检索过 Web of Science Core Collection，并取得 16/16 个唯一 UT；其余 27 篇方法路线论文没有冒充为 WOS 已核验，状态明确记录为 `not_checked`。这里的书目核验不代表出版社 PDF 都可无条件下载。
+
+## 2026-09-14 新增：预训练、微调和不确定性
+
+| 论文 | DOI / 正式记录 | 学习用途 |
+|---|---|---|
+| Batatia et al., 2025. A foundation model for atomistic materials chemistry | [JCP](https://doi.org/10.1063/5.0297006)，[作者预印本](https://arxiv.org/abs/2401.00096) | MACE-MP-0推理、MD与目标域验证 |
+| Radova et al., 2025. Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning | [出版社](https://www.nature.com/articles/s41524-025-01727-x) | 小数据、冻结层、学习曲线对照 |
+| Bilbrey et al., 2025. Uncertainty quantification for neural network potential foundation models | [出版社](https://www.nature.com/articles/s41524-025-01572-y)，[作者代码](https://github.com/pnnl/SNAP) | 不确定性校准、过度自信与主动学习 |
+
+新增三篇均逐项对照Crossref的题名、完整作者名单、年份、期刊和DOI。方法卡中的复现步骤为本库整理，不是已执行的复现结果。后两篇的原文案例不是锂电池，不把跨体系迁移当成已经验证的结论。
 
 ## 核心论文：16 篇 DOI＋WOS UT 已核验
 

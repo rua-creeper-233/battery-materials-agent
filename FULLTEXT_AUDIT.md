@@ -1,8 +1,8 @@
 # 本地全文与证据索引审计
 
-审计时间：2026-09-13T18:44:20+00:00
+审计时间：2026-09-14T01:21:30+00:00
 
-结论：证据库共 40 篇，DOI/出版社记录已核验 40/40；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 39/40 篇，共 2281 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
+结论：证据库共 43 篇，DOI/出版社记录已核验 43/43；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 42/43 篇，共 2682 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
 
 所有保留文件均通过 PDF 解析、标题匹配、正文/补充材料区分、SHA-256 和重复文件检查。M3GNet 的补充材料单独放在 `literature/supplementary/`，不进入正文索引。
 
@@ -48,6 +48,9 @@
 | 38 | 2020 | Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm | 已下载正文 | 10 | 45 | 1.0 | vetted_public_author_or_repository_copy |
 | 39 | 2010 | Thermodynamic and kinetic properties of the Li-graphite system from first-principles calculations | 已下载正文 | 9 | 34 | 1.0 | vetted_public_author_or_repository_copy |
 | 40 | 2024 | pymatgen-analysis-defects: A Python package for analyzing point defects in crystalline materials | 已下载正文 | 4 | 8 | 1.0 | vetted_public_author_or_repository_copy |
+| 41 | 2025 | A foundation model for atomistic materials chemistry | 已下载正文 | 153 | 324 | 1.0 | vetted_public_author_or_repository_copy |
+| 42 | 2025 | Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning | 已下载正文 | 11 | 46 | 1.0 | vetted_public_author_or_repository_copy |
+| 43 | 2025 | Uncertainty quantification for neural network potential foundation models | 已下载正文 | 8 | 31 | 0.857 | vetted_public_author_or_repository_copy |
 
 ## 尚未保存的正文
 

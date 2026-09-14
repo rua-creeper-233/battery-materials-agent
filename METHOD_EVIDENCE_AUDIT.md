@@ -2,9 +2,9 @@
 
 > 所有条目均为“自动抽取、待人工核对”。它们是原文定位器，不是可直接复制到 VASP/MD 输入文件的最终参数。
 
-- 本地有正文的论文：16
-- 抽取到至少一条方法信号的论文：15
-- 方法信号总数：128
+- 本地有正文的论文：42
+- 抽取到至少一条方法信号的论文：41
+- 方法信号总数：337
 - 参考文献区：已排除
 - 每篇每类上限：3 条
 - 公开数据只保存短方法信号与页码，不保存连续正文上下文
@@ -113,3 +113,177 @@
 - 分子动力学条件：p.4 `simulation at 1,100 K`；p.8 `NVT`；p.8 `time step of 2 fs`
 - 扩散与迁移势垒方法：p.6 `Arrhenius plot`；p.8 `mean squared displacement`
 - 计算软件：p.7 `pymatgen`；p.7 `Vienna Ab initio Simulation Package`；p.8 `Vienna Ab initio Simulation Package`
+
+### Empowering materials science with VASPKIT: a toolkit for enhanced simulation and analysis
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### VASPKIT: A user-friendly interface facilitating high-throughput computing and analysis using VASP code
+
+- 计算软件：p.1 `VASP`；p.2 `Abinit`；p.2 `CASTEP`
+- 扩散与迁移势垒方法：p.5 `Mean squared displacement`；p.20 `mean square displacement`；p.20 `MSD`
+- 泛函与电子结构近似：p.8 `PBE`；p.9 `PBE`；p.11 `PBE`
+- 分子动力学条件：p.21 `400 K processed by the MD`；p.22 `400 K obtained from MD`
+
+### Python Materials Genomics (pymatgen): A robust, open-source python library for materials analysis
+
+- 计算软件：p.1 `pymatgen`；p.2 `pymatgen`；p.3 `VASP`
+- 泛函与电子结构近似：p.4 `generalized gradient approximation`；p.4 `GGA`；p.4 `Hubbard U`
+
+### The atomic simulation environment—a Python library for working with atoms
+
+- 扩散与迁移势垒方法：p.3 `nudged elastic band`；p.4 `nudged elastic band`；p.7 `nudged elastic band`
+- 泛函与电子结构近似：p.5 `PBE`；p.14 `PBE`；p.42 `GGA`
+- 计算软件：p.8 `Abinit`；p.8 `Castep`；p.8 `CP2K`
+- 机器学习训练设置：p.9 `test set`
+- 分子动力学条件：p.19 `NVE`；p.19 `NVT`；p.20 `npt`
+- 超胞与模型规模：p.35 `7 × 7× 7 supercell`
+- k 点采样：p.41 `Brillouin zone sampling`
+
+### Atomate2: modular workflows for materials science
+
+- 计算软件：p.4 `VASP`；p.4 `Vienna ab initio Simulation Package`；p.5 `VASP`
+- 机器学习训练设置：p.5 `machine learning interatomic potential`；p.38 `training data`；p.39 `RMSE`
+- 分子动力学条件：p.8 `NVT`；p.27 `NVT`；p.39 `NpT`
+- 扩散与迁移势垒方法：p.9 `NEB`；p.9 `nudged elastic band`；p.15 `nudged elastic band`
+- 泛函与电子结构近似：p.15 `PAW`；p.15 `projector augmented wave`；p.19 `HSE06`
+- 收敛判据：p.52 `force convergence tolerance) is followed by a finer r 2`；p.52 `force convergence tolerance), followed by an r 2`
+
+### Commentary: The Materials Project: A materials genome approach to accelerating materials innovation
+
+- 机器学习训练设置：p.1 `Machine learning potential`
+- 计算软件：p.4 `Vienna Ab initio Simulation Package`；p.7 `pymatgen`；p.8 `pymatgen`
+
+### Improved initial guess for minimum energy path calculations
+
+- 扩散与迁移势垒方法：p.1 `nudged elastic band`；p.2 `NEB`；p.2 `nudged elastic band`
+- 泛函与电子结构近似：p.6 `PBE`；p.7 `PBE`
+- k 点采样：p.7 `3x3x1) k-points`
+
+### Statistical variances of diffusional properties from ab initio molecular dynamics simulations
+
+- 扩散与迁移势垒方法：p.1 `Arrhenius relation`；p.1 `migration pathway`；p.1 `NEB`
+- 分子动力学条件：p.3 `simulation over 200 ps at 1200 K`；p.4 `simulations of the same LATP structure model at 1200 K`；p.6 `simulations below 900 K`
+- 泛函与电子结构近似：p.7 `projector augmented-wave`
+- 计算软件：p.7 `Vienna ab initio Simulation Package`
+
+### First-principles prediction of redox potentials in transition-metal compounds with LDA+U
+
+- 泛函与电子结构近似：p.1 `DFT+ U`；p.1 `GGA`；p.1 `LDA`
+- 收敛判据：p.7 `energy is converged to within 3`
+- 计算软件：p.7 `Vienna Ab-initio Simulation Package`
+
+### A practical guide to machine learning interatomic potentials – Status and future
+
+- 机器学习训练设置：p.1 `machine learning interatomic potential`；p.4 `machine learning interatomic potential`；p.4 `training data`
+- 计算软件：p.8 `LAMMPS`；p.38 `LAMMPS`；p.56 `LAMMPS`
+- 泛函与电子结构近似：p.26 `GGA`；p.32 `PBE`；p.42 `Hubbard U`
+- 分子动力学条件：p.28 `NPT`；p.49 `time step, generally taken to be 1-2 fs`
+- 扩散与迁移势垒方法：p.30 `migration barrier`；p.48 `migration barrier`
+
+### First principles phonon calculations in materials science
+
+- 超胞与模型规模：p.1 `3×3×3 supercell`
+- 泛函与电子结构近似：p.1 `projector augmented wave`
+- k 点采样：p.1 `30 × 30× 30 k-point`
+- 计算软件：p.1 `VASP`
+- 扩散与迁移势垒方法：p.3 `mean square displacement`
+
+### sumo: Command-line tools for plotting and analysis of periodic ab initio calculations
+
+- 计算软件：p.1 `pymatgen`；p.1 `Quantum Espresso`；p.1 `Vienna ab initio Simulation Package`
+
+### DeePMD-kit: A deep learning package for many-body potential energy representation and molecular dynamics
+
+- 计算软件：p.2 `LAMMPS`；p.3 `LAMMPS`；p.4 `LAMMPS`
+- 机器学习训练设置：p.8 `training data`；p.11 `energy error`；p.11 `training data`
+- 分子动力学条件：p.15 `20 ps, 330 K NVT AIMD simulation`；p.16 `NVT`
+
+### DP-GEN: A concurrent learning platform for the generation of reliable deep learning based potential energy models
+
+- 计算软件：p.2 `CP2K`；p.2 `LAMMPS`；p.4 `LAMMPS`
+- 机器学习训练设置：p.5 `training dataset`；p.6 `training data`；p.8 `training dataset`
+- 分子动力学条件：p.8 `NPT`；p.16 `NVT`；p.28 `NPT`
+- 超胞与模型规模：p.16 `2 × 2 × 2 supercell`
+- 泛函与电子结构近似：p.17 `PBE`
+- k 点采样：p.17 `Monkhorst-Pack`
+
+### E(3)-equivariant graph neural networks for data-efficient and accurate interatomic potentials
+
+- 机器学习训练设置：p.1 `training data`；p.1 `training set`；p.2 `machine learning interatomic potential`
+- 泛函与电子结构近似：p.5 `scan`；p.8 `PBE`；p.9 `PBE`
+- 分子动力学条件：p.6 `NVT`；p.6 `simulations: one of the molten structure at T = 3000 K`；p.7 `NVT`
+- 扩散与迁移势垒方法：p.7 `mean square displacement`；p.8 `MSD`；p.9 `Nudged elastic band`
+- 计算软件：p.9 `CP2K`；p.9 `VASP`；p.9 `Vienna Ab-Initio Simulation Package`
+
+### Learning local equivariant representations for large-scale atomistic dynamics
+
+- 机器学习训练设置：p.1 `Machine learning interatomic potential`；p.2 `cutoff radius`；p.2 `machine learning interatomic potential`
+- 扩散与迁移势垒方法：p.6 `MSD`；p.7 `MSD`
+- 分子动力学条件：p.6 `3000 K, followed by a 50 ps AIMD simulation`；p.6 `50 ps ab-initio molecular dynamics (AIMD) simulation`；p.8 `Time steps of 2fs`
+- 计算软件：p.8 `LAMMPS`；p.9 `LAMMPS`；p.10 `Vienna Ab-Initio Simulation Package`
+- 泛函与电子结构近似：p.9 `PBE`；p.10 `PBE`
+- 平面波截断能：p.10 `cutoff energy of 520 eV`；p.10 `plane-wave cutoff of 400 eV`
+
+### Gaussian Process Regression for Materials and Molecules
+
+- 扩散与迁移势垒方法：p.4 `Arrhenius equation`
+- 机器学习训练设置：p.5 `test data`；p.6 `training data`；p.11 `training data`
+- 计算软件：p.26 `VASP`；p.38 `VASP`；p.39 `VASP`
+- 泛函与电子结构近似：p.31 `LDA`；p.31 `scan`；p.36 `LDA`
+- 分子动力学条件：p.31 `simulations of liquid carbon at 9,000 K`
+
+### LAMMPS - a flexible simulation tool for particle-based materials modeling at the atomic, meso, and continuum scales
+
+- 计算软件：p.1 `LAMMPS`
+
+### AiiDA: automated interactive infrastructure and database for computational science
+
+- 平面波截断能：p.10 `cutoff = 50Ry`
+- 泛函与电子结构近似：p.10 `LDA`；p.20 `LDA`；p.22 `PBE`
+- 计算软件：p.10 `Quantum ESPRESSO`；p.11 `Quantum ESPRESSO`；p.22 `Quantum ESPRESSO`
+- 机器学习训练设置：p.16 `test data`
+
+### DScribe: Library of descriptors for machine learning in materials science
+
+- 机器学习训练设置：p.2 `training data`；p.12 `Mean absolute error`；p.12 `Training set`
+- 计算软件：p.10 `pymatgen`
+
+### Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties
+
+- 机器学习训练设置：p.2 `MAE`；p.2 `Mean absolute error`；p.3 `validation set`
+
+### Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm
+
+- 机器学习训练设置：p.1 `test set`；p.1 `test split`；p.2 `test set`
+- 泛函与电子结构近似：p.2 `GGA`；p.3 `GGA`
+
+### Thermodynamic and kinetic properties of the Li-graphite system from first-principles calculations
+
+- 扩散与迁移势垒方法：p.1 `migration barrier`；p.2 `migration barrier`；p.4 `migration barrier`
+- 泛函与电子结构近似：p.2 `GGA`；p.2 `LDA`；p.3 `GGA`
+- 计算软件：p.2 `Vienna ab initio simulation package`
+- 机器学习训练设置：p.3 `training set`
+
+### pymatgen-analysis-defects: A Python package for analyzing point defects in crystalline materials
+
+- 计算软件：p.1 `pymatgen`；p.2 `pymatgen`；p.3 `vasp`
+
+### A foundation model for atomistic materials chemistry
+
+- 机器学习训练设置：p.3 `training dataset`；p.4 `training data`；p.6 `MAE`
+- 泛函与电子结构近似：p.5 `PBE`；p.6 `PBE`；p.8 `PBE`
+- 分子动力学条件：p.5 `50 ps-long trajectory`；p.6 `simulations were conducted at4 GPaand 600 K`
+- 扩散与迁移势垒方法：p.7 `NEB`；p.8 `NEB`
+- 计算软件：p.10 `CP2K`
+
+### Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning
+
+- 机器学习训练设置：p.1 `machine learning potential`；p.1 `Machine-learned interatomic potential`；p.1 `training data`
+- 泛函与电子结构近似：p.3 `PBE`；p.4 `PBE`
+- 分子动力学条件：p.3 `NPT`
+- 扩散与迁移势垒方法：p.4 `CI-NEB`；p.4 `climbing image nudged elastic band`；p.4 `NEB`
+
+### Uncertainty quantification for neural network potential foundation models
+
+- 机器学习训练设置：p.1 `training data`；p.2 `training data`；p.2 `training set`

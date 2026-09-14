@@ -24,6 +24,8 @@ DEFAULT_FULLTEXT = ROOT / "data" / "fulltext_chunks.jsonl"
 
 
 ALIASES = {
+    "微调": ["fine-tuning", "transfer learning", "MACE-freeze"],
+    "不确定性": ["uncertainty", "quantile regression", "readout ensemble"],
     "电压": ["voltage", "intercalation", "total energy", "thermodynamic"],
     "开路电压": ["voltage", "open circuit voltage", "intercalation"],
     "扩散": ["diffusion", "migration", "barrier", "neb", "aimd", "msd"],
@@ -211,7 +213,7 @@ class BatteryResearchAgent:
     def _task_type(question: str) -> str:
         lowered = question.lower()
         rules = [
-            ("mlp", ["机器学习势", "神经网络势", "mlip", "m3gnet", "deepmd", "nnp"]),
+            ("mlp", ["机器学习势", "神经网络势", "mlip", "m3gnet", "chgnet", "mace", "deepmd", "nnp"]),
             ("interface", ["界面", "sei", "电解液", "表面", "electrode-electrolyte"]),
             ("diffusion", ["扩散", "迁移", "势垒", "neb", "aimd", "msd", "电导率"]),
             ("voltage", ["电压", "容量", "嵌锂", "脱锂", "开路"]),

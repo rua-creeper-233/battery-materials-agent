@@ -42,6 +42,9 @@ USER_AGENT = (
 # unless the article's open licence is clear and the PDF is independently
 # checked against the target title.
 PUBLIC_PDF_OVERRIDES: dict[str, list[str]] = {
+    "batatia2025_mace_mp": ["https://arxiv.org/pdf/2401.00096"],
+    "radova2025_frozen_transfer": ["https://www.nature.com/articles/s41524-025-01727-x.pdf"],
+    "bilbrey2025_uq": ["https://www.nature.com/articles/s41524-025-01572-y.pdf"],
     "aydinol1997_voltage": [
         "https://ceder.berkeley.edu/publications/prb-56-1354-1997.pdf",
     ],

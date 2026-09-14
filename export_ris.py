@@ -33,20 +33,25 @@ def render(paper: dict) -> str:
         lines.append(
             f"L2  - https://www.webofscience.com/wos/woscc/full-record/{paper['wos_uid']}"
         )
-    for keyword in paper.get("keywords", []):
+    for keyword in paper.get("keywords", paper.get("tags_zh", [])):
         lines.append(f"KW  - {clean(keyword)}")
-    lines.extend(["N1  - Seed metadata verified in Web of Science on 2026-09-13", "ER  - "])
+    note = ("Metadata verified in Web of Science on 2026-09-13" if paper.get("wos_uid")
+            else "DOI/publisher bibliographic record verified; Web of Science record not checked")
+    lines.extend([f"N1  - {note}", "ER  - "])
     return "\n".join(lines)
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--all-curated", action="store_true", help="export all curated records without claiming WOS verification")
     args = parser.parse_args()
     library = json.loads((ROOT / "data" / "papers.json").read_text(encoding="utf-8"))
-    papers = [paper for paper in library if paper.get("wos_uid")]
-    if len(papers) != 16:
+    papers = library if args.all_curated else [paper for paper in library if paper.get("wos_uid")]
+    if not args.all_curated and len(papers) != 16:
         raise SystemExit("expected 16 WOS-verified seed papers")
+    if args.all_curated and args.output == DEFAULT_OUTPUT:
+        args.output = ROOT / "exports" / "battery_materials_all_curated.ris"
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text("\n\n".join(render(paper) for paper in papers) + "\n", encoding="utf-8")
     print(f"Exported {len(papers)} records to {args.output}")

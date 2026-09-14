@@ -1,5 +1,7 @@
 (function () {
   const aliases = {
+    '微调': ['fine-tuning', 'transfer learning', 'MACE-freeze'],
+    '不确定性': ['uncertainty', 'quantile regression', 'readout ensemble'],
     '电压': ['voltage', 'intercalation', 'total energy'],
     '扩散': ['diffusion', 'migration', 'barrier', 'neb', 'aimd', 'msd'],
     '迁移': ['diffusion', 'migration', 'barrier', 'neb'],
@@ -18,7 +20,7 @@
     '钠': ['sodium', 'na-ion'], '锂': ['lithium', 'li-ion']
   };
   const taskRules = [
-    ['mlp', ['机器学习势','神经网络势','mlip','m3gnet','chgnet','deepmd','nnp']],
+    ['mlp', ['机器学习势','神经网络势','mlip','m3gnet','chgnet','mace','deepmd','nnp']],
     ['interface', ['界面','sei','电解液','表面']],
     ['diffusion', ['扩散','迁移','势垒','neb','aimd','msd','电导率']],
     ['voltage', ['电压','容量','嵌锂','脱锂','开路']],

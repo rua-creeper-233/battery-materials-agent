@@ -1,26 +1,52 @@
 {
-  "generated_at": "2026-09-13T07:53:06.128995+00:00",
+  "generated_at": "2026-09-14T01:22:46.866445+00:00",
   "review_status": "auto_extracted_needs_human_review",
   "notice_zh": "自动结果只用于定位原文；用于计算输入、论文或汇报前，必须打开对应 PDF 页人工核对。",
   "rules_version": 1,
-  "fulltext_paper_count": 16,
+  "fulltext_paper_count": 42,
   "fulltext_paper_ids": [
     "aydinol1997_voltage",
     "baktash2020_argyrodite_aimd",
+    "batatia2025_mace_mp",
+    "batzner2022_nequip",
+    "bilbrey2025_uq",
     "ceder1998_cathode_design",
     "chen2022_m3gnet",
     "deng2023_chgnet",
+    "deringer2021_gpr_gap",
+    "dunn2020_matbench",
+    "ganose2018_sumo",
+    "ganose2025_atomate2",
+    "he2018_aimd_statistics",
     "henkelman2000_cineb",
+    "himanen2020_dscribe",
+    "jacobs2025_mlip_guide",
+    "jain2013_materials_project",
+    "larsen2017_ase",
     "leung2010_sei_aimd",
     "ling2022_battery_informatics",
     "mo2012_lgps_aimd",
+    "musaelian2023_allegro",
     "ong2011_li_na",
     "ong2013_lgps",
+    "ong2013_pymatgen",
+    "persson2010_graphite",
+    "pizzi2016_aiida",
+    "radova2025_frozen_transfer",
     "sawada2024_nnp_sse",
     "sendek2017_sse_screening",
+    "shen2024_pymatgen_defects",
     "shi2013_sei_li2co3",
+    "smidstrup2014_idpp",
+    "thompson2022_lammps",
+    "togo2015_phonopy",
     "urban2016_computational_review",
-    "vanderven2001_diffusion"
+    "vanderven2001_diffusion",
+    "wang2018_deepmdkit",
+    "wang2021_vaspkit",
+    "xie2018_cgcnn",
+    "zhang2020_dpgen",
+    "zhou2004_dftu_voltage"
   ],
   "papers": {
     "urban2016_computational_review": {
@@ -1443,6 +1469,2338 @@
           "confidence": "high",
           "review_status": "auto_extracted_needs_human_review",
           "local_pdf_url": "/local-pdf/deng2023_chgnet.pdf#page=8"
+        }
+      ]
+    },
+    "geng2025_vaspkit_protocol": {
+      "title": "Empowering materials science with VASPKIT: a toolkit for enhanced simulation and analysis",
+      "doi": "10.1038/s41596-025-01160-w",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 0,
+      "evidence": []
+    },
+    "wang2021_vaspkit": {
+      "title": "VASPKIT: A user-friendly interface facilitating high-throughput computing and analysis using VASP code",
+      "doi": "10.1016/j.cpc.2021.108033",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 11,
+      "evidence": [
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 1,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2021_vaspkit.pdf#page=1"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 2,
+          "section": "body",
+          "signal": "Abinit",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2021_vaspkit.pdf#page=2"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 2,
+          "section": "body",
+          "signal": "CASTEP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2021_vaspkit.pdf#page=2"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 5,
+          "section": "body",
+          "signal": "Mean squared displacement",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2021_vaspkit.pdf#page=5"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 8,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2021_vaspkit.pdf#page=8"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 9,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2021_vaspkit.pdf#page=9"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 11,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2021_vaspkit.pdf#page=11"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 20,
+          "section": "body",
+          "signal": "mean square displacement",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2021_vaspkit.pdf#page=20"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 20,
+          "section": "body",
+          "signal": "MSD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2021_vaspkit.pdf#page=20"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 21,
+          "section": "body",
+          "signal": "400 K processed by the MD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2021_vaspkit.pdf#page=21"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 22,
+          "section": "body",
+          "signal": "400 K obtained from MD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2021_vaspkit.pdf#page=22"
+        }
+      ]
+    },
+    "ong2013_pymatgen": {
+      "title": "Python Materials Genomics (pymatgen): A robust, open-source python library for materials analysis",
+      "doi": "10.1016/j.commatsci.2012.10.028",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 6,
+      "evidence": [
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 1,
+          "section": "body",
+          "signal": "pymatgen",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ong2013_pymatgen.pdf#page=1"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 2,
+          "section": "body",
+          "signal": "pymatgen",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ong2013_pymatgen.pdf#page=2"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 3,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ong2013_pymatgen.pdf#page=3"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "generalized gradient approximation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ong2013_pymatgen.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ong2013_pymatgen.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "Hubbard U",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ong2013_pymatgen.pdf#page=4"
+        }
+      ]
+    },
+    "larsen2017_ase": {
+      "title": "The atomic simulation environment—a Python library for working with atoms",
+      "doi": "10.1088/1361-648X/aa680e",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 15,
+      "evidence": [
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 3,
+          "section": "body",
+          "signal": "nudged elastic band",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=3"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "nudged elastic band",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 5,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=5"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 7,
+          "section": "body",
+          "signal": "nudged elastic band",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=7"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 8,
+          "section": "body",
+          "signal": "Abinit",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=8"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 8,
+          "section": "body",
+          "signal": "Castep",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=8"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 8,
+          "section": "body",
+          "signal": "CP2K",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=8"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 9,
+          "section": "body",
+          "signal": "test set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=9"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 14,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=14"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 19,
+          "section": "body",
+          "signal": "NVE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=19"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 19,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=19"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 20,
+          "section": "body",
+          "signal": "npt",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=20"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 35,
+          "section": "body",
+          "signal": "7 × 7× 7 supercell",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=35"
+        },
+        {
+          "category": "k_points",
+          "label_zh": "k 点采样",
+          "page": 41,
+          "section": "body",
+          "signal": "Brillouin zone sampling",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=41"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 42,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/larsen2017_ase.pdf#page=42"
+        }
+      ]
+    },
+    "ganose2025_atomate2": {
+      "title": "Atomate2: modular workflows for materials science",
+      "doi": "10.1039/D5DD00019J",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 17,
+      "evidence": [
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 4,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=4"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 4,
+          "section": "body",
+          "signal": "Vienna ab initio Simulation Package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=4"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 5,
+          "section": "body",
+          "signal": "machine learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=5"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 5,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=5"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 8,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=8"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 9,
+          "section": "body",
+          "signal": "NEB",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=9"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 9,
+          "section": "body",
+          "signal": "nudged elastic band",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=9"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 15,
+          "section": "body",
+          "signal": "PAW",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=15"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 15,
+          "section": "body",
+          "signal": "projector augmented wave",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=15"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 15,
+          "section": "body",
+          "signal": "nudged elastic band",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=15"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 19,
+          "section": "body",
+          "signal": "HSE06",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=19"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 27,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=27"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 38,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=38"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 39,
+          "section": "body",
+          "signal": "RMSE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=39"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 39,
+          "section": "body",
+          "signal": "NpT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=39"
+        },
+        {
+          "category": "convergence",
+          "label_zh": "收敛判据",
+          "page": 52,
+          "section": "body",
+          "signal": "force convergence tolerance) is followed by a finer r 2",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=52"
+        },
+        {
+          "category": "convergence",
+          "label_zh": "收敛判据",
+          "page": 52,
+          "section": "body",
+          "signal": "force convergence tolerance), followed by an r 2",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2025_atomate2.pdf#page=52"
+        }
+      ]
+    },
+    "jain2013_materials_project": {
+      "title": "Commentary: The Materials Project: A materials genome approach to accelerating materials innovation",
+      "doi": "10.1063/1.4812323",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 4,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "Machine learning potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jain2013_materials_project.pdf#page=1"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 4,
+          "section": "body",
+          "signal": "Vienna Ab initio Simulation Package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jain2013_materials_project.pdf#page=4"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 7,
+          "section": "body",
+          "signal": "pymatgen",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jain2013_materials_project.pdf#page=7"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 8,
+          "section": "body",
+          "signal": "pymatgen",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jain2013_materials_project.pdf#page=8"
+        }
+      ]
+    },
+    "smidstrup2014_idpp": {
+      "title": "Improved initial guess for minimum energy path calculations",
+      "doi": "10.1063/1.4878664",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 6,
+      "evidence": [
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 1,
+          "section": "body",
+          "signal": "nudged elastic band",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smidstrup2014_idpp.pdf#page=1"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 2,
+          "section": "body",
+          "signal": "NEB",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smidstrup2014_idpp.pdf#page=2"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 2,
+          "section": "body",
+          "signal": "nudged elastic band",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smidstrup2014_idpp.pdf#page=2"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 6,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smidstrup2014_idpp.pdf#page=6"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 7,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smidstrup2014_idpp.pdf#page=7"
+        },
+        {
+          "category": "k_points",
+          "label_zh": "k 点采样",
+          "page": 7,
+          "section": "body",
+          "signal": "3x3x1) k-points",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smidstrup2014_idpp.pdf#page=7"
+        }
+      ]
+    },
+    "he2018_aimd_statistics": {
+      "title": "Statistical variances of diffusional properties from ab initio molecular dynamics simulations",
+      "doi": "10.1038/s41524-018-0074-y",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 8,
+      "evidence": [
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 1,
+          "section": "body",
+          "signal": "Arrhenius relation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2018_aimd_statistics.pdf#page=1"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 1,
+          "section": "body",
+          "signal": "migration pathway",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2018_aimd_statistics.pdf#page=1"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 1,
+          "section": "body",
+          "signal": "NEB",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2018_aimd_statistics.pdf#page=1"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "simulation over 200 ps at 1200 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2018_aimd_statistics.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 4,
+          "section": "body",
+          "signal": "simulations of the same LATP structure model at 1200 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2018_aimd_statistics.pdf#page=4"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 6,
+          "section": "body",
+          "signal": "simulations below 900 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2018_aimd_statistics.pdf#page=6"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 7,
+          "section": "body",
+          "signal": "projector augmented-wave",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2018_aimd_statistics.pdf#page=7"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 7,
+          "section": "body",
+          "signal": "Vienna ab initio Simulation Package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2018_aimd_statistics.pdf#page=7"
+        }
+      ]
+    },
+    "zhou2004_dftu_voltage": {
+      "title": "First-principles prediction of redox potentials in transition-metal compounds with LDA+U",
+      "doi": "10.1103/PhysRevB.70.235121",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 5,
+      "evidence": [
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 1,
+          "section": "body",
+          "signal": "DFT+ U",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhou2004_dftu_voltage.pdf#page=1"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 1,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhou2004_dftu_voltage.pdf#page=1"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 1,
+          "section": "body",
+          "signal": "LDA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhou2004_dftu_voltage.pdf#page=1"
+        },
+        {
+          "category": "convergence",
+          "label_zh": "收敛判据",
+          "page": 7,
+          "section": "body",
+          "signal": "energy is converged to within 3",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhou2004_dftu_voltage.pdf#page=7"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 7,
+          "section": "body",
+          "signal": "Vienna Ab-initio Simulation Package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhou2004_dftu_voltage.pdf#page=7"
+        }
+      ]
+    },
+    "jacobs2025_mlip_guide": {
+      "title": "A practical guide to machine learning interatomic potentials – Status and future",
+      "doi": "10.1016/j.cossms.2025.101214",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 13,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "machine learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 4,
+          "section": "body",
+          "signal": "machine learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=4"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 4,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=4"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 8,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=8"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 26,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=26"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 28,
+          "section": "body",
+          "signal": "NPT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=28"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 30,
+          "section": "body",
+          "signal": "migration barrier",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=30"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 32,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=32"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 38,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=38"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 42,
+          "section": "body",
+          "signal": "Hubbard U",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=42"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 48,
+          "section": "body",
+          "signal": "migration barrier",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=48"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 49,
+          "section": "body",
+          "signal": "time step, generally taken to be 1-2 fs",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=49"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 56,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/jacobs2025_mlip_guide.pdf#page=56"
+        }
+      ]
+    },
+    "togo2015_phonopy": {
+      "title": "First principles phonon calculations in materials science",
+      "doi": "10.1016/j.scriptamat.2015.07.021",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 5,
+      "evidence": [
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 1,
+          "section": "body",
+          "signal": "3×3×3 supercell",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/togo2015_phonopy.pdf#page=1"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 1,
+          "section": "body",
+          "signal": "projector augmented wave",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/togo2015_phonopy.pdf#page=1"
+        },
+        {
+          "category": "k_points",
+          "label_zh": "k 点采样",
+          "page": 1,
+          "section": "body",
+          "signal": "30 × 30× 30 k-point",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/togo2015_phonopy.pdf#page=1"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 1,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/togo2015_phonopy.pdf#page=1"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 3,
+          "section": "body",
+          "signal": "mean square displacement",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/togo2015_phonopy.pdf#page=3"
+        }
+      ]
+    },
+    "ganose2018_sumo": {
+      "title": "sumo: Command-line tools for plotting and analysis of periodic ab initio calculations",
+      "doi": "10.21105/joss.00717",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 3,
+      "evidence": [
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 1,
+          "section": "body",
+          "signal": "pymatgen",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2018_sumo.pdf#page=1"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 1,
+          "section": "body",
+          "signal": "Quantum Espresso",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2018_sumo.pdf#page=1"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 1,
+          "section": "body",
+          "signal": "Vienna ab initio Simulation Package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/ganose2018_sumo.pdf#page=1"
+        }
+      ]
+    },
+    "wang2018_deepmdkit": {
+      "title": "DeePMD-kit: A deep learning package for many-body potential energy representation and molecular dynamics",
+      "doi": "10.1016/j.cpc.2018.03.016",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 8,
+      "evidence": [
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 2,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2018_deepmdkit.pdf#page=2"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 3,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2018_deepmdkit.pdf#page=3"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 4,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2018_deepmdkit.pdf#page=4"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 8,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2018_deepmdkit.pdf#page=8"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 11,
+          "section": "body",
+          "signal": "energy error",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2018_deepmdkit.pdf#page=11"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 11,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2018_deepmdkit.pdf#page=11"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 15,
+          "section": "body",
+          "signal": "20 ps, 330 K NVT AIMD simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2018_deepmdkit.pdf#page=15"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 16,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2018_deepmdkit.pdf#page=16"
+        }
+      ]
+    },
+    "zhang2020_dpgen": {
+      "title": "DP-GEN: A concurrent learning platform for the generation of reliable deep learning based potential energy models",
+      "doi": "10.1016/j.cpc.2020.107206",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 12,
+      "evidence": [
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 2,
+          "section": "body",
+          "signal": "CP2K",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=2"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 2,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=2"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 4,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=4"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 5,
+          "section": "body",
+          "signal": "training dataset",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=5"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 6,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=6"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 8,
+          "section": "body",
+          "signal": "training dataset",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=8"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 8,
+          "section": "body",
+          "signal": "NPT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=8"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 16,
+          "section": "body",
+          "signal": "2 × 2 × 2 supercell",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=16"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 16,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=16"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 17,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=17"
+        },
+        {
+          "category": "k_points",
+          "label_zh": "k 点采样",
+          "page": 17,
+          "section": "body",
+          "signal": "Monkhorst-Pack",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=17"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 28,
+          "section": "body",
+          "signal": "NPT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhang2020_dpgen.pdf#page=28"
+        }
+      ]
+    },
+    "batzner2022_nequip": {
+      "title": "E(3)-equivariant graph neural networks for data-efficient and accurate interatomic potentials",
+      "doi": "10.1038/s41467-022-29939-5",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 15,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "training set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "machine learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=2"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 5,
+          "section": "body",
+          "signal": "scan",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=5"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 6,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=6"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 6,
+          "section": "body",
+          "signal": "simulations: one of the molten structure at T = 3000 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=6"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 7,
+          "section": "body",
+          "signal": "mean square displacement",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=7"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 7,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=7"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 8,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=8"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 8,
+          "section": "body",
+          "signal": "MSD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=8"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 9,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=9"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 9,
+          "section": "body",
+          "signal": "Nudged elastic band",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=9"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 9,
+          "section": "body",
+          "signal": "CP2K",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=9"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 9,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=9"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 9,
+          "section": "body",
+          "signal": "Vienna Ab-Initio Simulation Package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batzner2022_nequip.pdf#page=9"
+        }
+      ]
+    },
+    "musaelian2023_allegro": {
+      "title": "Learning local equivariant representations for large-scale atomistic dynamics",
+      "doi": "10.1038/s41467-023-36329-y",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 15,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "Machine learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "cutoff radius",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "machine learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=2"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 6,
+          "section": "body",
+          "signal": "MSD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=6"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 6,
+          "section": "body",
+          "signal": "3000 K, followed by a 50 ps AIMD simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=6"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 6,
+          "section": "body",
+          "signal": "50 ps ab-initio molecular dynamics (AIMD) simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=6"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 7,
+          "section": "body",
+          "signal": "MSD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=7"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 8,
+          "section": "body",
+          "signal": "Time steps of 2fs",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=8"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 8,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=8"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 9,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=9"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 9,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=9"
+        },
+        {
+          "category": "basis_cutoff",
+          "label_zh": "平面波截断能",
+          "page": 10,
+          "section": "body",
+          "signal": "cutoff energy of 520 eV",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=10"
+        },
+        {
+          "category": "basis_cutoff",
+          "label_zh": "平面波截断能",
+          "page": 10,
+          "section": "body",
+          "signal": "plane-wave cutoff of 400 eV",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=10"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 10,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=10"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 10,
+          "section": "body",
+          "signal": "Vienna Ab-Initio Simulation Package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/musaelian2023_allegro.pdf#page=10"
+        }
+      ]
+    },
+    "deringer2021_gpr_gap": {
+      "title": "Gaussian Process Regression for Materials and Molecules",
+      "doi": "10.1021/acs.chemrev.1c00022",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 11,
+      "evidence": [
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "Arrhenius equation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/deringer2021_gpr_gap.pdf#page=4"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 5,
+          "section": "body",
+          "signal": "test data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/deringer2021_gpr_gap.pdf#page=5"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 6,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/deringer2021_gpr_gap.pdf#page=6"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 11,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/deringer2021_gpr_gap.pdf#page=11"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 26,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/deringer2021_gpr_gap.pdf#page=26"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 31,
+          "section": "body",
+          "signal": "LDA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/deringer2021_gpr_gap.pdf#page=31"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 31,
+          "section": "body",
+          "signal": "scan",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/deringer2021_gpr_gap.pdf#page=31"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 31,
+          "section": "body",
+          "signal": "simulations of liquid carbon at 9,000 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/deringer2021_gpr_gap.pdf#page=31"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 36,
+          "section": "body",
+          "signal": "LDA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/deringer2021_gpr_gap.pdf#page=36"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 38,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/deringer2021_gpr_gap.pdf#page=38"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 39,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/deringer2021_gpr_gap.pdf#page=39"
+        }
+      ]
+    },
+    "thompson2022_lammps": {
+      "title": "LAMMPS - a flexible simulation tool for particle-based materials modeling at the atomic, meso, and continuum scales",
+      "doi": "10.1016/j.cpc.2021.108171",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 1,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/thompson2022_lammps.pdf#page=1"
+        }
+      ]
+    },
+    "pizzi2016_aiida": {
+      "title": "AiiDA: automated interactive infrastructure and database for computational science",
+      "doi": "10.1016/j.commatsci.2015.09.013",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 8,
+      "evidence": [
+        {
+          "category": "basis_cutoff",
+          "label_zh": "平面波截断能",
+          "page": 10,
+          "section": "body",
+          "signal": "cutoff = 50Ry",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/pizzi2016_aiida.pdf#page=10"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 10,
+          "section": "body",
+          "signal": "LDA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/pizzi2016_aiida.pdf#page=10"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 10,
+          "section": "body",
+          "signal": "Quantum ESPRESSO",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/pizzi2016_aiida.pdf#page=10"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 11,
+          "section": "body",
+          "signal": "Quantum ESPRESSO",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/pizzi2016_aiida.pdf#page=11"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 16,
+          "section": "body",
+          "signal": "test data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/pizzi2016_aiida.pdf#page=16"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 20,
+          "section": "body",
+          "signal": "LDA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/pizzi2016_aiida.pdf#page=20"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 22,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/pizzi2016_aiida.pdf#page=22"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 22,
+          "section": "body",
+          "signal": "Quantum ESPRESSO",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/pizzi2016_aiida.pdf#page=22"
+        }
+      ]
+    },
+    "himanen2020_dscribe": {
+      "title": "DScribe: Library of descriptors for machine learning in materials science",
+      "doi": "10.1016/j.cpc.2019.106949",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 4,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/himanen2020_dscribe.pdf#page=2"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 10,
+          "section": "body",
+          "signal": "pymatgen",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/himanen2020_dscribe.pdf#page=10"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 12,
+          "section": "body",
+          "signal": "Mean absolute error",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/himanen2020_dscribe.pdf#page=12"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 12,
+          "section": "body",
+          "signal": "Training set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/himanen2020_dscribe.pdf#page=12"
+        }
+      ]
+    },
+    "xie2018_cgcnn": {
+      "title": "Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties",
+      "doi": "10.1103/PhysRevLett.120.145301",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 3,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "MAE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2018_cgcnn.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "Mean absolute error",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2018_cgcnn.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 3,
+          "section": "body",
+          "signal": "validation set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2018_cgcnn.pdf#page=3"
+        }
+      ]
+    },
+    "dunn2020_matbench": {
+      "title": "Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm",
+      "doi": "10.1038/s41524-020-00406-3",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 5,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "test set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/dunn2020_matbench.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "test split",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/dunn2020_matbench.pdf#page=1"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 2,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/dunn2020_matbench.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "test set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/dunn2020_matbench.pdf#page=2"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 3,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/dunn2020_matbench.pdf#page=3"
+        }
+      ]
+    },
+    "persson2010_graphite": {
+      "title": "Thermodynamic and kinetic properties of the Li-graphite system from first-principles calculations",
+      "doi": "10.1103/PhysRevB.82.125416",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 8,
+      "evidence": [
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 1,
+          "section": "body",
+          "signal": "migration barrier",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/persson2010_graphite.pdf#page=1"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 2,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/persson2010_graphite.pdf#page=2"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 2,
+          "section": "body",
+          "signal": "LDA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/persson2010_graphite.pdf#page=2"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 2,
+          "section": "body",
+          "signal": "migration barrier",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/persson2010_graphite.pdf#page=2"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 2,
+          "section": "body",
+          "signal": "Vienna ab initio simulation package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/persson2010_graphite.pdf#page=2"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 3,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/persson2010_graphite.pdf#page=3"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 3,
+          "section": "body",
+          "signal": "training set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/persson2010_graphite.pdf#page=3"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "migration barrier",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/persson2010_graphite.pdf#page=4"
+        }
+      ]
+    },
+    "shen2024_pymatgen_defects": {
+      "title": "pymatgen-analysis-defects: A Python package for analyzing point defects in crystalline materials",
+      "doi": "10.21105/joss.05941",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 3,
+      "evidence": [
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 1,
+          "section": "body",
+          "signal": "pymatgen",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shen2024_pymatgen_defects.pdf#page=1"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 2,
+          "section": "body",
+          "signal": "pymatgen",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shen2024_pymatgen_defects.pdf#page=2"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 3,
+          "section": "body",
+          "signal": "vasp",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/shen2024_pymatgen_defects.pdf#page=3"
+        }
+      ]
+    },
+    "batatia2025_mace_mp": {
+      "title": "A foundation model for atomistic materials chemistry",
+      "doi": "10.1063/5.0297006",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 11,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 3,
+          "section": "body",
+          "signal": "training dataset",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batatia2025_mace_mp.pdf#page=3"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 4,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batatia2025_mace_mp.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 5,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batatia2025_mace_mp.pdf#page=5"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 5,
+          "section": "body",
+          "signal": "50 ps-long trajectory",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batatia2025_mace_mp.pdf#page=5"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 6,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batatia2025_mace_mp.pdf#page=6"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 6,
+          "section": "body",
+          "signal": "MAE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batatia2025_mace_mp.pdf#page=6"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 6,
+          "section": "body",
+          "signal": "simulations were conducted at4 GPaand 600 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batatia2025_mace_mp.pdf#page=6"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 7,
+          "section": "body",
+          "signal": "NEB",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batatia2025_mace_mp.pdf#page=7"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 8,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batatia2025_mace_mp.pdf#page=8"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 8,
+          "section": "body",
+          "signal": "NEB",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batatia2025_mace_mp.pdf#page=8"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 10,
+          "section": "body",
+          "signal": "CP2K",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/batatia2025_mace_mp.pdf#page=10"
+        }
+      ]
+    },
+    "radova2025_frozen_transfer": {
+      "title": "Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning",
+      "doi": "10.1038/s41524-025-01727-x",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 9,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "machine learning potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/radova2025_frozen_transfer.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "Machine-learned interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/radova2025_frozen_transfer.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/radova2025_frozen_transfer.pdf#page=1"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 3,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/radova2025_frozen_transfer.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "NPT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/radova2025_frozen_transfer.pdf#page=3"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/radova2025_frozen_transfer.pdf#page=4"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "CI-NEB",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/radova2025_frozen_transfer.pdf#page=4"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "climbing image nudged elastic band",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/radova2025_frozen_transfer.pdf#page=4"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "NEB",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/radova2025_frozen_transfer.pdf#page=4"
+        }
+      ]
+    },
+    "bilbrey2025_uq": {
+      "title": "Uncertainty quantification for neural network potential foundation models",
+      "doi": "10.1038/s41524-025-01572-y",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 3,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/bilbrey2025_uq.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/bilbrey2025_uq.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "training set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/bilbrey2025_uq.pdf#page=2"
         }
       ]
     }

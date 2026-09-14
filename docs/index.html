@@ -309,6 +309,10 @@
       const protocolBlock = protocolSteps
         ? `<h3>建议复现步骤</h3><ol>${protocolSteps}</ol><div class="notice">这些步骤是基于论文范围整理的方法路线，不替代原文、补充信息、软件手册和你自己的收敛测试。</div>`
         : '';
+      const resources = (p.resources || []).filter(r => {
+        try { return new URL(r.url).protocol === 'https:'; } catch (_) { return false; }
+      }).map(r => `<li><a target="_blank" rel="noopener noreferrer" href="${escapeHtml(r.url)}">${escapeHtml(r.label)}</a></li>`).join('');
+      const learningBlock = `${p.scope_note ? `<h3>适用范围与迁移边界</h3><p>${escapeHtml(p.scope_note)}</p>` : ''}${resources ? `<h3>代码、数据与复现入口</h3><ul>${resources}</ul>` : ''}`;
       const local = state.literature[p.id] || {};
       const localStatus = local.status === 'downloaded' ? `本地全文：已下载${local.pages ? `，${local.pages}页` : ''}${local.text_chunks ? `，${local.text_chunks}个检索片段` : ''}` : '本地全文：尚未下载';
       const methodRecord = state.methods[p.id] || {};
@@ -322,7 +326,7 @@
         ? `<h3>自动方法证据（待人工核对）</h3><ul>${methods}</ul><div class="notice">这里只显示前 12 条定位信号。用于 INCAR、KPOINTS、分子动力学设置、论文或汇报前，必须回到标注页核对上下文。</div>`
         : `<h3>自动方法证据（待人工核对）</h3><p>当前没有可显示的本地正文方法信号。</p>`;
       const verification = p.wos_uid ? `WOS：${p.wos_uid}` : `书目核验：${p.verification?.doi || '待核验'}；WOS：${p.verification?.wos || '未记录'}`;
-      document.querySelector('#detail').innerHTML = `<div class="eyebrow">${p.year} · ${escapeHtml(p.journal)} · ${escapeHtml(p.document_type)}${p.difficulty ? ` · ${escapeHtml(p.difficulty)}` : ''}</div><h2>${escapeHtml(p.title)}</h2><p>${escapeHtml(authorLine)}</p><p>${escapeHtml(p.summary)}</p><div>${tags}</div>${linkButtons(p)}${protocolBlock}<h3>已抽取证据</h3><ul>${evidence}</ul><h3>知识关系</h3>${relations}${methodBlock}<div class="notice">${escapeHtml(verification)}；${escapeHtml(localStatus)}。论文级证据与全文自动命中仍需回到原文人工核对。</div>`;
+      document.querySelector('#detail').innerHTML = `<div class="eyebrow">${p.year} · ${escapeHtml(p.journal)} · ${escapeHtml(p.document_type)}${p.difficulty ? ` · ${escapeHtml(p.difficulty)}` : ''}</div><h2>${escapeHtml(p.title)}</h2><p>${escapeHtml(authorLine)}</p><p>${escapeHtml(p.summary)}</p><div>${tags}</div>${linkButtons(p)}${learningBlock}${protocolBlock}<h3>已抽取证据</h3><ul>${evidence}</ul><h3>知识关系</h3>${relations}${methodBlock}<div class="notice">${escapeHtml(verification)}；${escapeHtml(localStatus)}。论文级证据与全文自动命中仍需回到原文人工核对。</div>`;
       document.querySelector('#modal').classList.add('open');
     }
     async function ask() {

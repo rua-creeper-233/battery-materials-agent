@@ -15,6 +15,13 @@ from import_wos import merge_records, parse_wos_text  # noqa: E402
 
 
 class AgentTests(unittest.TestCase):
+    def test_mace_finetuning_and_uq_are_retrievable(self) -> None:
+        result = self.agent.search('MACE 微调 不确定性', limit=6)
+        ids = {paper['id'] for paper in result}
+        self.assertIn('radova2025_frozen_transfer', ids)
+        self.assertIn('bilbrey2025_uq', ids)
+        self.assertEqual(self.agent.answer('MACE 微调流程')['task'], 'mlp')
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.agent = BatteryResearchAgent()
