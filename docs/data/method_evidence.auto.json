@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-14T08:25:54.278042+00:00",
+  "generated_at": "2026-09-14T09:50:29.920394+00:00",
   "review_status": "auto_extracted_needs_human_review",
   "notice_zh": "自动结果只用于定位原文；用于计算输入、论文或汇报前，必须打开对应 PDF 页人工核对。",
   "rules_version": 1,
-  "fulltext_paper_count": 49,
+  "fulltext_paper_count": 50,
   "fulltext_paper_ids": [
     "aydinol1997_voltage",
     "baktash2020_argyrodite_aimd",
@@ -53,6 +53,7 @@
     "wu2025_spe_aimd_ms",
     "xie2018_cgcnn",
     "zhang2020_dpgen",
+    "zhang2025_sei_phasefield_ms",
     "zhou2004_dftu_voltage"
   ],
   "papers": {
