@@ -109,6 +109,7 @@
     @media (max-width: 950px) { main { grid-template-columns: 1fr; } aside { position: static; max-height: none; } .paper-list { max-height: 480px; } }
     @media (max-width: 620px) { .shell { padding: 18px; } header { align-items: start; flex-direction: column; } .header-actions { justify-items: start; } .stats { justify-content: flex-start; } .composer, .form-grid { grid-template-columns: 1fr; } .form-grid .wide { grid-column: auto; } button { min-height: 48px; } .workspace { padding: 17px; } }
   </style>
+  <link rel="stylesheet" href="./tutorials.css" />
 </head>
 <body>
   <div class="shell">
@@ -173,6 +174,14 @@
         <div id="paperList" class="paper-list"></div>
       </aside>
     </main>
+    <section id="tutorials" class="panel tutorials" aria-labelledby="tutorialTitle">
+      <div class="eyebrow">LEARN BY DOING · 从第一个模型开始</div>
+      <h2 id="tutorialTitle">MS / VASP 入门小课堂</h2>
+      <p class="tutorial-intro">先认识界面和文件，再跑通一个小算例。每一步都有示意图、操作提示和验收目标；无需查阅论文，也无需连接本地服务。</p>
+      <div class="tutorial-switch" role="group" aria-label="选择教程"><button type="button" data-course="ms" aria-pressed="true">MS · 图形界面建模</button><button type="button" data-course="vasp" aria-pressed="false">VASP · 第一性原理计算</button></div>
+      <div id="tutorialContent"></div>
+      <p class="tutorial-footnote">图为本站绘制的教学示意，非软件截图；菜单位置随版本变化。算例用于学习，未在本站实际运行。MS 相应模块与 VASP 运行均需已有授权及计算环境。</p>
+    </section>
   </div>
 
   <div id="modal" class="modal" aria-hidden="true">
@@ -235,6 +244,7 @@
     </div>
   </div>
 
+  <script src="./tutorials.js"></script>
   <script src="./browser_agent.js"></script>
   <script>
     const staticMode = location.protocol === "file:" || location.hostname.endsWith("github.io");

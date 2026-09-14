@@ -22,6 +22,8 @@ def main() -> None:
 
     copy(ROOT / "static" / "index.html", DOCS / "index.html")
     copy(ROOT / "static" / "browser_agent.js", DOCS / "browser_agent.js")
+    for asset in ("tutorials.js", "tutorials.css"):
+        copy(ROOT / "static" / asset, DOCS / asset)
     copy(papers_path, DOCS / "data" / "papers.json")
     copy(ROOT / "data" / "paper_tags.json", DOCS / "data" / "paper_tags.json")
     copy(ROOT / "data" / "search_config.json", DOCS / "data" / "search_config.json")
