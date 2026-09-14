@@ -2,9 +2,9 @@
 
 > 所有条目均为“自动抽取、待人工核对”。它们是原文定位器，不是可直接复制到 VASP/MD 输入文件的最终参数。
 
-- 本地有正文的论文：46
-- 抽取到至少一条方法信号的论文：44
-- 方法信号总数：353
+- 本地有正文的论文：49
+- 抽取到至少一条方法信号的论文：47
+- 方法信号总数：365
 - 参考文献区：已排除
 - 每篇每类上限：3 条
 - 公开数据只保存短方法信号与页码，不保存连续正文上下文
@@ -290,11 +290,11 @@
 
 ### Effect of the Electric Double Layer (EDL) in Multicomponent Electrolyte Reduction and Solid Electrolyte Interphase (SEI) Formation in Lithium Batteries
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 分子动力学条件：p.3 `4.0 ns, whose trajectory`；p.3 `NVT`
 
 ### Unraveling the Hydrolysis Mechanism of LiPF6 in Electrolyte of Lithium Ion Batteries
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 分子动力学条件：p.2 `MD simulation at 298 K`；p.3 `simulations at 298 K`；p.6 `MD simulation at 298 K`
 
 ### A polymeric artificial solid electrolyte interface dramatically enhances lithium-ion transport
 
@@ -317,7 +317,9 @@
 
 ### Lithium-electrolyte solvation and reaction in the electrolyte of a lithium ion battery: A ReaxFF reactive force field study
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.2 `training data`
+- 泛函与电子结构近似：p.4 `scan`；p.9 `scan`；p.10 `scan`
+- 分子动力学条件：p.8 `NVT`；p.8 `simulations at 300 K`；p.8 `time step of 0.25 fs`
 
 ### Review on modeling of the anode solid electrolyte interphase (SEI) for lithium-ion batteries
 

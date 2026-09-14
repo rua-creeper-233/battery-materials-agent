@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-14T04:42:54.801094+00:00",
+  "generated_at": "2026-09-14T08:25:54.278042+00:00",
   "review_status": "auto_extracted_needs_human_review",
   "notice_zh": "自动结果只用于定位原文；用于计算输入、论文或汇报前，必须打开对应 PDF 页人工核对。",
   "rules_version": 1,
-  "fulltext_paper_count": 46,
+  "fulltext_paper_count": 49,
   "fulltext_paper_ids": [
     "aydinol1997_voltage",
     "baktash2020_argyrodite_aimd",
@@ -21,6 +21,7 @@
     "he2018_aimd_statistics",
     "henkelman2000_cineb",
     "himanen2020_dscribe",
+    "hossain2020_reaxff_electrolyte",
     "jacobs2025_mlip_guide",
     "jain2013_materials_project",
     "larsen2017_ase",
@@ -37,6 +38,7 @@
     "sawada2024_nnp_sse",
     "sendek2017_sse_screening",
     "shen2024_pymatgen_defects",
+    "sheng2024_lipf6_hydrolysis_ms",
     "shi2013_sei_li2co3",
     "shi2021_reaxff_battery_review",
     "smidstrup2014_idpp",
@@ -47,6 +49,7 @@
     "wang2018_deepmdkit",
     "wang2018_sei_modeling_review",
     "wang2021_vaspkit",
+    "wu2023_edl_ms",
     "wu2025_spe_aimd_ms",
     "xie2018_cgcnn",
     "zhang2020_dpgen",
@@ -3813,16 +3816,68 @@
       "doi": "10.1021/jacs.2c11807",
       "wos_uid": null,
       "review_status": "auto_extracted_needs_human_review",
-      "evidence_count": 0,
-      "evidence": []
+      "evidence_count": 2,
+      "evidence": [
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "4.0 ns, whose trajectory",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wu2023_edl_ms.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wu2023_edl_ms.pdf#page=3"
+        }
+      ]
     },
     "sheng2024_lipf6_hydrolysis_ms": {
       "title": "Unraveling the Hydrolysis Mechanism of LiPF6 in Electrolyte of Lithium Ion Batteries",
       "doi": "10.1021/acs.nanolett.3c01682",
       "wos_uid": null,
       "review_status": "auto_extracted_needs_human_review",
-      "evidence_count": 0,
-      "evidence": []
+      "evidence_count": 3,
+      "evidence": [
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 2,
+          "section": "body",
+          "signal": "MD simulation at 298 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/sheng2024_lipf6_hydrolysis_ms.pdf#page=2"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "simulations at 298 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/sheng2024_lipf6_hydrolysis_ms.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 6,
+          "section": "body",
+          "signal": "MD simulation at 298 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/sheng2024_lipf6_hydrolysis_ms.pdf#page=6"
+        }
+      ]
     },
     "li2024_polymeric_asei_ms": {
       "title": "A polymeric artificial solid electrolyte interface dramatically enhances lithium-ion transport",
@@ -3973,8 +4028,79 @@
       "doi": "10.1063/5.0003333",
       "wos_uid": null,
       "review_status": "auto_extracted_needs_human_review",
-      "evidence_count": 0,
-      "evidence": []
+      "evidence_count": 7,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/hossain2020_reaxff_electrolyte.pdf#page=2"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "scan",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/hossain2020_reaxff_electrolyte.pdf#page=4"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 8,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/hossain2020_reaxff_electrolyte.pdf#page=8"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 8,
+          "section": "body",
+          "signal": "simulations at 300 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/hossain2020_reaxff_electrolyte.pdf#page=8"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 8,
+          "section": "body",
+          "signal": "time step of 0.25 fs",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/hossain2020_reaxff_electrolyte.pdf#page=8"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 9,
+          "section": "body",
+          "signal": "scan",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/hossain2020_reaxff_electrolyte.pdf#page=9"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 10,
+          "section": "body",
+          "signal": "scan",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/hossain2020_reaxff_electrolyte.pdf#page=10"
+        }
+      ]
     },
     "wang2018_sei_modeling_review": {
       "title": "Review on modeling of the anode solid electrolyte interphase (SEI) for lithium-ion batteries",

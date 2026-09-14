@@ -1,8 +1,8 @@
 # 本地全文与证据索引审计
 
-审计时间：2026-09-14T04:42:54+00:00
+审计时间：2026-09-14T08:25:41+00:00
 
-结论：证据库共 52 篇，DOI/出版社记录已核验 52/52；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 46/52 篇，共 2914 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
+结论：证据库共 52 篇，DOI/出版社记录已核验 52/52；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 49/52 篇，共 3027 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
 
 所有保留文件均通过 PDF 解析、标题匹配、正文/补充材料区分、SHA-256 和重复文件检查。M3GNet 的补充材料单独放在 `literature/supplementary/`，不进入正文索引。
 
@@ -51,24 +51,21 @@
 | 41 | 2025 | A foundation model for atomistic materials chemistry | 已下载正文 | 153 | 324 | 1.0 | vetted_public_author_or_repository_copy |
 | 42 | 2025 | Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning | 已下载正文 | 11 | 46 | 1.0 | vetted_public_author_or_repository_copy |
 | 43 | 2025 | Uncertainty quantification for neural network potential foundation models | 已下载正文 | 8 | 31 | 0.857 | vetted_public_author_or_repository_copy |
-| 44 | 2023 | Effect of the Electric Double Layer (EDL) in Multicomponent Electrolyte Reduction and Solid Electrolyte Interphase (SEI) Formation in Lithium Batteries | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
-| 45 | 2024 | Unraveling the Hydrolysis Mechanism of LiPF6 in Electrolyte of Lithium Ion Batteries | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 44 | 2023 | Effect of the Electric Double Layer (EDL) in Multicomponent Electrolyte Reduction and Solid Electrolyte Interphase (SEI) Formation in Lithium Batteries | 已下载正文 | 12 | 50 | 1.0 | official_open_access_pdf_via_user_authorized_xjtu_access |
+| 45 | 2024 | Unraveling the Hydrolysis Mechanism of LiPF6 in Electrolyte of Lithium Ion Batteries | 已下载正文 | 8 | 25 | 0.857 | user_authorized_xjtu_institutional_access |
 | 46 | 2024 | A polymeric artificial solid electrolyte interface dramatically enhances lithium-ion transport | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 47 | 2025 | Reactivity of Carbonyl-Containing Solid Polymer Electrolytes in Lithium–Metal Batteries from First-Principles Molecular Dynamics | 已下载正文 | 11 | 40 | 1.0 | vetted_public_author_or_repository_copy |
 | 48 | 2025 | Simulating solid electrolyte interphase formation spanning 10^8 time scales with an atomically informed phase-field model | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 49 | 2025 | De-solvation of heteroalkali cations enabling stable solid electrolyte interphase for dendrite-free lithium metal batteries | 已下载正文 | 30 | 57 | 1.0 | vetted_public_author_or_repository_copy |
-| 50 | 2020 | Lithium-electrolyte solvation and reaction in the electrolyte of a lithium ion battery: A ReaxFF reactive force field study | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 50 | 2020 | Lithium-electrolyte solvation and reaction in the electrolyte of a lithium ion battery: A ReaxFF reactive force field study | 已下载正文 | 15 | 38 | 1.0 | user_authorized_xjtu_institutional_access |
 | 51 | 2018 | Review on modeling of the anode solid electrolyte interphase (SEI) for lithium-ion batteries | 已下载正文 | 26 | 113 | 1.0 | vetted_public_author_or_repository_copy |
 | 52 | 2021 | Application of Reaction Force Field Molecular Dynamics in Lithium Batteries | 已下载正文 | 5 | 22 | 1.0 | openalex_open_access_pdf |
 
 ## 尚未保存的正文
 
 - Empowering materials science with VASPKIT: a toolkit for enhanced simulation and analysis，DOI `10.1038/s41596-025-01160-w`：本地未保存正文，使用 WOS/DOI 回退。
-- Effect of the Electric Double Layer (EDL) in Multicomponent Electrolyte Reduction and Solid Electrolyte Interphase (SEI) Formation in Lithium Batteries，DOI `10.1021/jacs.2c11807`：本地未保存正文，使用 WOS/DOI 回退。
-- Unraveling the Hydrolysis Mechanism of LiPF6 in Electrolyte of Lithium Ion Batteries，DOI `10.1021/acs.nanolett.3c01682`：本地未保存正文，使用 WOS/DOI 回退。
 - A polymeric artificial solid electrolyte interface dramatically enhances lithium-ion transport，DOI `10.1039/d4cc03688c`：本地未保存正文，使用 WOS/DOI 回退。
 - Simulating solid electrolyte interphase formation spanning 10^8 time scales with an atomically informed phase-field model，DOI `10.1039/d5ee01030f`：本地未保存正文，使用 WOS/DOI 回退。
-- Lithium-electrolyte solvation and reaction in the electrolyte of a lithium ion battery: A ReaxFF reactive force field study，DOI `10.1063/5.0003333`：本地未保存正文，使用 WOS/DOI 回退。
 
 ## 使用边界
 
