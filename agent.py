@@ -17,6 +17,7 @@ from typing import Any
 
 from library_store import USER_PAPERS, load_library_papers
 from paper_tagging import attach_tags
+from rag import EvidenceRAG
 
 
 ROOT = Path(__file__).resolve().parent
@@ -62,6 +63,26 @@ ALIASES = {
     "入门": ["starter", "protocol", "vaspkit", "pymatgen", "ase", "sumo", "lammps", "dscribe", "matbench"],
     "声子": ["phonon", "phonopy", "finite displacement", "force constants"],
     "后处理": ["post-processing", "vaspkit", "sumo", "band structure", "dos"],
+    "反应力场": ["reaxff", "reactive molecular dynamics", "force-field training"],
+    "溶剂化": ["solvation", "coordination", "radial distribution"],
+    "电解液": ["electrolyte", "solvent", "salt"],
+    "双电层": ["electric double layer", "edl", "charged interface"],
+    "相场": ["phase-field", "continuum modeling", "sei growth"],
+    "多尺度": ["multiscale", "phase-field", "continuum modeling"],
+    "聚合物电解质": ["polymer electrolyte", "solid polymer electrolyte", "spe"],
+    "水解": ["hydrolysis", "water-containing electrolyte"],
+    "厚度演化": ["phase-field", "sei growth", "continuum modeling"],
+    "纳秒到秒": ["multiscale", "phase-field", "time scales"],
+    "点缺陷": ["point defect", "pymatgen-analysis-defects", "defect formation energy"],
+    "一万多个晶体": ["high-throughput", "screening", "12,000", "classifier"],
+    "小数据": ["small data", "few-shot", "fine-tuning", "transfer learning"],
+    "迁移学习": ["transfer learning", "fine-tuning", "MACE-freeze"],
+    "风险判断": ["uncertainty", "calibration", "overconfidence"],
+    "锂硫": ["lithium-sulfur", "li-s", "reaxff"],
+    "硅负极": ["silicon anode", "reaxff"],
+    # The suite name should match every MS paper without guessing a particular
+    # module.  Module names stay as explicit user terms when they matter.
+    "materials studio": ["biovia materials studio"],
     "dft": ["density functional", "first-principles", "total energy"],
     "vasp": ["incar", "kpoints", "potcar", "plane-wave"],
     "aimd": ["ab initio molecular dynamics", "molecular dynamics", "msd", "diffusion"],
@@ -99,6 +120,7 @@ class BatteryResearchAgent:
         extra_data_path: str | Path | None = USER_PAPERS,
         search_config_path: str | Path | None = DEFAULT_SEARCH_CONFIG,
         search_weights: dict[str, float] | None = None,
+        rag: EvidenceRAG | None = None,
     ):
         self.data_path = Path(data_path)
         self.extra_data_path = Path(extra_data_path) if extra_data_path else None
@@ -108,6 +130,7 @@ class BatteryResearchAgent:
         )
         self.search_config = self._load_search_config(search_weights)
         self.search_weights = self.search_config["weights"]
+        self.rag = rag or EvidenceRAG.from_environment()
         self._search_fields = [self._paper_search_fields(paper) for paper in self.papers]
         self._documents = [_flatten(paper).lower() for paper in self.papers]
         self._doc_tokens = [Counter(_tokens(document)) for document in self._documents]
@@ -458,7 +481,7 @@ class BatteryResearchAgent:
                 edges.append({"source": source_id, "relation": relation["relation"], "target": target_id, "paper": paper_id})
         return {"nodes": list(nodes.values()), "edges": edges}
 
-    def answer(self, question: str, limit: int = 5) -> dict[str, Any]:
+    def answer(self, question: str, limit: int = 5, use_rag: bool = True) -> dict[str, Any]:
         question = question.strip()
         if not question:
             question = "电池材料计算有哪些核心任务？"
@@ -493,6 +516,13 @@ class BatteryResearchAgent:
             "",
             lead,
         ]
+        rag_result = (
+            self.rag.generate(question, papers, fulltext_hits)
+            if use_rag
+            else {**self.rag.status(), "used": False, "valid_citations": False, "reason": "disabled_for_request"}
+        )
+        if rag_result.get("used"):
+            lines += ["", "### RAG 综合回答", "", rag_result["answer_markdown"]]
         if not papers:
             lines += [
                 "",
@@ -544,6 +574,7 @@ class BatteryResearchAgent:
             "graph": self.graph(papers),
             "fulltext_hits": fulltext_hits,
             "retrieval": query_info,
+            "rag": {key: value for key, value in rag_result.items() if key != "answer_markdown"},
             "provenance": {
                 "data_file": str(self.data_path),
                 "paper_count": len(self.papers),

@@ -124,6 +124,7 @@
           <span class="stat" id="starterStat">方法路线 · 检测中</span>
           <span class="stat" id="zoteroStat">Zotero 深链 · 检测中</span>
           <span class="stat" id="apiStat">本地服务 · 未连接</span>
+          <span class="stat" id="ragStat">RAG · 未配置</span>
           <span class="stat">DFT → MD → AI4S</span>
         </div>
         <div class="header-buttons">
@@ -382,7 +383,12 @@
         } catch (_) {
           data = window.BatteryBrowserAgent.answer(question, state.papers, state.searchConfig);
         }
-        target.innerHTML = `<div class="notice">${escapeHtml(data.provenance.wos_note)}</div>${markdown(data.answer_markdown)}<div class="evidence-grid">${data.papers.map(paperCard).join('')}</div>`;
+        const ragLabel = data.rag?.used
+          ? `RAG 已启用 · ${data.rag.model || data.rag.provider || '外部模型'} · 引用校验通过`
+          : data.rag?.enabled
+            ? `RAG 已配置但本次回退到规则回答：${data.rag.reason || '未通过验证'}`
+            : '当前为可解释检索＋规则回答；配置本地/远程模型后启用证据约束 RAG。';
+        target.innerHTML = `<div class="notice">${escapeHtml(data.provenance.wos_note)}<br>${escapeHtml(ragLabel)}</div>${markdown(data.answer_markdown)}<div class="evidence-grid">${data.papers.map(paperCard).join('')}</div>`;
       } catch (error) { target.innerHTML = `<div class="notice">${escapeHtml(error.message)}</div>`; }
       finally { btn.disabled = false; btn.textContent = '检索并生成回答'; }
     }
@@ -479,6 +485,13 @@
           ? await apiFetch('/api/search-config', {cache:'no-store'}).then(r => r.json())
           : await fetch('./data/search_config.json', {cache:'no-store'}).then(r => r.json());
       } catch (_) { state.searchConfig = {}; }
+      try {
+        const health = hasBackend() ? await apiFetch('/api/health', {cache:'no-store'}).then(r => r.json()) : null;
+        const rag = health?.rag || {};
+        const ragStat = document.querySelector('#ragStat');
+        ragStat.textContent = rag.enabled ? `RAG · ${rag.model || '已连接'}` : 'RAG · 未配置';
+        ragStat.classList.toggle('connected', Boolean(rag.enabled));
+      } catch (_) { document.querySelector('#ragStat').textContent = 'RAG · 未配置'; }
       try {
         const zoteroPayload = localMode
           ? await apiFetch('/api/zotero-links', {cache:'no-store'}).then(r => r.json())

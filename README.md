@@ -4,11 +4,12 @@
 
 ## 当前可用能力
 
-- 证据库共 43 篇：16 篇核心论文完成 DOI 与 WOS Core Collection 核验，另有 27 篇方法路线论文完成 DOI 与出版社记录核验；
-- 42/43 篇已有用户合法取得或公开可访问的本地正文，共 2682 个带页码文本块；仅 Nature Protocols 的 VASPKIT 2025 论文仍明确标记为全文待获取；
+- 证据库共 52 篇：16 篇核心论文完成 DOI 与 WOS Core Collection 核验，另有 36 篇完成 DOI 与出版社/权威索引记录核验；
+- 46/52 篇已有用户合法取得或公开可访问的本地正文，共 2914 个带页码文本块；缺失项明确标记并回退到 DOI/出版社入口；
 - 中文检索电压、稳定性、扩散、固态电解质、界面、高通量和机器学习势；
 - 论文卡片显示 `MS / DFT / MD / VASP` 与“方法论文 / 进展论文”标签，并支持右栏一键筛选；
 - 检索采用可解释的字段加权、同义词扩展与 `tag:` / `type:` 语法，回答会显示查询理解和逐篇命中理由；无匹配时不再用最新论文凑答案；
+- 提供可选的证据约束 RAG：模型只收到检索后的元数据与短页码摘录，必须返回 `[P1]` 格式引用；引用缺失或越界时自动回退到规则回答；
 - 回答中给出论文级证据、DOI、精确 WOS 记录和本地全文页码；
 - 为 DFT / NEB / AIMD / MLIP 任务生成带质量控制项的工作流；
 - 从本地正文中自动定位软件、泛函、截断能、k 点、超胞、MD 条件、NEB 和机器学习训练信号，并逐条保留 PDF 页码；
@@ -23,6 +24,7 @@
 Windows 下可直接双击：
 
 - `start.bat`：一键启动仅本机使用的网页；
+- `start-rag.bat`：临时输入兼容接口、模型和密钥，启动带证据约束 RAG 的本地网页；
 - `start-share.bat`：一键启动本地服务、临时 HTTPS 隧道并打开 GitHub Pages，供导师临时访问上传和 API。
 
 批处理文件只负责启动和给出明确报错，不会自动安装 Python 包、Cloudflare 客户端或修改系统设置。
@@ -46,6 +48,8 @@ python .\agent.py "如何计算 LGPS 的锂离子扩散系数？"
 ```
 
 本地网页使用 Python 服务后端时，才能打开本地 PDF 和检索全文；GitHub Pages 版只包含论文元数据与规则型问答，不上传 PDF。
+
+RAG 的配置、隐私边界与本机模型示例见 [RAG_SETUP.md](RAG_SETUP.md)。密钥只进入当前启动进程，不写入文件；使用远程模型时，精选元数据和短摘录会离开本机，但 PDF 文件不会被发送。
 
 ## 全文库维护
 
@@ -75,9 +79,11 @@ python .\extract_method_evidence.py
 
 新增 MACE-MP-0（正式发表版2025）、冻结层迁移学习、不确定性量化三篇方法论文。新卡片提供“适用范围与迁移边界”和“代码、数据与复现入口”，并区分原文体系与迁移到电池的建议步骤。
 
-新增可审计标签与检索权重训练：当前 43 篇中，DFT 20 篇、MD 16 篇、VASP 9 篇、方法论文 27 篇、进展论文 16 篇。`MS` 专指 BIOVIA Materials Studio；当前精选元数据没有论文明确把它作为方法使用，因此严格计数为 0，而不是根据背景提及误标。标签规则与命中依据在 `data/paper_tags.json`。
+新增可审计标签与检索权重训练：当前 52 篇中，DFT 28 篇、MD 25 篇、VASP 10 篇、MS 6 篇、方法论文 27 篇、进展论文 25 篇。`MS` 专指论文方法明确使用 BIOVIA Materials Studio 的条目，不能根据背景提及误标。标签规则与命中依据在 `data/paper_tags.json`。
 
-网页现在支持 `tag:DFT`、`tag:MD`、`tag:VASP`、`tag:MS`、`type:方法论文` 和 `type:进展论文`。可编辑的 14 条标注问题位于 `data/search_training.json`，运行 `python train_search.py` 会重新选择字段权重并生成 `data/search_config.json`。这只是检索排序调参，不是大模型微调；完整说明见 [SEARCH_TRAINING.md](SEARCH_TRAINING.md)。
+网页现在支持 `tag:DFT`、`tag:MD`、`tag:VASP`、`tag:MS`、`type:方法论文` 和 `type:进展论文`。`data/search_training.json` 包含 40 条训练问题和 12 条留出问题；运行 `python train_search.py` 会重新选择字段权重并生成 `data/search_config.json`。当前留出集 MRR@5 为 0.9167、Recall@5 为 0.9583、Top-1 为 0.8333；该小集合做过一次词表错误分析，只适合回归，不是独立泛化基准。这是检索排序调参，不是大模型微调；完整说明见 [SEARCH_TRAINING.md](SEARCH_TRAINING.md)。
+
+本轮新增 9 篇电池计算论文：6 篇明确使用 Materials Studio 的电解液、聚合物电解质、人工 SEI、相场多尺度和添加剂案例，另有 1 篇电解液 ReaxFF 参数化论文及 2 篇 SEI/ReaxFF 综述。每条均保存 DOI、作者、期刊、方法证据与核验来源；全文以 [FULLTEXT_AUDIT.md](FULLTEXT_AUDIT.md) 的实际状态为准。
 
 导出全库书目供 Zotero 导入：`python export_ris.py --all-curated`。输出为 `exports/battery_materials_all_curated.ris`，只有实际存在 WOS UT 的16篇会标注WOS核验，其余保留DOI/出版社核验状态。导出不会自动写入Zotero，不含PDF。
 
@@ -111,7 +117,7 @@ Ceder et al. 1998 与 Shi et al. 2013 的 PDF 已由用户从有权访问的来�
 | `/api/capabilities` | GET | 查询上传限制、关键词接口版本和隐私策略 |
 | `/api/upload` | POST multipart | 上传 PDF、补充元数据、建立索引并返回关键词 |
 | `/api/keywords` | POST JSON | 按 `text` 或 `paper_id` 提取关键词，当前版本 `v1` |
-| `/api/chat` | POST JSON | 使用本地全文库回答问题 |
+| `/api/chat` | POST JSON | 检索本地证据并回答；配置模型后可用引用校验 RAG，传 `use_rag:false` 可关闭 |
 | `/api/paper-tags` | GET | 读取标签定义、计数与逐篇标签依据 |
 | `/api/search-config` | GET | 读取当前可解释检索权重与训练指标 |
 

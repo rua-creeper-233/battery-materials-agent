@@ -9,12 +9,13 @@
     "进展论文": "本库核心电池材料计算研究集"
   },
   "counts": {
-    "DFT": 20,
-    "MD": 16,
-    "VASP": 9,
+    "DFT": 28,
+    "MD": 25,
+    "MS": 6,
+    "VASP": 10,
     "方法论文": 27,
-    "综述": 4,
-    "进展论文": 16
+    "综述": 6,
+    "进展论文": 25
   },
   "papers": {
     "urban2016_computational_review": {
@@ -710,6 +711,233 @@
         "方法论文"
       ],
       "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "wu2023_edl_ms": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD",
+        "MS"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD",
+        "MS"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "molecular dynamics"
+        ],
+        "MS": [
+          "Materials Studio"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "sheng2024_lipf6_hydrolysis_ms": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD",
+        "MS"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD",
+        "MS"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "molecular dynamics"
+        ],
+        "MS": [
+          "Materials Studio"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "li2024_polymeric_asei_ms": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "MD",
+        "MS"
+      ],
+      "display_tags": [
+        "进展论文",
+        "MD",
+        "MS"
+      ],
+      "tag_basis": {
+        "MD": [
+          "molecular dynamics"
+        ],
+        "MS": [
+          "Materials Studio"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "wu2025_spe_aimd_ms": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD",
+        "VASP",
+        "MS"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD",
+        "VASP",
+        "MS"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "ab initio",
+          "DFT",
+          "First-Principles"
+        ],
+        "MD": [
+          "AIMD",
+          "Molecular Dynamics",
+          "molecular dynamics"
+        ],
+        "VASP": [
+          "VASP"
+        ],
+        "MS": [
+          "Materials Studio"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "zhang2025_sei_phasefield_ms": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD",
+        "MS"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD",
+        "MS"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "molecular dynamics"
+        ],
+        "MS": [
+          "Materials Studio"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "chen2025_heteroalkali_ms": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD",
+        "MS"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD",
+        "MS"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "molecular dynamics"
+        ],
+        "MS": [
+          "Materials Studio"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "hossain2020_reaxff_electrolyte": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "wang2018_sei_modeling_review": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "综述",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "AIMD",
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "shi2021_reaxff_battery_review": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "综述",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "Molecular Dynamics",
+          "molecular dynamics"
+        ]
+      },
       "tag_policy": "curated_metadata_v1"
     }
   }

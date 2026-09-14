@@ -1,8 +1,24 @@
-# 43 篇论文真实性与分级核验
+# 52 篇论文真实性与分级核验
 
-核验日期：2026-09-14（新增3篇；既有40篇保留原核验记录）
+核验日期：2026-09-14（本轮新增9篇；既有43篇保留原核验记录）
 
-结论：当前 43 条均已核对 DOI 与出版社/正式期刊记录。原有 16 篇核心论文还在华南师范大学机构会话下以 DOI 精确检索过 Web of Science Core Collection，并取得 16/16 个唯一 UT；其余 27 篇方法路线论文没有冒充为 WOS 已核验，状态明确记录为 `not_checked`。这里的书目核验不代表出版社 PDF 都可无条件下载。
+结论：当前 52 条均已核对 DOI 与出版社/权威索引记录。原有 16 篇核心论文还在华南师范大学机构会话下以 DOI 精确检索过 Web of Science Core Collection，并取得 16/16 个唯一 UT；其余 36 篇没有冒充为 WOS 已核验，状态明确记录为 `not_checked`。这里的书目核验不代表出版社 PDF 都可无条件下载。
+
+## 2026-09-14 新增：Materials Studio、SEI 与 ReaxFF
+
+| 论文 | DOI / 核验入口 | 纳入原因 |
+|---|---|---|
+| Wu et al., 2023. Effect of the Electric Double Layer… | [JACS](https://doi.org/10.1021/jacs.2c11807) | Forcite/COMPASS III 电解液界面 MD＋DFT |
+| Sheng et al., 2024. Unraveling the Hydrolysis Mechanism of LiPF6… | [Nano Letters](https://doi.org/10.1021/acs.nanolett.3c01682) | Forcite/COMPASS II 溶剂化与水解 |
+| Li et al., 2024. A polymeric artificial solid electrolyte interface… | [ChemComm](https://doi.org/10.1039/d4cc03688c) | Materials Studio/Amorphous Cell 人工 SEI |
+| Wu et al., 2025. Reactivity of Carbonyl-Containing Solid Polymer Electrolytes… | [ACS APM](https://doi.org/10.1021/acsapm.4c03883) | Forcite 预平衡＋VASP AIMD |
+| Zhang et al., 2025. Simulating solid electrolyte interphase formation… | [EES](https://doi.org/10.1039/d5ee01030f) | MS 扩散参数＋DFT＋相场/COMSOL |
+| Chen et al., 2025. De-solvation of heteroalkali cations… | [Nature Communications](https://doi.org/10.1038/s41467-025-66197-7) | Forcite/COMPASS III＋DMol3 |
+| Hossain et al., 2020. Lithium-electrolyte solvation and reaction… | [JCP](https://doi.org/10.1063/5.0003333) | DFT 数据参数化电解液 ReaxFF |
+| Wang et al., 2018. Review on modeling of the anode SEI… | [npj Computational Materials](https://doi.org/10.1038/s41524-018-0064-0) | DFT/AIMD/经典与反应 MD/连续体的 SEI 综述 |
+| Shi et al., 2021. Application of Reaction Force Field Molecular Dynamics… | [Frontiers](https://doi.org/10.3389/fchem.2020.634379) | 锂硫、硅负极、电解液与 SEI 的 ReaxFF 综述 |
+
+六篇 `MS` 标签均由论文 Methods 或补充信息中的软件/模块记录支持，不以标题关键词猜测。新增条目的出版社、PubMed/OpenAlex 或机构仓储来源已逐条记录在 `data/papers.json` 的 `verification.sources`；其中 4 篇已取得并校验公开正文，其余 5 篇只提供 DOI/出版社回退。
 
 ## 2026-09-14 新增：预训练、微调和不确定性
 
@@ -73,6 +89,6 @@
 
 ## “已核验”不等于什么
 
-- 不等于 40 篇都可以免费获得出版社 PDF；全文权限取决于开放获取、作者公开稿或学校订阅。
+- 不等于 52 篇都可以免费获得出版社 PDF；全文权限取决于开放获取、作者公开稿或学校订阅。
 - 不等于每篇都是任何具体问题的唯一最佳论文；它们是覆盖电压、扩散、界面、固态电解质、高通量和机器学习势的首批方法学语料。
 - 不等于摘要和正文中的结论已经复现；计算参数与数值仍需从原文、补充信息和实际复算中验证。

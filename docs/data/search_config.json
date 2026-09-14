@@ -2,19 +2,29 @@
   "schema_version": 1,
   "mode": "explainable_weighted_retrieval",
   "trained_on": "data/search_training.json",
-  "training_examples": 14,
-  "held_out_examples": 0,
-  "warning": "Small in-library relevance set; retrieval weight tuning only, not LLM training or an unbiased benchmark.",
-  "objective": 0.883988,
+  "training_examples": 40,
+  "held_out_examples": 12,
+  "warning": "Small in-library relevance set; retrieval weight tuning only, not LLM training. The held-out set was used once for manual alias error analysis, so it is a regression set rather than an untouched production benchmark.",
+  "objective": 0.932208,
+  "training_metrics": {
+    "mrr_at_5": 0.95,
+    "recall_at_5": 0.899167,
+    "top1_accuracy": 0.925
+  },
+  "held_out_metrics": {
+    "mrr_at_5": 0.916667,
+    "recall_at_5": 0.958333,
+    "top1_accuracy": 0.833333
+  },
   "metrics": {
-    "mrr_at_5": 0.928571,
-    "recall_at_5": 0.80119,
-    "top1_accuracy": 0.928571
+    "mrr_at_5": 0.916667,
+    "recall_at_5": 0.958333,
+    "top1_accuracy": 0.833333
   },
   "weights": {
-    "title": 4.0,
+    "title": 6.0,
     "role": 4.5,
-    "methods": 7.0,
+    "methods": 3.5,
     "tags": 3.0,
     "systems_properties": 2.5,
     "summary_evidence": 2.0,

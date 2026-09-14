@@ -140,6 +140,7 @@ class Handler(BaseHTTPRequestHandler):
                     "fulltext_papers": len({row["paper_id"] for row in AGENT.fulltext_chunks}),
                     "fulltext_chunks": len(AGENT.fulltext_chunks),
                     "method_evidence_signals": sum(int(row.get("evidence_count", 0)) for row in methods.values()) if isinstance(methods, dict) else 0,
+                    "rag": AGENT.rag.status(),
                     "public_api": self.config.public_api,
                 }
             )
@@ -150,6 +151,7 @@ class Handler(BaseHTTPRequestHandler):
                     "api_version": "v1",
                     "upload": {"endpoint": "/api/upload", "max_pdf_bytes": MAX_PDF_BYTES, "auth": "bearer-when-tunneled"},
                     "keywords": {"endpoint": "/api/keywords", "version": KEYWORDS.api_version, "provider": KEYWORDS.provider},
+                    "rag": {"chat_endpoint": "/api/chat", **AGENT.rag.status()},
                     "privacy": {"zotero_links": "loopback-only", "pdf_download": "loopback-only"},
                 }
             )
@@ -272,7 +274,8 @@ class Handler(BaseHTTPRequestHandler):
                 payload = self._read_json_body(100_000)
                 question = str(payload.get("question", "")).strip()
                 limit = min(max(int(payload.get("limit", 5)), 1), 10)
-                result = AGENT.answer(question, limit=limit)
+                use_rag = payload.get("use_rag", True) is not False
+                result = AGENT.answer(question, limit=limit, use_rag=use_rag)
                 if not self._is_local_request():
                     result["fulltext_hits"] = []
                     result["answer_markdown"] = re.sub(

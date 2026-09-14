@@ -2,9 +2,9 @@
 
 > 所有条目均为“自动抽取、待人工核对”。它们是原文定位器，不是可直接复制到 VASP/MD 输入文件的最终参数。
 
-- 本地有正文的论文：42
-- 抽取到至少一条方法信号的论文：41
-- 方法信号总数：337
+- 本地有正文的论文：46
+- 抽取到至少一条方法信号的论文：44
+- 方法信号总数：353
 - 参考文献区：已排除
 - 每篇每类上限：3 条
 - 公开数据只保存短方法信号与页码，不保存连续正文上下文
@@ -287,3 +287,43 @@
 ### Uncertainty quantification for neural network potential foundation models
 
 - 机器学习训练设置：p.1 `training data`；p.2 `training data`；p.2 `training set`
+
+### Effect of the Electric Double Layer (EDL) in Multicomponent Electrolyte Reduction and Solid Electrolyte Interphase (SEI) Formation in Lithium Batteries
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Unraveling the Hydrolysis Mechanism of LiPF6 in Electrolyte of Lithium Ion Batteries
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### A polymeric artificial solid electrolyte interface dramatically enhances lithium-ion transport
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Reactivity of Carbonyl-Containing Solid Polymer Electrolytes in Lithium–Metal Batteries from First-Principles Molecular Dynamics
+
+- 泛函与电子结构近似：p.3 `PAW`；p.3 `PBE`；p.3 `projector augmented wave`
+- 分子动力学条件：p.3 `NVT`；p.3 `simulation temperature at 400 K`
+- 计算软件：p.3 `VASP`；p.3 `Vienna Ab initio Simulation Package`
+
+### Simulating solid electrolyte interphase formation spanning 10^8 time scales with an atomically informed phase-field model
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### De-solvation of heteroalkali cations enabling stable solid electrolyte interphase for dendrite-free lithium metal batteries
+
+- 泛函与电子结构近似：p.12 `scan`
+- 分子动力学条件：p.24 `0.1 ps equilibration`；p.24 `NVT`；p.24 `time step of 1.0 fs`
+
+### Lithium-electrolyte solvation and reaction in the electrolyte of a lithium ion battery: A ReaxFF reactive force field study
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Review on modeling of the anode solid electrolyte interphase (SEI) for lithium-ion batteries
+
+- 泛函与电子结构近似：p.7 `PBE`；p.13 `scan`；p.14 `HSE`
+- 扩散与迁移势垒方法：p.15 `migration barrier`；p.17 `Arrhenius relation`
+
+### Application of Reaction Force Field Molecular Dynamics in Lithium Batteries
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。

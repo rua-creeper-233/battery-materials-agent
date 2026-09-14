@@ -42,6 +42,18 @@ USER_AGENT = (
 # unless the article's open licence is clear and the PDF is independently
 # checked against the target title.
 PUBLIC_PDF_OVERRIDES: dict[str, list[str]] = {
+    "wu2025_spe_aimd_ms": [
+        "https://uu.diva-portal.org/smash/get/diva2%3A1959874/FULLTEXT01.pdf",
+    ],
+    "zhang2025_sei_phasefield_ms": [
+        "https://pubs.rsc.org/en/content/articlepdf/2025/ee/d5ee01030f",
+    ],
+    "chen2025_heteroalkali_ms": [
+        "https://www.nature.com/articles/s41467-025-66197-7_reference.pdf",
+    ],
+    "wang2018_sei_modeling_review": [
+        "https://www.nature.com/articles/s41524-018-0064-0.pdf",
+    ],
     "batatia2025_mace_mp": ["https://arxiv.org/pdf/2401.00096"],
     "radova2025_frozen_transfer": ["https://www.nature.com/articles/s41524-025-01727-x.pdf"],
     "bilbrey2025_uq": ["https://www.nature.com/articles/s41524-025-01572-y.pdf"],

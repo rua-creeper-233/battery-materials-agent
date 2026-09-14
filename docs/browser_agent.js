@@ -17,6 +17,24 @@
     '入门': ['starter', 'protocol', 'vaspkit', 'pymatgen', 'ase', 'sumo', 'lammps', 'dscribe', 'matbench'],
     '声子': ['phonon', 'phonopy', 'finite displacement', 'force constants'],
     '后处理': ['post-processing', 'vaspkit', 'sumo', 'band structure', 'dos'],
+    '反应力场': ['reaxff', 'reactive molecular dynamics', 'force-field training'],
+    '溶剂化': ['solvation', 'coordination', 'radial distribution'],
+    '电解液': ['electrolyte', 'solvent', 'salt'],
+    '双电层': ['electric double layer', 'edl', 'charged interface'],
+    '相场': ['phase-field', 'continuum modeling', 'sei growth'],
+    '多尺度': ['multiscale', 'phase-field', 'continuum modeling'],
+    '聚合物电解质': ['polymer electrolyte', 'solid polymer electrolyte', 'spe'],
+    '水解': ['hydrolysis', 'water-containing electrolyte'],
+    '厚度演化': ['phase-field', 'sei growth', 'continuum modeling'],
+    '纳秒到秒': ['multiscale', 'phase-field', 'time scales'],
+    '点缺陷': ['point defect', 'pymatgen-analysis-defects', 'defect formation energy'],
+    '一万多个晶体': ['high-throughput', 'screening', '12,000', 'classifier'],
+    '小数据': ['small data', 'few-shot', 'fine-tuning', 'transfer learning'],
+    '迁移学习': ['transfer learning', 'fine-tuning', 'MACE-freeze'],
+    '风险判断': ['uncertainty', 'calibration', 'overconfidence'],
+    '锂硫': ['lithium-sulfur', 'li-s', 'reaxff'],
+    '硅负极': ['silicon anode', 'reaxff'],
+    'materials studio': ['biovia materials studio'],
     '钠': ['sodium', 'na-ion'], '锂': ['lithium', 'li-ion'],
     'dft': ['density functional', 'first-principles', 'total energy'],
     'vasp': ['incar', 'kpoints', 'potcar', 'plane-wave'],
@@ -168,7 +186,7 @@
     lines.push('', '### 边界与下一步', '', '这是可解释检索与规则工作流，不是自由生成式大模型。具体INCAR/KPOINTS、U值、赝势、超胞和温度必须回到全文/补充信息并重新收敛。');
     const wosCount = papers.filter(p => p.wos_uid).length;
     const starterCount = papers.filter(p => p.collection === 'starter').length;
-    return {question,task,answer_markdown:lines.join('\n'),papers:found,retrieval:retrieval.query,provenance:{wos_note:`当前 ${papers.length} 篇：${wosCount} 篇核心论文已取得 WOS UT，${starterCount} 篇方法路线论文已核对 DOI 与出版社记录；静态版不包含受版权保护的 PDF。`}};
+    return {question,task,answer_markdown:lines.join('\n'),papers:found,retrieval:retrieval.query,rag:{enabled:false,used:false,reason:'static_mode'},provenance:{wos_note:`当前 ${papers.length} 篇：${wosCount} 篇核心论文已取得 WOS UT，${starterCount} 篇方法路线论文已核对 DOI 与出版社记录；静态版不包含受版权保护的 PDF。`}};
   }
   window.BatteryBrowserAgent = {answer,search,searchDetailed,taskType};
 })();

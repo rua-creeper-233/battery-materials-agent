@@ -31,7 +31,22 @@ class TaggingTests(unittest.TestCase):
 
     def test_background_materials_studio_mention_is_not_method_use(self) -> None:
         rows = [classify_paper(paper) for paper in self.papers]
-        self.assertFalse(any("MS" in row["method_tags"] for row in rows))
+        ms_ids = {
+            paper["id"]
+            for paper, row in zip(self.papers, rows)
+            if "MS" in row["method_tags"]
+        }
+        self.assertEqual(
+            ms_ids,
+            {
+                "wu2023_edl_ms",
+                "sheng2024_lipf6_hydrolysis_ms",
+                "li2024_polymeric_asei_ms",
+                "wu2025_spe_aimd_ms",
+                "zhang2025_sei_phasefield_ms",
+                "chen2025_heteroalkali_ms",
+            },
+        )
         self.assertIn("VASP", classify_paper(self.by_id["geng2025_vaspkit_protocol"])["method_tags"])
 
 
