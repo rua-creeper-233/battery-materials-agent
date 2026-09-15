@@ -1,5 +1,8 @@
 (function () {
   const aliases = {
+    '第一性原理': ['dft', 'first-principles', 'density functional'],
+    '反应识别': ['automatic reaction identification', 'reaction sequence'],
+    '均方位移': ['msd', 'diffusion', 'molecular dynamics'],
     '微调': ['fine-tuning', 'transfer learning', 'MACE-freeze'],
     '不确定性': ['uncertainty', 'quantile regression', 'readout ensemble'],
     '电压': ['voltage', 'intercalation', 'total energy', 'thermodynamic'],
@@ -53,9 +56,12 @@
     ['voltage', ['电压','容量','嵌锂','脱锂','开路']],
     ['stability', ['稳定性','相图','凸包','分解','电化学窗口']],
     ['dft_setup', ['dft','vasp','incar','kpoints','potcar','截断能','k点','赝势','第一性原理']],
+    ['md_setup', ['md','分子动力学','lammps','forcite','compass','nvt','npt','rdf']],
     ['screening', ['筛选','高通量','候选','数据库']]
   ];
   const leads = {
+    general: '请先明确材料、目标性质和已有数据；当前问题不足以指定唯一计算路线。',
+    md_setup: 'MD先确认力的来源、力场适用域、平衡与采样，再解释结构或输运性质；经典MD并不需要照抄VASP的ENCUT与k点。',
     voltage: '电压问题应以不同嵌入组分的稳定相和一致设置下的总能为核心，而不是只算一个端点。',
     diffusion: '扩散问题先分清“单跳势垒”与“有限温度扩散系数”：NEB适合前者，AIMD/MLMD适合后者。',
     interface: '界面问题建议先做反应热力学，再做显式界面；否则容易在本就会分解的界面上过度解释电荷密度。',
@@ -65,6 +71,8 @@
     dft_setup: 'VASP/DFT 入门应先建立可复现的收敛与验证流程，再计算电压、扩散或界面；参数不能脱离材料和目标性质照抄。'
   };
   const workflows = {
+    general: ['补充材料、目标性质与已有计算条件后，再选择DFT、MD或数据驱动路线。'],
+    md_setup: ['选择覆盖元素、物相、温压和成键模式的力场，并核对电荷、原子类型与单位。','消除不合理接触并平衡温度与密度；根据研究目的选择NVT/NPT，不把平衡段计入生产统计。','测试时间步长、体系大小、轨迹时长和独立初态，输出能量、温度、结构与轨迹。','分开解释RDF/配位数的结构信息和MSD/相关函数的动力学信息。'],
     voltage: ['枚举相邻稳定嵌入组分和占位构型，分别做自旋极化弛豫与静态总能。','构建组分—能量凸包，避免用两个亚稳端点制造虚假电压平台。','按 ΔG≈ΔE 计算平均电压，并检查金属参比相、磁序、DFT+U和O2相关误差。','与实验平台或高质量已发表计算交叉验证。'],
     diffusion: ['先确认空位、间隙或协同机制以及可能通道；稀释极限NEB不自动代表真实浓度。','NEB需检查超胞、中间像、原子映射、弹簧数和力收敛。','AIMD/MLMD需使用多个温度与独立初态，报告MSD线性区、有效跃迁数和误差。','计算电导率时说明载流子浓度、相关运动和Nernst–Einstein近似。'],
     interface: ['先用相图和反应能判断热力学相容性，再决定是否构建显式界面。','枚举表面、终止与晶格匹配，报告应变、面积、真空和偶极修正。','静态DFT回答粘附/电荷转移，AIMD或反应型ML势回答有限温度反应。','对SEI/CEI建立化学势—缺陷形成能—NEB—电导的完整链路。'],
@@ -73,7 +81,7 @@
     mlp: ['固定元素、相、缺陷、表面/界面、温压和反应适用域。','用DFT生成覆盖平衡与非平衡构型的能量/力/应力标签，并主动学习补点。','按轨迹、组分与结构家族分组切分，避免相邻帧泄漏。','除MAE外验证RDF、声子/弹性、缺陷能、NEB势垒和扩散系数。','只有通过目标性质验证后才做大体系长时间MLMD，并设置OOD报警。'],
     dft_setup: ['完成赝势、ENCUT、k点、展宽和电子收敛测试，并同时观察总能与目标性质。','根据元素价态和目标性质确定磁序、DFT+U、范德华修正与自旋轨道耦合。','分开设置弛豫、高精度静态计算和性质后处理。','后处理保留原始VASP输出、软件版本、路径和单位。','用已知材料或文献基准验证晶格、磁矩、能隙或电压。']
   };
-  const common = ['定义材料、工作离子、荷电状态、温度和目标性质。','记录结构来源、数据库版本、结构ID和所有计算版本。','先完成ENCUT、k点、超胞、磁序和必要U值的收敛。'];
+  const common = ['定义材料、工作离子、荷电状态、温度和目标性质。','记录结构来源、数据库版本、结构ID和所有计算版本。','按所选方法测试数值精度、有限尺寸与采样误差；不同方法不能共用未经验证的参数模板。'];
   const fieldLabels = {title:'标题',role:'定位',methods:'方法',tags:'标签',systems_properties:'体系/性质',summary_evidence:'摘要/证据',doi:'DOI'};
 
   function triggered(text, trigger) {
@@ -107,7 +115,7 @@
   }
   function taskType(q) {
     const text = q.toLowerCase();
-    return (taskRules.find(([, words]) => words.some(word => triggered(text, word))) || ['screening'])[0];
+    return (taskRules.find(([, words]) => words.some(word => triggered(text, word))) || ['general'])[0];
   }
   function searchDetailed(query, papers, limit=5, config={}) {
     const weights = {...defaultWeights, ...(config.weights || {})};
@@ -165,13 +173,22 @@
     const retrieval = searchDetailed(question, papers, 5, config);
     const found = retrieval.results;
     const lower = question.toLowerCase();
+    const guidance = (config.answer_guidance || []).find(card => card.all_of.every(group => group.some(term => triggered(lower, term))));
     const wantsPlan = ['怎么','如何','方案','路线','流程','计划','workflow','复现'].some(w => lower.includes(w));
     const wantsCompare = ['比较','区别','还是','对比','vs'].some(w => lower.includes(w));
     const intent = wantsPlan ? '工作流' : wantsCompare ? '对比' : '证据检索';
     const filterLabels = [...retrieval.query.filters.tags, ...retrieval.query.filters.types];
-    const lines = ['### 检索理解','',`- **意图**：${intent}；**任务**：${task}。`,`- **查询扩展**：${retrieval.query.expanded_terms.slice(0,8).join(' / ') || '无'}。`,`- **显式筛选**：${filterLabels.join(' / ') || '无'}。`,'','### 结论','',leads[task]];
+    const lead = guidance ? guidance.answer : found.length ? leads[task] : '当前没有匹配的论文证据，不能据此给出材料结论或计算参数。';
+    const lines = ['### 检索理解','',`- **意图**：${intent}；**任务**：${task}。`,`- **查询扩展**：${retrieval.query.expanded_terms.slice(0,8).join(' / ') || '无'}。`,`- **显式筛选**：${filterLabels.join(' / ') || '无'}。`,'','### 结论','',lead];
+    if (guidance) {
+      lines.push('', '### 方法解释与下一步（教学规则，非论文全文推断）', '');
+      guidance.steps.forEach((s,i) => lines.push(`${i+1}. ${s}`));
+      lines.push('', '需要补充：' + guidance.ask, '', '参考：' + guidance.sources.map(s => `[${s.label}](${s.url})`).join(' · '));
+    }
     if (!found.length) {
       lines.push('', '当前证据库没有达到最低匹配条件的论文，因此不自动拿最新论文填充答案。请增加“材料＋任务＋方法＋输出量”，或使用 `tag:DFT`、`tag:MD`、`tag:VASP`、`type:方法论文`。');
+    } else if (guidance) {
+      lines.push('', '相关论文用于继续查阅，不能仅凭关键词命中当作对上述每句话的验证。');
     } else if (wantsCompare && found.length >= 2) {
       lines.push('', '### 对比抓手', ''); found.slice(0,3).forEach((p,i) => lines.push(`- **${p.role}**：${p.summary} 〔${i+1}〕`));
     } else if (wantsPlan) {
@@ -186,7 +203,7 @@
     lines.push('', '### 边界与下一步', '', '这是可解释检索与规则工作流，不是自由生成式大模型。具体INCAR/KPOINTS、U值、赝势、超胞和温度必须回到全文/补充信息并重新收敛。');
     const wosCount = papers.filter(p => p.wos_uid).length;
     const starterCount = papers.filter(p => p.collection === 'starter').length;
-    return {question,task,answer_markdown:lines.join('\n'),papers:found,retrieval:retrieval.query,rag:{enabled:false,used:false,reason:'static_mode'},provenance:{wos_note:`当前 ${papers.length} 篇：${wosCount} 篇核心论文已取得 WOS UT，${starterCount} 篇方法路线论文已核对 DOI 与出版社记录；静态版不包含受版权保护的 PDF。`}};
+    return {question,task,guidance_id:guidance?.id || null,answer_markdown:lines.join('\n'),papers:found,retrieval:retrieval.query,rag:{enabled:false,used:false,reason:'static_mode'},provenance:{wos_note:`当前 ${papers.length} 篇：${wosCount} 篇核心论文已取得 WOS UT，${starterCount} 篇方法路线论文已核对 DOI 与出版社记录；静态版不包含受版权保护的 PDF。`}};
   }
   window.BatteryBrowserAgent = {answer,search,searchDetailed,taskType};
 })();

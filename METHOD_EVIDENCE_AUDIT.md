@@ -11,6 +11,14 @@
 
 ## 分论文结果
 
+### Machine learning for molecular and materials science
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine learning force field molecular dynamics simulation of SEI formation on lithium metal
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
 ### Graph dynamical networks for unsupervised learning of atomic scale dynamics in materials
 
 - 机器学习训练设置：p.3 `training set`；p.3 `validation set`；p.4 `test data`

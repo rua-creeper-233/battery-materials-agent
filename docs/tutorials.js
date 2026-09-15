@@ -29,6 +29,8 @@
   );
   const glossary={ms:[['力场','用参数化函数描述原子之间的相互作用。'],['NVT / NPT','分别固定粒子数、体积、温度 / 粒子数、压力、温度。'],['RDF','径向分布函数，用于描述某类原子周围的局部结构。'],['MSD','均方位移；在合适的扩散区间可用于求扩散系数。']],vasp:[['SCF','固定原子位置时，迭代求解自洽电子态。'],['ENCUT','平面波截断能，单位 eV；需要测试收敛。'],['k 网格','对倒空间采样，和真实空间超胞大小相关。'],['弛豫','通过降低能量优化原子位置或晶胞。']]};
   courses.dft=window.batteryDFTLessons(flow);
+  courses.md=window.batteryMDLessons(flow);
+  glossary.md=[['力场','由原子构型计算能量与力的模型，需要验证适用域。'],['MSD','均方位移，用于分析合适时间区间内的扩散。'],['RDF','径向分布函数，描述空间结构而非直接给出扩散。'],['生产段','平衡后用于计算统计量的轨迹区间。']];
   glossary.dft=[['电子密度','空间中单位体积的电子数，积分得到总电子数。'],['泛函','以函数为输入的映射，例如由密度分布得到能量。'],['SCF','固定原子时求解电子自洽；不同于结构优化。'],['AIMD','用第一性原理计算得到的力推进分子动力学。']];
   let saved={};try{const value=JSON.parse(localStorage.getItem('battery-tutorial-progress-v1')||'{}');if(value&&typeof value==='object'&&!Array.isArray(value))saved=value;}catch(_){}
   let course='ms', step=0;
@@ -40,6 +42,7 @@
     document.querySelector('#tutorialContent').innerHTML=`<div class="tutorial-layout"><nav class="tutorial-nav" aria-label="教程步骤">${steps.map((s,i)=>`<button type="button" data-step="${i}" ${i===step?'aria-current="step"':''}>0${i+1} · ${s.title}</button>`).join('')}</nav><article class="tutorial-stage"><div class="tutorial-label">${course.toUpperCase()} / STEP ${step+1} OF ${steps.length}</div><h3>${item.title}</h3>${item.pic}${item.body}<div class="tutorial-check"><b>完成标志：</b>${item.check}</div><div class="tutorial-bottom"><button type="button" data-move="-1" ${step===0?'disabled':''}>上一步</button><button type="button" data-move="1" ${step===steps.length-1?'disabled':''}>下一步</button></div><p><small>官方操作参考：${course==='ms'?'<a href="https://www.3ds.com/products/biovia/materials-studio" target="_blank" rel="noreferrer">Materials Studio 模块介绍</a> · 软件内 Help / Tutorials（按已安装版本）':'<a href="https://vasp.at/tutorials/latest/bulk/part1/" target="_blank" rel="noreferrer">VASP 官方硅教程</a> · <a href="https://vasp.at/wiki/Input" target="_blank" rel="noreferrer">输入文件说明</a>'}</small></p></article></div>`;
     const completed=steps.filter((_,i)=>saved[`${course}:${i}`]===true).length;
     const stage=document.querySelector('.tutorial-stage');
+    if(course==='md')stage.querySelector('p:last-child small').innerHTML='官方操作参考：<a href="https://docs.lammps.org/Howto_diffusion.html" target="_blank" rel="noreferrer">LAMMPS扩散算例</a> · <a href="https://docs.lammps.org/compute_rdf.html" target="_blank" rel="noreferrer">RDF说明</a>（示例与本机版本应一致）';
     const beginner=window.batteryBeginnerLessons[course][step];
     const [goal,prep,actions,expected,question,answer]=beginner;
     stage.querySelector('.tutorial-check').insertAdjacentHTML('beforebegin',`<section class="beginner-guide" aria-label="零基础跟练"><div class="tutorial-label">零基础跟练 · ${esc(goal)}</div><p><b>开始前：</b>${esc(prep)}</p><ol class="beginner-actions">${actions.map(a=>`<li>${esc(a)}</li>`).join('')}</ol><div class="beginner-expected"><b>应该看到什么：</b>${esc(expected)}</div><details><summary>试着回答：${esc(question)}</summary><p>${esc(answer)}</p></details></section>`);

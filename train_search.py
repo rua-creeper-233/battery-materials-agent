@@ -55,7 +55,8 @@ def main() -> None:
     payload = json.loads(TRAINING.read_text(encoding="utf-8"))
     examples = payload.get("training_examples", payload.get("examples", []))
     held_out = payload.get("held_out_examples", [])
-    agent = BatteryResearchAgent(fulltext_path=None, search_config_path=None)
+    agent = BatteryResearchAgent(fulltext_path=None, search_config_path=None, extra_data_path=None)
+    baseline_metrics = evaluate(agent, held_out) if held_out else {}
     best: tuple[float, dict[str, float], dict[str, float]] | None = None
     for weights in candidates():
         agent.search_weights = weights
@@ -71,6 +72,8 @@ def main() -> None:
     output = {
         "schema_version": 1,
         "mode": "explainable_weighted_retrieval",
+        "answer_guidance": json.loads((ROOT / "data" / "answer_guidance.json").read_text(encoding="utf-8")),
+        "baseline_regression_metrics": baseline_metrics,
         "trained_on": "data/search_training.json",
         "training_examples": len(examples),
         "held_out_examples": len(held_out),
@@ -82,7 +85,8 @@ def main() -> None:
         "weights": weights,
     }
     OUTPUT.write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps(output, ensure_ascii=False, indent=2))
+    # Windows console encodings may not represent tutorial math symbols.
+    print(json.dumps({key: value for key, value in output.items() if key != "answer_guidance"}, ensure_ascii=True, indent=2))
 
 
 if __name__ == "__main__":

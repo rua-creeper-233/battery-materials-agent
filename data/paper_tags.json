@@ -9,15 +9,46 @@
     "进展论文": "本库核心电池材料计算研究集"
   },
   "counts": {
-    "DFT": 32,
-    "MD": 29,
+    "DFT": 33,
+    "MD": 30,
     "MS": 7,
     "VASP": 13,
     "方法论文": 27,
-    "综述": 6,
-    "进展论文": 31
+    "综述": 7,
+    "进展论文": 33
   },
   "papers": {
+    "butler2018_ml_materials_review": {
+      "paper_kind": "进展论文",
+      "method_tags": [],
+      "display_tags": [
+        "进展论文",
+        "综述"
+      ],
+      "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "takenaka2026_sei_mlff": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "first-principles"
+        ],
+        "MD": [
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
     "xie2019_gdynet": {
       "paper_kind": "进展论文",
       "method_tags": [
@@ -179,8 +210,8 @@
       ],
       "tag_basis": {
         "DFT": [
-          "Ab initio",
           "ab initio",
+          "Ab initio",
           "DFT"
         ]
       },
@@ -937,8 +968,8 @@
         ],
         "MD": [
           "AIMD",
-          "molecular dynamics",
-          "Molecular Dynamics"
+          "Molecular Dynamics",
+          "molecular dynamics"
         ],
         "VASP": [
           "VASP"
@@ -1062,8 +1093,8 @@
           "DFT"
         ],
         "MD": [
-          "molecular dynamics",
-          "Molecular Dynamics"
+          "Molecular Dynamics",
+          "molecular dynamics"
         ]
       },
       "tag_policy": "curated_metadata_v1"

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T09:12:11.385468+00:00",
+  "generated_at": "2026-09-15T16:07:28.180741+00:00",
   "review_status": "auto_extracted_needs_human_review",
   "notice_zh": "自动结果只用于定位原文；用于计算输入、论文或汇报前，必须打开对应 PDF 页人工核对。",
   "rules_version": 1,
@@ -63,6 +63,22 @@
     "zhou2004_dftu_voltage"
   ],
   "papers": {
+    "butler2018_ml_materials_review": {
+      "title": "Machine learning for molecular and materials science",
+      "doi": "10.1038/s41586-018-0337-2",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 0,
+      "evidence": []
+    },
+    "takenaka2026_sei_mlff": {
+      "title": "Machine learning force field molecular dynamics simulation of SEI formation on lithium metal",
+      "doi": "10.1038/s41524-026-02271-y",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 0,
+      "evidence": []
+    },
     "xie2019_gdynet": {
       "title": "Graph dynamical networks for unsupervised learning of atomic scale dynamics in materials",
       "doi": "10.1038/s41467-019-10663-6",

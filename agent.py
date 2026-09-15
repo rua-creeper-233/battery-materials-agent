@@ -39,6 +39,9 @@ DEFAULT_SEARCH_WEIGHTS = {
 
 
 ALIASES = {
+    "第一性原理": ["dft", "first-principles", "density functional"],
+    "反应识别": ["automatic reaction identification", "reaction sequence"],
+    "均方位移": ["msd", "diffusion", "molecular dynamics"],
     "微调": ["fine-tuning", "transfer learning", "MACE-freeze"],
     "不确定性": ["uncertainty", "quantile regression", "readout ensemble"],
     "电压": ["voltage", "intercalation", "total energy", "thermodynamic"],
@@ -130,6 +133,7 @@ class BatteryResearchAgent:
         )
         self.search_config = self._load_search_config(search_weights)
         self.search_weights = self.search_config["weights"]
+        self.answer_guidance = json.loads((ROOT / "data" / "answer_guidance.json").read_text(encoding="utf-8"))
         self.rag = rag or EvidenceRAG.from_environment()
         self._search_fields = [self._paper_search_fields(paper) for paper in self.papers]
         self._documents = [_flatten(paper).lower() for paper in self.papers]
@@ -395,22 +399,25 @@ class BatteryResearchAgent:
             ("voltage", ["电压", "容量", "嵌锂", "脱锂", "开路"]),
             ("stability", ["稳定性", "相图", "凸包", "分解", "电化学窗口"]),
             ("dft_setup", ["dft", "vasp", "incar", "kpoints", "potcar", "截断能", "k点", "赝势", "第一性原理"]),
+            ("md_setup", ["md", "分子动力学", "lammps", "forcite", "compass", "nvt", "npt", "rdf"]),
             ("screening", ["筛选", "高通量", "候选", "数据库"]),
         ]
         for name, words in rules:
-            if any(word in lowered for word in words):
+            if any(_triggered(lowered, word) for word in words):
                 return name
-        return "screening"
+        return "general"
 
     def workflow(self, question: str) -> dict[str, Any]:
         task = self._task_type(question)
         common = [
             "定义材料、工作离子、荷电状态、温度和目标性质；不要从软件参数开始倒推问题。",
             "从论文补充信息或可信晶体库取得结构，保留来源、数据库版本和结构ID。",
-            "先做ENCUT、k点、超胞、磁序和必要的U值收敛；所有比较相必须使用一致设置。",
+            "按所选方法测试数值精度、有限尺寸与采样误差；不同方法不能共用未经验证的参数模板。",
             "保存输入、软件版本、赝势标识、原始输出和后处理脚本，失败计算也要记录。",
         ]
         specific = {
+            "general": ["补充材料、目标性质与已有计算条件后，再选择DFT、MD或数据驱动路线。"],
+            "md_setup": ["选择覆盖元素、物相、温压和成键模式的力场，并核对电荷、原子类型与单位。", "消除不合理接触并平衡温度与密度；根据研究目的选择NVT/NPT，不把平衡段计入生产统计。", "测试时间步长、体系大小、轨迹时长和独立初态，输出能量、温度、结构与轨迹。", "分开解释RDF/配位数的结构信息和MSD/相关函数的动力学信息。"],
             "voltage": [
                 "枚举相邻稳定嵌入组分或占位构型，分别进行自旋极化结构弛豫和静态总能计算。",
                 "构建组分—能量凸包，避免用两个亚稳端点直接画成虚假的电压平台。",
@@ -457,6 +464,8 @@ class BatteryResearchAgent:
             ],
         }
         checks = {
+            "general": ["材料明确", "目标量明确", "方法适用性"],
+            "md_setup": ["力场适用域", "电荷与单位", "平衡段剔除", "时间步长", "独立轨迹与误差"],
             "voltage": ["能量/原子与力收敛", "磁序和U值敏感性", "凸包端点正确", "参比相一致"],
             "diffusion": ["跃迁通道完整", "独立轨迹", "有效跃迁数", "MSD拟合窗口", "有限尺寸"],
             "interface": ["终止面与匹配枚举", "界面应变", "反应产物", "时间尺度", "电势对齐"],
@@ -493,6 +502,8 @@ class BatteryResearchAgent:
         wants_compare = any(word in question.lower() for word in ["比较", "区别", "还是", "对比", "vs"])
 
         lead = {
+            "general": "请先明确材料、目标性质和已有数据；当前问题不足以指定唯一计算路线。",
+            "md_setup": "MD先确认力的来源、力场适用域、平衡与采样，再解释结构或输运性质；经典MD并不需要照抄VASP的ENCUT与k点。",
             "voltage": "电压问题应以不同嵌入组分的稳定相和一致设置下的总能为核心，而不是只算一个端点。",
             "diffusion": "扩散问题先分清‘单跳势垒’与‘有限温度扩散系数’：NEB适合前者，AIMD/MLMD适合后者。",
             "interface": "界面问题建议先做反应热力学，再做显式界面；否则很容易在一个本就会分解的界面上过度解释电荷密度。",
@@ -501,6 +512,11 @@ class BatteryResearchAgent:
             "mlp": "机器学习势的价值是把DFT精度近似扩展到更大体系和更长时间，但适用域验证比模型名称更重要。",
             "dft_setup": "VASP/DFT 入门应先建立一套可复现的收敛与验证流程，再计算电压、扩散或界面；软件参数不能脱离材料和目标性质单独照抄。",
         }[task]
+        guidance = next((card for card in self.answer_guidance if all(any(_triggered(question.lower(), term) for term in group) for group in card["all_of"])), None)
+        if guidance:
+            lead = guidance["answer"]
+        elif not papers:
+            lead = "当前没有匹配的论文证据，不能据此给出材料结论或计算参数。"
 
         query_info = retrieval["query"]
         intent = "工作流" if wants_plan else "对比" if wants_compare else "证据检索"
@@ -516,6 +532,10 @@ class BatteryResearchAgent:
             "",
             lead,
         ]
+        if guidance:
+            lines += ["", "### 方法解释与下一步（教学规则，非论文全文推断）", ""]
+            lines += [f"{i}. {step}" for i, step in enumerate(guidance["steps"], 1)]
+            lines += ["", "需要补充：" + guidance["ask"], "", "参考：" + " · ".join(f"[{s['label']}]({s['url']})" for s in guidance["sources"])]
         rag_result = (
             self.rag.generate(question, papers, fulltext_hits)
             if use_rag
@@ -528,6 +548,8 @@ class BatteryResearchAgent:
                 "",
                 "当前证据库没有达到最低匹配条件的论文，因此不自动拿最新论文填充答案。请增加“材料＋任务＋方法＋输出量”，例如“LGPS＋锂扩散＋AIMD＋扩散系数”，或使用 `tag:DFT`、`tag:MD`、`tag:VASP`、`type:方法论文` 缩小范围。",
             ]
+        elif guidance:
+            lines += ["", "相关论文用于继续查阅，不能仅凭关键词命中当作对上述每句话的验证。"]
         elif wants_compare and len(papers) >= 2:
             lines += ["", "### 对比抓手", ""]
             for index, paper in enumerate(papers[:3], 1):
@@ -568,6 +590,7 @@ class BatteryResearchAgent:
         return {
             "question": question,
             "task": task,
+            "guidance_id": guidance["id"] if guidance else None,
             "answer_markdown": "\n".join(lines),
             "papers": papers,
             "workflow": self.workflow(question) if wants_plan else None,

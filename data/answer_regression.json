@@ -1,0 +1,19 @@
+{
+  "description": "Assistant-authored development regression examples. Tests routing and required distinctions, not semantic truth or blinded generalization; no LLM training.",
+  "cases": [
+    {"question":"DFT和MD有什么区别？","guidance":"dft_md_difference","contains":["不是二选一","AIMD"]},
+    {"question":"第一性原理和分子动力学有什么关系？","guidance":"dft_md_difference","contains":["力场","时间"]},
+    {"question":"SCF收敛了结构就对了吗？","guidance":"scf_vs_ionic","contains":["不等于","NELM"]},
+    {"question":"EDIFF设置很小还需要测k点吗？","guidance":"scf_vs_ionic","contains":["截断能","k点"]},
+    {"question":"如何从MSD求扩散系数？","guidance":"msd_diffusion","contains":["除以6","除以2","average yes"]},
+    {"question":"均方位移没有线性区怎么办？","guidance":"msd_diffusion","contains":["不能硬报","误差"]},
+    {"question":"RDF峰高就是扩散快吗？","guidance":"rdf_not_diffusion","contains":["不直接","动力学"]},
+    {"question":"配位数怎么算？","guidance":"rdf_not_diffusion","contains":["第一壳层","原子类型"]},
+    {"question":"COMPASS能模拟SEI断键反应吗？","guidance":"reactive_forcefield","contains":["不能直接","ReaxFF"]},
+    {"question":"Forcite固定成键力场怎么研究分解？","guidance":"reactive_forcefield","contains":["预平衡","成键"]},
+    {"question":"polymernet是机器学习势吗？","guidance":"property_not_potential","contains":["不自动等于","能量/力"]},
+    {"question":"GDyNet可不可以直接算原子力？","guidance":"property_not_potential","contains":["轨迹","不能"]},
+    {"question":"zzzz-not-a-real-material-token","guidance":null,"contains":["没有匹配"],"excludes":["### 可执行工作流"]},
+    {"question":"如何使用LAMMPS做经典MD？","guidance":null,"task":"md_setup","contains":["时间步长","平衡"],"excludes":["先完成ENCUT","先做ENCUT"]}
+  ]
+}

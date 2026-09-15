@@ -1,7 +1,10 @@
 {
   "schema_version": 2,
-  "description": "Human-labelled retrieval questions. Training tunes field weights; held_out is never used to choose them.",
+  "description": "Assistant-curated relevance examples requiring researcher review. Training tunes field weights only. Historical held_out examples have informed manual alias analysis and are regression tests, not a blind benchmark.",
   "training_examples": [
+    {"query": "Butler materials machine learning review", "relevant": ["butler2018_ml_materials_review"]},
+    {"query": "SEI automatic reaction identification force field", "relevant": ["takenaka2026_sei_mlff"]},
+    {"query": "锂金属机器学习力场反应识别", "relevant": ["takenaka2026_sei_mlff"]},
     {"query": "VASP 入门 后处理", "relevant": ["geng2025_vaspkit_protocol", "wang2021_vaspkit", "ganose2018_sumo", "ong2013_pymatgen"]},
     {"query": "固态电解质 AIMD 锂扩散系数", "relevant": ["mo2012_lgps_aimd", "baktash2020_argyrodite_aimd", "ong2013_lgps", "he2018_aimd_statistics"]},
     {"query": "DFT+U 正极平均电压", "relevant": ["aydinol1997_voltage", "zhou2004_dftu_voltage", "urban2016_computational_review"]},
