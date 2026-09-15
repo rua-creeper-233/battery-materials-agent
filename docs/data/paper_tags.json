@@ -9,15 +9,70 @@
     "进展论文": "本库核心电池材料计算研究集"
   },
   "counts": {
-    "DFT": 31,
-    "MD": 27,
+    "DFT": 32,
+    "MD": 29,
     "MS": 7,
-    "VASP": 12,
+    "VASP": 13,
     "方法论文": 27,
     "综述": 6,
-    "进展论文": 28
+    "进展论文": 31
   },
   "papers": {
+    "xie2019_gdynet": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "MD"
+      ],
+      "tag_basis": {
+        "MD": [
+          "LAMMPS",
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "xie2022_polymernet": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "MD"
+      ],
+      "tag_basis": {
+        "MD": [
+          "LAMMPS",
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "wang2023_sodium_design": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "VASP"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "VASP"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "VASP": [
+          "VASP"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
     "he2017_concerted_diffusion": {
       "paper_kind": "进展论文",
       "method_tags": [
@@ -124,8 +179,8 @@
       ],
       "tag_basis": {
         "DFT": [
-          "ab initio",
           "Ab initio",
+          "ab initio",
           "DFT"
         ]
       },
@@ -882,8 +937,8 @@
         ],
         "MD": [
           "AIMD",
-          "Molecular Dynamics",
-          "molecular dynamics"
+          "molecular dynamics",
+          "Molecular Dynamics"
         ],
         "VASP": [
           "VASP"
@@ -1007,8 +1062,8 @@
           "DFT"
         ],
         "MD": [
-          "Molecular Dynamics",
-          "molecular dynamics"
+          "molecular dynamics",
+          "Molecular Dynamics"
         ]
       },
       "tag_policy": "curated_metadata_v1"

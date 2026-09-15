@@ -2,14 +2,37 @@
 
 > 所有条目均为“自动抽取、待人工核对”。它们是原文定位器，不是可直接复制到 VASP/MD 输入文件的最终参数。
 
-- 本地有正文的论文：53
-- 抽取到至少一条方法信号的论文：50
-- 方法信号总数：385
+- 本地有正文的论文：56
+- 抽取到至少一条方法信号的论文：53
+- 方法信号总数：417
 - 参考文献区：已排除
 - 每篇每类上限：3 条
 - 公开数据只保存短方法信号与页码，不保存连续正文上下文
 
 ## 分论文结果
+
+### Graph dynamical networks for unsupervised learning of atomic scale dynamics in materials
+
+- 机器学习训练设置：p.3 `training set`；p.3 `validation set`；p.4 `test data`
+- 分子动力学条件：p.3 `100 ns trajectory`；p.3 `42.3 ps while testing on the second 100 ns trajectory`；p.4 `12.5 ns trajectory`
+- 计算软件：p.7 `LAMMPS`
+
+### Accelerating amorphous polymer electrolyte screening by learning to reduce errors in molecular dynamics simulated properties
+
+- 分子动力学条件：p.2 `5 ns and a 50 ns simulation`；p.2 `50 ns simulation`；p.3 `50 ns simulation`
+- 机器学习训练设置：p.3 `training data`；p.4 `mean absolute error`；p.4 `test data`
+- 扩散与迁移势垒方法：p.8 `mean squared displacement`；p.8 `MSD`
+- 计算软件：p.8 `LAMMPS`
+
+### Design principles for sodium superionic conductors
+
+- 扩散与迁移势垒方法：p.3 `migration barrier`；p.3 `migration pathway`；p.6 `migration pathway`
+- 超胞与模型规模：p.6 `supercell models (54 atoms`
+- 收敛判据：p.6 `energy convergence criterion of 10`；p.6 `force convergence criterion of 10`
+- 泛函与电子结构近似：p.6 `generalized gradient approximation`；p.6 `GGA`；p.6 `PBE`
+- k 点采样：p.6 `2 × 2 × 2 k-point`
+- 计算软件：p.6 `VASP`；p.6 `Vienna Ab initio Simulation Package`；p.7 `Pymatgen`
+- 分子动力学条件：p.7 `NVT`；p.7 `simulation, the initial temperature was set to 100 K`；p.7 `time step of 2 fs`
 
 ### Origin of fast ion diffusion in super-ionic conductors
 

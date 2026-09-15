@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-15T00:55:05.432828+00:00",
+  "generated_at": "2026-09-15T09:12:11.385468+00:00",
   "review_status": "auto_extracted_needs_human_review",
   "notice_zh": "自动结果只用于定位原文；用于计算输入、论文或汇报前，必须打开对应 PDF 页人工核对。",
   "rules_version": 1,
-  "fulltext_paper_count": 53,
+  "fulltext_paper_count": 56,
   "fulltext_paper_ids": [
     "aydinol1997_voltage",
     "baktash2020_argyrodite_aimd",
@@ -52,14 +52,364 @@
     "wang2018_sei_modeling_review",
     "wang2021_vaspkit",
     "wang2023_nasicon_design",
+    "wang2023_sodium_design",
     "wu2023_edl_ms",
     "wu2025_spe_aimd_ms",
     "xie2018_cgcnn",
+    "xie2019_gdynet",
+    "xie2022_polymernet",
     "zhang2020_dpgen",
     "zhang2025_sei_phasefield_ms",
     "zhou2004_dftu_voltage"
   ],
   "papers": {
+    "xie2019_gdynet": {
+      "title": "Graph dynamical networks for unsupervised learning of atomic scale dynamics in materials",
+      "doi": "10.1038/s41467-019-10663-6",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 7,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 3,
+          "section": "body",
+          "signal": "training set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2019_gdynet.pdf#page=3"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 3,
+          "section": "body",
+          "signal": "validation set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2019_gdynet.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "100 ns trajectory",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2019_gdynet.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "42.3 ps while testing on the second 100 ns trajectory",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2019_gdynet.pdf#page=3"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 4,
+          "section": "body",
+          "signal": "test data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2019_gdynet.pdf#page=4"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 4,
+          "section": "body",
+          "signal": "12.5 ns trajectory",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2019_gdynet.pdf#page=4"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 7,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2019_gdynet.pdf#page=7"
+        }
+      ]
+    },
+    "xie2022_polymernet": {
+      "title": "Accelerating amorphous polymer electrolyte screening by learning to reduce errors in molecular dynamics simulated properties",
+      "doi": "10.1038/s41467-022-30994-1",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 9,
+      "evidence": [
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 2,
+          "section": "body",
+          "signal": "5 ns and a 50 ns simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2022_polymernet.pdf#page=2"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 2,
+          "section": "body",
+          "signal": "50 ns simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2022_polymernet.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 3,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2022_polymernet.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "50 ns simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2022_polymernet.pdf#page=3"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 4,
+          "section": "body",
+          "signal": "mean absolute error",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2022_polymernet.pdf#page=4"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 4,
+          "section": "body",
+          "signal": "test data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2022_polymernet.pdf#page=4"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 8,
+          "section": "body",
+          "signal": "mean squared displacement",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2022_polymernet.pdf#page=8"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 8,
+          "section": "body",
+          "signal": "MSD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2022_polymernet.pdf#page=8"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 8,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/xie2022_polymernet.pdf#page=8"
+        }
+      ]
+    },
+    "wang2023_sodium_design": {
+      "title": "Design principles for sodium superionic conductors",
+      "doi": "10.1038/s41467-023-43436-3",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 16,
+      "evidence": [
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 3,
+          "section": "body",
+          "signal": "migration barrier",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=3"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 3,
+          "section": "body",
+          "signal": "migration pathway",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=3"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 6,
+          "section": "body",
+          "signal": "supercell models (54 atoms",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=6"
+        },
+        {
+          "category": "convergence",
+          "label_zh": "收敛判据",
+          "page": 6,
+          "section": "body",
+          "signal": "energy convergence criterion of 10",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=6"
+        },
+        {
+          "category": "convergence",
+          "label_zh": "收敛判据",
+          "page": 6,
+          "section": "body",
+          "signal": "force convergence criterion of 10",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=6"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 6,
+          "section": "body",
+          "signal": "generalized gradient approximation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=6"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 6,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=6"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 6,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=6"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 6,
+          "section": "body",
+          "signal": "migration pathway",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=6"
+        },
+        {
+          "category": "k_points",
+          "label_zh": "k 点采样",
+          "page": 6,
+          "section": "body",
+          "signal": "2 × 2 × 2 k-point",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=6"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 6,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=6"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 6,
+          "section": "body",
+          "signal": "Vienna Ab initio Simulation Package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=6"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 7,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=7"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 7,
+          "section": "body",
+          "signal": "simulation, the initial temperature was set to 100 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=7"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 7,
+          "section": "body",
+          "signal": "time step of 2 fs",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=7"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 7,
+          "section": "body",
+          "signal": "Pymatgen",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_sodium_design.pdf#page=7"
+        }
+      ]
+    },
     "he2017_concerted_diffusion": {
       "title": "Origin of fast ion diffusion in super-ionic conductors",
       "doi": "10.1038/ncomms15893",

@@ -21,6 +21,11 @@ assert.equal(merged.filter(paper => paper.display_tags.includes('MS')).length, 7
 assert.ok(agent.search('paddlewheel', merged, 5, config).some(p => p.id === 'smith2020_paddlewheel_ms'));
 assert.ok(agent.search('NASICON', merged, 5, config).some(p => p.id === 'wang2023_nasicon_design'));
 const ms = agent.searchDetailed('tag:MS 电解液', merged, 20, config);
+assert.ok(agent.search('GDyNets', merged, 5, config).some(p => p.id === 'xie2019_gdynet'));
+assert.ok(agent.search('短时MD', merged, 5, config).some(p => p.id === 'xie2022_polymernet'));
+for (const id of ['xie2019_gdynet','xie2022_polymernet']) {
+  assert.ok(!merged.find(p => p.id === id).display_tags.includes('MS'));
+}
 assert.ok(ms.results.length > 0);
 assert.ok(ms.results.every(paper => paper.display_tags.includes('MS')));
 console.log('Browser retrieval: weighted search, filters, reasons, honest no-hit PASS');

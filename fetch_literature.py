@@ -42,6 +42,9 @@ USER_AGENT = (
 # unless the article's open licence is clear and the PDF is independently
 # checked against the target title.
 PUBLIC_PDF_OVERRIDES: dict[str, list[str]] = {
+    "xie2019_gdynet": ["https://www.nature.com/articles/s41467-019-10663-6.pdf"],
+    "xie2022_polymernet": ["https://www.nature.com/articles/s41467-022-30994-1.pdf"],
+    "wang2023_sodium_design": ["https://www.nature.com/articles/s41467-023-43436-3.pdf", "https://api.drum.lib.umd.edu/server/api/core/bitstreams/1b1ca95f-1359-49d3-9853-2ec601705ba3/content"],
     "he2017_concerted_diffusion": ["https://terpconnect.umd.edu/~yfmo/He_Mo-SIC-ncomms15893.pdf"],
     "smith2020_paddlewheel_ms": ["https://www.nature.com/articles/s41467-020-15245-5.pdf"],
     "wang2023_nasicon_design": ["https://www.nature.com/articles/s41467-023-40669-0.pdf"],
@@ -544,6 +547,8 @@ def main() -> int:
     parser.add_argument("--refresh", action="store_true", help="redownload PDFs already present")
     parser.add_argument("--metadata-only", action="store_true", help="discover sources without downloading")
     parser.add_argument("--delay", type=float, default=1.0, help="seconds between papers")
+    parser.add_argument("--vetted-only", action="store_true", help="use only curated public PDF sources; no source discovery")
+    parser.add_argument("--skip-index", action="store_true", help="defer indexing to a subsequent audit_library.py run")
     args = parser.parse_args()
 
     papers: list[dict[str, Any]] = load_json(PAPERS_PATH, [])
@@ -573,7 +578,11 @@ def main() -> int:
             }
         )
         try:
-            oa, candidates = candidate_sources(paper, args.try_publisher)
+            if args.vetted_only:
+                oa = {"discovery": "skipped; curated sources only"}
+                candidates = [{"url": url, "basis": "curated_public_source"} for url in PUBLIC_PDF_OVERRIDES.get(paper["id"], [])]
+            else:
+                oa, candidates = candidate_sources(paper, args.try_publisher)
             entry["open_access"] = oa
             entry["candidates"] = candidates
         except Exception as exc:
@@ -628,7 +637,10 @@ def main() -> int:
         if index < len(papers_to_process):
             time.sleep(max(args.delay, 0))
 
-    rebuild_fulltext_index(papers, manifest)
+    if not args.skip_index:
+        rebuild_fulltext_index(papers, manifest)
+    else:
+        print("Index not rebuilt; run audit_library.py before publishing.")
     manifest["updated_at"] = utc_now()
     save_json(MANIFEST_PATH, manifest)
     downloaded = sum(1 for row in entries.values() if row.get("status") == "downloaded")

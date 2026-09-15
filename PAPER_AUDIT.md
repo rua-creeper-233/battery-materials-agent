@@ -1,4 +1,16 @@
-# 55 篇论文真实性与分级核验
+# 58 篇论文真实性与分级核验
+
+## 2026-09-15 第二批：AI与聚合物电解质
+
+当前58篇，16篇有WOS UT，其余42篇仅DOI/出版社核验。新增3篇均取得公开正文；正文真实性、软件使用和复现资源分别核对。下方旧数量仅作历史。
+
+| 新增论文 | 核验入口 | 核心用途 |
+|---|---|---|
+| Xie et al. 2019, Graph dynamical networks for unsupervised learning of atomic scale dynamics in materials | [Nature Communications](https://doi.org/10.1038/s41467-019-10663-6) | MD轨迹的无监督动力学分析；不是机器学习势 |
+| Xie et al. 2022, Accelerating amorphous polymer electrolyte screening by learning to reduce errors in molecular dynamics simulated properties | [Nature Communications](https://doi.org/10.1038/s41467-022-30994-1) | LAMMPS数据＋多任务图网络；MedeA不是Materials Studio，不标MS |
+| Wang et al. 2023, Design principles for sodium superionic conductors | [Nature Communications](https://doi.org/10.1038/s41467-023-43436-3) | VASP/DFT研究锂钠导体配位差异 |
+
+复现起点：GDyNets作者代码与论文声明的Materials Cloud轨迹链接已附在条目；polymernet提供模型代码和补充性质数据，原文说明完整原始MD轨迹未公开，不能把性质表当轨迹文件。本轮未执行这些训练，也未宣称在当前软件版本下可直接运行。
 
 2026-09-15 新增3篇开放研究论文，逐篇检查原文与方法。当前55篇中16篇有WOS UT，其余39篇不声称WOS核验。以下旧日期统计保留为历史。
 
