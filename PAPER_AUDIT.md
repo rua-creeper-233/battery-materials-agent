@@ -1,4 +1,14 @@
-# 52 篇论文真实性与分级核验
+# 55 篇论文真实性与分级核验
+
+2026-09-15 新增3篇开放研究论文，逐篇检查原文与方法。当前55篇中16篇有WOS UT，其余39篇不声称WOS核验。以下旧日期统计保留为历史。
+
+| 新增论文 | 原文核验入口 | 方法与阅读目标 |
+|---|---|---|
+| He et al. 2017, Origin of fast ion diffusion in super-ionic conductors | [作者托管开放正文](https://terpconnect.umd.edu/~yfmo/He_Mo-SIC-ncomms15893.pdf) | AIMD＋NEB；理解协同迁移，不将单离子路径等同全部输运机制 |
+| Smith & Siegel 2020, Low-temperature paddlewheel effect in glassy solid electrolytes | [出版社正文](https://www.nature.com/articles/s41467-020-15245-5) | MS Amorphous Cell/COMPASS II构型生成→VASP AIMD；不把MS初始建模误称为生产MD |
+| Wang et al. 2023, Design principles for NASICON super-ionic conductors | [出版社正文](https://www.nature.com/articles/s41467-023-40669-0) | 文献挖掘＋VASP稳定性筛选＋实验；不误标成机器学习势论文 |
+
+建议学习顺序：先看He的机制图，再看Smith的建模—分析流程，最后看Wang的数据筛选流程。这些是研究实例，不是零基础软件操作手册；正文链接、软件使用与数据可用性须分别判断。
 
 核验日期：2026-09-14（本轮新增9篇；既有43篇保留原核验记录）
 

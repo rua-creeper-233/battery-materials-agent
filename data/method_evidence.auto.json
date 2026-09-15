@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-14T09:50:29.920394+00:00",
+  "generated_at": "2026-09-15T00:55:05.432828+00:00",
   "review_status": "auto_extracted_needs_human_review",
   "notice_zh": "自动结果只用于定位原文；用于计算输入、论文或汇报前，必须打开对应 PDF 页人工核对。",
   "rules_version": 1,
-  "fulltext_paper_count": 50,
+  "fulltext_paper_count": 53,
   "fulltext_paper_ids": [
     "aydinol1997_voltage",
     "baktash2020_argyrodite_aimd",
@@ -18,6 +18,7 @@
     "dunn2020_matbench",
     "ganose2018_sumo",
     "ganose2025_atomate2",
+    "he2017_concerted_diffusion",
     "he2018_aimd_statistics",
     "henkelman2000_cineb",
     "himanen2020_dscribe",
@@ -42,6 +43,7 @@
     "shi2013_sei_li2co3",
     "shi2021_reaxff_battery_review",
     "smidstrup2014_idpp",
+    "smith2020_paddlewheel_ms",
     "thompson2022_lammps",
     "togo2015_phonopy",
     "urban2016_computational_review",
@@ -49,6 +51,7 @@
     "wang2018_deepmdkit",
     "wang2018_sei_modeling_review",
     "wang2021_vaspkit",
+    "wang2023_nasicon_design",
     "wu2023_edl_ms",
     "wu2025_spe_aimd_ms",
     "xie2018_cgcnn",
@@ -57,6 +60,233 @@
     "zhou2004_dftu_voltage"
   ],
   "papers": {
+    "he2017_concerted_diffusion": {
+      "title": "Origin of fast ion diffusion in super-ionic conductors",
+      "doi": "10.1038/ncomms15893",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 11,
+      "evidence": [
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 2,
+          "section": "body",
+          "signal": "migration barrier",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2017_concerted_diffusion.pdf#page=2"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 3,
+          "section": "body",
+          "signal": "migration barrier",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2017_concerted_diffusion.pdf#page=3"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 3,
+          "section": "body",
+          "signal": "NEB",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2017_concerted_diffusion.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "simulations at 900 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2017_concerted_diffusion.pdf#page=3"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 5,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2017_concerted_diffusion.pdf#page=5"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 5,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2017_concerted_diffusion.pdf#page=5"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 5,
+          "section": "body",
+          "signal": "projector augmented-wave",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2017_concerted_diffusion.pdf#page=5"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 5,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2017_concerted_diffusion.pdf#page=5"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 5,
+          "section": "body",
+          "signal": "time step was set to 2 fs",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2017_concerted_diffusion.pdf#page=5"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 5,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2017_concerted_diffusion.pdf#page=5"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 5,
+          "section": "body",
+          "signal": "Vienna Ab initio Simulation package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/he2017_concerted_diffusion.pdf#page=5"
+        }
+      ]
+    },
+    "smith2020_paddlewheel_ms": {
+      "title": "Low-temperature paddlewheel effect in glassy solid electrolytes",
+      "doi": "10.1038/s41467-020-15245-5",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 6,
+      "evidence": [
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "300 K and 1 bar generated from melt-and-quench ab initio MD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smith2020_paddlewheel_ms.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "300 K and P = 1 bar, as generated by ab initio MD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smith2020_paddlewheel_ms.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 4,
+          "section": "body",
+          "signal": "MD runs performed at 300 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smith2020_paddlewheel_ms.pdf#page=4"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 7,
+          "section": "body",
+          "signal": "Arrhenius plot",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smith2020_paddlewheel_ms.pdf#page=7"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 7,
+          "section": "body",
+          "signal": "mean-squared displacement",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smith2020_paddlewheel_ms.pdf#page=7"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 8,
+          "section": "body",
+          "signal": "Arrhenius plot",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/smith2020_paddlewheel_ms.pdf#page=8"
+        }
+      ]
+    },
+    "wang2023_nasicon_design": {
+      "title": "Design principles for NASICON super-ionic conductors",
+      "doi": "10.1038/s41467-023-40669-0",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 3,
+      "evidence": [
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "Arrhenius plot",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_nasicon_design.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 7,
+          "section": "body",
+          "signal": "scan",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_nasicon_design.pdf#page=7"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 7,
+          "section": "body",
+          "signal": "migration barrier",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2023_nasicon_design.pdf#page=7"
+        }
+      ]
+    },
     "urban2016_computational_review": {
       "title": "Computational understanding of Li-ion batteries",
       "doi": "10.1038/npjcompumats.2016.2",

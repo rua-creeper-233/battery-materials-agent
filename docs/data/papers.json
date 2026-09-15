@@ -1,4 +1,174 @@
 [
+{
+  "id": "he2017_concerted_diffusion",
+  "title": "Origin of fast ion diffusion in super-ionic conductors",
+  "authors": [
+    "Xingfeng He",
+    "Yizhou Zhu",
+    "Yifei Mo"
+  ],
+  "year": 2017,
+  "doi": "10.1038/ncomms15893",
+  "role": "理解多离子协同扩散与NEB势垒",
+  "systems": [
+    "LGPS",
+    "LLZO",
+    "LATP"
+  ],
+  "methods": [
+    "DFT",
+    "AIMD",
+    "NEB"
+  ],
+  "properties": [
+    "concerted migration",
+    "migration barrier",
+    "ionic conductivity"
+  ],
+  "tags_zh": [
+    "固态电解质",
+    "协同扩散",
+    "离子输运"
+  ],
+  "summary": "结合AIMD轨迹与NEB，研究多离子协同迁移为何能够降低超离子导体中的扩散势垒。适合在掌握单离子迁移之后阅读。",
+  "journal": "Nature Communications",
+  "document_type": "Article",
+  "url": "https://doi.org/10.1038/ncomms15893",
+  "evidence": [
+    {
+      "claim": "正文明确结合AIMD与NEB研究LGPS、LLZO和LATP中的协同迁移。",
+      "basis": "开放正文与Methods",
+      "strength": "strong"
+    }
+  ],
+  "relations": [],
+  "verification": {
+    "doi": "verified_primary_fulltext_2026-09-15",
+    "publisher": "verified_primary_fulltext_2026-09-15",
+    "wos": "not_checked",
+    "sources": [
+      "https://terpconnect.umd.edu/~yfmo/He_Mo-SIC-ncomms15893.pdf"
+    ]
+  }
+},
+{
+  "id": "smith2020_paddlewheel_ms",
+  "title": "Low-temperature paddlewheel effect in glassy solid electrolytes",
+  "authors": [
+    "Jeffrey G. Smith",
+    "Donald J. Siegel"
+  ],
+  "year": 2020,
+  "doi": "10.1038/s41467-020-15245-5",
+  "role": "Materials Studio建模衔接VASP熔融淬火与扩散分析",
+  "systems": [
+    "glassy Li3PS4",
+    "75Li2S–25P2S5"
+  ],
+  "methods": [
+    "Materials Studio",
+    "Amorphous Cell",
+    "COMPASS II",
+    "VASP",
+    "DFT",
+    "AIMD",
+    "melt-and-quench"
+  ],
+  "properties": [
+    "pair distribution function",
+    "coordination number",
+    "paddlewheel effect",
+    "ionic diffusion"
+  ],
+  "tags_zh": [
+    "Materials Studio",
+    "VASP",
+    "玻璃态电解质",
+    "熔融淬火",
+    "桨轮效应"
+  ],
+  "summary": "先用Materials Studio生成无序初始结构，再用VASP优化和AIMD熔融淬火；通过结构与动力学分析研究阴离子转动和锂迁移的耦合。完整复现计算量较大，可先练习结构分析。",
+  "journal": "Nature Communications",
+  "document_type": "Article",
+  "url": "https://doi.org/10.1038/s41467-020-15245-5",
+  "evidence": [
+    {
+      "claim": "Methods明确写明Amorphous Cell/COMPASS II生成初始结构，随后采用VASP进行DFT与AIMD。",
+      "basis": "开放正文与Methods",
+      "strength": "strong"
+    }
+  ],
+  "relations": [],
+  "verification": {
+    "doi": "verified_primary_fulltext_2026-09-15",
+    "publisher": "verified_primary_fulltext_2026-09-15",
+    "wos": "not_checked",
+    "sources": [
+      "https://www.nature.com/articles/s41467-020-15245-5"
+    ]
+  }
+},
+{
+  "id": "wang2023_nasicon_design",
+  "title": "Design principles for NASICON super-ionic conductors",
+  "authors": [
+    "Jingyang Wang",
+    "Tanjin He",
+    "Xiaochen Yang",
+    "Zijian Cai",
+    "Yan Wang",
+    "Valentina Lacivita",
+    "Haegyeom Kim",
+    "Bin Ouyang",
+    "Gerbrand Ceder"
+  ],
+  "year": 2023,
+  "doi": "10.1038/s41467-023-40669-0",
+  "role": "文献数据挖掘与第一性原理筛选衔接实验验证",
+  "systems": [
+    "NASICON",
+    "sodium solid electrolyte"
+  ],
+  "methods": [
+    "DFT",
+    "VASP",
+    "high-throughput screening",
+    "text mining",
+    "phase diagram"
+  ],
+  "properties": [
+    "phase stability",
+    "ionic conductivity",
+    "composition dependence"
+  ],
+  "tags_zh": [
+    "钠电池",
+    "NASICON",
+    "文献挖掘",
+    "高通量",
+    "VASP"
+  ],
+  "summary": "联合历史文献电导率数据、第一性原理稳定性筛选和实验验证，研究NASICON组成与钠离子输运的关系。可用来学习文献数据如何与计算筛选衔接，不等同于端到端智能体。",
+  "journal": "Nature Communications",
+  "document_type": "Article",
+  "url": "https://doi.org/10.1038/s41467-023-40669-0",
+  "evidence": [
+    {
+      "claim": "摘要明确包含文献文本挖掘；Methods确认使用VASP计算结构和总能并构建相图。",
+      "basis": "开放正文与Methods",
+      "strength": "strong"
+    }
+  ],
+  "relations": [],
+  "verification": {
+    "doi": "verified_primary_fulltext_2026-09-15",
+    "publisher": "verified_primary_fulltext_2026-09-15",
+    "wos": "not_checked",
+    "sources": [
+      "https://www.nature.com/articles/s41467-023-40669-0"
+    ]
+  }
+},
   {
     "id": "urban2016_computational_review",
     "title": "Computational understanding of Li-ion batteries",

@@ -9,15 +9,88 @@
     "进展论文": "本库核心电池材料计算研究集"
   },
   "counts": {
-    "DFT": 28,
-    "MD": 25,
-    "MS": 6,
-    "VASP": 10,
+    "DFT": 31,
+    "MD": 27,
+    "MS": 7,
+    "VASP": 12,
     "方法论文": 27,
     "综述": 6,
-    "进展论文": 25
+    "进展论文": 28
   },
   "papers": {
+    "he2017_concerted_diffusion": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "AIMD"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "smith2020_paddlewheel_ms": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD",
+        "VASP",
+        "MS"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD",
+        "VASP",
+        "MS"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "AIMD"
+        ],
+        "VASP": [
+          "VASP"
+        ],
+        "MS": [
+          "Materials Studio"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "wang2023_nasicon_design": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "VASP"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "VASP"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "VASP": [
+          "VASP"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
     "urban2016_computational_review": {
       "paper_kind": "进展论文",
       "method_tags": [

@@ -45,6 +45,7 @@ class TaggingTests(unittest.TestCase):
                 "wu2025_spe_aimd_ms",
                 "zhang2025_sei_phasefield_ms",
                 "chen2025_heteroalkali_ms",
+                "smith2020_paddlewheel_ms",
             },
         )
         self.assertIn("VASP", classify_paper(self.by_id["geng2025_vaspkit_protocol"])["method_tags"])

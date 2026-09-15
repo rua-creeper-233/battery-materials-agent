@@ -42,6 +42,9 @@ USER_AGENT = (
 # unless the article's open licence is clear and the PDF is independently
 # checked against the target title.
 PUBLIC_PDF_OVERRIDES: dict[str, list[str]] = {
+    "he2017_concerted_diffusion": ["https://terpconnect.umd.edu/~yfmo/He_Mo-SIC-ncomms15893.pdf"],
+    "smith2020_paddlewheel_ms": ["https://www.nature.com/articles/s41467-020-15245-5.pdf"],
+    "wang2023_nasicon_design": ["https://www.nature.com/articles/s41467-023-40669-0.pdf"],
     "wu2025_spe_aimd_ms": [
         "https://uu.diva-portal.org/smash/get/diva2%3A1959874/FULLTEXT01.pdf",
     ],
