@@ -4,17 +4,18 @@
 
 ## 当前可用能力
 
-- 证据库共 58 篇：16 篇核心论文完成 DOI 与 WOS Core Collection 核验，另有 42 篇完成 DOI 与出版社/权威索引记录核验；
-- 56/58 篇已有用户合法取得或公开可访问的本地正文，共 3318 个带页码文本块；缺失项明确标记并回退到 DOI/出版社入口；
+- 证据库共 65 篇：16 篇核心论文完成 DOI 与 WOS Core Collection 核验，另有 49 篇完成 DOI 与出版社/权威索引记录核验；
+- 62/65 篇已有用户合法取得或公开可访问的本地正文，共 3595 个带页码文本块；缺失项明确标记并回退到 DOI/出版社入口；
 - 中文检索电压、稳定性、扩散、固态电解质、界面、高通量和机器学习势；
 - 论文卡片显示 `MS / DFT / MD / VASP` 与“方法论文 / 进展论文”标签，并支持右栏一键筛选；
 - 检索采用可解释的字段加权、同义词扩展与 `tag:` / `type:` 语法，回答会显示查询理解和逐篇命中理由；无匹配时不再用最新论文凑答案；
 - 提供可选的证据约束 RAG：模型只收到检索后的元数据与短页码摘录，必须返回 `[P1]` 格式引用；引用缺失或越界时自动回退到规则回答；
+- 提供仅限本机的受限工具 Agent：模型最多选择 4 次“查论文、取记录、查全文、生成工作流”只读工具，最终回答必须引用实际读取的来源；
 - 回答中给出论文级证据、DOI、精确 WOS 记录和本地全文页码；
 - 为 DFT / NEB / AIMD / MLIP 任务生成带质量控制项的工作流；
 - 从本地正文中自动定位软件、泛函、截断能、k 点、超胞、MD 条件、NEB 和机器学习训练信号，并逐条保留 PDF 页码；
 - 本地有 PDF 时显示“打开本地 PDF”，没有时回退到 WOS 与 DOI；
-- 支持按 DOI 幂等写入 Zotero；当前 16 篇核心条目均已关联本地 PDF，并生成可点击的 Zotero 深链；
+- 支持按 DOI 幂等写入 Zotero，并可在 Zotero 10 用户确认授权后给已有条目补挂已审计 PDF；本地深链与条目键不会进入 GitHub Pages；
 - 支持从网页上传 PDF：校验正文、识别/补充元数据、建立全文索引并返回关键词；用户上传的新增条目保存在本机私有库，不进入 GitHub Pages 发布包。
 
 全文状态与审计证据见 [FULLTEXT_AUDIT.md](FULLTEXT_AUDIT.md)，自动方法信号见 [METHOD_EVIDENCE_AUDIT.md](METHOD_EVIDENCE_AUDIT.md)，书目真实性和 WOS UT 见 [PAPER_AUDIT.md](PAPER_AUDIT.md)。
@@ -79,9 +80,15 @@ python .\extract_method_evidence.py
 
 新增 MACE-MP-0（正式发表版2025）、冻结层迁移学习、不确定性量化三篇方法论文。新卡片提供“适用范围与迁移边界”和“代码、数据与复现入口”，并区分原文体系与迁移到电池的建议步骤。
 
-新增可审计标签与检索权重训练：当前 58 篇中，DFT 32 篇、MD 29 篇、VASP 13 篇、MS 7 篇、方法论文 27 篇、进展论文 31 篇。`MS` 专指论文方法明确使用 BIOVIA Materials Studio 的条目，不能根据背景提及误标。标签规则与命中依据在 `data/paper_tags.json`。
+新增可审计标签与检索权重训练：当前 65 篇中，DFT 36 篇、MD 34 篇、VASP 14 篇、MS 7 篇、方法论文 29 篇、进展论文 36 篇。`MS` 专指论文方法明确使用 BIOVIA Materials Studio 的条目，不能根据背景提及误标。标签规则与命中依据在 `data/paper_tags.json`。
 
-网页现在支持 `tag:DFT`、`tag:MD`、`tag:VASP`、`tag:MS`、`type:方法论文` 和 `type:进展论文`。`data/search_training.json` 包含 40 条训练问题和 12 条留出问题；运行 `python train_search.py` 会重新选择字段权重并生成 `data/search_config.json`。当前留出集 MRR@5 为 0.9167、Recall@5 为 0.9583、Top-1 为 0.8333；该小集合做过一次词表错误分析，只适合回归，不是独立泛化基准。这是检索排序调参，不是大模型微调；完整说明见 [SEARCH_TRAINING.md](SEARCH_TRAINING.md)。
+网页现在支持 `tag:DFT`、`tag:MD`、`tag:VASP`、`tag:MS`、`type:方法论文` 和 `type:进展论文`。`data/search_training.json` 包含 48 条训练问题和 12 条留出问题；运行 `python train_search.py` 会重新选择字段权重并生成 `data/search_config.json`。当前留出集 MRR@5 为 0.9167、Recall@5 为 0.9583、Top-1 为 0.8333；该小集合做过一次词表错误分析，只适合回归，不是独立泛化基准。这是检索排序调参，不是大模型微调；完整说明见 [SEARCH_TRAINING.md](SEARCH_TRAINING.md)。
+
+## 2026-09-18 工具 Agent 与研究路线更新
+
+新增 PEMD、HiTPoly、氧掺杂 Li6PS5Cl 界面、长程电响应机器学习势和熵驱动训练数据选择 5 篇论文。新增论文、复现顺序、候选课题和学术/工业验证清单见 [电池研究路线图](guides/BATTERY_RESEARCH_ROADMAP_20260918.md)。
+
+本地 `/api/agent` 实现了受限、可审计的模型选工具循环；无模型时明确显示确定性工作流，不把关键词检索伪装成生成式 Agent。如何配置模型、建立评测集和逐步加入 RAG/工具选择见 [工具 Agent 实现说明](guides/AGENT_IMPLEMENTATION_GUIDE.md)。
 
 本轮新增 9 篇电池计算论文：6 篇明确使用 Materials Studio 的电解液、聚合物电解质、人工 SEI、相场多尺度和添加剂案例，另有 1 篇电解液 ReaxFF 参数化论文及 2 篇 SEI/ReaxFF 综述。每条均保存 DOI、作者、期刊、方法证据与核验来源；全文以 [FULLTEXT_AUDIT.md](FULLTEXT_AUDIT.md) 的实际状态为准。
 
@@ -118,6 +125,7 @@ Ceder et al. 1998 与 Shi et al. 2013 的 PDF 已由用户从有权访问的来�
 | `/api/upload` | POST multipart | 上传 PDF、补充元数据、建立索引并返回关键词 |
 | `/api/keywords` | POST JSON | 按 `text` 或 `paper_id` 提取关键词，当前版本 `v1` |
 | `/api/chat` | POST JSON | 检索本地证据并回答；配置模型后可用引用校验 RAG，传 `use_rag:false` 可关闭 |
+| `/api/agent` | POST JSON | 仅限本机的受限工具 Agent；最多 4 次只读工具动作并校验最终引用 |
 | `/api/paper-tags` | GET | 读取标签定义、计数与逐篇标签依据 |
 | `/api/search-config` | GET | 读取当前可解释检索权重与训练指标 |
 
@@ -152,6 +160,14 @@ python .\build_pages.py
 ```
 
 导入器通过 Zotero 本机 Connector 接口写入，不读取账号密码；已存在 DOI 会跳过，避免重复。新条目统一带 `battery-materials-agent` 与 `WOS-verified` 标签。Zotero 9 无需为此创建 Web API 密钥；若文库开启同步，新增书目和存储型附件可能在下一次同步时上传到 Zotero 云端。
+
+Zotero 10 中，如书目已经存在但缺少 PDF，可在取得并审计正文后运行：
+
+```powershell
+python .\attach_zotero_pdf.py --paper-id <论文ID>
+```
+
+Zotero 会显示本地写入授权对话框。脚本只给指定 DOI 的既有条目创建存储型 PDF 子附件，授权密钥仅保存在当前进程内，不会打印或写盘；随后重新运行 `sync_zotero_links.py`。
 
 `sync_zotero_links.py` 把条目键和附件键写入被 Git 忽略的 `private/zotero-links.local.json`。本地服务器只向真正的本机页面提供这些深链；即使请求经公网隧道回到 `127.0.0.1`，Host/Origin 双重检查也会阻止 Zotero 键和本地 PDF 外泄。导师端显示 WOS/DOI 入口，你自己的本地页面仍可直接打开 Zotero/PDF。
 

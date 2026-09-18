@@ -22,10 +22,16 @@ from urllib.parse import unquote, urlparse
 
 from agent import BatteryResearchAgent
 from library_store import KEYWORDS, MAX_PDF_BYTES, ingest_pdf
+from tool_agent import run_tool_agent
 
 
 ROOT = Path(__file__).resolve().parent
 STATIC = ROOT / "static"
+GUIDES = ROOT / "guides"
+PUBLIC_GUIDES = {
+    "AGENT_IMPLEMENTATION_GUIDE.md",
+    "BATTERY_RESEARCH_ROADMAP_20260918.md",
+}
 LITERATURE = ROOT / "literature"
 PDF_DIR = LITERATURE / "pdfs"
 MANIFEST = LITERATURE / "manifest.json"
@@ -263,11 +269,16 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:  # noqa: N802
         path = urlparse(self.path).path
-        if path not in {"/api/chat", "/api/keywords", "/api/upload"}:
+        if path not in {"/api/chat", "/api/agent", "/api/keywords", "/api/upload"}:
             self._json({"error": "not found"}, HTTPStatus.NOT_FOUND)
             return
         if not self._authorized():
             self._deny()
+            return
+        # The model-selected loop is strictly local: do not allow a tunnel to
+        # spend provider budget or expose evidence through this endpoint.
+        if path == "/api/agent" and not self._is_local_request():
+            self._json({"error": "工具Agent仅允许回环访问。"}, HTTPStatus.FORBIDDEN)
             return
         try:
             if path == "/api/chat":
@@ -285,6 +296,13 @@ class Handler(BaseHTTPRequestHandler):
                         flags=re.S,
                     )
                 self._json(result)
+                return
+            if path == "/api/agent":
+                payload = self._read_json_body(100_000)
+                question = payload.get("question")
+                if not isinstance(question, str) or not question.strip() or len(question) > 4000:
+                    raise ValueError("question 必须是 1-4000 字符的字符串。")
+                self._json(run_tool_agent(question.strip(), AGENT))
                 return
             if path == "/api/keywords":
                 payload = self._read_json_body(300_000)
@@ -311,10 +329,17 @@ class Handler(BaseHTTPRequestHandler):
 
     def _serve_static(self, request_path: str) -> None:
         relative = "index.html" if request_path in ("", "/") else unquote(request_path.lstrip("/"))
-        target = (STATIC / relative).resolve()
-        if STATIC.resolve() not in target.parents and target != STATIC.resolve():
-            self.send_error(HTTPStatus.FORBIDDEN)
-            return
+        if relative.startswith("guides/"):
+            guide_name = relative.removeprefix("guides/")
+            if guide_name not in PUBLIC_GUIDES:
+                self.send_error(HTTPStatus.NOT_FOUND)
+                return
+            target = (GUIDES / guide_name).resolve()
+        else:
+            target = (STATIC / relative).resolve()
+            if STATIC.resolve() not in target.parents and target != STATIC.resolve():
+                self.send_error(HTTPStatus.FORBIDDEN)
+                return
         if not target.is_file():
             self.send_error(HTTPStatus.NOT_FOUND)
             return

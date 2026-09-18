@@ -2,22 +2,59 @@
 
 > 所有条目均为“自动抽取、待人工核对”。它们是原文定位器，不是可直接复制到 VASP/MD 输入文件的最终参数。
 
-- 本地有正文的论文：56
-- 抽取到至少一条方法信号的论文：53
-- 方法信号总数：417
+- 本地有正文的论文：62
+- 抽取到至少一条方法信号的论文：59
+- 方法信号总数：466
 - 参考文献区：已排除
 - 每篇每类上限：3 条
 - 公开数据只保存短方法信号与页码，不保存连续正文上下文
 
 ## 分论文结果
 
-### Machine learning for molecular and materials science
+### PEMD: a high-throughput simulation and analysis framework for solid polymer electrolytes
+
+- 机器学习训练设置：p.1 `MAE`；p.6 `MAE`；p.6 `mean absolute error`
+- 计算软件：p.1 `LAMMPS`
+- 分子动力学条件：p.4 `5 ns NPT equilibration`；p.4 `NVT`
+
+### Computational discovery of polymer electrolytes with Bayesian optimization and high-throughput molecular dynamics simulations
+
+- 机器学习训练设置：p.6 `training data`
+- 分子动力学条件：p.8 `100 ns of simulation`
+
+### Enhanced Ionic Conductivity at the Solid Electrolyte Interphase of Oxygen-Doped Li6PS5Cl
 
 - 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine learning interatomic potential can infer electrical response
+
+- 机器学习训练设置：p.1 `Machine learning interatomic potential`；p.2 `root mean square error`；p.2 `test split`
+- 分子动力学条件：p.3 `MD steps) under the Nosé-Hoover thermostat, at 300 K`；p.3 `NVT`；p.5 `NPT`
+- 泛函与电子结构近似：p.4 `PBE`；p.4 `SCAN`；p.5 `SCAN`
+- 计算软件：p.7 `VASP`；p.8 `VASP`
+- 平面波截断能：p.8 `plane-wave cutoff of 400 eV`；p.8 `plane-wave energy cutoff of 680 eV`
+- 超胞与模型规模：p.8 `3 × 3 × 3 supercell`；p.8 `9 × 9 × 9 supercell`
+
+### Information-entropy-driven generation of material-agnostic datasets for machine-learning interatomic potentials
+
+- 机器学习训练设置：p.1 `machine-learning interatomic potential`；p.1 `training data`；p.1 `training set`
+- 分子动力学条件：p.10 `NVT`；p.10 `time step of 0.25 fs`
+- 计算软件：p.10 `LAMMPS`；p.14 `LAMMPS`；p.14 `VASP`
+- 平面波截断能：p.14 `plane-wave cutoff energy of 700 eV`
+- 收敛判据：p.14 `electronic self-consistency energy convergence of 10`
+- 泛函与电子结构近似：p.14 `generalized gradient approximation`；p.14 `PAW`；p.14 `projector augmented-wave`
+
+### Machine learning for molecular and materials science
+
+- 机器学习训练设置：p.2 `training data`；p.3 `training data`；p.3 `training set`
+- 泛函与电子结构近似：p.8 `GGA`
 
 ### Machine learning force field molecular dynamics simulation of SEI formation on lithium metal
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.6 `RMSE`；p.6 `root mean square error`；p.13 `RMSE`
+- 分子动力学条件：p.12 `NVT`；p.12 `time step of 1.0 fs`；p.13 `NVT`
+- 泛函与电子结构近似：p.13 `PBE`
+- 扩散与迁移势垒方法：p.13 `Mean square displacement`；p.13 `MSD`
 
 ### Graph dynamical networks for unsupervised learning of atomic scale dynamics in materials
 

@@ -9,15 +9,111 @@
     "进展论文": "本库核心电池材料计算研究集"
   },
   "counts": {
-    "DFT": 33,
-    "MD": 30,
+    "DFT": 36,
+    "MD": 34,
     "MS": 7,
-    "VASP": 13,
-    "方法论文": 27,
+    "VASP": 14,
+    "方法论文": 29,
     "综述": 7,
-    "进展论文": 33
+    "进展论文": 36
   },
   "papers": {
+    "tan2026_pemd": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "MD"
+      ],
+      "display_tags": [
+        "方法论文",
+        "MD"
+      ],
+      "tag_basis": {
+        "MD": [
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "kuhn2026_hitpoly": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "MD"
+      ],
+      "tag_basis": {
+        "MD": [
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "yang2026_oxygen_sei": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD",
+        "VASP"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD",
+        "VASP"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "LAMMPS",
+          "molecular dynamics"
+        ],
+        "VASP": [
+          "VASP"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "zhong2025_les_response": {
+      "paper_kind": "方法论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "方法论文",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "molecular dynamics"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "subramanyam2025_entropy_data": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
     "butler2018_ml_materials_review": {
       "paper_kind": "进展论文",
       "method_tags": [],

@@ -6,7 +6,7 @@ const code = fs.readFileSync(new URL('../static/browser_agent.js', import.meta.u
 const papers = JSON.parse(fs.readFileSync(new URL('../data/papers.json', import.meta.url), 'utf8'));
 const tags = JSON.parse(fs.readFileSync(new URL('../data/paper_tags.json', import.meta.url), 'utf8')).papers;
 const config = JSON.parse(fs.readFileSync(new URL('../data/search_config.json', import.meta.url), 'utf8'));
-const merged = papers.map(paper => ({...paper, ...(tags[paper.id] || {})}));
+const merged = papers.map(paper => ({display_tags: [], ...paper, ...(tags[paper.id] || {})}));
 const context = vm.createContext({window:{}});
 vm.runInContext(code, context);
 const agent = context.window.BatteryBrowserAgent;

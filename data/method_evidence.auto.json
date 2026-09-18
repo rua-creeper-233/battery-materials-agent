@@ -1,15 +1,16 @@
 {
-  "generated_at": "2026-09-15T16:07:28.180741+00:00",
+  "generated_at": "2026-09-18T14:20:21.867171+00:00",
   "review_status": "auto_extracted_needs_human_review",
   "notice_zh": "自动结果只用于定位原文；用于计算输入、论文或汇报前，必须打开对应 PDF 页人工核对。",
   "rules_version": 1,
-  "fulltext_paper_count": 56,
+  "fulltext_paper_count": 62,
   "fulltext_paper_ids": [
     "aydinol1997_voltage",
     "baktash2020_argyrodite_aimd",
     "batatia2025_mace_mp",
     "batzner2022_nequip",
     "bilbrey2025_uq",
+    "butler2018_ml_materials_review",
     "ceder1998_cathode_design",
     "chen2022_m3gnet",
     "chen2025_heteroalkali_ms",
@@ -25,6 +26,7 @@
     "hossain2020_reaxff_electrolyte",
     "jacobs2025_mlip_guide",
     "jain2013_materials_project",
+    "kuhn2026_hitpoly",
     "larsen2017_ase",
     "leung2010_sei_aimd",
     "ling2022_battery_informatics",
@@ -44,6 +46,9 @@
     "shi2021_reaxff_battery_review",
     "smidstrup2014_idpp",
     "smith2020_paddlewheel_ms",
+    "subramanyam2025_entropy_data",
+    "takenaka2026_sei_mlff",
+    "tan2026_pemd",
     "thompson2022_lammps",
     "togo2015_phonopy",
     "urban2016_computational_review",
@@ -60,24 +65,561 @@
     "xie2022_polymernet",
     "zhang2020_dpgen",
     "zhang2025_sei_phasefield_ms",
+    "zhong2025_les_response",
     "zhou2004_dftu_voltage"
   ],
   "papers": {
+    "tan2026_pemd": {
+      "title": "PEMD: a high-throughput simulation and analysis framework for solid polymer electrolytes",
+      "doi": "10.1039/d5dd00454c",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 6,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "MAE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/tan2026_pemd.pdf#page=1"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 1,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/tan2026_pemd.pdf#page=1"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 4,
+          "section": "body",
+          "signal": "5 ns NPT equilibration",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/tan2026_pemd.pdf#page=4"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 4,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/tan2026_pemd.pdf#page=4"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 6,
+          "section": "body",
+          "signal": "MAE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/tan2026_pemd.pdf#page=6"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 6,
+          "section": "body",
+          "signal": "mean absolute error",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/tan2026_pemd.pdf#page=6"
+        }
+      ]
+    },
+    "kuhn2026_hitpoly": {
+      "title": "Computational discovery of polymer electrolytes with Bayesian optimization and high-throughput molecular dynamics simulations",
+      "doi": "10.1016/j.matt.2026.102922",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 2,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 6,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/kuhn2026_hitpoly.pdf#page=6"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 8,
+          "section": "body",
+          "signal": "100 ns of simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/kuhn2026_hitpoly.pdf#page=8"
+        }
+      ]
+    },
+    "yang2026_oxygen_sei": {
+      "title": "Enhanced Ionic Conductivity at the Solid Electrolyte Interphase of Oxygen-Doped Li6PS5Cl",
+      "doi": "10.1002/advs.76563",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 0,
+      "evidence": []
+    },
+    "zhong2025_les_response": {
+      "title": "Machine learning interatomic potential can infer electrical response",
+      "doi": "10.1038/s41524-025-01911-z",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 15,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "Machine learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "root mean square error",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "test split",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=2"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "MD steps) under the Nosé-Hoover thermostat, at 300 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=3"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "SCAN",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 5,
+          "section": "body",
+          "signal": "SCAN",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=5"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 5,
+          "section": "body",
+          "signal": "NPT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=5"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 7,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=7"
+        },
+        {
+          "category": "basis_cutoff",
+          "label_zh": "平面波截断能",
+          "page": 8,
+          "section": "body",
+          "signal": "plane-wave cutoff of 400 eV",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=8"
+        },
+        {
+          "category": "basis_cutoff",
+          "label_zh": "平面波截断能",
+          "page": 8,
+          "section": "body",
+          "signal": "plane-wave energy cutoff of 680 eV",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=8"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 8,
+          "section": "body",
+          "signal": "3 × 3 × 3 supercell",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=8"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 8,
+          "section": "body",
+          "signal": "9 × 9 × 9 supercell",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=8"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 8,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/zhong2025_les_response.pdf#page=8"
+        }
+      ]
+    },
+    "subramanyam2025_entropy_data": {
+      "title": "Information-entropy-driven generation of material-agnostic datasets for machine-learning interatomic potentials",
+      "doi": "10.1038/s41524-025-01602-9",
+      "wos_uid": null,
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 13,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "machine-learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "training set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=1"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 10,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=10"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 10,
+          "section": "body",
+          "signal": "time step of 0.25 fs",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=10"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 10,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=10"
+        },
+        {
+          "category": "basis_cutoff",
+          "label_zh": "平面波截断能",
+          "page": 14,
+          "section": "body",
+          "signal": "plane-wave cutoff energy of 700 eV",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=14"
+        },
+        {
+          "category": "convergence",
+          "label_zh": "收敛判据",
+          "page": 14,
+          "section": "body",
+          "signal": "electronic self-consistency energy convergence of 10",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=14"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 14,
+          "section": "body",
+          "signal": "generalized gradient approximation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=14"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 14,
+          "section": "body",
+          "signal": "PAW",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=14"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 14,
+          "section": "body",
+          "signal": "projector augmented-wave",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=14"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 14,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=14"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 14,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/subramanyam2025_entropy_data.pdf#page=14"
+        }
+      ]
+    },
     "butler2018_ml_materials_review": {
       "title": "Machine learning for molecular and materials science",
       "doi": "10.1038/s41586-018-0337-2",
       "wos_uid": null,
       "review_status": "auto_extracted_needs_human_review",
-      "evidence_count": 0,
-      "evidence": []
+      "evidence_count": 4,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/butler2018_ml_materials_review.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 3,
+          "section": "body",
+          "signal": "training data",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/butler2018_ml_materials_review.pdf#page=3"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 3,
+          "section": "body",
+          "signal": "training set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/butler2018_ml_materials_review.pdf#page=3"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 8,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/butler2018_ml_materials_review.pdf#page=8"
+        }
+      ]
     },
     "takenaka2026_sei_mlff": {
       "title": "Machine learning force field molecular dynamics simulation of SEI formation on lithium metal",
       "doi": "10.1038/s41524-026-02271-y",
       "wos_uid": null,
       "review_status": "auto_extracted_needs_human_review",
-      "evidence_count": 0,
-      "evidence": []
+      "evidence_count": 9,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 6,
+          "section": "body",
+          "signal": "RMSE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/takenaka2026_sei_mlff.pdf#page=6"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 6,
+          "section": "body",
+          "signal": "root mean square error",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/takenaka2026_sei_mlff.pdf#page=6"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 12,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/takenaka2026_sei_mlff.pdf#page=12"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 12,
+          "section": "body",
+          "signal": "time step of 1.0 fs",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/takenaka2026_sei_mlff.pdf#page=12"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 13,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/takenaka2026_sei_mlff.pdf#page=13"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 13,
+          "section": "body",
+          "signal": "Mean square displacement",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/takenaka2026_sei_mlff.pdf#page=13"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 13,
+          "section": "body",
+          "signal": "MSD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/takenaka2026_sei_mlff.pdf#page=13"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 13,
+          "section": "body",
+          "signal": "RMSE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/takenaka2026_sei_mlff.pdf#page=13"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 13,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/takenaka2026_sei_mlff.pdf#page=13"
+        }
+      ]
     },
     "xie2019_gdynet": {
       "title": "Graph dynamical networks for unsupervised learning of atomic scale dynamics in materials",

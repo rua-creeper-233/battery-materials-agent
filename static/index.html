@@ -40,6 +40,8 @@
     .search-guide { margin: 12px 0 0; padding: 11px 13px; border: 1px solid var(--line); border-radius: 11px; background: #fbfcf8; color: var(--muted); font-size: 12px; line-height: 1.65; }
     .search-guide summary { color: var(--green); font-weight: 750; cursor: pointer; }
     .search-guide code { padding: 2px 5px; border-radius: 5px; background: #edf3ee; color: #294b3c; }
+    .agent-toggle { display:flex; align-items:center; gap:8px; margin-top:10px; color:var(--muted); font-size:12px; }
+    .agent-trace { margin-top:12px; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:#fbfcf8; font-size:11px; color:var(--muted); }
     .empty { min-height: 430px; display: grid; place-content: center; text-align: center; color: var(--muted); padding: 50px; }
     .empty .mark { margin: auto; width: 76px; height: 76px; display: grid; place-content: center; border-radius: 22px; background: var(--mint); color: var(--green); font: 700 29px Georgia, serif; transform: rotate(-4deg); }
     .empty h2 { color: var(--ink); margin: 20px 0 8px; font: 600 23px Georgia, "Noto Serif SC", serif; }
@@ -140,6 +142,7 @@
           <textarea id="question" placeholder="例如：我想用 VASP 计算 LGPS 中的锂离子扩散，NEB 和 AIMD 应该怎样选择？"></textarea>
           <button id="ask">检索并生成回答</button>
         </div>
+        <label class="agent-toggle"><input id="toolAgent" type="checkbox" /> 工具Agent（仅本地服务；无模型时使用确定性工作流）</label>
         <div class="examples">
           <span class="chip">如何计算正极平均嵌锂电压？</span>
           <span class="chip">NEB 和 AIMD 研究扩散有什么区别？</span>
@@ -179,6 +182,7 @@
       <h2 id="tutorialTitle">材料计算入门小课堂</h2>
       <p class="tutorial-intro">先认识界面和文件，再跑通一个小算例。每一步都有示意图、操作提示和验收目标；无需查阅论文，也无需连接本地服务。</p>
       <p class="tutorial-intro">推荐顺序：零基础先读 DFT，想动手建模选 MS，已有服务器环境再跟练 VASP。</p>
+      <p class="tutorial-intro"><a href="./guides/AGENT_IMPLEMENTATION_GUIDE.md">工具Agent实现说明</a> · <a href="./guides/BATTERY_RESEARCH_ROADMAP_20260918.md">电池研究路线图</a></p>
       <div class="tutorial-switch" role="group" aria-label="选择教程"><button type="button" data-course="dft" aria-pressed="false">DFT · 原理与电池应用</button><button type="button" data-course="ms" aria-pressed="true">MS · 图形界面建模</button><button type="button" data-course="vasp" aria-pressed="false">VASP · 第一性原理计算</button><button type="button" data-course="md" aria-pressed="false">MD · 从轨迹到物性</button></div>
       <div id="tutorialContent"></div>
       <p class="tutorial-footnote">图为本站绘制的教学示意，非软件截图；菜单位置随版本变化。算例用于学习，未在本站实际运行。MS 相应模块与 VASP 运行均需已有授权及计算环境。</p>
@@ -392,17 +396,23 @@
       try {
         let data;
         try {
-          const response = await apiFetch('/api/chat', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({question})});
+          const endpoint = document.querySelector('#toolAgent').checked ? '/api/agent' : '/api/chat';
+          const response = await apiFetch(endpoint, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({question})});
           data = await response.json();
-        } catch (_) {
+        } catch (error) {
+          if (document.querySelector('#toolAgent').checked) throw new Error('工具Agent仅在本地服务可用时启用；请打开本地页面或连接本地服务。');
           data = window.BatteryBrowserAgent.answer(question, state.papers, state.searchConfig);
         }
-        const ragLabel = data.rag?.used
+        const ragLabel = data.agent?.mode === 'tool_agent'
+          ? '工具 Agent 已完成受限检索、证据读取与引用校验。'
+          : data.rag?.used
           ? `RAG 已启用 · ${data.rag.model || data.rag.provider || '外部模型'} · 引用校验通过`
           : data.rag?.enabled
             ? `RAG 已配置但本次回退到规则回答：${data.rag.reason || '未通过验证'}`
             : '当前为可解释检索＋规则回答；配置本地/远程模型后启用证据约束 RAG。';
-        target.innerHTML = `<div class="notice">${escapeHtml(data.provenance.wos_note)}<br>${escapeHtml(ragLabel)}</div>${markdown(data.answer_markdown)}<div class="evidence-grid">${data.papers.map(paperCard).join('')}</div>`;
+        const trace = data.agent?.trace || [];
+        const traceHtml = trace.length ? `<details class="agent-trace"><summary>工具轨迹（${trace.length}步）</summary><ul>${trace.map(row => `<li>${escapeHtml(row.tool || row.model || 'step')}${row.error ? `：${escapeHtml(row.error)}` : ''}</li>`).join('')}</ul></details>` : '';
+        target.innerHTML = `<div class="notice">${escapeHtml(data.provenance?.wos_note || '')}<br>${escapeHtml(data.agent?.notice || ragLabel)}</div>${markdown(data.answer_markdown)}${traceHtml}<div class="evidence-grid">${(data.papers || []).map(paperCard).join('')}</div>`;
       } catch (error) { target.innerHTML = `<div class="notice">${escapeHtml(error.message)}</div>`; }
       finally { btn.disabled = false; btn.textContent = '检索并生成回答'; }
     }

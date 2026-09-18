@@ -42,6 +42,14 @@ USER_AGENT = (
 # unless the article's open licence is clear and the PDF is independently
 # checked against the target title.
 PUBLIC_PDF_OVERRIDES: dict[str, list[str]] = {
+    "tan2026_pemd": ["https://pubs.rsc.org/en/content/articlepdf/2026/dd/d5dd00454c"],
+    "kuhn2026_hitpoly": ["https://arxiv.org/pdf/2602.17595v1"],
+    "yang2026_oxygen_sei": [
+        "https://europepmc.org/articles/PMC13360120?pdf=render",
+        "https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/advs.76563",
+    ],
+    "zhong2025_les_response": ["https://www.nature.com/articles/s41524-025-01911-z.pdf"],
+    "subramanyam2025_entropy_data": ["https://www.nature.com/articles/s41524-025-01602-9.pdf"],
     "xie2019_gdynet": ["https://www.nature.com/articles/s41467-019-10663-6.pdf"],
     "xie2022_polymernet": ["https://www.nature.com/articles/s41467-022-30994-1.pdf"],
     "wang2023_sodium_design": ["https://www.nature.com/articles/s41467-023-43436-3.pdf", "https://api.drum.lib.umd.edu/server/api/core/bitstreams/1b1ca95f-1359-49d3-9853-2ec601705ba3/content"],

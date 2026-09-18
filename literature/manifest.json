@@ -54,9 +54,9 @@
         "chunks": 63,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T15:58:56+00:00"
+        "updated_at": "2026-09-18T14:15:30+00:00"
       },
-      "audited_at": "2026-09-15T15:58:32+00:00"
+      "audited_at": "2026-09-18T14:15:09+00:00"
     },
     "aydinol1997_voltage": {
       "title": "Ab initio study of lithium intercalation in metal oxides and metal dichalcogenides",
@@ -115,9 +115,9 @@
         "chunks": 40,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T15:58:57+00:00"
+        "updated_at": "2026-09-18T14:15:31+00:00"
       },
-      "audited_at": "2026-09-15T15:58:32+00:00"
+      "audited_at": "2026-09-18T14:15:09+00:00"
     },
     "ceder1998_cathode_design": {
       "title": "Identification of cathode materials for lithium batteries guided by first-principles calculations",
@@ -177,14 +177,14 @@
         "document_kind": "article",
         "supplementary_signals": 0
       },
-      "audited_at": "2026-09-15T15:58:33+00:00",
+      "audited_at": "2026-09-18T14:15:09+00:00",
       "text_extraction": {
         "pages": 3,
         "text_chars": 21170,
         "chunks": 15,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T15:58:57+00:00"
+        "updated_at": "2026-09-18T14:15:32+00:00"
       },
       "uploaded_at": "2026-09-13T07:59:31.045741+00:00",
       "original_filename": "ceder1998_cathode_design.pdf"
@@ -246,9 +246,9 @@
         "chunks": 61,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T15:58:58+00:00"
+        "updated_at": "2026-09-18T14:15:33+00:00"
       },
-      "audited_at": "2026-09-15T15:58:33+00:00"
+      "audited_at": "2026-09-18T14:15:10+00:00"
     },
     "ong2011_li_na": {
       "title": "Voltage, stability and diffusion barrier differences between sodium-ion and lithium-ion intercalation materials",
@@ -307,9 +307,9 @@
         "chunks": 37,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T15:58:59+00:00"
+        "updated_at": "2026-09-18T14:15:34+00:00"
       },
-      "audited_at": "2026-09-15T15:58:33+00:00"
+      "audited_at": "2026-09-18T14:15:10+00:00"
     },
     "ong2013_lgps": {
       "title": "Phase stability, electrochemical stability and ionic conductivity of the Li10±1MP2X12 family of superionic conductors",
@@ -368,9 +368,9 @@
         "chunks": 33,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T15:59:00+00:00"
+        "updated_at": "2026-09-18T14:15:34+00:00"
       },
-      "audited_at": "2026-09-15T15:58:33+00:00"
+      "audited_at": "2026-09-18T14:15:10+00:00"
     },
     "shi2013_sei_li2co3": {
       "title": "Defect Thermodynamics and Diffusion Mechanisms in Li2CO3 and Implications for the Solid Electrolyte Interphase in Li-Ion Batteries",
@@ -416,14 +416,14 @@
         "document_kind": "article",
         "supplementary_signals": 0
       },
-      "audited_at": "2026-09-15T15:58:34+00:00",
+      "audited_at": "2026-09-18T14:15:10+00:00",
       "text_extraction": {
         "pages": 15,
         "text_chars": 93347,
         "chunks": 66,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T15:59:01+00:00"
+        "updated_at": "2026-09-18T14:15:36+00:00"
       }
     },
     "sendek2017_sse_screening": {
@@ -487,9 +487,9 @@
         "chunks": 59,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T15:59:03+00:00"
+        "updated_at": "2026-09-18T14:15:37+00:00"
       },
-      "audited_at": "2026-09-15T15:58:34+00:00"
+      "audited_at": "2026-09-18T14:15:11+00:00"
     },
     "baktash2020_argyrodite_aimd": {
       "title": "Diffusion of lithium ions in Lithium-argyrodite solid-state electrolytes",
@@ -543,9 +543,9 @@
         "chunks": 45,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T15:59:04+00:00"
+        "updated_at": "2026-09-18T14:15:38+00:00"
       },
-      "audited_at": "2026-09-15T15:58:35+00:00"
+      "audited_at": "2026-09-18T14:15:11+00:00"
     },
     "chen2022_m3gnet": {
       "title": "A universal graph deep learning interatomic potential for the periodic table",
@@ -603,11 +603,11 @@
         "chunks": 92,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:00:27+00:00"
+        "updated_at": "2026-09-18T14:16:46+00:00"
       },
       "supplementary_pdf": "literature/supplementary/chen2022_m3gnet_supplementary.pdf",
       "local_pdf": "literature/pdfs/chen2022_m3gnet.pdf",
-      "audited_at": "2026-09-15T15:58:35+00:00"
+      "audited_at": "2026-09-18T14:15:11+00:00"
     },
     "sawada2024_nnp_sse": {
       "title": "High-throughput investigation of stability and Li diffusion of doped solid electrolytes via neural network potential without configurational knowledge",
@@ -661,9 +661,9 @@
         "chunks": 23,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:00:28+00:00"
+        "updated_at": "2026-09-18T14:16:47+00:00"
       },
-      "audited_at": "2026-09-15T15:58:35+00:00"
+      "audited_at": "2026-09-18T14:15:12+00:00"
     },
     "ling2022_battery_informatics": {
       "title": "A review of the recent progress in battery informatics",
@@ -717,9 +717,9 @@
         "chunks": 108,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:00:31+00:00"
+        "updated_at": "2026-09-18T14:16:49+00:00"
       },
-      "audited_at": "2026-09-15T15:58:36+00:00"
+      "audited_at": "2026-09-18T14:15:12+00:00"
     },
     "henkelman2000_cineb": {
       "title": "A climbing image nudged elastic band method for finding saddle points and minimum energy paths",
@@ -774,9 +774,9 @@
         "chunks": 30,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:00:32+00:00"
+        "updated_at": "2026-09-18T14:16:49+00:00"
       },
-      "audited_at": "2026-09-15T15:58:36+00:00"
+      "audited_at": "2026-09-18T14:15:12+00:00"
     },
     "leung2010_sei_aimd": {
       "title": "Ab initio molecular dynamics simulations of the initial stages of solid-electrolyte interphase formation on lithium ion battery graphitic anodes",
@@ -834,9 +834,9 @@
         "chunks": 15,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:00:39+00:00"
+        "updated_at": "2026-09-18T14:16:54+00:00"
       },
-      "audited_at": "2026-09-15T15:58:42+00:00"
+      "audited_at": "2026-09-18T14:15:18+00:00"
     },
     "mo2012_lgps_aimd": {
       "title": "First Principles Study of the Li10GeP2S12 Lithium Super Ionic Conductor Material",
@@ -895,9 +895,9 @@
         "chunks": 12,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:00:40+00:00"
+        "updated_at": "2026-09-18T14:16:55+00:00"
       },
-      "audited_at": "2026-09-15T15:58:43+00:00"
+      "audited_at": "2026-09-18T14:15:18+00:00"
     },
     "deng2023_chgnet": {
       "title": "CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling",
@@ -955,9 +955,9 @@
         "chunks": 44,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:00:44+00:00"
+        "updated_at": "2026-09-18T14:16:58+00:00"
       },
-      "audited_at": "2026-09-15T15:58:43+00:00"
+      "audited_at": "2026-09-18T14:15:18+00:00"
     },
     "geng2025_vaspkit_protocol": {
       "title": "Empowering materials science with VASPKIT: a toolkit for enhanced simulation and analysis",
@@ -1047,9 +1047,9 @@
         "chunks": 77,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:00:52+00:00"
+        "updated_at": "2026-09-18T14:17:04+00:00"
       },
-      "audited_at": "2026-09-15T15:58:44+00:00"
+      "audited_at": "2026-09-18T14:15:19+00:00"
     },
     "ong2013_pymatgen": {
       "title": "Python Materials Genomics (pymatgen): A robust, open-source python library for materials analysis",
@@ -1109,9 +1109,9 @@
         "chunks": 26,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:00:52+00:00"
+        "updated_at": "2026-09-18T14:17:05+00:00"
       },
-      "audited_at": "2026-09-15T15:58:44+00:00"
+      "audited_at": "2026-09-18T14:15:19+00:00"
     },
     "larsen2017_ase": {
       "title": "The atomic simulation environment—a Python library for working with atoms",
@@ -1167,9 +1167,9 @@
         "chunks": 119,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:00:56+00:00"
+        "updated_at": "2026-09-18T14:17:08+00:00"
       },
-      "audited_at": "2026-09-15T15:58:44+00:00"
+      "audited_at": "2026-09-18T14:15:19+00:00"
     },
     "ganose2025_atomate2": {
       "title": "Atomate2: modular workflows for materials science",
@@ -1229,9 +1229,9 @@
         "chunks": 118,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:00+00:00"
+        "updated_at": "2026-09-18T14:17:11+00:00"
       },
-      "audited_at": "2026-09-15T15:58:44+00:00"
+      "audited_at": "2026-09-18T14:15:19+00:00"
     },
     "jain2013_materials_project": {
       "title": "Commentary: The Materials Project: A materials genome approach to accelerating materials innovation",
@@ -1300,9 +1300,9 @@
         "chunks": 27,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:00+00:00"
+        "updated_at": "2026-09-18T14:17:11+00:00"
       },
-      "audited_at": "2026-09-15T15:58:45+00:00"
+      "audited_at": "2026-09-18T14:15:20+00:00"
     },
     "smidstrup2014_idpp": {
       "title": "Improved initial guess for minimum energy path calculations",
@@ -1358,9 +1358,9 @@
         "chunks": 21,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:01+00:00"
+        "updated_at": "2026-09-18T14:17:12+00:00"
       },
-      "audited_at": "2026-09-15T15:58:45+00:00"
+      "audited_at": "2026-09-18T14:15:20+00:00"
     },
     "he2018_aimd_statistics": {
       "title": "Statistical variances of diffusional properties from ab initio molecular dynamics simulations",
@@ -1420,9 +1420,9 @@
         "chunks": 40,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:02+00:00"
+        "updated_at": "2026-09-18T14:17:13+00:00"
       },
-      "audited_at": "2026-09-15T15:58:45+00:00"
+      "audited_at": "2026-09-18T14:15:20+00:00"
     },
     "zhou2004_dftu_voltage": {
       "title": "First-principles prediction of redox potentials in transition-metal compounds with LDA+U",
@@ -1497,9 +1497,9 @@
           21
         ],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:03+00:00"
+        "updated_at": "2026-09-18T14:17:14+00:00"
       },
-      "audited_at": "2026-09-15T15:58:45+00:00"
+      "audited_at": "2026-09-18T14:15:20+00:00"
     },
     "jacobs2025_mlip_guide": {
       "title": "A practical guide to machine learning interatomic potentials – Status and future",
@@ -1555,9 +1555,9 @@
         "chunks": 165,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:10+00:00"
+        "updated_at": "2026-09-18T14:17:20+00:00"
       },
-      "audited_at": "2026-09-15T15:58:45+00:00"
+      "audited_at": "2026-09-18T14:15:20+00:00"
     },
     "togo2015_phonopy": {
       "title": "First principles phonon calculations in materials science",
@@ -1613,9 +1613,9 @@
         "chunks": 21,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:10+00:00"
+        "updated_at": "2026-09-18T14:17:21+00:00"
       },
-      "audited_at": "2026-09-15T15:58:46+00:00"
+      "audited_at": "2026-09-18T14:15:21+00:00"
     },
     "ganose2018_sumo": {
       "title": "sumo: Command-line tools for plotting and analysis of periodic ab initio calculations",
@@ -1671,9 +1671,9 @@
         "chunks": 6,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:11+00:00"
+        "updated_at": "2026-09-18T14:17:21+00:00"
       },
-      "audited_at": "2026-09-15T15:58:46+00:00"
+      "audited_at": "2026-09-18T14:15:21+00:00"
     },
     "wang2018_deepmdkit": {
       "title": "DeePMD-kit: A deep learning package for many-body potential energy representation and molecular dynamics",
@@ -1729,9 +1729,9 @@
         "chunks": 35,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:12+00:00"
+        "updated_at": "2026-09-18T14:17:22+00:00"
       },
-      "audited_at": "2026-09-15T15:58:46+00:00"
+      "audited_at": "2026-09-18T14:15:21+00:00"
     },
     "zhang2020_dpgen": {
       "title": "DP-GEN: A concurrent learning platform for the generation of reliable deep learning based potential energy models",
@@ -1787,9 +1787,9 @@
         "chunks": 48,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:13+00:00"
+        "updated_at": "2026-09-18T14:17:23+00:00"
       },
-      "audited_at": "2026-09-15T15:58:46+00:00"
+      "audited_at": "2026-09-18T14:15:21+00:00"
     },
     "batzner2022_nequip": {
       "title": "E(3)-equivariant graph neural networks for data-efficient and accurate interatomic potentials",
@@ -1849,9 +1849,9 @@
         "chunks": 54,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:15+00:00"
+        "updated_at": "2026-09-18T14:17:25+00:00"
       },
-      "audited_at": "2026-09-15T15:58:47+00:00"
+      "audited_at": "2026-09-18T14:15:22+00:00"
     },
     "musaelian2023_allegro": {
       "title": "Learning local equivariant representations for large-scale atomistic dynamics",
@@ -1919,9 +1919,9 @@
         "chunks": 65,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:18+00:00"
+        "updated_at": "2026-09-18T14:17:27+00:00"
       },
-      "audited_at": "2026-09-15T15:58:48+00:00"
+      "audited_at": "2026-09-18T14:15:22+00:00"
     },
     "deringer2021_gpr_gap": {
       "title": "Gaussian Process Regression for Materials and Molecules",
@@ -1981,9 +1981,9 @@
         "chunks": 278,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:23+00:00"
+        "updated_at": "2026-09-18T14:17:32+00:00"
       },
-      "audited_at": "2026-09-15T15:58:48+00:00"
+      "audited_at": "2026-09-18T14:15:23+00:00"
     },
     "thompson2022_lammps": {
       "title": "LAMMPS - a flexible simulation tool for particle-based materials modeling at the atomic, meso, and continuum scales",
@@ -2052,9 +2052,9 @@
         "chunks": 169,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:34+00:00"
+        "updated_at": "2026-09-18T14:17:43+00:00"
       },
-      "audited_at": "2026-09-15T15:58:49+00:00"
+      "audited_at": "2026-09-18T14:15:23+00:00"
     },
     "pizzi2016_aiida": {
       "title": "AiiDA: automated interactive infrastructure and database for computational science",
@@ -2110,9 +2110,9 @@
         "chunks": 61,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:37+00:00"
+        "updated_at": "2026-09-18T14:17:45+00:00"
       },
-      "audited_at": "2026-09-15T15:58:50+00:00"
+      "audited_at": "2026-09-18T14:15:24+00:00"
     },
     "himanen2020_dscribe": {
       "title": "DScribe: Library of descriptors for machine learning in materials science",
@@ -2168,9 +2168,9 @@
         "chunks": 55,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:41+00:00"
+        "updated_at": "2026-09-18T14:17:49+00:00"
       },
-      "audited_at": "2026-09-15T15:58:50+00:00"
+      "audited_at": "2026-09-18T14:15:25+00:00"
     },
     "xie2018_cgcnn": {
       "title": "Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties",
@@ -2226,9 +2226,9 @@
         "chunks": 33,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:41+00:00"
+        "updated_at": "2026-09-18T14:17:50+00:00"
       },
-      "audited_at": "2026-09-15T15:58:50+00:00"
+      "audited_at": "2026-09-18T14:15:25+00:00"
     },
     "dunn2020_matbench": {
       "title": "Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm",
@@ -2284,9 +2284,9 @@
         "chunks": 45,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:42+00:00"
+        "updated_at": "2026-09-18T14:17:50+00:00"
       },
-      "audited_at": "2026-09-15T15:58:50+00:00"
+      "audited_at": "2026-09-18T14:15:25+00:00"
     },
     "persson2010_graphite": {
       "title": "Thermodynamic and kinetic properties of the Li-graphite system from first-principles calculations",
@@ -2346,9 +2346,9 @@
         "chunks": 34,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:43+00:00"
+        "updated_at": "2026-09-18T14:17:51+00:00"
       },
-      "audited_at": "2026-09-15T15:58:51+00:00"
+      "audited_at": "2026-09-18T14:15:25+00:00"
     },
     "shen2024_pymatgen_defects": {
       "title": "pymatgen-analysis-defects: A Python package for analyzing point defects in crystalline materials",
@@ -2404,9 +2404,9 @@
         "chunks": 8,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:01:43+00:00"
+        "updated_at": "2026-09-18T14:17:51+00:00"
       },
-      "audited_at": "2026-09-15T15:58:51+00:00"
+      "audited_at": "2026-09-18T14:15:26+00:00"
     },
     "batatia2025_mace_mp": {
       "title": "A foundation model for atomistic materials chemistry",
@@ -2460,9 +2460,9 @@
         "chunks": 324,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:02:52+00:00"
+        "updated_at": "2026-09-18T14:18:45+00:00"
       },
-      "audited_at": "2026-09-15T15:58:51+00:00"
+      "audited_at": "2026-09-18T14:15:26+00:00"
     },
     "radova2025_frozen_transfer": {
       "title": "Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning",
@@ -2524,9 +2524,9 @@
         "chunks": 46,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:02:55+00:00"
+        "updated_at": "2026-09-18T14:18:47+00:00"
       },
-      "audited_at": "2026-09-15T15:58:52+00:00"
+      "audited_at": "2026-09-18T14:15:26+00:00"
     },
     "bilbrey2025_uq": {
       "title": "Uncertainty quantification for neural network potential foundation models",
@@ -2580,9 +2580,9 @@
         "chunks": 31,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:02:55+00:00"
+        "updated_at": "2026-09-18T14:18:48+00:00"
       },
-      "audited_at": "2026-09-15T15:58:52+00:00"
+      "audited_at": "2026-09-18T14:15:27+00:00"
     },
     "wu2023_edl_ms": {
       "title": "Effect of the Electric Double Layer (EDL) in Multicomponent Electrolyte Reduction and Solid Electrolyte Interphase (SEI) Formation in Lithium Batteries",
@@ -2642,14 +2642,14 @@
         "document_kind": "article",
         "supplementary_signals": 1
       },
-      "audited_at": "2026-09-15T15:58:52+00:00",
+      "audited_at": "2026-09-18T14:15:27+00:00",
       "text_extraction": {
         "pages": 12,
         "text_chars": 72518,
         "chunks": 50,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:02:57+00:00"
+        "updated_at": "2026-09-18T14:18:49+00:00"
       }
     },
     "sheng2024_lipf6_hydrolysis_ms": {
@@ -2696,14 +2696,14 @@
         "document_kind": "article",
         "supplementary_signals": 1
       },
-      "audited_at": "2026-09-15T15:58:53+00:00",
+      "audited_at": "2026-09-18T14:15:27+00:00",
       "text_extraction": {
         "pages": 8,
         "text_chars": 36282,
         "chunks": 25,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:02:57+00:00"
+        "updated_at": "2026-09-18T14:18:50+00:00"
       }
     },
     "li2024_polymeric_asei_ms": {
@@ -2793,9 +2793,9 @@
         "chunks": 40,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:02:59+00:00"
+        "updated_at": "2026-09-18T14:18:50+00:00"
       },
-      "audited_at": "2026-09-15T15:58:53+00:00"
+      "audited_at": "2026-09-18T14:15:28+00:00"
     },
     "zhang2025_sei_phasefield_ms": {
       "title": "Simulating solid electrolyte interphase formation spanning 10^8 time scales with an atomically informed phase-field model",
@@ -2841,14 +2841,14 @@
         "document_kind": "article",
         "supplementary_signals": 1
       },
-      "audited_at": "2026-09-15T15:58:53+00:00",
+      "audited_at": "2026-09-18T14:15:28+00:00",
       "text_extraction": {
         "pages": 14,
         "text_chars": 72333,
         "chunks": 53,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:03:00+00:00"
+        "updated_at": "2026-09-18T14:18:52+00:00"
       }
     },
     "chen2025_heteroalkali_ms": {
@@ -2911,9 +2911,9 @@
         "chunks": 57,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:03:04+00:00"
+        "updated_at": "2026-09-18T14:18:55+00:00"
       },
-      "audited_at": "2026-09-15T15:58:54+00:00"
+      "audited_at": "2026-09-18T14:15:28+00:00"
     },
     "hossain2020_reaxff_electrolyte": {
       "title": "Lithium-electrolyte solvation and reaction in the electrolyte of a lithium ion battery: A ReaxFF reactive force field study",
@@ -2944,14 +2944,14 @@
         "document_kind": "article",
         "supplementary_signals": 0
       },
-      "audited_at": "2026-09-15T15:58:54+00:00",
+      "audited_at": "2026-09-18T14:15:29+00:00",
       "text_extraction": {
         "pages": 15,
         "text_chars": 53806,
         "chunks": 38,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:03:05+00:00"
+        "updated_at": "2026-09-18T14:18:56+00:00"
       }
     },
     "wang2018_sei_modeling_review": {
@@ -3010,9 +3010,9 @@
         "chunks": 113,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:03:07+00:00"
+        "updated_at": "2026-09-18T14:18:58+00:00"
       },
-      "audited_at": "2026-09-15T15:58:54+00:00"
+      "audited_at": "2026-09-18T14:15:29+00:00"
     },
     "shi2021_reaxff_battery_review": {
       "title": "Application of Reaction Force Field Molecular Dynamics in Lithium Batteries",
@@ -3074,9 +3074,9 @@
         "chunks": 22,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:03:08+00:00"
+        "updated_at": "2026-09-18T14:18:59+00:00"
       },
-      "audited_at": "2026-09-15T15:58:55+00:00"
+      "audited_at": "2026-09-18T14:15:29+00:00"
     },
     "he2017_concerted_diffusion": {
       "title": "Origin of fast ion diffusion in super-ionic conductors",
@@ -3136,14 +3136,14 @@
           "accepted_as_main_text": true
         }
       ],
-      "audited_at": "2026-09-15T15:58:27+00:00",
+      "audited_at": "2026-09-18T14:15:05+00:00",
       "text_extraction": {
         "pages": 7,
         "text_chars": 36126,
         "chunks": 25,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:03:09+00:00"
+        "updated_at": "2026-09-18T14:19:00+00:00"
       }
     },
     "smith2020_paddlewheel_ms": {
@@ -3196,14 +3196,14 @@
           "accepted_as_main_text": true
         }
       ],
-      "audited_at": "2026-09-15T15:58:27+00:00",
+      "audited_at": "2026-09-18T14:15:05+00:00",
       "text_extraction": {
         "pages": 11,
         "text_chars": 72135,
         "chunks": 52,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:03:10+00:00"
+        "updated_at": "2026-09-18T14:19:01+00:00"
       }
     },
     "wang2023_nasicon_design": {
@@ -3264,14 +3264,14 @@
           "accepted_as_main_text": true
         }
       ],
-      "audited_at": "2026-09-15T15:58:31+00:00",
+      "audited_at": "2026-09-18T14:15:08+00:00",
       "text_extraction": {
         "pages": 11,
         "text_chars": 59961,
         "chunks": 42,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:04:25+00:00"
+        "updated_at": "2026-09-18T14:20:01+00:00"
       }
     },
     "xie2019_gdynet": {
@@ -3316,14 +3316,14 @@
           "accepted_as_main_text": true
         }
       ],
-      "audited_at": "2026-09-15T15:58:24+00:00",
+      "audited_at": "2026-09-18T14:15:03+00:00",
       "text_extraction": {
         "pages": 9,
         "text_chars": 53354,
         "chunks": 37,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:04:26+00:00"
+        "updated_at": "2026-09-18T14:20:02+00:00"
       }
     },
     "xie2022_polymernet": {
@@ -3368,14 +3368,14 @@
           "accepted_as_main_text": true
         }
       ],
-      "audited_at": "2026-09-15T15:58:25+00:00",
+      "audited_at": "2026-09-18T14:15:04+00:00",
       "text_extraction": {
         "pages": 10,
         "text_chars": 63745,
         "chunks": 45,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:04:34+00:00"
+        "updated_at": "2026-09-18T14:20:06+00:00"
       }
     },
     "wang2023_sodium_design": {
@@ -3424,42 +3424,330 @@
           "accepted_as_main_text": true
         }
       ],
-      "audited_at": "2026-09-15T15:58:26+00:00",
+      "audited_at": "2026-09-18T14:15:04+00:00",
       "text_extraction": {
         "pages": 9,
         "text_chars": 51868,
         "chunks": 37,
         "empty_text_pages": [],
         "extractor": "pypdf",
-        "updated_at": "2026-09-15T16:04:38+00:00"
+        "updated_at": "2026-09-18T14:20:09+00:00"
       }
     },
     "butler2018_ml_materials_review": {
       "title": "Machine learning for molecular and materials science",
       "doi": "10.1038/s41586-018-0337-2",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "local_pdf": "literature/pdfs/butler2018_ml_materials_review.pdf",
+      "access_basis": "user_existing_Zotero_attachment",
+      "validation": {
+        "valid_pdf": true,
+        "pages": 9,
+        "encrypted": false,
+        "first_pages_text_chars": 22722,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "bytes": 1203120,
+      "sha256": "3f63490cc9fbf43b42df87e6fd787d1ef60749bc172682426d8a1da60f967719",
+      "audited_at": "2026-09-18T14:15:02+00:00",
+      "text_extraction": {
+        "pages": 9,
+        "text_chars": 69303,
+        "chunks": 49,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-18T14:20:10+00:00"
+      }
     },
     "takenaka2026_sei_mlff": {
       "title": "Machine learning force field molecular dynamics simulation of SEI formation on lithium metal",
       "doi": "10.1038/s41524-026-02271-y",
       "wos_uid": null,
-      "status": "not_downloaded"
+      "status": "downloaded",
+      "local_pdf": "literature/pdfs/takenaka2026_sei_mlff.pdf",
+      "access_basis": "user_existing_Zotero_attachment",
+      "validation": {
+        "valid_pdf": true,
+        "pages": 31,
+        "encrypted": false,
+        "first_pages_text_chars": 3958,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "bytes": 1330305,
+      "sha256": "d7b2acec6efc8cb765c5eb4a99eb3ff3d740cb8072a5f4d15222e44b375bdbc2",
+      "audited_at": "2026-09-18T14:15:02+00:00",
+      "text_extraction": {
+        "pages": 31,
+        "text_chars": 41254,
+        "chunks": 45,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-18T14:20:12+00:00"
+      }
+    },
+    "tan2026_pemd": {
+      "title": "PEMD: a high-throughput simulation and analysis framework for solid polymer electrolytes",
+      "doi": "10.1039/d5dd00454c",
+      "wos_uid": null,
+      "checked_at": "2026-09-18T14:14:59+00:00",
+      "open_access": {
+        "discovery": "skipped; curated sources only"
+      },
+      "candidates": [
+        {
+          "url": "https://pubs.rsc.org/en/content/articlepdf/2026/dd/d5dd00454c",
+          "basis": "curated_public_source"
+        }
+      ],
+      "status": "downloaded",
+      "attempts": [
+        {
+          "url": "https://pubs.rsc.org/en/content/articlepdf/2026/dd/d5dd00454c",
+          "basis": "curated_public_source",
+          "ok": false,
+          "reason": "HTTPError",
+          "http_status": 403,
+          "detail": "HTTP Error 403: Forbidden",
+          "attempted_at": "2026-09-18T12:43:59+00:00"
+        }
+      ],
+      "local_pdf": "literature/pdfs/tan2026_pemd.pdf",
+      "validation": {
+        "valid_pdf": true,
+        "pages": 10,
+        "encrypted": false,
+        "first_pages_text_chars": 13020,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "bytes": 1989282,
+      "sha256": "eba778ea2455ccf2ed82165af842e06fbbab2000b6a45c046eaec25b6e830b9a",
+      "audited_at": "2026-09-18T14:15:01+00:00",
+      "text_extraction": {
+        "pages": 10,
+        "text_chars": 46989,
+        "chunks": 35,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-18T14:20:13+00:00"
+      }
+    },
+    "kuhn2026_hitpoly": {
+      "title": "Computational discovery of polymer electrolytes with Bayesian optimization and high-throughput molecular dynamics simulations",
+      "doi": "10.1016/j.matt.2026.102922",
+      "wos_uid": null,
+      "checked_at": "2026-09-18T12:44:00+00:00",
+      "open_access": {
+        "discovery": "skipped; curated sources only"
+      },
+      "candidates": [
+        {
+          "url": "https://arxiv.org/pdf/2602.17595v1",
+          "basis": "curated_public_source"
+        }
+      ],
+      "status": "downloaded",
+      "access_basis": "curated_public_source",
+      "source_url": "https://arxiv.org/pdf/2602.17595v1",
+      "local_pdf": "literature/pdfs/kuhn2026_hitpoly.pdf",
+      "sha256": "32f39cb4daac52c96ec253825db0ca9b565d2103c60990eeeed657383a77123d",
+      "bytes": 5922869,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 28,
+        "encrypted": false,
+        "first_pages_text_chars": 5989,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "attempts": [
+        {
+          "url": "https://arxiv.org/pdf/2602.17595v1",
+          "basis": "curated_public_source",
+          "ok": true,
+          "final_url": "https://arxiv.org/pdf/2602.17595v1",
+          "content_type": "application/pdf",
+          "bytes": 5922869,
+          "sha256": "32f39cb4daac52c96ec253825db0ca9b565d2103c60990eeeed657383a77123d",
+          "attempted_at": "2026-09-18T12:44:03+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "audited_at": "2026-09-18T14:15:01+00:00",
+      "text_extraction": {
+        "pages": 28,
+        "text_chars": 50202,
+        "chunks": 41,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-18T14:20:13+00:00"
+      }
+    },
+    "yang2026_oxygen_sei": {
+      "title": "Enhanced Ionic Conductivity at the Solid Electrolyte Interphase of Oxygen-Doped Li6PS5Cl",
+      "doi": "10.1002/advs.76563",
+      "wos_uid": null,
+      "checked_at": "2026-09-18T14:35:06+00:00",
+      "open_access": {
+        "discovery": "skipped; curated sources only"
+      },
+      "candidates": [
+        {
+          "url": "https://europepmc.org/articles/PMC13360120?pdf=render",
+          "basis": "curated_public_source"
+        },
+        {
+          "url": "https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/advs.76563",
+          "basis": "curated_public_source"
+        }
+      ],
+      "status": "not_downloaded",
+      "attempts": [
+        {
+          "url": "https://europepmc.org/articles/PMC13360120?pdf=render",
+          "basis": "curated_public_source",
+          "ok": false,
+          "reason": "HTTPError",
+          "http_status": 403,
+          "detail": "HTTP Error 403: Forbidden",
+          "attempted_at": "2026-09-18T14:35:07+00:00"
+        },
+        {
+          "url": "https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/advs.76563",
+          "basis": "curated_public_source",
+          "ok": false,
+          "reason": "HTTPError",
+          "http_status": 403,
+          "detail": "HTTP Error 403: Forbidden",
+          "attempted_at": "2026-09-18T14:35:07+00:00"
+        }
+      ]
+    },
+    "zhong2025_les_response": {
+      "title": "Machine learning interatomic potential can infer electrical response",
+      "doi": "10.1038/s41524-025-01911-z",
+      "wos_uid": null,
+      "checked_at": "2026-09-18T12:44:06+00:00",
+      "open_access": {
+        "discovery": "skipped; curated sources only"
+      },
+      "candidates": [
+        {
+          "url": "https://www.nature.com/articles/s41524-025-01911-z.pdf",
+          "basis": "curated_public_source"
+        }
+      ],
+      "status": "downloaded",
+      "access_basis": "curated_public_source",
+      "source_url": "https://www.nature.com/articles/s41524-025-01911-z.pdf?error=cookies_not_supported&code=7b372086-188a-4024-bf3e-82d1055cc00c",
+      "local_pdf": "literature/pdfs/zhong2025_les_response.pdf",
+      "sha256": "c8036d161a80692ce2a5a264073e8b55eb38e476cfd9508e4b537560508006fd",
+      "bytes": 2686255,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 11,
+        "encrypted": false,
+        "first_pages_text_chars": 18584,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41524-025-01911-z.pdf",
+          "basis": "curated_public_source",
+          "ok": true,
+          "final_url": "https://www.nature.com/articles/s41524-025-01911-z.pdf?error=cookies_not_supported&code=7b372086-188a-4024-bf3e-82d1055cc00c",
+          "content_type": "application/pdf",
+          "bytes": 2686255,
+          "sha256": "c8036d161a80692ce2a5a264073e8b55eb38e476cfd9508e4b537560508006fd",
+          "attempted_at": "2026-09-18T12:45:12+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "audited_at": "2026-09-18T14:15:01+00:00",
+      "text_extraction": {
+        "pages": 11,
+        "text_chars": 63908,
+        "chunks": 44,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-18T14:20:19+00:00"
+      }
+    },
+    "subramanyam2025_entropy_data": {
+      "title": "Information-entropy-driven generation of material-agnostic datasets for machine-learning interatomic potentials",
+      "doi": "10.1038/s41524-025-01602-9",
+      "wos_uid": null,
+      "checked_at": "2026-09-18T12:45:13+00:00",
+      "open_access": {
+        "discovery": "skipped; curated sources only"
+      },
+      "candidates": [
+        {
+          "url": "https://www.nature.com/articles/s41524-025-01602-9.pdf",
+          "basis": "curated_public_source"
+        }
+      ],
+      "status": "downloaded",
+      "access_basis": "curated_public_source",
+      "source_url": "https://www.nature.com/articles/s41524-025-01602-9.pdf?error=cookies_not_supported&code=12903f7d-686b-47fa-a611-b2b26909be20",
+      "local_pdf": "literature/pdfs/subramanyam2025_entropy_data.pdf",
+      "sha256": "d306def0cb76f8d2f4af125fcd5da2fa88fb66838cc16ed60d05031394cef68a",
+      "bytes": 3695648,
+      "validation": {
+        "valid_pdf": true,
+        "pages": 17,
+        "encrypted": false,
+        "first_pages_text_chars": 18507,
+        "title_token_match": 1.0,
+        "document_kind": "article",
+        "supplementary_signals": 0
+      },
+      "attempts": [
+        {
+          "url": "https://www.nature.com/articles/s41524-025-01602-9.pdf",
+          "basis": "curated_public_source",
+          "ok": true,
+          "final_url": "https://www.nature.com/articles/s41524-025-01602-9.pdf?error=cookies_not_supported&code=12903f7d-686b-47fa-a611-b2b26909be20",
+          "content_type": "application/pdf",
+          "bytes": 3695648,
+          "sha256": "d306def0cb76f8d2f4af125fcd5da2fa88fb66838cc16ed60d05031394cef68a",
+          "attempted_at": "2026-09-18T12:47:58+00:00",
+          "accepted_as_main_text": true
+        }
+      ],
+      "audited_at": "2026-09-18T14:15:02+00:00",
+      "text_extraction": {
+        "pages": 17,
+        "text_chars": 86101,
+        "chunks": 63,
+        "empty_text_pages": [],
+        "extractor": "pypdf",
+        "updated_at": "2026-09-18T14:20:21+00:00"
+      }
     }
   },
   "fulltext_index": {
     "path": "data/fulltext_chunks.jsonl",
-    "papers": 56,
-    "chunks": 3318,
-    "updated_at": "2026-09-15T16:04:38+00:00"
+    "papers": 62,
+    "chunks": 3595,
+    "updated_at": "2026-09-18T14:20:21+00:00"
   },
-  "updated_at": "2026-09-15T16:04:38+00:00",
+  "updated_at": "2026-09-18T14:35:07+00:00",
   "integrity_audit": {
-    "audited_at": "2026-09-15T16:04:38+00:00",
-    "library_papers": 60,
-    "doi_verified": 60,
+    "audited_at": "2026-09-18T14:20:21+00:00",
+    "library_papers": 65,
+    "doi_verified": 65,
     "wos_uid_verified": 16,
-    "downloaded_main_texts": 56,
+    "downloaded_main_texts": 62,
     "duplicate_pdf_hashes": 0,
     "checks": [
       "PDF magic/parse",

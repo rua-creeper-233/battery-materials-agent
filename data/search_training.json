@@ -44,7 +44,12 @@
     {"query": "LAMMPS 经典分子动力学入门", "relevant": ["thompson2022_lammps"]},
     {"query": "机器学习原子势 选型 数据 验证指南", "relevant": ["jacobs2025_mlip_guide"]},
     {"query": "机器学习势不确定性 校准 过度自信", "relevant": ["bilbrey2025_uq"]},
-    {"query": "tag:MS type:进展论文 电解液 MD", "relevant": ["wu2023_edl_ms", "sheng2024_lipf6_hydrolysis_ms", "zhang2025_sei_phasefield_ms", "chen2025_heteroalkali_ms"]}
+    {"query": "tag:MS type:进展论文 电解液 MD", "relevant": ["wu2023_edl_ms", "sheng2024_lipf6_hydrolysis_ms", "zhang2025_sei_phasefield_ms", "chen2025_heteroalkali_ms"]},
+    {"query": "PEMD 聚合物电解质 高通量 分子动力学 工作流", "relevant": ["tan2026_pemd"]},
+    {"query": "HiTPoly 聚合物电解质 主动学习 筛选", "relevant": ["kuhn2026_hitpoly"]},
+    {"query": "Li6PS5Cl 氧掺杂 SevenNet 界面 SEI", "relevant": ["yang2026_oxygen_sei"]},
+    {"query": "机器学习势 电响应 Born有效电荷 长程静电", "relevant": ["zhong2025_les_response"]},
+    {"query": "熵驱动 DFT 训练构型 数据选择", "relevant": ["subramanyam2025_entropy_data"]}
   ],
   "held_out_examples": [
     {"query": "用MS 2020和COMPASS III研究碳酸酯电解液界面结构", "relevant": ["wu2023_edl_ms", "zhang2025_sei_phasefield_ms"]},
