@@ -13,3 +13,10 @@ zotero.sqlite*
 data/fulltext_chunks.jsonl
 literature/text/
 private/
+# Local model checkpoints and exported weights must stay on the user's computer.
+training/checkpoints/
+training/output/
+training/*.safetensors
+training/*.bin
+training/*.gguf
+models/
