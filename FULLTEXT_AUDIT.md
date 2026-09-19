@@ -1,8 +1,8 @@
 # 本地全文与证据索引审计
 
-审计时间：2026-09-18T14:20:21+00:00
+审计时间：2026-09-19T03:45:12+00:00
 
-结论：证据库共 65 篇，DOI/出版社记录已核验 65/65；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 62/65 篇，共 3595 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
+结论：证据库共 65 篇，DOI/出版社记录已核验 65/65；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 63/65 篇，共 3649 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
 
 所有保留文件均通过 PDF 解析、标题匹配、正文/补充材料区分、SHA-256 和重复文件检查。M3GNet 的补充材料单独放在 `literature/supplementary/`，不进入正文索引。
 
@@ -10,7 +10,7 @@
 |---:|---:|---|---|---:|---:|---:|---|
 | 1 | 2026 | PEMD: a high-throughput simulation and analysis framework for solid polymer electrolytes | 已下载正文 | 10 | 35 | 1.0 | 已核验来源 |
 | 2 | 2026 | Computational discovery of polymer electrolytes with Bayesian optimization and high-throughput molecular dynamics simulations | 已下载正文 | 28 | 41 | 1.0 | curated_public_source |
-| 3 | 2026 | Enhanced Ionic Conductivity at the Solid Electrolyte Interphase of Oxygen-Doped Li6PS5Cl | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 3 | 2026 | Enhanced Ionic Conductivity at the Solid Electrolyte Interphase of Oxygen-Doped Li6PS5Cl | 已下载正文 | 14 | 54 | 0.889 | user_supplied_authorized_copy |
 | 4 | 2025 | Machine learning interatomic potential can infer electrical response | 已下载正文 | 11 | 44 | 1.0 | curated_public_source |
 | 5 | 2025 | Information-entropy-driven generation of material-agnostic datasets for machine-learning interatomic potentials | 已下载正文 | 17 | 63 | 1.0 | curated_public_source |
 | 6 | 2018 | Machine learning for molecular and materials science | 已下载正文 | 9 | 49 | 1.0 | user_existing_Zotero_attachment |
@@ -76,7 +76,6 @@
 
 ## 尚未保存的正文
 
-- Enhanced Ionic Conductivity at the Solid Electrolyte Interphase of Oxygen-Doped Li6PS5Cl，DOI `10.1002/advs.76563`：本地未保存正文，使用 WOS/DOI 回退。
 - Empowering materials science with VASPKIT: a toolkit for enhanced simulation and analysis，DOI `10.1038/s41596-025-01160-w`：本地未保存正文，使用 WOS/DOI 回退。
 - A polymeric artificial solid electrolyte interface dramatically enhances lithium-ion transport，DOI `10.1039/d4cc03688c`：本地未保存正文，使用 WOS/DOI 回退。
 

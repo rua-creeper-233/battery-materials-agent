@@ -2,9 +2,9 @@
 
 > 所有条目均为“自动抽取、待人工核对”。它们是原文定位器，不是可直接复制到 VASP/MD 输入文件的最终参数。
 
-- 本地有正文的论文：62
-- 抽取到至少一条方法信号的论文：59
-- 方法信号总数：466
+- 本地有正文的论文：63
+- 抽取到至少一条方法信号的论文：60
+- 方法信号总数：485
 - 参考文献区：已排除
 - 每篇每类上限：3 条
 - 公开数据只保存短方法信号与页码，不保存连续正文上下文
@@ -24,7 +24,13 @@
 
 ### Enhanced Ionic Conductivity at the Solid Electrolyte Interphase of Oxygen-Doped Li6PS5Cl
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `machine learning interatomic potential`；p.1 `machine-learned interatomic potential`；p.2 `machine-learning interatomic potential`
+- 扩散与迁移势垒方法：p.3 `mean squared displacement`；p.3 `MSD`；p.4 `MSD`
+- 分子动力学条件：p.3 `100 ps equilibration`；p.3 `2 ns simulation`；p.3 `8 ns simulation`
+- 泛函与电子结构近似：p.6 `GGA`；p.7 `HSE06`；p.10 `PAW`
+- 平面波截断能：p.10 `energy cutoff of 400 eV`
+- 计算软件：p.10 `LAMMPS`；p.10 `VASP`；p.10 `Vienna ab-initio simulation package`
+- 超胞与模型规模：p.11 `4 × 4 × 4 supercell`；p.11 `supercells contained 17 024 atoms`；p.11 `supercells of 12 924 atoms`
 
 ### Machine learning interatomic potential can infer electrical response
 

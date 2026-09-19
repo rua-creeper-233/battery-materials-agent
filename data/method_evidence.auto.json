@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-18T14:20:21.867171+00:00",
+  "generated_at": "2026-09-19T03:51:00.194905+00:00",
   "review_status": "auto_extracted_needs_human_review",
   "notice_zh": "自动结果只用于定位原文；用于计算输入、论文或汇报前，必须打开对应 PDF 页人工核对。",
   "rules_version": 1,
-  "fulltext_paper_count": 62,
+  "fulltext_paper_count": 63,
   "fulltext_paper_ids": [
     "aydinol1997_voltage",
     "baktash2020_argyrodite_aimd",
@@ -63,6 +63,7 @@
     "xie2018_cgcnn",
     "xie2019_gdynet",
     "xie2022_polymernet",
+    "yang2026_oxygen_sei",
     "zhang2020_dpgen",
     "zhang2025_sei_phasefield_ms",
     "zhong2025_les_response",
@@ -172,8 +173,199 @@
       "doi": "10.1002/advs.76563",
       "wos_uid": null,
       "review_status": "auto_extracted_needs_human_review",
-      "evidence_count": 0,
-      "evidence": []
+      "evidence_count": 19,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "machine learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "machine-learned interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "machine-learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=2"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 3,
+          "section": "body",
+          "signal": "mean squared displacement",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=3"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 3,
+          "section": "body",
+          "signal": "MSD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "100 ps equilibration",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "2 ns simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "8 ns simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=3"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "MSD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 6,
+          "section": "body",
+          "signal": "GGA",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=6"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 7,
+          "section": "body",
+          "signal": "HSE06",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=7"
+        },
+        {
+          "category": "basis_cutoff",
+          "label_zh": "平面波截断能",
+          "page": 10,
+          "section": "body",
+          "signal": "energy cutoff of 400 eV",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=10"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 10,
+          "section": "body",
+          "signal": "PAW",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=10"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 10,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=10"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 10,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=10"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 10,
+          "section": "body",
+          "signal": "Vienna ab-initio simulation package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=10"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 11,
+          "section": "body",
+          "signal": "4 × 4 × 4 supercell",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=11"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 11,
+          "section": "body",
+          "signal": "supercells contained 17 024 atoms",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=11"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 11,
+          "section": "body",
+          "signal": "supercells of 12 924 atoms",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/yang2026_oxygen_sei.pdf#page=11"
+        }
+      ]
     },
     "zhong2025_les_response": {
       "title": "Machine learning interatomic potential can infer electrical response",
