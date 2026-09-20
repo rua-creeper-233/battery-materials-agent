@@ -24,7 +24,11 @@ def main() -> None:
     copy(ROOT / "static" / "browser_agent.js", DOCS / "browser_agent.js")
     for asset in ("tutorials.js", "tutorials.css", "dft_lessons.js", "beginner_lessons.js", "md_lessons.js"):
         copy(ROOT / "static" / asset, DOCS / asset)
-    for guide in ("AGENT_IMPLEMENTATION_GUIDE.md", "BATTERY_RESEARCH_ROADMAP_20260918.md"):
+    for guide in (
+        "AGENT_IMPLEMENTATION_GUIDE.md",
+        "BATTERY_RESEARCH_ROADMAP_20260918.md",
+        "AGENT_STATUS_20260920.md",
+    ):
         copy(ROOT / "guides" / guide, DOCS / "guides" / guide)
     copy(papers_path, DOCS / "data" / "papers.json")
     copy(ROOT / "data" / "paper_tags.json", DOCS / "data" / "paper_tags.json")

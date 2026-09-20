@@ -7,6 +7,7 @@ import re
 from typing import Any
 
 from agent import BatteryResearchAgent
+from rag import unsupported_parameter_claims
 
 MAX_CALLS = 4
 MAX_QUERY = 4000
@@ -54,7 +55,41 @@ def _safe_paper(paper: dict[str, Any]) -> dict[str, Any]:
     # Deliberately omit paths, Zotero keys, and arbitrary metadata.
     fields = ("id", "title", "authors", "year", "journal", "doi", "role", "summary",
               "methods", "systems", "properties", "evidence", "scope_note", "publication_status", "retrieval")
-    return _clip({key: paper.get(key) for key in fields if key in paper})
+    safe = _clip({key: paper.get(key) for key in fields if key in paper})
+    safe["provenance"] = {
+        "evidence_type": "curated_metadata",
+        "pages": [],
+        "scope": _clip(paper.get("scope_note", ""), 700),
+    }
+    return safe
+
+
+def _numeric_evidence(papers: list[dict[str, Any]], observations: list[dict[str, Any]]) -> dict[str, Any]:
+    """Keep only scientific records for the final numeric guard.
+
+    Tool traces also contain model arguments, echoed search queries and error
+    text.  Those are control-plane data, not evidence: a query such as ``900 K``
+    must never license a final answer claiming that temperature.  Retain only
+    paper packets and the ``papers``/``paper``/``hits`` fields returned by a
+    tool, which are the bounded evidence-bearing portions of a result.
+    """
+    clean_papers = [
+        {key: value for key, value in paper.items() if key != "retrieval"}
+        for paper in papers
+    ]
+    tool_records: list[dict[str, Any]] = []
+    for row in observations:
+        result = row.get("result") if isinstance(row, dict) else None
+        if not isinstance(result, dict):
+            continue
+        record = {
+            key: result[key]
+            for key in ("papers", "paper", "hits")
+            if key in result
+        }
+        if record:
+            tool_records.append(record)
+    return {"papers": clean_papers, "tool_records": tool_records}
 
 
 class ToolAgent:
@@ -81,7 +116,16 @@ class ToolAgent:
         limit = self._limit(arguments, 4)
         hits = self.research.search_fulltext(query, limit)
         allowed = ("paper_id", "page", "section", "score", "excerpt")
-        return {"query": query, "hits": [_clip({k: h.get(k) for k in allowed if k in h}) for h in hits]}
+        clipped = [_clip({k: h.get(k) for k in allowed if k in h}) for h in hits]
+        return {
+            "query": query,
+            "hits": clipped,
+            "provenance": {
+                "evidence_type": "fulltext_excerpt",
+                "pages": sorted({h.get("page") for h in hits if isinstance(h.get("page"), int)}),
+                "scope": "仅限返回的页面摘录；不能外推未展示的全文内容",
+            },
+        }
 
     def build_workflow(self, arguments: dict[str, Any]) -> dict[str, Any]:
         question = self._query(arguments, key="question")
@@ -178,8 +222,25 @@ class ToolAgent:
                 if valid and citations:
                     citations = list(dict.fromkeys(citations))
                     selected = [kept[int(c[1:]) - 1] for c in citations]
+                    # Tool traces may contain metadata and excerpts.  Apply the
+                    # same narrow parameter guard as the direct RAG path before
+                    # exposing a model answer to callers.
+                    evidence_text = json.dumps(
+                        _numeric_evidence(kept, observations), ensure_ascii=False
+                    )
+                    unsupported = unsupported_parameter_claims(final, evidence_text)
+                    if unsupported:
+                        trace.append({"model": "guardrail", "error": "unsupported_numeric_claim",
+                                      "claims": unsupported})
+                        break
                     source_map = {c: kept[int(c[1:]) - 1].get("id") for c in citations
                                   if kept[int(c[1:]) - 1].get("id")}
+                    source_provenance = {
+                        c: (selected[index].get("provenance") or {
+                            "evidence_type": "curated_metadata", "pages": [], "scope": ""
+                        })
+                        for index, c in enumerate(citations)
+                    }
                     sources = []
                     for citation, paper in zip(citations, selected):
                         title = str(paper.get('title', '未命名来源')).replace('[', '(').replace(']', ')')
@@ -191,6 +252,7 @@ class ToolAgent:
                     base.update({"answer_markdown": final, "papers": selected, "fulltext_hits": [],
                                  "workflow": None, "graph": {"nodes": [], "edges": []},
                                  "source_map": source_map, "mode": "tool_agent",
+                                 "source_provenance": source_provenance,
                                  "agent": {"mode": "tool_agent", "trace": trace,
                                            "notice": "工具 Agent 已完成受限检索、证据读取与引用校验。"}})
                     return base

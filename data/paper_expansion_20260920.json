@@ -1,0 +1,1177 @@
+[
+  {
+    "id": "kresse1993_liquid_metals",
+    "title": "Ab initio molecular dynamics for liquid metals",
+    "authors": [
+      "G. Kresse",
+      "J. Hafner"
+    ],
+    "year": 1993,
+    "journal": "Physical Review B",
+    "doi": "10.1103/PhysRevB.47.558",
+    "tags": [
+      "DFT",
+      "AIMD",
+      "VASP",
+      "方法论文"
+    ],
+    "role": "VASP/AIMD 的早期方法论文，适合理解电子结构力如何驱动分子动力学。",
+    "systems": [
+      "liquid metals"
+    ],
+    "summary": "建立平面波赝势框架下的第一性原理分子动力学方法。",
+    "collection": "starter",
+    "difficulty": "入门进阶"
+  },
+  {
+    "id": "kresse1994_ge_transition",
+    "title": "Ab initio molecular-dynamics simulation of the liquid-metal–amorphous-semiconductor transition in germanium",
+    "authors": [
+      "G. Kresse",
+      "J. Hafner"
+    ],
+    "year": 1994,
+    "journal": "Physical Review B",
+    "doi": "10.1103/PhysRevB.49.14251",
+    "tags": [
+      "DFT",
+      "AIMD",
+      "VASP"
+    ],
+    "role": "展示AIMD处理液态/非晶结构转变的经典案例。",
+    "systems": [
+      "germanium",
+      "liquid metal",
+      "amorphous semiconductor"
+    ],
+    "summary": "用第一性原理分子动力学研究锗的液态金属到非晶半导体转变。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "kresse1996_vasp_efficiency",
+    "title": "Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set",
+    "authors": [
+      "G. Kresse",
+      "J. Furthmüller"
+    ],
+    "year": 1996,
+    "journal": "Computational Materials Science",
+    "doi": "10.1016/0927-0256(96)00008-0",
+    "tags": [
+      "DFT",
+      "VASP",
+      "方法论文"
+    ],
+    "role": "VASP 平面波赝势总能量计算的基础论文。",
+    "systems": [
+      "metals",
+      "semiconductors"
+    ],
+    "summary": "介绍平面波基组和高效自洽总能量计算实现。",
+    "collection": "starter",
+    "difficulty": "入门进阶",
+    "url": "https://doi.org/10.1016/0927-0256(96)00008-0"
+  },
+  {
+    "id": "blochl1994_paw",
+    "title": "Projector-augmented-wave method",
+    "authors": [
+      "P. E. Blöchl"
+    ],
+    "year": 1994,
+    "journal": "Physical Review B",
+    "doi": "10.1103/PhysRevB.50.17953",
+    "tags": [
+      "DFT",
+      "PAW",
+      "VASP",
+      "方法论文"
+    ],
+    "role": "理解VASP中PAW赝势思想的基础论文。",
+    "systems": [
+      "solids",
+      "first-row elements",
+      "transition metals"
+    ],
+    "summary": "提出投影缀加波方法，把平面波效率与全电子波函数描述联系起来。",
+    "collection": "starter",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "kresse1999_paw",
+    "title": "From ultrasoft pseudopotentials to the projector augmented-wave method",
+    "authors": [
+      "G. Kresse",
+      "D. Joubert"
+    ],
+    "year": 1999,
+    "journal": "Physical Review B",
+    "doi": "10.1103/PhysRevB.59.1758",
+    "tags": [
+      "DFT",
+      "PAW",
+      "VASP",
+      "方法论文"
+    ],
+    "role": "VASP中PAW与超软赝势实现关系的关键论文。",
+    "systems": [
+      "bulk solids",
+      "transition metals"
+    ],
+    "summary": "推导PAW总能量、力和应力的实现形式并给出测试。",
+    "collection": "starter",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "perdew1996_pbe",
+    "title": "Generalized Gradient Approximation Made Simple",
+    "authors": [
+      "J. P. Perdew",
+      "K. Burke",
+      "M. Ernzerhof"
+    ],
+    "year": 1996,
+    "journal": "Physical Review Letters",
+    "doi": "10.1103/PhysRevLett.77.3865",
+    "tags": [
+      "DFT",
+      "PBE",
+      "方法论文"
+    ],
+    "role": "PBE交换关联泛函的基础文献。",
+    "systems": [
+      "atoms",
+      "molecules",
+      "solids"
+    ],
+    "summary": "提出广义梯度近似PBE形式，是电池材料DFT计算常用泛函的理论来源。",
+    "collection": "starter",
+    "difficulty": "入门进阶"
+  },
+  {
+    "id": "dudarev1998_lsda_u",
+    "title": "Electron-energy-loss spectra and the structural stability of nickel oxide: An LSDA+U study",
+    "authors": [
+      "S. L. Dudarev",
+      "G. A. Botton",
+      "S. Y. Savrasov",
+      "C. J. Humphreys",
+      "A. P. Sutton"
+    ],
+    "year": 1998,
+    "journal": "Physical Review B",
+    "doi": "10.1103/PhysRevB.57.1505",
+    "tags": [
+      "DFT",
+      "DFT+U",
+      "方法论文"
+    ],
+    "role": "过渡金属氧化物DFT+U参数与局域电子相关性的经典案例。",
+    "systems": [
+      "nickel oxide"
+    ],
+    "summary": "讨论LSDA+U对NiO电子结构、能量损失谱和结构稳定性的影响。",
+    "collection": "starter",
+    "difficulty": "进阶",
+    "url": "https://doi.org/10.1103/PhysRevB.57.1505"
+  },
+  {
+    "id": "heyd2003_hse",
+    "title": "Hybrid functionals based on a screened Coulomb potential",
+    "authors": [
+      "J. Heyd",
+      "G. E. Scuseria",
+      "M. Ernzerhof"
+    ],
+    "year": 2003,
+    "journal": "The Journal of Chemical Physics",
+    "doi": "10.1063/1.1564060",
+    "tags": [
+      "DFT",
+      "HSE",
+      "方法论文"
+    ],
+    "role": "HSE屏蔽杂化泛函的基础论文，用于理解带隙和反应能修正。",
+    "systems": [
+      "molecules",
+      "solids"
+    ],
+    "summary": "提出屏蔽库仑势杂化泛函，为HSE06等常用设置奠定基础。",
+    "collection": "starter",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "grimme2010_dftd",
+    "title": "A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu",
+    "authors": [
+      "S. Grimme",
+      "J. Antony",
+      "S. Ehrlich",
+      "H. Krieg"
+    ],
+    "year": 2010,
+    "journal": "The Journal of Chemical Physics",
+    "doi": "10.1063/1.3382344",
+    "tags": [
+      "DFT",
+      "DFT-D",
+      "方法论文"
+    ],
+    "role": "范德华色散修正方法，适合层状电极、有机电解质和界面体系。",
+    "systems": [
+      "molecules",
+      "materials",
+      "interfaces"
+    ],
+    "summary": "给出覆盖广泛元素的DFT-D色散修正参数化。",
+    "collection": "starter",
+    "difficulty": "进阶",
+    "url": "https://doi.org/10.1063/1.3382344"
+  },
+  {
+    "id": "monkhorst1976_kpoints",
+    "title": "Special points for Brillouin-zone integrations",
+    "authors": [
+      "H. J. Monkhorst",
+      "J. D. Pack"
+    ],
+    "year": 1976,
+    "journal": "Physical Review B",
+    "doi": "10.1103/PhysRevB.13.5188",
+    "tags": [
+      "DFT",
+      "k点",
+      "VASP",
+      "方法论文"
+    ],
+    "role": "理解周期体系k点网格和布里渊区积分的基础论文。",
+    "systems": [
+      "periodic solids"
+    ],
+    "summary": "提出Monkhorst-Pack特殊k点取样方案。",
+    "collection": "starter",
+    "difficulty": "入门进阶"
+  },
+  {
+    "id": "methfessel1989_smearing",
+    "title": "High-precision sampling for Brillouin-zone integration in metals",
+    "authors": [
+      "M. Methfessel",
+      "A. T. Paxton"
+    ],
+    "year": 1989,
+    "journal": "Physical Review B",
+    "doi": "10.1103/PhysRevB.40.3616",
+    "tags": [
+      "DFT",
+      "smearing",
+      "VASP",
+      "方法论文"
+    ],
+    "role": "金属体系电子占据和展宽设置的基础文献。",
+    "systems": [
+      "metals"
+    ],
+    "summary": "提出高精度布里渊区积分展宽方案，帮助理解ISMEAR和SIGMA选择。",
+    "collection": "starter",
+    "difficulty": "入门进阶"
+  },
+  {
+    "id": "henkelman2000_neb_tangent",
+    "title": "Improved tangent estimate in the nudged elastic band method for finding minimum energy paths and saddle points",
+    "authors": [
+      "G. Henkelman",
+      "H. Jónsson"
+    ],
+    "year": 2000,
+    "journal": "The Journal of Chemical Physics",
+    "doi": "10.1063/1.1323224",
+    "tags": [
+      "DFT",
+      "NEB",
+      "扩散",
+      "方法论文"
+    ],
+    "role": "NEB路径切线改进方法，适合离子迁移势垒练习。",
+    "systems": [
+      "solid-state diffusion",
+      "reaction paths"
+    ],
+    "summary": "改进弹性带方法中的切线估计以提高最小能量路径稳定性。",
+    "collection": "starter",
+    "difficulty": "进阶",
+    "url": "https://doi.org/10.1063/1.1323224"
+  },
+  {
+    "id": "henkelman2006_bader",
+    "title": "A fast and robust algorithm for Bader decomposition of charge density",
+    "authors": [
+      "G. Henkelman",
+      "A. Arnaldsson",
+      "H. Jónsson"
+    ],
+    "year": 2006,
+    "journal": "Computational Materials Science",
+    "doi": "10.1016/j.commatsci.2005.04.010",
+    "tags": [
+      "DFT",
+      "Bader",
+      "电荷分析",
+      "方法论文"
+    ],
+    "role": "电荷密度Bader分区与电荷转移分析的基础论文。",
+    "systems": [
+      "molecules",
+      "solids",
+      "interfaces"
+    ],
+    "summary": "提出快速稳健的Bader电荷密度分解算法。",
+    "collection": "starter",
+    "difficulty": "进阶",
+    "url": "https://doi.org/10.1016/j.commatsci.2005.04.010"
+  },
+  {
+    "id": "marzari1997_wannier",
+    "title": "Maximally localized generalized Wannier functions for composite energy bands",
+    "authors": [
+      "N. Marzari",
+      "D. Vanderbilt"
+    ],
+    "year": 1997,
+    "journal": "Physical Review B",
+    "doi": "10.1103/PhysRevB.56.12847",
+    "tags": [
+      "DFT",
+      "Wannier",
+      "电子结构"
+    ],
+    "role": "电子结构和输运后处理中最大局域Wannier函数的基础论文。",
+    "systems": [
+      "periodic solids",
+      "electronic bands"
+    ],
+    "summary": "提出复合能带的最大局域Wannier函数构造方法。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "behler2007_nnp",
+    "title": "Generalized neural-network representation of high-dimensional potential-energy surfaces",
+    "authors": [
+      "J. Behler",
+      "M. Parrinello"
+    ],
+    "year": 2007,
+    "journal": "Physical Review Letters",
+    "doi": "10.1103/PhysRevLett.98.146401",
+    "tags": [
+      "MLIP",
+      "NNP",
+      "MD",
+      "方法论文"
+    ],
+    "role": "神经网络机器学习势的奠基论文。",
+    "systems": [
+      "atomic systems",
+      "molecular dynamics"
+    ],
+    "summary": "提出将高维势能面分解为原子贡献的神经网络表示。",
+    "collection": "starter",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "behler2011_symmetry_functions",
+    "title": "Atom-centered symmetry functions for constructing high-dimensional neural network potentials",
+    "authors": [
+      "J. Behler"
+    ],
+    "year": 2011,
+    "journal": "The Journal of Chemical Physics",
+    "doi": "10.1063/1.3553717",
+    "tags": [
+      "MLIP",
+      "NNP",
+      "描述符",
+      "方法论文"
+    ],
+    "role": "理解原子中心对称函数和NNP输入描述符的入门论文。",
+    "systems": [
+      "molecular and condensed systems"
+    ],
+    "summary": "系统讨论构建高维神经网络势的原子中心对称函数。",
+    "collection": "starter",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "bartok2010_gap",
+    "title": "Gaussian Approximation Potentials: Accuracy of Quantum Mechanics, without the Electrons",
+    "authors": [
+      "A. P. Bartók",
+      "M. C. Payne",
+      "R. Kondor",
+      "G. Csányi"
+    ],
+    "year": 2010,
+    "journal": "Physical Review Letters",
+    "doi": "10.1103/PhysRevLett.104.136403",
+    "tags": [
+      "MLIP",
+      "GAP",
+      "SOAP",
+      "方法论文"
+    ],
+    "role": "高斯近似势GAP的奠基论文。",
+    "systems": [
+      "silicon",
+      "atomic systems"
+    ],
+    "summary": "用高斯过程回归从局域化学环境学习接近量子力学精度的势能面。",
+    "collection": "starter",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "thompson2015_snap",
+    "title": "Spectral neighbor analysis method for automated generation of quantum-accurate interatomic potentials",
+    "authors": [
+      "A. P. Thompson",
+      "L. P. Swiler",
+      "C. R. Trott",
+      "S. M. Foiles",
+      "G. J. Tucker"
+    ],
+    "year": 2015,
+    "journal": "Journal of Computational Physics",
+    "doi": "10.1016/j.jcp.2014.12.018",
+    "tags": [
+      "MLIP",
+      "SNAP",
+      "LAMMPS",
+      "方法论文"
+    ],
+    "role": "SNAP机器学习势及其LAMMPS实现的基础论文。",
+    "systems": [
+      "materials",
+      "large-scale MD"
+    ],
+    "summary": "提出谱邻居分析势并展示自动生成量子精度原子间势的方法。",
+    "collection": "starter",
+    "difficulty": "进阶",
+    "url": "https://doi.org/10.1016/j.jcp.2014.12.018"
+  },
+  {
+    "id": "zhang2018_deep_potential",
+    "title": "Deep Potential Molecular Dynamics: A Scalable Model with the Accuracy of Quantum Mechanics",
+    "authors": [
+      "L. Zhang",
+      "J. Han",
+      "H. Wang",
+      "R. Car",
+      "W. E"
+    ],
+    "year": 2018,
+    "journal": "Physical Review Letters",
+    "doi": "10.1103/PhysRevLett.120.143001",
+    "tags": [
+      "MLIP",
+      "DeepMD",
+      "MLMD",
+      "方法论文"
+    ],
+    "role": "Deep Potential分子动力学的基础论文。",
+    "systems": [
+      "water",
+      "condensed matter"
+    ],
+    "summary": "提出可扩展的深度势模型，在大规模MD中逼近量子力学精度。",
+    "collection": "starter",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "podryabinkin2017_active_learning",
+    "title": "Active learning of linearly parametrized interatomic potentials",
+    "authors": [
+      "Evgeny V. Podryabinkin",
+      "Alexander V. Shapeev"
+    ],
+    "year": 2017,
+    "journal": "Computational Materials Science",
+    "doi": "10.1016/j.commatsci.2017.08.031",
+    "tags": [
+      "MLIP",
+      "主动学习",
+      "方法论文"
+    ],
+    "role": "主动学习原子间势和不确定性采样的入门论文。",
+    "systems": [
+      "atomic systems",
+      "interatomic potentials"
+    ],
+    "summary": "利用主动学习和模型不确定性选择新的第一性原理训练构型。",
+    "collection": "starter",
+    "difficulty": "进阶",
+    "url": "https://doi.org/10.1016/j.commatsci.2017.08.031"
+  },
+  {
+    "id": "vandermause2020_active_learning",
+    "title": "On-the-fly active learning of interpretable Bayesian force fields for atomistic rare events",
+    "authors": [
+      "Jonathan Vandermause",
+      "Steven B. Torrisi",
+      "Simon Batzner",
+      "Yu Xie",
+      "Lixin Sun",
+      "Alexie M. Kolpak",
+      "Boris Kozinsky"
+    ],
+    "year": 2020,
+    "journal": "npj Computational Materials",
+    "doi": "10.1038/s41524-020-0283-z",
+    "tags": [
+      "MLIP",
+      "主动学习",
+      "MLMD"
+    ],
+    "role": "在线主动学习势在大规模原子模拟中的代表工作。",
+    "systems": [
+      "atomistic systems",
+      "large-scale simulations"
+    ],
+    "summary": "研究在线主动学习原子间势的训练、采样和大规模模拟流程。",
+    "collection": "core",
+    "difficulty": "进阶",
+    "url": "https://doi.org/10.1038/s41524-020-0283-z"
+  },
+  {
+    "id": "jinnouchi2020_otf_mlff",
+    "title": "On-the-Fly Active Learning of Interatomic Potentials for Large-Scale Atomistic Simulations",
+    "authors": [
+      "R. Jinnouchi",
+      "J. Lahnsteiner",
+      "F. Karsai",
+      "G. Kresse",
+      "M. Bokdam"
+    ],
+    "year": 2020,
+    "journal": "The Journal of Physical Chemistry Letters",
+    "doi": "10.1021/acs.jpclett.0c01061",
+    "tags": [
+      "VASP",
+      "MLIP",
+      "MLFF",
+      "主动学习"
+    ],
+    "role": "VASP环境中在线机器学习力场和主动学习的关键论文。",
+    "systems": [
+      "materials",
+      "atomistic simulations"
+    ],
+    "summary": "展示在线学习机器学习原子间势以扩展第一性原理分子动力学规模。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "jinnouchi2019_melting_mlff",
+    "title": "On-the-fly Machine Learning Force Field Generation: Application to Melting Points",
+    "authors": [
+      "R. Jinnouchi",
+      "F. Karsai",
+      "G. Kresse"
+    ],
+    "year": 2019,
+    "journal": "Physical Review B",
+    "doi": "10.1103/PhysRevB.100.014105",
+    "tags": [
+      "VASP",
+      "MLFF",
+      "AIMD",
+      "主动学习"
+    ],
+    "role": "在线机器学习力场计算熔点的代表案例。",
+    "systems": [
+      "elemental solids",
+      "melting"
+    ],
+    "summary": "将在线机器学习力场用于熔点计算并讨论训练数据生成。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "bernstein2019_self_guided",
+    "title": "De Novo Exploration and Self-Guided Learning of Potential-Energy Surfaces",
+    "authors": [
+      "N. Bernstein",
+      "G. Csányi",
+      "V. L. Deringer"
+    ],
+    "year": 2019,
+    "journal": "npj Computational Materials",
+    "doi": "10.1038/s41524-019-0236-6",
+    "tags": [
+      "MLIP",
+      "主动学习",
+      "势能面"
+    ],
+    "role": "自引导探索势能面的机器学习势方法论文。",
+    "systems": [
+      "potential-energy surfaces",
+      "materials"
+    ],
+    "summary": "研究无需预先知道结构的势能面探索和自引导学习策略。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "deringer2019_mlip_review",
+    "title": "Machine learning interatomic potentials as emerging tools for materials science",
+    "authors": [
+      "V. L. Deringer",
+      "M. A. Caro",
+      "G. Csányi"
+    ],
+    "year": 2019,
+    "journal": "Advanced Materials",
+    "doi": "10.1002/adma.201902765",
+    "tags": [
+      "MLIP",
+      "综述",
+      "方法论文"
+    ],
+    "role": "机器学习原子间势在材料科学中的综述。",
+    "systems": [
+      "materials",
+      "atomistic simulations"
+    ],
+    "summary": "综述机器学习原子间势的表示、训练、验证和材料应用。",
+    "collection": "starter",
+    "difficulty": "入门进阶"
+  },
+  {
+    "id": "mishin2021_mlip_review",
+    "title": "Machine-learning interatomic potentials for materials science",
+    "authors": [
+      "Y. Mishin"
+    ],
+    "year": 2021,
+    "journal": "Acta Materialia",
+    "doi": "10.1016/j.actamat.2021.116980",
+    "tags": [
+      "MLIP",
+      "综述",
+      "方法论文"
+    ],
+    "role": "材料科学机器学习势的系统综述。",
+    "systems": [
+      "materials",
+      "interatomic potentials"
+    ],
+    "summary": "讨论机器学习势的构建、精度、迁移性和材料模拟应用。",
+    "collection": "starter",
+    "difficulty": "入门进阶"
+  },
+  {
+    "id": "unke2021_mlff_review",
+    "title": "Machine Learning Force Fields",
+    "authors": [
+      "Oliver T. Unke",
+      "Stefan Chmiela",
+      "Huziel E. Sauceda",
+      "Michael Gastegger",
+      "Igor Poltavsky",
+      "Kristof T. Schütt",
+      "Alexandre Tkatchenko",
+      "Klaus-Robert Müller"
+    ],
+    "year": 2021,
+    "journal": "Chemical Reviews",
+    "doi": "10.1021/acs.chemrev.0c01111",
+    "tags": [
+      "MLIP",
+      "MLFF",
+      "综述",
+      "方法论文"
+    ],
+    "role": "机器学习力场的广泛综述，适合建立方法地图。",
+    "systems": [
+      "molecules",
+      "materials",
+      "chemical reactions"
+    ],
+    "summary": "综述机器学习力场的表示、训练、动力学和不确定性问题。",
+    "collection": "starter",
+    "difficulty": "入门进阶"
+  },
+  {
+    "id": "mueller2020_mlip_models",
+    "title": "Machine learning for interatomic potential models",
+    "authors": [
+      "T. Mueller",
+      "A. Hernandez",
+      "C. Wang"
+    ],
+    "year": 2020,
+    "journal": "The Journal of Chemical Physics",
+    "doi": "10.1063/1.5126336",
+    "tags": [
+      "MLIP",
+      "综述",
+      "方法论文"
+    ],
+    "role": "机器学习原子间势模型的概念和方法综述。",
+    "systems": [
+      "molecules",
+      "materials"
+    ],
+    "summary": "比较不同机器学习原子间势模型的表示、训练和适用范围。",
+    "collection": "starter",
+    "difficulty": "入门进阶"
+  },
+  {
+    "id": "kang2006_li_mobility",
+    "title": "Factors that affect Li mobility in layered lithium transition metal oxides",
+    "authors": [
+      "K. Kang",
+      "G. Ceder"
+    ],
+    "year": 2006,
+    "journal": "Physical Review B",
+    "doi": "10.1103/PhysRevB.74.094105",
+    "tags": [
+      "DFT",
+      "锂扩散",
+      "正极"
+    ],
+    "role": "层状过渡金属氧化物中锂迁移和扩散势垒的第一性原理研究。",
+    "systems": [
+      "layered lithium transition-metal oxides",
+      "cathodes"
+    ],
+    "summary": "分析影响层状锂过渡金属氧化物中Li迁移率的结构和化学因素。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "du2014_lgps_mobility",
+    "title": "Structures, Thermodynamics, and Li+ Mobility of Li10GeP2S12: A First-Principles Analysis",
+    "authors": [
+      "Y. Du",
+      "N. A. Holzwarth"
+    ],
+    "year": 2014,
+    "journal": "The Journal of Physical Chemistry C",
+    "doi": "10.1021/jp5000039",
+    "tags": [
+      "DFT",
+      "AIMD",
+      "LGPS",
+      "固态电解质"
+    ],
+    "role": "LGPS结构、热力学与锂离子迁移的第一性原理案例。",
+    "systems": [
+      "Li10GeP2S12",
+      "solid electrolyte"
+    ],
+    "summary": "从第一性原理分析LGPS结构、热力学稳定性和Li+迁移。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "bhandari2016_lgps_conduction",
+    "title": "Origin of Fast Ion Conduction in Li10GeP2S12, a Superionic Conductor",
+    "authors": [
+      "A. Bhandari",
+      "J. Bhattacharya"
+    ],
+    "year": 2016,
+    "journal": "The Journal of Physical Chemistry C",
+    "doi": "10.1021/acs.jpcc.6b10967",
+    "tags": [
+      "DFT",
+      "AIMD",
+      "LGPS",
+      "固态电解质"
+    ],
+    "role": "从原子机制解释LGPS快速离子传导的计算研究。",
+    "systems": [
+      "Li10GeP2S12",
+      "superionic conductor"
+    ],
+    "summary": "研究LGPS超离子传导的结构与动力学起源。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "xu2012_stringlike_migration",
+    "title": "One-dimensional stringlike cooperative migration of lithium ions in an ultrafast ionic conductor",
+    "authors": [
+      "M. Xu"
+    ],
+    "year": 2012,
+    "journal": "Applied Physics Letters",
+    "doi": "10.1063/1.4737397",
+    "tags": [
+      "MD",
+      "AIMD",
+      "离子扩散",
+      "固态电解质"
+    ],
+    "role": "超快离子导体中协同锂离子迁移的动力学案例。",
+    "systems": [
+      "fast ionic conductors",
+      "lithium ions"
+    ],
+    "summary": "报道一维串状协同锂离子迁移并分析其动力学特征。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "muy2015_high_throughput_sse",
+    "title": "High-Throughput Screening of Solid-State Li-Ion Conductors Using Lattice-Dynamics Descriptors",
+    "authors": [
+      "Sokseiha Muy",
+      "Johannes Voss",
+      "Roman Schlem",
+      "Raimund Koerver",
+      "Stefan J. Sedlmaier",
+      "Filippo Maglia",
+      "Peter Lamp",
+      "Wolfgang G. Zeier",
+      "Yang Shao-Horn"
+    ],
+    "year": 2019,
+    "journal": "iScience",
+    "doi": "10.1016/j.isci.2019.05.036",
+    "tags": [
+      "DFT",
+      "高通量",
+      "固态电解质",
+      "方法论文"
+    ],
+    "role": "固态锂离子导体高通量筛选和计算验证的入门案例。",
+    "systems": [
+      "solid-state Li-ion conductors"
+    ],
+    "summary": "建立高通量筛选固态锂离子导体候选材料的计算流程。",
+    "collection": "starter",
+    "difficulty": "入门进阶",
+    "url": "https://doi.org/10.1016/j.isci.2019.05.036"
+  },
+  {
+    "id": "sendek2017_sse_relationships",
+    "title": "Holistic computational structure screening of more than 12,000 candidates for solid lithium-ion conductor materials",
+    "authors": [
+      "Austin D. Sendek",
+      "Qian Yang",
+      "Ekin D. Cubuk",
+      "Karel-Alexander N. Duerloo",
+      "Yi Cui",
+      "Evan J. Reed"
+    ],
+    "year": 2017,
+    "journal": "Energy & Environmental Science",
+    "doi": "10.1039/C6EE02697D",
+    "tags": [
+      "DFT",
+      "机器学习",
+      "固态电解质",
+      "高通量"
+    ],
+    "role": "结合结构、计算性质和机器学习分析固态电解质的代表工作。",
+    "systems": [
+      "Li-ion solid electrolytes"
+    ],
+    "summary": "建立锂离子固态电解质的结构-性质计算关系和筛选框架。",
+    "collection": "core",
+    "difficulty": "进阶",
+    "url": "https://doi.org/10.1039/C6EE02697D"
+  },
+  {
+    "id": "swift2019_space_charge",
+    "title": "First-principles prediction of potentials and space-charge layers in all-solid-state batteries",
+    "authors": [
+      "Michael W. Swift",
+      "Yue Qi"
+    ],
+    "year": 2019,
+    "journal": "Physical Review Letters",
+    "doi": "10.1103/PhysRevLett.122.167701",
+    "tags": [
+      "DFT",
+      "界面",
+      "固态电池",
+      "电化学"
+    ],
+    "role": "全固态电池界面电势和空间电荷层的第一性原理研究。",
+    "systems": [
+      "all-solid-state batteries",
+      "interfaces"
+    ],
+    "summary": "用第一性原理预测全固态电池中的电势和空间电荷层。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "qi2024_lgps_ml_aimd",
+    "title": "Machine Learning-Accelerated First-Principles Study of Atomic Configuration and Ionic Diffusion in Li10GeP2S12 Solid Electrolyte",
+    "authors": [
+      "Changlin Qi",
+      "Yuwei Zhou",
+      "Xiaoze Yuan",
+      "Qing Peng",
+      "Yong Yang",
+      "Yongwang Li",
+      "Xiaodong Wen"
+    ],
+    "year": 2024,
+    "journal": "Materials",
+    "doi": "10.3390/ma17081810",
+    "tags": [
+      "DFT",
+      "AIMD",
+      "MLIP",
+      "主动学习",
+      "LGPS"
+    ],
+    "role": "机器学习加速LGPS第一性原理离子扩散研究的可跟练案例。",
+    "systems": [
+      "Li10GeP2S12",
+      "solid electrolyte"
+    ],
+    "summary": "结合机器学习和第一性原理研究LGPS原子构型与离子扩散。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "nachimuthu2022_se_doped_lgps",
+    "title": "First-principles study on selenium-doped Li10GeP2S12 solid electrolyte: Effects of doping on moisture stability and Li-ion transport properties",
+    "authors": [
+      "S. Nachimuthu",
+      "H.-J. Cheng",
+      "H.-J. Lai",
+      "Y.-H. Cheng",
+      "Rui-Tong Kuo",
+      "W. G. Zeier",
+      "B. J. Hwang",
+      "J.-C. Jiang"
+    ],
+    "year": 2022,
+    "journal": "Materials Today Chemistry",
+    "doi": "10.1016/j.mtchem.2022.101223",
+    "tags": [
+      "DFT",
+      "AIMD",
+      "固态电解质",
+      "掺杂"
+    ],
+    "role": "掺杂固态电解质稳定性与锂离子传输的第一性原理案例。",
+    "systems": [
+      "Se-doped Li10GeP2S12",
+      "solid electrolyte"
+    ],
+    "summary": "研究硒掺杂对LGPS耐湿性和锂离子输运性质的影响。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "stottmeister2023_sei_alkali",
+    "title": "Toward the Formation of the Solid Electrolyte Interphase on Alkaline Metal Anodes: Ab Initio Simulations",
+    "authors": [
+      "Daniel Stottmeister",
+      "Axel Groß"
+    ],
+    "year": 2023,
+    "journal": "Batteries & Supercaps",
+    "doi": "10.1002/batt.202300156",
+    "tags": [
+      "DFT",
+      "AIMD",
+      "SEI",
+      "界面"
+    ],
+    "role": "碱金属负极SEI形成的第一性原理模拟案例。",
+    "systems": [
+      "alkaline metal anodes",
+      "electrolyte interphase"
+    ],
+    "summary": "用从头算模拟探索碱金属负极上固态电解质界面膜形成。",
+    "collection": "core",
+    "difficulty": "进阶"
+  },
+  {
+    "id": "qi2021_electrolyte_dataset",
+    "title": "Quantum chemical calculations of lithium-ion battery electrolyte and interphase species",
+    "authors": [
+      "Evan Walter Clark Spotte-Smith",
+      "Samuel M. Blau",
+      "Xiaowei Xie",
+      "Hetal D. Patel",
+      "Mingjian Wen",
+      "Brandon Wood",
+      "Shyam Dwaraknath",
+      "Kristin Aslaug Persson"
+    ],
+    "year": 2021,
+    "journal": "Scientific Data",
+    "doi": "10.1038/s41597-021-00986-9",
+    "tags": [
+      "DFT",
+      "SEI",
+      "数据集",
+      "电解液"
+    ],
+    "role": "锂电池电解液和界面物种量子化学数据集，适合AI4S数据练习。",
+    "systems": [
+      "electrolyte molecules",
+      "interphase species"
+    ],
+    "summary": "提供锂电池电解液和界面物种的量子化学计算数据。",
+    "collection": "starter",
+    "difficulty": "入门进阶"
+  },
+  {
+    "id": "peled2017_sei_review",
+    "title": "Review—SEI: Past, Present and Future",
+    "authors": [
+      "E. Peled",
+      "S. Menkin"
+    ],
+    "year": 2017,
+    "journal": "Journal of The Electrochemical Society",
+    "doi": "10.1149/2.1441707jes",
+    "tags": [
+      "SEI",
+      "综述",
+      "电解液"
+    ],
+    "role": "SEI形成、组成和研究进展的综述，适合建立电化学背景。",
+    "systems": [
+      "lithium-ion batteries",
+      "solid electrolyte interphase"
+    ],
+    "summary": "回顾SEI研究历史、形成机制、表征方法和未来问题。",
+    "collection": "starter",
+    "difficulty": "入门",
+    "url": "https://doi.org/10.1149/2.1441707jes"
+  },
+  {
+    "id": "fireworks2015_workflow",
+    "title": "FireWorks: a dynamic workflow system designed for high-throughput applications",
+    "authors": [
+      "Anubhav Jain",
+      "Shyue Ping Ong",
+      "Wei Chen",
+      "Bharat Medasani",
+      "Xiaohui Qu",
+      "Michael Kocher",
+      "Miriam Brafman",
+      "Guido Petretto",
+      "Gian-Marco Rignanese",
+      "Geoffroy Hautier",
+      "Dan Gunter",
+      "Kristin A. Persson"
+    ],
+    "year": 2015,
+    "journal": "Concurrency and Computation: Practice and Experience",
+    "doi": "10.1002/cpe.3505",
+    "tags": [
+      "工作流",
+      "高通量",
+      "DFT",
+      "方法论文"
+    ],
+    "role": "高通量材料计算工作流自动化的基础工具论文。",
+    "systems": [
+      "computational materials workflows"
+    ],
+    "summary": "介绍FireWorks动态工作流系统及其高通量材料计算应用。",
+    "collection": "starter",
+    "difficulty": "入门进阶",
+    "url": "https://doi.org/10.1002/cpe.3505"
+  },
+  {
+    "id": "mathew2017_atomate",
+    "title": "Atomate: A high-level interface to generate, execute, and analyze computational materials science workflows",
+    "authors": [
+      "K. Mathew"
+    ],
+    "year": 2017,
+    "journal": "Computational Materials Science",
+    "doi": "10.1016/j.commatsci.2017.07.030",
+    "tags": [
+      "工作流",
+      "DFT",
+      "高通量",
+      "方法论文"
+    ],
+    "role": "Atomate材料计算工作流框架的基础论文。",
+    "systems": [
+      "computational materials workflows"
+    ],
+    "summary": "介绍生成、执行和分析材料科学计算工作流的高层接口。",
+    "collection": "starter",
+    "difficulty": "入门进阶"
+  },
+  {
+    "id": "talirz2020_materials_cloud",
+    "title": "Materials Cloud, a platform for open computational science",
+    "authors": [
+      "L. Talirz"
+    ],
+    "year": 2020,
+    "journal": "Scientific Data",
+    "doi": "10.1038/s41597-020-00637-5",
+    "tags": [
+      "数据平台",
+      "可复现性",
+      "工作流",
+      "方法论文"
+    ],
+    "role": "材料计算数据、工作流和可复现性平台的代表论文。",
+    "systems": [
+      "computational materials data"
+    ],
+    "summary": "介绍Materials Cloud开放计算科学平台及其数据和工作流服务。",
+    "collection": "starter",
+    "difficulty": "入门"
+  },
+  {
+    "id": "ward2016_matminer",
+    "title": "matminer: An open source toolkit for materials data mining",
+    "authors": [
+      "Logan Ward",
+      "Alexander Dunn",
+      "Alireza Faghaninia",
+      "Nils E. R. Zimmermann",
+      "Saurabh Bajaj",
+      "Qi Wang",
+      "Joseph Montoya",
+      "Jiming Chen",
+      "Kyle Bystrom",
+      "Maxwell Dylla",
+      "Kyle Chard",
+      "Mark Asta",
+      "Kristin A. Persson",
+      "G. Jeffrey Snyder",
+      "Ian Foster",
+      "Anubhav Jain"
+    ],
+    "year": 2018,
+    "journal": "Computational Materials Science",
+    "doi": "10.1016/j.commatsci.2018.05.018",
+    "tags": [
+      "材料信息学",
+      "机器学习",
+      "数据处理",
+      "方法论文"
+    ],
+    "role": "材料数据特征工程和机器学习预处理工具论文。",
+    "systems": [
+      "materials datasets",
+      "materials informatics"
+    ],
+    "summary": "介绍matminer材料数据挖掘工具包及其特征化流程。",
+    "collection": "starter",
+    "difficulty": "入门",
+    "url": "https://doi.org/10.1016/j.commatsci.2018.05.018"
+  }
+]

@@ -33,6 +33,47 @@ class RagTests(unittest.TestCase):
         )
         self.assertTrue(result["used"])
         self.assertEqual(result["source_map"], {"P1": "paper-a"})
+        self.assertEqual(result["source_provenance"]["P1"]["evidence_type"], "curated_metadata")
+
+    def test_page_aware_provenance_is_exposed(self) -> None:
+        provider = FakeProvider("原文摘录支持该判断。[P1]")
+        result = EvidenceRAG(provider).generate(
+            "问题", [{"id": "paper-a", "title": "Paper A", "scope_note": "仅研究体相"}],
+            [{"paper_id": "paper-a", "page": 7, "excerpt": "原文摘录"}],
+        )
+        self.assertTrue(result["used"])
+        self.assertEqual(result["source_provenance"]["P1"]["evidence_type"], "fulltext_excerpt")
+        self.assertEqual(result["source_provenance"]["P1"]["pages"], [7])
+
+    def test_unsupported_parameter_claim_falls_back(self) -> None:
+        result = EvidenceRAG(FakeProvider("使用 900 K 运行。[P1]")).generate(
+            "问题", [{"id": "paper-a", "title": "Paper A"}], [],
+        )
+        self.assertFalse(result["used"])
+        self.assertEqual(result["reason"], "unsupported_numeric_claim")
+        self.assertEqual(result["unsupported_claims"], ["900 K"])
+
+    def test_question_parameter_does_not_count_as_evidence(self) -> None:
+        result = EvidenceRAG(FakeProvider("使用 900 K 运行。[P1]")).generate(
+            "问题：900 K 是否合适？", [{"id": "paper-a", "title": "Paper A"}], [],
+        )
+        self.assertFalse(result["used"])
+        self.assertEqual(result["reason"], "unsupported_numeric_claim")
+
+    def test_parameter_substrings_do_not_count_as_evidence(self) -> None:
+        result = EvidenceRAG(FakeProvider("使用 300 K 运行。[P1]")).generate(
+            "问题", [{"id": "paper-a", "title": "Paper A"}],
+            [{"paper_id": "paper-a", "page": 2, "excerpt": "模拟温度为 1300 K。"}],
+        )
+        self.assertFalse(result["used"])
+        self.assertEqual(result["reason"], "unsupported_numeric_claim")
+
+    def test_supported_parameter_claim_is_allowed(self) -> None:
+        result = EvidenceRAG(FakeProvider("在 300 K 下计算。[P1]")).generate(
+            "问题", [{"id": "paper-a", "title": "Paper A"}],
+            [{"paper_id": "paper-a", "page": 2, "excerpt": "模拟温度为 300 K。"}],
+        )
+        self.assertTrue(result["used"])
 
     def test_missing_or_invalid_citation_falls_back(self) -> None:
         for answer in ("没有引用。", "错误来源。[P99]"):

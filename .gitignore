@@ -20,3 +20,8 @@ training/*.safetensors
 training/*.bin
 training/*.gguf
 models/
+# The local QLoRA output path is deliberately outside the source tree's
+# evidence data and must never be uploaded with the website.
+outputs/
+*.pt
+*.pth

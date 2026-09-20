@@ -68,6 +68,7 @@ class ToolAgentTests(unittest.TestCase):
         self.assertNotIn("local_pdf", payload)
         self.assertNotIn("zotero_key", payload)
         self.assertNotIn("private_note", payload)
+        self.assertEqual(result["source_provenance"]["P1"]["evidence_type"], "curated_metadata")
 
     def test_no_provider_is_honest_and_does_not_claim_model(self):
         result = ToolAgent(FakeResearch()).run("safe")
@@ -88,6 +89,26 @@ class ToolAgentTests(unittest.TestCase):
         result = ToolAgent(FakeResearch(provider)).run("safe")
         self.assertEqual(result["mode"], "deterministic_workflow")
         self.assertIn("可验证引用", result["agent"]["notice"])
+
+    def test_tool_agent_rejects_unsupported_parameter_claim(self):
+        provider = FakeProvider(
+            '{"tool":"search_papers","arguments":{"query":"safe","limit":1}}',
+            '{"final":"在 900 K 下运行。[P1]","citations":["P1"]}',
+        )
+        result = ToolAgent(FakeResearch(provider)).run("safe")
+        self.assertEqual(result["mode"], "deterministic_workflow")
+        self.assertTrue(any(row.get("error") == "unsupported_numeric_claim"
+                            for row in result["agent"]["trace"]))
+
+    def test_search_query_does_not_count_as_numeric_evidence(self):
+        provider = FakeProvider(
+            '{"tool":"search_papers","arguments":{"query":"900 K","limit":1}}',
+            '{"final":"在 900 K 下运行。[P1]","citations":["P1"]}',
+        )
+        result = ToolAgent(FakeResearch(provider)).run("safe")
+        self.assertEqual(result["mode"], "deterministic_workflow")
+        self.assertTrue(any(row.get("error") == "unsupported_numeric_claim"
+                            for row in result["agent"]["trace"]))
 
     def test_prompt_injection_in_tool_result_is_not_executed(self):
         research = FakeResearch(FakeProvider(

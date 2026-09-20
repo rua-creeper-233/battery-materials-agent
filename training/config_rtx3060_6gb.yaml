@@ -1,0 +1,21 @@
+# Conservative starting point for an RTX 3060 Laptop GPU (usually 6 GB VRAM).
+model_name: Qwen/Qwen3-0.6B
+# Optional after the 0.6B smoke run: Qwen/Qwen3-1.7B
+output_dir: outputs/qwen3-0.6b-battery-qlora
+train_glob: '*.jsonl'
+max_seq_length: 768
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+num_train_epochs: 2
+learning_rate: 0.0001
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+seed: 42
+save_steps: 100
+logging_steps: 5
+gradient_checkpointing: true
+fp16: true
+load_in_4bit: true
+bnb_4bit_quant_type: nf4
+bnb_4bit_compute_dtype: float16

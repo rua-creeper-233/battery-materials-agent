@@ -420,3 +420,175 @@
 ### Application of Reaction Force Field Molecular Dynamics in Lithium Batteries
 
 - 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Ab initio molecular dynamics for liquid metals
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Ab initio molecular-dynamics simulation of the liquid-metal–amorphous-semiconductor transition in germanium
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Projector-augmented-wave method
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### From ultrasoft pseudopotentials to the projector augmented-wave method
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Generalized Gradient Approximation Made Simple
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Electron-energy-loss spectra and the structural stability of nickel oxide: An LSDA+U study
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Hybrid functionals based on a screened Coulomb potential
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Special points for Brillouin-zone integrations
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### High-precision sampling for Brillouin-zone integration in metals
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Improved tangent estimate in the nudged elastic band method for finding minimum energy paths and saddle points
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### A fast and robust algorithm for Bader decomposition of charge density
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Maximally localized generalized Wannier functions for composite energy bands
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Generalized neural-network representation of high-dimensional potential-energy surfaces
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Atom-centered symmetry functions for constructing high-dimensional neural network potentials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Gaussian Approximation Potentials: Accuracy of Quantum Mechanics, without the Electrons
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Spectral neighbor analysis method for automated generation of quantum-accurate interatomic potentials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Deep Potential Molecular Dynamics: A Scalable Model with the Accuracy of Quantum Mechanics
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Active learning of linearly parametrized interatomic potentials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### On-the-fly active learning of interpretable Bayesian force fields for atomistic rare events
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### On-the-Fly Active Learning of Interatomic Potentials for Large-Scale Atomistic Simulations
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### On-the-fly Machine Learning Force Field Generation: Application to Melting Points
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### De Novo Exploration and Self-Guided Learning of Potential-Energy Surfaces
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine learning interatomic potentials as emerging tools for materials science
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine-learning interatomic potentials for materials science
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine Learning Force Fields
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine learning for interatomic potential models
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Factors that affect Li mobility in layered lithium transition metal oxides
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Structures, Thermodynamics, and Li+ Mobility of Li10GeP2S12: A First-Principles Analysis
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Origin of Fast Ion Conduction in Li10GeP2S12, a Superionic Conductor
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### One-dimensional stringlike cooperative migration of lithium ions in an ultrafast ionic conductor
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### High-Throughput Screening of Solid-State Li-Ion Conductors Using Lattice-Dynamics Descriptors
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### First-principles prediction of potentials and space-charge layers in all-solid-state batteries
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine Learning-Accelerated First-Principles Study of Atomic Configuration and Ionic Diffusion in Li10GeP2S12 Solid Electrolyte
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### First-principles study on selenium-doped Li10GeP2S12 solid electrolyte: Effects of doping on moisture stability and Li-ion transport properties
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Toward the Formation of the Solid Electrolyte Interphase on Alkaline Metal Anodes: Ab Initio Simulations
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Quantum chemical calculations of lithium-ion battery electrolyte and interphase species
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Review—SEI: Past, Present and Future
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### FireWorks: a dynamic workflow system designed for high-throughput applications
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Atomate: A high-level interface to generate, execute, and analyze computational materials science workflows
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Materials Cloud, a platform for open computational science
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### matminer: An open source toolkit for materials data mining
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。

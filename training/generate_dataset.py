@@ -141,10 +141,11 @@ def build_workflow(papers: list[dict[str, Any]]) -> list[dict[str, Any]]:
                     "再按正文与补充材料核对输入输出；最后用论文报告的指标和独立统计检查复现。"
                     "结构化记录没有给出更细的命令或参数，不能凭空补齐。")
             fields = ["title", "methods", "scope_note"]
+        record_note = f"（对应 DOI：{p.get('doi') or '未提供'}；仅针对这条记录）"
         out.append(example(
             f"workflow-{p['id']}", "workflow", "reproduction_plan", p.get("difficulty", "普通"),
             f"我想跟练《{compact(p.get('title'), 240)}》，应如何开始？",
-            f"建议先确认适用边界，再按记录的流程执行：\n{body}\n开始前应保存版本、输入、输出和单位，并将结果与原文指标逐项对照。[P1]",
+            f"建议先确认适用边界，再按记录的流程执行：\n{body}\n开始前应保存版本、输入、输出和单位，并将结果与原文指标逐项对照。[P1] {record_note}",
             paper_ref(p, fields),
             context=paper_context([p], ["methods", "scope_note", "protocol_steps", "evidence"])))
     return out
@@ -170,9 +171,10 @@ def build_refusal(papers: list[dict[str, Any]]) -> list[dict[str, Any]]:
             question = f"《{title}》是否足以证明我的材料也会得到同样的模拟结果？"
             answer = (f"不足以证明。论文记录的体系是：{systems}；边界说明为：{limitation}。"
                       "应复现原任务、检查单位与收敛，并用独立数据验证，不把相关性当作保证。[P1]")
+        record_note = f"（对应 DOI：{p.get('doi') or '未提供'}；不能外推到未核验体系）"
         out.append(example(
             f"refusal-{p['id']}", "refusal", "unsupported_inference", "普通",
-            question, answer, paper_ref(p, ["title", "role", "systems", "scope_note", "evidence"]),
+            question, answer + " " + record_note, paper_ref(p, ["title", "role", "systems", "scope_note", "evidence"]),
             context=paper_context([p], ["role", "systems", "scope_note", "evidence"])))
     return out
 

@@ -12,6 +12,7 @@ import json
 import mimetypes
 import os
 import re
+import threading
 from email.parser import BytesParser
 from email.policy import default as email_policy
 from http import HTTPStatus
@@ -31,6 +32,7 @@ GUIDES = ROOT / "guides"
 PUBLIC_GUIDES = {
     "AGENT_IMPLEMENTATION_GUIDE.md",
     "BATTERY_RESEARCH_ROADMAP_20260918.md",
+    "AGENT_STATUS_20260920.md",
 }
 LITERATURE = ROOT / "literature"
 PDF_DIR = LITERATURE / "pdfs"
@@ -40,6 +42,7 @@ PAPER_TAGS = ROOT / "data" / "paper_tags.json"
 ZOTERO_LINKS = ROOT / "private" / "zotero-links.local.json"
 DEFAULT_ALLOWED_ORIGIN = "https://rua-creeper-233.github.io"
 AGENT = BatteryResearchAgent()
+AGENT_LOCK = threading.RLock()
 
 
 def _load_json(path: Path, fallback: Any) -> Any:
@@ -268,6 +271,7 @@ class Handler(BaseHTTPRequestHandler):
         return pdf_bytes, filename, fields
 
     def do_POST(self) -> None:  # noqa: N802
+        global AGENT
         path = urlparse(self.path).path
         if path not in {"/api/chat", "/api/agent", "/api/keywords", "/api/upload"}:
             self._json({"error": "not found"}, HTTPStatus.NOT_FOUND)
@@ -321,8 +325,13 @@ class Handler(BaseHTTPRequestHandler):
                 return
 
             pdf_bytes, filename, fields = self._read_upload()
-            result = ingest_pdf(pdf_bytes, filename, fields)
-            AGENT.reload()
+            # Ingestion and index construction must share one lock.  If two
+            # uploads build concurrently, a slower older snapshot could finish
+            # last and roll the global agent back to stale data.
+            with AGENT_LOCK:
+                result = ingest_pdf(pdf_bytes, filename, fields)
+                refreshed = BatteryResearchAgent()
+                AGENT = refreshed
             self._json(result, HTTPStatus.CREATED if result.get("created") else HTTPStatus.OK)
         except (ValueError, TypeError, json.JSONDecodeError, RuntimeError) as exc:
             self._json({"error": str(exc)}, HTTPStatus.BAD_REQUEST)

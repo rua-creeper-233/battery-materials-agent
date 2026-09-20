@@ -1,8 +1,8 @@
 # 本地全文与证据索引审计
 
-审计时间：2026-09-19T03:45:12+00:00
+审计时间：2026-09-20T04:02:27+00:00
 
-结论：证据库共 65 篇，DOI/出版社记录已核验 65/65；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 63/65 篇，共 3649 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
+结论：证据库共 108 篇，DOI/出版社记录已核验 108/108；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 63/108 篇，共 3649 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
 
 所有保留文件均通过 PDF 解析、标题匹配、正文/补充材料区分、SHA-256 和重复文件检查。M3GNet 的补充材料单独放在 `literature/supplementary/`，不进入正文索引。
 
@@ -73,11 +73,97 @@
 | 63 | 2020 | Lithium-electrolyte solvation and reaction in the electrolyte of a lithium ion battery: A ReaxFF reactive force field study | 已下载正文 | 15 | 38 | 1.0 | user_authorized_xjtu_institutional_access |
 | 64 | 2018 | Review on modeling of the anode solid electrolyte interphase (SEI) for lithium-ion batteries | 已下载正文 | 26 | 113 | 1.0 | vetted_public_author_or_repository_copy |
 | 65 | 2021 | Application of Reaction Force Field Molecular Dynamics in Lithium Batteries | 已下载正文 | 5 | 22 | 1.0 | openalex_open_access_pdf |
+| 66 | 1993 | Ab initio molecular dynamics for liquid metals | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 67 | 1994 | Ab initio molecular-dynamics simulation of the liquid-metal–amorphous-semiconductor transition in germanium | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 68 | 1996 | Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 69 | 1994 | Projector-augmented-wave method | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 70 | 1999 | From ultrasoft pseudopotentials to the projector augmented-wave method | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 71 | 1996 | Generalized Gradient Approximation Made Simple | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 72 | 1998 | Electron-energy-loss spectra and the structural stability of nickel oxide: An LSDA+U study | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 73 | 2003 | Hybrid functionals based on a screened Coulomb potential | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 74 | 2010 | A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 75 | 1976 | Special points for Brillouin-zone integrations | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 76 | 1989 | High-precision sampling for Brillouin-zone integration in metals | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 77 | 2000 | Improved tangent estimate in the nudged elastic band method for finding minimum energy paths and saddle points | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 78 | 2006 | A fast and robust algorithm for Bader decomposition of charge density | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 79 | 1997 | Maximally localized generalized Wannier functions for composite energy bands | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 80 | 2007 | Generalized neural-network representation of high-dimensional potential-energy surfaces | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 81 | 2011 | Atom-centered symmetry functions for constructing high-dimensional neural network potentials | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 82 | 2010 | Gaussian Approximation Potentials: Accuracy of Quantum Mechanics, without the Electrons | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 83 | 2015 | Spectral neighbor analysis method for automated generation of quantum-accurate interatomic potentials | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 84 | 2018 | Deep Potential Molecular Dynamics: A Scalable Model with the Accuracy of Quantum Mechanics | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 85 | 2017 | Active learning of linearly parametrized interatomic potentials | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 86 | 2020 | On-the-fly active learning of interpretable Bayesian force fields for atomistic rare events | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 87 | 2020 | On-the-Fly Active Learning of Interatomic Potentials for Large-Scale Atomistic Simulations | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 88 | 2019 | On-the-fly Machine Learning Force Field Generation: Application to Melting Points | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 89 | 2019 | De Novo Exploration and Self-Guided Learning of Potential-Energy Surfaces | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 90 | 2019 | Machine learning interatomic potentials as emerging tools for materials science | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 91 | 2021 | Machine-learning interatomic potentials for materials science | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 92 | 2021 | Machine Learning Force Fields | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 93 | 2020 | Machine learning for interatomic potential models | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 94 | 2006 | Factors that affect Li mobility in layered lithium transition metal oxides | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 95 | 2014 | Structures, Thermodynamics, and Li+ Mobility of Li10GeP2S12: A First-Principles Analysis | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 96 | 2016 | Origin of Fast Ion Conduction in Li10GeP2S12, a Superionic Conductor | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 97 | 2012 | One-dimensional stringlike cooperative migration of lithium ions in an ultrafast ionic conductor | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 98 | 2019 | High-Throughput Screening of Solid-State Li-Ion Conductors Using Lattice-Dynamics Descriptors | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 99 | 2019 | First-principles prediction of potentials and space-charge layers in all-solid-state batteries | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 100 | 2024 | Machine Learning-Accelerated First-Principles Study of Atomic Configuration and Ionic Diffusion in Li10GeP2S12 Solid Electrolyte | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 101 | 2022 | First-principles study on selenium-doped Li10GeP2S12 solid electrolyte: Effects of doping on moisture stability and Li-ion transport properties | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 102 | 2023 | Toward the Formation of the Solid Electrolyte Interphase on Alkaline Metal Anodes: Ab Initio Simulations | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 103 | 2021 | Quantum chemical calculations of lithium-ion battery electrolyte and interphase species | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 104 | 2017 | Review—SEI: Past, Present and Future | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 105 | 2015 | FireWorks: a dynamic workflow system designed for high-throughput applications | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 106 | 2017 | Atomate: A high-level interface to generate, execute, and analyze computational materials science workflows | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 107 | 2020 | Materials Cloud, a platform for open computational science | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 108 | 2018 | matminer: An open source toolkit for materials data mining | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 
 ## 尚未保存的正文
 
 - Empowering materials science with VASPKIT: a toolkit for enhanced simulation and analysis，DOI `10.1038/s41596-025-01160-w`：本地未保存正文，使用 WOS/DOI 回退。
 - A polymeric artificial solid electrolyte interface dramatically enhances lithium-ion transport，DOI `10.1039/d4cc03688c`：本地未保存正文，使用 WOS/DOI 回退。
+- Ab initio molecular dynamics for liquid metals，DOI `10.1103/physrevb.47.558`：本地未保存正文，使用 WOS/DOI 回退。
+- Ab initio molecular-dynamics simulation of the liquid-metal–amorphous-semiconductor transition in germanium，DOI `10.1103/physrevb.49.14251`：本地未保存正文，使用 WOS/DOI 回退。
+- Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set，DOI `10.1016/0927-0256(96)00008-0`：本地未保存正文，使用 WOS/DOI 回退。
+- Projector-augmented-wave method，DOI `10.1103/physrevb.50.17953`：本地未保存正文，使用 WOS/DOI 回退。
+- From ultrasoft pseudopotentials to the projector augmented-wave method，DOI `10.1103/physrevb.59.1758`：本地未保存正文，使用 WOS/DOI 回退。
+- Generalized Gradient Approximation Made Simple，DOI `10.1103/physrevlett.77.3865`：本地未保存正文，使用 WOS/DOI 回退。
+- Electron-energy-loss spectra and the structural stability of nickel oxide: An LSDA+U study，DOI `10.1103/PhysRevB.57.1505`：本地未保存正文，使用 WOS/DOI 回退。
+- Hybrid functionals based on a screened Coulomb potential，DOI `10.1063/1.1564060`：本地未保存正文，使用 WOS/DOI 回退。
+- A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu，DOI `10.1063/1.3382344`：本地未保存正文，使用 WOS/DOI 回退。
+- Special points for Brillouin-zone integrations，DOI `10.1103/physrevb.13.5188`：本地未保存正文，使用 WOS/DOI 回退。
+- High-precision sampling for Brillouin-zone integration in metals，DOI `10.1103/physrevb.40.3616`：本地未保存正文，使用 WOS/DOI 回退。
+- Improved tangent estimate in the nudged elastic band method for finding minimum energy paths and saddle points，DOI `10.1063/1.1323224`：本地未保存正文，使用 WOS/DOI 回退。
+- A fast and robust algorithm for Bader decomposition of charge density，DOI `10.1016/j.commatsci.2005.04.010`：本地未保存正文，使用 WOS/DOI 回退。
+- Maximally localized generalized Wannier functions for composite energy bands，DOI `10.1103/physrevb.56.12847`：本地未保存正文，使用 WOS/DOI 回退。
+- Generalized neural-network representation of high-dimensional potential-energy surfaces，DOI `10.1103/physrevlett.98.146401`：本地未保存正文，使用 WOS/DOI 回退。
+- Atom-centered symmetry functions for constructing high-dimensional neural network potentials，DOI `10.1063/1.3553717`：本地未保存正文，使用 WOS/DOI 回退。
+- Gaussian Approximation Potentials: Accuracy of Quantum Mechanics, without the Electrons，DOI `10.1103/physrevlett.104.136403`：本地未保存正文，使用 WOS/DOI 回退。
+- Spectral neighbor analysis method for automated generation of quantum-accurate interatomic potentials，DOI `10.1016/j.jcp.2014.12.018`：本地未保存正文，使用 WOS/DOI 回退。
+- Deep Potential Molecular Dynamics: A Scalable Model with the Accuracy of Quantum Mechanics，DOI `10.1103/physrevlett.120.143001`：本地未保存正文，使用 WOS/DOI 回退。
+- Active learning of linearly parametrized interatomic potentials，DOI `10.1016/j.commatsci.2017.08.031`：本地未保存正文，使用 WOS/DOI 回退。
+- On-the-fly active learning of interpretable Bayesian force fields for atomistic rare events，DOI `10.1038/s41524-020-0283-z`：本地未保存正文，使用 WOS/DOI 回退。
+- On-the-Fly Active Learning of Interatomic Potentials for Large-Scale Atomistic Simulations，DOI `10.1021/acs.jpclett.0c01061`：本地未保存正文，使用 WOS/DOI 回退。
+- On-the-fly Machine Learning Force Field Generation: Application to Melting Points，DOI `10.1103/physrevb.100.014105`：本地未保存正文，使用 WOS/DOI 回退。
+- De Novo Exploration and Self-Guided Learning of Potential-Energy Surfaces，DOI `10.1038/s41524-019-0236-6`：本地未保存正文，使用 WOS/DOI 回退。
+- Machine learning interatomic potentials as emerging tools for materials science，DOI `10.1002/adma.201902765`：本地未保存正文，使用 WOS/DOI 回退。
+- Machine-learning interatomic potentials for materials science，DOI `10.1016/j.actamat.2021.116980`：本地未保存正文，使用 WOS/DOI 回退。
+- Machine Learning Force Fields，DOI `10.1021/acs.chemrev.0c01111`：本地未保存正文，使用 WOS/DOI 回退。
+- Machine learning for interatomic potential models，DOI `10.1063/1.5126336`：本地未保存正文，使用 WOS/DOI 回退。
+- Factors that affect Li mobility in layered lithium transition metal oxides，DOI `10.1103/physrevb.74.094105`：本地未保存正文，使用 WOS/DOI 回退。
+- Structures, Thermodynamics, and Li+ Mobility of Li10GeP2S12: A First-Principles Analysis，DOI `10.1021/jp5000039`：本地未保存正文，使用 WOS/DOI 回退。
+- Origin of Fast Ion Conduction in Li10GeP2S12, a Superionic Conductor，DOI `10.1021/acs.jpcc.6b10967`：本地未保存正文，使用 WOS/DOI 回退。
+- One-dimensional stringlike cooperative migration of lithium ions in an ultrafast ionic conductor，DOI `10.1063/1.4737397`：本地未保存正文，使用 WOS/DOI 回退。
+- High-Throughput Screening of Solid-State Li-Ion Conductors Using Lattice-Dynamics Descriptors，DOI `10.1016/j.isci.2019.05.036`：本地未保存正文，使用 WOS/DOI 回退。
+- First-principles prediction of potentials and space-charge layers in all-solid-state batteries，DOI `10.1103/physrevlett.122.167701`：本地未保存正文，使用 WOS/DOI 回退。
+- Machine Learning-Accelerated First-Principles Study of Atomic Configuration and Ionic Diffusion in Li10GeP2S12 Solid Electrolyte，DOI `10.3390/ma17081810`：本地未保存正文，使用 WOS/DOI 回退。
+- First-principles study on selenium-doped Li10GeP2S12 solid electrolyte: Effects of doping on moisture stability and Li-ion transport properties，DOI `10.1016/j.mtchem.2022.101223`：本地未保存正文，使用 WOS/DOI 回退。
+- Toward the Formation of the Solid Electrolyte Interphase on Alkaline Metal Anodes: Ab Initio Simulations，DOI `10.1002/batt.202300156`：本地未保存正文，使用 WOS/DOI 回退。
+- Quantum chemical calculations of lithium-ion battery electrolyte and interphase species，DOI `10.1038/s41597-021-00986-9`：本地未保存正文，使用 WOS/DOI 回退。
+- Review—SEI: Past, Present and Future，DOI `10.1149/2.1441707jes`：本地未保存正文，使用 WOS/DOI 回退。
+- FireWorks: a dynamic workflow system designed for high-throughput applications，DOI `10.1002/cpe.3505`：本地未保存正文，使用 WOS/DOI 回退。
+- Atomate: A high-level interface to generate, execute, and analyze computational materials science workflows，DOI `10.1016/j.commatsci.2017.07.030`：本地未保存正文，使用 WOS/DOI 回退。
+- Materials Cloud, a platform for open computational science，DOI `10.1038/s41597-020-00637-5`：本地未保存正文，使用 WOS/DOI 回退。
+- matminer: An open source toolkit for materials data mining，DOI `10.1016/j.commatsci.2018.05.018`：本地未保存正文，使用 WOS/DOI 回退。
 
 ## 使用边界
 
