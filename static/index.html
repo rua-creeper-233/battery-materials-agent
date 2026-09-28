@@ -110,16 +110,57 @@
     .relation { font: 12px/1.5 ui-monospace, monospace; padding: 8px 10px; background: #f1f3ef; margin: 6px 0; border-radius: 8px; }
     @media (max-width: 950px) { main { grid-template-columns: 1fr; } aside { position: static; max-height: none; } .paper-list { max-height: 480px; } }
     @media (max-width: 620px) { .shell { padding: 18px; } header { align-items: start; flex-direction: column; } .header-actions { justify-items: start; } .stats { justify-content: flex-start; } .composer, .form-grid { grid-template-columns: 1fr; } .form-grid .wide { grid-column: auto; } button { min-height: 48px; } .workspace { padding: 17px; } }
+    .site-nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 0 4px 16px; border-bottom: 1px solid var(--line); }
+    .site-nav .brand { color: var(--ink); font: 700 12px/1 ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; }
+    .site-nav-links { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+    .site-nav-links a { padding: 8px 10px; border-radius: 999px; color: var(--muted); font-size: 12px; text-decoration: none; }
+    .site-nav-links a:hover, .site-nav-links a:focus-visible { background: var(--mint); color: var(--green); outline: none; }
+    .hero-note { display: inline-flex; align-items: center; gap: 8px; margin-top: 17px; color: var(--green); font-size: 12px; font-weight: 700; }
+    .hero-note::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 4px #c65f2520; }
+    .future-section { margin-top: 28px; padding: 34px; background: #18382e; color: #edf7ef; border: 1px solid #2c5c49; border-radius: 20px; box-shadow: 0 22px 58px rgba(28, 53, 43, .16); }
+    .future-section .eyebrow { color: #e6ad70; }
+    .future-section h2 { max-width: 760px; margin: 10px 0 12px; color: #fff; font: 650 clamp(27px, 3vw, 43px)/1.15 Georgia, "Noto Serif SC", serif; letter-spacing: -.025em; }
+    .future-lede { max-width: 850px; margin: 0; color: #c7ded0; line-height: 1.8; }
+    .future-meta { display: flex; gap: 9px; flex-wrap: wrap; margin: 20px 0 24px; }
+    .future-meta span { padding: 7px 10px; border: 1px solid #527866; border-radius: 999px; color: #d3e8d8; font-size: 11px; }
+    .future-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+    .future-card { display: flex; flex-direction: column; min-height: 220px; padding: 20px; background: #f7fbf4; color: var(--ink); border-radius: 15px; }
+    .future-card.featured { grid-column: 1 / -1; background: #e5f1e5; }
+    .future-card .future-index { color: var(--orange); font: 700 11px ui-monospace, monospace; letter-spacing: .08em; }
+    .future-card h3 { margin: 7px 0 8px; font: 650 19px/1.3 Georgia, "Noto Serif SC", serif; }
+    .future-card p { margin: 0; color: #526158; font-size: 13px; line-height: 1.7; }
+    .future-card .future-question { margin-top: 13px; padding-top: 12px; border-top: 1px solid #cadbc9; color: #244f3d; font-size: 12px; line-height: 1.6; }
+    .future-card .future-question strong { color: var(--green); }
+    .future-card .future-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; padding-top: 16px; }
+    .future-links a { display: inline-flex; padding: 6px 8px; border-radius: 7px; background: #d9e9da; color: #1b5b41; font-size: 10px; font-weight: 750; text-decoration: none; }
+    .future-links a:hover { background: #c5dec9; }
+    .future-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 21px; color: #b8d1c0; font-size: 11px; line-height: 1.6; }
+    .future-bottom a { color: #f0c487; }
+    .future-teaser { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-top: 28px; padding: 25px 28px; background: #e4efe5; border: 1px solid #c0d5c4; border-radius: 17px; }
+    .future-teaser h2 { margin: 8px 0 6px; color: var(--ink); font: 650 26px/1.2 Georgia, "Noto Serif SC", serif; }
+    .future-teaser p { max-width: 760px; margin: 0; color: #526158; font-size: 13px; line-height: 1.7; }
+    .future-teaser-link { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 7px; padding: 12px 15px; border-radius: 10px; background: var(--green); color: white; font-size: 12px; font-weight: 750; text-decoration: none; }
+    .future-teaser-link:hover { background: #0f5438; }
+    @media (max-width: 720px) { .site-nav { align-items: flex-start; flex-direction: column; } .site-nav-links { justify-content: flex-start; } .future-section { padding: 22px 18px; } .future-grid { grid-template-columns: 1fr; } .future-card.featured { grid-column: auto; } .future-bottom { align-items: flex-start; flex-direction: column; } .future-teaser { align-items: flex-start; flex-direction: column; padding: 21px 18px; } }
   </style>
   <link rel="stylesheet" href="./tutorials.css" />
 </head>
 <body>
   <div class="shell">
-    <header>
+    <nav class="site-nav" aria-label="页面导航">
+      <a class="brand" href="#top">Battery Evidence Lab</a>
+      <div class="site-nav-links">
+        <a href="#research-question">证据问答</a>
+        <a href="#future-directions">未来方向</a>
+        <a href="#tutorials">学习路径</a>
+      </div>
+    </nav>
+    <header id="top">
       <div>
         <div class="eyebrow">Computational Battery Materials · Evidence First</div>
         <h1>Battery Evidence Lab</h1>
         <div class="sub">面向 DFT、VASP、NEB、AIMD 与机器学习势的材料科研子智能体。回答必须能追到论文和 DOI，计算建议必须带质量检查。</div>
+        <div class="hero-note">把文献证据变成可复现的下一步</div>
       </div>
       <div class="header-actions">
         <div class="stats">
@@ -137,7 +178,7 @@
     </header>
 
     <main>
-      <section class="panel workspace">
+      <section id="research-question" class="panel workspace">
         <div class="composer">
           <textarea id="question" placeholder="例如：我想用 VASP 计算 LGPS 中的锂离子扩散，NEB 和 AIMD 应该怎样选择？"></textarea>
           <button id="ask">检索并生成回答</button>
@@ -177,6 +218,14 @@
         <div id="paperList" class="paper-list"></div>
       </aside>
     </main>
+    <section id="future-directions" class="future-teaser" aria-labelledby="futureTitle">
+      <div>
+        <div class="eyebrow">RESEARCH OUTLOOK · 综述证据 → 可做问题</div>
+        <h2 id="futureTitle">电池材料计算的下一组问题</h2>
+        <p>进入独立研究备忘录，查看五个方向、对应 DOI、学生规模的问题以及复现和验证清单。</p>
+      </div>
+      <a class="future-teaser-link" href="./future-directions.html">打开未来方向页 <span aria-hidden="true">↗</span></a>
+    </section>
     <section id="tutorials" class="panel tutorials" aria-labelledby="tutorialTitle">
       <div class="eyebrow">LEARN BY DOING · 从第一个模型开始</div>
       <h2 id="tutorialTitle">材料计算入门小课堂</h2>

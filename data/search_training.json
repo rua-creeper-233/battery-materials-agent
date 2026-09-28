@@ -49,7 +49,20 @@
     {"query": "HiTPoly 聚合物电解质 主动学习 筛选", "relevant": ["kuhn2026_hitpoly"]},
     {"query": "Li6PS5Cl 氧掺杂 SevenNet 界面 SEI", "relevant": ["yang2026_oxygen_sei"]},
     {"query": "机器学习势 电响应 Born有效电荷 长程静电", "relevant": ["zhong2025_les_response"]},
-    {"query": "熵驱动 DFT 训练构型 数据选择", "relevant": ["subramanyam2025_entropy_data"]}
+    {"query": "熵驱动 DFT 训练构型 数据选择", "relevant": ["subramanyam2025_entropy_data"]},
+    {"query": "固态电池电解质 原子模拟 机器学习综述", "relevant": ["dutra2025_sse_atomistic_ml_review", "chen2026_mlips_assb_review"]},
+    {"query": "固态电池 AI 生态 电解质 界面", "relevant": ["wang2025_ai_sse_interface", "jain2026_ml_sse_pipelines"]},
+    {"query": "固态电解质 机器学习 pipeline 主动学习 多目标优化", "relevant": ["jain2026_ml_sse_pipelines"]},
+    {"query": "机器学习力场训练集需要多少构型 固态电解质", "relevant": ["yan2026_sse_mlff_training_perspective", "you2024_llzo_pca_deepmd"]},
+    {"query": "机器学习势 从小尺度到器件尺度 综述", "relevant": ["wang2024_mlip_scaling_review"]},
+    {"query": "Li2CO3 SEI MTP 主动学习 DFT", "relevant": ["li2025_sei_effective_mlips"]},
+    {"query": "硫化物固态电解质 预训练深度势", "relevant": ["wang2025_dpa_sse"]},
+    {"query": "LLZO DeepMD PCA 相变 VASP", "relevant": ["you2024_llzo_pca_deepmd"]},
+    {"query": "LLZO LiCoO2 界面 机器学习势 退化", "relevant": ["kim2024_llzo_lco_interface_mlff"]},
+    {"query": "Li3YCl6 机器学习分子动力学 有限尺寸 电导率", "relevant": ["zhang2024_mlmd_size_conductivity"]},
+    {"query": "电池机器学习应用导向 数据集 实验验证", "relevant": ["wang2025_battery_ml_paradigms"]},
+    {"query": "固态电解质 机器学习性质预测 综述", "relevant": ["li2024_sse_property_prediction_review", "wang2025_battery_ml_paradigms"]},
+    {"query": "计算引导电池材料合成 前驱体 反应路径", "relevant": ["szymanski2024_computational_synthesis"]}
   ],
   "held_out_examples": [
     {"query": "用MS 2020和COMPASS III研究碳酸酯电解液界面结构", "relevant": ["wu2023_edl_ms", "zhang2025_sei_phasefield_ms"]},

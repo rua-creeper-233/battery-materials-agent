@@ -174,29 +174,29 @@
     "top1_accuracy": 0.75
   },
   "trained_on": "data/search_training.json",
-  "training_examples": 48,
+  "training_examples": 61,
   "held_out_examples": 12,
   "warning": "Small in-library relevance set; retrieval weight tuning only, not LLM training. The held-out set was used once for manual alias error analysis, so it is a regression set rather than an untouched production benchmark.",
-  "objective": 0.903247,
+  "objective": 0.759986,
   "training_metrics": {
-    "mrr_at_5": 0.910417,
-    "recall_at_5": 0.889931,
-    "top1_accuracy": 0.875
+    "mrr_at_5": 0.775956,
+    "recall_at_5": 0.730328,
+    "top1_accuracy": 0.737705
   },
   "held_out_metrics": {
-    "mrr_at_5": 0.916667,
+    "mrr_at_5": 0.958333,
     "recall_at_5": 0.958333,
-    "top1_accuracy": 0.833333
+    "top1_accuracy": 0.916667
   },
   "metrics": {
-    "mrr_at_5": 0.916667,
+    "mrr_at_5": 0.958333,
     "recall_at_5": 0.958333,
-    "top1_accuracy": 0.833333
+    "top1_accuracy": 0.916667
   },
   "weights": {
     "title": 4.0,
     "role": 4.5,
-    "methods": 7.0,
+    "methods": 3.5,
     "tags": 3.0,
     "systems_properties": 2.5,
     "summary_evidence": 1.0,

@@ -1,0 +1,13 @@
+{
+  "papers": 122,
+  "rows": 549,
+  "train": 522,
+  "eval": 27,
+  "seed": "sha256(source_group_id)",
+  "sources": [
+    "E:\\MSul\\battery_materials_agent\\data\\papers.json",
+    "E:\\MSul\\battery_materials_agent\\data\\paper_expansion_20260920.json"
+  ],
+  "policy": "metadata_only_no_fulltext_or_pdf_text",
+  "split_rule": "sha256(source_group_id)[0] % 7 == 0 -> eval"
+}

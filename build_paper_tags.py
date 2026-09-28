@@ -25,6 +25,8 @@ def main() -> None:
             "VASP": "精选元数据明确使用或教授VASP/VASPKIT",
             "方法论文": "本库starter方法路线集",
             "进展论文": "本库核心电池材料计算研究集",
+            "综述": "综述性文献，适合背景梳理、方法比较与领域展望",
+            "观点": "Perspective/Opinion 类观点文章；不等同于系统综述",
         },
         "counts": dict(sorted(counts.items())),
         "papers": rows,

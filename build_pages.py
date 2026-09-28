@@ -21,6 +21,7 @@ def main() -> None:
     json.loads(papers_path.read_text(encoding="utf-8"))
 
     copy(ROOT / "static" / "index.html", DOCS / "index.html")
+    copy(ROOT / "static" / "future-directions.html", DOCS / "future-directions.html")
     copy(ROOT / "static" / "browser_agent.js", DOCS / "browser_agent.js")
     for asset in ("tutorials.js", "tutorials.css", "dft_lessons.js", "beginner_lessons.js", "md_lessons.js"):
         copy(ROOT / "static" / asset, DOCS / asset)
@@ -28,6 +29,7 @@ def main() -> None:
         "AGENT_IMPLEMENTATION_GUIDE.md",
         "BATTERY_RESEARCH_ROADMAP_20260918.md",
         "AGENT_STATUS_20260920.md",
+        "BATTERY_COMPUTATION_FUTURE_DIRECTIONS.md",
     ):
         copy(ROOT / "guides" / guide, DOCS / "guides" / guide)
     copy(papers_path, DOCS / "data" / "papers.json")

@@ -8049,5 +8049,935 @@
         "https://doi.org/10.1016/j.commatsci.2018.05.018"
       ]
     }
+  },
+  {
+    "id": "dutra2025_sse_atomistic_ml_review",
+    "title": "Understanding solid-state battery electrolytes using atomistic modelling and machine learning",
+    "authors": [
+      "Ana C. C. Dutra",
+      "Benedek A. Goldmann",
+      "M. Saiful Islam",
+      "James A. Dawson"
+    ],
+    "year": 2025,
+    "journal": "Nature Reviews Materials",
+    "document_type": "Review",
+    "doi": "10.1038/s41578-025-00817-y",
+    "url": "https://doi.org/10.1038/s41578-025-00817-y",
+    "role": "系统梳理固态电池电解质的原子模拟、机器学习势、离子输运与界面问题，适合作为研究方向地图。",
+    "systems": [
+      "solid-state battery electrolytes",
+      "oxide, sulfide and halide SSEs"
+    ],
+    "methods": [
+      "综述",
+      "DFT",
+      "MD",
+      "机器学习势",
+      "固态电解质",
+      "第一性原理",
+      "molecular dynamics"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "综述",
+      "DFT",
+      "MD",
+      "机器学习势",
+      "固态电解质"
+    ],
+    "summary": "从结构、缺陷、离子输运和界面稳定性总结DFT、AIMD与机器学习方法，并讨论采样、尺度和实验验证瓶颈。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "review",
+    "difficulty": "入门进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1038/s41578-025-00817-y",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41578-025-00817-y"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1038/s41578-025-00817-y"
+      ]
+    }
+  },
+  {
+    "id": "wang2025_ai_sse_interface",
+    "title": "Toward AI ecosystems for electrolyte and interface engineering in solid-state batteries",
+    "authors": [
+      "Zhilong Wang",
+      "Wolfgang G. Zeier",
+      "Fengqi You"
+    ],
+    "year": 2025,
+    "journal": "Science Advances",
+    "document_type": "Review",
+    "doi": "10.1126/sciadv.aea0638",
+    "url": "https://doi.org/10.1126/sciadv.aea0638",
+    "role": "面向固态电池电解质与界面工程的AI生态综述，连接数据库、DFT筛选、机器学习和闭环实验。",
+    "systems": [
+      "solid-state electrolytes",
+      "SEI/CEI interfaces"
+    ],
+    "methods": [
+      "综述",
+      "AI4S",
+      "DFT",
+      "固态电解质",
+      "界面",
+      "第一性原理"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "综述",
+      "AI4S",
+      "DFT",
+      "固态电解质",
+      "界面"
+    ],
+    "summary": "讨论数据质量、结构—性质预测、生成式设计、界面稳定性和实验验证之间的闭环。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "review",
+    "difficulty": "入门进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1126/sciadv.aea0638",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1126/sciadv.aea0638"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1126/sciadv.aea0638"
+      ]
+    }
+  },
+  {
+    "id": "jain2026_ml_sse_pipelines",
+    "title": "Machine learning pipelines for the design of solid-state electrolytes",
+    "authors": [
+      "Vinamr Jain",
+      "Zhilong Wang",
+      "Fengqi You"
+    ],
+    "year": 2026,
+    "journal": "Materials Horizons",
+    "document_type": "Review",
+    "doi": "10.1039/d5mh01525a",
+    "url": "https://doi.org/10.1039/d5mh01525a",
+    "role": "按数据、特征、模型、生成式设计和实验闭环组织固态电解质机器学习流程的近期综述。",
+    "systems": [
+      "inorganic solid-state electrolytes",
+      "Li, Mg, Ca, Zn and Al conductors"
+    ],
+    "methods": [
+      "综述",
+      "AI4S",
+      "DFT",
+      "MD",
+      "固态电解质",
+      "第一性原理",
+      "molecular dynamics"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "综述",
+      "AI4S",
+      "DFT",
+      "MD",
+      "固态电解质"
+    ],
+    "summary": "系统比较数据稀缺、迁移学习、主动学习、多目标优化、可解释AI、生成模型和物理信息模型。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "review",
+    "difficulty": "入门进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1039/d5mh01525a",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1039/d5mh01525a"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1039/d5mh01525a"
+      ]
+    }
+  },
+  {
+    "id": "yan2026_sse_mlff_training_perspective",
+    "title": "A perspective on training machine learning force fields for solid-state electrolyte materials",
+    "authors": [
+      "Zihan Yan",
+      "Shengjie Tang",
+      "Yizhou Zhu"
+    ],
+    "year": 2026,
+    "journal": "npj Energy Materials",
+    "document_type": "Review",
+    "doi": "10.1038/s44456-026-00014-4",
+    "url": "https://doi.org/10.1038/s44456-026-00014-4",
+    "role": "聚焦固态电解质机器学习力场训练集规模、构型覆盖、验证和可迁移性的前沿观点。",
+    "systems": [
+      "LLZO",
+      "Li3YCl6",
+      "LGPS"
+    ],
+    "methods": [
+      "综述",
+      "机器学习势",
+      "MD",
+      "固态电解质",
+      "molecular dynamics"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "综述",
+      "机器学习势",
+      "MD",
+      "固态电解质"
+    ],
+    "summary": "比较训练集规模、局域环境覆盖、离子输运和相变任务的需求，强调用结构覆盖评估长时间模拟可靠性。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "review",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1038/s44456-026-00014-4",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s44456-026-00014-4"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1038/s44456-026-00014-4"
+      ]
+    }
+  },
+  {
+    "id": "chen2026_mlips_assb_review",
+    "title": "Redefining atomistic simulations of all-solid-state batteries through machine learning interatomic potentials",
+    "authors": [
+      "Qian Chen",
+      "Siwen Wang",
+      "Chen Ling"
+    ],
+    "year": 2026,
+    "journal": "Journal of Energy Chemistry",
+    "document_type": "Review",
+    "doi": "10.1016/j.jechem.2025.08.058",
+    "url": "https://doi.org/10.1016/j.jechem.2025.08.058",
+    "role": "总结机器学习原子势在全固态电池原子模拟中的训练、输运、界面与尺度扩展问题。",
+    "systems": [
+      "all-solid-state batteries",
+      "solid electrolytes and interfaces"
+    ],
+    "methods": [
+      "综述",
+      "机器学习势",
+      "DFT",
+      "MD",
+      "固态电池",
+      "第一性原理",
+      "molecular dynamics"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "综述",
+      "机器学习势",
+      "DFT",
+      "MD",
+      "固态电池"
+    ],
+    "summary": "讨论MLIP替代昂贵DFT进行大体系和长时间尺度模拟的机会，以及长程静电、反应性、多组分体系等挑战。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "review",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1016/j.jechem.2025.08.058",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.jechem.2025.08.058"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.jechem.2025.08.058"
+      ]
+    }
+  },
+  {
+    "id": "wang2025_battery_ml_paradigms",
+    "title": "Application-oriented design of machine learning paradigms for battery science",
+    "authors": [
+      "Ying Wang"
+    ],
+    "year": 2025,
+    "journal": "npj Computational Materials",
+    "document_type": "Review",
+    "doi": "10.1038/s41524-025-01575-9",
+    "url": "https://doi.org/10.1038/s41524-025-01575-9",
+    "role": "从数据、模型精度、可解释性和实验验证角度总结机器学习在电池科学中的应用范式。",
+    "systems": [
+      "battery materials and cells"
+    ],
+    "methods": [
+      "综述",
+      "AI4S",
+      "电池信息学",
+      "机器学习"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "综述",
+      "AI4S",
+      "电池信息学",
+      "机器学习"
+    ],
+    "summary": "强调数据集质量、跨体系泛化和模型预测到实验验证之间的断点。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "review",
+    "difficulty": "入门进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1038/s41524-025-01575-9",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-025-01575-9"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1038/s41524-025-01575-9"
+      ]
+    }
+  },
+  {
+    "id": "wang2024_mlip_scaling_review",
+    "title": "Machine learning interatomic potential: Bridge the gap between small-scale models and realistic device-scale simulations",
+    "authors": [
+      "Guanjie Wang",
+      "Changrui Wang",
+      "Xuanguang Zhang",
+      "Zefeng Li",
+      "Jian Zhou",
+      "Zhimei Sun"
+    ],
+    "year": 2024,
+    "journal": "iScience",
+    "document_type": "Review",
+    "doi": "10.1016/j.isci.2024.109673",
+    "url": "https://doi.org/10.1016/j.isci.2024.109673",
+    "role": "机器学习原子势从数据生成、描述符、模型训练到软件应用的系统综述。",
+    "systems": [
+      "materials and molecular systems"
+    ],
+    "methods": [
+      "综述",
+      "机器学习势",
+      "DFT",
+      "MD",
+      "第一性原理",
+      "molecular dynamics"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "综述",
+      "机器学习势",
+      "DFT",
+      "MD"
+    ],
+    "summary": "梳理MLIP数据、表示、算法、软件和应用，重点讨论数据集、迁移性、泛化与精度—复杂度权衡。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "review",
+    "difficulty": "入门进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1016/j.isci.2024.109673",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.isci.2024.109673"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.isci.2024.109673"
+      ]
+    }
+  },
+  {
+    "id": "li2025_sei_effective_mlips",
+    "title": "Enabling accurate modelling of materials for a solid electrolyte interphase in lithium-ion batteries using effective machine learning interatomic potentials",
+    "authors": [
+      "Wen-Qing Li",
+      "Gang Wu",
+      "Juan Manuel Arce-Ramos",
+      "Yang Hao Lau",
+      "Man-Fai Ng"
+    ],
+    "year": 2025,
+    "journal": "Materials Horizons",
+    "document_type": "Paper",
+    "doi": "10.1039/d5mh01343g",
+    "url": "https://doi.org/10.1039/d5mh01343g",
+    "role": "以DFT、主动学习、MTP和GNN势模拟Li2CO3及有机SEI，是可复现的SEI机器学习势案例。",
+    "systems": [
+      "Li2CO3",
+      "Li2EDC",
+      "lithium-ion battery SEI"
+    ],
+    "methods": [
+      "方法论文",
+      "DFT",
+      "MD",
+      "机器学习势",
+      "SEI",
+      "第一性原理",
+      "molecular dynamics"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "方法论文",
+      "DFT",
+      "MD",
+      "机器学习势",
+      "SEI"
+    ],
+    "summary": "通过主动学习扩充无定形构型，训练MTP并用GNN势扩展模拟，比较扩散、RDF、声子和弹性等性质。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "core",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1039/d5mh01343g",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1039/d5mh01343g"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1039/d5mh01343g"
+      ]
+    }
+  },
+  {
+    "id": "wang2025_dpa_sse",
+    "title": "A pre-trained deep potential model for sulfide solid electrolytes with broad coverage and high accuracy",
+    "authors": [
+      "Rui Wang",
+      "Meng Guo",
+      "Yong Gao"
+    ],
+    "year": 2025,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-025-01764-6",
+    "url": "https://doi.org/10.1038/s41524-025-01764-6",
+    "role": "面向硫化物固态电解质的预训练深度势，覆盖多种化学环境并支持大规模输运模拟。",
+    "systems": [
+      "sulfide solid electrolytes",
+      "Li-P-S and related systems"
+    ],
+    "methods": [
+      "方法论文",
+      "DFT",
+      "MD",
+      "机器学习势",
+      "固态电解质",
+      "第一性原理",
+      "molecular dynamics"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "方法论文",
+      "DFT",
+      "MD",
+      "机器学习势",
+      "固态电解质"
+    ],
+    "summary": "构建具有较广覆盖范围的预训练深度势，讨论训练数据、精度和长时间尺度离子输运。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "core",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1038/s41524-025-01764-6",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-025-01764-6"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1038/s41524-025-01764-6"
+      ]
+    }
+  },
+  {
+    "id": "you2024_llzo_pca_deepmd",
+    "title": "Principal component analysis enables the design of deep learning potential precisely capturing LLZO phase transitions",
+    "authors": [
+      "Yiwei You",
+      "Dexin Zhang",
+      "Fulun Wu",
+      "Xinrui Cao",
+      "Yang Sun",
+      "Zi-Zhong Zhu",
+      "Shunqing Wu"
+    ],
+    "year": 2024,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-024-01240-7",
+    "url": "https://doi.org/10.1038/s41524-024-01240-7",
+    "role": "用PCA和覆盖分析设计LLZO DeepMD训练集并研究四方—立方相变，适合学习训练集覆盖验证。",
+    "systems": [
+      "Li7La3Zr2O12 (LLZO)"
+    ],
+    "methods": [
+      "方法论文",
+      "DFT",
+      "MD",
+      "VASP",
+      "DeepMD",
+      "固态电解质",
+      "第一性原理",
+      "molecular dynamics"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "方法论文",
+      "DFT",
+      "MD",
+      "VASP",
+      "DeepMD",
+      "固态电解质"
+    ],
+    "summary": "结合数据库、DFT和二体势构建训练集，用PCA评估大体系构型是否落在训练域内，并验证相变温度和热膨胀。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "core",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1038/s41524-024-01240-7",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-024-01240-7"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1038/s41524-024-01240-7"
+      ]
+    }
+  },
+  {
+    "id": "kim2024_llzo_lco_interface_mlff",
+    "title": "Probing degradation at solid-state battery interfaces using machine-learning interatomic potential",
+    "authors": [
+      "Kwangnam Kim",
+      "Nicole Adelstein",
+      "Aniruddha Dive",
+      "Andrew Grieder",
+      "ShinYoung Kang",
+      "Brandon C. Wood",
+      "Liwen F. Wan"
+    ],
+    "year": 2024,
+    "journal": "Energy Storage Materials",
+    "document_type": "Paper",
+    "doi": "10.1016/j.ensm.2024.103842",
+    "url": "https://doi.org/10.1016/j.ensm.2024.103842",
+    "role": "利用经验证机器学习原子势研究LLZO/LCO固态电池界面退化和锂离子输运。",
+    "systems": [
+      "Li7La3Zr2O12 (LLZO)",
+      "LiCoO2 (LCO)",
+      "solid-solid interface"
+    ],
+    "methods": [
+      "进展论文",
+      "MD",
+      "机器学习势",
+      "固态电池",
+      "界面",
+      "molecular dynamics"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "进展论文",
+      "MD",
+      "机器学习势",
+      "固态电池",
+      "界面"
+    ],
+    "summary": "通过大规模分子模拟观察固态电解质—正极界面的结构、应力和输运变化，为器件尺度界面建模提供案例。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "core",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1016/j.ensm.2024.103842",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.ensm.2024.103842"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.ensm.2024.103842"
+      ]
+    }
+  },
+  {
+    "id": "zhang2024_mlmd_size_conductivity",
+    "title": "Size dependent lithium-ion conductivity of solid electrolytes in machine learning molecular dynamics simulations",
+    "authors": [
+      "Yixi Zhang",
+      "Jin-Da Luo",
+      "Hong-Bin Yao",
+      "Bin Jiang"
+    ],
+    "year": 2024,
+    "journal": "Artificial Intelligence Chemistry",
+    "document_type": "Paper",
+    "doi": "10.1016/j.aichem.2024.100051",
+    "url": "https://doi.org/10.1016/j.aichem.2024.100051",
+    "role": "用EANN和不确定性主动学习研究Li3YCl6中超离子转变及有限尺寸对电导率的影响。",
+    "systems": [
+      "Li3YCl6"
+    ],
+    "methods": [
+      "方法论文",
+      "MD",
+      "机器学习势",
+      "扩散系数",
+      "固态电解质",
+      "molecular dynamics"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "方法论文",
+      "MD",
+      "机器学习势",
+      "扩散系数",
+      "固态电解质"
+    ],
+    "summary": "展示小超胞AIMD可能高估室温电导率，强调机器学习MD的尺寸效应和高温数据选取。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "core",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1016/j.aichem.2024.100051",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.aichem.2024.100051"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.aichem.2024.100051"
+      ]
+    }
+  },
+  {
+    "id": "li2024_sse_property_prediction_review",
+    "title": "Machine Learning-Assisted Property Prediction of Solid-State Electrolyte",
+    "authors": [
+      "Jin Li",
+      "Meisa Zhou",
+      "Hong-Hui Wu",
+      "Lifei Wang",
+      "Jian Zhang",
+      "Naiteng Wu",
+      "Kunming Pan",
+      "Guilong Liu",
+      "Yinggan Zhang",
+      "Jiajia Han",
+      "Xianming Liu",
+      "Xiang Chen",
+      "Jiayu Wan",
+      "Qiaobao Zhang"
+    ],
+    "year": 2024,
+    "journal": "Advanced Energy Materials",
+    "document_type": "Review",
+    "doi": "10.1002/aenm.202304480",
+    "url": "https://doi.org/10.1002/aenm.202304480",
+    "role": "综述机器学习预测固态电解质的结构、物理化学性质、离子输运和稳定性，适合补充数据库与模型评价视角。",
+    "systems": [
+      "solid-state electrolytes",
+      "Li-ion and multi-ion conductors"
+    ],
+    "methods": [
+      "综述",
+      "AI4S",
+      "机器学习",
+      "固态电解质"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "综述",
+      "AI4S",
+      "机器学习",
+      "固态电解质"
+    ],
+    "summary": "介绍固态电解质分类、传导机制、机器学习数据来源和性质预测任务，并讨论数据质量、泛化和实验验证。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "review",
+    "difficulty": "入门",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1002/aenm.202304480",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1002/aenm.202304480"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1002/aenm.202304480"
+      ]
+    }
+  },
+  {
+    "id": "szymanski2024_computational_synthesis",
+    "title": "Computationally Guided Synthesis of Battery Materials",
+    "authors": [
+      "Nathan J. Szymanski",
+      "Christopher J. Bartel"
+    ],
+    "year": 2024,
+    "journal": "ACS Energy Letters",
+    "document_type": "Perspective",
+    "doi": "10.1021/acsenergylett.4c00821",
+    "url": "https://doi.org/10.1021/acsenergylett.4c00821",
+    "role": "观点文章，讨论计算方法如何指导电池材料前驱体选择、合成路线和配方优化。",
+    "systems": [
+      "Li-ion cathodes",
+      "solid electrolytes",
+      "battery materials synthesis"
+    ],
+    "methods": [
+      "观点",
+      "DFT",
+      "材料合成",
+      "电池材料",
+      "第一性原理"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "观点",
+      "DFT",
+      "材料合成",
+      "电池材料"
+    ],
+    "summary": "总结从热力学、反应路径和前驱体选择出发的计算引导合成，并指出计算预测与真实合成之间的关键缺口。",
+    "scope_note": "本条为 DOI/出版社记录核验的结构化元数据；本地尚未保存全文，具体参数、页码和适用边界必须回到出版社正文或补充材料核对。",
+    "publication_status": "published",
+    "collection": "perspective",
+    "difficulty": "入门进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社记录已核验；当前库中保留结构化元数据入口。",
+        "basis": "出版社/DOI：https://doi.org/10.1021/acsenergylett.4c00821",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1021/acsenergylett.4c00821"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_publisher_2026-09-20",
+      "publisher": "verified_2026-09-20",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1021/acsenergylett.4c00821"
+      ]
+    }
   }
 ]

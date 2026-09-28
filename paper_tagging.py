@@ -67,10 +67,16 @@ def classify_paper(paper: dict[str, Any]) -> dict[str, Any]:
             basis[tag] = matches[:6]
 
     paper_kind = "方法论文" if paper.get("collection") == "starter" else "进展论文"
-    review_tag = "综述" if "review" in str(paper.get("document_type", "")).lower() else None
+    document_type = str(paper.get("document_type", "")).lower()
+    if "review" in document_type:
+        document_tag = "综述"
+    elif "perspective" in document_type or "opinion" in document_type:
+        document_tag = "观点"
+    else:
+        document_tag = None
     display_tags = [paper_kind, *method_tags]
-    if review_tag:
-        display_tags.insert(1, review_tag)
+    if document_tag:
+        display_tags.insert(1, document_tag)
     return {
         "paper_kind": paper_kind,
         "method_tags": method_tags,

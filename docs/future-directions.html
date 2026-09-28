@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>未来方向 · Battery Evidence Lab</title>
+  <style>
+    :root { --ink:#172520; --muted:#67746f; --paper:#f6f4ee; --green:#166647; --orange:#c65f25; --line:#d9ded7; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Inter,"Noto Sans SC","Microsoft YaHei",sans-serif; }
+    body::before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.45; background-image:radial-gradient(#294e3e18 1px,transparent 1px); background-size:22px 22px; }
+    a { color:var(--green); }
+    .shell { position:relative; max-width:1200px; margin:0 auto; padding:34px; }
+    .site-nav { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:0 4px 16px; border-bottom:1px solid var(--line); }
+    .brand { color:var(--ink); font:700 12px/1 ui-monospace,monospace; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; }
+    .site-nav-links { display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end; }
+    .site-nav-links a { padding:8px 10px; border-radius:999px; color:var(--muted); font-size:12px; text-decoration:none; }
+    .site-nav-links a:hover,.site-nav-links a:focus-visible { background:#d9eee2; color:var(--green); outline:none; }
+    .future-section { margin-top:28px; padding:34px; background:#18382e; color:#edf7ef; border:1px solid #2c5c49; border-radius:20px; box-shadow:0 22px 58px rgba(28,53,43,.16); }
+    .eyebrow { color:#e6ad70; font:700 12px/1.2 ui-monospace,monospace; letter-spacing:.13em; text-transform:uppercase; }
+    h1 { max-width:800px; margin:10px 0 12px; color:#fff; font:650 clamp(31px,4vw,54px)/1.1 Georgia,"Noto Serif SC",serif; letter-spacing:-.035em; }
+    .future-lede { max-width:880px; margin:0; color:#c7ded0; line-height:1.8; }
+    .future-meta { display:flex; gap:9px; flex-wrap:wrap; margin:20px 0 24px; }
+    .future-meta span { padding:7px 10px; border:1px solid #527866; border-radius:999px; color:#d3e8d8; font-size:11px; }
+    .future-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
+    .future-card { display:flex; flex-direction:column; min-height:220px; padding:20px; background:#f7fbf4; color:var(--ink); border-radius:15px; }
+    .future-card.featured { grid-column:1 / -1; background:#e5f1e5; }
+    .future-index { color:var(--orange); font:700 11px ui-monospace,monospace; letter-spacing:.08em; }
+    .future-card h2 { margin:7px 0 8px; font:650 20px/1.3 Georgia,"Noto Serif SC",serif; }
+    .future-card p { margin:0; color:#526158; font-size:13px; line-height:1.7; }
+    .future-question { margin-top:13px; padding-top:12px; border-top:1px solid #cadbc9; color:#244f3d; font-size:12px; line-height:1.6; }
+    .future-question strong { color:var(--green); }
+    .future-links { display:flex; gap:6px; flex-wrap:wrap; margin-top:auto; padding-top:16px; }
+    .future-links a { display:inline-flex; padding:6px 8px; border-radius:7px; background:#d9e9da; color:#1b5b41; font-size:10px; font-weight:750; text-decoration:none; }
+    .future-links a:hover { background:#c5dec9; }
+    .future-bottom { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:21px; color:#b8d1c0; font-size:11px; line-height:1.6; }
+    .future-bottom a { color:#f0c487; }
+    @media(max-width:720px) { .shell{padding:18px}.site-nav{align-items:flex-start;flex-direction:column}.site-nav-links{justify-content:flex-start}.future-section{padding:22px 18px}.future-grid{grid-template-columns:1fr}.future-card.featured{grid-column:auto}.future-bottom{align-items:flex-start;flex-direction:column} }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="site-nav" aria-label="页面导航">
+      <a class="brand" href="./index.html#top">Battery Evidence Lab</a>
+      <div class="site-nav-links">
+        <a href="./index.html#research-question">证据问答</a>
+        <a href="./future-directions.html" aria-current="page">未来方向</a>
+        <a href="./index.html#tutorials">学习路径</a>
+      </div>
+    </nav>
+    <main class="future-section" aria-labelledby="futureTitle">
+      <div class="eyebrow">RESEARCH OUTLOOK · 综述证据 → 可做问题</div>
+      <h1 id="futureTitle">电池材料计算的下一组问题</h1>
+      <p class="future-lede">这里把近年综述和展望中的共同判断，压缩成可以在硕士阶段逐步验证的研究问题。卡片中的链接指向原始 DOI；“建议问题”和“验证路径”是本站基于综述的研究设计，不代表原文已经完成该课题。</p>
+      <div class="future-meta"><span>综述与展望优先</span><span>每个方向有最小可行验证</span><span>适合 DFT · AIMD · MLIP</span></div>
+      <div class="future-grid">
+        <article class="future-card featured">
+          <div class="future-index">01 · REACTIVE INTERFACES</div>
+          <h2>反应性、非晶化 SEI 的 MLIP 与主动学习</h2>
+          <p>综述共同指出，SEI 的成核、断键与溶剂分解同时包含复杂化学反应和长时间尺度结构演化。下一步是用 DFT/AIMD 发现反应事件，再用不确定性驱动的主动学习补齐稀有构型。</p>
+          <div class="future-question"><strong>学生问题：</strong>在 Li 金属与碳酸酯电解液小界面中，主动学习是否能以更少的 DFT 标注捕获首个稳定无机/有机 SEI 层？<br><strong>验证：</strong>留出不同温度和不同初始界面的测试集；比较能量、力、反应事件、扩散系数与短程结构。</div>
+          <div class="future-links"><a href="https://doi.org/10.1038/s41578-025-00817-y" target="_blank" rel="noreferrer">Nat Rev Mater 2025</a><a href="https://doi.org/10.1016/j.jechem.2025.08.058" target="_blank" rel="noreferrer">J Energy Chem 2026</a><a href="https://doi.org/10.1039/D5MH01525A" target="_blank" rel="noreferrer">Mater Horiz 2026</a></div>
+        </article>
+        <article class="future-card">
+          <div class="future-index">02 · TRANSFER</div>
+          <h2>非平衡与领域专用基础势</h2>
+          <p>材料势的泛化会受到化学空间、温度、应力和非平衡轨迹影响。新趋势是基础模型与领域专用微调并行，用数据覆盖和不确定性估计管理迁移风险。</p>
+          <div class="future-question"><strong>学生问题：</strong>一个在晶体和短 AIMD 上训练的势，迁移到缺陷或界面时，哪类构型最先失效？<br><strong>验证：</strong>按化学环境、温度和缺陷类型分层留出测试；报告外推检测而非只报平均 MAE。</div>
+          <div class="future-links"><a href="https://doi.org/10.1038/s44456-026-00014-4" target="_blank" rel="noreferrer">MLFF Perspective 2026</a><a href="https://doi.org/10.1126/sciadv.aea0638" target="_blank" rel="noreferrer">Sci Adv 2025</a></div>
+        </article>
+        <article class="future-card">
+          <div class="future-index">03 · LONG RANGE</div>
+          <h2>长程电荷与电场效应</h2>
+          <p>固态电解质与界面中的离子迁移不只由局部短程环境决定。电荷、极化和电场会影响势垒与空间电荷层，局部截断模型因此可能产生系统偏差。</p>
+          <div class="future-question"><strong>学生问题：</strong>在一个小型硫化物电解质界面中，加入电荷感知或长程修正后，Li 迁移势垒是否更接近 DFT？<br><strong>验证：</strong>对比不同界面厚度、净电荷与外场条件下的 NEB/AIMD；检查尺寸收敛和电荷守恒。</div>
+          <div class="future-links"><a href="https://doi.org/10.1038/s41578-025-00817-y" target="_blank" rel="noreferrer">Nat Rev Mater 2025</a><a href="https://doi.org/10.1016/j.jechem.2025.08.058" target="_blank" rel="noreferrer">J Energy Chem 2026</a></div>
+        </article>
+        <article class="future-card">
+          <div class="future-index">04 · MULTISCALE</div>
+          <h2>DFT/AIMD → MLMD → 连续尺度与实验反馈</h2>
+          <p>可落地的路线需要把电子结构、原子轨迹、介观输运和实验表征接起来。每一层都应保留误差边界，并用实验扩散系数、阻抗或结构谱反向校准。</p>
+          <div class="future-question"><strong>学生问题：</strong>能否用一套小规模 DFT/AIMD→MLMD 流程，预测固态电解质的温度依赖扩散，并与公开实验数据进行数量级校验？<br><strong>验证：</strong>做时间步长、超胞、温度和模型版本的消融；分别比较 MSD、Arrhenius 活化能和结构指纹。</div>
+          <div class="future-links"><a href="https://doi.org/10.1126/sciadv.aea0638" target="_blank" rel="noreferrer">Sci Adv 2025</a><a href="https://doi.org/10.1039/D5MH01525A" target="_blank" rel="noreferrer">Mater Horiz 2026</a><a href="https://doi.org/10.1002/aenm.202304480" target="_blank" rel="noreferrer">Adv Energy Mater 2024</a></div>
+        </article>
+        <article class="future-card">
+          <div class="future-index">05 · DESIGN</div>
+          <h2>面向合成的多目标材料设计</h2>
+          <p>只优化离子电导率会忽略稳定性、可合成性、成本和工艺窗口。综述展望把“性能预测”推进到“合成约束下的设计”，需要把文献、结构生成和实验可行性放到同一个闭环。</p>
+          <div class="future-question"><strong>学生问题：</strong>在一组已知硫化物固态电解质中，能否同时优化离子电导、稳定性代理指标和元素/工艺约束，并给出可解释的候选排序？<br><strong>验证：</strong>时间切分外测；报告 Pareto 前沿、重复训练方差、候选去重和至少一个公开实验回溯。</div>
+          <div class="future-links"><a href="https://doi.org/10.1021/acsenergylett.4c00821" target="_blank" rel="noreferrer">ACS Energy Lett 2024</a><a href="https://doi.org/10.1002/aenm.202304480" target="_blank" rel="noreferrer">Adv Energy Mater 2024</a></div>
+        </article>
+      </div>
+      <div class="future-bottom"><span>证据范围：综述/展望提供方向判断；本站补充的学生问题、测试清单与优先级属于研究设计建议。</span><a href="./guides/BATTERY_COMPUTATION_FUTURE_DIRECTIONS.md">查看完整研究备忘录 →</a></div>
+    </main>
+  </div>
+</body>
+</html>
