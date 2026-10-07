@@ -67,6 +67,16 @@ class AgentTests(unittest.TestCase):
     def test_unknown_query_does_not_fall_back_to_latest_papers(self) -> None:
         self.assertEqual(self.agent.search("zzzz-not-a-real-material-token", limit=5), [])
 
+    def test_doi_lookup_requires_exact_normalized_doi(self) -> None:
+        exact = self.agent.search("https://doi.org/10.1038/S41524-020-00406-3.", limit=5)
+        self.assertEqual([paper["id"] for paper in exact], ["dunn2020_matbench"])
+        self.assertEqual(self.agent.search("10.1038/s41524-020-00406-30", limit=5), [])
+
+    def test_metadata_only_paper_is_not_presented_as_substantive_evidence(self) -> None:
+        answer = self.agent.answer("10.3390/ma17081810")
+        self.assertIn("元数据入口（待核验）", answer["answer_markdown"])
+        self.assertIn("本条不单独支持具体方法或结果主张", answer["answer_markdown"])
+
     def test_vasp_question_has_dedicated_setup_workflow(self) -> None:
         result = self.agent.answer("VASP 入门如何设置 INCAR 和 KPOINTS？")
         self.assertEqual(result["task"], "dft_setup")

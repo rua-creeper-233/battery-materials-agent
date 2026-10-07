@@ -91,9 +91,11 @@ ALIASES = {
     "aimd": ["ab initio molecular dynamics", "molecular dynamics", "msd", "diffusion"],
     "md": ["molecular dynamics", "trajectory", "msd"],
     "ms": ["materials studio"],
+    "AI for Science": ["ai for science", "ai4science", "machine learning materials"],
 }
 
 TOKEN_RE = re.compile(r"[a-zA-Z][a-zA-Z0-9+_.:/-]*|\d+(?:\.\d+)?|[\u4e00-\u9fff]{2,}")
+DOI_RE = re.compile(r"(?:https?://(?:dx\.)?doi\.org/|doi\s*:\s*)?(10\.\d{4,9}/[-._;()/:a-z0-9]+)", re.I)
 
 
 def _tokens(text: str) -> list[str]:
@@ -113,6 +115,28 @@ def _triggered(text: str, trigger: str) -> bool:
     if trigger.isascii():
         return bool(re.search(rf"(?<![a-z0-9]){re.escape(trigger)}(?![a-z0-9])", text, re.I))
     return trigger in text
+
+
+def _normalize_doi(value: str) -> str:
+    """Normalize a DOI token without turning a prefix into a substring match."""
+    doi = DOI_RE.fullmatch(str(value).strip())
+    if not doi:
+        return ""
+    value = doi.group(1).lower()
+    while value and value[-1] in ".,;:!?]}>":
+        value = value[:-1]
+    while value.endswith(")") and value.count(")") > value.count("("):
+        value = value[:-1]
+    return value
+
+
+def _extract_dois(value: str) -> list[str]:
+    return list(dict.fromkeys(_normalize_doi(match.group(0)) for match in DOI_RE.finditer(str(value)) if _normalize_doi(match.group(0))))
+
+
+def _metadata_only(paper: dict[str, Any]) -> bool:
+    scope = _flatten(paper.get("scope_note", "")).lower()
+    return "结构化元数据" in scope or "尚未保存全文" in scope or "metadata" in scope and "fulltext" in scope
 
 
 class BatteryResearchAgent:
@@ -136,7 +160,10 @@ class BatteryResearchAgent:
         self.answer_guidance = json.loads((ROOT / "data" / "answer_guidance.json").read_text(encoding="utf-8"))
         self.rag = rag or EvidenceRAG.from_environment()
         self._search_fields = [self._paper_search_fields(paper) for paper in self.papers]
-        self._documents = [_flatten(paper).lower() for paper in self.papers]
+        # Keep document frequency scoped to the same searchable fields as the
+        # browser runtime; bookkeeping fields (verification/resources) must not
+        # change ranking or cross-runtime result order.
+        self._documents = [" ".join(fields.values()) for fields in self._search_fields]
         self._doc_tokens = [Counter(_tokens(document)) for document in self._documents]
         self._idf = self._build_idf()
         self.fulltext_path = Path(fulltext_path) if fulltext_path else None
@@ -246,6 +273,9 @@ class BatteryResearchAgent:
 
     def search_detailed(self, query: str, limit: int = 5) -> dict[str, Any]:
         clean_query, filters = self._parse_filters(query)
+        query_dois = _extract_dois(clean_query)
+        doi_residual = re.sub(r"doi\s*[:：]", " ", DOI_RE.sub(" ", clean_query), flags=re.I)
+        doi_only = bool(query_dois) and not re.search(r"[\w]", doi_residual, flags=re.UNICODE)
         expanded, alias_terms = self._expanded_query_parts(clean_query)
         original_tokens = set(_tokens(clean_query))
         expanded_tokens = Counter(_tokens(expanded))
@@ -256,6 +286,9 @@ class BatteryResearchAgent:
             if filters["tags"] and not all(tag in display_tags for tag in filters["tags"]):
                 continue
             if filters["types"] and not all(tag in display_tags for tag in filters["types"]):
+                continue
+            paper_doi = _normalize_doi(str(paper.get("doi", "")))
+            if doi_only and paper_doi not in query_dois:
                 continue
             score = 0.001 if any(filters.values()) else 0.0
             hits: dict[str, list[str]] = {}
@@ -280,8 +313,8 @@ class BatteryResearchAgent:
             lowered_doc = " ".join(fields.values())
             if clean_query and clean_query.lower() in lowered_doc:
                 score += float(weights.get("phrase_bonus", 8.0))
-            doi = str(paper.get("doi", "")).lower()
-            if doi and doi in query.lower():
+            doi = paper_doi
+            if doi and doi in query_dois:
                 score += float(weights.get("doi_bonus", 50.0))
                 hits["doi"] = [doi]
             if score <= 0:
@@ -319,6 +352,8 @@ class BatteryResearchAgent:
                 "clean": clean_query,
                 "expanded_terms": alias_terms,
                 "filters": filters,
+                "doi_only": doi_only,
+                "dois": query_dois,
                 "mode": self.search_config.get("mode", "explainable_weighted_retrieval"),
             },
         }
@@ -563,7 +598,10 @@ class BatteryResearchAgent:
         else:
             lines += ["", "### 文献证据", ""]
             for index, paper in enumerate(papers, 1):
-                claim = paper.get("evidence", [{}])[0].get("claim", paper["summary"])
+                if _metadata_only(paper):
+                    claim = "元数据入口（待核验）：当前条目以 DOI/出版社记录登记；本条不单独支持具体方法或结果主张，需逐项核对原文证据。"
+                else:
+                    claim = paper.get("evidence", [{}])[0].get("claim", paper["summary"])
                 lines.append(f"- **〔{index}〕{paper['role']}**：{claim}")
 
         if papers:

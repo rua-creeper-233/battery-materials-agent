@@ -37,6 +37,14 @@
     '风险判断': ['uncertainty', 'calibration', 'overconfidence'],
     '锂硫': ['lithium-sulfur', 'li-s', 'reaxff'],
     '硅负极': ['silicon anode', 'reaxff'],
+    '分子动力学': ['molecular dynamics', 'md', 'aimd', 'trajectory', 'msd'],
+    '正极': ['cathode', 'intercalation', 'layered oxide'],
+    '负极': ['anode', 'sei', 'lithium metal'],
+    '一万多个晶体': ['high-throughput', 'screening', '12,000', 'classifier'],
+    '小数据': ['small data', 'few-shot', 'fine-tuning', 'transfer learning'],
+    'AI for Science': ['ai for science', 'ai4science', 'machine learning materials'],
+    '文献': ['paper', 'review', 'article', 'doi'],
+    '开路电压': ['voltage', 'open circuit voltage', 'intercalation'],
     'materials studio': ['biovia materials studio'],
     '钠': ['sodium', 'na-ion'], '锂': ['lithium', 'li-ion'],
     'dft': ['density functional', 'first-principles', 'total energy'],
@@ -83,11 +91,29 @@
   };
   const common = ['定义材料、工作离子、荷电状态、温度和目标性质。','记录结构来源、数据库版本、结构ID和所有计算版本。','按所选方法测试数值精度、有限尺寸与采样误差；不同方法不能共用未经验证的参数模板。'];
   const fieldLabels = {title:'标题',role:'定位',methods:'方法',tags:'标签',systems_properties:'体系/性质',summary_evidence:'摘要/证据',doi:'DOI'};
+  const doiRe = /(?:https?:\/\/(?:dx\.)?doi\.org\/|doi\s*:\s*)?(10\.\d{4,9}\/[-._;()/:a-z0-9]+)/ig;
+  function normalizeDoi(value) {
+    const match = String(value || '').trim().match(/^(?:https?:\/\/(?:dx\.)?doi\.org\/|doi\s*:\s*)?(10\.\d{4,9}\/[-._;()/:a-z0-9]+)$/i);
+    if (!match) return '';
+    let doi = match[1].toLowerCase();
+    while (/[.,;:!?}\]>]/.test(doi.slice(-1))) doi = doi.slice(0, -1);
+    while (doi.endsWith(')') && (doi.match(/\)/g) || []).length > (doi.match(/\(/g) || []).length) doi = doi.slice(0, -1);
+    return doi;
+  }
+  function extractDois(value) {
+    return [...new Set([...String(value || '').matchAll(doiRe)].map(match => normalizeDoi(match[0])).filter(Boolean))];
+  }
+  function metadataOnly(paper) {
+    const scope = flatten(paper.scope_note).toLowerCase();
+    return scope.includes('结构化元数据') || scope.includes('尚未保存全文') || (scope.includes('metadata') && scope.includes('fulltext'));
+  }
 
   function triggered(text, trigger) {
-    return /^[a-z0-9]+$/i.test(trigger)
-      ? new RegExp(`(^|[^a-z0-9])${trigger.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}([^a-z0-9]|$)`, 'i').test(text)
-      : text.includes(trigger);
+    const normalizedText = String(text).toLowerCase();
+    const normalizedTrigger = String(trigger).toLowerCase();
+    return /^[\x00-\x7f]+$/.test(trigger)
+      ? new RegExp(`(^|[^a-z0-9])${normalizedTrigger.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}([^a-z0-9]|$)`).test(normalizedText)
+      : normalizedText.includes(normalizedTrigger);
   }
   function tokens(text) { return (String(text).toLowerCase().match(/[a-z][a-z0-9+_.:/-]*|\d+(?:\.\d+)?|[\u4e00-\u9fff]{2,}/g) || []); }
   function flatten(value) {
@@ -120,6 +146,9 @@
   function searchDetailed(query, papers, limit=5, config={}) {
     const weights = {...defaultWeights, ...(config.weights || {})};
     const parsed = parseFilters(String(query || ''));
+    const dois = extractDois(parsed.clean);
+    const doiResidual = parsed.clean.replace(doiRe, ' ').replace(/doi\s*[:：]/ig, ' ');
+    const doiOnly = dois.length > 0 && !/[\p{L}\p{N}]/u.test(doiResidual);
     const expanded = expand(parsed.clean);
     const original = new Set(tokens(parsed.clean));
     const queryTokens = tokens(expanded.text);
@@ -133,6 +162,8 @@
       const displayTags = new Set(paper.display_tags || []);
       if (parsed.filters.tags.length && !parsed.filters.tags.every(tag => displayTags.has(tag))) return;
       if (parsed.filters.types.length && !parsed.filters.types.every(tag => displayTags.has(tag))) return;
+      const paperDoi = normalizeDoi(paper.doi);
+      if (doiOnly && !dois.includes(paperDoi)) return;
       let score = (parsed.filters.tags.length || parsed.filters.types.length) ? 0.001 : 0;
       const hits = {};
       Object.entries(documentFields[index]).forEach(([field, text]) => {
@@ -149,7 +180,7 @@
       });
       const allText = Object.values(documentFields[index]).join(' ');
       if (parsed.clean && allText.includes(parsed.clean.toLowerCase())) score += weights.phrase_bonus;
-      if (paper.doi && String(query).toLowerCase().includes(String(paper.doi).toLowerCase())) { score += weights.doi_bonus; hits.doi = [String(paper.doi).toLowerCase()]; }
+      if (paperDoi && dois.includes(paperDoi)) { score += weights.doi_bonus; hits.doi = [paperDoi]; }
       if (score <= 0) return;
       const matchedTerms = [...new Set(Object.values(hits).flat())].slice(0,8);
       const matchedFields = Object.keys(hits).map(field => fieldLabels[field] || field);
@@ -160,7 +191,7 @@
       scored.push({...paper, retrieval:{score:Number(score.toFixed(4)),matched_terms:matchedTerms,matched_fields:matchedFields,reason}});
     });
     scored.sort((a,b) => b.retrieval.score-a.retrieval.score || (b.year || 0)-(a.year || 0));
-    return {results:scored.slice(0,limit),query:{original:query,clean:parsed.clean,expanded_terms:expanded.added,filters:parsed.filters,mode:'explainable_weighted_retrieval'}};
+    return {results:scored.slice(0,limit),query:{original:query,clean:parsed.clean,expanded_terms:expanded.added,filters:parsed.filters,doi_only:doiOnly,dois,mode:'explainable_weighted_retrieval'}};
   }
   function search(query, papers, limit=5, config={}) { return searchDetailed(query,papers,limit,config).results; }
   function citation(p, i) {
@@ -194,7 +225,7 @@
     } else if (wantsPlan) {
       lines.push('', `### 可执行工作流：${task}`, ''); [...common, ...workflows[task]].forEach((step,i) => lines.push(`${i+1}. ${step}`));
     } else {
-      lines.push('', '### 文献证据', ''); found.forEach((p,i) => lines.push(`- **〔${i+1}〕${p.role}**：${p.evidence?.[0]?.claim || p.summary}`));
+      lines.push('', '### 文献证据', ''); found.forEach((p,i) => lines.push(`- **〔${i+1}〕${p.role}**：${metadataOnly(p) ? '元数据入口（待核验）：当前条目以 DOI/出版社记录登记；本条不单独支持具体方法或结果主张，需逐项核对原文证据。' : (p.evidence?.[0]?.claim || p.summary)}`));
     }
     if (found.length) {
       lines.push('', '### 为什么命中', ''); found.forEach((p,i) => lines.push(`- **〔${i+1}〕${p.title}**：${p.retrieval.reason}（分数 ${p.retrieval.score}）。`));

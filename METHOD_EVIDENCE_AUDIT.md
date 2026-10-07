@@ -2,9 +2,9 @@
 
 > 所有条目均为“自动抽取、待人工核对”。它们是原文定位器，不是可直接复制到 VASP/MD 输入文件的最终参数。
 
-- 本地有正文的论文：123
-- 抽取到至少一条方法信号的论文：117
-- 方法信号总数：962
+- 本地有正文的论文：128
+- 抽取到至少一条方法信号的论文：122
+- 方法信号总数：1019
 - 参考文献区：已排除
 - 每篇每类上限：3 条
 - 公开数据只保存短方法信号与页码，不保存连续正文上下文
@@ -710,7 +710,13 @@
 
 ### A pre-trained deep potential model for sulfide solid electrolytes with broad coverage and high accuracy
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `machine-learning potential`；p.1 `training set`；p.2 `training set`
+- 平面波截断能：p.4 `cutoff energy was set to 600 eV`
+- 泛函与电子结构近似：p.4 `PAW`；p.4 `PBESol`；p.6 `PBESol`
+- 扩散与迁移势垒方法：p.4 `Arrhenius relation`；p.4 `mean square displacement`；p.4 `MSD`
+- k 点采样：p.4 `Brillouin zone sampling`
+- 分子动力学条件：p.4 `NPT`；p.4 `simulations conducted over a temperature range of 0 to 1200 K`；p.9 `900 K NVT simulation`
+- 超胞与模型规模：p.9 `supercell consisting of 1350 atoms`
 
 ### Principal component analysis enables the design of deep learning potential precisely capturing LLZO phase transitions
 
@@ -734,7 +740,13 @@
 
 ### Scalable Parallel Algorithm for Graph Neural Network Interatomic Potentials in Molecular Dynamics Simulations
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 计算软件：p.1 `LAMMPS`；p.12 `LAMMPS`；p.13 `VASP`
+- 机器学习训练设置：p.2 `cutoff radius`；p.2 `machine-learning potential`；p.13 `cutoff radius`
+- 泛函与电子结构近似：p.13 `generalized gradient approximation`
+- 平面波截断能：p.14 `energy cutoff of 450 eV`
+- k 点采样：p.14 `Brillouin-zone integration`
+- 分子动力学条件：p.14 `Nosé-Hoover`；p.14 `simulations employ an NVT ensemble, maintained at 300 K`
+- 超胞与模型规模：p.22 `000 atoms (one eighth of the original supercell`
 
 ### Data-Efficient Multifidelity Training for High-Fidelity Machine Learning Interatomic Potentials
 
@@ -1004,3 +1016,25 @@
 ### Benchmarking on-the-Fly Machine Learning Force Fields for Ion Hydration: Structure, Coordination, and Exchange Dynamics across Monovalent and Divalent Cations
 
 - 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Benchmarking machine learning models for predicting lithium ion migration
+
+- 扩散与迁移势垒方法：p.1 `migration barrier`；p.1 `migration pathway`；p.1 `NEB`
+- 机器学习训练设置：p.2 `machine learning interatomic potential`；p.2 `MAE`；p.2 `mean absolute error`
+- 泛函与电子结构近似：p.4 `DFT +U`；p.4 `Hubbard U`；p.4 `PBE`
+- 平面波截断能：p.8 `energy cutoff of 520 eV`
+- 计算软件：p.8 `VASP`；p.8 `Vienna Ab initio Simulation Package`
+
+### Application of pretrained universal machine-learning interatomic potential for physicochemical simulation of liquid electrolytes in Li-ion batteries
+
+- 机器学习训练设置：p.1 `machine-learning interatomic potential`；p.1 `training set`；p.2 `training set`
+- 泛函与电子结构近似：p.3 `scan`；p.5 `PBE`
+- 分子动力学条件：p.3 `NVT`；p.3 `timestep of 0.5 fs`；p.4 `NPT`
+- 计算软件：p.4 `LAMMPS`
+- 扩散与迁移势垒方法：p.8 `MSD`
+
+### Domain oriented universal machine learning potential enables fast exploration of chemical space of battery electrolytes
+
+- 机器学习训练设置：p.1 `machine learning potential`；p.2 `machine learning potential`；p.2 `training dataset`
+- 泛函与电子结构近似：p.3 `PBE`；p.5 `PBE`
+- 分子动力学条件：p.3 `NpT`；p.4 `1 ns MLMD simulation`；p.5 `1 ns MLMD simulation`

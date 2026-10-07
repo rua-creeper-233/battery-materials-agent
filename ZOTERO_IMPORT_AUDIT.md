@@ -1,9 +1,9 @@
 # Zotero 导入审计
 
-- 核验时间：2026-10-07T18:10:41.940660+00:00
-- 目标记录：173
-- Zotero 中核验到的目标 DOI：173
-- 带 PDF 附件的目标记录：119
+- 核验时间：2026-10-07T22:21:51.893305+00:00
+- 目标记录：176
+- Zotero 中核验到的目标 DOI：176
+- 带 PDF 附件的目标记录：122
 - 统一标签：`battery-materials-agent`
 - 写入策略：按 DOI 幂等；已存在条目不重复创建；只附加本地审计通过的主文 PDF。
 
@@ -182,3 +182,6 @@
 - Data-driven electrolyte design for lithium metal anodes — `10.1073/pnas.2214357120` — skipped_existing；已核验，无 PDF
 - Active learning for SNAP interatomic potentials via Bayesian predictive uncertainty — `10.1016/j.commatsci.2024.113074` — skipped_existing；已核验，无 PDF
 - Benchmarking on-the-Fly Machine Learning Force Fields for Ion Hydration: Structure, Coordination, and Exchange Dynamics across Monovalent and Divalent Cations — `10.1021/acs.jpcb.6c02837` — skipped_existing；已核验，无 PDF
+- Benchmarking machine learning models for predicting lithium ion migration — `10.1038/s41524-025-01571-z` — skipped_existing；已核验，有 PDF
+- Application of pretrained universal machine-learning interatomic potential for physicochemical simulation of liquid electrolytes in Li-ion batteries — `10.1039/d5dd00025d` — skipped_existing；已核验，有 PDF
+- Domain oriented universal machine learning potential enables fast exploration of chemical space of battery electrolytes — `10.1038/s41467-025-67982-0` — skipped_existing；已核验，有 PDF

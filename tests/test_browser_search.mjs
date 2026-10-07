@@ -16,6 +16,15 @@ assert.ok(vasp.results.length > 0);
 assert.ok(vasp.results.every(paper => paper.display_tags.includes('VASP')));
 assert.match(vasp.results[0].retrieval.reason, /VASP/);
 assert.equal(agent.search('zzzz-not-a-real-material-token', merged, 5, config).length, 0);
+assert.deepEqual(Array.from(agent.search('DOI: https://doi.org/10.1038/S41524-020-00406-3.', merged, 5, config), p => p.id), ['dunn2020_matbench']);
+assert.equal(agent.search('10.1038/s41524-020-00406-30', merged, 5, config).length, 0);
+assert.match(agent.answer('10.3390/ma17081810', merged, config).answer_markdown, /元数据入口（待核验）/);
+for (const query of ['文献', '开路电压', '聚合物电解质']) {
+  assert.ok(agent.searchDetailed(query, merged, 5, config).query.expanded_terms.length > 0);
+}
+for (const query of ['AI for Science', 'ai FOR science']) {
+  assert.ok(agent.searchDetailed(query, merged, 5, config).query.expanded_terms.includes('ai4science'));
+}
 assert.equal(agent.taskType('VASP 入门如何设置 INCAR？'), 'dft_setup');
 assert.equal(merged.filter(paper => paper.display_tags.includes('MS')).length, 7);
 assert.ok(agent.search('paddlewheel', merged, 5, config).some(p => p.id === 'smith2020_paddlewheel_ms'));

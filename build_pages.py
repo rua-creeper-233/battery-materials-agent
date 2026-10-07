@@ -35,8 +35,10 @@ def main() -> None:
         "AGENT_STATUS_20260920.md",
         "BATTERY_COMPUTATION_FUTURE_DIRECTIONS.md",
         "AI_BATTERY_APPLICATIONS.md",
+        "REPRODUCIBLE_BATTERY_AI_20261008.md",
         "PROJECT_STATUS.md",
         "RELEASE_20261008.md",
+        "RELEASE_20261008_CONTINUATION.md",
     ):
         copy(ROOT / "guides" / guide, DOCS / "guides" / guide)
     copy(papers_path, DOCS / "data" / "papers.json")

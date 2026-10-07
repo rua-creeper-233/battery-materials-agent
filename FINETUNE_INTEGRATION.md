@@ -44,6 +44,12 @@ python finetune/train_qlora.py --model /mnt/e/MSul/models/Qwen2.5-1.5B-Instruct 
 和 `trainer_state.json`，并确认终端退出码为 0。扩展数据集变大后，训练时间会
 增加；不要把训练集 loss 当成独立测试结果。
 
+当前 `finetune/train_qlora.py` 使用 `packing=False`、`padding_free=False`。
+在本机 SDPA/eager attention 配置下，不应直接启用 TRL 的无填充打包：没有
+兼容的分块注意力实现时，样本之间可能互相注意，影响训练目标。不要只为
+加快速度消除这个警告。5 步 smoke 只验证 GPU、反向传播和保存流程，不是
+可部署模型的质量证明；正式训练使用独立目录，不覆盖已有 adapter。
+
 ## 3. 启动本地 PEFT 适配器服务
 
 服务不包含任何密钥，也不对公网监听。它加载基础模型和 LoRA adapter，提供

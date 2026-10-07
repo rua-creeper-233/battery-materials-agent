@@ -8,6 +8,24 @@ import update_project_status as status
 
 
 class ProjectStatusTests(unittest.TestCase):
+    def test_smoke_requires_completed_steps_and_saved_artifacts(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory).resolve()
+            output = root / "finetune/outputs/smoke"
+            output.mkdir(parents=True)
+            (output / "trainer_state.json").write_text('{"global_step":3,"max_steps":5}', encoding="utf-8")
+            with patch.object(status, "ROOT", root), self.assertRaises(ValueError):
+                status.smoke_status(output)
+            (output / "trainer_state.json").write_text('{"global_step":5,"max_steps":5}', encoding="utf-8")
+            for name in ("adapter_config.json", "adapter_model.safetensors"):
+                (output / name).write_bytes(b"fixture")
+            with patch.object(status, "ROOT", root):
+                result = status.smoke_status(output)
+                self.assertEqual(result["global_step"], 5)
+                self.assertFalse(result["scientific_accuracy_evaluated"])
+                with self.assertRaises(ValueError):
+                    status.smoke_status(root.parent / "outside")
+
     def test_curated_counts_and_public_privacy(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory).resolve()

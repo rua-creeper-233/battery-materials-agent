@@ -1,8 +1,8 @@
 # 本地全文与证据索引审计
 
-审计时间：2026-10-07T18:11:37+00:00
+审计时间：2026-10-07T22:19:30+00:00
 
-结论：证据库共 173 篇，DOI/出版社记录已核验 173/173；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 123/173 篇，共 6611 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
+结论：证据库共 176 篇，DOI/出版社记录已核验 176/176；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 128/176 篇，共 6858 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
 
 所有保留文件均通过 PDF 解析、标题匹配、正文/补充材料区分、SHA-256 和重复文件检查。M3GNet 的补充材料单独放在 `literature/supplementary/`，不进入正文索引。
 
@@ -124,13 +124,13 @@
 | 114 | 2025 | Application-oriented design of machine learning paradigms for battery science | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 115 | 2024 | Machine learning interatomic potential: Bridge the gap between small-scale models and realistic device-scale simulations | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 116 | 2025 | Enabling accurate modelling of materials for a solid electrolyte interphase in lithium-ion batteries using effective machine learning interatomic potentials | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
-| 117 | 2025 | A pre-trained deep potential model for sulfide solid electrolytes with broad coverage and high accuracy | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 117 | 2025 | A pre-trained deep potential model for sulfide solid electrolytes with broad coverage and high accuracy | 已下载正文 | 15 | 36 | 1.0 | curated_public_source |
 | 118 | 2024 | Principal component analysis enables the design of deep learning potential precisely capturing LLZO phase transitions | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 119 | 2024 | Probing degradation at solid-state battery interfaces using machine-learning interatomic potential | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 120 | 2024 | Size dependent lithium-ion conductivity of solid electrolytes in machine learning molecular dynamics simulations | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 121 | 2024 | Machine Learning-Assisted Property Prediction of Solid-State Electrolyte | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 122 | 2024 | Computationally Guided Synthesis of Battery Materials | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
-| 123 | 2024 | Scalable Parallel Algorithm for Graph Neural Network Interatomic Potentials in Molecular Dynamics Simulations | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 123 | 2024 | Scalable Parallel Algorithm for Graph Neural Network Interatomic Potentials in Molecular Dynamics Simulations | 已下载正文 | 36 | 54 | 1.0 | curated_public_source |
 | 124 | 2025 | Data-Efficient Multifidelity Training for High-Fidelity Machine Learning Interatomic Potentials | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 125 | 2025 | CHIPS-FF: Evaluating Universal Machine Learning Force Fields for Material Properties | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 126 | 2025 | Assessment and Application of Universal Machine Learning Interatomic Potentials in Solid-State Electrolyte Research | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
@@ -181,6 +181,9 @@
 | 171 | 2023 | Data-driven electrolyte design for lithium metal anodes | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 172 | 2024 | Active learning for SNAP interatomic potentials via Bayesian predictive uncertainty | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 173 | 2026 | Benchmarking on-the-Fly Machine Learning Force Fields for Ion Hydration: Structure, Coordination, and Exchange Dynamics across Monovalent and Divalent Cations | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 174 | 2025 | Benchmarking machine learning models for predicting lithium ion migration | 已下载正文 | 12 | 52 | 1.0 | curated_public_source |
+| 175 | 2025 | Application of pretrained universal machine-learning interatomic potential for physicochemical simulation of liquid electrolytes in Li-ion batteries | 已下载正文 | 14 | 56 | 1.0 | curated_public_source |
+| 176 | 2025 | Domain oriented universal machine learning potential enables fast exploration of chemical space of battery electrolytes | 已下载正文 | 12 | 49 | 1.0 | curated_public_source |
 
 ## 尚未保存的正文
 
@@ -196,13 +199,11 @@
 - Application-oriented design of machine learning paradigms for battery science，DOI `10.1038/s41524-025-01575-9`：本地未保存正文，使用 WOS/DOI 回退。
 - Machine learning interatomic potential: Bridge the gap between small-scale models and realistic device-scale simulations，DOI `10.1016/j.isci.2024.109673`：本地未保存正文，使用 WOS/DOI 回退。
 - Enabling accurate modelling of materials for a solid electrolyte interphase in lithium-ion batteries using effective machine learning interatomic potentials，DOI `10.1039/d5mh01343g`：本地未保存正文，使用 WOS/DOI 回退。
-- A pre-trained deep potential model for sulfide solid electrolytes with broad coverage and high accuracy，DOI `10.1038/s41524-025-01764-6`：本地未保存正文，使用 WOS/DOI 回退。
 - Principal component analysis enables the design of deep learning potential precisely capturing LLZO phase transitions，DOI `10.1038/s41524-024-01240-7`：本地未保存正文，使用 WOS/DOI 回退。
 - Probing degradation at solid-state battery interfaces using machine-learning interatomic potential，DOI `10.1016/j.ensm.2024.103842`：本地未保存正文，使用 WOS/DOI 回退。
 - Size dependent lithium-ion conductivity of solid electrolytes in machine learning molecular dynamics simulations，DOI `10.1016/j.aichem.2024.100051`：本地未保存正文，使用 WOS/DOI 回退。
 - Machine Learning-Assisted Property Prediction of Solid-State Electrolyte，DOI `10.1002/aenm.202304480`：本地未保存正文，使用 WOS/DOI 回退。
 - Computationally Guided Synthesis of Battery Materials，DOI `10.1021/acsenergylett.4c00821`：本地未保存正文，使用 WOS/DOI 回退。
-- Scalable Parallel Algorithm for Graph Neural Network Interatomic Potentials in Molecular Dynamics Simulations，DOI `10.1021/acs.jctc.4c00190`：本地未保存正文，使用 WOS/DOI 回退。
 - Data-Efficient Multifidelity Training for High-Fidelity Machine Learning Interatomic Potentials，DOI `10.1021/jacs.4c14455`：本地未保存正文，使用 WOS/DOI 回退。
 - CHIPS-FF: Evaluating Universal Machine Learning Force Fields for Material Properties，DOI `10.1021/acsmaterialslett.5c00093`：本地未保存正文，使用 WOS/DOI 回退。
 - Assessment and Application of Universal Machine Learning Interatomic Potentials in Solid-State Electrolyte Research，DOI `10.1021/acsmaterialslett.5c00336`：本地未保存正文，使用 WOS/DOI 回退。

@@ -27,6 +27,7 @@ AS_OF = (2026, 10, 8)
 # workflow, data and uncertainty papers are retained because they are directly
 # reusable for battery electrolyte/cathode/interface simulations.
 CANDIDATES = [
+    "10.1038/s41524-025-01571-z", "10.1039/d5dd00025d", "10.1038/s41467-025-67982-0",
     "10.1021/acs.jctc.4c00190", "10.1021/jacs.4c14455", "10.1021/acsmaterialslett.5c00093",
     "10.1021/acsmaterialslett.5c00336", "10.1021/acs.chemmater.6c01051", "10.1557/s43579-026-00928-9",
     "10.1038/s41524-026-02023-y", "10.1039/d4ta06675h", "10.1002/adfm.202313188",
@@ -57,6 +58,41 @@ def enrich_record(record: dict[str, Any]) -> dict[str, Any]:
     """Attach short, publisher-grounded method descriptions; no numeric guesses."""
     record["scope_note"] = "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。"
     detail = {
+        "10.1038/s41524-025-01571-z": {
+            "role": "LiTraj 锂离子迁移势垒与轨迹基准；用于检验模型而非只展示训练误差。",
+            "systems": ["锂离子导体", "晶体迁移路径"],
+            "methods": ["DFT", "NEB", "MLIP", "GNN", "基准评估"],
+            "properties": ["迁移势垒", "迁移路径", "模型泛化"],
+            "summary": "LiTraj 提供势垒与迁移轨迹数据，比较性质预测模型与通用原子势。复现时先区分 BVSE 代理和 DFT 标签，按材料或结构来源留出，不能把同源路径随机划分后的分数当作外推能力。",
+            "source": "https://www.nature.com/articles/s41524-025-01571-z",
+            "resources": [{"label": "作者 LiTraj 数据与代码", "url": "https://github.com/AIRI-Institute/LiTraj"},
+                          {"label": "BVlain", "url": "https://github.com/dembart/BVlain"}],
+        },
+        "10.1039/d5dd00025d": {
+            "online_date": "2025-05-07", "online_date_precision": "day",
+            "role": "在液态电解液中评估 SevenNet-0，并用领域微调纠正密度偏差。",
+            "systems": ["锂离子电池液态电解液", "有机溶剂"],
+            "methods": ["DFT", "VASP", "MLIP", "MD", "SevenNet", "微调"],
+            "properties": ["密度", "溶剂化结构", "离子输运"],
+            "summary": "以液态溶剂与电解液物性检验预训练 SevenNet-0，说明通用势仍可能有领域偏差，需要补充参考数据和微调。建议先复现一个配方、温度和密度对照，再扩展输运；论文的领域修正不是所有电解液通用准确性的保证。",
+            "source": "https://pubs.rsc.org/en/content/articlehtml/2025/dd/d5dd00025d",
+            "resources": [{"label": "作者数据及处理脚本（约39.7GB，按需取用）", "url": "https://zenodo.org/records/15205477"},
+                          {"label": "作者预印本（非期刊最终版）", "url": "https://arxiv.org/abs/2501.05211"},
+                          {"label": "SevenNet 实现", "url": "https://github.com/MDIL-SNU/SevenNet"}],
+        },
+        "10.1038/s41467-025-67982-0": {
+            "year": 2026, "publication_date": "2026", "publication_date_precision": "year",
+            "online_date": "2025-12-31", "online_date_precision": "day",
+            "role": "电解液领域通用势与并发学习，用于扩大化学空间采样和筛选。",
+            "systems": ["锂盐", "液态电解液", "溶剂化结构"],
+            "methods": ["DFT", "CP2K", "MLIP", "MD", "DeePMD", "并发学习"],
+            "properties": ["溶剂化", "输运", "配位动力学"],
+            "summary": "围绕电解液化学空间构建领域原子势，结合并发学习和 MLMD 筛选。复现应从已覆盖的小配方出发，检查模型元素与环境域、参考计算一致性、配位和输运误差，再测试未见配方。DOI 年份不是正式卷年，须区分在线日期与最终引用。",
+            "source": "https://www.nature.com/articles/s41467-025-67982-0",
+            "resources": [{"label": "作者数据与模型存储入口", "url": "https://doi.org/10.12463/AI4EC/QZCYP1"},
+                          {"label": "作者使用的 ai2-kit 工作流", "url": "https://github.com/chenggroup/ai2-kit"},
+                          {"label": "PMC 正文", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12865191/"}],
+        },
         "10.1038/s41524-026-02023-y": {
             "role": "预训练 MACE 采样、少量 DFT 适配与 NEP 蒸馏，研究固态电解质的离子输运。",
             "systems": ["LGPS", "LATP", "Li3YCl6", "固态电解质"],
@@ -191,15 +227,19 @@ def verify(doi: str) -> dict[str, Any] | None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--enrich-existing", action="store_true", help="Normalize/enrich the already verified catalog offline, without Crossref requests")
+    parser.add_argument("--doi", action="append", help="Verify only these DOI values instead of the complete seed list")
+    parser.add_argument("--append", action="store_true", help="Merge verified records into the existing candidate catalog; retain unrelated records on failures")
     args = parser.parse_args()
     if args.enrich_existing:
+        if args.doi or args.append:
+            parser.error("--enrich-existing cannot be combined with network verification options")
         rows = json.loads(OUT.read_text(encoding="utf-8"))
         rows = [enrich_record(row) for row in rows]
         OUT.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"enriched {len(rows)} existing verified records; no network verification repeated")
         return
     rows, failures = [], []
-    for doi in dict.fromkeys(map(norm, CANDIDATES)):
+    for doi in dict.fromkeys(map(norm, args.doi or CANDIDATES)):
         try:
             row = verify(doi)
             if row: rows.append(row)
@@ -207,7 +247,13 @@ def main() -> None:
         except Exception:
             failures.append(doi)
         time.sleep(0.35)
-    OUT.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    output_rows = rows
+    if args.append:
+        previous = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else []
+        by_doi = {norm(row["doi"]): row for row in previous}
+        by_doi.update({norm(row["doi"]): row for row in rows})
+        output_rows = list(by_doi.values())
+    OUT.write_text(json.dumps(output_rows, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"verified new records: {len(rows)}; rejected/unavailable: {len(failures)}")
     print("\n".join(f"- {r['doi']} | {r['title']}" for r in rows))
     if failures: print("rejected:", ", ".join(failures))

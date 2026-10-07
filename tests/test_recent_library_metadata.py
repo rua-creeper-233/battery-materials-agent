@@ -5,6 +5,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 import expand_library as library
+import expand_recent_library as recent
 from expand_recent_library import enrich_record
 
 
@@ -49,6 +50,19 @@ class RecentMetadataTests(unittest.TestCase):
             self.assertEqual(merged[1]["properties"], ["barrier"])
             self.assertEqual(merged[1]["publication_date_precision"], "month")
             self.assertEqual(merged[1]["verification"]["fulltext"], "verified_local_pdf_test")
+
+
+class IncrementalCatalogTests(unittest.TestCase):
+    def test_failed_append_retains_previous_records(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "catalog.json"
+            previous = [{"doi": "10.1234/existing", "id": "stable", "title": "Keep"}]
+            output.write_text(json.dumps(previous), encoding="utf-8")
+            with patch.object(recent, "OUT", output), patch.object(recent, "verify", return_value=None), \
+                 patch.object(recent.time, "sleep"), patch("sys.argv", ["verify", "--append", "--doi", "10.1234/new"]), \
+                 patch("builtins.print"):
+                recent.main()
+            self.assertEqual(json.loads(output.read_text(encoding="utf-8")), previous)
 
 
 if __name__ == "__main__":

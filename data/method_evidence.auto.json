@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-07T18:13:24.129900+00:00",
+  "generated_at": "2026-10-07T22:20:06.272541+00:00",
   "review_status": "auto_extracted_needs_human_review",
   "notice_zh": "自动结果只用于定位原文；用于计算输入、论文或汇报前，必须打开对应 PDF 页人工核对。",
   "rules_version": 1,
-  "fulltext_paper_count": 123,
+  "fulltext_paper_count": 128,
   "fulltext_paper_ids": [
     "aydinol1997_voltage",
     "baktash2020_argyrodite_aimd",
@@ -71,14 +71,17 @@
     "qi2024_lgps_ml_aimd",
     "radova2025_frozen_transfer",
     "recent_10_1021_acs_chemmater_6c01051",
+    "recent_10_1021_acs_jctc_4c00190",
     "recent_10_1038_s41467-025-62824-5",
     "recent_10_1038_s41467-025-63852-x",
     "recent_10_1038_s41467-025-65496-3",
     "recent_10_1038_s41467-025-67663-y",
+    "recent_10_1038_s41467-025-67982-0",
     "recent_10_1038_s41524-024-01222-9",
     "recent_10_1038_s41524-024-01227-4",
     "recent_10_1038_s41524-024-01332-4",
     "recent_10_1038_s41524-024-01451-y",
+    "recent_10_1038_s41524-025-01571-z",
     "recent_10_1038_s41524-025-01615-4",
     "recent_10_1038_s41524-025-01623-4",
     "recent_10_1038_s41524-025-01650-1",
@@ -89,6 +92,7 @@
     "recent_10_1038_s41524-026-02023-y",
     "recent_10_1038_s41586-023-06735-9",
     "recent_10_1038_s41597-020-00602-2",
+    "recent_10_1039_d5dd00025d",
     "sawada2024_nnp_sse",
     "sendek2017_sse_screening",
     "shen2024_pymatgen_defects",
@@ -115,6 +119,7 @@
     "wang2021_vaspkit",
     "wang2023_nasicon_design",
     "wang2023_sodium_design",
+    "wang2025_dpa_sse",
     "ward2016_matminer",
     "wu2023_edl_ms",
     "wu2025_spe_aimd_ms",
@@ -8832,8 +8837,159 @@
       "doi": "10.1038/s41524-025-01764-6",
       "wos_uid": "",
       "review_status": "auto_extracted_needs_human_review",
-      "evidence_count": 0,
-      "evidence": []
+      "evidence_count": 15,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "machine-learning potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "training set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "training set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=2"
+        },
+        {
+          "category": "basis_cutoff",
+          "label_zh": "平面波截断能",
+          "page": 4,
+          "section": "body",
+          "signal": "cutoff energy was set to 600 eV",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "PAW",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "PBESol",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=4"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "Arrhenius relation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=4"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "mean square displacement",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=4"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 4,
+          "section": "body",
+          "signal": "MSD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=4"
+        },
+        {
+          "category": "k_points",
+          "label_zh": "k 点采样",
+          "page": 4,
+          "section": "body",
+          "signal": "Brillouin zone sampling",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=4"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 4,
+          "section": "body",
+          "signal": "NPT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=4"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 4,
+          "section": "body",
+          "signal": "simulations conducted over a temperature range of 0 to 1200 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 6,
+          "section": "body",
+          "signal": "PBESol",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=6"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 9,
+          "section": "body",
+          "signal": "supercell consisting of 1350 atoms",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=9"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 9,
+          "section": "body",
+          "signal": "900 K NVT simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/wang2025_dpa_sse.pdf#page=9"
+        }
+      ]
     },
     "you2024_llzo_pca_deepmd": {
       "title": "Principal component analysis enables the design of deep learning potential precisely capturing LLZO phase transitions",
@@ -8880,8 +9036,129 @@
       "doi": "10.1021/acs.jctc.4c00190",
       "wos_uid": "",
       "review_status": "auto_extracted_needs_human_review",
-      "evidence_count": 0,
-      "evidence": []
+      "evidence_count": 12,
+      "evidence": [
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 1,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "cutoff radius",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "machine-learning potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=2"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 12,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=12"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 13,
+          "section": "body",
+          "signal": "generalized gradient approximation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=13"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 13,
+          "section": "body",
+          "signal": "cutoff radius",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=13"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 13,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=13"
+        },
+        {
+          "category": "basis_cutoff",
+          "label_zh": "平面波截断能",
+          "page": 14,
+          "section": "body",
+          "signal": "energy cutoff of 450 eV",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=14"
+        },
+        {
+          "category": "k_points",
+          "label_zh": "k 点采样",
+          "page": 14,
+          "section": "body",
+          "signal": "Brillouin-zone integration",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=14"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 14,
+          "section": "body",
+          "signal": "Nosé-Hoover",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=14"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 14,
+          "section": "body",
+          "signal": "simulations employ an NVT ensemble, maintained at 300 K",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=14"
+        },
+        {
+          "category": "cell_model",
+          "label_zh": "超胞与模型规模",
+          "page": 22,
+          "section": "body",
+          "signal": "000 atoms (one eighth of the original supercell",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1021_acs_jctc_4c00190.pdf#page=22"
+        }
+      ]
     },
     "recent_10_1021_jacs_4c14455": {
       "title": "Data-Efficient Multifidelity Training for High-Fidelity Machine Learning Interatomic Potentials",
@@ -11250,6 +11527,333 @@
       "review_status": "auto_extracted_needs_human_review",
       "evidence_count": 0,
       "evidence": []
+    },
+    "recent_10_1038_s41524-025-01571-z": {
+      "title": "Benchmarking machine learning models for predicting lithium ion migration",
+      "doi": "10.1038/s41524-025-01571-z",
+      "wos_uid": "",
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 12,
+      "evidence": [
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 1,
+          "section": "body",
+          "signal": "migration barrier",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=1"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 1,
+          "section": "body",
+          "signal": "migration pathway",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=1"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 1,
+          "section": "body",
+          "signal": "NEB",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "machine learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "MAE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "mean absolute error",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=2"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "DFT +U",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "Hubbard U",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 4,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=4"
+        },
+        {
+          "category": "basis_cutoff",
+          "label_zh": "平面波截断能",
+          "page": 8,
+          "section": "body",
+          "signal": "energy cutoff of 520 eV",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=8"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 8,
+          "section": "body",
+          "signal": "VASP",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=8"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 8,
+          "section": "body",
+          "signal": "Vienna Ab initio Simulation Package",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41524-025-01571-z.pdf#page=8"
+        }
+      ]
+    },
+    "recent_10_1039_d5dd00025d": {
+      "title": "Application of pretrained universal machine-learning interatomic potential for physicochemical simulation of liquid electrolytes in Li-ion batteries",
+      "doi": "10.1039/d5dd00025d",
+      "wos_uid": "",
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 10,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "machine-learning interatomic potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1039_d5dd00025d.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "training set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1039_d5dd00025d.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "training set",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1039_d5dd00025d.pdf#page=2"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 3,
+          "section": "body",
+          "signal": "scan",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1039_d5dd00025d.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "NVT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1039_d5dd00025d.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "timestep of 0.5 fs",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1039_d5dd00025d.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 4,
+          "section": "body",
+          "signal": "NPT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1039_d5dd00025d.pdf#page=4"
+        },
+        {
+          "category": "software",
+          "label_zh": "计算软件",
+          "page": 4,
+          "section": "body",
+          "signal": "LAMMPS",
+          "confidence": "high",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1039_d5dd00025d.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 5,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1039_d5dd00025d.pdf#page=5"
+        },
+        {
+          "category": "ion_transport",
+          "label_zh": "扩散与迁移势垒方法",
+          "page": 8,
+          "section": "body",
+          "signal": "MSD",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1039_d5dd00025d.pdf#page=8"
+        }
+      ]
+    },
+    "recent_10_1038_s41467-025-67982-0": {
+      "title": "Domain oriented universal machine learning potential enables fast exploration of chemical space of battery electrolytes",
+      "doi": "10.1038/s41467-025-67982-0",
+      "wos_uid": "",
+      "review_status": "auto_extracted_needs_human_review",
+      "evidence_count": 8,
+      "evidence": [
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 1,
+          "section": "body",
+          "signal": "machine learning potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41467-025-67982-0.pdf#page=1"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "machine learning potential",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41467-025-67982-0.pdf#page=2"
+        },
+        {
+          "category": "ml_training",
+          "label_zh": "机器学习训练设置",
+          "page": 2,
+          "section": "body",
+          "signal": "training dataset",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41467-025-67982-0.pdf#page=2"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 3,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41467-025-67982-0.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 3,
+          "section": "body",
+          "signal": "NpT",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41467-025-67982-0.pdf#page=3"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 4,
+          "section": "body",
+          "signal": "1 ns MLMD simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41467-025-67982-0.pdf#page=4"
+        },
+        {
+          "category": "electronic_structure",
+          "label_zh": "泛函与电子结构近似",
+          "page": 5,
+          "section": "body",
+          "signal": "PBE",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41467-025-67982-0.pdf#page=5"
+        },
+        {
+          "category": "molecular_dynamics",
+          "label_zh": "分子动力学条件",
+          "page": 5,
+          "section": "body",
+          "signal": "1 ns MLMD simulation",
+          "confidence": "medium",
+          "review_status": "auto_extracted_needs_human_review",
+          "local_pdf_url": "/local-pdf/recent_10_1038_s41467-025-67982-0.pdf#page=5"
+        }
+      ]
     }
   }
 }

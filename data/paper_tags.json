@@ -11,14 +11,14 @@
     "观点": "Perspective/Opinion 类观点文章；不等同于系统综述"
   },
   "counts": {
-    "DFT": 78,
-    "MD": 64,
+    "DFT": 81,
+    "MD": 65,
     "MS": 7,
-    "VASP": 24,
+    "VASP": 25,
     "方法论文": 58,
     "综述": 20,
     "观点": 5,
-    "进展论文": 115
+    "进展论文": 118
   },
   "papers": {
     "tan2026_pemd": {
@@ -309,8 +309,8 @@
       ],
       "tag_basis": {
         "DFT": [
-          "ab initio",
           "Ab initio",
+          "ab initio",
           "DFT"
         ]
       },
@@ -2730,6 +2730,64 @@
         "进展论文"
       ],
       "tag_basis": {},
+      "tag_policy": "curated_metadata_v1"
+    },
+    "recent_10_1038_s41524-025-01571-z": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "recent_10_1039_d5dd00025d": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "VASP"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "VASP"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "VASP": [
+          "VASP"
+        ]
+      },
+      "tag_policy": "curated_metadata_v1"
+    },
+    "recent_10_1038_s41467-025-67982-0": {
+      "paper_kind": "进展论文",
+      "method_tags": [
+        "DFT",
+        "MD"
+      ],
+      "display_tags": [
+        "进展论文",
+        "DFT",
+        "MD"
+      ],
+      "tag_basis": {
+        "DFT": [
+          "DFT"
+        ],
+        "MD": [
+          "MLMD"
+        ]
+      },
       "tag_policy": "curated_metadata_v1"
     }
   }

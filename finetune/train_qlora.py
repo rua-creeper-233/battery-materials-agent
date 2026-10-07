@@ -124,7 +124,11 @@ def build_training_args(output_dir: str, max_steps: int):
         "fp16": precision == "fp16",
         "bf16": precision == "bf16",
         "optim": "paged_adamw_8bit",
-        "packing": True,
+        # SDPA/eager attention is used on the small local GPU. Do not flatten
+        # separate examples without a compatible block-aware Flash Attention
+        # implementation: TRL otherwise warns about cross-example attention.
+        "packing": False,
+        "padding_free": False,
         "logging_steps": 5,
         "eval_steps": 50,
         "save_strategy": "steps",

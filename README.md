@@ -7,9 +7,9 @@
 ## 当前状态
 
 <!-- CURRENT_STATUS_START -->
-统计日期 **2026-10-08**：**173 篇唯一 DOI**；本机已有校验正文 **123 篇**、页码文本块 **6611 个**；WOS UT **16 条**。
+统计日期 **2026-10-08**：**176 篇唯一 DOI**；本机已有校验正文 **128 篇**、页码文本块 **6858 个**；WOS UT **16 条**。
 
-QLoRA 数据：**759 训练 / 121 验证 / 98 测试**。新增数据尚未重新训练；数量与哈希详见 [当前状态](guides/PROJECT_STATUS.md)。
+QLoRA 数据：**793 训练 / 78 验证 / 127 测试**。已通过 5 步 GPU 流程验证，未做正式训练或准确率评估；数量与哈希详见 [当前状态](guides/PROJECT_STATUS.md)。
 <!-- CURRENT_STATUS_END -->
 
 旧日期版记录是历史快照；最新统计以 [PROJECT_STATUS.md](guides/PROJECT_STATUS.md)、数据文件和审计结果为准。
@@ -20,6 +20,7 @@ QLoRA 数据：**759 训练 / 121 验证 / 98 测试**。新增数据尚未重�
 |---|---|
 | [AI 应用页面](https://rua-creeper-233.github.io/battery-materials-agent/ai-battery-applications.html) | 固态扩散、电解液/聚合物筛选、反应性 SEI、正极筛选、界面与多尺度、科研证据助手 |
 | [AI 实施指南](guides/AI_BATTERY_APPLICATIONS.md) | 数据、模型、计算、验证和软硬件实现路径 |
+| [数据驱动复现路线](guides/REPRODUCIBLE_BATTERY_AI_20261008.md) | LiTraj、SevenNet 液态电解液、领域通用势的小规模起步与验收 |
 | [未来方向](guides/BATTERY_COMPUTATION_FUTURE_DIRECTIONS.md) | 近期综述与方法论文支持的研究问题、最小验证和适用边界 |
 | 首页学习区 | MS、VASP、DFT、MD 的入门教程、步骤和练习 |
 | [模型与 Agent 接入](FINETUNE_INTEGRATION.md) | RTX 3060 6GB、WSL、QLoRA 数据、适配器服务与 RAG 配置 |

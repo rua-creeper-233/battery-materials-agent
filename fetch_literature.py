@@ -42,6 +42,28 @@ USER_AGENT = (
 # unless the article's open licence is clear and the PDF is independently
 # checked against the target title.
 PUBLIC_PDF_OVERRIDES: dict[str, list[str]] = {
+    "recent_10_1038_s41524-025-01571-z": [
+        "https://www.nature.com/articles/s41524-025-01571-z.pdf",
+    ],
+    "recent_10_1039_d5dd00025d": [
+        "https://arxiv.org/pdf/2501.05211",
+        "https://pubs.rsc.org/en/content/articlepdf/2025/dd/d5dd00025d",
+    ],
+    "recent_10_1038_s41467-025-67982-0": [
+        "https://www.nature.com/articles/s41467-025-67982-0.pdf",
+    ],
+    "you2024_llzo_pca_deepmd": [
+        "https://d-nb.info/1330132440/34",
+    ],
+    "recent_10_1021_acs_jctc_4c00190": [
+        "https://arxiv.org/pdf/2402.03789",
+    ],
+    "wang2025_dpa_sse": [
+        "https://arxiv.org/pdf/2406.18263",
+    ],
+    "li2025_sei_effective_mlips": [
+        "https://pubs.rsc.org/en/content/articlepdf/2025/mh/d5mh01343g",
+    ],
     "recent_10_1021_acs_chemmater_6c01051": [
         "https://carepapers.s3-ap-southeast-1.amazonaws.com/2026/2026-09-11-phuthi-chem-mater-2026.pdf",
     ],

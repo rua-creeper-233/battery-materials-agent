@@ -84,7 +84,8 @@ class ServerSecurityTests(unittest.TestCase):
         thread.start()
         try:
             port = httpd.server_address[1]
-            for name in ("AGENT_IMPLEMENTATION_GUIDE.md", "BATTERY_RESEARCH_ROADMAP_20260918.md"):
+            for name in ("AGENT_IMPLEMENTATION_GUIDE.md", "BATTERY_RESEARCH_ROADMAP_20260918.md",
+                         "AI_BATTERY_APPLICATIONS.md", "REPRODUCIBLE_BATTERY_AI_20261008.md", "PROJECT_STATUS.md"):
                 with urlopen(f"http://127.0.0.1:{port}/guides/{name}", timeout=5) as response:
                     self.assertEqual(response.status, 200)
                     self.assertGreater(len(response.read()), 100)
