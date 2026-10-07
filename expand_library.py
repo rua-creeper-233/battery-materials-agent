@@ -7,16 +7,24 @@ WOS/full-text verified.  Running it is deterministic and DOI-idempotent.
 from __future__ import annotations
 
 import json
+import html
+import re
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 PAPERS = ROOT / "data" / "papers.json"
 CATALOG = ROOT / "data" / "paper_expansion_20260920.json"
+RECENT_CATALOG = ROOT / "data" / "paper_expansion_20261008.json"
 
 
 def normalize_doi(value: str) -> str:
     return str(value or "").strip().lower().removeprefix("https://doi.org/").removeprefix("doi:").rstrip(".,;)")
+
+def clean_title(value: str) -> str:
+    value = html.unescape(re.sub(r"<[^>]+>", "", str(value or "")))
+    value = re.sub(r"\s+", " ", value).strip()
+    return value.replace("Li 6 PS 5 Cl", "Li6PS5Cl")
 
 
 def build_record(row: dict[str, Any]) -> dict[str, Any]:
@@ -32,9 +40,9 @@ def build_record(row: dict[str, Any]) -> dict[str, Any]:
         methods.append("molecular dynamics")
     if "MD" in tags and "molecular dynamics" not in methods:
         methods.append("molecular dynamics")
-    return {
+    record = {
         "id": row["id"],
-        "title": row["title"],
+        "title": clean_title(row["title"]),
         "authors": row.get("authors", ["待补充"]),
         "year": int(row["year"]),
         "journal": row.get("journal", ""),
@@ -75,21 +83,48 @@ def build_record(row: dict[str, Any]) -> dict[str, Any]:
             "sources": [f"https://doi.org/{doi}"],
         },
     }
+    # Preserve structured, DOI-verified fields emitted by the recent catalog.
+    for key in ("role", "systems", "methods", "properties", "tags_zh", "summary", "scope_note",
+                "publication_date", "publication_date_precision", "online_date", "online_date_precision",
+                "verification", "resources", "evidence", "document_type"):
+        if key in row:
+            record[key] = row[key]
+    return record
 
 
 def main() -> None:
     papers: list[dict[str, Any]] = json.loads(PAPERS.read_text(encoding="utf-8"))
     additions: list[dict[str, Any]] = json.loads(CATALOG.read_text(encoding="utf-8"))
+    if RECENT_CATALOG.exists():
+        additions.extend(json.loads(RECENT_CATALOG.read_text(encoding="utf-8")))
     seen = {normalize_doi(paper.get("doi", "")) for paper in papers}
     added: list[dict[str, Any]] = []
     for row in additions:
         doi = normalize_doi(row.get("doi", ""))
-        if not doi or doi in seen:
+        if not doi:
+            continue
+        if doi in seen:
+            # Refresh only records owned by this expansion; never overwrite
+            # older hand-curated records that happen to share a DOI.
+            for index, current in enumerate(papers):
+                if (normalize_doi(current.get("doi", "")) == doi
+                        and row.get("collection") == "recent_verified_20261008"
+                        and current.get("collection") == "recent_verified_20261008"
+                        and current.get("id", "").startswith("recent_")):
+                    refreshed = build_record(row)
+                    refreshed["id"] = current["id"]
+                    refreshed["wos_uid"] = current.get("wos_uid", "")
+                    old_verification = current.get("verification", {})
+                    refreshed["verification"]["fulltext"] = old_verification.get("fulltext", refreshed["verification"].get("fulltext", "not_downloaded"))
+                    papers[index] = refreshed
             continue
         record = build_record(row)
         papers.append(record)
         seen.add(doi)
         added.append(record)
+    for paper in papers:
+        if paper.get("collection") == "recent_verified_20261008":
+            paper["title"] = clean_title(paper.get("title", ""))
     if len({normalize_doi(paper.get("doi", "")) for paper in papers}) != len(papers):
         raise SystemExit("duplicate DOI after merge")
     PAPERS.write_text(json.dumps(papers, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

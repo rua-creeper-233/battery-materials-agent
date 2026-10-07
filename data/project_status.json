@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-08",
+  "papers": 173,
+  "recent_2023_onward": 89,
+  "publication_years": {
+    "1976": 1,
+    "1989": 1,
+    "1993": 1,
+    "1994": 2,
+    "1996": 2,
+    "1997": 2,
+    "1998": 2,
+    "1999": 1,
+    "2000": 2,
+    "2001": 1,
+    "2003": 1,
+    "2004": 1,
+    "2006": 2,
+    "2007": 1,
+    "2010": 4,
+    "2011": 2,
+    "2012": 2,
+    "2013": 4,
+    "2014": 2,
+    "2015": 3,
+    "2016": 3,
+    "2017": 6,
+    "2018": 8,
+    "2019": 6,
+    "2020": 11,
+    "2021": 6,
+    "2022": 7,
+    "2023": 8,
+    "2024": 21,
+    "2025": 42,
+    "2026": 18
+  },
+  "publication_types": {
+    "Article": 42,
+    "Commentary": 1,
+    "Letter": 1,
+    "Mini Review": 1,
+    "Paper": 91,
+    "Perspective": 5,
+    "Protocol": 1,
+    "Review": 17,
+    "Review Article": 2,
+    "Software Article": 11,
+    "Viewpoint": 1
+  },
+  "wos_records": 16,
+  "local_fulltext_papers": 123,
+  "local_fulltext_missing": 50,
+  "indexed_papers": 123,
+  "indexed_chunks": 6611,
+  "tags": {
+    "DFT": 78,
+    "MD": 64,
+    "MS": 7,
+    "VASP": 24,
+    "方法论文": 58,
+    "综述": 20,
+    "观点": 5,
+    "进展论文": 115
+  },
+  "datasets": {
+    "train": {
+      "rows": 759,
+      "exists": true,
+      "sha256": "6ab4726dda7e8f1f2d103b8b2a5b7462a48494488f2b9f005f89cced6b38f93e",
+      "categories": {
+        "comparison": 66,
+        "evidence_insufficient": 134,
+        "factual": 204,
+        "limitation": 134,
+        "source_access": 87,
+        "workflow": 134
+      }
+    },
+    "validation": {
+      "rows": 121,
+      "exists": true,
+      "sha256": "0140be3be8f4895ca85fd5deb82619dd5c7650d424485b3b5405758c706c9044",
+      "categories": {
+        "comparison": 11,
+        "evidence_insufficient": 22,
+        "factual": 28,
+        "limitation": 22,
+        "source_access": 16,
+        "workflow": 22
+      }
+    },
+    "test": {
+      "rows": 98,
+      "exists": true,
+      "sha256": "c055daf3860da04c370c0177bb01a77b343ab767927b3d9fda3fb66d4063a94f",
+      "categories": {
+        "comparison": 8,
+        "evidence_insufficient": 17,
+        "factual": 24,
+        "limitation": 17,
+        "source_access": 15,
+        "workflow": 17
+      }
+    }
+  },
+  "dataset_rows": 978,
+  "model_status": "New datasets prepared; no model retraining performed for this release.",
+  "scope": "Counts refer to curated catalog and local evidence library; public site contains metadata, not PDFs or private Zotero keys."
+}

@@ -2,6 +2,8 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .venv/
+.venv-lora/
+finetune/outputs/
 .env
 downloads/
 papers/
@@ -12,6 +14,8 @@ papers/
 zotero.sqlite*
 data/fulltext_chunks.jsonl
 literature/text/
+literature/pdfs/
+literature/manifest.json
 private/
 # Local model checkpoints and exported weights must stay on the user's computer.
 training/checkpoints/

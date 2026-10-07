@@ -1,5 +1,7 @@
 # 本地问答小模型数据集
 
+更新：2026-10-08。新增论文使用 `expand_dataset.py` 生成三路数据；计数、来源、哈希见 `expanded_manifest.json`、`../finetune/data/manifest.json` 和 [项目状态](../guides/PROJECT_STATUS.md)。旧二路数据保留为历史回归材料，不混入新版训练或测试。
+
 这里是给个人电脑使用的、可审阅的电池材料计算问答数据层。它不是把论文全文塞进模型：生成器只读取 `data/papers.json`、`data/answer_guidance.json`、`data/answer_regression.json` 和 `data/search_training.json` 的结构化字段，不读取 PDF 或 `fulltext_chunks.jsonl`，因此不会把受版权保护的正文复制进训练集。
 
 ## 生成与检查
@@ -7,11 +9,11 @@
 在仓库根目录运行：
 
 ```powershell
-python training/generate_dataset.py
-python -c "import json, pathlib; [json.loads(x) for p in pathlib.Path('training').glob('*.jsonl') for x in p.read_text(encoding='utf-8').splitlines() if x.strip()]; print('JSONL OK')"
+python training/expand_dataset.py
+python training/validate_dataset.py --train finetune/data/train.jsonl --eval finetune/data/validation.jsonl --test finetune/data/test.jsonl
 ```
 
-脚本是幂等的，使用来源论文分组的 SHA-256 做固定切分：同一篇论文的所有样本只会进入训练或评估一侧，避免“同论文不同问题”的泄漏；多论文工具题按共享论文组成连通分组，没有论文来源的通用工具题按自身 ID 稳定切分。当前生成 285 条样本，其中训练 238 条、盲评 47 条。每条记录都有 `messages`、`provenance`、来源论文 ID、DOI/URL（若有）、任务类别、难度、是否要求引用和 `split`。要求引用的样本会把短的结构化证据包放入用户消息，并在回答中使用 `[P1]` 等来源编号；`eval.jsonl` 是保留的盲评集合，不应拿来训练。`manifest.json` 记录数量和来源。
+脚本按规范化 DOI/来源论文组成连通分组，用 SHA-256 确定训练、验证、测试归属，目标约 80/10/10；整组分配使实际比例浮动。同一篇论文及其比较题不会跨分组。样本含 `messages`、`provenance`、DOI/URL、任务类别、引用要求和 `split`。引用题含结构化证据包和 `[P1]` 编号。验证器检查来源、DOI、重复答案和引用映射。输出为 `expanded_train.jsonl`、`expanded_eval.jsonl`、`expanded_test.jsonl`，同步到 `finetune/data/`。
 
 四类训练文件分别是：事实问答 `qa_factual.jsonl`、复现/工作流 `qa_workflow.jsonl`、证据不足时的拒答与边界判断 `qa_refusal.jsonl`、检索—核验工具轨迹 `tool_traces.jsonl`。回答内容只来自结构化字段；没有页码时不会虚构页码。
 
@@ -23,7 +25,7 @@ python -c "import json, pathlib; [json.loads(x) for p in pathlib.Path('training'
 
 ## 最小评估清单
 
-1. 只用训练文件拟合，`eval.jsonl` 完全隔离。
+1. 只用 `finetune/data/train.jsonl` 拟合，验证集用于开发选择；测试集留到方案固定后评估。
 2. 检查 DOI 是否被正确引用、未知问题是否拒答、DFT/MD/力场边界是否保持。
 3. 记录 exact match/关键词命中、引用准确率、拒答准确率和人工抽样结果；不能只看训练 loss。
 4. 对每次数据或提示词改动保存 manifest、模型版本、评估结果和错误样例。

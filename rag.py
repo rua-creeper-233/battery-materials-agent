@@ -59,6 +59,7 @@ class OpenAICompatibleChatProvider:
     model: str
     api_key: str = ""
     timeout: float = 60.0
+    max_tokens: int = 256
     name: str = "openai-compatible-chat"
 
     def __post_init__(self) -> None:
@@ -77,6 +78,7 @@ class OpenAICompatibleChatProvider:
                     {"role": "user", "content": user},
                 ],
                 "temperature": 0.1,
+                "max_tokens": self.max_tokens,
             },
             ensure_ascii=False,
         ).encode("utf-8")
@@ -113,13 +115,24 @@ class EvidenceRAG:
         if not endpoint or not model:
             return cls()
         timeout = float(os.environ.get("BATTERY_AGENT_LLM_TIMEOUT", "60") or 60)
+        raw_budget = os.environ.get("BATTERY_AGENT_LLM_MAX_EVIDENCE_CHARS", "30000")
+        try:
+            evidence_budget = int(raw_budget)
+        except ValueError:
+            evidence_budget = 30_000
+        raw_max_tokens = os.environ.get("BATTERY_AGENT_LLM_MAX_TOKENS", "256")
+        try:
+            max_tokens = int(raw_max_tokens)
+        except ValueError:
+            max_tokens = 256
         provider = OpenAICompatibleChatProvider(
             endpoint=endpoint,
             model=model,
             api_key=os.environ.get("BATTERY_AGENT_LLM_API_KEY", "").strip(),
             timeout=max(5.0, min(timeout, 180.0)),
+            max_tokens=max(32, min(max_tokens, 1024)),
         )
-        return cls(provider)
+        return cls(provider, max_evidence_chars=evidence_budget)
 
     def status(self) -> dict[str, Any]:
         return {

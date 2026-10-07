@@ -62,6 +62,7 @@ def main() -> int:
         if not path or not path.is_file():
             entry.pop("local_pdf", None)
             entry["status"] = "not_downloaded"
+            paper.setdefault("verification", {})["fulltext"] = "not_downloaded"
             continue
         validation = validate_pdf(path, paper["title"])
         if not validation.get("valid_pdf"):
@@ -79,6 +80,7 @@ def main() -> int:
                 "audited_at": utc_now(),
             }
         )
+        paper.setdefault("verification", {})["fulltext"] = "verified_local_pdf_" + utc_now()[:10]
 
     duplicates = {key: value for key, value in duplicate_hashes.items() if len(value) > 1}
     if duplicates:
@@ -91,7 +93,7 @@ def main() -> int:
         "doi_verified": verified_dois,
         "wos_uid_verified": len(seen_uids),
         "downloaded_main_texts": sum(
-            entry.get("status") == "downloaded" for entry in entries.values()
+            entries[paper["id"]].get("status") == "downloaded" for paper in papers
         ),
         "duplicate_pdf_hashes": 0,
         "checks": [
@@ -106,6 +108,7 @@ def main() -> int:
     }
     manifest["updated_at"] = utc_now()
     save_json(MANIFEST_PATH, manifest)
+    save_json(PAPERS_PATH, papers)
 
     rows: list[str] = []
     for index, paper in enumerate(papers, 1):

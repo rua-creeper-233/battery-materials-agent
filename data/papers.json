@@ -88,7 +88,8 @@
       "sources": [
         "https://pubs.rsc.org/en/content/articlelanding/2026/dd/d5dd00454c",
         "https://github.com/HouGroup/PEMD"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -166,7 +167,8 @@
       "sources": [
         "https://www.sciencedirect.com/science/article/pii/S2590238526002857",
         "https://arxiv.org/abs/2602.17595"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -243,7 +245,8 @@
       "sources": [
         "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.76563",
         "https://pubmed.ncbi.nlm.nih.gov/42439417/"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -324,11 +327,12 @@
       }
     ],
     "verification": {
-      "doi": "verified_publisher_2026-09-18",
-      "publisher": "verified_2026-09-18",
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
       "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
-        "https://www.nature.com/articles/s41524-025-01911-z"
+        "https://doi.org/10.1038/s41524-025-01911-z"
       ]
     }
   },
@@ -398,7 +402,8 @@
       "wos": "not_checked",
       "sources": [
         "https://www.nature.com/articles/s41524-025-01602-9"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -456,7 +461,8 @@
       "sources": [
         "https://www.nature.com/articles/s41586-018-0337-2",
         "https://pubmed.ncbi.nlm.nih.gov/30046072/"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -522,7 +528,8 @@
       "wos": "not_checked",
       "sources": [
         "https://www.nature.com/articles/s41524-026-02271-y"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     },
     "resources": [
       {
@@ -599,7 +606,8 @@
       "wos": "not_checked",
       "sources": [
         "https://www.nature.com/articles/s41467-019-10663-6"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -670,7 +678,8 @@
       "wos": "not_checked",
       "sources": [
         "https://www.nature.com/articles/s41467-022-30994-1"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -730,7 +739,8 @@
       "wos": "not_checked",
       "sources": [
         "https://www.nature.com/articles/s41467-023-43436-3"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -782,7 +792,8 @@
       "wos": "not_checked",
       "sources": [
         "https://terpconnect.umd.edu/~yfmo/He_Mo-SIC-ncomms15893.pdf"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -839,7 +850,8 @@
       "wos": "not_checked",
       "sources": [
         "https://www.nature.com/articles/s41467-020-15245-5"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -900,7 +912,8 @@
       "wos": "not_checked",
       "sources": [
         "https://www.nature.com/articles/s41467-023-40669-0"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -976,7 +989,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1048,7 +1062,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1121,7 +1136,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1192,7 +1208,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1270,7 +1287,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1345,7 +1363,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1419,7 +1438,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1493,7 +1513,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1564,7 +1585,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1636,7 +1658,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1709,7 +1732,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1783,7 +1807,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1851,7 +1876,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1922,7 +1948,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -1995,7 +2022,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -2076,7 +2104,8 @@
     "verification": {
       "publisher": "verified",
       "doi": "verified",
-      "wos": "verified_institution_session_2026-09-13"
+      "wos": "verified_institution_session_2026-09-13",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -2167,7 +2196,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "not_downloaded"
     }
   },
   {
@@ -2252,7 +2282,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -2340,7 +2371,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -2454,7 +2486,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -2595,7 +2628,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -2683,7 +2717,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -2765,7 +2800,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -2849,7 +2885,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -2932,7 +2969,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -3043,9 +3081,13 @@
       }
     ],
     "verification": {
-      "publisher": "verified_2026-09-13",
-      "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1016/j.cossms.2025.101214"
+      ]
     }
   },
   {
@@ -3126,7 +3168,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -3209,7 +3252,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -3293,7 +3337,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -3380,7 +3425,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -3469,7 +3515,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -3553,7 +3600,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -3639,7 +3687,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -3733,7 +3782,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -3815,7 +3865,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -3902,7 +3953,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -3980,7 +4032,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -4063,7 +4116,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -4148,7 +4202,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -4228,7 +4283,8 @@
     "verification": {
       "publisher": "verified_2026-09-13",
       "doi": "verified_crossref_2026-09-13",
-      "wos": "not_checked"
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -4388,7 +4444,8 @@
       "sources": [
         "https://api.crossref.org/works/10.1063/5.0297006",
         "https://doi.org/10.1063/5.0297006"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -4463,7 +4520,8 @@
       "sources": [
         "https://api.crossref.org/works/10.1038/s41524-025-01727-x",
         "https://doi.org/10.1038/s41524-025-01727-x"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -4541,7 +4599,8 @@
       "sources": [
         "https://api.crossref.org/works/10.1038/s41524-025-01572-y",
         "https://doi.org/10.1038/s41524-025-01572-y"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -4610,7 +4669,8 @@
       "sources": [
         "https://pubs.acs.org/doi/10.1021/jacs.2c11807",
         "https://doi.org/10.1021/jacs.2c11807"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -4677,7 +4737,8 @@
       "sources": [
         "https://pubmed.ncbi.nlm.nih.gov/37982685/",
         "https://pubs.acs.org/doi/full/10.1021/acs.nanolett.3c01682"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -4740,7 +4801,8 @@
       "sources": [
         "https://openalex.org/W4402243354",
         "https://www.rsc.org/suppdata/d4/cc/d4cc03688c/d4cc03688c1.pdf"
-      ]
+      ],
+      "fulltext": "not_downloaded"
     }
   },
   {
@@ -4806,7 +4868,8 @@
       "sources": [
         "https://pubs.acs.org/doi/full/10.1021/acsapm.4c03883",
         "https://uu.diva-portal.org/smash/get/diva2%3A1959874/FULLTEXT01.pdf"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -4875,7 +4938,8 @@
       "sources": [
         "https://pubs.rsc.org/en/content/articlehtml/2025/ee/d5ee01030f",
         "https://pure.psu.edu/en/publications/simulating-solid-electrolyte-interphase-formation-spanning-10sup8/"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -4945,7 +5009,8 @@
       "sources": [
         "https://www.nature.com/articles/s41467-025-66197-7",
         "https://www.nature.com/articles/s41467-025-66197-7_reference.pdf"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -5012,7 +5077,8 @@
       "sources": [
         "https://pubmed.ncbi.nlm.nih.gov/32414258/",
         "https://doi.org/10.1063/5.0003333"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -5078,7 +5144,8 @@
       "sources": [
         "https://www.nature.com/articles/s41524-018-0064-0",
         "https://doi.org/10.1038/s41524-018-0064-0"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -5141,7 +5208,8 @@
       "sources": [
         "https://www.frontiersin.org/journals/chemistry/articles/10.3389/fchem.2020.634379/full",
         "https://doi.org/10.3389/fchem.2020.634379"
-      ]
+      ],
+      "fulltext": "verified_local_pdf_2026-10-07"
     }
   },
   {
@@ -5207,7 +5275,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevb.47.558"
       ]
@@ -5269,7 +5337,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevb.49.14251"
       ]
@@ -5336,7 +5404,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1016/0927-0256(96)00008-0"
       ]
@@ -5405,7 +5473,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevb.50.17953"
       ]
@@ -5474,7 +5542,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevb.59.1758"
       ]
@@ -5543,7 +5611,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevlett.77.3865"
       ]
@@ -5612,7 +5680,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/PhysRevB.57.1505"
       ]
@@ -5680,7 +5748,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1063/1.1564060"
       ]
@@ -5750,7 +5818,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1063/1.3382344"
       ]
@@ -5818,7 +5886,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevb.13.5188"
       ]
@@ -5886,7 +5954,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevb.40.3616"
       ]
@@ -5955,7 +6023,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1063/1.1323224"
       ]
@@ -6026,7 +6094,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1016/j.commatsci.2005.04.010"
       ]
@@ -6086,7 +6154,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevb.56.12847"
       ]
@@ -6155,7 +6223,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevlett.98.146401"
       ]
@@ -6221,7 +6289,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1063/1.3553717"
       ]
@@ -6291,7 +6359,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevlett.104.136403"
       ]
@@ -6362,7 +6430,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1016/j.jcp.2014.12.018"
       ]
@@ -6433,7 +6501,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevlett.120.143001"
       ]
@@ -6499,7 +6567,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1016/j.commatsci.2017.08.031"
       ]
@@ -6560,10 +6628,10 @@
     ],
     "wos_uid": "",
     "verification": {
-      "doi": "verified_publisher_2026-09-20",
-      "publisher": "verified_2026-09-20",
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1038/s41524-020-0283-z"
       ]
@@ -6624,10 +6692,10 @@
     ],
     "wos_uid": "",
     "verification": {
-      "doi": "verified_publisher_2026-09-20",
-      "publisher": "verified_2026-09-20",
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1021/acs.jpclett.0c01061"
       ]
@@ -6687,10 +6755,10 @@
     ],
     "wos_uid": "",
     "verification": {
-      "doi": "verified_publisher_2026-09-20",
-      "publisher": "verified_2026-09-20",
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevb.100.014105"
       ]
@@ -6750,7 +6818,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1038/s41524-019-0236-6"
       ]
@@ -6817,7 +6885,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1002/adma.201902765"
       ]
@@ -6882,7 +6950,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1016/j.actamat.2021.116980"
       ]
@@ -6954,10 +7022,10 @@
     ],
     "wos_uid": "",
     "verification": {
-      "doi": "verified_publisher_2026-09-20",
-      "publisher": "verified_2026-09-20",
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1021/acs.chemrev.0c01111"
       ]
@@ -7024,7 +7092,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1063/1.5126336"
       ]
@@ -7084,7 +7152,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevb.74.094105"
       ]
@@ -7147,7 +7215,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1021/jp5000039"
       ]
@@ -7210,7 +7278,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1021/acs.jpcc.6b10967"
       ]
@@ -7271,7 +7339,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1063/1.4737397"
       ]
@@ -7408,7 +7476,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1103/physrevlett.122.167701"
       ]
@@ -7478,7 +7546,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.3390/ma17081810"
       ]
@@ -7610,7 +7678,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1002/batt.202300156"
       ]
@@ -7685,7 +7753,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1038/s41597-021-00986-9"
       ]
@@ -7751,7 +7819,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1149/2.1441707jes"
       ]
@@ -7829,7 +7897,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1002/cpe.3505"
       ]
@@ -7896,7 +7964,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1016/j.commatsci.2017.07.030"
       ]
@@ -7962,7 +8030,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1038/s41597-020-00637-5"
       ]
@@ -8044,7 +8112,7 @@
       "doi": "verified_publisher_2026-09-20",
       "publisher": "verified_2026-09-20",
       "wos": "not_checked",
-      "fulltext": "not_downloaded",
+      "fulltext": "verified_local_pdf_2026-10-07",
       "sources": [
         "https://doi.org/10.1016/j.commatsci.2018.05.018"
       ]
@@ -8494,8 +8562,8 @@
     ],
     "wos_uid": "",
     "verification": {
-      "doi": "verified_publisher_2026-09-20",
-      "publisher": "verified_2026-09-20",
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
       "wos": "not_checked",
       "fulltext": "not_downloaded",
       "sources": [
@@ -8770,8 +8838,8 @@
     ],
     "wos_uid": "",
     "verification": {
-      "doi": "verified_publisher_2026-09-20",
-      "publisher": "verified_2026-09-20",
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
       "wos": "not_checked",
       "fulltext": "not_downloaded",
       "sources": [
@@ -8979,5 +9047,3339 @@
         "https://doi.org/10.1021/acsenergylett.4c00821"
       ]
     }
+  },
+  {
+    "id": "recent_10_1021_acs_jctc_4c00190",
+    "title": "Scalable Parallel Algorithm for Graph Neural Network Interatomic Potentials in Molecular Dynamics Simulations",
+    "authors": [
+      "Yutack Park",
+      "Jaesun Kim",
+      "Seungwoo Hwang",
+      "Seungwu Han"
+    ],
+    "year": 2024,
+    "journal": "Journal of Chemical Theory and Computation",
+    "document_type": "Paper",
+    "doi": "10.1021/acs.jctc.4c00190",
+    "url": "https://doi.org/10.1021/acs.jctc.4c00190",
+    "role": "SevenNet 的 GNN 原子势并行 MD 算法；属于可复用方法，不是电池体系性能论证。",
+    "systems": [
+      "原子模拟方法基准"
+    ],
+    "methods": [
+      "GNN",
+      "MLIP",
+      "MD",
+      "SevenNet",
+      "并行计算"
+    ],
+    "properties": [
+      "MD 计算效率",
+      "模型并行可扩展性"
+    ],
+    "tags_zh": [
+      "机器学习势",
+      "MD",
+      "GNN",
+      "MLIP",
+      "SevenNet",
+      "并行计算"
+    ],
+    "summary": "提出图神经网络原子势的可扩展并行计算方法。可用于学习 MLIP 与 MD 引擎的接口，但应用到电池仍须额外验证目标化学空间和物性。作者 arXiv 稿与正式 DOI 对应，二者的版本需区分。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "提出图神经网络原子势的可扩展并行计算方法。可用于学习 MLIP 与 MD 引擎的接口，但应用到电池仍须额外验证目标化学空间和物性。作者 arXiv 稿与正式 DOI 对应，二者的版本需区分。",
+        "basis": "https://arxiv.org/abs/2402.03789",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1021/acs.jctc.4c00190"
+      },
+      {
+        "label": "作者代码 SevenNet",
+        "url": "https://github.com/MDIL-SNU/SevenNet"
+      },
+      {
+        "label": "作者预印本（非期刊最终版）",
+        "url": "https://arxiv.org/abs/2402.03789"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1021/acs.jctc.4c00190"
+      ]
+    },
+    "publication_date": "2024-06-11",
+    "publication_date_precision": "day",
+    "online_date": "2024-05-30",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1021_jacs_4c14455",
+    "title": "Data-Efficient Multifidelity Training for High-Fidelity Machine Learning Interatomic Potentials",
+    "authors": [
+      "Jaesun Kim",
+      "Jisu Kim",
+      "Jaehoon Kim",
+      "Jiho Lee",
+      "Yutack Park",
+      "Youngho Kang",
+      "Seungwu Han"
+    ],
+    "year": 2025,
+    "journal": "Journal of the American Chemical Society",
+    "document_type": "Paper",
+    "doi": "10.1021/jacs.4c14455",
+    "url": "https://doi.org/10.1021/jacs.4c14455",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "机器学习势"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Data-Efficient Multifidelity Training for High-Fidelity Machine Learning Interatomic Potentials。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1021/jacs.4c14455",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1021/jacs.4c14455"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1021/jacs.4c14455"
+      ]
+    },
+    "publication_date": "2025-01-08",
+    "publication_date_precision": "day",
+    "online_date": "2024-12-17",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1021_acsmaterialslett_5c00093",
+    "title": "CHIPS-FF: Evaluating Universal Machine Learning Force Fields for Material Properties",
+    "authors": [
+      "Daniel Wines",
+      "Kamal Choudhary"
+    ],
+    "year": 2025,
+    "journal": "ACS Materials Letters",
+    "document_type": "Paper",
+    "doi": "10.1021/acsmaterialslett.5c00093",
+    "url": "https://doi.org/10.1021/acsmaterialslett.5c00093",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：CHIPS-FF: Evaluating Universal Machine Learning Force Fields for Material Properties。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1021/acsmaterialslett.5c00093",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1021/acsmaterialslett.5c00093"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1021/acsmaterialslett.5c00093"
+      ]
+    },
+    "publication_date": "2025-06-02",
+    "publication_date_precision": "day",
+    "online_date": "2025-05-05",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1021_acsmaterialslett_5c00336",
+    "title": "Assessment and Application of Universal Machine Learning Interatomic Potentials in Solid-State Electrolyte Research",
+    "authors": [
+      "Hongwei Du",
+      "Xiang Huang",
+      "Jian Hui",
+      "Lanting Zhang",
+      "Yuanxun Zhou",
+      "Hong Wang"
+    ],
+    "year": 2025,
+    "journal": "ACS Materials Letters",
+    "document_type": "Paper",
+    "doi": "10.1021/acsmaterialslett.5c00336",
+    "url": "https://doi.org/10.1021/acsmaterialslett.5c00336",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "机器学习势",
+      "电解液",
+      "固态电解质"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势",
+      "电解液",
+      "固态电解质"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Assessment and Application of Universal Machine Learning Interatomic Potentials in Solid-State Electrolyte Research。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1021/acsmaterialslett.5c00336",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1021/acsmaterialslett.5c00336"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1021/acsmaterialslett.5c00336"
+      ]
+    },
+    "publication_date": "2025-10-06",
+    "publication_date_precision": "day",
+    "online_date": "2025-09-09",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1021_acs_chemmater_6c01051",
+    "title": "Machine Learning Interatomic Potentials for Modeling Solid-State Batteries",
+    "authors": [
+      "Mgcini Keith Phuthi",
+      "Grace Wei",
+      "Bryant Li",
+      "Sauradeep Majumdar",
+      "Venkata Surya Chaitanya Kolluru",
+      "Nitesh Kumar",
+      "Samuel Blau",
+      "Pieremanuele Canepa",
+      "Maria K. Y. Chan",
+      "Rafael Gomez-Bombarelli",
+      "Kristin Persson",
+      "Gerbrand Ceder",
+      "Shyue Ping Ong"
+    ],
+    "year": 2026,
+    "journal": "Chemistry of Materials",
+    "document_type": "Perspective",
+    "doi": "10.1021/acs.chemmater.6c01051",
+    "url": "https://doi.org/10.1021/acs.chemmater.6c01051",
+    "role": "固态电池 MLIP 方法与验证；用于训练数据、势函数选择和界面模拟路线比较。",
+    "systems": [
+      "固态电池",
+      "正极/固态电解质界面"
+    ],
+    "methods": [
+      "机器学习",
+      "机器学习势",
+      "固态电解质",
+      "电池材料",
+      "界面"
+    ],
+    "properties": [
+      "能量、力、扩散、界面稳定性"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势",
+      "固态电解质",
+      "电池材料",
+      "界面"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Machine Learning\nInteratomic Potentials for Modeling\nSolid-State Batteries。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1021/acs.chemmater.6c01051",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1021/acs.chemmater.6c01051"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1021/acs.chemmater.6c01051"
+      ]
+    },
+    "publication_date": "2026-09-28",
+    "publication_date_precision": "day",
+    "online_date": "2026-09-28",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1557_s43579-026-00928-9",
+    "title": "Machine-learning interatomic potentials for interfaces in all-solid-state batteries: Perspectives on training data, model selection, and validation",
+    "authors": [
+      "Kwangnam Kim",
+      "Suyue Yuan",
+      "Brandon C. Wood",
+      "Liwen F. Wan"
+    ],
+    "year": 2026,
+    "journal": "MRS Communications",
+    "document_type": "Perspective",
+    "doi": "10.1557/s43579-026-00928-9",
+    "url": "https://doi.org/10.1557/s43579-026-00928-9",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习势",
+      "固态电解质",
+      "界面"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习势",
+      "固态电解质",
+      "界面"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Machine-learning interatomic potentials for interfaces in all-solid-state batteries: Perspectives on training data, model selection, and validation。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1557/s43579-026-00928-9",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1557/s43579-026-00928-9"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1557/s43579-026-00928-9"
+      ]
+    },
+    "publication_date": "2026-06",
+    "publication_date_precision": "month",
+    "online_date": "2026-02-18",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41524-026-02023-y",
+    "title": "Constructing machine learning interatomic potentials with minimum amount of ab initio data",
+    "authors": [
+      "Wentao Zhang",
+      "Xingxing Wu",
+      "Chen Wang",
+      "Siyu Hu",
+      "Yueyang Liu",
+      "Lin-Wang Wang"
+    ],
+    "year": 2026,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-026-02023-y",
+    "url": "https://doi.org/10.1038/s41524-026-02023-y",
+    "role": "预训练 MACE 采样、少量 DFT 适配与 NEP 蒸馏，研究固态电解质的离子输运。",
+    "systems": [
+      "LGPS",
+      "LATP",
+      "Li3YCl6",
+      "固态电解质"
+    ],
+    "methods": [
+      "DFT",
+      "AIMD",
+      "MD",
+      "MLIP",
+      "MACE",
+      "NEP",
+      "微调",
+      "模型蒸馏"
+    ],
+    "properties": [
+      "能量和力",
+      "迁移势垒",
+      "扩散系数",
+      "轨迹稳定性"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势",
+      "DFT",
+      "AIMD",
+      "MD",
+      "MLIP",
+      "MACE",
+      "NEP",
+      "微调",
+      "模型蒸馏"
+    ],
+    "summary": "用预训练 MACE 进行构型采样并补充 DFT 标签，适配后向轻量 NEP 蒸馏；同时检验势垒、扩散与 MD 稳定性。少数据结果的适用范围是文中验证的体系，不能推广为任意材料的样本量保证。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "用预训练 MACE 进行构型采样并补充 DFT 标签，适配后向轻量 NEP 蒸馏；同时检验势垒、扩散与 MD 稳定性。少数据结果的适用范围是文中验证的体系，不能推广为任意材料的样本量保证。",
+        "basis": "https://www.nature.com/articles/s41524-026-02023-y",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-026-02023-y"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-026-02023-y"
+      ]
+    },
+    "publication_date": "2026-03-17",
+    "publication_date_precision": "day",
+    "online_date": "2026-03-17",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1039_d4ta06675h",
+    "title": "Computational prediction of solvation structures in calcium battery electrolytes",
+    "authors": [
+      "Heonjae Jeong",
+      "Haimeng Wang",
+      "Lei Cheng"
+    ],
+    "year": 2024,
+    "journal": "Journal of Materials Chemistry A",
+    "document_type": "Paper",
+    "doi": "10.1039/d4ta06675h",
+    "url": "https://doi.org/10.1039/d4ta06675h",
+    "role": "第一性原理预测钙电池电解液溶剂化结构。",
+    "systems": [
+      "钙电池电解液"
+    ],
+    "methods": [
+      "机器学习",
+      "电解液",
+      "电池材料"
+    ],
+    "properties": [
+      "溶剂化结构、离子配位"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "电解液",
+      "电池材料"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Computational prediction of solvation structures in calcium battery electrolytes。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1039/d4ta06675h",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1039/d4ta06675h"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1039/d4ta06675h"
+      ]
+    },
+    "publication_date": "2024",
+    "publication_date_precision": "year",
+    "online_date": "2024",
+    "online_date_precision": "year"
+  },
+  {
+    "id": "recent_10_1002_adfm_202313188",
+    "title": "A Perspective on the Molecular Modeling of Electrolyte Decomposition Reactions for Solid Electrolyte Interphase Growth in Lithium‐Ion Batteries",
+    "authors": [
+      "Mohammed Bin Jassar",
+      "Carine Michel",
+      "Sara Abada",
+      "Theodorus De Bruin",
+      "Sylvain Tant",
+      "Carlos Nieto‐Draghi",
+      "Stephan N. Steinmann"
+    ],
+    "year": 2024,
+    "journal": "Advanced Functional Materials",
+    "document_type": "Perspective",
+    "doi": "10.1002/adfm.202313188",
+    "url": "https://doi.org/10.1002/adfm.202313188",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "DFT",
+      "电解液",
+      "电池材料",
+      "界面",
+      "负极"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "DFT",
+      "电解液",
+      "电池材料",
+      "界面",
+      "负极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：A Perspective on the Molecular Modeling of Electrolyte Decomposition Reactions for Solid Electrolyte Interphase Growth in Lithium‐Ion Batteries。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1002/adfm.202313188",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1002/adfm.202313188"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1002/adfm.202313188"
+      ]
+    },
+    "publication_date": "2024-07",
+    "publication_date_precision": "month",
+    "online_date": "2024-03-10",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41467-025-65496-3",
+    "title": "A foundation machine learning potential with polarizable long-range interactions for materials modelling",
+    "authors": [
+      "Rongzhi Gao",
+      "ChiYung Yam",
+      "Jianjun Mao",
+      "Shuguang Chen",
+      "GuanHua Chen",
+      "Ziyang Hu"
+    ],
+    "year": 2025,
+    "journal": "Nature Communications",
+    "document_type": "Paper",
+    "doi": "10.1038/s41467-025-65496-3",
+    "url": "https://doi.org/10.1038/s41467-025-65496-3",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "电解液",
+      "固态电解质",
+      "界面"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "电解液",
+      "固态电解质",
+      "界面"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：A foundation machine learning potential with polarizable long-range interactions for materials modelling。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41467-025-65496-3",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41467-025-65496-3"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41467-025-65496-3"
+      ]
+    },
+    "publication_date": "2025-11-25",
+    "publication_date_precision": "day",
+    "online_date": "2025-11-25",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1016_j_mechmat_2024_105237",
+    "title": "Enhancing robustness in machine-learning-accelerated molecular dynamics: A multi-model nonparametric probabilistic approach",
+    "authors": [
+      "Ariana Quek",
+      "Niuchang Ouyang",
+      "Hung-Min Lin",
+      "Olivier Delaire",
+      "Johann Guilleminot"
+    ],
+    "year": 2025,
+    "journal": "Mechanics of Materials",
+    "document_type": "Paper",
+    "doi": "10.1016/j.mechmat.2024.105237",
+    "url": "https://doi.org/10.1016/j.mechmat.2024.105237",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "MD"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "MD"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Enhancing robustness in machine-learning-accelerated molecular dynamics: A multi-model nonparametric probabilistic approach。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1016/j.mechmat.2024.105237",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.mechmat.2024.105237"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.mechmat.2024.105237"
+      ]
+    },
+    "publication_date": "2025-03",
+    "publication_date_precision": "month",
+    "online_date": "2025-03",
+    "online_date_precision": "month"
+  },
+  {
+    "id": "recent_10_1016_j_est_2026_121104",
+    "title": "Machine learning interatomic potential enables interface-level insights into cathode/solid electrolyte adhesion in sodium-ion batteries",
+    "authors": [
+      "Woojin Shin",
+      "Kyoungmin Min"
+    ],
+    "year": 2026,
+    "journal": "Journal of Energy Storage",
+    "document_type": "Paper",
+    "doi": "10.1016/j.est.2026.121104",
+    "url": "https://doi.org/10.1016/j.est.2026.121104",
+    "role": "钠离子正极/固态电解质界面黏附的 MLIP 原子尺度分析。",
+    "systems": [
+      "钠离子电池正极",
+      "固态电解质界面"
+    ],
+    "methods": [
+      "机器学习",
+      "机器学习势",
+      "电解液",
+      "界面",
+      "正极"
+    ],
+    "properties": [
+      "界面黏附、界面能"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势",
+      "电解液",
+      "界面",
+      "正极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Machine learning interatomic potential enables interface-level insights into cathode/solid electrolyte adhesion in sodium-ion batteries。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1016/j.est.2026.121104",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.est.2026.121104"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.est.2026.121104"
+      ]
+    },
+    "publication_date": "2026-04",
+    "publication_date_precision": "month",
+    "online_date": "2026-04",
+    "online_date_precision": "month"
+  },
+  {
+    "id": "recent_10_1038_s41586-023-06735-9",
+    "title": "Scaling deep learning for materials discovery",
+    "authors": [
+      "Amil Merchant",
+      "Simon Batzner",
+      "Samuel S. Schoenholz",
+      "Muratahan Aykol",
+      "Gowoon Cheon",
+      "Ekin Dogus Cubuk"
+    ],
+    "year": 2023,
+    "journal": "Nature",
+    "document_type": "Paper",
+    "doi": "10.1038/s41586-023-06735-9",
+    "url": "https://doi.org/10.1038/s41586-023-06735-9",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习势",
+      "电解液"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习势",
+      "电解液"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Scaling deep learning for materials discovery。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41586-023-06735-9",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41586-023-06735-9"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41586-023-06735-9"
+      ]
+    },
+    "publication_date": "2023-12-07",
+    "publication_date_precision": "day",
+    "online_date": "2023-11-29",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41467-025-56322-x",
+    "title": "Disorder-induced enhancement of lithium-ion transport in solid-state electrolytes",
+    "authors": [
+      "Zhimin Chen",
+      "Tao Du",
+      "N. M. Anoop Krishnan",
+      "Yuanzheng Yue",
+      "Morten M. Smedskjaer"
+    ],
+    "year": 2025,
+    "journal": "Nature Communications",
+    "document_type": "Paper",
+    "doi": "10.1038/s41467-025-56322-x",
+    "url": "https://doi.org/10.1038/s41467-025-56322-x",
+    "role": "无序结构增强 Li3PS4 固态电解质中的锂离子输运。",
+    "systems": [
+      "Li3PS4 固态电解质"
+    ],
+    "methods": [
+      "机器学习",
+      "电解液",
+      "固态电解质"
+    ],
+    "properties": [
+      "离子输运、扩散"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "电解液",
+      "固态电解质"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Disorder-induced enhancement of lithium-ion transport in solid-state electrolytes。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41467-025-56322-x",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41467-025-56322-x"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1038/s41467-025-56322-x"
+      ]
+    },
+    "publication_date": "2025-01-26",
+    "publication_date_precision": "day",
+    "online_date": "2025-01-26",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1016_j_jechem_2025_03_007",
+    "title": "InterOptimus: An AI-assisted robust workflow for screening ground-state heterogeneous interface structures in lithium batteries",
+    "authors": [
+      "Yaoshu Xie",
+      "Jun Yang",
+      "Yun Cao",
+      "Wei Lv",
+      "Yan-Bing He",
+      "Lu Jiang",
+      "Tingzheng Hou"
+    ],
+    "year": 2025,
+    "journal": "Journal of Energy Chemistry",
+    "document_type": "Paper",
+    "doi": "10.1016/j.jechem.2025.03.007",
+    "url": "https://doi.org/10.1016/j.jechem.2025.03.007",
+    "role": "InterOptimus 用 AI 工作流筛选锂电池异质界面基态结构。",
+    "systems": [
+      "锂电池异质界面"
+    ],
+    "methods": [
+      "界面"
+    ],
+    "properties": [
+      "界面结构、界面能"
+    ],
+    "tags_zh": [
+      "界面"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：InterOptimus: An AI-assisted robust workflow for screening ground-state heterogeneous interface structures in lithium batteries。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1016/j.jechem.2025.03.007",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.jechem.2025.03.007"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.jechem.2025.03.007"
+      ]
+    },
+    "publication_date": "2025-07",
+    "publication_date_precision": "month",
+    "online_date": "2025-07",
+    "online_date_precision": "month"
+  },
+  {
+    "id": "recent_10_1016_j_mtener_2025_101841",
+    "title": "Machine learning study on the structural evolution of high-nickel layered cathodes",
+    "authors": [
+      "Yuqi Wang",
+      "Wei Shao",
+      "Haishun Jin",
+      "Qiang Wang",
+      "Ruijuan Xiao",
+      "Hong Li"
+    ],
+    "year": 2025,
+    "journal": "Materials Today Energy",
+    "document_type": "Paper",
+    "doi": "10.1016/j.mtener.2025.101841",
+    "url": "https://doi.org/10.1016/j.mtener.2025.101841",
+    "role": "机器学习分析高镍层状正极结构演化。",
+    "systems": [
+      "高镍层状正极"
+    ],
+    "methods": [
+      "机器学习",
+      "正极"
+    ],
+    "properties": [
+      "结构演化、容量/电压衰减"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "正极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Machine learning study on the structural evolution of high-nickel layered cathodes。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1016/j.mtener.2025.101841",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.mtener.2025.101841"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.mtener.2025.101841"
+      ]
+    },
+    "publication_date": "2025-04",
+    "publication_date_precision": "month",
+    "online_date": "2025-04",
+    "online_date_precision": "month"
+  },
+  {
+    "id": "recent_10_1038_s41524-025-01747-7",
+    "title": "Machine-learning-accelerated mechanistic exploration of interface modification in lithium metal anode",
+    "authors": [
+      "Genming Lai",
+      "Ruiqi Zhang",
+      "Chi Fang",
+      "Juntao Zhao",
+      "Taowen Chen",
+      "Yunxing Zuo",
+      "Bo Xu",
+      "Jiaxin Zheng"
+    ],
+    "year": 2025,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-025-01747-7",
+    "url": "https://doi.org/10.1038/s41524-025-01747-7",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "MD",
+      "电解液",
+      "固态电解质",
+      "界面",
+      "负极"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "MD",
+      "电解液",
+      "固态电解质",
+      "界面",
+      "负极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Machine-learning-accelerated mechanistic exploration of interface modification in lithium metal anode。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41524-025-01747-7",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-025-01747-7"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-025-01747-7"
+      ]
+    },
+    "publication_date": "2025-07-28",
+    "publication_date_precision": "day",
+    "online_date": "2025-07-28",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41524-025-01615-4",
+    "title": "Unraveling charge effects on interface reactions and dendrite growth in lithium metal anode",
+    "authors": [
+      "Genming Lai",
+      "Yunxing Zuo",
+      "Chi Fang",
+      "Zongji Huang",
+      "Taowen Chen",
+      "Qinghua Liu",
+      "Suihan Cui",
+      "Jiaxin Zheng"
+    ],
+    "year": 2025,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-025-01615-4",
+    "url": "https://doi.org/10.1038/s41524-025-01615-4",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "MD",
+      "电解液",
+      "界面",
+      "负极"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "MD",
+      "电解液",
+      "界面",
+      "负极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Unraveling charge effects on interface reactions and dendrite growth in lithium metal anode。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41524-025-01615-4",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-025-01615-4"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-025-01615-4"
+      ]
+    },
+    "publication_date": "2025-05-05",
+    "publication_date_precision": "day",
+    "online_date": "2025-05-05",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41467-025-62824-5",
+    "title": "Observation of dendrite formation at Li metal-electrolyte interface by a machine-learning enhanced constant potential framework",
+    "authors": [
+      "Taiping Hu",
+      "Haichao Huang",
+      "Guobing Zhou",
+      "Xinyan Wang",
+      "Jiaxin Zhu",
+      "Zheng Cheng",
+      "Fangjia Fu",
+      "Xiaoxu Wang",
+      "Fuzhi Dai",
+      "Kuang Yu",
+      "Shenzhen Xu"
+    ],
+    "year": 2025,
+    "journal": "Nature Communications",
+    "document_type": "Paper",
+    "doi": "10.1038/s41467-025-62824-5",
+    "url": "https://doi.org/10.1038/s41467-025-62824-5",
+    "role": "恒电势机器学习框架下锂金属-电解液界面枝晶形成观察。",
+    "systems": [
+      "锂金属负极",
+      "液态电解液界面"
+    ],
+    "methods": [
+      "电解液",
+      "界面"
+    ],
+    "properties": [
+      "枝晶、界面反应"
+    ],
+    "tags_zh": [
+      "电解液",
+      "界面"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Observation of dendrite formation at Li metal-electrolyte interface by a machine-learning enhanced constant potential framework。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41467-025-62824-5",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41467-025-62824-5"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41467-025-62824-5"
+      ]
+    },
+    "publication_date": "2025-08-11",
+    "publication_date_precision": "day",
+    "online_date": "2025-08-11",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1016_j_jpowsour_2025_237670",
+    "title": "Surface orientation-dependent adhesion behavior in Na-cathode and solid-state electrolyte interfaces using machine learning interatomic potential",
+    "authors": [
+      "Woojin Shin",
+      "Juo Kim",
+      "Jiwon Sun",
+      "Jungjae Hwang",
+      "Jonghyuk Kim",
+      "Kyoungmin Min"
+    ],
+    "year": 2025,
+    "journal": "Journal of Power Sources",
+    "document_type": "Paper",
+    "doi": "10.1016/j.jpowsour.2025.237670",
+    "url": "https://doi.org/10.1016/j.jpowsour.2025.237670",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "机器学习势",
+      "电解液",
+      "固态电解质",
+      "界面",
+      "正极"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势",
+      "电解液",
+      "固态电解质",
+      "界面",
+      "正极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Surface orientation-dependent adhesion behavior in Na-cathode and solid-state electrolyte interfaces using machine learning interatomic potential。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1016/j.jpowsour.2025.237670",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.jpowsour.2025.237670"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.jpowsour.2025.237670"
+      ]
+    },
+    "publication_date": "2025-10",
+    "publication_date_precision": "month",
+    "online_date": "2025-10",
+    "online_date_precision": "month"
+  },
+  {
+    "id": "recent_10_1039_d5cc04921k",
+    "title": "Data-driven atomistic modeling of crystalline and glassy solid-state electrolytes",
+    "authors": [
+      "Rui Zhou",
+      "Kun Luo",
+      "Qi An"
+    ],
+    "year": 2025,
+    "journal": "Chemical Communications",
+    "document_type": "Paper",
+    "doi": "10.1039/d5cc04921k",
+    "url": "https://doi.org/10.1039/d5cc04921k",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "电解液",
+      "固态电解质"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "电解液",
+      "固态电解质"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Data-driven atomistic modeling of crystalline and glassy solid-state electrolytes。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1039/d5cc04921k",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1039/d5cc04921k"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1039/d5cc04921k"
+      ]
+    },
+    "publication_date": "2025",
+    "publication_date_precision": "year",
+    "online_date": "2025",
+    "online_date_precision": "year"
+  },
+  {
+    "id": "recent_10_1039_d6eb00024j",
+    "title": "Integrated machine learning-molecular dynamics framework for electrolyte property prediction",
+    "authors": [
+      "Srikant Sagireddy",
+      "Nikhil Rampal",
+      "Stephen E. Weitzner",
+      "Liwen F. Wan"
+    ],
+    "year": 2026,
+    "journal": "EES Batteries",
+    "document_type": "Paper",
+    "doi": "10.1039/d6eb00024j",
+    "url": "https://doi.org/10.1039/d6eb00024j",
+    "role": "MD 采样溶剂化构型与结构感知 GNN 联合预测电解液前线轨道能。",
+    "systems": [
+      "锂电池液态电解液",
+      "溶剂化结构",
+      "离子对"
+    ],
+    "methods": [
+      "MD",
+      "DFT",
+      "GNN",
+      "机器学习",
+      "溶剂化采样"
+    ],
+    "properties": [
+      "HOMO",
+      "LUMO",
+      "HOMO-LUMO gap"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "MD",
+      "电解液",
+      "DFT",
+      "GNN",
+      "溶剂化采样"
+    ],
+    "summary": "结合 MD 溶剂化采样与结构感知机器学习，预测热构型的 HOMO/LUMO 和能隙。应按配方/化学空间验证；轨道能代理不等于实测电化学稳定窗口或直接计算完整 SEI 反应。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "结合 MD 溶剂化采样与结构感知机器学习，预测热构型的 HOMO/LUMO 和能隙。应按配方/化学空间验证；轨道能代理不等于实测电化学稳定窗口或直接计算完整 SEI 反应。",
+        "basis": "https://pubs.rsc.org/en/content/articlehtml/2026/eb/d6eb00024j",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1039/d6eb00024j"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1039/d6eb00024j"
+      ]
+    },
+    "publication_date": "2026",
+    "publication_date_precision": "year",
+    "online_date": "2026",
+    "online_date_precision": "year"
+  },
+  {
+    "id": "recent_10_1016_j_ensm_2025_104826",
+    "title": "Electrolyte engineering for lithium-ion batteries: Mechanistic insights into the development of electrolyte from atomic-scale simulation",
+    "authors": [
+      "Hongjun Chang",
+      "Hyunsang Joo",
+      "Byung Gon Kim",
+      "Egbert Figgemeier",
+      "Janghyuk Moon"
+    ],
+    "year": 2026,
+    "journal": "Energy Storage Materials",
+    "document_type": "Paper",
+    "doi": "10.1016/j.ensm.2025.104826",
+    "url": "https://doi.org/10.1016/j.ensm.2025.104826",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "电解液"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "电解液"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Electrolyte engineering for lithium-ion batteries: Mechanistic insights into the development of electrolyte from atomic-scale simulation。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1016/j.ensm.2025.104826",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.ensm.2025.104826"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.ensm.2025.104826"
+      ]
+    },
+    "publication_date": "2026-01",
+    "publication_date_precision": "month",
+    "online_date": "2026-01",
+    "online_date_precision": "month"
+  },
+  {
+    "id": "recent_10_1039_d4ta03452j",
+    "title": "Machine learning interatomic potentials in engineering perspective for developing cathode materials",
+    "authors": [
+      "Dohyeong Kwon",
+      "Duho Kim"
+    ],
+    "year": 2024,
+    "journal": "Journal of Materials Chemistry A",
+    "document_type": "Perspective",
+    "doi": "10.1039/d4ta03452j",
+    "url": "https://doi.org/10.1039/d4ta03452j",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "机器学习势",
+      "DFT",
+      "正极"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势",
+      "DFT",
+      "正极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Machine learning interatomic potentials in engineering perspective for developing cathode materials。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1039/d4ta03452j",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1039/d4ta03452j"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1039/d4ta03452j"
+      ]
+    },
+    "publication_date": "2024",
+    "publication_date_precision": "year",
+    "online_date": "2024",
+    "online_date_precision": "year"
+  },
+  {
+    "id": "recent_10_1103_physrevmaterials_8_115407",
+    "title": "Atomistic modeling of bulk and grain boundary diffusion in solid electrolyte Li6PS5Cl using machine-learning interatomic potentials",
+    "authors": [
+      "Yongliang Ou",
+      "Yuji Ikeda",
+      "Lena Scholz",
+      "Sergiy Divinski",
+      "Felix Fritzen",
+      "Blazej Grabowski"
+    ],
+    "year": 2024,
+    "journal": "Physical Review Materials",
+    "document_type": "Paper",
+    "doi": "10.1103/physrevmaterials.8.115407",
+    "url": "https://doi.org/10.1103/physrevmaterials.8.115407",
+    "role": "Li6PS5Cl 固态电解质体相与晶界扩散的 MLIP/AIMD 原子模拟。",
+    "systems": [
+      "Li6PS5Cl 固态电解质",
+      "晶界"
+    ],
+    "methods": [
+      "机器学习势",
+      "电解液"
+    ],
+    "properties": [
+      "Li+扩散、扩散系数、晶界迁移"
+    ],
+    "tags_zh": [
+      "机器学习势",
+      "电解液"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Atomistic modeling of bulk and grain boundary diffusion in solid electrolyte\n                    \n                      \n                        \n                          Li\n                          6\n                        \n                        \n                          PS\n                          5\n                        \n                        Cl\n                      \n                    \n                    using machine-learning interatomic potentials。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1103/physrevmaterials.8.115407",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1103/physrevmaterials.8.115407"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1103/physrevmaterials.8.115407"
+      ]
+    },
+    "publication_date": "2024-11-21",
+    "publication_date_precision": "day",
+    "online_date": "2024-11-21",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41524-024-01332-4",
+    "title": "Cartesian atomic cluster expansion for machine learning interatomic potentials",
+    "authors": [
+      "Bingqing Cheng"
+    ],
+    "year": 2024,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-024-01332-4",
+    "url": "https://doi.org/10.1038/s41524-024-01332-4",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "机器学习势"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Cartesian atomic cluster expansion for machine learning interatomic potentials。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41524-024-01332-4",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-024-01332-4"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-024-01332-4"
+      ]
+    },
+    "publication_date": "2024-07-18",
+    "publication_date_precision": "day",
+    "online_date": "2024-07-18",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41524-024-01227-4",
+    "title": "Robust training of machine learning interatomic potentials with dimensionality reduction and stratified sampling",
+    "authors": [
+      "Ji Qi",
+      "Tsz Wai Ko",
+      "Brandon C. Wood",
+      "Tuan Anh Pham",
+      "Shyue Ping Ong"
+    ],
+    "year": 2024,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-024-01227-4",
+    "url": "https://doi.org/10.1038/s41524-024-01227-4",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "机器学习势",
+      "MD",
+      "数据集"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势",
+      "MD",
+      "数据集"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Robust training of machine learning interatomic potentials with dimensionality reduction and stratified sampling。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41524-024-01227-4",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-024-01227-4"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-024-01227-4"
+      ]
+    },
+    "publication_date": "2024-02-26",
+    "publication_date_precision": "day",
+    "online_date": "2024-02-26",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41524-025-01623-4",
+    "title": "Cartesian atomic moment machine learning interatomic potentials",
+    "authors": [
+      "Mingjian Wen",
+      "Wei-Fan Huang",
+      "Jin Dai",
+      "Santosh Adhikari"
+    ],
+    "year": 2025,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-025-01623-4",
+    "url": "https://doi.org/10.1038/s41524-025-01623-4",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "机器学习势"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Cartesian atomic moment machine learning interatomic potentials。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41524-025-01623-4",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-025-01623-4"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-025-01623-4"
+      ]
+    },
+    "publication_date": "2025-05-09",
+    "publication_date_precision": "day",
+    "online_date": "2025-05-09",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41467-025-63852-x",
+    "title": "Machine learning of charges and long-range interactions from energies and forces",
+    "authors": [
+      "Daniel S. King",
+      "Dongjin Kim",
+      "Peichen Zhong",
+      "Bingqing Cheng"
+    ],
+    "year": 2025,
+    "journal": "Nature Communications",
+    "document_type": "Paper",
+    "doi": "10.1038/s41467-025-63852-x",
+    "url": "https://doi.org/10.1038/s41467-025-63852-x",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "机器学习势",
+      "电解液",
+      "界面"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势",
+      "电解液",
+      "界面"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Machine learning of charges and long-range interactions from energies and forces。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41467-025-63852-x",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41467-025-63852-x"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41467-025-63852-x"
+      ]
+    },
+    "publication_date": "2025-10-01",
+    "publication_date_precision": "day",
+    "online_date": "2025-10-01",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41467-025-67663-y",
+    "title": "Evidential deep learning for interatomic potentials",
+    "authors": [
+      "Han Xu",
+      "Taoyong Cui",
+      "Chenyu Tang",
+      "Jinzhe Ma",
+      "Dongzhan Zhou",
+      "Yuqiang Li",
+      "Xiang Gao",
+      "Xingao Gong",
+      "Wanli Ouyang",
+      "Shufei Zhang",
+      "Mao Su"
+    ],
+    "year": 2025,
+    "journal": "Nature Communications",
+    "document_type": "Paper",
+    "doi": "10.1038/s41467-025-67663-y",
+    "url": "https://doi.org/10.1038/s41467-025-67663-y",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习势"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习势"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Evidential deep learning for interatomic potentials。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41467-025-67663-y",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41467-025-67663-y"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41467-025-67663-y"
+      ]
+    },
+    "publication_date": "2025-12-20",
+    "publication_date_precision": "day",
+    "online_date": "2025-12-20",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41524-025-01735-x",
+    "title": "Navigating chemical design spaces for metal-ion batteries via machine-learning-guided phase-field simulations",
+    "authors": [
+      "Hamed Taghavian",
+      "Viktor Vanoppen",
+      "Erik Berg",
+      "Peter Broqvist",
+      "Jens Sjölund"
+    ],
+    "year": 2025,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-025-01735-x",
+    "url": "https://doi.org/10.1038/s41524-025-01735-x",
+    "role": "机器学习引导相场模拟金属离子电池电化学设计空间。",
+    "systems": [
+      "金属离子电池",
+      "金属负极"
+    ],
+    "methods": [
+      "电解液",
+      "界面",
+      "负极"
+    ],
+    "properties": [
+      "沉积形貌、枝晶、界面演化"
+    ],
+    "tags_zh": [
+      "电解液",
+      "界面",
+      "负极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Navigating chemical design spaces for metal-ion batteries via machine-learning-guided phase-field simulations。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41524-025-01735-x",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-025-01735-x"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-025-01735-x"
+      ]
+    },
+    "publication_date": "2025-07-24",
+    "publication_date_precision": "day",
+    "online_date": "2025-07-24",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41524-024-01222-9",
+    "title": "Electronic Moment Tensor Potentials include both electronic and vibrational degrees of freedom",
+    "authors": [
+      "Prashanth Srinivasan",
+      "David Demuriya",
+      "Blazej Grabowski",
+      "Alexander Shapeev"
+    ],
+    "year": 2024,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-024-01222-9",
+    "url": "https://doi.org/10.1038/s41524-024-01222-9",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习势"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习势"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Electronic Moment Tensor Potentials include both electronic and vibrational degrees of freedom。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41524-024-01222-9",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-024-01222-9"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-024-01222-9"
+      ]
+    },
+    "publication_date": "2024-02-21",
+    "publication_date_precision": "day",
+    "online_date": "2024-02-21",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41524-025-01650-1",
+    "title": "Universal machine learning interatomic potentials are ready for phonons",
+    "authors": [
+      "Antoine Loew",
+      "Dewen Sun",
+      "Hai-Chen Wang",
+      "Silvana Botti",
+      "Miguel A. L. Marques"
+    ],
+    "year": 2025,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-025-01650-1",
+    "url": "https://doi.org/10.1038/s41524-025-01650-1",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "机器学习势"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Universal machine learning interatomic potentials are ready for phonons。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41524-025-01650-1",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-025-01650-1"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-025-01650-1"
+      ]
+    },
+    "publication_date": "2025-06-12",
+    "publication_date_precision": "day",
+    "online_date": "2025-06-12",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41524-025-01714-2",
+    "title": "Dynamic oxygen-redox evolution of cathode reactions based on the multistate equilibrium potential model",
+    "authors": [
+      "Nian Ran",
+      "Chengbo Li",
+      "Qinwen Cui",
+      "Dezhen Xue",
+      "Jianjun Liu"
+    ],
+    "year": 2025,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-025-01714-2",
+    "url": "https://doi.org/10.1038/s41524-025-01714-2",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "正极"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "正极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Dynamic oxygen-redox evolution of cathode reactions based on the multistate equilibrium potential model。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41524-025-01714-2",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-025-01714-2"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-025-01714-2"
+      ]
+    },
+    "publication_date": "2025-07-02",
+    "publication_date_precision": "day",
+    "online_date": "2025-07-02",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1021_jacsau_5c00526",
+    "title": "A Universal Machine Learning Framework Driven by Artificial Intelligence for Ion Battery Cathode Material Design",
+    "authors": [
+      "Kong Meng",
+      "Run Long"
+    ],
+    "year": 2025,
+    "journal": "JACS Au",
+    "document_type": "Paper",
+    "doi": "10.1021/jacsau.5c00526",
+    "url": "https://doi.org/10.1021/jacsau.5c00526",
+    "role": "通用机器学习框架用于离子电池正极材料设计。",
+    "systems": [
+      "离子电池正极"
+    ],
+    "methods": [
+      "机器学习",
+      "电池材料",
+      "正极"
+    ],
+    "properties": [
+      "结构/性质预测、候选筛选"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "电池材料",
+      "正极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：A Universal Machine Learning Framework Driven by Artificial Intelligence for Ion Battery Cathode Material Design。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1021/jacsau.5c00526",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1021/jacsau.5c00526"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1021/jacsau.5c00526"
+      ]
+    },
+    "publication_date": "2025-08-25",
+    "publication_date_precision": "day",
+    "online_date": "2025-07-23",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1021_acsenergylett_5c02723",
+    "title": "Machine-Learning-Accelerated Development of High-Nickel NCM Cathodes via Multivariable Co-optimization",
+    "authors": [
+      "Seon Hwa Lee",
+      "Insoo Ye",
+      "Changhwan Lee",
+      "Jieun Kim",
+      "Sang-Cheol Nam",
+      "Inchul Park"
+    ],
+    "year": 2025,
+    "journal": "ACS Energy Letters",
+    "document_type": "Paper",
+    "doi": "10.1021/acsenergylett.5c02723",
+    "url": "https://doi.org/10.1021/acsenergylett.5c02723",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "正极"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "正极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Machine-Learning-Accelerated Development of High-Nickel NCM Cathodes via Multivariable Co-optimization。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1021/acsenergylett.5c02723",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1021/acsenergylett.5c02723"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1021/acsenergylett.5c02723"
+      ]
+    },
+    "publication_date": "2025-11-14",
+    "publication_date_precision": "day",
+    "online_date": "2025-10-11",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1016_j_cej_2025_163801",
+    "title": "Combined machine learning and computational protocols to predict electrolyte behavior and SEI formation in Li-metal batteries",
+    "authors": [
+      "Liang-Ting Wu",
+      "Bing Joe Hwang",
+      "Jyh-Chiang Jiang"
+    ],
+    "year": 2025,
+    "journal": "Chemical Engineering Journal",
+    "document_type": "Paper",
+    "doi": "10.1016/j.cej.2025.163801",
+    "url": "https://doi.org/10.1016/j.cej.2025.163801",
+    "role": "DFT/AIMD 与机器学习联合预测锂金属电池电解液行为和 SEI 形成。",
+    "systems": [
+      "锂金属负极、电解液、SEI"
+    ],
+    "methods": [
+      "机器学习",
+      "电解液"
+    ],
+    "properties": [
+      "还原电位、吸附能、分解路径"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "电解液"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Combined machine learning and computational protocols to predict electrolyte behavior and SEI formation in Li-metal batteries。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1016/j.cej.2025.163801",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.cej.2025.163801"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.cej.2025.163801"
+      ]
+    },
+    "publication_date": "2025-07",
+    "publication_date_precision": "month",
+    "online_date": "2025-07",
+    "online_date_precision": "month"
+  },
+  {
+    "id": "recent_10_1002_adsu_202500413",
+    "title": "Data‐Driven Lithium Salt Design for Long‐Cycle Lithium Metal Battery",
+    "authors": [
+      "Un Hwan Lee",
+      "Kyungju Nam",
+      "Seung Hyo Noh",
+      "Donghwi Kim",
+      "Joonhee Kang"
+    ],
+    "year": 2025,
+    "journal": "Advanced Sustainable Systems",
+    "document_type": "Paper",
+    "doi": "10.1002/adsu.202500413",
+    "url": "https://doi.org/10.1002/adsu.202500413",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "DFT",
+      "电解液",
+      "电池材料",
+      "数据集"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "DFT",
+      "电解液",
+      "电池材料",
+      "数据集"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Data‐Driven Lithium Salt Design for Long‐Cycle Lithium Metal Battery。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1002/adsu.202500413",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1002/adsu.202500413"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1002/adsu.202500413"
+      ]
+    },
+    "publication_date": "2025-09",
+    "publication_date_precision": "month",
+    "online_date": "2025-06-02",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41586-025-09951-7",
+    "title": "Discovery Learning predicts battery cycle life from minimal experiments",
+    "authors": [
+      "Jiawei Zhang",
+      "Yifei Zhang",
+      "Baozhao Yi",
+      "Yao Ren",
+      "Qi Jiao",
+      "Hanyu Bai",
+      "Weiran Jiang",
+      "Ziyou Song"
+    ],
+    "year": 2026,
+    "journal": "Nature",
+    "document_type": "Paper",
+    "doi": "10.1038/s41586-025-09951-7",
+    "url": "https://doi.org/10.1038/s41586-025-09951-7",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "电池材料"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "电池材料"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Discovery Learning predicts battery cycle life from minimal experiments。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41586-025-09951-7",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41586-025-09951-7"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1038/s41586-025-09951-7"
+      ]
+    },
+    "publication_date": "2026-02-05",
+    "publication_date_precision": "day",
+    "online_date": "2026-02-04",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1039_d5cp02726h",
+    "title": "Screening of potential candidates for solid electrolyte interphase materials for lithium-ion batteries through a data-driven approach",
+    "authors": [
+      "Sadhana Barman",
+      "Utpal Sarkar"
+    ],
+    "year": 2025,
+    "journal": "Physical Chemistry Chemical Physics",
+    "document_type": "Paper",
+    "doi": "10.1039/d5cp02726h",
+    "url": "https://doi.org/10.1039/d5cp02726h",
+    "role": "数据驱动筛选锂离子电池 SEI 候选材料。",
+    "systems": [
+      "锂离子电池 SEI"
+    ],
+    "methods": [
+      "机器学习",
+      "电解液"
+    ],
+    "properties": [
+      "SEI 稳定性、候选排序"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "电解液"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Screening of potential candidates for solid electrolyte interphase materials for lithium-ion batteries through a data-driven approach。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1039/d5cp02726h",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1039/d5cp02726h"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1039/d5cp02726h"
+      ]
+    },
+    "publication_date": "2025",
+    "publication_date_precision": "year",
+    "online_date": "2025",
+    "online_date_precision": "year"
+  },
+  {
+    "id": "recent_10_1016_j_rser_2025_116633",
+    "title": "AI-driven exploration and design of inorganic battery materials",
+    "authors": [
+      "Xuesong Wang",
+      "Nan He",
+      "Zidong Zhou",
+      "Jing Chen",
+      "Abdul Mateen",
+      "Yinfei Shao",
+      "Xiang Chen",
+      "Chengbin Liu",
+      "Altaf Mujear",
+      "Jianwei Zhang",
+      "Feng Liu",
+      "Zhihao Bao"
+    ],
+    "year": 2026,
+    "journal": "Renewable and Sustainable Energy Reviews",
+    "document_type": "Paper",
+    "doi": "10.1016/j.rser.2025.116633",
+    "url": "https://doi.org/10.1016/j.rser.2025.116633",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "电池材料"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "电池材料"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：AI-driven exploration and design of inorganic battery materials。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1016/j.rser.2025.116633",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.rser.2025.116633"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.rser.2025.116633"
+      ]
+    },
+    "publication_date": "2026-04",
+    "publication_date_precision": "month",
+    "online_date": "2026-04",
+    "online_date_precision": "month"
+  },
+  {
+    "id": "recent_10_1021_acs_chemmater_5c02352",
+    "title": "Performance-Based Selection of Machine Learning Interatomic Potentials for Studying Solid-State Electrolytes",
+    "authors": [
+      "Donghee Chang",
+      "Amir Taqieddin",
+      "Forrest Laskowski"
+    ],
+    "year": 2026,
+    "journal": "Chemistry of Materials",
+    "document_type": "Paper",
+    "doi": "10.1021/acs.chemmater.5c02352",
+    "url": "https://doi.org/10.1021/acs.chemmater.5c02352",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "机器学习势",
+      "电解液",
+      "固态电解质"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势",
+      "电解液",
+      "固态电解质"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Performance-Based Selection of Machine Learning Interatomic Potentials for Studying Solid-State Electrolytes。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1021/acs.chemmater.5c02352",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1021/acs.chemmater.5c02352"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1021/acs.chemmater.5c02352"
+      ]
+    },
+    "publication_date": "2026-04-14",
+    "publication_date_precision": "day",
+    "online_date": "2026-04-02",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41524-025-01905-x",
+    "title": "Heterogeneous ensemble enables a universal uncertainty metric for atomistic foundation models",
+    "authors": [
+      "Kai Liu",
+      "Zixiong Wei",
+      "Wei Gao",
+      "Poulumi Dey",
+      "Marcel H. F. Sluiter",
+      "Fei Shuang"
+    ],
+    "year": 2025,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-025-01905-x",
+    "url": "https://doi.org/10.1038/s41524-025-01905-x",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习势",
+      "数据集"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习势",
+      "数据集"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Heterogeneous ensemble enables a universal uncertainty metric for atomistic foundation models。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41524-025-01905-x",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-025-01905-x"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-025-01905-x"
+      ]
+    },
+    "publication_date": "2025-12-17",
+    "publication_date_precision": "day",
+    "online_date": "2025-12-17",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41524-024-01451-y",
+    "title": "Machine learning interatomic potential with DFT accuracy for general grain boundaries in α-Fe",
+    "authors": [
+      "Kazuma Ito",
+      "Tatsuya Yokoi",
+      "Katsutoshi Hyodo",
+      "Hideki Mori"
+    ],
+    "year": 2024,
+    "journal": "npj Computational Materials",
+    "document_type": "Paper",
+    "doi": "10.1038/s41524-024-01451-y",
+    "url": "https://doi.org/10.1038/s41524-024-01451-y",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "机器学习势",
+      "MD",
+      "DFT",
+      "数据集"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "机器学习势",
+      "MD",
+      "DFT",
+      "数据集"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Machine learning interatomic potential with DFT accuracy for general grain boundaries in α-Fe。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41524-024-01451-y",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41524-024-01451-y"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41524-024-01451-y"
+      ]
+    },
+    "publication_date": "2024-11-13",
+    "publication_date_precision": "day",
+    "online_date": "2024-11-13",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1016_j_jpowsour_2025_239008",
+    "title": "Molecular dynamics study on effect of crystal defects in NCM811 cathode structure based on machine learning potential",
+    "authors": [
+      "Sanqi Guo",
+      "Dinggen Li",
+      "Bo Xu"
+    ],
+    "year": 2026,
+    "journal": "Journal of Power Sources",
+    "document_type": "Paper",
+    "doi": "10.1016/j.jpowsour.2025.239008",
+    "url": "https://doi.org/10.1016/j.jpowsour.2025.239008",
+    "role": "机器学习势分子动力学研究 NCM811 晶体缺陷效应。",
+    "systems": [
+      "NCM811 正极"
+    ],
+    "methods": [
+      "机器学习",
+      "MD",
+      "正极"
+    ],
+    "properties": [
+      "缺陷、扩散、结构稳定性"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "MD",
+      "正极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Molecular dynamics study on effect of crystal defects in NCM811 cathode structure based on machine learning potential。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1016/j.jpowsour.2025.239008",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.jpowsour.2025.239008"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.jpowsour.2025.239008"
+      ]
+    },
+    "publication_date": "2026-02",
+    "publication_date_precision": "month",
+    "online_date": "2026-02",
+    "online_date_precision": "month"
+  },
+  {
+    "id": "recent_10_1021_acsami_5c11818",
+    "title": "Probing Surface Degradation Pathways of Charged Nickel-Oxide Cathode Materials Using Machine-Learning Interatomic Potentials",
+    "authors": [
+      "Svenja Both",
+      "Andrey D. Poletayev",
+      "Timo Danner",
+      "Arnulf Latz",
+      "M. Saiful Islam"
+    ],
+    "year": 2025,
+    "journal": "ACS Applied Materials &amp; Interfaces",
+    "document_type": "Paper",
+    "doi": "10.1021/acsami.5c11818",
+    "url": "https://doi.org/10.1021/acsami.5c11818",
+    "role": "机器学习势解析充电镍氧化物正极表面降解路径。",
+    "systems": [
+      "充电镍氧化物正极表面"
+    ],
+    "methods": [
+      "机器学习势",
+      "正极"
+    ],
+    "properties": [
+      "表面降解、氧迁移"
+    ],
+    "tags_zh": [
+      "机器学习势",
+      "正极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Probing Surface Degradation Pathways of Charged Nickel-Oxide Cathode Materials Using Machine-Learning Interatomic Potentials。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1021/acsami.5c11818",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1021/acsami.5c11818"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1021/acsami.5c11818"
+      ]
+    },
+    "publication_date": "2025-10-08",
+    "publication_date_precision": "day",
+    "online_date": "2025-09-25",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1002_aenm_202201497",
+    "title": "Al‐Doping Driven Suppression of Capacity and Voltage Fadings in 4d‐Element Containing Li‐Ion‐Battery Cathode Materials: Machine Learning and Density Functional Theory",
+    "authors": [
+      "Miran Ha",
+      "Amir Hajibabaei",
+      "Dong Yeon Kim",
+      "Aditya Narayan Singh",
+      "Jeonghun Yun",
+      "Chang Woo Myung",
+      "Kwang S. Kim"
+    ],
+    "year": 2022,
+    "journal": "Advanced Energy Materials",
+    "document_type": "Paper",
+    "doi": "10.1002/aenm.202201497",
+    "url": "https://doi.org/10.1002/aenm.202201497",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "DFT",
+      "电池材料",
+      "正极"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "DFT",
+      "电池材料",
+      "正极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Al‐Doping Driven Suppression of Capacity and Voltage Fadings in 4d‐Element Containing Li‐Ion‐Battery Cathode Materials: Machine Learning and Density Functional Theory。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1002/aenm.202201497",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1002/aenm.202201497"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1002/aenm.202201497"
+      ]
+    },
+    "publication_date": "2022-08",
+    "publication_date_precision": "month",
+    "online_date": "2022-06-25",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1038_s41597-020-00602-2",
+    "title": "A database of battery materials auto-generated using ChemDataExtractor",
+    "authors": [
+      "Shu Huang",
+      "Jacqueline M. Cole"
+    ],
+    "year": 2020,
+    "journal": "Scientific Data",
+    "document_type": "Paper",
+    "doi": "10.1038/s41597-020-00602-2",
+    "url": "https://doi.org/10.1038/s41597-020-00602-2",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "电池材料",
+      "界面"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "电池材料",
+      "界面"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：A database of battery materials auto-generated using ChemDataExtractor。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1038/s41597-020-00602-2",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1038/s41597-020-00602-2"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "verified_local_pdf_2026-10-07",
+      "sources": [
+        "https://doi.org/10.1038/s41597-020-00602-2"
+      ]
+    },
+    "publication_date": "2020-08-06",
+    "publication_date_precision": "day",
+    "online_date": "2020-08-06",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1073_pnas_2214357120",
+    "title": "Data-driven electrolyte design for lithium metal anodes",
+    "authors": [
+      "Sang Cheol Kim",
+      "Solomon T. Oyakhire",
+      "Constantine Athanitis",
+      "Jingyang Wang",
+      "Zewen Zhang",
+      "Wenbo Zhang",
+      "David T. Boyle",
+      "Mun Sek Kim",
+      "Zhiao Yu",
+      "Xin Gao",
+      "Tomi Sogade",
+      "Esther Wu",
+      "Jian Qin",
+      "Zhenan Bao",
+      "Stacey F. Bent",
+      "Yi Cui"
+    ],
+    "year": 2023,
+    "journal": "Proceedings of the National Academy of Sciences",
+    "document_type": "Paper",
+    "doi": "10.1073/pnas.2214357120",
+    "url": "https://doi.org/10.1073/pnas.2214357120",
+    "role": "基于数据驱动与分子描述符设计锂金属负极电解液。",
+    "systems": [
+      "锂金属负极、电解液"
+    ],
+    "methods": [
+      "机器学习",
+      "电解液",
+      "负极"
+    ],
+    "properties": [
+      "循环稳定性、电解液性能"
+    ],
+    "tags_zh": [
+      "机器学习",
+      "电解液",
+      "负极"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Data-driven electrolyte design for lithium metal anodes。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1073/pnas.2214357120",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1073/pnas.2214357120"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1073/pnas.2214357120"
+      ]
+    },
+    "publication_date": "2023-03-07",
+    "publication_date_precision": "day",
+    "online_date": "2023-02-27",
+    "online_date_precision": "day"
+  },
+  {
+    "id": "recent_10_1016_j_commatsci_2024_113074",
+    "title": "Active learning for SNAP interatomic potentials via Bayesian predictive uncertainty",
+    "authors": [
+      "Logan Williams",
+      "Khachik Sargsyan",
+      "Andrew Rohskopf",
+      "Habib N. Najm"
+    ],
+    "year": 2024,
+    "journal": "Computational Materials Science",
+    "document_type": "Paper",
+    "doi": "10.1016/j.commatsci.2024.113074",
+    "url": "https://doi.org/10.1016/j.commatsci.2024.113074",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习势"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习势"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Active learning for SNAP interatomic potentials via Bayesian predictive uncertainty。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1016/j.commatsci.2024.113074",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1016/j.commatsci.2024.113074"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1016/j.commatsci.2024.113074"
+      ]
+    },
+    "publication_date": "2024-06",
+    "publication_date_precision": "month",
+    "online_date": "2024-06",
+    "online_date_precision": "month"
+  },
+  {
+    "id": "recent_10_1021_acs_jpcb_6c02837",
+    "title": "Benchmarking on-the-Fly Machine Learning Force Fields for Ion Hydration: Structure, Coordination, and Exchange Dynamics across Monovalent and Divalent Cations",
+    "authors": [
+      "Mohammed S. Salha",
+      "Wuyang Lin",
+      "Gregory Chass",
+      "Devis Di Tommaso"
+    ],
+    "year": 2026,
+    "journal": "The Journal of Physical\nChemistry B",
+    "document_type": "Paper",
+    "doi": "10.1021/acs.jpcb.6c02837",
+    "url": "https://doi.org/10.1021/acs.jpcb.6c02837",
+    "role": "面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+    "systems": [],
+    "methods": [
+      "机器学习",
+      "MD",
+      "电解液"
+    ],
+    "properties": [],
+    "tags_zh": [
+      "机器学习",
+      "MD",
+      "电解液"
+    ],
+    "summary": "基于 Crossref 出版社元数据核验：Benchmarking on-the-Fly\nMachine Learning Force Fields\nfor Ion Hydration: Structure, Coordination, and Exchange Dynamics\nacross Monovalent and Divalent Cations。摘要/正文参数仍需按来源逐项复核。",
+    "scope_note": "本条简述基于出版社元数据或公开摘要；本机全文可用性由 verification.fulltext 记录。具体参数、结果和页码须核对正文与补充材料，不能据元数据补猜。",
+    "publication_status": "published",
+    "collection": "recent_verified_20261008",
+    "difficulty": "进阶",
+    "protocol_steps": [],
+    "evidence": [
+      {
+        "claim": "DOI 与出版社元数据已核验",
+        "basis": "https://doi.org/10.1021/acs.jpcb.6c02837",
+        "strength": "moderate"
+      }
+    ],
+    "relations": [],
+    "resources": [
+      {
+        "label": "DOI / 出版社记录",
+        "url": "https://doi.org/10.1021/acs.jpcb.6c02837"
+      }
+    ],
+    "wos_uid": "",
+    "verification": {
+      "doi": "verified_crossref_2026-10-08",
+      "publisher": "verified_crossref_2026-10-08",
+      "wos": "not_checked",
+      "fulltext": "not_downloaded",
+      "sources": [
+        "https://doi.org/10.1021/acs.jpcb.6c02837"
+      ]
+    },
+    "publication_date": "2026-09-17",
+    "publication_date_precision": "day",
+    "online_date": "2026-09-02",
+    "online_date_precision": "day"
   }
 ]

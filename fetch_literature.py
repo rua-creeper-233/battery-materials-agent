@@ -42,6 +42,15 @@ USER_AGENT = (
 # unless the article's open licence is clear and the PDF is independently
 # checked against the target title.
 PUBLIC_PDF_OVERRIDES: dict[str, list[str]] = {
+    "recent_10_1021_acs_chemmater_6c01051": [
+        "https://carepapers.s3-ap-southeast-1.amazonaws.com/2026/2026-09-11-phuthi-chem-mater-2026.pdf",
+    ],
+    "recent_10_1039_d5cc04921k": [
+        "https://pubs.rsc.org/en/content/articlepdf/2025/cc/d5cc04921k",
+    ],
+    "recent_10_1039_d6eb00024j": [
+        "https://pubs.rsc.org/en/content/articlepdf/2026/eb/d6eb00024j",
+    ],
     "tan2026_pemd": ["https://pubs.rsc.org/en/content/articlepdf/2026/dd/d5dd00454c"],
     "kuhn2026_hitpoly": ["https://arxiv.org/pdf/2602.17595v1"],
     "yang2026_oxygen_sei": [

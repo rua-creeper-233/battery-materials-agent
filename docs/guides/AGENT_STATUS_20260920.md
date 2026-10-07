@@ -1,5 +1,7 @@
 # Battery Evidence Lab：当前状态与下一步
 
+> 本文件为 2026-09-20 历史快照。当前数量、能力和训练状态以 [PROJECT_STATUS.md](PROJECT_STATUS.md)、[AI 应用指南](AI_BATTERY_APPLICATIONS.md) 和最新发布记录为准。
+
 更新时间：2026-09-20
 
 ## 本版本已经完成

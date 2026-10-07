@@ -1,9 +1,9 @@
 # Zotero 导入审计
 
-- 核验时间：2026-09-20T04:12:30.833257+00:00
-- 目标记录：108
-- Zotero 中核验到的目标 DOI：108
-- 带 PDF 附件的目标记录：63
+- 核验时间：2026-10-07T18:10:41.940660+00:00
+- 目标记录：173
+- Zotero 中核验到的目标 DOI：173
+- 带 PDF 附件的目标记录：119
 - 统一标签：`battery-materials-agent`
 - 写入策略：按 DOI 幂等；已存在条目不重复创建；只附加本地审计通过的主文 PDF。
 
@@ -74,46 +74,111 @@
 - Lithium-electrolyte solvation and reaction in the electrolyte of a lithium ion battery: A ReaxFF reactive force field study — `10.1063/5.0003333` — skipped_existing；已核验，有 PDF
 - Review on modeling of the anode solid electrolyte interphase (SEI) for lithium-ion batteries — `10.1038/s41524-018-0064-0` — skipped_existing；已核验，有 PDF
 - Application of Reaction Force Field Molecular Dynamics in Lithium Batteries — `10.3389/fchem.2020.634379` — skipped_existing；已核验，有 PDF
-- Ab initio molecular dynamics for liquid metals — `10.1103/physrevb.47.558` — skipped_existing；已核验，无 PDF
-- Ab initio molecular-dynamics simulation of the liquid-metal–amorphous-semiconductor transition in germanium — `10.1103/physrevb.49.14251` — skipped_existing；已核验，无 PDF
-- Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set — `10.1016/0927-0256(96)00008-0` — skipped_existing；已核验，无 PDF
-- Projector-augmented-wave method — `10.1103/physrevb.50.17953` — skipped_existing；已核验，无 PDF
-- From ultrasoft pseudopotentials to the projector augmented-wave method — `10.1103/physrevb.59.1758` — skipped_existing；已核验，无 PDF
-- Generalized Gradient Approximation Made Simple — `10.1103/physrevlett.77.3865` — skipped_existing；已核验，无 PDF
-- Electron-energy-loss spectra and the structural stability of nickel oxide: An LSDA+U study — `10.1103/physrevb.57.1505` — skipped_existing；已核验，无 PDF
-- Hybrid functionals based on a screened Coulomb potential — `10.1063/1.1564060` — skipped_existing；已核验，无 PDF
-- A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu — `10.1063/1.3382344` — skipped_existing；已核验，无 PDF
-- Special points for Brillouin-zone integrations — `10.1103/physrevb.13.5188` — skipped_existing；已核验，无 PDF
-- High-precision sampling for Brillouin-zone integration in metals — `10.1103/physrevb.40.3616` — skipped_existing；已核验，无 PDF
-- Improved tangent estimate in the nudged elastic band method for finding minimum energy paths and saddle points — `10.1063/1.1323224` — skipped_existing；已核验，无 PDF
-- A fast and robust algorithm for Bader decomposition of charge density — `10.1016/j.commatsci.2005.04.010` — skipped_existing；已核验，无 PDF
-- Maximally localized generalized Wannier functions for composite energy bands — `10.1103/physrevb.56.12847` — skipped_existing；已核验，无 PDF
-- Generalized neural-network representation of high-dimensional potential-energy surfaces — `10.1103/physrevlett.98.146401` — skipped_existing；已核验，无 PDF
-- Atom-centered symmetry functions for constructing high-dimensional neural network potentials — `10.1063/1.3553717` — skipped_existing；已核验，无 PDF
-- Gaussian Approximation Potentials: Accuracy of Quantum Mechanics, without the Electrons — `10.1103/physrevlett.104.136403` — skipped_existing；已核验，无 PDF
-- Spectral neighbor analysis method for automated generation of quantum-accurate interatomic potentials — `10.1016/j.jcp.2014.12.018` — skipped_existing；已核验，无 PDF
-- Deep Potential Molecular Dynamics: A Scalable Model with the Accuracy of Quantum Mechanics — `10.1103/physrevlett.120.143001` — skipped_existing；已核验，无 PDF
-- Active learning of linearly parametrized interatomic potentials — `10.1016/j.commatsci.2017.08.031` — skipped_existing；已核验，无 PDF
-- On-the-fly active learning of interpretable Bayesian force fields for atomistic rare events — `10.1038/s41524-020-0283-z` — skipped_existing；已核验，无 PDF
-- On-the-Fly Active Learning of Interatomic Potentials for Large-Scale Atomistic Simulations — `10.1021/acs.jpclett.0c01061` — skipped_existing；已核验，无 PDF
-- On-the-fly Machine Learning Force Field Generation: Application to Melting Points — `10.1103/physrevb.100.014105` — skipped_existing；已核验，无 PDF
-- De Novo Exploration and Self-Guided Learning of Potential-Energy Surfaces — `10.1038/s41524-019-0236-6` — skipped_existing；已核验，无 PDF
-- Machine learning interatomic potentials as emerging tools for materials science — `10.1002/adma.201902765` — skipped_existing；已核验，无 PDF
-- Machine-learning interatomic potentials for materials science — `10.1016/j.actamat.2021.116980` — skipped_existing；已核验，无 PDF
-- Machine Learning Force Fields — `10.1021/acs.chemrev.0c01111` — skipped_existing；已核验，无 PDF
-- Machine learning for interatomic potential models — `10.1063/1.5126336` — skipped_existing；已核验，无 PDF
-- Factors that affect Li mobility in layered lithium transition metal oxides — `10.1103/physrevb.74.094105` — skipped_existing；已核验，无 PDF
-- Structures, Thermodynamics, and Li+ Mobility of Li10GeP2S12: A First-Principles Analysis — `10.1021/jp5000039` — skipped_existing；已核验，无 PDF
-- Origin of Fast Ion Conduction in Li10GeP2S12, a Superionic Conductor — `10.1021/acs.jpcc.6b10967` — skipped_existing；已核验，无 PDF
-- One-dimensional stringlike cooperative migration of lithium ions in an ultrafast ionic conductor — `10.1063/1.4737397` — skipped_existing；已核验，无 PDF
+- Ab initio molecular dynamics for liquid metals — `10.1103/physrevb.47.558` — skipped_existing；已核验，有 PDF
+- Ab initio molecular-dynamics simulation of the liquid-metal–amorphous-semiconductor transition in germanium — `10.1103/physrevb.49.14251` — skipped_existing；已核验，有 PDF
+- Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set — `10.1016/0927-0256(96)00008-0` — skipped_existing；已核验，有 PDF
+- Projector-augmented-wave method — `10.1103/physrevb.50.17953` — skipped_existing；已核验，有 PDF
+- From ultrasoft pseudopotentials to the projector augmented-wave method — `10.1103/physrevb.59.1758` — skipped_existing；已核验，有 PDF
+- Generalized Gradient Approximation Made Simple — `10.1103/physrevlett.77.3865` — skipped_existing；已核验，有 PDF
+- Electron-energy-loss spectra and the structural stability of nickel oxide: An LSDA+U study — `10.1103/physrevb.57.1505` — skipped_existing；已核验，有 PDF
+- Hybrid functionals based on a screened Coulomb potential — `10.1063/1.1564060` — skipped_existing；已核验，有 PDF
+- A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu — `10.1063/1.3382344` — skipped_existing；已核验，有 PDF
+- Special points for Brillouin-zone integrations — `10.1103/physrevb.13.5188` — skipped_existing；已核验，有 PDF
+- High-precision sampling for Brillouin-zone integration in metals — `10.1103/physrevb.40.3616` — skipped_existing；已核验，有 PDF
+- Improved tangent estimate in the nudged elastic band method for finding minimum energy paths and saddle points — `10.1063/1.1323224` — skipped_existing；已核验，有 PDF
+- A fast and robust algorithm for Bader decomposition of charge density — `10.1016/j.commatsci.2005.04.010` — skipped_existing；已核验，有 PDF
+- Maximally localized generalized Wannier functions for composite energy bands — `10.1103/physrevb.56.12847` — skipped_existing；已核验，有 PDF
+- Generalized neural-network representation of high-dimensional potential-energy surfaces — `10.1103/physrevlett.98.146401` — skipped_existing；已核验，有 PDF
+- Atom-centered symmetry functions for constructing high-dimensional neural network potentials — `10.1063/1.3553717` — skipped_existing；已核验，有 PDF
+- Gaussian Approximation Potentials: Accuracy of Quantum Mechanics, without the Electrons — `10.1103/physrevlett.104.136403` — skipped_existing；已核验，有 PDF
+- Spectral neighbor analysis method for automated generation of quantum-accurate interatomic potentials — `10.1016/j.jcp.2014.12.018` — skipped_existing；已核验，有 PDF
+- Deep Potential Molecular Dynamics: A Scalable Model with the Accuracy of Quantum Mechanics — `10.1103/physrevlett.120.143001` — skipped_existing；已核验，有 PDF
+- Active learning of linearly parametrized interatomic potentials — `10.1016/j.commatsci.2017.08.031` — skipped_existing；已核验，有 PDF
+- On-the-fly active learning of interpretable Bayesian force fields for atomistic rare events — `10.1038/s41524-020-0283-z` — skipped_existing；已核验，有 PDF
+- On-the-Fly Active Learning of Interatomic Potentials for Large-Scale Atomistic Simulations — `10.1021/acs.jpclett.0c01061` — skipped_existing；已核验，有 PDF
+- On-the-fly Machine Learning Force Field Generation: Application to Melting Points — `10.1103/physrevb.100.014105` — skipped_existing；已核验，有 PDF
+- De Novo Exploration and Self-Guided Learning of Potential-Energy Surfaces — `10.1038/s41524-019-0236-6` — skipped_existing；已核验，有 PDF
+- Machine learning interatomic potentials as emerging tools for materials science — `10.1002/adma.201902765` — skipped_existing；已核验，有 PDF
+- Machine-learning interatomic potentials for materials science — `10.1016/j.actamat.2021.116980` — skipped_existing；已核验，有 PDF
+- Machine Learning Force Fields — `10.1021/acs.chemrev.0c01111` — skipped_existing；已核验，有 PDF
+- Machine learning for interatomic potential models — `10.1063/1.5126336` — skipped_existing；已核验，有 PDF
+- Factors that affect Li mobility in layered lithium transition metal oxides — `10.1103/physrevb.74.094105` — skipped_existing；已核验，有 PDF
+- Structures, Thermodynamics, and Li+ Mobility of Li10GeP2S12: A First-Principles Analysis — `10.1021/jp5000039` — skipped_existing；已核验，有 PDF
+- Origin of Fast Ion Conduction in Li10GeP2S12, a Superionic Conductor — `10.1021/acs.jpcc.6b10967` — skipped_existing；已核验，有 PDF
+- One-dimensional stringlike cooperative migration of lithium ions in an ultrafast ionic conductor — `10.1063/1.4737397` — skipped_existing；已核验，有 PDF
 - High-Throughput Screening of Solid-State Li-Ion Conductors Using Lattice-Dynamics Descriptors — `10.1016/j.isci.2019.05.036` — skipped_existing；已核验，无 PDF
-- First-principles prediction of potentials and space-charge layers in all-solid-state batteries — `10.1103/physrevlett.122.167701` — skipped_existing；已核验，无 PDF
-- Machine Learning-Accelerated First-Principles Study of Atomic Configuration and Ionic Diffusion in Li10GeP2S12 Solid Electrolyte — `10.3390/ma17081810` — skipped_existing；已核验，无 PDF
+- First-principles prediction of potentials and space-charge layers in all-solid-state batteries — `10.1103/physrevlett.122.167701` — skipped_existing；已核验，有 PDF
+- Machine Learning-Accelerated First-Principles Study of Atomic Configuration and Ionic Diffusion in Li10GeP2S12 Solid Electrolyte — `10.3390/ma17081810` — skipped_existing；已核验，有 PDF
 - First-principles study on selenium-doped Li10GeP2S12 solid electrolyte: Effects of doping on moisture stability and Li-ion transport properties — `10.1016/j.mtchem.2022.101223` — skipped_existing；已核验，无 PDF
-- Toward the Formation of the Solid Electrolyte Interphase on Alkaline Metal Anodes: Ab Initio Simulations — `10.1002/batt.202300156` — skipped_existing；已核验，无 PDF
-- Quantum chemical calculations of lithium-ion battery electrolyte and interphase species — `10.1038/s41597-021-00986-9` — skipped_existing；已核验，无 PDF
-- Review—SEI: Past, Present and Future — `10.1149/2.1441707jes` — skipped_existing；已核验，无 PDF
-- FireWorks: a dynamic workflow system designed for high-throughput applications — `10.1002/cpe.3505` — skipped_existing；已核验，无 PDF
-- Atomate: A high-level interface to generate, execute, and analyze computational materials science workflows — `10.1016/j.commatsci.2017.07.030` — skipped_existing；已核验，无 PDF
-- Materials Cloud, a platform for open computational science — `10.1038/s41597-020-00637-5` — skipped_existing；已核验，无 PDF
-- matminer: An open source toolkit for materials data mining — `10.1016/j.commatsci.2018.05.018` — skipped_existing；已核验，无 PDF
+- Toward the Formation of the Solid Electrolyte Interphase on Alkaline Metal Anodes: Ab Initio Simulations — `10.1002/batt.202300156` — skipped_existing；已核验，有 PDF
+- Quantum chemical calculations of lithium-ion battery electrolyte and interphase species — `10.1038/s41597-021-00986-9` — skipped_existing；已核验，有 PDF
+- Review—SEI: Past, Present and Future — `10.1149/2.1441707jes` — skipped_existing；已核验，有 PDF
+- FireWorks: a dynamic workflow system designed for high-throughput applications — `10.1002/cpe.3505` — skipped_existing；已核验，有 PDF
+- Atomate: A high-level interface to generate, execute, and analyze computational materials science workflows — `10.1016/j.commatsci.2017.07.030` — skipped_existing；已核验，有 PDF
+- Materials Cloud, a platform for open computational science — `10.1038/s41597-020-00637-5` — skipped_existing；已核验，有 PDF
+- matminer: An open source toolkit for materials data mining — `10.1016/j.commatsci.2018.05.018` — skipped_existing；已核验，有 PDF
+- Understanding solid-state battery electrolytes using atomistic modelling and machine learning — `10.1038/s41578-025-00817-y` — skipped_existing；已核验，无 PDF
+- Toward AI ecosystems for electrolyte and interface engineering in solid-state batteries — `10.1126/sciadv.aea0638` — skipped_existing；已核验，无 PDF
+- Machine learning pipelines for the design of solid-state electrolytes — `10.1039/d5mh01525a` — skipped_existing；已核验，无 PDF
+- A perspective on training machine learning force fields for solid-state electrolyte materials — `10.1038/s44456-026-00014-4` — skipped_existing；已核验，无 PDF
+- Redefining atomistic simulations of all-solid-state batteries through machine learning interatomic potentials — `10.1016/j.jechem.2025.08.058` — skipped_existing；已核验，无 PDF
+- Application-oriented design of machine learning paradigms for battery science — `10.1038/s41524-025-01575-9` — skipped_existing；已核验，无 PDF
+- Machine learning interatomic potential: Bridge the gap between small-scale models and realistic device-scale simulations — `10.1016/j.isci.2024.109673` — skipped_existing；已核验，无 PDF
+- Enabling accurate modelling of materials for a solid electrolyte interphase in lithium-ion batteries using effective machine learning interatomic potentials — `10.1039/d5mh01343g` — skipped_existing；已核验，无 PDF
+- A pre-trained deep potential model for sulfide solid electrolytes with broad coverage and high accuracy — `10.1038/s41524-025-01764-6` — skipped_existing；已核验，无 PDF
+- Principal component analysis enables the design of deep learning potential precisely capturing LLZO phase transitions — `10.1038/s41524-024-01240-7` — skipped_existing；已核验，无 PDF
+- Probing degradation at solid-state battery interfaces using machine-learning interatomic potential — `10.1016/j.ensm.2024.103842` — skipped_existing；已核验，无 PDF
+- Size dependent lithium-ion conductivity of solid electrolytes in machine learning molecular dynamics simulations — `10.1016/j.aichem.2024.100051` — skipped_existing；已核验，无 PDF
+- Machine Learning-Assisted Property Prediction of Solid-State Electrolyte — `10.1002/aenm.202304480` — skipped_existing；已核验，无 PDF
+- Computationally Guided Synthesis of Battery Materials — `10.1021/acsenergylett.4c00821` — skipped_existing；已核验，无 PDF
+- Scalable Parallel Algorithm for Graph Neural Network Interatomic Potentials in Molecular Dynamics Simulations — `10.1021/acs.jctc.4c00190` — skipped_existing；已核验，无 PDF
+- Data-Efficient Multifidelity Training for High-Fidelity Machine Learning Interatomic Potentials — `10.1021/jacs.4c14455` — skipped_existing；已核验，无 PDF
+- CHIPS-FF: Evaluating Universal Machine Learning Force Fields for Material Properties — `10.1021/acsmaterialslett.5c00093` — skipped_existing；已核验，无 PDF
+- Assessment and Application of Universal Machine Learning Interatomic Potentials in Solid-State Electrolyte Research — `10.1021/acsmaterialslett.5c00336` — skipped_existing；已核验，无 PDF
+- Machine Learning Interatomic Potentials for Modeling Solid-State Batteries — `10.1021/acs.chemmater.6c01051` — skipped_existing；已核验，无 PDF
+- Machine-learning interatomic potentials for interfaces in all-solid-state batteries: Perspectives on training data, model selection, and validation — `10.1557/s43579-026-00928-9` — skipped_existing；已核验，无 PDF
+- Constructing machine learning interatomic potentials with minimum amount of ab initio data — `10.1038/s41524-026-02023-y` — skipped_existing；已核验，有 PDF
+- Computational prediction of solvation structures in calcium battery electrolytes — `10.1039/d4ta06675h` — skipped_existing；已核验，无 PDF
+- A Perspective on the Molecular Modeling of Electrolyte Decomposition Reactions for Solid Electrolyte Interphase Growth in Lithium‐Ion Batteries — `10.1002/adfm.202313188` — skipped_existing；已核验，无 PDF
+- A foundation machine learning potential with polarizable long-range interactions for materials modelling — `10.1038/s41467-025-65496-3` — skipped_existing；已核验，有 PDF
+- Enhancing robustness in machine-learning-accelerated molecular dynamics: A multi-model nonparametric probabilistic approach — `10.1016/j.mechmat.2024.105237` — skipped_existing；已核验，无 PDF
+- Machine learning interatomic potential enables interface-level insights into cathode/solid electrolyte adhesion in sodium-ion batteries — `10.1016/j.est.2026.121104` — skipped_existing；已核验，无 PDF
+- Scaling deep learning for materials discovery — `10.1038/s41586-023-06735-9` — skipped_existing；已核验，有 PDF
+- Disorder-induced enhancement of lithium-ion transport in solid-state electrolytes — `10.1038/s41467-025-56322-x` — skipped_existing；已核验，无 PDF
+- InterOptimus: An AI-assisted robust workflow for screening ground-state heterogeneous interface structures in lithium batteries — `10.1016/j.jechem.2025.03.007` — skipped_existing；已核验，无 PDF
+- Machine learning study on the structural evolution of high-nickel layered cathodes — `10.1016/j.mtener.2025.101841` — skipped_existing；已核验，无 PDF
+- Machine-learning-accelerated mechanistic exploration of interface modification in lithium metal anode — `10.1038/s41524-025-01747-7` — skipped_existing；已核验，有 PDF
+- Unraveling charge effects on interface reactions and dendrite growth in lithium metal anode — `10.1038/s41524-025-01615-4` — skipped_existing；已核验，有 PDF
+- Observation of dendrite formation at Li metal-electrolyte interface by a machine-learning enhanced constant potential framework — `10.1038/s41467-025-62824-5` — skipped_existing；已核验，有 PDF
+- Surface orientation-dependent adhesion behavior in Na-cathode and solid-state electrolyte interfaces using machine learning interatomic potential — `10.1016/j.jpowsour.2025.237670` — skipped_existing；已核验，无 PDF
+- Data-driven atomistic modeling of crystalline and glassy solid-state electrolytes — `10.1039/d5cc04921k` — skipped_existing；已核验，无 PDF
+- Integrated machine learning-molecular dynamics framework for electrolyte property prediction — `10.1039/d6eb00024j` — skipped_existing；已核验，无 PDF
+- Electrolyte engineering for lithium-ion batteries: Mechanistic insights into the development of electrolyte from atomic-scale simulation — `10.1016/j.ensm.2025.104826` — skipped_existing；已核验，无 PDF
+- Machine learning interatomic potentials in engineering perspective for developing cathode materials — `10.1039/d4ta03452j` — skipped_existing；已核验，无 PDF
+- Atomistic modeling of bulk and grain boundary diffusion in solid electrolyte Li6PS5Cl using machine-learning interatomic potentials — `10.1103/physrevmaterials.8.115407` — skipped_existing；已核验，无 PDF
+- Cartesian atomic cluster expansion for machine learning interatomic potentials — `10.1038/s41524-024-01332-4` — skipped_existing；已核验，有 PDF
+- Robust training of machine learning interatomic potentials with dimensionality reduction and stratified sampling — `10.1038/s41524-024-01227-4` — skipped_existing；已核验，有 PDF
+- Cartesian atomic moment machine learning interatomic potentials — `10.1038/s41524-025-01623-4` — skipped_existing；已核验，有 PDF
+- Machine learning of charges and long-range interactions from energies and forces — `10.1038/s41467-025-63852-x` — skipped_existing；已核验，有 PDF
+- Evidential deep learning for interatomic potentials — `10.1038/s41467-025-67663-y` — skipped_existing；已核验，有 PDF
+- Navigating chemical design spaces for metal-ion batteries via machine-learning-guided phase-field simulations — `10.1038/s41524-025-01735-x` — skipped_existing；已核验，有 PDF
+- Electronic Moment Tensor Potentials include both electronic and vibrational degrees of freedom — `10.1038/s41524-024-01222-9` — skipped_existing；已核验，有 PDF
+- Universal machine learning interatomic potentials are ready for phonons — `10.1038/s41524-025-01650-1` — skipped_existing；已核验，有 PDF
+- Dynamic oxygen-redox evolution of cathode reactions based on the multistate equilibrium potential model — `10.1038/s41524-025-01714-2` — skipped_existing；已核验，有 PDF
+- A Universal Machine Learning Framework Driven by Artificial Intelligence for Ion Battery Cathode Material Design — `10.1021/jacsau.5c00526` — skipped_existing；已核验，无 PDF
+- Machine-Learning-Accelerated Development of High-Nickel NCM Cathodes via Multivariable Co-optimization — `10.1021/acsenergylett.5c02723` — skipped_existing；已核验，无 PDF
+- Combined machine learning and computational protocols to predict electrolyte behavior and SEI formation in Li-metal batteries — `10.1016/j.cej.2025.163801` — skipped_existing；已核验，无 PDF
+- Data‐Driven Lithium Salt Design for Long‐Cycle Lithium Metal Battery — `10.1002/adsu.202500413` — skipped_existing；已核验，无 PDF
+- Discovery Learning predicts battery cycle life from minimal experiments — `10.1038/s41586-025-09951-7` — skipped_existing；已核验，无 PDF
+- Screening of potential candidates for solid electrolyte interphase materials for lithium-ion batteries through a data-driven approach — `10.1039/d5cp02726h` — skipped_existing；已核验，无 PDF
+- AI-driven exploration and design of inorganic battery materials — `10.1016/j.rser.2025.116633` — skipped_existing；已核验，无 PDF
+- Performance-Based Selection of Machine Learning Interatomic Potentials for Studying Solid-State Electrolytes — `10.1021/acs.chemmater.5c02352` — skipped_existing；已核验，无 PDF
+- Heterogeneous ensemble enables a universal uncertainty metric for atomistic foundation models — `10.1038/s41524-025-01905-x` — skipped_existing；已核验，无 PDF
+- Machine learning interatomic potential with DFT accuracy for general grain boundaries in α-Fe — `10.1038/s41524-024-01451-y` — skipped_existing；已核验，无 PDF
+- Molecular dynamics study on effect of crystal defects in NCM811 cathode structure based on machine learning potential — `10.1016/j.jpowsour.2025.239008` — skipped_existing；已核验，无 PDF
+- Probing Surface Degradation Pathways of Charged Nickel-Oxide Cathode Materials Using Machine-Learning Interatomic Potentials — `10.1021/acsami.5c11818` — skipped_existing；已核验，无 PDF
+- Al‐Doping Driven Suppression of Capacity and Voltage Fadings in 4d‐Element Containing Li‐Ion‐Battery Cathode Materials: Machine Learning and Density Functional Theory — `10.1002/aenm.202201497` — skipped_existing；已核验，无 PDF
+- A database of battery materials auto-generated using ChemDataExtractor — `10.1038/s41597-020-00602-2` — skipped_existing；已核验，无 PDF
+- Data-driven electrolyte design for lithium metal anodes — `10.1073/pnas.2214357120` — skipped_existing；已核验，无 PDF
+- Active learning for SNAP interatomic potentials via Bayesian predictive uncertainty — `10.1016/j.commatsci.2024.113074` — skipped_existing；已核验，无 PDF
+- Benchmarking on-the-Fly Machine Learning Force Fields for Ion Hydration: Structure, Coordination, and Exchange Dynamics across Monovalent and Divalent Cations — `10.1021/acs.jpcb.6c02837` — skipped_existing；已核验，无 PDF

@@ -138,7 +138,9 @@ class Handler(BaseHTTPRequestHandler):
         path = urlparse(self.path).path
         if path == "/api/health":
             manifest = _load_json(MANIFEST, {"papers": {}})
-            downloaded = sum(row.get("status") == "downloaded" for row in manifest.get("papers", {}).values())
+            curated_ids = {paper["id"] for paper in AGENT.papers}
+            downloaded = sum(pid in curated_ids and row.get("status") == "downloaded"
+                             for pid, row in manifest.get("papers", {}).items())
             methods = _load_method_evidence().get("papers", {})
             self._json(
                 {

@@ -2,9 +2,9 @@
 
 > 所有条目均为“自动抽取、待人工核对”。它们是原文定位器，不是可直接复制到 VASP/MD 输入文件的最终参数。
 
-- 本地有正文的论文：63
-- 抽取到至少一条方法信号的论文：60
-- 方法信号总数：485
+- 本地有正文的论文：123
+- 抽取到至少一条方法信号的论文：117
+- 方法信号总数：962
 - 参考文献区：已排除
 - 每篇每类上限：3 条
 - 公开数据只保存短方法信号与页码，不保存连续正文上下文
@@ -182,8 +182,9 @@
 
 ### A climbing image nudged elastic band method for finding saddle points and minimum energy paths
 
-- 扩散与迁移势垒方法：p.1 `NEB`；p.1 `nudged elastic band`；p.2 `NEB`
-- 计算软件：p.7 `VASP`；p.8 `VASP`
+- 扩散与迁移势垒方法：p.1 `climbing image nudged elastic band`；p.1 `nudged elastic band`；p.2 `nudged elastic band`
+- 平面波截断能：p.2 `energy cutoff was 350 eV`
+- 计算软件：p.2 `VASP`
 
 ### Ab initio molecular dynamics simulations of the initial stages of solid-electrolyte interphase formation on lithium ion battery graphitic anodes
 
@@ -423,39 +424,60 @@
 
 ### Ab initio molecular dynamics for liquid metals
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.1 `LDA`
+- 平面波截断能：p.2 `energy cutoff of 6 Ry`
+- 机器学习训练设置：p.2 `cutoff radius`
+- 分子动力学条件：p.2 `400 K along an ab initio MD`；p.3 `1250 K along an ab initio MD`；p.3 `1250 K: full curve —ab initio MD`
 
 ### Ab initio molecular-dynamics simulation of the liquid-metal–amorphous-semiconductor transition in germanium
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 平面波截断能：p.6 `Energy cutoffs of 12 Ry`
+- 泛函与电子结构近似：p.7 `LDA`
+- 扩散与迁移势垒方法：p.8 `Mean-square displacement`；p.13 `mean-square displacement`
+- k 点采样：p.10 `Monkhorst-Pack`
 
 ### Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.5 `LDA`；p.33 `PAW`
+- k 点采样：p.7 `k-point grid consisting of 35 X 35 X 35`；p.8 `9 X 9 X 3 k-points`；p.8 `Monkhorst Pack`
+- 平面波截断能：p.26 `cutoff was 160 eV`
 
 ### Projector-augmented-wave method
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 分子动力学条件：p.10 `1100 K from AIMD simulation`；p.15 `NPT`；p.15 `time step of 1 fs`
+- 泛函与电子结构近似：p.15 `PAW`；p.15 `PBE`；p.15 `projector augmented wave`
+- 计算软件：p.15 `VASP`；p.15 `Vienna ab initio simulation package`；p.25 `Vienna ab initio simulation package`
+- 平面波截断能：p.25 `plane-wave cutoff energy of 500 eV`
+- k 点采样：p.25 `Brillouin zone sampling`
+- 扩散与迁移势垒方法：p.27 `MSD`
 
 ### From ultrasoft pseudopotentials to the projector augmented-wave method
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.1 `PAW`；p.1 `projector augmented-wave`；p.2 `PAW`
+- 机器学习训练设置：p.1 `cutoff radius`；p.9 `cutoff radius`；p.10 `cutoff radius`
+- 计算软件：p.10 `VASP`；p.10 `Vienna ab initio simulation package`；p.16 `VASP`
+- 平面波截断能：p.11 `plane-wave cutoff of 700 eV`；p.11 `plane-wave energy cutoff of approximately 600–700 eV`；p.12 `cutoff 400 eV`
 
 ### Generalized Gradient Approximation Made Simple
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.1 `Generalized Gradient Approximation`；p.1 `GGA`；p.2 `GGA`
+- 机器学习训练设置：p.5 `mean absolute error`
 
 ### Electron-energy-loss spectra and the structural stability of nickel oxide: An LSDA+U study
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.1 `Hubbard U`；p.2 `Hubbard U`；p.4 `Hubbard U`
+- 机器学习训练设置：p.1 `energy loss`；p.2 `energy loss`；p.3 `energy loss`
 
 ### Hybrid functionals based on a screened Coulomb potential
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.2 `HSE`；p.3 `HSE`；p.4 `HSE`
+- 收敛判据：p.25 `forced by smoothly rescalings beyond a thresholdsthresh > 8.3`
+- 机器学习训练设置：p.31 `MAE`；p.31 `Mean absolute error`；p.32 `MAE`
 
 ### A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.3 `generalized gradient approximation`；p.3 `GGA`；p.3 `PBE`
+- 机器学习训练设置：p.7 `cutoff radius`；p.11 `test set`；p.13 `test set`
 
 ### Special points for Brillouin-zone integrations
 
@@ -463,91 +485,135 @@
 
 ### High-precision sampling for Brillouin-zone integration in metals
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- k 点采样：p.1 `Brillouin-zone integration`
 
 ### Improved tangent estimate in the nudged elastic band method for finding minimum energy paths and saddle points
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 扩散与迁移势垒方法：p.1 `NEB`；p.1 `nudged elastic band`；p.2 `NEB`
+- 计算软件：p.7 `VASP`；p.8 `VASP`
 
 ### A fast and robust algorithm for Bader decomposition of charge density
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.4 `PAW`；p.4 `projector augmented wave`；p.5 `PAW`
+- 计算软件：p.4 `VASP`；p.5 `ABINIT`；p.5 `VASP`
 
 ### Maximally localized generalized Wannier functions for composite energy bands
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- k 点采样：p.12 `8 × 8 × 8 k-point`；p.12 `Monkhorst-Pack`；p.13 `8 × 8 × 8 k-point`
 
 ### Generalized neural-network representation of high-dimensional potential-energy surfaces
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `training data`；p.3 `cutoff radius`；p.3 `root mean square error`
+- 泛函与电子结构近似：p.3 `LDA`；p.3 `local density approximation`
 
 ### Atom-centered symmetry functions for constructing high-dimensional neural network potentials
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.3 `cutoff radius`；p.3 `training data`；p.5 `cutoff radius`
 
 ### Gaussian Approximation Potentials: Accuracy of Quantum Mechanics, without the Electrons
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 分子动力学条件：p.1 `molecular dynamics runs at 1000 K`
+- 机器学习训练设置：p.2 `force error`；p.8 `force error`；p.10 `Force error`
+- 计算软件：p.3 `Castep`；p.4 `Castep`
+- 泛函与电子结构近似：p.8 `generalized gradient approximation`；p.8 `local density approximation`；p.8 `PBE`
+- k 点采样：p.8 `Monkhorst-Pack`
 
 ### Spectral neighbor analysis method for automated generation of quantum-accurate interatomic potentials
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `training set`；p.3 `training data`；p.10 `training data`
+- 计算软件：p.2 `LAMMPS`；p.3 `LAMMPS`；p.10 `LAMMPS`
+- 泛函与电子结构近似：p.15 `GGA`；p.15 `PAW`；p.15 `PBE`
+- k 点采样：p.15 `Monkhorst-Pack`
+- 分子动力学条件：p.21 `NPT`；p.21 `NVE`；p.22 `simulations were performed for the same temperature, 3250 K`
 
 ### Deep Potential Molecular Dynamics: A Scalable Model with the Accuracy of Quantum Mechanics
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.5 `training data`；p.7 `RMSE`；p.7 `training dataset`
+- 泛函与电子结构近似：p.6 `PBE`；p.10 `PBE`
+- 分子动力学条件：p.9 `NVT`；p.13 `time step of 0.48 fs`；p.19 `NPT`
+- 计算软件：p.10 `Quantum Espresso`；p.13 `Quantum Espresso`
 
 ### Active learning of linearly parametrized interatomic potentials
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `machine learning interatomic potential`；p.1 `training set`；p.2 `training set`
+- 泛函与电子结构近似：p.6 `PAW`
+- 分子动力学条件：p.6 `MD at T = 300 K`；p.6 `NVT`；p.6 `time step was 1 fs`
 
 ### On-the-fly active learning of interpretable Bayesian force fields for atomistic rare events
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `training data`；p.1 `training set`；p.2 `training data`
+- 计算软件：p.3 `LAMMPS`；p.5 `LAMMPS`；p.6 `LAMMPS`
+- 超胞与模型规模：p.4 `2 × 2 × 2 supercell`；p.6 `supercell (10,976 atoms`
+- 分子动力学条件：p.4 `5 ps of the simulation`；p.5 `1500 K, giving a mean temperature of 734 K across the simulation`；p.5 `5 ps of the simulation`
+- 泛函与电子结构近似：p.5 `GGA`；p.5 `PAW`
+- 扩散与迁移势垒方法：p.5 `mean squared displacement`；p.6 `NEB`；p.6 `nudged elastic band`
 
 ### On-the-Fly Active Learning of Interatomic Potentials for Large-Scale Atomistic Simulations
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `training data`；p.7 `machine-learning potential`；p.7 `training data`
+- 计算软件：p.7 `VASP`；p.7 `Vienna ab initio simulation package`；p.8 `VASP`
 
 ### On-the-fly Machine Learning Force Field Generation: Application to Melting Points
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.8 `LDA`；p.8 `local density approximation`；p.8 `PBE`
+- k 点采样：p.8 `3 × 3 × 2 k-point`；p.10 `3 × 3 × 3× k-points`；p.10 `3 ×3×3 k-point`
+- 分子动力学条件：p.8 `time step was set to 3 fs`；p.9 `100 ps MD simulation`
+- 机器学习训练设置：p.9 `MAE`；p.9 `Mean absolute error`；p.9 `root mean square error`
 
 ### De Novo Exploration and Self-Guided Learning of Potential-Energy Surfaces
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `training data`；p.2 `energy error`；p.3 `energy error`
+- 泛函与电子结构近似：p.3 `PBEsol`
 
 ### Machine learning interatomic potentials as emerging tools for materials science
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `Machine Learning Interatomic Potential`；p.2 `Machine Learning Interatomic Potential`；p.5 `Machine Learning Potential`
+- 计算软件：p.13 `LAMMPS`
+- 分子动力学条件：p.18 `simulations cannot normally reach below ~1012 K`
 
 ### Machine-learning interatomic potentials for materials science
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `Machine-learning interatomic potential`；p.7 `training data`；p.8 `training dataset`
+- 计算软件：p.21 `LAMMPS`；p.21 `VASP`；p.21 `Vienna Ab Initio Simulation Package`
 
 ### Machine Learning Force Fields
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.3 `training set`；p.10 `RMSE`；p.11 `cutoff radius`
+- 计算软件：p.18 `LAMMPS`；p.20 `LAMMPS`
+- 分子动力学条件：p.56 `NVT`；p.56 `simulation was performed at 1600 K`；p.56 `timestep of 1 fs`
 
 ### Machine learning for interatomic potential models
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `machine learning interatomic potential`；p.2 `machine-learned interatomic potential`；p.3 `training data`
+- 分子动力学条件：p.7 `molecular dynamics at 500 K`
 
 ### Factors that affect Li mobility in layered lithium transition metal oxides
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 平面波截断能：p.1 `energy cutoff of 400 eV`
+- 泛函与电子结构近似：p.1 `projector-augmented wave`
+- 计算软件：p.1 `Vienna ab initio simulation package`
+- 扩散与迁移势垒方法：p.3 `migration barrier`；p.4 `migration barrier`；p.5 `migration barrier`
 
 ### Structures, Thermodynamics, and Li+ Mobility of Li10GeP2S12: A First-Principles Analysis
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.2 `generalized gradient approximation`；p.2 `PAW`；p.2 `projector augmented wave`
+- 扩散与迁移势垒方法：p.2 `CI-NEB`；p.2 `migration pathway`；p.2 `nudged elastic band`
+- 计算软件：p.2 `VASP`；p.2 `Vienna Ab initio Simulation Package`
 
 ### Origin of Fast Ion Conduction in Li10GeP2S12, a Superionic Conductor
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.2 `generalized gradient approximation`；p.2 `GGA`；p.2 `PBE`
+- 扩散与迁移势垒方法：p.2 `migration barrier`；p.2 `NEB`；p.2 `nudged elastic band`
+- k 点采样：p.2 `3 × 3 × 2 Monkhorst −Pack k-point`
+- 计算软件：p.2 `VASP`；p.2 `Vienna Ab initio Simulation Package`
 
 ### One-dimensional stringlike cooperative migration of lithium ions in an ultrafast ionic conductor
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `machine learning interatomic potential`
+- 泛函与电子结构近似：p.2 `GGA`；p.2 `PAW`；p.2 `projector augmented-wave`
+- 计算软件：p.2 `VASP`；p.2 `Vienna Ab-initio Simulation Package`
+- 分子动力学条件：p.3 `simulation time at 600 K`
+- 扩散与迁移势垒方法：p.4 `NEB`；p.4 `nudged elastic band`
 
 ### High-Throughput Screening of Solid-State Li-Ion Conductors Using Lattice-Dynamics Descriptors
 
@@ -555,11 +621,18 @@
 
 ### First-principles prediction of potentials and space-charge layers in all-solid-state batteries
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 泛函与电子结构近似：p.2 `PAW`；p.2 `PBE`；p.2 `projector-augmented wave`
+- 计算软件：p.2 `vasp`；p.3 `pymatgen`
 
 ### Machine Learning-Accelerated First-Principles Study of Atomic Configuration and Ionic Diffusion in Li10GeP2S12 Solid Electrolyte
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 分子动力学条件：p.1 `900 K using ab initio molecular dynamics`；p.5 `NVT`；p.5 `simulations began with an initial temperature of 100 K`
+- 泛函与电子结构近似：p.2 `PBE`；p.3 `PBE`；p.5 `generalized gradient approximation`
+- 超胞与模型规模：p.3 `1 × 1 × 1 supercell`
+- 计算软件：p.4 `Pymatgen`；p.5 `VASP`；p.5 `Vienna Ab initio Simulation Package`
+- k 点采样：p.5 `4× 4 × 2 k-point`
+- 机器学习训练设置：p.5 `training set`；p.5 `validation set`
+- 扩散与迁移势垒方法：p.9 `Arrhenius equation`；p.9 `mean square displacement`；p.9 `MSD`
 
 ### First-principles study on selenium-doped Li10GeP2S12 solid electrolyte: Effects of doping on moisture stability and Li-ion transport properties
 
@@ -567,11 +640,16 @@
 
 ### Toward the Formation of the Solid Electrolyte Interphase on Alkaline Metal Anodes: Ab Initio Simulations
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 分子动力学条件：p.5 `3 ps simulation`；p.5 `30 ps simulation`
+- 泛函与电子结构近似：p.7 `PAW`；p.7 `projector augmented wave`
+- k 点采样：p.7 `5 × 5 × 1 k-point`
+- 计算软件：p.7 `VASP`；p.7 `Vienna ab initio simulation package`
 
 ### Quantum chemical calculations of lithium-ion battery electrolyte and interphase species
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.2 `MAE`；p.2 `mean absolute error`；p.14 `Test Set`
+- 泛函与电子结构近似：p.9 `generalized gradient approximation`；p.9 `GGA`；p.13 `generalized gradient approximation`
+- 计算软件：p.9 `pymatgen`；p.12 `pymatgen`；p.13 `pymatgen`
 
 ### Review—SEI: Past, Present and Future
 
@@ -579,16 +657,350 @@
 
 ### FireWorks: a dynamic workflow system designed for high-throughput applications
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 计算软件：p.31 `ABINIT`；p.35 `vasp`；p.42 `pymatgen`
 
 ### Atomate: A high-level interface to generate, execute, and analyze computational materials science workflows
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 机器学习训练设置：p.1 `energy loss`；p.10 `train data`；p.16 `energy loss`
+- 计算软件：p.1 `pymatgen`；p.2 `LAMMPS`；p.2 `VASP`
+- 泛函与电子结构近似：p.9 `GGA`；p.9 `HSE`；p.9 `PBE`
+- 扩散与迁移势垒方法：p.15 `CI-NEB`；p.15 `Climbing-image nudged elastic band`；p.15 `NEB`
 
 ### Materials Cloud, a platform for open computational science
 
-- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+- 计算软件：p.2 `pymatgen`；p.5 `Quantum ESPRESSO`；p.8 `Quantum ESPRESSO`
 
 ### matminer: An open source toolkit for materials data mining
+
+- 计算软件：p.5 `pymatgen`；p.11 `pymatgen`
+- 机器学习训练设置：p.11 `machine learning potential`；p.15 `MAE`；p.15 `training set`
+- 泛函与电子结构近似：p.14 `GGA`；p.14 `LDA`；p.14 `PBE`
+
+### Understanding solid-state battery electrolytes using atomistic modelling and machine learning
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Toward AI ecosystems for electrolyte and interface engineering in solid-state batteries
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine learning pipelines for the design of solid-state electrolytes
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### A perspective on training machine learning force fields for solid-state electrolyte materials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Redefining atomistic simulations of all-solid-state batteries through machine learning interatomic potentials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Application-oriented design of machine learning paradigms for battery science
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine learning interatomic potential: Bridge the gap between small-scale models and realistic device-scale simulations
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Enabling accurate modelling of materials for a solid electrolyte interphase in lithium-ion batteries using effective machine learning interatomic potentials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### A pre-trained deep potential model for sulfide solid electrolytes with broad coverage and high accuracy
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Principal component analysis enables the design of deep learning potential precisely capturing LLZO phase transitions
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Probing degradation at solid-state battery interfaces using machine-learning interatomic potential
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Size dependent lithium-ion conductivity of solid electrolytes in machine learning molecular dynamics simulations
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine Learning-Assisted Property Prediction of Solid-State Electrolyte
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Computationally Guided Synthesis of Battery Materials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Scalable Parallel Algorithm for Graph Neural Network Interatomic Potentials in Molecular Dynamics Simulations
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Data-Efficient Multifidelity Training for High-Fidelity Machine Learning Interatomic Potentials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### CHIPS-FF: Evaluating Universal Machine Learning Force Fields for Material Properties
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Assessment and Application of Universal Machine Learning Interatomic Potentials in Solid-State Electrolyte Research
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine Learning Interatomic Potentials for Modeling Solid-State Batteries
+
+- 机器学习训练设置：p.1 `Machine Learning Interatomic Potential`；p.2 `machine learning interatomic potential`；p.4 `training data`
+- 泛函与电子结构近似：p.4 `DFT + U`；p.4 `GGA`；p.4 `SCAN`
+- 扩散与迁移势垒方法：p.5 `Arrhenius relation`；p.5 `mean squared displacement`；p.6 `Arrhenius relation`
+- 分子动力学条件：p.8 `14 K/min in MD`
+
+### Machine-learning interatomic potentials for interfaces in all-solid-state batteries: Perspectives on training data, model selection, and validation
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Constructing machine learning interatomic potentials with minimum amount of ab initio data
+
+- 机器学习训练设置：p.1 `machine learning interatomic potential`；p.2 `test dataset`；p.2 `training dataset`
+- 扩散与迁移势垒方法：p.2 `CI-NEB`；p.2 `climbing-image nudged elastic band`；p.2 `migration barrier`
+- 计算软件：p.6 `LAMMPS`；p.8 `VASP`；p.8 `Vienna Ab initio Simulation Package`
+- 超胞与模型规模：p.7 `supercell with 1620 atoms`
+- 分子动力学条件：p.7 `10 ns MD simulation`；p.8 `Nosé-Hoover`；p.8 `NVT`
+- 平面波截断能：p.8 `cutoff energy of 520 eV`
+- 泛函与电子结构近似：p.8 `PAW`；p.8 `PBE`；p.8 `projector augmented wave`
+
+### Computational prediction of solvation structures in calcium battery electrolytes
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### A Perspective on the Molecular Modeling of Electrolyte Decomposition Reactions for Solid Electrolyte Interphase Growth in Lithium‐Ion Batteries
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### A foundation machine learning potential with polarizable long-range interactions for materials modelling
+
+- 机器学习训练设置：p.1 `machine learning potential`；p.2 `machine learning potential`；p.4 `cutoff radius`
+- 扩散与迁移势垒方法：p.5 `Arrhenius plot`；p.5 `MSD`；p.6 `Arrhenius plot`
+- 超胞与模型规模：p.6 `10 × 10 × 10 supercell`；p.6 `10 × 10 ×10 supercell`；p.9 `2 × 2 × 2 supercell`
+- 收敛判据：p.9 `forces fell below the convergence threshold of 0.05 eV/Å`
+- 泛函与电子结构近似：p.9 `PBE`
+
+### Enhancing robustness in machine-learning-accelerated molecular dynamics: A multi-model nonparametric probabilistic approach
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine learning interatomic potential enables interface-level insights into cathode/solid electrolyte adhesion in sodium-ion batteries
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Scaling deep learning for materials discovery
+
+- 泛函与电子结构近似：p.1 `r2SCAN`；p.3 `PBE`；p.3 `r2SCAN`
+- 机器学习训练设置：p.2 `MAE`；p.2 `Training set`；p.3 `mean absolute error`
+- 计算软件：p.2 `VASP`；p.6 `pymatgen`；p.7 `pymatgen`
+- 平面波截断能：p.9 `520 eV plane-wave-basis cutoff`
+- 分子动力学条件：p.9 `NVT`；p.11 `10 ps of the simulation`；p.11 `NVT`
+
+### Disorder-induced enhancement of lithium-ion transport in solid-state electrolytes
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### InterOptimus: An AI-assisted robust workflow for screening ground-state heterogeneous interface structures in lithium batteries
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine learning study on the structural evolution of high-nickel layered cathodes
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine-learning-accelerated mechanistic exploration of interface modification in lithium metal anode
+
+- 机器学习训练设置：p.1 `machine learning potential`；p.2 `training data`；p.3 `training dataset`
+- 分子动力学条件：p.3 `300 K, completed 528 ps HAML simulation`；p.3 `528 ps simulation`；p.3 `NVT`
+- 扩散与迁移势垒方法：p.5 `migration barrier`
+- 泛函与电子结构近似：p.6 `GGA`；p.6 `PBE`；p.6 `projector augmented wave`
+- k 点采样：p.6 `1 × 1 × 1 k-point`
+- 计算软件：p.6 `LAMMPS`；p.6 `VASP`
+
+### Unraveling charge effects on interface reactions and dendrite growth in lithium metal anode
+
+- 机器学习训练设置：p.2 `machine learning potential`；p.7 `cutoff radius`
+- 分子动力学条件：p.2 `MD simulation based on QMTP (QMTP-MD) at 300 K`；p.3 `44 ps in the simulation`；p.4 `44 ps (b) during the simulation`
+- 扩散与迁移势垒方法：p.4 `MSD`；p.6 `mean square displacement`
+- 计算软件：p.7 `CP2K`；p.7 `LAMMPS`
+
+### Observation of dendrite formation at Li metal-electrolyte interface by a machine-learning enhanced constant potential framework
+
+- 机器学习训练设置：p.3 `training dataset`；p.4 `root mean square error`；p.4 `training dataset`
+- 分子动力学条件：p.4 `50 ps ConstQ simulation`；p.4 `50 ps ConstQ trajectory`；p.4 `500 ps full DP MD trajectory`
+- 平面波截断能：p.9 `cutoff as 100 Ry`
+- 泛函与电子结构近似：p.9 `PBE`
+- k 点采样：p.9 `10 × 10 × 10 k-point`
+- 计算软件：p.10 `LAMMPS`
+
+### Surface orientation-dependent adhesion behavior in Na-cathode and solid-state electrolyte interfaces using machine learning interatomic potential
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Data-driven atomistic modeling of crystalline and glassy solid-state electrolytes
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Integrated machine learning-molecular dynamics framework for electrolyte property prediction
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Electrolyte engineering for lithium-ion batteries: Mechanistic insights into the development of electrolyte from atomic-scale simulation
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine learning interatomic potentials in engineering perspective for developing cathode materials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Atomistic modeling of bulk and grain boundary diffusion in solid electrolyte Li6PS5Cl using machine-learning interatomic potentials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Cartesian atomic cluster expansion for machine learning interatomic potentials
+
+- 机器学习训练设置：p.1 `machine learning interatomic potential`；p.2 `cutoff radius`；p.3 `cutoff radius`
+- 扩散与迁移势垒方法：p.4 `MSD`；p.5 `Mean squared displacement`；p.5 `MSD`
+- 分子动力学条件：p.4 `300 K agrees well with the DFT MD`；p.4 `Nosé-Hoover`；p.4 `time step was 1 fs`
+- 泛函与电子结构近似：p.6 `scan`
+- 计算软件：p.7 `LAMMPS`
+
+### Robust training of machine learning interatomic potentials with dimensionality reduction and stratified sampling
+
+- 机器学习训练设置：p.1 `machine learning interatomic potential`；p.1 `training dataset`；p.1 `training set`
+- 分子动力学条件：p.6 `3000 K and the MD`；p.6 `NpT`；p.6 `NVT`
+- 超胞与模型规模：p.7 `3 × 3 × 2 supercells`；p.8 `3 × 3 × 2 supercells`；p.9 `3 × 3 × 4 supercell`
+- 扩散与迁移势垒方法：p.7 `Arrhenius plot`；p.7 `mean square displacement`；p.7 `MSD`
+- 泛函与电子结构近似：p.9 `generalized gradient approximation`；p.9 `GGA`
+- 计算软件：p.9 `Vienna ab initio simulation package`
+
+### Cartesian atomic moment machine learning interatomic potentials
+
+- 机器学习训练设置：p.1 `Machine learning interatomic potential`；p.4 `Mean absolute error`；p.4 `test set`
+- 扩散与迁移势垒方法：p.4 `mean squared displacement`；p.4 `MSD`；p.5 `Mean squared displacement`
+- 分子动力学条件：p.4 `50 ps in all ﬁve simulation`；p.4 `timestep of 1 fs`
+
+### Machine learning of charges and long-range interactions from energies and forces
+
+- 机器学习训练设置：p.1 `machine learning interatomic potential`；p.2 `cutoff radius`；p.2 `training set`
+- 泛函与电子结构近似：p.5 `HSE06`；p.11 `HSE06`；p.13 `PBE`
+- 分子动力学条件：p.8 `MD simulations at 600 K`；p.9 `MD simulations at 600 K`；p.11 `NPT`
+- 计算软件：p.11 `LAMMPS`；p.14 `pymatgen`；p.14 `VASP`
+- 平面波截断能：p.14 `plane-wave energy cutoff of 520 eV`
+
+### Evidential deep learning for interatomic potentials
+
+- 机器学习训练设置：p.1 `Machine learning interatomic potential`；p.1 `training data`；p.1 `training dataset`
+- 泛函与电子结构近似：p.2 `Hubbard U`；p.8 `PAW`；p.8 `PBE`
+- 分子动力学条件：p.8 `NVT`；p.8 `simulations at 300 K`
+- 计算软件：p.8 `cp2k`
+
+### Navigating chemical design spaces for metal-ion batteries via machine-learning-guided phase-field simulations
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Electronic Moment Tensor Potentials include both electronic and vibrational degrees of freedom
+
+- 机器学习训练设置：p.1 `training set`；p.2 `training data`；p.2 `training set`
+- 泛函与电子结构近似：p.6 `PBE`；p.7 `PAW`；p.7 `projector augmented wave`
+- 分子动力学条件：p.6 `NpT`
+- k 点采样：p.7 `2×2×2 k-point`
+- 计算软件：p.7 `LAMMPS`；p.7 `VASP`
+
+### Universal machine learning interatomic potentials are ready for phonons
+
+- 机器学习训练设置：p.1 `machine learning interatomic potential`；p.1 `mean absolute error`；p.2 `training set`
+- 泛函与电子结构近似：p.2 `PBE`；p.2 `PBEsol`；p.3 `PBE`
+- 计算软件：p.2 `VASP`；p.3 `VASP`
+- 收敛判据：p.6 `force convergence criteria set to 0.005 eV/Å`
+
+### Dynamic oxygen-redox evolution of cathode reactions based on the multistate equilibrium potential model
+
+- 机器学习训练设置：p.1 `Machine learning interatomic potential`；p.1 `Machine-learning Interatomic Potential`；p.1 `training dataset`
+- 分子动力学条件：p.3 `MD simulations at 300 K`；p.3 `time step of 0.02 fs`；p.5 `NVT`
+- 扩散与迁移势垒方法：p.5 `Arrhenius relation`
+- 计算软件：p.5 `LAMMPS`；p.8 `Vienna Ab initio Simulation Package`
+- 收敛判据：p.8 `energy convergence cut-off of 10`
+- 泛函与电子结构近似：p.8 `Hubbard U`；p.8 `PBE`；p.8 `projector augmented wave`
+
+### A Universal Machine Learning Framework Driven by Artificial Intelligence for Ion Battery Cathode Material Design
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Machine-Learning-Accelerated Development of High-Nickel NCM Cathodes via Multivariable Co-optimization
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Combined machine learning and computational protocols to predict electrolyte behavior and SEI formation in Li-metal batteries
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Data‐Driven Lithium Salt Design for Long‐Cycle Lithium Metal Battery
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Discovery Learning predicts battery cycle life from minimal experiments
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Screening of potential candidates for solid electrolyte interphase materials for lithium-ion batteries through a data-driven approach
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### AI-driven exploration and design of inorganic battery materials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Performance-Based Selection of Machine Learning Interatomic Potentials for Studying Solid-State Electrolytes
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Heterogeneous ensemble enables a universal uncertainty metric for atomistic foundation models
+
+- 机器学习训练设置：p.1 `machine-learned interatomic potential`；p.1 `machine-learning interatomic potential`；p.2 `training data`
+- 泛函与电子结构近似：p.4 `PBE`
+- 扩散与迁移势垒方法：p.7 `NEB`；p.8 `migration barrier`
+- 计算软件：p.8 `LAMMPS`
+
+### Machine learning interatomic potential with DFT accuracy for general grain boundaries in α-Fe
+
+- 机器学习训练设置：p.1 `Machine learning interatomic potential`；p.1 `training dataset`；p.2 `training data`
+- 泛函与电子结构近似：p.2 `generalized gradient approximation`；p.2 `PAW`；p.2 `projector-augmented wave`
+- k 点采样：p.2 `Monkhorst-Pack`
+- 分子动力学条件：p.2 `NPT`；p.2 `NVT`；p.3 `NPT`
+- 计算软件：p.2 `LAMMPS`；p.2 `VASP`；p.2 `Vienna ab initio simulation package`
+- 超胞与模型规模：p.3 `3 × 3 × 3 supercell`；p.3 `3 × 3 × 3 supercells`
+
+### Molecular dynamics study on effect of crystal defects in NCM811 cathode structure based on machine learning potential
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Probing Surface Degradation Pathways of Charged Nickel-Oxide Cathode Materials Using Machine-Learning Interatomic Potentials
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Al‐Doping Driven Suppression of Capacity and Voltage Fadings in 4d‐Element Containing Li‐Ion‐Battery Cathode Materials: Machine Learning and Density Functional Theory
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### A database of battery materials auto-generated using ChemDataExtractor
+
+- 泛函与电子结构近似：p.3 `scan`
+- 机器学习训练设置：p.7 `test dataset`
+
+### Data-driven electrolyte design for lithium metal anodes
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Active learning for SNAP interatomic potentials via Bayesian predictive uncertainty
+
+- 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。
+
+### Benchmarking on-the-Fly Machine Learning Force Fields for Ion Hydration: Structure, Coordination, and Exchange Dynamics across Monovalent and Divalent Cations
 
 - 未抽取到方法设置；可能无本地正文或正文未给出可识别参数。

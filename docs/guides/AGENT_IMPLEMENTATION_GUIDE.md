@@ -1,5 +1,7 @@
 # 怎样把Battery Evidence Lab做成真正有工具的科研Agent
 
+> 更新：2026-10-08。当前实现仍以本地证据检索、引用约束回答和受限工具循环为基础。AI 应用及可执行示例见 [AI_BATTERY_APPLICATIONS.md](AI_BATTERY_APPLICATIONS.md)，本地 QLoRA 接入见项目根目录的 `FINETUNE_INTEGRATION.md`。数据集三路切分与数量见 [PROJECT_STATUS.md](PROJECT_STATUS.md)；数据扩充不等于模型训练或真实问答性能提升。
+
 ## 1. 先分清三个层次
 
 - 关键词检索：按词或标签找到论文。
