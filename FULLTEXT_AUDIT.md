@@ -1,8 +1,8 @@
 # 本地全文与证据索引审计
 
-审计时间：2026-10-07T22:19:30+00:00
+审计时间：2026-10-08T03:00:08+00:00
 
-结论：证据库共 176 篇，DOI/出版社记录已核验 176/176；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 128/176 篇，共 6858 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
+结论：证据库共 176 篇，DOI/出版社记录已核验 176/176；其中 16 篇核心论文已取得 WOS UT。本地可检索正文 129/176 篇，共 6924 个页级文本块。未下载项不会伪装成全文，会回退到 DOI 页面或已记录的 WOS 入口。
 
 所有保留文件均通过 PDF 解析、标题匹配、正文/补充材料区分、SHA-256 和重复文件检查。M3GNet 的补充材料单独放在 `literature/supplementary/`，不进入正文索引。
 
@@ -121,7 +121,7 @@
 | 111 | 2026 | Machine learning pipelines for the design of solid-state electrolytes | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 112 | 2026 | A perspective on training machine learning force fields for solid-state electrolyte materials | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 113 | 2026 | Redefining atomistic simulations of all-solid-state batteries through machine learning interatomic potentials | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
-| 114 | 2025 | Application-oriented design of machine learning paradigms for battery science | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
+| 114 | 2025 | Application-oriented design of machine learning paradigms for battery science | 已下载正文 | 18 | 66 | 1.0 | publisher_open_access_browser_download |
 | 115 | 2024 | Machine learning interatomic potential: Bridge the gap between small-scale models and realistic device-scale simulations | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 116 | 2025 | Enabling accurate modelling of materials for a solid electrolyte interphase in lithium-ion batteries using effective machine learning interatomic potentials | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 117 | 2025 | A pre-trained deep potential model for sulfide solid electrolytes with broad coverage and high accuracy | 已下载正文 | 15 | 36 | 1.0 | curated_public_source |
@@ -183,7 +183,7 @@
 | 173 | 2026 | Benchmarking on-the-Fly Machine Learning Force Fields for Ion Hydration: Structure, Coordination, and Exchange Dynamics across Monovalent and Divalent Cations | 未保存本地全文 | — | — | — | WOS/DOI 回退 |
 | 174 | 2025 | Benchmarking machine learning models for predicting lithium ion migration | 已下载正文 | 12 | 52 | 1.0 | curated_public_source |
 | 175 | 2025 | Application of pretrained universal machine-learning interatomic potential for physicochemical simulation of liquid electrolytes in Li-ion batteries | 已下载正文 | 14 | 56 | 1.0 | curated_public_source |
-| 176 | 2025 | Domain oriented universal machine learning potential enables fast exploration of chemical space of battery electrolytes | 已下载正文 | 12 | 49 | 1.0 | curated_public_source |
+| 176 | 2026 | Domain oriented universal machine learning potential enables fast exploration of chemical space of battery electrolytes | 已下载正文 | 12 | 49 | 1.0 | curated_public_source |
 
 ## 尚未保存的正文
 
@@ -196,7 +196,6 @@
 - Machine learning pipelines for the design of solid-state electrolytes，DOI `10.1039/d5mh01525a`：本地未保存正文，使用 WOS/DOI 回退。
 - A perspective on training machine learning force fields for solid-state electrolyte materials，DOI `10.1038/s44456-026-00014-4`：本地未保存正文，使用 WOS/DOI 回退。
 - Redefining atomistic simulations of all-solid-state batteries through machine learning interatomic potentials，DOI `10.1016/j.jechem.2025.08.058`：本地未保存正文，使用 WOS/DOI 回退。
-- Application-oriented design of machine learning paradigms for battery science，DOI `10.1038/s41524-025-01575-9`：本地未保存正文，使用 WOS/DOI 回退。
 - Machine learning interatomic potential: Bridge the gap between small-scale models and realistic device-scale simulations，DOI `10.1016/j.isci.2024.109673`：本地未保存正文，使用 WOS/DOI 回退。
 - Enabling accurate modelling of materials for a solid electrolyte interphase in lithium-ion batteries using effective machine learning interatomic potentials，DOI `10.1039/d5mh01343g`：本地未保存正文，使用 WOS/DOI 回退。
 - Principal component analysis enables the design of deep learning potential precisely capturing LLZO phase transitions，DOI `10.1038/s41524-024-01240-7`：本地未保存正文，使用 WOS/DOI 回退。
@@ -239,3 +238,7 @@
 ## 使用边界
 
 本地全文命中是定位原文页码的入口，不自动等于经过人工复核的科学结论。涉及具体计算参数、数值或因果判断时，仍应回到对应页、图、表与补充材料核对。
+
+## 2026-10-08 增量核验
+
+仅新增核验 `wang2025_battery_ml_paradigms`：18 页正文，DOI/标题一致，SHA-256 `416fe61445c6dc0525adb6de0d96a5cf666c2cd56f1779c418cdcf508f8c5b20`，新增 66 个页级块。其余正文沿用上方既有审计，本轮未重复解析全部 PDF。

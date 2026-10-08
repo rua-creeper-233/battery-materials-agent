@@ -7,7 +7,7 @@
 ## 当前状态
 
 <!-- CURRENT_STATUS_START -->
-统计日期 **2026-10-08**：**176 篇唯一 DOI**；本机已有校验正文 **128 篇**、页码文本块 **6858 个**；WOS UT **16 条**。
+统计日期 **2026-10-08**：**176 篇唯一 DOI**；本机已有校验正文 **129 篇**、页码文本块 **6924 个**；WOS UT **16 条**。
 
 QLoRA 数据：**793 训练 / 78 验证 / 127 测试**。已通过 5 步 GPU 流程验证，未做正式训练或准确率评估；数量与哈希详见 [当前状态](guides/PROJECT_STATUS.md)。
 <!-- CURRENT_STATUS_END -->
@@ -19,6 +19,7 @@ QLoRA 数据：**793 训练 / 78 验证 / 127 测试**。已通过 5 步 GPU 流
 | 入口 | 内容 |
 |---|---|
 | [AI 应用页面](https://rua-creeper-233.github.io/battery-materials-agent/ai-battery-applications.html) | 固态扩散、电解液/聚合物筛选、反应性 SEI、正极筛选、界面与多尺度、科研证据助手 |
+| [基础知识地图](https://rua-creeper-233.github.io/battery-materials-agent/foundations.html) | 可展开的概念、名词解释、前置知识、书籍/论文选读和小练习 |
 | [AI 实施指南](guides/AI_BATTERY_APPLICATIONS.md) | 数据、模型、计算、验证和软硬件实现路径 |
 | [数据驱动复现路线](guides/REPRODUCIBLE_BATTERY_AI_20261008.md) | LiTraj、SevenNet 液态电解液、领域通用势的小规模起步与验收 |
 | [未来方向](guides/BATTERY_COMPUTATION_FUTURE_DIRECTIONS.md) | 近期综述与方法论文支持的研究问题、最小验证和适用边界 |

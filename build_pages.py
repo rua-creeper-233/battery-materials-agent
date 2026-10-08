@@ -23,6 +23,7 @@ def main() -> None:
     copy(ROOT / "static" / "index.html", DOCS / "index.html")
     copy(ROOT / "static" / "future-directions.html", DOCS / "future-directions.html")
     copy(ROOT / "static" / "ai-battery-applications.html", DOCS / "ai-battery-applications.html")
+    copy(ROOT / "static" / "foundations.html", DOCS / "foundations.html")
     copy(ROOT / "FINETUNE_INTEGRATION.md", DOCS / "FINETUNE_INTEGRATION.md")
     copy(ROOT / "static" / "browser_agent.js", DOCS / "browser_agent.js")
     for example in ("relax_mace.py", "msd_from_csv.py", "example_trajectory.csv"):
@@ -39,6 +40,7 @@ def main() -> None:
         "PROJECT_STATUS.md",
         "RELEASE_20261008.md",
         "RELEASE_20261008_CONTINUATION.md",
+        "RELEASE_20261008_FOUNDATIONS.md",
     ):
         copy(ROOT / "guides" / guide, DOCS / "guides" / guide)
     copy(papers_path, DOCS / "data" / "papers.json")
