@@ -201,7 +201,7 @@ def verify(doi: str) -> dict[str, Any] | None:
         "relations": [], "resources": [{"label": "DOI / 出版社记录", "url": m.get("URL") or f"https://doi.org/{norm(doi)}"}], "wos_uid": "",
         "publication_date": "-".join(map(str, printed or online)), "publication_date_precision": date_precision(m, "published-print", "issued", "published"),
         "online_date": "-".join(map(str, online)) if online else "", "online_date_precision": date_precision(m, "published-online", "published"),
-        "verification": {"doi": "verified_crossref_2026-10-08", "publisher": "verified_crossref_2026-10-08", "wos": "not_checked", "fulltext": "not_downloaded", "sources": [m.get("URL") or f"https://doi.org/{norm(doi)}"]}}
+        "verification": {"doi": "verified_crossref_2026-10-08", "publisher": "verified_crossref_2026-10-08", "wos": "not_checked", "sources": [m.get("URL") or f"https://doi.org/{norm(doi)}"]}}
     specials = {
         "10.1021/acs.chemmater.6c01051": ("固态电池 MLIP 方法与验证；用于训练数据、势函数选择和界面模拟路线比较。", ["固态电池", "正极/固态电解质界面"], ["能量、力、扩散、界面稳定性"], "Perspective"),
         "10.1103/physrevmaterials.8.115407": ("Li6PS5Cl 固态电解质体相与晶界扩散的 MLIP/AIMD 原子模拟。", ["Li6PS5Cl 固态电解质", "晶界"], ["Li+扩散、扩散系数、晶界迁移"], "Paper"),

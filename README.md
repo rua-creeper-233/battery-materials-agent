@@ -7,9 +7,9 @@
 ## 当前状态
 
 <!-- CURRENT_STATUS_START -->
-统计日期 **2026-10-08**：**176 篇唯一 DOI**；本机已有校验正文 **129 篇**、页码文本块 **6924 个**；WOS UT **16 条**。
+统计日期 **2026-10-14**：**176 篇唯一 DOI**；WOS UT **16 条**。
 
-QLoRA 数据：**793 训练 / 78 验证 / 127 测试**。已通过 5 步 GPU 流程验证，未做正式训练或准确率评估；数量与哈希详见 [当前状态](guides/PROJECT_STATUS.md)。
+QLoRA 数据：**793 训练 / 78 验证 / 127 测试**。新增数据尚未重新训练；数量与哈希详见 [当前状态](guides/PROJECT_STATUS.md)。
 <!-- CURRENT_STATUS_END -->
 
 旧日期版记录是历史快照；最新统计以 [PROJECT_STATUS.md](guides/PROJECT_STATUS.md)、数据文件和审计结果为准。
@@ -20,6 +20,7 @@ QLoRA 数据：**793 训练 / 78 验证 / 127 测试**。已通过 5 步 GPU 流
 |---|---|
 | [AI 应用页面](https://rua-creeper-233.github.io/battery-materials-agent/ai-battery-applications.html) | 固态扩散、电解液/聚合物筛选、反应性 SEI、正极筛选、界面与多尺度、科研证据助手 |
 | [基础知识地图](https://rua-creeper-233.github.io/battery-materials-agent/foundations.html) | 可展开的概念、名词解释、前置知识、书籍/论文选读和小练习 |
+| [分阶段论文路线](https://rua-creeper-233.github.io/battery-materials-agent/learning-route.html) | 176 篇唯一主阶段分类，baseline 科研常备参考和八个可展开研究分支 |
 | [AI 实施指南](guides/AI_BATTERY_APPLICATIONS.md) | 数据、模型、计算、验证和软硬件实现路径 |
 | [数据驱动复现路线](guides/REPRODUCIBLE_BATTERY_AI_20261008.md) | LiTraj、SevenNet 液态电解液、领域通用势的小规模起步与验收 |
 | [未来方向](guides/BATTERY_COMPUTATION_FUTURE_DIRECTIONS.md) | 近期综述与方法论文支持的研究问题、最小验证和适用边界 |
@@ -27,6 +28,10 @@ QLoRA 数据：**793 训练 / 78 验证 / 127 测试**。已通过 5 步 GPU 流
 | [模型与 Agent 接入](FINETUNE_INTEGRATION.md) | RTX 3060 6GB、WSL、QLoRA 数据、适配器服务与 RAG 配置 |
 
 论文卡片提供 `MS / DFT / MD / VASP / 方法论文 / 进展论文 / 综述 / 观点` 标签。`MS` 表示论文方法中确有 BIOVIA Materials Studio 的使用证据。
+
+学习路线标签独立于软件标签，显示主阶段与可交叉的前沿分支；分类说明见 [学习路线指南](guides/LEARNING_ROUTE_20261014.md)。实验和验证按研究主张选择，并非每个课题必做的固定套餐。
+
+baseline 的五个常备专题交叉参照现有库中 48 篇论文；需要补充的通用参考另见 [11 篇下载清单](guides/BASELINE_DOWNLOAD_LIST_20261014.md)，不冒充已取得全文或计入 176 篇目录。
 
 搜索支持中文问题以及 `tag:DFT`、`tag:MD`、`tag:VASP`、`tag:MS`、`type:方法论文`。结果显示命中理由、DOI、已有 WOS UT 和本机全文页码。检索排序调参与模型微调分别维护。
 

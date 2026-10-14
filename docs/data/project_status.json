@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "as_of": "2026-10-08",
+  "as_of": "2026-10-14",
   "papers": 176,
   "recent_2023_onward": 92,
   "publication_years": {
@@ -50,10 +50,6 @@
     "Viewpoint": 1
   },
   "wos_records": 16,
-  "local_fulltext_papers": 129,
-  "local_fulltext_missing": 47,
-  "indexed_papers": 129,
-  "indexed_chunks": 6924,
   "tags": {
     "DFT": 81,
     "MD": 65,
@@ -68,7 +64,7 @@
     "train": {
       "rows": 793,
       "exists": true,
-      "sha256": "e33e2b35252772ac6a1692402c4044a6d9988f3263c44487bd58b03a2a9e6832",
+      "sha256": "5ec187c0ca65e447d301c13b7529c56381794cd066df32efff3cd90c2bbde6ab",
       "categories": {
         "comparison": 69,
         "evidence_insufficient": 140,
@@ -81,7 +77,7 @@
     "validation": {
       "rows": 78,
       "exists": true,
-      "sha256": "992e4ab2c887d3c86ac69d8d9038e776809f32b4c62f8bbd847395b72038f399",
+      "sha256": "d7efcdaf0f96965c82ae064df05bbef9319d7ca7aa80955ef8545ff3d0b637ac",
       "categories": {
         "comparison": 7,
         "evidence_insufficient": 14,
@@ -94,7 +90,7 @@
     "test": {
       "rows": 127,
       "exists": true,
-      "sha256": "1055c930a7783cd91c2914a2d98c0043dab26102e1284b9e422fb613619cfdde",
+      "sha256": "4df02e19bad31c4abc51923b845037a4428a3c7cab641eb7d18182bad01018de",
       "categories": {
         "comparison": 11,
         "evidence_insufficient": 22,
@@ -106,12 +102,7 @@
     }
   },
   "dataset_rows": 998,
-  "training_smoke": {
-    "run_type": "five_step_pipeline_smoke_only",
-    "global_step": 5,
-    "output": "finetune/outputs/qwen25-battery-lora-smoke-20261008-safe",
-    "scientific_accuracy_evaluated": false
-  },
-  "model_status": "Five-step GPU pipeline smoke completed; no formal retraining or scientific accuracy evaluation.",
-  "scope": "Counts refer to curated catalog and local evidence library; public site contains metadata, not PDFs or private Zotero keys."
+  "training_smoke": null,
+  "model_status": "New datasets prepared; no model retraining performed for this release.",
+  "scope": "Counts refer to the curated catalog, educational metadata, and dataset rows; local full-text holdings and indexing remain private."
 }

@@ -40,11 +40,15 @@ PUBLIC_GUIDES = {
     "RELEASE_20261008.md",
     "RELEASE_20261008_CONTINUATION.md",
     "RELEASE_20261008_FOUNDATIONS.md",
+    "LEARNING_ROUTE_20261014.md",
+    "BASELINE_DOWNLOAD_LIST_20261014.md",
+    "RELEASE_20261014_LEARNING_ROUTE.md",
 }
 LITERATURE = ROOT / "literature"
 PDF_DIR = LITERATURE / "pdfs"
 MANIFEST = LITERATURE / "manifest.json"
 METHOD_EVIDENCE = ROOT / "data" / "method_evidence.auto.json"
+PRIVATE_METHOD_EVIDENCE = ROOT / "private" / "method_evidence.auto.json"
 PAPER_TAGS = ROOT / "data" / "paper_tags.json"
 ZOTERO_LINKS = ROOT / "private" / "zotero-links.local.json"
 DEFAULT_ALLOWED_ORIGIN = "https://rua-creeper-233.github.io"
@@ -62,7 +66,9 @@ def _load_json(path: Path, fallback: Any) -> Any:
 
 
 def _load_method_evidence() -> dict[str, object]:
-    return _load_json(METHOD_EVIDENCE, {"review_status": "not_generated", "papers": {}})
+    # Local extraction must never overwrite a tracked publication payload.
+    source = PRIVATE_METHOD_EVIDENCE if PRIVATE_METHOD_EVIDENCE.is_file() else METHOD_EVIDENCE
+    return _load_json(source, {"review_status": "not_generated", "papers": {}})
 
 
 def _load_zotero_links() -> dict[str, object]:
@@ -154,10 +160,12 @@ class Handler(BaseHTTPRequestHandler):
                     "service": "Battery Evidence Lab local API",
                     "api_version": "v1",
                     "papers": len(AGENT.papers),
-                    "downloaded_pdfs": downloaded,
-                    "fulltext_papers": len({row["paper_id"] for row in AGENT.fulltext_chunks}),
-                    "fulltext_chunks": len(AGENT.fulltext_chunks),
-                    "method_evidence_signals": sum(int(row.get("evidence_count", 0)) for row in methods.values()) if isinstance(methods, dict) else 0,
+                    **({
+                        "downloaded_pdfs": downloaded,
+                        "fulltext_papers": len({row["paper_id"] for row in AGENT.fulltext_chunks}),
+                        "fulltext_chunks": len(AGENT.fulltext_chunks),
+                        "method_evidence_signals": sum(int(row.get("evidence_count", 0)) for row in methods.values()) if isinstance(methods, dict) else 0,
+                    } if self._is_local_request() else {}),
                     "rag": AGENT.rag.status(),
                     "public_api": self.config.public_api,
                 }
@@ -188,6 +196,9 @@ class Handler(BaseHTTPRequestHandler):
             self._json(AGENT.search_config)
             return
         if path == "/api/literature":
+            if not self._is_local_request():
+                self._json({"visibility": "public_sanitized", "papers": {}})
+                return
             raw = _load_json(MANIFEST, {"papers": {}})
             payload: dict[str, object] = {
                 "updated_at": raw.get("updated_at"),
@@ -210,7 +221,7 @@ class Handler(BaseHTTPRequestHandler):
             self._json(_load_zotero_links() if self._is_local_request() else {"visibility": "private", "items": {}})
             return
         if path == "/api/methods":
-            self._json(_load_method_evidence())
+            self._json(_load_method_evidence() if self._is_local_request() else {"visibility": "public_sanitized", "papers": {}})
             return
         if path.startswith("/api/papers/"):
             paper_id = unquote(path.removeprefix("/api/papers/"))
@@ -218,6 +229,9 @@ class Handler(BaseHTTPRequestHandler):
             self._json(paper or {"error": "paper not found"}, 200 if paper else 404)
             return
         if path.startswith("/api/methods/"):
+            if not self._is_local_request():
+                self._json({"error": "method evidence is local-only"}, HTTPStatus.FORBIDDEN)
+                return
             paper_id = unquote(path.removeprefix("/api/methods/"))
             papers = _load_method_evidence().get("papers", {})
             row = papers.get(paper_id) if isinstance(papers, dict) else None
@@ -353,6 +367,10 @@ class Handler(BaseHTTPRequestHandler):
                 self.send_error(HTTPStatus.NOT_FOUND)
                 return
             target = (GUIDES / guide_name).resolve()
+        elif relative == "data/learning_route.json":
+            # Exact allowlist entry: never expose the rest of data/ (which
+            # includes a local full-text index) through the static handler.
+            target = (ROOT / "data" / "learning_route.json").resolve()
         else:
             target = (STATIC / relative).resolve()
             if STATIC.resolve() not in target.parents and target != STATIC.resolve():

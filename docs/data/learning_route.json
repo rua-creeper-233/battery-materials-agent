@@ -1,0 +1,2872 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-14",
+  "policy": "176 篇各有一个主阶段，科研常备参考和前沿分支允许交叉引用。baseline 在本页指科研中反复查验的经典方法、规范与基本素养，不表示课程难度或模型对照；分类是教学/查阅用途，不是质量或行业标准认证。前沿问题为待验证推断，不保证新颖性或发表。实验按主张与资源选择。补充清单尚未纳入这 176 篇，不冒充已取得全文。公开页仅有书目与教学，不含个人附件或本机记录。",
+  "stages": [
+    {
+      "id": "baseline",
+      "label": "baseline · 科研常备参考",
+      "summary": "科研过程中可反复查验的参考区：经典理论与方法、社区常用工具/协议、采样与不确定性，以及论文必须交代清楚的基础内容。不是入门课程，也不是模型比较中的对照模型；按当前任务查阅，不要求先读完全部原始论文。下方参考专题允许跨阶段引用。",
+      "prerequisites": [
+        "科研基本素养：分清自己的实际结果、论文结论和待验证推断；每个科学主张能够找到来源、参数和适用范围。",
+        "理论与量纲：理解研究物理量的定义、单位、近似与参考态，知道哪些现象模型能表达，哪些不能。",
+        "可复现记录：保存结构来源、许可证/数据许可、软件版本、输入、停止条件、种子与分析过程；异常结果不隐藏。",
+        "统计与对照：识别采样相关性、数值/模型/统计误差，以及目标性质需要的独立验证。",
+        "科研诚信与安全：不把未执行的计算写成完成，不把自动定位信号当完整参数，不公开订阅全文、凭据或未授权计算资源。"
+      ],
+      "glossary": [
+        {
+          "term": "baseline（本页定义）",
+          "definition": "可长期反复查验的科研常备论文与规范索引，覆盖经典方法、社区实践和科学证据的基本要求；与模型对照、课程难度分级分开。"
+        },
+        {
+          "term": "方法出处",
+          "definition": "选用的泛函、势、算法和工作流，应能够追溯到原始方法或可靠协议；引用某方法不表示所有默认设置均正确。"
+        },
+        {
+          "term": "SCF 与结构优化",
+          "definition": "SCF 求给定原子位置的自洽电子态；结构优化改变原子/晶胞。电子收敛和原子受力收敛必须分别检查。"
+        },
+        {
+          "term": "数值精度 / 方法准确性",
+          "definition": "参数收敛控制数值精度；与参考理论或实验的差异属于准确性与模型局限。参数更大或训练 loss 更低不自动消除模型误差。"
+        },
+        {
+          "term": "采样与不确定性",
+          "definition": "轨迹帧通常相关；需要说明平衡/生产段、独立重复、拟合区间与误差估计，不能把帧数当独立样本数。"
+        },
+        {
+          "term": "可追溯 / 可复现",
+          "definition": "保存来源、版本、输入与处理过程，使别人能检查和重算；受版权或许可证限制的资源应提供取得方式而非违规公开。"
+        },
+        {
+          "term": "认可范围",
+          "definition": "经典方法、社区常用实践与正式工业标准不是同一回事。本页不为每篇论文宣称通用行业认可，也不保证对所有材料都适用。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "The Feynman Lectures on Physics, Volume III",
+          "authors": "Feynman、Leighton、Sands",
+          "focus": "先读概率幅、态与算符；作为量子概念补课，不替代习题。",
+          "url": "https://www.feynmanlectures.caltech.edu/III_toc.html"
+        },
+        {
+          "title": "Density Functional Theory: A Practical Introduction",
+          "authors": "David S. Sholl、Janice A. Steckel",
+          "focus": "学习平面波 DFT、简单晶体与计算可靠性；按主题选读。",
+          "url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9780470447710"
+        },
+        {
+          "title": "Understanding Molecular Simulation: From Algorithms to Applications（2e）",
+          "authors": "Daan Frenkel、Berend Smit",
+          "focus": "选读系综、MD/MC、统计采样与误差。",
+          "url": "https://www.educate.elsevier.com/book/details/9780122673511"
+        }
+      ],
+      "simulation": [
+        "使用 DFT 前查：泛函/赝势与版本、k 点/截断能、电子/离子收敛、磁性/U/色散和参考态是否与问题一致。",
+        "使用 NEB 前查：端点、路径、图像和受力收敛；报告的是静态势垒还是有限温度自由能，不能混称。",
+        "使用 MD 前查：势的适用域、系综/积分器、时间步、守恒/漂移、平衡段、超胞、生产时长与独立重复。",
+        "解释输运前查：坐标展开、MSD 时间窗、跳跃统计、自扩散与集体电导定义，以及温度/相变与外推假设。",
+        "使用 AI/MLIP 前查：数据理论层次、重复/相邻帧泄漏、独立评估、域外与物理性质验证；伪标签不能冒充 DFT 真值。",
+        "写论文或汇报前查：结果是否真实完成、图表/单位是否可复算、替代解释与局限是否清楚、参考与数据许可是否齐全。"
+      ],
+      "experiments": [
+        {
+          "name": "数值收敛与重复计算",
+          "role": "使用相应方法时必做",
+          "note": "这是计算实验：报告单参数对照、目标量与阈值。MD 另需独立初始化、时间窗和采样误差；不规定适用于所有体系的固定轨迹长度。"
+        },
+        {
+          "name": "已有公开结构/性质对照",
+          "role": "入门验证",
+          "note": "可与公开晶格参数、已知能量差或标准算例对照。温度、成分、缺陷与理论层次须一致或解释差异。"
+        },
+        {
+          "name": "XRD / Raman / 基础电化学",
+          "role": "按研究主张选做",
+          "note": "这里只要求理解测量什么；不要求新手立即制备电池。若论文声称实验验证，应取得真实测量/合作数据，不能用计算图替代。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "研究问题与证据边界",
+          "content": "说明模型、尺度、物理量与可验证假设；区别文献事实、自己的计算和未验证推断。"
+        },
+        {
+          "name": "方法与模型口径",
+          "content": "引用原始方法/协议，交代结构来源、理论层次、软件版本、边界、关键参数、停止条件和统计处理。"
+        },
+        {
+          "name": "质量与独立验证",
+          "content": "收敛、守恒/漂移、重复/采样误差、模型对照、独立/OOD 评价，按使用方法与主张挑选。"
+        },
+        {
+          "name": "科学结果与解释",
+          "content": "核心图回答研究问题；给单位、定义和误差；检验替代解释，避免只堆积软件输出。"
+        },
+        {
+          "name": "局限、数据与补充信息",
+          "content": "说明近似、尺度、温度/成分、采样、未覆盖环境；给允许公开的输入、脚本和数据入口，遵守许可。"
+        }
+      ],
+      "deliverables": [
+        "为自己的项目保留一份“方法—关键设置—出处—适用范围—待核对点”常备表。",
+        "每张图能回答一个问题，并追溯到原始结果、分析脚本和对应方法。",
+        "每次更换体系、方法或版本时重新检查适用范围；不把一篇论文的参数当永久标准。",
+        "按研究主张选择数值对照与物理实验，不把所有测试列成固定套餐。"
+      ],
+      "paper_ids": [
+        "kresse1993_liquid_metals",
+        "kresse1994_ge_transition",
+        "kresse1996_vasp_efficiency",
+        "blochl1994_paw",
+        "kresse1999_paw",
+        "perdew1996_pbe",
+        "dudarev1998_lsda_u",
+        "heyd2003_hse",
+        "grimme2010_dftd",
+        "monkhorst1976_kpoints",
+        "methfessel1989_smearing",
+        "henkelman2000_cineb",
+        "henkelman2000_neb_tangent",
+        "henkelman2006_bader",
+        "marzari1997_wannier"
+      ],
+      "reference_groups": [
+        {
+          "id": "electronic_reference",
+          "label": "电子结构与数值设置：遇到参数就查出处",
+          "summary": "泛函、PAW、占据、k 点、U/色散与能量/电荷分析；经典方法论文不是对所有材料适用的参数标准。",
+          "paper_ids": [
+            "kresse1993_liquid_metals",
+            "kresse1994_ge_transition",
+            "kresse1996_vasp_efficiency",
+            "blochl1994_paw",
+            "kresse1999_paw",
+            "perdew1996_pbe",
+            "dudarev1998_lsda_u",
+            "heyd2003_hse",
+            "grimme2010_dftd",
+            "monkhorst1976_kpoints",
+            "methfessel1989_smearing",
+            "henkelman2000_cineb",
+            "henkelman2000_neb_tangent",
+            "henkelman2006_bader",
+            "marzari1997_wannier"
+          ]
+        },
+        {
+          "id": "md_sampling_reference",
+          "label": "MD 与输运统计：轨迹是否足以支持结论",
+          "summary": "体系/系综、轨迹质量、迁移机制与扩散统计。查定义和统计处理，不从别的体系复制时长或温度。",
+          "paper_ids": [
+            "thompson2022_lammps",
+            "he2018_aimd_statistics",
+            "mo2012_lgps_aimd",
+            "he2017_concerted_diffusion",
+            "vanderven2001_diffusion",
+            "persson2010_graphite"
+          ]
+        },
+        {
+          "id": "workflow_reference",
+          "label": "软件、数据与可复现协议：需要时查操作",
+          "summary": "VASP/VASPKIT、ASE/pymatgen、数据来源与可追溯工作流。软件论文提供方法入口，不免除数值验证或许可证要求。",
+          "paper_ids": [
+            "geng2025_vaspkit_protocol",
+            "wang2021_vaspkit",
+            "larsen2017_ase",
+            "ong2013_pymatgen",
+            "jain2013_materials_project",
+            "togo2015_phonopy",
+            "ganose2018_sumo",
+            "pizzi2016_aiida",
+            "fireworks2015_workflow",
+            "mathew2017_atomate",
+            "ganose2025_atomate2",
+            "talirz2020_materials_cloud"
+          ]
+        },
+        {
+          "id": "mlip_reference",
+          "label": "MLIP 与 AI 评价：模型是否真的可靠",
+          "summary": "描述符/模型基础、数据与独立评价、动态和目标物性验证。方法先进或误差小不等于已适合当前材料。",
+          "paper_ids": [
+            "jacobs2025_mlip_guide",
+            "unke2021_mlff_review",
+            "deringer2019_mlip_review",
+            "mueller2020_mlip_models",
+            "behler2007_nnp",
+            "bartok2010_gap",
+            "zhang2018_deep_potential",
+            "batzner2022_nequip",
+            "chen2022_m3gnet",
+            "deng2023_chgnet",
+            "dunn2020_matbench",
+            "subramanyam2025_entropy_data"
+          ]
+        },
+        {
+          "id": "paper_practice_reference",
+          "label": "问题、解释与报告：写论文前反复自查",
+          "summary": "用综述和评价/统计方法辅助检查问题、模型、对照与结论。通用数据管理与采样规范仍有缺口，见下方新增论文下载清单。",
+          "paper_ids": [
+            "urban2016_computational_review",
+            "butler2018_ml_materials_review",
+            "ling2022_battery_informatics",
+            "he2018_aimd_statistics",
+            "dunn2020_matbench",
+            "jacobs2025_mlip_guide"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beginner",
+      "label": "入门 · 从教程走到一个可复现算例",
+      "summary": "先从综述、软件/协议论文建立地图，再选一条任务线完成闭环：结构 → 方法 → 分析 → 文献对照。计算论文无需一上来就包含 DFT、MD、AI 和电芯实验的全部工具。",
+      "prerequisites": [
+        "通过 Baseline 的输入、收敛、单位与可复现记录检查。",
+        "会读摘要、方法、主图和补充信息；从原文找关键参数，区分软件默认值与作者设置。",
+        "Python 能读取结构或轨迹，计算统计量并画图；认识 ASE/pymatgen、VASP/VASPKIT、LAMMPS 或 Materials Studio 各自角色。",
+        "先选一个任务与一种材料，不同时学习所有软件；MS 标签只表示已整理元数据里的 Materials Studio 使用依据。"
+      ],
+      "glossary": [
+        {
+          "term": "结构优化 / 静态计算",
+          "definition": "先获得合理结构，再对固定结构计算性质。结构优化、DOS 和扩散并不是同一种任务。"
+        },
+        {
+          "term": "DOS 与能带",
+          "definition": "描述电子态分布与色散。它们可以帮助解释电子性质，但不能单靠能带证明离子导电更好。"
+        },
+        {
+          "term": "MD / AIMD / MLIP-MD",
+          "definition": "经典 MD 使用经验势；AIMD 逐步计算电子结构力；MLIP 用训练好的能量/力模型驱动 MD。轨迹分析仍需独立验证。"
+        },
+        {
+          "term": "RDF / 配位数",
+          "definition": "RDF 描述径向结构统计，配位数依赖积分截断与原子对定义。结构峰不是直接的反应证据。"
+        },
+        {
+          "term": "MSD / 扩散系数",
+          "definition": "展开周期坐标后，在线性扩散时间区间从 MSD 斜率估计 D；3D 各向同性时 D=斜率/6。弹道段、平台段和跳跃不足时不能硬拟合。"
+        },
+        {
+          "term": "复现 / 外推",
+          "definition": "复现原文模型与条件是第一步；更换成分、温度或软件会引入新问题，不能沿用原文结论。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "Density Functional Theory: A Practical Introduction",
+          "authors": "David S. Sholl、Janice A. Steckel",
+          "focus": "学习平面波 DFT、简单晶体与计算可靠性；按主题选读。",
+          "url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9780470447710"
+        },
+        {
+          "title": "Computer Simulation of Liquids（2e）",
+          "authors": "Michael P. Allen、Dominic J. Tildesley",
+          "focus": "练习周期边界、积分器、相关函数和输运分析。",
+          "url": "https://academic.oup.com/book/27866"
+        },
+        {
+          "title": "Electrochemical Methods: Fundamentals and Applications（3e）",
+          "authors": "Allen J. Bard、Larry R. Faulkner、Henry S. White",
+          "focus": "选读电极过程、传质、电位参考与阻抗；结合合作实验讨论。",
+          "url": "https://books.wiley.com/titles/9781119334064/"
+        },
+        {
+          "title": "VASP 官方分子动力学与过渡态教程",
+          "authors": "VASP 开发团队",
+          "focus": "核对版本相关输入、系综与收敛；参数不能从案例照抄。",
+          "url": "https://vasp.at/wiki/MD_runs"
+        }
+      ],
+      "simulation": [
+        "先读 Urban 等电池计算综述或 Butler 等材料机器学习综述，再读 ASE/pymatgen 与 VASPKIT 协议论文；写一页方法选择表。",
+        "任务线 A：选一个简单非磁性晶体做优化和静态性质；完成结构、能量与数值收敛对照，不把软件输出当成机制。",
+        "任务线 B：用可核对的公开 MD 轨迹或可靠示例力场分析 RDF、配位数、MSD 与 D。说明平衡段、生产段、坐标展开及拟合窗口。",
+        "从复现论文的方法与补充信息提取参数表：体系、原子数、模型、时间尺度、软件版本、温度/压力、对照与输出量；缺项标记未知。",
+        "用同一脚本生成重复轨迹结果及误差，不同条件的曲线放在同一坐标轴；先复现趋势再尝试一个小改动。",
+        "形成输入/分析/图表/讨论四部分小报告，注明与原文不一致的资源或模型条件。"
+      ],
+      "experiments": [
+        {
+          "name": "结构与动力学数值对照",
+          "role": "计算路线必做",
+          "note": "DFT 对照晶格/能量/力；MD 对照 RDF、密度、扩散统计或参考轨迹。按选定任务做，不要求所有指标。"
+        },
+        {
+          "name": "XRD、Raman 或 FTIR",
+          "role": "合作/已有数据可选",
+          "note": "结构与局部环境对照。实验平均结构与模拟单一构型不能一一等同。"
+        },
+        {
+          "name": "EIS 与温度依赖电导",
+          "role": "研究离子输运时相关",
+          "note": "需要几何尺寸、接触、拟合模型与离子/电子贡献说明；缺少这些时不直接用一个电阻数与 D 对比。"
+        },
+        {
+          "name": "CV、恒流充放电",
+          "role": "电极电位/容量主张时相关",
+          "note": "真实电池测试受电解液、负载、倍率和副反应影响；基础电子结构练习不强制做整套测试。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "引言 / 综述地图",
+          "content": "问题是什么、采用何种方法、相对哪篇基线改进；综述不是新的实验结果。"
+        },
+        {
+          "name": "模型与步骤图",
+          "content": "给出结构来源、计算流程、关键输入、软件版本及分析步骤。"
+        },
+        {
+          "name": "复现与验证",
+          "content": "主图建议包括结构/流程、收敛/对照、一个核心性质；对照应来自原文或公开基准。"
+        },
+        {
+          "name": "结果与讨论",
+          "content": "解释趋势并列出可能的其他解释，不能只罗列 DOS、RDF、MSD 图片。"
+        },
+        {
+          "name": "局限和补充信息",
+          "content": "列出模型尺度、短轨迹、结构选择、许可与缺失参数；附原始数据和脚本。"
+        }
+      ],
+      "deliverables": [
+        "能独立完成一个原文支持的小复现，不依赖自动问答猜参数。",
+        "有一张原文参数提取表、一套图与至少一个失败/偏差解释。",
+        "能在组会说明每张图回答哪个问题、对应哪篇论文。",
+        "通过复现并不自动形成新论文；下一步先提出可以证伪的研究问题。"
+      ],
+      "paper_ids": [
+        "butler2018_ml_materials_review",
+        "xie2019_gdynet",
+        "urban2016_computational_review",
+        "ceder1998_cathode_design",
+        "ling2022_battery_informatics",
+        "geng2025_vaspkit_protocol",
+        "wang2021_vaspkit",
+        "ong2013_pymatgen",
+        "larsen2017_ase",
+        "jain2013_materials_project",
+        "togo2015_phonopy",
+        "ganose2018_sumo",
+        "thompson2022_lammps",
+        "pizzi2016_aiida",
+        "himanen2020_dscribe",
+        "dunn2020_matbench",
+        "wang2018_sei_modeling_review",
+        "shi2021_reaxff_battery_review",
+        "deringer2019_mlip_review",
+        "mishin2021_mlip_review",
+        "unke2021_mlff_review",
+        "mueller2020_mlip_models",
+        "peled2017_sei_review",
+        "fireworks2015_workflow",
+        "mathew2017_atomate",
+        "talirz2020_materials_cloud",
+        "ward2016_matminer",
+        "qi2021_electrolyte_dataset",
+        "li2024_sse_property_prediction_review",
+        "dutra2025_sse_atomistic_ml_review",
+        "wang2025_battery_ml_paradigms",
+        "szymanski2024_computational_synthesis",
+        "ganose2025_atomate2",
+        "shen2024_pymatgen_defects"
+      ]
+    },
+    {
+      "id": "intermediate",
+      "label": "进阶 · 机制、统计与可靠的 DFT→MD→AI 链条",
+      "summary": "开始把能量、路径、统计与机制连起来。经典电压/扩散论文和成熟 MLIP 方法放在这里；使用机器学习不是创新本身，要证明其在具体体系里可信且有用。",
+      "prerequisites": [
+        "能够复现基础计算，熟悉晶体缺陷、自由能/化学势、势能面和统计采样。",
+        "按方向补 DFT+U/磁序/色散、NEB、AIMD 或经典力场参数化；不要混用不相容的参考能。",
+        "会做误差传播、独立重复、时间序列相关分析；理解采样不足、有限尺寸与高温外推。",
+        "AI 路线须掌握训练/验证/测试区别、构型分组、域外检测和物理验证。用于问答的 QLoRA 与用于原子力的 MLIP 是两类模型。"
+      ],
+      "glossary": [
+        {
+          "term": "形成能 / 凸包 / 化学势",
+          "definition": "比较相稳定性需要一致参考态、组成和计算层次。离凸包距离不直接证明可合成，也不包含所有温度/动力学效应。"
+        },
+        {
+          "term": "平均嵌入电压",
+          "definition": "近似由不同嵌锂状态与 Li 金属参考能的反应能差决定；温度/熵、U 和参考态会改变结果。能量或带隙不是电池电压。"
+        },
+        {
+          "term": "迁移 / 缺陷 / 协同扩散",
+          "definition": "单离子最小路径、空位浓度和多离子协同运动可能同时影响输运；一个 NEB 势垒不能代表所有机制。"
+        },
+        {
+          "term": "Nernst–Einstein 近似",
+          "definition": "用自扩散系数估计电导率时忽略离子运动的交叉相关；需明确近似并与集体电导/实验区分。"
+        },
+        {
+          "term": "MLIP 训练域",
+          "definition": "模型只在足够覆盖的成分、结构、温压、电荷和反应环境中才可能可信；力 RMSE 低不保证正确势垒或长时 MD。"
+        },
+        {
+          "term": "数据泄漏",
+          "definition": "相邻轨迹帧随机分到训练与测试会过于乐观。按轨迹/结构族/相或材料划分，并检查预训练模型可能见过的来源。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "Electronic Structure: Basic Theory and Practical Methods（2e）",
+          "authors": "Richard M. Martin",
+          "focus": "补足电子结构理论与近似边界；不要求从头通读。",
+          "url": "https://www.cambridge.org/core/books/electronic-structure/ED0FF348536BFFE8899627C8F78FEE6A"
+        },
+        {
+          "title": "Understanding Molecular Simulation: From Algorithms to Applications（2e）",
+          "authors": "Daan Frenkel、Berend Smit",
+          "focus": "选读系综、MD/MC、统计采样与误差。",
+          "url": "https://www.educate.elsevier.com/book/details/9780122673511"
+        },
+        {
+          "title": "Computer Simulation of Liquids（2e）",
+          "authors": "Michael P. Allen、Dominic J. Tildesley",
+          "focus": "练习周期边界、积分器、相关函数和输运分析。",
+          "url": "https://academic.oup.com/book/27866"
+        },
+        {
+          "title": "Electrochemical Methods: Fundamentals and Applications（3e）",
+          "authors": "Allen J. Bard、Larry R. Faulkner、Henry S. White",
+          "focus": "选读电极过程、传质、电位参考与阻抗；结合合作实验讨论。",
+          "url": "https://books.wiley.com/titles/9781119334064/"
+        }
+      ],
+      "simulation": [
+        "选题线 A：重现一个已建立电极的电压/相稳定性趋势；对磁序、U、结构与参考态做有目的的敏感性检查。",
+        "选题线 B：在固态电解质或缺陷材料中定义迁移端点，做多路径 NEB，并比较端点/图像/受力收敛；必要时用 AIMD 判断机制。",
+        "对输运轨迹开展超胞、时长、独立初始化、拟合时间窗与温度检查；给出 D(T) 的区间，不在无跳跃条件下报告假精度。",
+        "拟合 Arrhenius 前检查同一相和同一机制是否成立；若相变或机制改变，不用一条直线强行外推室温。",
+        "AI 线先用冻结的通用势做测试而非立刻训练：对独立 DFT 构型测能量/力，另验证结构、势垒和动态稳定性。",
+        "需要微调时仅生成有明确覆盖目标的 DFT 标签；按独立来源分组，记录增量标签预算，并与未微调模型和简单基线比较。"
+      ],
+      "experiments": [
+        {
+          "name": "收敛、有限尺寸、采样与模型对照",
+          "role": "计算主张必做",
+          "note": "DFT/NEB/AIMD/MLIP 各有不同验证项目；按目标误差预算选择，不存在统一的固定测试步数。"
+        },
+        {
+          "name": "EIS、PFG-NMR 或温度依赖电导",
+          "role": "输运主张的合作对照",
+          "note": "PFG-NMR 多对应自扩散，EIS 测到的电导包含样品与界面影响；与模拟比较时匹配相、成分、温度与尺度。"
+        },
+        {
+          "name": "XRD / operando XRD / XAS",
+          "role": "电极结构与氧化还原对照",
+          "note": "用于相变、局域配位或价态相关证据。DFT 电荷分区不是直接实验氧化态。"
+        },
+        {
+          "name": "XPS / Raman / FTIR / 界面形貌",
+          "role": "反应与界面主张的合作对照",
+          "note": "谱图需化学指认与表面/体相差异；终点产物支持并不唯一证明模拟中的反应路径。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "明确机制假设与对照",
+          "content": "例如缺陷改变通道还是仅改变浓度？提出能被路径/轨迹/实验否定的替代解释。"
+        },
+        {
+          "name": "方法与数据拆分",
+          "content": "完整说明数值层次、模型覆盖与 train/validation/test，独立性比样本数量更重要。"
+        },
+        {
+          "name": "质量证据图",
+          "content": "收敛、误差分布、势垒对照、轨迹稳定与统计区间，不只报告平均 RMSE。"
+        },
+        {
+          "name": "核心机制图",
+          "content": "结合结构、反应/迁移路径、D(T)/电压/自由能等能回答问题的指标；避免无关图堆砌。"
+        },
+        {
+          "name": "可观测量对照与局限",
+          "content": "讨论模型与测量的映射、泛函/采样/尺度偏差，代码数据许可与可复现输入。"
+        }
+      ],
+      "deliverables": [
+        "形成一个有明确对照、可检验机制和不确定性说明的小课题。",
+        "至少能解释为何某个模型误差会影响最终物理量。",
+        "若做 MLIP，测试集和最终输运评估不能使用调参中反复看过的轨迹。",
+        "选一条主线深入；并不要求一个硕士课题同时完成所有方法和物理实验。"
+      ],
+      "paper_ids": [
+        "aydinol1997_voltage",
+        "vanderven2001_diffusion",
+        "persson2010_graphite",
+        "he2017_concerted_diffusion",
+        "smith2020_paddlewheel_ms",
+        "ong2011_li_na",
+        "ong2013_lgps",
+        "shi2013_sei_li2co3",
+        "sendek2017_sse_screening",
+        "baktash2020_argyrodite_aimd",
+        "leung2010_sei_aimd",
+        "mo2012_lgps_aimd",
+        "smidstrup2014_idpp",
+        "he2018_aimd_statistics",
+        "xie2022_polymernet",
+        "xie2018_cgcnn",
+        "hossain2020_reaxff_electrolyte",
+        "kang2006_li_mobility",
+        "du2014_lgps_mobility",
+        "bhandari2016_lgps_conduction",
+        "xu2012_stringlike_migration",
+        "swift2019_space_charge",
+        "nachimuthu2022_se_doped_lgps",
+        "muy2015_high_throughput_sse",
+        "recent_10_1038_s41597-020-00602-2",
+        "recent_10_1016_j_mechmat_2024_105237",
+        "recent_10_1002_aenm_202201497",
+        "subramanyam2025_entropy_data",
+        "stottmeister2023_sei_alkali",
+        "wu2023_edl_ms",
+        "sheng2024_lipf6_hydrolysis_ms",
+        "li2024_polymeric_asei_ms",
+        "wu2025_spe_aimd_ms",
+        "zhang2025_sei_phasefield_ms",
+        "chen2025_heteroalkali_ms",
+        "qi2024_lgps_ml_aimd",
+        "tan2026_pemd",
+        "zhou2004_dftu_voltage",
+        "behler2007_nnp",
+        "behler2011_symmetry_functions",
+        "bartok2010_gap",
+        "thompson2015_snap",
+        "zhang2018_deep_potential",
+        "podryabinkin2017_active_learning",
+        "vandermause2020_active_learning",
+        "jinnouchi2020_otf_mlff",
+        "jinnouchi2019_melting_mlff",
+        "deringer2021_gpr_gap",
+        "batzner2022_nequip",
+        "chen2022_m3gnet",
+        "wang2018_deepmdkit",
+        "zhang2020_dpgen",
+        "recent_10_1038_s41524-024-01332-4",
+        "recent_10_1038_s41524-024-01222-9",
+        "bernstein2019_self_guided"
+      ]
+    },
+    {
+      "id": "frontier",
+      "label": "多个前沿方向 · 从论文证据到研究机会",
+      "summary": "下面按八条方向展开。每篇有唯一主阶段；同一论文也可作为多个方向的支撑，因此方向篇数不能相加当作库总量。前沿标签指本库的选题地图，不保证新颖性、可发表性或工业可用性。",
+      "prerequisites": [
+        "具备进阶阶段的物理量、统计和模型验证能力，并先完成相关经典基线。",
+        "选题前再次检索近期文献、数据/代码与团队资源；本页不是截至当天的穷尽性前沿调查。",
+        "预算 DFT 标签、长轨迹与实验合作成本；电脑可先做小模型分析，大规模任务需要组内计算资源。",
+        "将真实论文结论、综述展望和本页推导出的待验证问题分开记录。"
+      ],
+      "glossary": [
+        {
+          "term": "研究机会 / 新颖性",
+          "definition": "论文暴露的限制可生成研究假设，但“别人没做过”须靠额外检索证实；负结果和复现偏差也有科学价值。"
+        },
+        {
+          "term": "域外 / OOD",
+          "definition": "超出训练成分、结构或状态分布。模型自信不代表正确，需要域外识别和独立标注。"
+        },
+        {
+          "term": "主动学习",
+          "definition": "用当前模型识别值得标注的构型或材料，再计算/测量更新；选择规则必须被独立验证。"
+        },
+        {
+          "term": "通用原子势 / 微调 / 蒸馏",
+          "definition": "预训练势可作为起点，微调适配目标，蒸馏加快推断；不能把“少量标签有效”的个例变成所有体系的保证。"
+        },
+        {
+          "term": "计算—实验闭环",
+          "definition": "模型提出候选，真实计算/测量验证，再将结果回流。只有问答或检索的 agent 并不等于完成了闭环。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "Electronic Structure: Basic Theory and Practical Methods（2e）",
+          "authors": "Richard M. Martin",
+          "focus": "补足电子结构理论与近似边界；不要求从头通读。",
+          "url": "https://www.cambridge.org/core/books/electronic-structure/ED0FF348536BFFE8899627C8F78FEE6A"
+        },
+        {
+          "title": "Computer Simulation of Liquids（2e）",
+          "authors": "Michael P. Allen、Dominic J. Tildesley",
+          "focus": "练习周期边界、积分器、相关函数和输运分析。",
+          "url": "https://academic.oup.com/book/27866"
+        },
+        {
+          "title": "Electrochemical Methods: Fundamentals and Applications（3e）",
+          "authors": "Allen J. Bard、Larry R. Faulkner、Henry S. White",
+          "focus": "选读电极过程、传质、电位参考与阻抗；结合合作实验讨论。",
+          "url": "https://books.wiley.com/titles/9781119334064/"
+        }
+      ],
+      "simulation": [
+        "从一条方向选择一个具体问题，而不是“DFT+AI”这种工具组合。",
+        "建立公开基线、固定独立评价集、规定成功/失败标准，再加入新方法。",
+        "先做小规模否证实验和资源评估；如果关键假设失败，及时调整问题。",
+        "保留可复现代码、数据许可、版本、失败构型和未完成事项，避免用自动回答代替科学证据。"
+      ],
+      "experiments": [
+        {
+          "name": "独立验证与消融",
+          "role": "研究主张必做",
+          "note": "在未用于调参的条件上评估最终性质；按方向比较经典方法、未微调模型或简单统计模型。"
+        },
+        {
+          "name": "物理实验/工业数据合作",
+          "role": "依主张和资源决定",
+          "note": "若声称新材料有效、寿命提高或可制造，应提供相应真实验证；纯方法/机制论文也可以成立，但必须限制外推范围。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "研究缺口与已有基线",
+          "content": "说明缺口来自哪篇论文/数据，为什么不是简单更换模型名或增加图表。"
+        },
+        {
+          "name": "可检验假设与方法",
+          "content": "把模型/数据/计算或实验过程设计成能证伪的方案。"
+        },
+        {
+          "name": "独立质量与物理结果",
+          "content": "同时检验模型输出、目标性质、失败范围、消融与计算成本。"
+        },
+        {
+          "name": "讨论、局限和可复现资源",
+          "content": "说明尚未覆盖的状态、尺度和工业边界；发布代码/允许的数据，而非受限资源。"
+        }
+      ],
+      "deliverables": [
+        "选择一条主方向，写成 1 页问题—基线—验证—资源—风险计划。",
+        "每个关键结论能定位到论文或自己的真实结果。",
+        "用实测成本/误差报告是否值得继续，不承诺固定周期或一定发文章。"
+      ],
+      "paper_ids": [
+        "kuhn2026_hitpoly",
+        "yang2026_oxygen_sei",
+        "zhong2025_les_response",
+        "takenaka2026_sei_mlff",
+        "wang2023_sodium_design",
+        "wang2023_nasicon_design",
+        "sawada2024_nnp_sse",
+        "deng2023_chgnet",
+        "jacobs2025_mlip_guide",
+        "musaelian2023_allegro",
+        "batatia2025_mace_mp",
+        "radova2025_frozen_transfer",
+        "bilbrey2025_uq",
+        "wang2025_ai_sse_interface",
+        "jain2026_ml_sse_pipelines",
+        "yan2026_sse_mlff_training_perspective",
+        "chen2026_mlips_assb_review",
+        "wang2024_mlip_scaling_review",
+        "li2025_sei_effective_mlips",
+        "wang2025_dpa_sse",
+        "you2024_llzo_pca_deepmd",
+        "kim2024_llzo_lco_interface_mlff",
+        "zhang2024_mlmd_size_conductivity",
+        "recent_10_1021_acs_jctc_4c00190",
+        "recent_10_1021_jacs_4c14455",
+        "recent_10_1021_acsmaterialslett_5c00093",
+        "recent_10_1021_acsmaterialslett_5c00336",
+        "recent_10_1021_acs_chemmater_6c01051",
+        "recent_10_1557_s43579-026-00928-9",
+        "recent_10_1038_s41524-026-02023-y",
+        "recent_10_1039_d4ta06675h",
+        "recent_10_1002_adfm_202313188",
+        "recent_10_1038_s41467-025-65496-3",
+        "recent_10_1016_j_est_2026_121104",
+        "recent_10_1038_s41586-023-06735-9",
+        "recent_10_1038_s41467-025-56322-x",
+        "recent_10_1016_j_jechem_2025_03_007",
+        "recent_10_1016_j_mtener_2025_101841",
+        "recent_10_1038_s41524-025-01747-7",
+        "recent_10_1038_s41524-025-01615-4",
+        "recent_10_1038_s41467-025-62824-5",
+        "recent_10_1016_j_jpowsour_2025_237670",
+        "recent_10_1039_d5cc04921k",
+        "recent_10_1039_d6eb00024j",
+        "recent_10_1016_j_ensm_2025_104826",
+        "recent_10_1039_d4ta03452j",
+        "recent_10_1103_physrevmaterials_8_115407",
+        "recent_10_1038_s41524-024-01227-4",
+        "recent_10_1038_s41524-025-01623-4",
+        "recent_10_1038_s41467-025-63852-x",
+        "recent_10_1038_s41467-025-67663-y",
+        "recent_10_1038_s41524-025-01735-x",
+        "recent_10_1038_s41524-025-01650-1",
+        "recent_10_1038_s41524-025-01714-2",
+        "recent_10_1021_jacsau_5c00526",
+        "recent_10_1021_acsenergylett_5c02723",
+        "recent_10_1016_j_cej_2025_163801",
+        "recent_10_1002_adsu_202500413",
+        "recent_10_1038_s41586-025-09951-7",
+        "recent_10_1039_d5cp02726h",
+        "recent_10_1016_j_rser_2025_116633",
+        "recent_10_1021_acs_chemmater_5c02352",
+        "recent_10_1038_s41524-025-01905-x",
+        "recent_10_1038_s41524-024-01451-y",
+        "recent_10_1016_j_jpowsour_2025_239008",
+        "recent_10_1021_acsami_5c11818",
+        "recent_10_1073_pnas_2214357120",
+        "recent_10_1016_j_commatsci_2024_113074",
+        "recent_10_1021_acs_jpcb_6c02837",
+        "recent_10_1038_s41524-025-01571-z",
+        "recent_10_1039_d5dd00025d",
+        "recent_10_1038_s41467-025-67982-0"
+      ]
+    }
+  ],
+  "frontiers": [
+    {
+      "id": "mlip_transport_and_sse",
+      "label": "固态电解质：缺陷、无序与集体离子输运",
+      "summary": "从 LGPS 等经典 AIMD 到 MLIP 长时/大超胞输运，研究通道、缺陷与无序如何共同影响可观测的电导。",
+      "question": "改变缺陷或无序后，提高的是单离子自扩散、离子数，还是集体电荷输运？结论对超胞与温度是否稳健？",
+      "prerequisites": [
+        "NEB、MSD、独立采样与 Nernst–Einstein 近似。",
+        "固态电解质的结构、占位、缺陷与相稳定性。"
+      ],
+      "glossary": [
+        {
+          "term": "协同扩散",
+          "definition": "多个离子的关联跳跃或集体运动，不一定能被一条单离子路径充分描述。"
+        },
+        {
+          "term": "有限尺寸效应",
+          "definition": "周期边界与超胞尺寸会改变通道连通、结构涨落和扩散事件；必须检查目标性质。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "Computer Simulation of Liquids（2e）",
+          "authors": "Michael P. Allen、Dominic J. Tildesley",
+          "focus": "练习周期边界、积分器、相关函数和输运分析。",
+          "url": "https://academic.oup.com/book/27866"
+        },
+        {
+          "title": "Electronic Structure: Basic Theory and Practical Methods（2e）",
+          "authors": "Richard M. Martin",
+          "focus": "补足电子结构理论与近似边界；不要求从头通读。",
+          "url": "https://www.cambridge.org/core/books/electronic-structure/ED0FF348536BFFE8899627C8F78FEE6A"
+        }
+      ],
+      "simulation": [
+        "复现 LGPS/相关体系的结构与一条已报道路径；作为物理基线。",
+        "用独立 DFT/AIMD 对 MLIP 的势垒、力与结构先验验收。",
+        "比较不同尺寸、温度、缺陷/无序配置；检查框架是否保持目标相。",
+        "分析 MSD、跳跃网络和交叉相关；给出自扩散与电导估计的定义及误差。"
+      ],
+      "experiments": [
+        {
+          "name": "EIS / 温度依赖电导",
+          "role": "核心性质对照",
+          "note": "区分体相、晶界、接触与电子泄漏，匹配组成和相。"
+        },
+        {
+          "name": "PFG-NMR / 衍射 / 局域谱学",
+          "role": "机制合作验证",
+          "note": "提供自扩散、占位与结构证据；不是每篇都必须具备全部技术。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "结构—通道—输运",
+          "content": "主图建议：结构/缺陷、路径或密度网络、D(T)/电导定义、尺寸/重复采样对照。"
+        },
+        {
+          "name": "机制与可迁移范围",
+          "content": "比较单离子与协同解释，讨论高温外推、晶界和实际样品差异。"
+        }
+      ],
+      "deliverables": [
+        "一个同时包含数值/统计验证与迁移机制的小复现。",
+        "清楚解释自扩散系数与离子电导率是否等价。"
+      ],
+      "limits": [
+        "静态低势垒不保证低温快速导电。",
+        "短 AIMD 无跳跃不能证明完全不导电；高温熔化轨迹不能代表原固态相。",
+        "不把通用势在三个示例体系的表现外推到所有电解质。"
+      ],
+      "paper_ids": [
+        "he2017_concerted_diffusion",
+        "ong2013_lgps",
+        "sendek2017_sse_screening",
+        "baktash2020_argyrodite_aimd",
+        "sawada2024_nnp_sse",
+        "qi2024_lgps_ml_aimd",
+        "wang2025_dpa_sse",
+        "you2024_llzo_pca_deepmd",
+        "zhang2024_mlmd_size_conductivity",
+        "recent_10_1103_physrevmaterials_8_115407",
+        "recent_10_1021_acs_chemmater_5c02352",
+        "recent_10_1038_s41524-026-02023-y"
+      ]
+    },
+    {
+      "id": "interfaces_sei_and_dendrites",
+      "label": "界面与 SEI/CEI：反应、黏附和化学—力学耦合",
+      "summary": "结合界面结构搜索、DFT/AIMD 与反应性 MLIP，关注结构、反应与输运之间的联系；这是比体相更高风险的模型外推区。",
+      "question": "哪些界面结构/反应产物能解释接触或离子输运变化？反应模型对带电环境、电子化学势和新物种是否足够可靠？",
+      "prerequisites": [
+        "表面/slab、真空/厚度/应变、界面参考能。",
+        "反应路径与电子/离子传输，区分固定电荷和恒电位模型。"
+      ],
+      "glossary": [
+        {
+          "term": "SEI / CEI",
+          "definition": "电极界面反应形成的复合层；成分、厚度、缺陷与电子/离子输运共同决定行为。"
+        },
+        {
+          "term": "黏附功",
+          "definition": "分离界面相关的能量量度，依赖界面面积、结构与参考态；不能直接等同循环寿命。"
+        },
+        {
+          "term": "恒电位",
+          "definition": "控制电子化学势的描述，不等同给体系任意加一个电子；需明确电位参考和电荷补偿。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "Electrochemical Methods: Fundamentals and Applications（3e）",
+          "authors": "Allen J. Bard、Larry R. Faulkner、Henry S. White",
+          "focus": "选读电极过程、传质、电位参考与阻抗；结合合作实验讨论。",
+          "url": "https://books.wiley.com/titles/9781119334064/"
+        },
+        {
+          "title": "Electronic Structure: Basic Theory and Practical Methods（2e）",
+          "authors": "Richard M. Martin",
+          "focus": "补足电子结构理论与近似边界；不要求从头通读。",
+          "url": "https://www.cambridge.org/core/books/electronic-structure/ED0FF348536BFFE8899627C8F78FEE6A"
+        }
+      ],
+      "simulation": [
+        "复现文献的表面/界面构建与应变、终止面和能量参考。",
+        "先验证关键物种、反应能、短距离排斥与力；未覆盖反应的通用势不能直接用于 SEI 生长。",
+        "对多种界面构型或初态采样，统计反应产物/路径或黏附变化。",
+        "按问题增加电荷/电位、应力或离子传输分析；先解释模型能表述什么。"
+      ],
+      "experiments": [
+        {
+          "name": "XPS / cryo-TEM / FTIR / Raman",
+          "role": "产物与形貌合作验证",
+          "note": "终点谱学和微观形貌支持结构/产物，但不是时间分辨路径的唯一证据。"
+        },
+        {
+          "name": "界面 EIS / 对称电池 / 接触压力依赖",
+          "role": "功能主张对照",
+          "note": "匹配电流、容量、压力与温度；真正寿命主张需相应循环数据。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "界面模型与参考态",
+          "content": "展示构建、终止面、应变/厚度敏感性、电位/电荷处理与初态。"
+        },
+        {
+          "name": "反应及功能联系",
+          "content": "反应或黏附证据 + 独立 DFT 验证 + 可观测量对照，讨论未覆盖化学。"
+        }
+      ],
+      "deliverables": [
+        "先做可控的界面/分子反应小体系，不以直接模拟完整 SEI 作为起步目标。",
+        "把能量、化学产物和功能证据分开呈现。"
+      ],
+      "limits": [
+        "固定拓扑力场通常不能描述成键/断键。",
+        "能量/力训练误差低不保证电化学反应与带电界面正确。",
+        "原子尺度短时反应不能直接推导电芯循环寿命或枝晶全尺度演化。"
+      ],
+      "paper_ids": [
+        "shi2013_sei_li2co3",
+        "leung2010_sei_aimd",
+        "stottmeister2023_sei_alkali",
+        "yang2026_oxygen_sei",
+        "takenaka2026_sei_mlff",
+        "wang2025_ai_sse_interface",
+        "li2025_sei_effective_mlips",
+        "kim2024_llzo_lco_interface_mlff",
+        "wu2023_edl_ms",
+        "zhang2025_sei_phasefield_ms",
+        "recent_10_1002_adfm_202313188",
+        "recent_10_1038_s41524-025-01747-7",
+        "recent_10_1038_s41524-025-01615-4",
+        "recent_10_1038_s41467-025-62824-5",
+        "recent_10_1016_j_est_2026_121104",
+        "recent_10_1016_j_jpowsour_2025_237670"
+      ]
+    },
+    {
+      "id": "liquid_and_polymer_electrolytes",
+      "label": "液态与聚合物电解质：溶剂化—链运动—传输",
+      "summary": "从成分、离子配位与聚合物链段动力学出发，连接经典 MD、AIMD 与材料筛选；可发挥高分子背景，但仍需补足统计与电化学。",
+      "question": "提高盐浓度或改变聚合物后，配位交换、链段松弛和离子关联各自起什么作用？为什么自扩散变快未必电导提高？",
+      "prerequisites": [
+        "液体密度/系综、RDF、配位寿命、聚合物链统计。",
+        "电解液配方与电导/迁移数定义，理解电荷缩放或极化力场的限制。"
+      ],
+      "glossary": [
+        {
+          "term": "溶剂化壳层",
+          "definition": "离子周围的局部配位环境；RDF 截断与时间统计决定定量结果。"
+        },
+        {
+          "term": "离子对 / 聚集",
+          "definition": "阳/阴离子关联改变结构与集体传输；不能只靠孤立离子的 D 判断性能。"
+        },
+        {
+          "term": "链段松弛",
+          "definition": "聚合物局部构象运动的时间尺度，可能与离子迁移耦合，需充分采样。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "Understanding Molecular Simulation: From Algorithms to Applications（2e）",
+          "authors": "Daan Frenkel、Berend Smit",
+          "focus": "选读系综、MD/MC、统计采样与误差。",
+          "url": "https://www.educate.elsevier.com/book/details/9780122673511"
+        },
+        {
+          "title": "Computer Simulation of Liquids（2e）",
+          "authors": "Michael P. Allen、Dominic J. Tildesley",
+          "focus": "练习周期边界、积分器、相关函数和输运分析。",
+          "url": "https://academic.oup.com/book/27866"
+        },
+        {
+          "title": "Electrochemical Methods: Fundamentals and Applications（3e）",
+          "authors": "Allen J. Bard、Larry R. Faulkner、Henry S. White",
+          "focus": "选读电极过程、传质、电位参考与阻抗；结合合作实验讨论。",
+          "url": "https://books.wiley.com/titles/9781119334064/"
+        }
+      ],
+      "simulation": [
+        "从 PEMD/PolymerNet 等流程或可靠经典模型选一套已公开输入，先复现密度与配位。",
+        "检查成分、链长、端基、盐比、残溶剂、力场与电荷处理；记录模型限制。",
+        "比较独立轨迹的 RDF、配位交换、MSD 与链段松弛。",
+        "对小的代表性局部环境用 DFT/AIMD 校核，再讨论组分筛选或 ML 性质模型。"
+      ],
+      "experiments": [
+        {
+          "name": "EIS / 密度 / 黏度 / DSC",
+          "role": "按目标性质选择",
+          "note": "验证电导、流动性或玻璃化转变；计算时间尺度与实验条件要对齐。"
+        },
+        {
+          "name": "Raman / FTIR / NMR / 迁移数测量",
+          "role": "结构与传输合作对照",
+          "note": "不同迁移数方法有各自假设；不可把正负离子自扩散比例直接视作全部实验定义。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "配方与模型可复现表",
+          "content": "列出化学结构、组成、链长、温度、力场、盒子、平衡/生产段。"
+        },
+        {
+          "name": "结构到输运的因果检验",
+          "content": "配位/链段统计与输运对照，误差、不同模型敏感性和实验映射。"
+        }
+      ],
+      "deliverables": [
+        "用公开或组内可靠轨迹复现一张结构图与一张传输图。",
+        "提出一个配方/链结构假设，并设计不混淆变量的对照。"
+      ],
+      "limits": [
+        "电荷缩放改善某些性质并非普适准确。",
+        "短轨迹、短链与过高温度不一定代表实际聚合物。",
+        "溶剂化结构与首轮分解、电芯长循环性能之间需要额外证据。"
+      ],
+      "paper_ids": [
+        "tan2026_pemd",
+        "kuhn2026_hitpoly",
+        "xie2022_polymernet",
+        "hossain2020_reaxff_electrolyte",
+        "sheng2024_lipf6_hydrolysis_ms",
+        "wu2025_spe_aimd_ms",
+        "recent_10_1039_d4ta06675h",
+        "recent_10_1039_d6eb00024j",
+        "recent_10_1016_j_ensm_2025_104826",
+        "recent_10_1039_d5dd00025d",
+        "recent_10_1038_s41467-025-67982-0",
+        "recent_10_1038_s41467-025-56322-x",
+        "recent_10_1002_adsu_202500413"
+      ]
+    },
+    {
+      "id": "cathodes_defects_and_redox",
+      "label": "正极与缺陷：电压、结构演化与氧化还原",
+      "summary": "以经典 DFT+U 电压和迁移工作为对照，利用新 MLIP 研究高镍结构演化、缺陷及表面效应，同时审视电子状态描述的边界。",
+      "question": "掺杂或缺陷真的改变了相稳定性/迁移机制，还是只是模型参考态或磁序设置造成趋势？高镍结构演化可否被独立证据支持？",
+      "prerequisites": [
+        "化学势、形成能/凸包、磁性与 DFT+U。",
+        "电压定义、嵌脱离子状态、表面与缺陷建模。"
+      ],
+      "glossary": [
+        {
+          "term": "DFT+U",
+          "definition": "针对选定局域轨道的相关性修正；U 的选取与参考体系影响比较，不能任意调到想要结果。"
+        },
+        {
+          "term": "价态 / 电荷分区",
+          "definition": "Bader 等电荷分区是分析约定，不能直接等同整数氧化态或谱学价态。"
+        },
+        {
+          "term": "缺陷浓度",
+          "definition": "周期超胞含一个缺陷也意味着有限浓度，需尺寸/组成与参考态分析。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "Electronic Structure: Basic Theory and Practical Methods（2e）",
+          "authors": "Richard M. Martin",
+          "focus": "补足电子结构理论与近似边界；不要求从头通读。",
+          "url": "https://www.cambridge.org/core/books/electronic-structure/ED0FF348536BFFE8899627C8F78FEE6A"
+        },
+        {
+          "title": "Electrochemical Methods: Fundamentals and Applications（3e）",
+          "authors": "Allen J. Bard、Larry R. Faulkner、Henry S. White",
+          "focus": "选读电极过程、传质、电位参考与阻抗；结合合作实验讨论。",
+          "url": "https://books.wiley.com/titles/9781119334064/"
+        }
+      ],
+      "simulation": [
+        "重现经典电压或 Li 迁移趋势，建立一致的 U、赝势、磁序和参考态。",
+        "比较组成/缺陷/掺杂的结构与相稳定性；必要时做多个构型和有限尺寸检查。",
+        "用 MLIP 前验证不同脱锂态、畸变和缺陷是否在训练域内。",
+        "将结构演化、路径/反应能与实验可观测量联结，考虑表面与粒子尺度差异。"
+      ],
+      "experiments": [
+        {
+          "name": "XRD / operando XRD / XAS",
+          "role": "相变与氧化还原合作验证",
+          "note": "分别提供平均相、动态结构及局域电子环境信息。"
+        },
+        {
+          "name": "充放电 / GITT / 循环后显微分析",
+          "role": "相关性能主张对照",
+          "note": "GITT 解读依赖模型与工况，测得的表观扩散参数不简单等于原子自扩散。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "参考态与数值敏感性",
+          "content": "展示 DFT+U/磁序、构型、缺陷浓度与电压计算定义。"
+        },
+        {
+          "name": "结构—氧化还原—性能",
+          "content": "用目标图支持机制，独立验证 MLIP 与计算/实验偏差。"
+        }
+      ],
+      "deliverables": [
+        "一个能够重现的电压/缺陷小研究与参数敏感性表。",
+        "能够区分结构趋势、电子态解释与电池性能证据。"
+      ],
+      "limits": [
+        "力场未显式描述电荷转移时，不应假定能跨任意脱锂状态。",
+        "零温相稳定性不等于实际合成或长期循环稳定性。",
+        "不能只凭带隙、Bader 电荷或一条扩散路径声称寿命改善。"
+      ],
+      "paper_ids": [
+        "aydinol1997_voltage",
+        "ceder1998_cathode_design",
+        "zhou2004_dftu_voltage",
+        "kang2006_li_mobility",
+        "shen2024_pymatgen_defects",
+        "recent_10_1016_j_mtener_2025_101841",
+        "recent_10_1021_jacsau_5c00526",
+        "recent_10_1021_acsenergylett_5c02723",
+        "recent_10_1016_j_jpowsour_2025_239008",
+        "recent_10_1021_acsami_5c11818",
+        "recent_10_1039_d4ta03452j"
+      ]
+    },
+    {
+      "id": "ai_screening_and_uq",
+      "label": "AI 材料筛选：数据质量、域外与多目标权衡",
+      "summary": "从 Matbench、材料描述符和经典高通量筛选学习评价，研究小数据、偏差、不确定性与多目标筛选，而不是只追求测试集分数。",
+      "question": "候选在新结构族/新化学空间上还有效吗？改善预测误差能否带来可验证且成本合理的新候选？",
+      "prerequisites": [
+        "监督学习、特征、分组拆分、误差与校准。",
+        "性质标签的物理定义和数据库计算层次。"
+      ],
+      "glossary": [
+        {
+          "term": "标签一致性",
+          "definition": "相同名称的性质可能来自不同泛函、温度、实验工况或单位；混合前需要明确处理。"
+        },
+        {
+          "term": "校准",
+          "definition": "置信度与真实误差/覆盖率相匹配。模型给出不确定性不代表它已可信。"
+        },
+        {
+          "term": "多目标筛选",
+          "definition": "电导、稳定性、成本、资源与制造性可能互相冲突；排名不是独立性能验证。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "Density Functional Theory: A Practical Introduction",
+          "authors": "David S. Sholl、Janice A. Steckel",
+          "focus": "学习平面波 DFT、简单晶体与计算可靠性；按主题选读。",
+          "url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9780470447710"
+        },
+        {
+          "title": "Electrochemical Methods: Fundamentals and Applications（3e）",
+          "authors": "Allen J. Bard、Larry R. Faulkner、Henry S. White",
+          "focus": "选读电极过程、传质、电位参考与阻抗；结合合作实验讨论。",
+          "url": "https://books.wiley.com/titles/9781119334064/"
+        }
+      ],
+      "simulation": [
+        "复现一个公开基准或筛选流程，先训练简单描述符/树模型作为对照。",
+        "去重并按成分/结构族/来源分组，固定独立测试；检查预训练数据重叠。",
+        "报告分组误差、域外失败、置信区间或校准，而非只报整体 R²。",
+        "对少量候选独立计算验证稳定性与目标性质；记录候选落选及标签成本。"
+      ],
+      "experiments": [
+        {
+          "name": "独立 DFT / MD / 人工核验",
+          "role": "候选筛选必需的独立验证",
+          "note": "模型预测不是标签本身，验证计算也要通过对应的数值/统计基线。"
+        },
+        {
+          "name": "候选合成与目标性质测量",
+          "role": "声称新材料有效时关键",
+          "note": "需合作团队、许可与安全流程；合成失败是闭环数据，不应删掉只留下成功样品。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "数据来源与拆分",
+          "content": "组成/结构覆盖、标签定义、去重、许可与训练历史暴露。"
+        },
+        {
+          "name": "评价与候选验证",
+          "content": "简单基线、独立/OOD 测试、校准/消融、候选真实验证与多目标权衡。"
+        }
+      ],
+      "deliverables": [
+        "一个可重跑且不泄漏的基准与候选验证表。",
+        "把“模型高分”与“发现了有效材料”分开报告。"
+      ],
+      "limits": [
+        "随机拆分可能只测到同族插值。",
+        "热力学稳定预测不保证可合成或兼容电极。",
+        "未知合成/制造约束时不能声称工业最优。"
+      ],
+      "paper_ids": [
+        "butler2018_ml_materials_review",
+        "ling2022_battery_informatics",
+        "sendek2017_sse_screening",
+        "dunn2020_matbench",
+        "subramanyam2025_entropy_data",
+        "kuhn2026_hitpoly",
+        "bilbrey2025_uq",
+        "recent_10_1021_jacs_4c14455",
+        "recent_10_1038_s41467-025-67663-y",
+        "recent_10_1038_s41524-025-01905-x",
+        "recent_10_1038_s41586-025-09951-7",
+        "recent_10_1016_j_rser_2025_116633"
+      ]
+    },
+    {
+      "id": "multiscale_and_validation",
+      "label": "多尺度：从原子性质到界面、颗粒与电芯",
+      "summary": "将原子尺度参数带入相场/连续模型，并验证上尺度的不确定性与边界条件；不是把不同软件输出串起来就算多尺度闭环。",
+      "question": "原子尺度得到的扩散、界面能或反应参数，在哪个尺度和条件下能用于连续模型？误差会怎样传到可观测结果？",
+      "prerequisites": [
+        "扩散方程、边界条件、网格收敛与时间积分。",
+        "原子参数的定义、温度依赖与不确定性。"
+      ],
+      "glossary": [
+        {
+          "term": "上尺度 / 粗粒化",
+          "definition": "以明确假设把微观统计转成介观/宏观参数；不同尺度的物理量可能同名却不等价。"
+        },
+        {
+          "term": "相场",
+          "definition": "用连续场描述界面/相演化，需要自由能、迁移率、耦合和边界条件等假设。"
+        },
+        {
+          "term": "可辨识性",
+          "definition": "多组参数可能同样拟合一个实验；必须设计额外对照区分解释。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "Computer Simulation of Liquids（2e）",
+          "authors": "Michael P. Allen、Dominic J. Tildesley",
+          "focus": "练习周期边界、积分器、相关函数和输运分析。",
+          "url": "https://academic.oup.com/book/27866"
+        },
+        {
+          "title": "Electrochemical Methods: Fundamentals and Applications（3e）",
+          "authors": "Allen J. Bard、Larry R. Faulkner、Henry S. White",
+          "focus": "选读电极过程、传质、电位参考与阻抗；结合合作实验讨论。",
+          "url": "https://books.wiley.com/titles/9781119334064/"
+        }
+      ],
+      "simulation": [
+        "复现一个已有相场/连续模型，先检查单位、质量/电荷守恒、网格与步长收敛。",
+        "逐个说明微观参数的来源、定义和适用范围，不直接把自扩散替换为所有有效扩散系数。",
+        "对参数区间和边界条件做敏感性/误差传播；比较只用经验参数的基线。",
+        "验证至少一个与目标尺度匹配的可观测量，并报告未被数据约束的参数。"
+      ],
+      "experiments": [
+        {
+          "name": "成像、压力依赖、阻抗或电芯工况数据",
+          "role": "按尺度匹配的合作验证",
+          "note": "需要明确几何、微结构、温度、负载与工作条件，单一曲线往往不足约束所有参数。"
+        },
+        {
+          "name": "守恒与数值基准",
+          "role": "连续模型必做",
+          "note": "物理实验缺乏时仍应完成守恒、网格、步长与标准算例检查，不伪称电芯验证。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "尺度映射与单位表",
+          "content": "原子—介观参数定义、假设、误差、软件与边界条件。"
+        },
+        {
+          "name": "数值与观测验证",
+          "content": "守恒/网格、敏感性与同尺度数据对照，展示不能解释的工况。"
+        }
+      ],
+      "deliverables": [
+        "一张参数传递图、单位/来源表和敏感性图。",
+        "明确哪一步尚缺实验数据或尺度映射证据。"
+      ],
+      "limits": [
+        "原子 D 不等于电极有效 D，更不等于整电芯寿命。",
+        "未约束参数的精细图像不能证明机制唯一。",
+        "完整电芯模型通常需要超出原子论文提供的几何与工况数据。"
+      ],
+      "paper_ids": [
+        "urban2016_computational_review",
+        "he2018_aimd_statistics",
+        "swift2019_space_charge",
+        "zhang2025_sei_phasefield_ms",
+        "wang2024_mlip_scaling_review",
+        "recent_10_1016_j_cej_2025_163801",
+        "recent_10_1038_s41524-025-01735-x",
+        "recent_10_1038_s41524-025-01615-4"
+      ]
+    },
+    {
+      "id": "mlip_reliability_and_data_efficiency",
+      "label": "MLIP 可靠性：少标签微调、长程效应与高效推断",
+      "summary": "从基础势模型进入目标域验证，探索用更少 DFT 标签获得可靠物理性质、以及蒸馏/长程处理的精度—速度权衡。",
+      "question": "目标性质失真来自势垒、长程相互作用、训练覆盖还是采样？微调/蒸馏节省的成本是否以域外失败为代价？",
+      "prerequisites": [
+        "能量/力训练、等变性、独立拆分与动态稳定性。",
+        "基准 DFT 层次一致性，目标性质与误差容忍度。"
+      ],
+      "glossary": [
+        {
+          "term": "等变性",
+          "definition": "输入旋转等操作后，向量输出按相应方式变换；对称性正确不自动保证物理精度。"
+        },
+        {
+          "term": "长程效应",
+          "definition": "电荷、极化或其他非局域影响可能超出局域截断表示，尤其在界面和离子体系需核查。"
+        },
+        {
+          "term": "蒸馏 / 伪标签",
+          "definition": "较小模型拟合教师模型的输出以加速；伪标签不能当新增独立 DFT 真值。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "Electronic Structure: Basic Theory and Practical Methods（2e）",
+          "authors": "Richard M. Martin",
+          "focus": "补足电子结构理论与近似边界；不要求从头通读。",
+          "url": "https://www.cambridge.org/core/books/electronic-structure/ED0FF348536BFFE8899627C8F78FEE6A"
+        },
+        {
+          "title": "Understanding Molecular Simulation: From Algorithms to Applications（2e）",
+          "authors": "Daan Frenkel、Berend Smit",
+          "focus": "选读系综、MD/MC、统计采样与误差。",
+          "url": "https://www.educate.elsevier.com/book/details/9780122673511"
+        }
+      ],
+      "simulation": [
+        "固定一个材料与独立的 DFT/AIMD 验证集，先测试现有通用势的结构、势垒、能量/力和动态稳定性。",
+        "按失败类型选择构型：温度、应变、缺陷、路径、短程或带电环境；记录标注成本。",
+        "比较未微调、目标微调、从头训练与小模型蒸馏，避免验证集反复调参后当最终测试。",
+        "报告物理量误差与速度/显存/MD 稳定性；学生模型必须回到独立 DFT/实验参考验收。"
+      ],
+      "experiments": [
+        {
+          "name": "独立 DFT / AIMD / 物理基准",
+          "role": "模型方法必做",
+          "note": "不仅测能量/力 RMSE，还检验目标势垒、结构、输运和失败构型。"
+        },
+        {
+          "name": "结构/热物性/输运测量",
+          "role": "按具体主张可选",
+          "note": "与实验比较仍需要匹配模型条件；纯方法论文可先做强独立计算基准。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "覆盖与预算",
+          "content": "参考理论、构型分组、标签选择、预训练重叠和成本。"
+        },
+        {
+          "name": "可靠性与效率",
+          "content": "物理指标、稳定性、外推、模型消融、吞吐/显存和失败报告。"
+        }
+      ],
+      "deliverables": [
+        "一个独立模型验证报告，并定位最主要的物理误差。",
+        "若标签预算不足，先做公开模型基准，不把问答 QLoRA 当原子势训练。"
+      ],
+      "limits": [
+        "2026 少标签/蒸馏工作是特定体系的证据，不是所有材料都只需要几百个标签。",
+        "教师伪标签会继承偏差，不能替代独立标注。",
+        "带电反应、长程环境或不同参考理论常需额外方法，不是扩大模型就能解决。"
+      ],
+      "paper_ids": [
+        "zhong2025_les_response",
+        "deng2023_chgnet",
+        "jacobs2025_mlip_guide",
+        "musaelian2023_allegro",
+        "batatia2025_mace_mp",
+        "radova2025_frozen_transfer",
+        "bernstein2019_self_guided",
+        "yan2026_sse_mlff_training_perspective",
+        "chen2026_mlips_assb_review",
+        "recent_10_1021_acs_jctc_4c00190",
+        "recent_10_1021_acsmaterialslett_5c00093",
+        "recent_10_1021_acsmaterialslett_5c00336",
+        "recent_10_1021_acs_chemmater_6c01051",
+        "recent_10_1557_s43579-026-00928-9",
+        "recent_10_1038_s41467-025-65496-3",
+        "recent_10_1038_s41524-024-01227-4",
+        "recent_10_1038_s41524-025-01623-4",
+        "recent_10_1038_s41467-025-63852-x",
+        "recent_10_1038_s41524-025-01650-1",
+        "recent_10_1038_s41524-025-01714-2",
+        "recent_10_1038_s41524-025-01905-x",
+        "recent_10_1038_s41524-024-01451-y",
+        "recent_10_1021_acs_jpcb_6c02837",
+        "recent_10_1038_s41524-025-01571-z"
+      ]
+    },
+    {
+      "id": "autonomous_workflows",
+      "label": "可审计计算工作流与 AI 闭环",
+      "summary": "从结构搜索、高通量与数据平台到自动候选/验证闭环；把真实工具执行、失败处理、来源和权限检查纳入系统。",
+      "question": "自动系统能否在固定预算和独立评价下减少无效计算、提高候选质量，而不是只生成更流畅的文字？",
+      "prerequisites": [
+        "可复现任务、工作流/队列、结构去重与方法验证。",
+        "RAG 引用核验、工具权限、失败处理与人在环确认。"
+      ],
+      "glossary": [
+        {
+          "term": "Agent 工具执行",
+          "definition": "根据任务选择受限工具、读取结果再决策；静态关键词回答或知识图谱本身不等于自主完成研究。"
+        },
+        {
+          "term": "人在环",
+          "definition": "对许可、危险实验、集群任务、模型异常与高影响决策由人审核；不是每一步都无限自动执行。"
+        },
+        {
+          "term": "Provenance / 溯源",
+          "definition": "记录输入、来源、版本、参数、计算状态和输出关系；未执行的计算不能标为成功。"
+        }
+      ],
+      "reading": [
+        {
+          "title": "Density Functional Theory: A Practical Introduction",
+          "authors": "David S. Sholl、Janice A. Steckel",
+          "focus": "学习平面波 DFT、简单晶体与计算可靠性；按主题选读。",
+          "url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9780470447710"
+        },
+        {
+          "title": "Electrochemical Methods: Fundamentals and Applications（3e）",
+          "authors": "Allen J. Bard、Larry R. Faulkner、Henry S. White",
+          "focus": "选读电极过程、传质、电位参考与阻抗；结合合作实验讨论。",
+          "url": "https://books.wiley.com/titles/9781119334064/"
+        }
+      ],
+      "simulation": [
+        "先复现一个公开高通量或界面搜索流程，检查结构、参数与输出质量。",
+        "建立任务状态机：待验证 → 执行 → 质量检查 → 可用/失败；限定工具和预算。",
+        "比较人工/规则流程与 AI 选择的候选：独立成功率、质量、成本、无效重试与引用正确性。",
+        "对写入、作业提交、机构访问与实验建立人类确认；不把订阅全文或私人映射上传仓库。"
+      ],
+      "experiments": [
+        {
+          "name": "端到端真实执行与失败注入",
+          "role": "系统主张必做",
+          "note": "用可审计输入复跑；测试坏结构、不收敛、缺数据和权限拒绝，不用演示文本代替真实任务。"
+        },
+        {
+          "name": "候选计算/实验验证",
+          "role": "发现主张时关键",
+          "note": "闭环需真实的独立验证；问答系统只完成检索/解释时应如实注明边界。"
+        }
+      ],
+      "paper_sections": [
+        {
+          "name": "目标、状态和工具边界",
+          "content": "明确系统执行哪些动作、预算、权限、失败/停止规则。"
+        },
+        {
+          "name": "评价与案例",
+          "content": "规则/人工基线、独立任务、成本、失败率、物理有效性及引用审计。"
+        }
+      ],
+      "deliverables": [
+        "一个小而真实的可回放工作流，不先追求全自动实验室。",
+        "所有结果有状态和来源；工具失败时系统不编造成功。"
+      ],
+      "limits": [
+        "高通量工作流、闭环筛选与聊天 Agent 是相关但不同的能力。",
+        "自动化不能扩大数据库下载/许可证或实验安全授权。",
+        "只有精美页面与高回答流畅度不能证明研究效率或材料发现能力。"
+      ],
+      "paper_ids": [
+        "wang2023_sodium_design",
+        "wang2023_nasicon_design",
+        "jain2026_ml_sse_pipelines",
+        "recent_10_1038_s41586-023-06735-9",
+        "recent_10_1016_j_jechem_2025_03_007",
+        "recent_10_1039_d5cc04921k",
+        "recent_10_1038_s41586-025-09951-7",
+        "recent_10_1039_d5cp02726h",
+        "recent_10_1016_j_rser_2025_116633",
+        "recent_10_1073_pnas_2214357120",
+        "recent_10_1016_j_commatsci_2024_113074"
+      ]
+    }
+  ],
+  "papers": {
+    "tan2026_pemd": {
+      "stage": "intermediate",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：聚合物电解质端到端建模、MD与性质分析的可跟练框架",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "kuhn2026_hitpoly": {
+      "stage": "frontier",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes",
+        "ai_screening_and_uq"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：用贝叶斯优化分配聚合物电解质MD预算的2026进展",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "yang2026_oxygen_sei": {
+      "stage": "frontier",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：氧掺杂硫化物固态电解质的体相—界面输运权衡",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "zhong2025_les_response": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：超出能量力误差：学习势的电响应与输运验证",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "subramanyam2025_entropy_data": {
+      "stage": "intermediate",
+      "frontiers": [
+        "ai_screening_and_uq"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：在固定DFT预算下研究训练构型覆盖与鲁棒性",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "butler2018_ml_materials_review": {
+      "stage": "beginner",
+      "frontiers": [
+        "ai_screening_and_uq"
+      ],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：材料机器学习入门：数据、表示、预测与研究流程",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "takenaka2026_sei_mlff": {
+      "stage": "frontier",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：第一性原理训练的机器学习力场MD解析锂金属早期SEI",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "xie2019_gdynet": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：用图神经网络分析MD轨迹与聚合物电解质离子动力学",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "xie2022_polymernet": {
+      "stage": "intermediate",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：学习短时MD误差，加速高分子电解质筛选",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "wang2023_sodium_design": {
+      "stage": "frontier",
+      "frontiers": [
+        "autonomous_workflows"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：比较锂钠配位偏好并设计钠离子固态电解质",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "he2017_concerted_diffusion": {
+      "stage": "intermediate",
+      "frontiers": [
+        "mlip_transport_and_sse"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：理解多离子协同扩散与NEB势垒",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "smith2020_paddlewheel_ms": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：Materials Studio建模衔接VASP熔融淬火与扩散分析",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "wang2023_nasicon_design": {
+      "stage": "frontier",
+      "frontiers": [
+        "autonomous_workflows"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：文献数据挖掘与第一性原理筛选衔接实验验证",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "urban2016_computational_review": {
+      "stage": "beginner",
+      "frontiers": [
+        "multiscale_and_validation"
+      ],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：电池第一性原理方法总览",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "aydinol1997_voltage": {
+      "stage": "intermediate",
+      "frontiers": [
+        "cathodes_defects_and_redox"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：由总能和热力学计算嵌锂平均电压的奠基工作",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "ceder1998_cathode_design": {
+      "stage": "beginner",
+      "frontiers": [
+        "cathodes_defects_and_redox"
+      ],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：第一性原理指导并由实验验证正极材料设计",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "vanderven2001_diffusion": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：把DFT迁移势垒、簇展开与动力学蒙特卡洛连接起来",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "ong2011_li_na": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：Li/Na材料中电压、相稳定性与扩散的系统对比",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "ong2013_lgps": {
+      "stage": "intermediate",
+      "frontiers": [
+        "mlip_transport_and_sse"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：固态电解质稳定性与Li离子输运的第一性原理标杆",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "shi2013_sei_li2co3": {
+      "stage": "intermediate",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：SEI组分的缺陷热力学＋CI-NEB扩散完整案例",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "sendek2017_sse_screening": {
+      "stage": "intermediate",
+      "frontiers": [
+        "mlip_transport_and_sse",
+        "ai_screening_and_uq"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：晶体结构描述符＋机器学习筛选固态Li导体",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "baktash2020_argyrodite_aimd": {
+      "stage": "intermediate",
+      "frontiers": [
+        "mlip_transport_and_sse"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：平衡/非平衡AIMD求固态电解质扩散系数的案例",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "chen2022_m3gnet": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：通用图神经网络机器学习势与材料发现方法",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "sawada2024_nnp_sse": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_transport_and_sse"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：NNP优化掺杂构型并进行固态电解质MD",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "ling2022_battery_informatics": {
+      "stage": "beginner",
+      "frontiers": [
+        "ai_screening_and_uq"
+      ],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：电池数据、文本挖掘、ML与闭环研究总览",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "henkelman2000_cineb": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：Li/Na迁移势垒计算所用CI-NEB方法的奠基论文",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "leung2010_sei_aimd": {
+      "stage": "intermediate",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：显式石墨/碳酸酯界面AIMD研究早期SEI反应",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "mo2012_lgps_aimd": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：LGPS三维Li输运与稳定性的早期第一性原理研究",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "deng2023_chgnet": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电荷/磁矩材料的预训练通用机器学习势",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "geng2025_vaspkit_protocol": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：VASP输入生成、计算执行与结果分析的逐步协议",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "wang2021_vaspkit": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：VASPKIT功能地图与典型前后处理示例",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "ong2013_pymatgen": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：用 Python 处理结构、VASP 输入输出和电池相稳定性",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "larsen2017_ase": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：用统一 Python 接口搭建结构优化、MD 和 NEB",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "ganose2025_atomate2": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：把 VASP、AIMD、声子和机器学习势组织成可复现工作流",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "jain2013_materials_project": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：理解 Materials Project 数据从哪里来以及如何用于筛选",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "smidstrup2014_idpp": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：用 IDPP 生成更可靠的 NEB 初始路径",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "he2018_aimd_statistics": {
+      "stage": "intermediate",
+      "frontiers": [
+        "multiscale_and_validation"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：从 AIMD 轨迹正确计算扩散系数、电导率和误差",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "zhou2004_dftu_voltage": {
+      "stage": "intermediate",
+      "frontiers": [
+        "cathodes_defects_and_redox"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：理解过渡金属正极为什么需要一致且可解释的 DFT+U",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "jacobs2025_mlip_guide": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：机器学习势选型、数据、速度与验证的实用入门指南",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "togo2015_phonopy": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：用 phonopy 与 VASP 从有限位移计算声子和热力学量",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "ganose2018_sumo": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：把 VASP 能带、DOS 和光学结果快速做成可发表图",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "wang2018_deepmdkit": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：从DFT能量与力训练Deep Potential并接入LAMMPS做长时间MD",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "zhang2020_dpgen": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：用并行学习循环主动选择需要追加DFT标注的构型",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "batzner2022_nequip": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：理解E(3)等变机器学习势及其在锂超离子导体扩散中的验证",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "musaelian2023_allegro": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：用严格局域等变模型扩展机器学习势分子动力学规模",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "deringer2021_gpr_gap": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：系统理解GPR/GAP机器学习势的数据、表示、回归与验证",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "thompson2022_lammps": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：理解LAMMPS输入脚本、势函数、积分与并行MD的能力边界",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "pizzi2016_aiida": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：用工作流和数据溯源管理批量材料计算",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "himanen2020_dscribe": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：把晶体和局域原子环境转换成可用于传统机器学习的描述符",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "xie2018_cgcnn": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：从晶体结构图直接学习材料性质的经典图神经网络基线",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "dunn2020_matbench": {
+      "stage": "beginner",
+      "frontiers": [
+        "ai_screening_and_uq"
+      ],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：用标准任务与嵌套交叉验证评估材料性质预测模型",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "persson2010_graphite": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：石墨负极中把vdW修正、相图、迁移势垒与扩散联系起来的完整案例",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "shen2024_pymatgen_defects": {
+      "stage": "beginner",
+      "frontiers": [
+        "cathodes_defects_and_redox"
+      ],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：自动生成、分析和管理晶体点缺陷计算",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "batatia2025_mace_mp": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：从预训练MACE势出发开展材料模拟和目标体系验证",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "radova2025_frozen_transfer": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：练习少量DFT数据微调，比较冻结层与从头训练",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "bilbrey2025_uq": {
+      "stage": "frontier",
+      "frontiers": [
+        "ai_screening_and_uq"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：检查机器学习势是否过度自信，为主动学习选择补算构型",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "wu2023_edl_ms": {
+      "stage": "intermediate",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：Materials Studio电解液MD与DFT反应统计耦合的界面范例",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "sheng2024_lipf6_hydrolysis_ms": {
+      "stage": "intermediate",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：Materials Studio液态电解液溶剂化与LiPF6水解案例",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "li2024_polymeric_asei_ms": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：Materials Studio构建聚噻吩人工SEI与锂离子输运模型",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "wu2025_spe_aimd_ms": {
+      "stage": "intermediate",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：Materials Studio预平衡＋VASP AIMD研究聚合物电解质界面反应",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "zhang2025_sei_phasefield_ms": {
+      "stage": "intermediate",
+      "frontiers": [
+        "interfaces_sei_and_dendrites",
+        "multiscale_and_validation"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：Materials Studio扩散参数连接原子计算与SEI相场演化",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "chen2025_heteroalkali_ms": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：Materials Studio MD与DMol3解释异碱金属阳离子去溶剂化",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "hossain2020_reaxff_electrolyte": {
+      "stage": "intermediate",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：用DFT训练ReaxFF研究锂电解液溶剂化与分解反应",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "wang2018_sei_modeling_review": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：从电子结构、原子模拟到介观模型理解负极SEI",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "shi2021_reaxff_battery_review": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：锂电ReaxFF分子动力学的入门综述与失效边界",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "kresse1993_liquid_metals": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：VASP/AIMD 的早期方法论文，适合理解电子结构力如何驱动分子动力学。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "kresse1994_ge_transition": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：展示AIMD处理液态/非晶结构转变的经典案例。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "kresse1996_vasp_efficiency": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：VASP 平面波赝势总能量计算的基础论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "blochl1994_paw": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：理解VASP中PAW赝势思想的基础论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "kresse1999_paw": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：VASP中PAW与超软赝势实现关系的关键论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "perdew1996_pbe": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：PBE交换关联泛函的基础文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "dudarev1998_lsda_u": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：过渡金属氧化物DFT+U参数与局域电子相关性的经典案例。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "heyd2003_hse": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：HSE屏蔽杂化泛函的基础论文，用于理解带隙和反应能修正。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "grimme2010_dftd": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：范德华色散修正方法，适合层状电极、有机电解质和界面体系。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "monkhorst1976_kpoints": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：理解周期体系k点网格和布里渊区积分的基础论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "methfessel1989_smearing": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：金属体系电子占据和展宽设置的基础文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "henkelman2000_neb_tangent": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：NEB路径切线改进方法，适合离子迁移势垒练习。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "henkelman2006_bader": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：电荷密度Bader分区与电荷转移分析的基础论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "marzari1997_wannier": {
+      "stage": "baseline",
+      "frontiers": [],
+      "rationale": "科研常备参考：需要时核对原始方法、设置依据与适用范围。 路线用途：电子结构和输运后处理中最大局域Wannier函数的基础论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "behler2007_nnp": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：神经网络机器学习势的奠基论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "behler2011_symmetry_functions": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：理解原子中心对称函数和NNP输入描述符的入门论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "bartok2010_gap": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：高斯近似势GAP的奠基论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "thompson2015_snap": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：SNAP机器学习势及其LAMMPS实现的基础论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "zhang2018_deep_potential": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：Deep Potential分子动力学的基础论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "podryabinkin2017_active_learning": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：主动学习原子间势和不确定性采样的入门论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "vandermause2020_active_learning": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：在线主动学习势在大规模原子模拟中的代表工作。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "jinnouchi2020_otf_mlff": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：VASP环境中在线机器学习力场和主动学习的关键论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "jinnouchi2019_melting_mlff": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：在线机器学习力场计算熔点的代表案例。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "bernstein2019_self_guided": {
+      "stage": "intermediate",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：自引导探索势能面的机器学习势方法论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "deringer2019_mlip_review": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：机器学习原子间势在材料科学中的综述。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "mishin2021_mlip_review": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：材料科学机器学习势的系统综述。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "unke2021_mlff_review": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：机器学习力场的广泛综述，适合建立方法地图。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "mueller2020_mlip_models": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：机器学习原子间势模型的概念和方法综述。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "kang2006_li_mobility": {
+      "stage": "intermediate",
+      "frontiers": [
+        "cathodes_defects_and_redox"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：层状过渡金属氧化物中锂迁移和扩散势垒的第一性原理研究。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "du2014_lgps_mobility": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：LGPS结构、热力学与锂离子迁移的第一性原理案例。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "bhandari2016_lgps_conduction": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：从原子机制解释LGPS快速离子传导的计算研究。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "xu2012_stringlike_migration": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：超快离子导体中协同锂离子迁移的动力学案例。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "muy2015_high_throughput_sse": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：固态锂离子导体高通量筛选和计算验证的入门案例。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "swift2019_space_charge": {
+      "stage": "intermediate",
+      "frontiers": [
+        "multiscale_and_validation"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：全固态电池界面电势和空间电荷层的第一性原理研究。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "qi2024_lgps_ml_aimd": {
+      "stage": "intermediate",
+      "frontiers": [
+        "mlip_transport_and_sse"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：机器学习加速LGPS第一性原理离子扩散研究的可跟练案例。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "nachimuthu2022_se_doped_lgps": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：掺杂固态电解质稳定性与锂离子传输的第一性原理案例。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "stottmeister2023_sei_alkali": {
+      "stage": "intermediate",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：碱金属负极SEI形成的第一性原理模拟案例。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "qi2021_electrolyte_dataset": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：锂电池电解液和界面物种量子化学数据集，适合AI4S数据练习。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "peled2017_sei_review": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：SEI形成、组成和研究进展的综述，适合建立电化学背景。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "fireworks2015_workflow": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：高通量材料计算工作流自动化的基础工具论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "mathew2017_atomate": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：Atomate材料计算工作流框架的基础论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "talirz2020_materials_cloud": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：材料计算数据、工作流和可复现性平台的代表论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "ward2016_matminer": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：材料数据特征工程和机器学习预处理工具论文。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "dutra2025_sse_atomistic_ml_review": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：系统梳理固态电池电解质的原子模拟、机器学习势、离子输运与界面问题，适合作为研究方向地图。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "wang2025_ai_sse_interface": {
+      "stage": "frontier",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向固态电池电解质与界面工程的AI生态综述，连接数据库、DFT筛选、机器学习和闭环实验。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "jain2026_ml_sse_pipelines": {
+      "stage": "frontier",
+      "frontiers": [
+        "autonomous_workflows"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：按数据、特征、模型、生成式设计和实验闭环组织固态电解质机器学习流程的近期综述。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "yan2026_sse_mlff_training_perspective": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：聚焦固态电解质机器学习力场训练集规模、构型覆盖、验证和可迁移性的前沿观点。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "chen2026_mlips_assb_review": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：总结机器学习原子势在全固态电池原子模拟中的训练、输运、界面与尺度扩展问题。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "wang2025_battery_ml_paradigms": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：从数据、模型精度、可解释性和实验验证角度总结机器学习在电池科学中的应用范式。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "wang2024_mlip_scaling_review": {
+      "stage": "frontier",
+      "frontiers": [
+        "multiscale_and_validation"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：机器学习原子势从数据生成、描述符、模型训练到软件应用的系统综述。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "li2025_sei_effective_mlips": {
+      "stage": "frontier",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：以DFT、主动学习、MTP和GNN势模拟Li2CO3及有机SEI，是可复现的SEI机器学习势案例。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "wang2025_dpa_sse": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_transport_and_sse"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向硫化物固态电解质的预训练深度势，覆盖多种化学环境并支持大规模输运模拟。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "you2024_llzo_pca_deepmd": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_transport_and_sse"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：用PCA和覆盖分析设计LLZO DeepMD训练集并研究四方—立方相变，适合学习训练集覆盖验证。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "kim2024_llzo_lco_interface_mlff": {
+      "stage": "frontier",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：利用经验证机器学习原子势研究LLZO/LCO固态电池界面退化和锂离子输运。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "zhang2024_mlmd_size_conductivity": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_transport_and_sse"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：用EANN和不确定性主动学习研究Li3YCl6中超离子转变及有限尺寸对电导率的影响。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "li2024_sse_property_prediction_review": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：综述机器学习预测固态电解质的结构、物理化学性质、离子输运和稳定性，适合补充数据库与模型评价视角。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "szymanski2024_computational_synthesis": {
+      "stage": "beginner",
+      "frontiers": [],
+      "rationale": "作为综述地图、工具/协议或流程入口，先选一套小复现。 路线用途：观点文章，讨论计算方法如何指导电池材料前驱体选择、合成路线和配方优化。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1021_acs_jctc_4c00190": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：SevenNet 的 GNN 原子势并行 MD 算法；属于可复用方法，不是电池体系性能论证。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1021_jacs_4c14455": {
+      "stage": "frontier",
+      "frontiers": [
+        "ai_screening_and_uq"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1021_acsmaterialslett_5c00093": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1021_acsmaterialslett_5c00336": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1021_acs_chemmater_6c01051": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：固态电池 MLIP 方法与验证；用于训练数据、势函数选择和界面模拟路线比较。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1557_s43579-026-00928-9": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-026-02023-y": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_transport_and_sse"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：预训练 MACE 采样、少量 DFT 适配与 NEP 蒸馏，研究固态电解质的离子输运。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1039_d4ta06675h": {
+      "stage": "frontier",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：第一性原理预测钙电池电解液溶剂化结构。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1002_adfm_202313188": {
+      "stage": "frontier",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41467-025-65496-3": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1016_j_mechmat_2024_105237": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1016_j_est_2026_121104": {
+      "stage": "frontier",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：钠离子正极/固态电解质界面黏附的 MLIP 原子尺度分析。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41586-023-06735-9": {
+      "stage": "frontier",
+      "frontiers": [
+        "autonomous_workflows"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41467-025-56322-x": {
+      "stage": "frontier",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：无序结构增强 Li3PS4 固态电解质中的锂离子输运。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1016_j_jechem_2025_03_007": {
+      "stage": "frontier",
+      "frontiers": [
+        "autonomous_workflows"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：InterOptimus 用 AI 工作流筛选锂电池异质界面基态结构。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1016_j_mtener_2025_101841": {
+      "stage": "frontier",
+      "frontiers": [
+        "cathodes_defects_and_redox"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：机器学习分析高镍层状正极结构演化。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-025-01747-7": {
+      "stage": "frontier",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-025-01615-4": {
+      "stage": "frontier",
+      "frontiers": [
+        "interfaces_sei_and_dendrites",
+        "multiscale_and_validation"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41467-025-62824-5": {
+      "stage": "frontier",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：恒电势机器学习框架下锂金属-电解液界面枝晶形成观察。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1016_j_jpowsour_2025_237670": {
+      "stage": "frontier",
+      "frontiers": [
+        "interfaces_sei_and_dendrites"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1039_d5cc04921k": {
+      "stage": "frontier",
+      "frontiers": [
+        "autonomous_workflows"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1039_d6eb00024j": {
+      "stage": "frontier",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：MD 采样溶剂化构型与结构感知 GNN 联合预测电解液前线轨道能。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1016_j_ensm_2025_104826": {
+      "stage": "frontier",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1039_d4ta03452j": {
+      "stage": "frontier",
+      "frontiers": [
+        "cathodes_defects_and_redox"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1103_physrevmaterials_8_115407": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_transport_and_sse"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：Li6PS5Cl 固态电解质体相与晶界扩散的 MLIP/AIMD 原子模拟。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-024-01332-4": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-024-01227-4": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-025-01623-4": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41467-025-63852-x": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41467-025-67663-y": {
+      "stage": "frontier",
+      "frontiers": [
+        "ai_screening_and_uq"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-025-01735-x": {
+      "stage": "frontier",
+      "frontiers": [
+        "multiscale_and_validation"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：机器学习引导相场模拟金属离子电池电化学设计空间。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-024-01222-9": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-025-01650-1": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-025-01714-2": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1021_jacsau_5c00526": {
+      "stage": "frontier",
+      "frontiers": [
+        "cathodes_defects_and_redox"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：通用机器学习框架用于离子电池正极材料设计。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1021_acsenergylett_5c02723": {
+      "stage": "frontier",
+      "frontiers": [
+        "cathodes_defects_and_redox"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1016_j_cej_2025_163801": {
+      "stage": "frontier",
+      "frontiers": [
+        "multiscale_and_validation"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：DFT/AIMD 与机器学习联合预测锂金属电池电解液行为和 SEI 形成。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1002_adsu_202500413": {
+      "stage": "frontier",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41586-025-09951-7": {
+      "stage": "frontier",
+      "frontiers": [
+        "ai_screening_and_uq",
+        "autonomous_workflows"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1039_d5cp02726h": {
+      "stage": "frontier",
+      "frontiers": [
+        "autonomous_workflows"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：数据驱动筛选锂离子电池 SEI 候选材料。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1016_j_rser_2025_116633": {
+      "stage": "frontier",
+      "frontiers": [
+        "ai_screening_and_uq",
+        "autonomous_workflows"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1021_acs_chemmater_5c02352": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_transport_and_sse"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-025-01905-x": {
+      "stage": "frontier",
+      "frontiers": [
+        "ai_screening_and_uq",
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-024-01451-y": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1016_j_jpowsour_2025_239008": {
+      "stage": "frontier",
+      "frontiers": [
+        "cathodes_defects_and_redox"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：机器学习势分子动力学研究 NCM811 晶体缺陷效应。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1021_acsami_5c11818": {
+      "stage": "frontier",
+      "frontiers": [
+        "cathodes_defects_and_redox"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：机器学习势解析充电镍氧化物正极表面降解路径。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1002_aenm_202201497": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41597-020-00602-2": {
+      "stage": "intermediate",
+      "frontiers": [],
+      "rationale": "作为机制或成熟方法的复现与对照，需要参数和统计验证。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1073_pnas_2214357120": {
+      "stage": "frontier",
+      "frontiers": [
+        "autonomous_workflows"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：基于数据驱动与分子描述符设计锂金属负极电解液。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1016_j_commatsci_2024_113074": {
+      "stage": "frontier",
+      "frontiers": [
+        "autonomous_workflows"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1021_acs_jpcb_6c02837": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：面向电池电解液、固态电解质、正极/界面模拟的可复用计算文献。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41524-025-01571-z": {
+      "stage": "frontier",
+      "frontiers": [
+        "mlip_reliability_and_data_efficiency"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：LiTraj 锂离子迁移势垒与轨迹基准；用于检验模型而非只展示训练误差。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1039_d5dd00025d": {
+      "stage": "frontier",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：在液态电解液中评估 SevenNet-0，并用领域微调纠正密度偏差。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    },
+    "recent_10_1038_s41467-025-67982-0": {
+      "stage": "frontier",
+      "frontiers": [
+        "liquid_and_polymer_electrolytes"
+      ],
+      "rationale": "作为研究机会与方法局限的证据，先验证目标域和已有基线。 路线用途：电解液领域通用势与并发学习，用于扩大化学空间采样和筛选。",
+      "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
+    }
+  },
+  "candidates": [
+    {
+      "id": "grossfield2018_sampling_uncertainty",
+      "title": "Best Practices for Quantification of Uncertainty and Sampling Quality in Molecular Simulations [Article v1.0]",
+      "doi": "10.33011/livecoms.1.1.5067",
+      "year": 2018,
+      "purpose": "做 MD 结果分析时查采样质量、相关性、有效样本和误差条；帮助写结果可信度与局限。",
+      "priority": "现在优先下载",
+      "source_url": "https://livecomsjournal.org/index.php/livecoms/article/view/v1i1e5067",
+      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
+    },
+    {
+      "id": "chodera2016_equilibration_detection",
+      "title": "A Simple Method for Automated Equilibration Detection in Molecular Simulations",
+      "doi": "10.1021/acs.jctc.5b00784",
+      "year": 2016,
+      "purpose": "确定丢弃哪段平衡数据、选生产区间和评估有效样本；帮助写 MD 数据处理方法。",
+      "priority": "现在优先下载",
+      "source_url": "https://pubs.acs.org/doi/10.1021/acs.jctc.5b00784",
+      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
+    },
+    {
+      "id": "flyvbjerg1989_correlated_data_errors",
+      "title": "Error estimates on averages of correlated data",
+      "doi": "10.1063/1.457480",
+      "year": 1989,
+      "purpose": "解释为什么轨迹帧不是独立样本，查分块平均与相关数据的误差估计。",
+      "priority": "现在优先下载",
+      "source_url": "https://doi.org/10.1063/1.457480",
+      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
+    },
+    {
+      "id": "lejaeghere2016_dft_reproducibility",
+      "title": "Reproducibility in density functional theory calculations of solids",
+      "doi": "10.1126/science.aad3000",
+      "year": 2016,
+      "purpose": "检查不同代码/赝势之间的数值可复现性，区分数值精度与物理准确性。",
+      "priority": "现在优先下载",
+      "source_url": "https://www.science.org/doi/10.1126/science.aad3000",
+      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
+    },
+    {
+      "id": "bosoni2023_dft_verification_workflows",
+      "title": "How to verify the precision of density-functional-theory implementations via reproducible and universal workflows",
+      "doi": "10.1038/s42254-023-00655-3",
+      "year": 2024,
+      "purpose": "用专家建议整理 DFT 精度核验、参考数据、统一工作流与适用范围；卷年 2024，线上发表于 2023。",
+      "priority": "现在优先下载",
+      "source_url": "https://www.nature.com/articles/s42254-023-00655-3",
+      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
+    },
+    {
+      "id": "wilkinson2016_fair_principles",
+      "title": "The FAIR Guiding Principles for scientific data management and stewardship",
+      "doi": "10.1038/sdata.2016.18",
+      "year": 2016,
+      "purpose": "检查数据/代码如何可查找、可获取、可互操作与可复用；FAIR 不等于所有资源都必须无限公开。",
+      "priority": "现在优先下载",
+      "source_url": "https://www.nature.com/articles/sdata201618",
+      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
+    },
+    {
+      "id": "hohenberg1964_inhomogeneous_electron_gas",
+      "title": "Inhomogeneous Electron Gas",
+      "doi": "10.1103/PhysRev.136.B864",
+      "year": 1964,
+      "purpose": "DFT 的基础定理出处；写电子结构理论背景或查基态密度与能量泛函的基本假设。",
+      "priority": "理论出处，按需查阅",
+      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.136.B864",
+      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
+    },
+    {
+      "id": "kohnsham1965_self_consistent_equations",
+      "title": "Self-Consistent Equations Including Exchange and Correlation Effects",
+      "doi": "10.1103/PhysRev.140.A1133",
+      "year": 1965,
+      "purpose": "查 Kohn–Sham 体系、自洽求解与交换关联处理的理论来源；不替代现代软件手册。",
+      "priority": "理论出处，按需查阅",
+      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.140.A1133",
+      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
+    },
+    {
+      "id": "verlet1967_computer_experiments",
+      "title": "Computer ‘Experiments’ on Classical Fluids. I. Thermodynamical Properties of Lennard-Jones Molecules",
+      "doi": "10.1103/PhysRev.159.98",
+      "year": 1967,
+      "purpose": "查经典 MD 数值推进与 Lennard-Jones 计算实验出处；实际积分实现需核对所用软件。",
+      "priority": "理论出处，按需查阅",
+      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.159.98",
+      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
+    },
+    {
+      "id": "nose1984_constant_temperature_md",
+      "title": "A unified formulation of the constant temperature molecular dynamics methods",
+      "doi": "10.1063/1.447334",
+      "year": 1984,
+      "purpose": "查恒温 MD 的理论与系综假设，写所用恒温方法的出处；不是所有恒温器的通用引用。",
+      "priority": "理论出处，按需查阅",
+      "source_url": "https://doi.org/10.1063/1.447334",
+      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
+    },
+    {
+      "id": "hoover1985_canonical_dynamics",
+      "title": "Canonical dynamics: Equilibrium phase-space distributions",
+      "doi": "10.1103/PhysRevA.31.1695",
+      "year": 1985,
+      "purpose": "查 Nosé–Hoover 动力学与采样假设；仍须检查目标体系的温度分布与采样表现。",
+      "priority": "理论出处，按需查阅",
+      "source_url": "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.31.1695",
+      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
+    }
+  ],
+  "sources": [
+    {
+      "title": "量子基础：Caltech 官方费曼讲义",
+      "url": "https://www.feynmanlectures.caltech.edu/III_toc.html"
+    },
+    {
+      "title": "DFT 入门：Wiley 官方书目",
+      "url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9780470447710"
+    },
+    {
+      "title": "电子结构：Cambridge 官方书目",
+      "url": "https://www.cambridge.org/core/books/electronic-structure/ED0FF348536BFFE8899627C8F78FEE6A"
+    },
+    {
+      "title": "分子模拟：Elsevier 官方书目",
+      "url": "https://www.educate.elsevier.com/book/details/9780122673511"
+    },
+    {
+      "title": "液体模拟：Oxford 官方书目",
+      "url": "https://academic.oup.com/book/27866"
+    },
+    {
+      "title": "电化学：Wiley 官方配套页",
+      "url": "https://books.wiley.com/titles/9781119334064/"
+    },
+    {
+      "title": "版本方法核对：VASP 官方 MD 文档",
+      "url": "https://vasp.at/wiki/MD_runs"
+    },
+    {
+      "title": "2026 少标签 MLIP 与蒸馏实例（本库论文）",
+      "url": "https://www.nature.com/articles/s41524-026-02023-y"
+    },
+    {
+      "title": "固态电解质原子模拟与 ML 综述（本库论文）",
+      "url": "https://www.nature.com/articles/s41578-025-00817-y"
+    }
+  ]
+}

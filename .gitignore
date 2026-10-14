@@ -17,6 +17,9 @@ literature/text/
 literature/pdfs/
 literature/manifest.json
 private/
+# Local privacy audit reports and workstation metadata are never publication sources.
+SECURITY_PRIVACY_AUDIT_*.md
+msd.json
 # Local model checkpoints and exported weights must stay on the user's computer.
 training/checkpoints/
 training/output/

@@ -8,6 +8,7 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
+PRIVATE_STATUS = ROOT / "private" / "project_status.local.json"
 
 
 def read_json(path: Path, default):
@@ -90,11 +91,9 @@ def render_status(status: dict) -> str:
     return (f"# 当前项目状态\n\n统计日期：{status['as_of']}。由 `update_project_status.py` 根据实际库、索引与数据集生成。\n\n"
             f"| 项目 | 实际数量 |\n|---|---:|\n| 公开精选论文（唯一 DOI） | {status['papers']} |\n"
             f"| 2023 年及以后论文 | {status['recent_2023_onward']} |\n| 已有 WOS UT | {status['wos_records']} |\n"
-            f"| 本机已校验正文 | {status['local_fulltext_papers']} |\n| 本机尚缺正文 | {status['local_fulltext_missing']} |\n"
-            f"| 全文索引论文 | {status['indexed_papers']} |\n| 带页码文本块 | {status['indexed_chunks']} |\n"
             f"| QLoRA 训练样本 | {train} |\n| QLoRA 验证样本 | {val} |\n| QLoRA 测试样本 | {test} |\n\n"
             f"{model_note}训练/验证/测试按论文来源分组隔离；验证集用于开发选择，测试集留到方案固定后评估。样本来自元数据与人工简述，不能据其数量判断真实科研问答准确率。\n\n"
-            "本机全文覆盖率不等于公开网页全文可访问率，也不代表 Zotero 云同步完成。公开站点保留书目、DOI、方法索引与教学资料；正文和私有条目键仅在本机使用。\n\n"
+            "公开站点保留书目、DOI、教学资料与数据集统计；本机正文覆盖、索引状态和私有条目键仅保存在本机，不代表公开网页全文可访问率。\n\n"
             "- [AI 实施指南](AI_BATTERY_APPLICATIONS.md)\n- [未来研究方向](BATTERY_COMPUTATION_FUTURE_DIRECTIONS.md)\n"
             "- JSON 统计：`data/project_status.json`；训练来源与文件 SHA-256：`finetune/data/manifest.json`。\n")
 
@@ -105,8 +104,14 @@ def main() -> None:
     parser.add_argument("--smoke-output", type=Path, help="Completed five-step adapter output; not a production model")
     args = parser.parse_args()
     status = build_status(args.date, args.smoke_output)
-    (ROOT / "data/project_status.json").write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    (ROOT / "guides/PROJECT_STATUS.md").write_text(render_status(status), encoding="utf-8")
+    PRIVATE_STATUS.parent.mkdir(parents=True, exist_ok=True)
+    PRIVATE_STATUS.write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    public_status = {key: value for key, value in status.items() if key not in {
+        "local_fulltext_papers", "local_fulltext_missing", "indexed_papers", "indexed_chunks"
+    }}
+    public_status["scope"] = "Counts refer to the curated catalog, educational metadata, and dataset rows; local full-text holdings and indexing remain private."
+    (ROOT / "data/project_status.json").write_text(json.dumps(public_status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (ROOT / "guides/PROJECT_STATUS.md").write_text(render_status(public_status), encoding="utf-8")
     path = ROOT / "README.md"
     content = path.read_text(encoding="utf-8")
     start, end = "<!-- CURRENT_STATUS_START -->", "<!-- CURRENT_STATUS_END -->"
@@ -115,7 +120,7 @@ def main() -> None:
         _, suffix = remaining.split(end, 1)
         rows = status["datasets"]
         model_note = "已通过 5 步 GPU 流程验证，未做正式训练或准确率评估" if status.get("training_smoke") else "新增数据尚未重新训练"
-        summary = (f"\n统计日期 **{status['as_of']}**：**{status['papers']} 篇唯一 DOI**；本机已有校验正文 **{status['local_fulltext_papers']} 篇**、页码文本块 **{status['indexed_chunks']} 个**；WOS UT **{status['wos_records']} 条**。\n\n"
+        summary = (f"\n统计日期 **{status['as_of']}**：**{status['papers']} 篇唯一 DOI**；WOS UT **{status['wos_records']} 条**。\n\n"
                    f"QLoRA 数据：**{rows['train']['rows']} 训练 / {rows['validation']['rows']} 验证 / {rows['test']['rows']} 测试**。{model_note}；数量与哈希详见 [当前状态](guides/PROJECT_STATUS.md)。\n")
         path.write_text(prefix + start + summary + end + suffix, encoding="utf-8")
     print(json.dumps({key: status[key] for key in ("papers", "local_fulltext_papers", "indexed_chunks", "dataset_rows")}, ensure_ascii=False))

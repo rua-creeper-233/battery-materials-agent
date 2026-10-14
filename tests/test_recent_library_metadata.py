@@ -29,7 +29,7 @@ class RecentMetadataTests(unittest.TestCase):
             paths = [root / name for name in ("papers.json", "old.json", "recent.json")]
             papers = [{"id": "legacy", "doi": "10.x/old", "collection": "core", "custom": "keep"},
                       {"id": "recent_owned", "doi": "10.x/recent", "collection": "recent_verified_20261008",
-                       "wos_uid": "WOS:test", "verification": {"fulltext": "verified_local_pdf_test"}}]
+                       "wos_uid": "WOS:test", "verification": {}}]
             rows = [{"id": "recent_rekeyed", "doi": doi, "year": 2026, "title": "Verified title",
                      "collection": "recent_verified_20261008", "document_type": "Perspective",
                      "systems": ["SSE"], "properties": ["barrier"], "publication_date": "2026-09",
@@ -49,7 +49,7 @@ class RecentMetadataTests(unittest.TestCase):
             self.assertEqual(merged[1]["document_type"], "Perspective")
             self.assertEqual(merged[1]["properties"], ["barrier"])
             self.assertEqual(merged[1]["publication_date_precision"], "month")
-            self.assertEqual(merged[1]["verification"]["fulltext"], "verified_local_pdf_test")
+            self.assertNotIn("fulltext", merged[1]["verification"])
 
 
 class IncrementalCatalogTests(unittest.TestCase):

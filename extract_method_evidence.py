@@ -18,8 +18,8 @@ from typing import Any
 ROOT = Path(__file__).resolve().parent
 PAPERS_PATH = ROOT / "data" / "papers.json"
 FULLTEXT_PATH = ROOT / "data" / "fulltext_chunks.jsonl"
-OUTPUT_PATH = ROOT / "data" / "method_evidence.auto.json"
-REPORT_PATH = ROOT / "METHOD_EVIDENCE_AUDIT.md"
+OUTPUT_PATH = ROOT / "private" / "method_evidence.auto.json"
+REPORT_PATH = ROOT / "private" / "METHOD_EVIDENCE_AUDIT.local.md"
 REVIEW_STATUS = "auto_extracted_needs_human_review"
 
 
@@ -104,9 +104,8 @@ def extract(
     papers_path: Path = PAPERS_PATH,
     fulltext_path: Path = FULLTEXT_PATH,
 ) -> dict[str, Any]:
-    # Keep this versioned/public artifact restricted to the curated seed set.
-    # User-uploaded papers stay in private/user-papers.local.json and are never
-    # copied into the GitHub Pages bundle.
+    # Local evidence is limited to curated references; user-uploaded papers
+    # are handled separately. Neither map is a public publication entitlement.
     papers = json.loads(papers_path.read_text(encoding="utf-8"))
     curated_ids = {paper["id"] for paper in papers}
     chunks = load_jsonl(fulltext_path)
@@ -183,7 +182,7 @@ def write_report(payload: dict[str, Any], report_path: Path = REPORT_PATH) -> No
         f"- 方法信号总数：{total}",
         "- 参考文献区：已排除",
         "- 每篇每类上限：3 条",
-        "- 公开数据只保存短方法信号与页码，不保存连续正文上下文",
+        "- 本记录仅供本机使用，不进入公开 GitHub 或 Pages 包",
         "",
         "## 分论文结果",
         "",
@@ -215,8 +214,14 @@ def main() -> None:
     parser.add_argument("--report", type=Path, default=REPORT_PATH)
     args = parser.parse_args()
 
+    private_root = (ROOT / "private").resolve()
+    for target in (args.output, args.report):
+        if not target.resolve().is_relative_to(private_root):
+            parser.error("Method evidence outputs must remain inside the ignored private directory")
+
     payload = extract(args.papers, args.fulltext)
     args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.report.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
     )

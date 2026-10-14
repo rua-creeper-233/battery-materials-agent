@@ -62,7 +62,6 @@ def main() -> int:
         if not path or not path.is_file():
             entry.pop("local_pdf", None)
             entry["status"] = "not_downloaded"
-            paper.setdefault("verification", {})["fulltext"] = "not_downloaded"
             continue
         validation = validate_pdf(path, paper["title"])
         if not validation.get("valid_pdf"):
@@ -80,7 +79,6 @@ def main() -> int:
                 "audited_at": utc_now(),
             }
         )
-        paper.setdefault("verification", {})["fulltext"] = "verified_local_pdf_" + utc_now()[:10]
 
     duplicates = {key: value for key, value in duplicate_hashes.items() if len(value) > 1}
     if duplicates:

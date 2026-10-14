@@ -1,0 +1,77 @@
+:root{--paper:#f8f8f3;--ink:#202c27;--green:#234c3d;--muted:#68756d;--line:#d8e0d5;--accent:#a35932}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.7 "Segoe UI","Microsoft YaHei",sans-serif}
+a{color:var(--green);text-underline-offset:3px}
+a:hover{color:var(--accent)}
+button,input,select{font:inherit}
+button,input,select,summary,a{outline-offset:4px}
+.shell{max-width:1180px;margin:auto;padding:22px 32px 70px}
+.site-nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.brand{text-decoration:none;font:700 20px/1.3 Georgia,serif;white-space:nowrap}
+.site-nav-links{display:flex;flex-wrap:wrap;gap:18px;font-size:13px}
+.site-nav-links a{text-decoration:none}
+.site-nav-links a[aria-current]{border-bottom:2px solid var(--green)}
+header{padding:42px 0 30px}
+.eyebrow{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:2px}
+h1{max-width:900px;margin:14px 0 18px;font:650 clamp(28px,4vw,44px)/1.25 Georgia,"Noto Serif SC","Microsoft YaHei",serif;letter-spacing:-.7px}
+.lede{max-width:920px;margin:0;color:#4d6054;font-size:16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin:20px 0;color:var(--muted);font-size:12px}
+.notice{padding:14px 18px;border-left:3px solid #9bad97;background:#edf1e8;color:#506152;font-size:12px;line-height:1.8}
+.controls{display:grid;grid-template-columns:auto minmax(180px,1fr) auto auto auto auto;align-items:center;gap:10px;padding:18px 0 20px;border-top:1px solid var(--line)}
+.controls label{color:var(--muted);font-size:12px}
+.controls input,.controls select{min-width:0;padding:9px 12px;border:1px solid #c5d2c2;border-radius:5px;background:#fff}
+.controls button{padding:9px 14px;border:1px solid #c5d2c2;border-radius:5px;background:#fff;color:var(--green);cursor:pointer;font-size:12px;white-space:nowrap}
+.controls button:hover{background:#e6eddf}
+.count{grid-column:1/-1;color:var(--muted);font-size:11px}
+.stage-card{margin-bottom:14px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.stage-card>summary{display:grid;grid-template-columns:100px 1fr;gap:8px 20px;position:relative;padding:22px 28px;cursor:pointer;list-style:none}
+.stage-card>summary::-webkit-details-marker{display:none}
+.stage-card>summary::after{content:"+";position:absolute;right:17px;top:22px;color:#789578;font-size:24px}
+.stage-card[open]>summary::after{content:"−"}
+.stage-kicker{align-self:center;color:var(--accent);text-transform:uppercase;font-size:10px;letter-spacing:1.1px}
+summary h2{margin:0;padding-right:14px;font:650 23px/1.35 Georgia,"Noto Serif SC","Microsoft YaHei",serif;color:var(--green)}
+.stage-card>summary p{grid-column:2;margin:0;color:var(--muted);font-size:12px;line-height:1.7}
+.stage-body{padding:6px 28px 26px}
+.route-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+h3,h4{line-height:1.45}
+.route-grid h3,.subsection>h3{margin:18px 0 12px;font-size:17px;color:var(--green)}
+.route-grid h4{margin:16px 0 8px;font-size:13px}
+ul,ol{padding-left:20px}
+li{margin:7px 0}
+.route-grid ul,.route-grid ol{color:#526158;font-size:13px}
+.glossary{display:grid;grid-template-columns:minmax(90px,140px) 1fr;gap:9px 12px;font-size:12px}
+.glossary dt{font-weight:650;color:var(--green)}
+.glossary dd{margin:0;color:#627167}
+.subsection{margin-top:22px;padding-top:16px;border-top:1px solid #e5ebe0}
+.subsection h3 span{margin-left:12px;color:var(--muted);font:400 11px/1.5 "Segoe UI","Microsoft YaHei",sans-serif}
+.reading,.experiment-list,.section-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;margin:0;padding:0}
+.reading li,.experiment-list li,.section-list li{margin:0;padding:12px 15px;background:#f7f9f3;border-radius:6px;font-size:12px}
+.reading a{font-weight:650}
+.reading span{display:block;margin-top:6px;color:var(--muted)}
+.experiment-list p,.section-list p{margin:7px 0 0;color:#59665d;font-size:12px}
+.tag{display:inline-block;margin-left:7px;color:var(--accent);font-size:10px}
+.paper-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.paper-card{padding:15px;border:1px solid var(--line);border-radius:7px;background:#fcfdf9}
+.paper-card h4{margin:0;color:var(--green);font:650 16px/1.4 Georgia,"Noto Serif SC",serif}
+.paper-card p{margin:8px 0 0;color:#59675d;font-size:12px}
+.paper-meta{color:var(--muted)!important;font-size:11px!important}
+.evidence{font-size:11px!important}
+.paper-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;font-size:11px}
+.paper-links a{text-decoration:none;border-bottom:1px solid #bacbb5}
+.frontier-card{margin:12px 0;border:1px solid var(--line);border-radius:7px;background:#fbfcf8}
+.frontier-card>summary{padding:17px 20px;cursor:pointer}
+.frontier-card>summary h3{display:inline;margin:0 0 0 12px;color:var(--green);font-size:16px}
+.frontier-card>summary p{margin:8px 0 0;color:var(--muted);font-size:12px}
+.frontier-body{padding:0 20px 20px}
+.question{padding:12px 15px;background:#eef2e6;color:#526047;font-size:13px}
+.limits{color:#806047!important}
+.candidates>h2{font:650 24px/1.4 Georgia,"Noto Serif SC","Microsoft YaHei",serif;color:var(--green)}
+.candidates>p{color:var(--muted);font-size:13px}
+.empty{padding:18px;border:1px dashed #bdcbb7;color:var(--muted)}
+footer{margin-top:36px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:11px}
+footer a{display:inline-block;margin:4px 12px 4px 0}
+@media(max-width:800px){.shell{padding:18px}.site-nav{align-items:flex-start;flex-direction:column;gap:12px}.site-nav-links{gap:14px}.controls{grid-template-columns:auto 1fr}.controls button{white-space:normal}.controls .count{grid-column:1/-1}.stage-card>summary{grid-template-columns:1fr;padding:20px}.stage-card>summary p{grid-column:1}.stage-kicker{margin-bottom:2px}.stage-body{padding:0 20px 20px}.route-grid,.paper-grid,.reading,.experiment-list,.section-list{grid-template-columns:1fr}.glossary{grid-template-columns:100px 1fr}.frontier-card>summary h3{display:block;margin:8px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.reference-groups{display:grid;gap:10px}.reference-group{padding:12px 14px;border:1px solid #d5e1d5;border-radius:10px;background:#fbfdf9}.reference-group summary{cursor:pointer;color:var(--green);font-weight:750}.reference-group summary span{float:right;color:var(--muted);font-size:11px;font-weight:400}.reference-group>p{margin:8px 0;color:#526158;font-size:12px;line-height:1.6}.reference-paper-card{padding:13px;border:1px solid #d5e1d5;border-radius:10px;background:#fff}.reference-paper-card h4{margin:0;color:var(--green);font:650 15px/1.35 Georgia,"Noto Serif SC",serif}.reference-paper-card p{margin:7px 0 0;color:#526158;font-size:11px;line-height:1.55}.candidate-card{padding:15px;border:1px dashed #c6b796;border-radius:10px;background:#fffaf0}.candidate-card h3{margin:0;color:#744324;font:650 17px/1.35 Georgia,"Noto Serif SC",serif}.candidate-card p{margin:7px 0 0;color:#6b5c4e;font-size:12px;line-height:1.6}.candidate-note{padding-top:7px;border-top:1px solid #eadfc9}

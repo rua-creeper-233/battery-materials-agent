@@ -5,7 +5,7 @@ import unittest
 import tempfile
 from pathlib import Path
 
-from extract_method_evidence import REVIEW_STATUS, extract
+from extract_method_evidence import OUTPUT_PATH, REPORT_PATH, REVIEW_STATUS, extract
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,11 +28,23 @@ class MethodEvidenceTests(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls) -> None:
-        cls.payload = json.loads(
-            (ROOT / "data" / "method_evidence.auto.json").read_text(encoding="utf-8")
-        )
+        local = ROOT / "private" / "method_evidence.auto.json"
+        cls.payload = json.loads(local.read_text(encoding="utf-8")) if local.is_file() else None
+
+    def test_public_payload_is_empty_and_no_local_coverage(self) -> None:
+        public = json.loads((ROOT / "data" / "method_evidence.auto.json").read_text(encoding="utf-8"))
+        self.assertEqual(public.get("visibility"), "public_sanitized")
+        self.assertEqual(public["papers"], {})
+        self.assertNotIn("fulltext_paper_ids", public)
+        self.assertNotIn("fulltext_paper_count", public)
+
+    def test_default_extraction_outputs_are_private(self) -> None:
+        self.assertTrue(OUTPUT_PATH.is_relative_to(ROOT / "private"))
+        self.assertTrue(REPORT_PATH.is_relative_to(ROOT / "private"))
 
     def test_scope_and_review_boundary(self) -> None:
+        if self.payload is None:
+            self.skipTest("Local method extraction is intentionally absent from public checkouts")
         self.assertEqual(self.payload["review_status"], REVIEW_STATUS)
         manifest = json.loads((ROOT / "literature/manifest.json").read_text(encoding="utf-8"))
         expected = {key for key, row in manifest["papers"].items() if row.get("status") == "downloaded"}
@@ -55,6 +67,8 @@ class MethodEvidenceTests(unittest.TestCase):
         self.assertTrue(all(len(item["signal"]) <= 120 for item in all_items))
 
     def test_key_papers_have_expected_method_locators(self) -> None:
+        if self.payload is None:
+            self.skipTest("Local method extraction is intentionally absent from public checkouts")
         def categories(paper_id: str) -> set[str]:
             return {
                 item["category"]
@@ -73,6 +87,8 @@ class MethodEvidenceTests(unittest.TestCase):
         )
 
     def test_every_locator_points_to_its_own_pdf(self) -> None:
+        if self.payload is None:
+            self.skipTest("Local method extraction is intentionally absent from public checkouts")
         for paper_id, paper in self.payload["papers"].items():
             for item in paper["evidence"]:
                 self.assertEqual(

@@ -84,6 +84,7 @@
     .paper-tag { display: inline-flex; align-items: center; min-height: 21px; padding: 0 7px; border-radius: 999px; background: #edf3ef; color: #315849; font: 750 9px/1 sans-serif; }
     .paper-tag.kind { background: #fff0e4; color: #9a4a21; }
     .paper-tag.method { background: #e7f0f8; color: #245a82; }
+    .paper-tag.route { background: #eee8fb; color: #5d428e; text-decoration: none; }
     .modal { position: fixed; inset: 0; background: #102018b8; padding: 5vw; display: none; place-items: center; z-index: 10; }
     .modal.open { display: grid; }
     .modal-card { max-width: 850px; max-height: 85vh; overflow: auto; padding: 28px; background: var(--card); border-radius: 18px; box-shadow: 0 30px 100px #0006; }
@@ -154,7 +155,7 @@
         <a href="#future-directions">未来方向</a>
         <a href="./ai-battery-applications.html">AI 应用</a>
         <a href="./foundations.html">基础地图</a>
-        <a href="#tutorials">学习路径</a>
+        <a href="./learning-route.html">学习路线</a>
       </div>
     </nav>
     <header id="top">
@@ -310,7 +311,7 @@
     const localMode = ['127.0.0.1', 'localhost', '::1'].includes(location.hostname);
     const readStorage = (store, key) => { try { return store.getItem(key) || ''; } catch (_) { return ''; } };
     const state = {
-      papers: [], zotero: {}, literature: {}, methods: {}, paperTags: {}, searchConfig: {}, activeTag: '',
+      papers: [], zotero: {}, literature: {}, methods: {}, paperTags: {}, searchConfig: {}, learningRoute: null, activeTag: '',
       apiBase: readStorage(localStorage, 'battery-agent-api-base'),
       apiToken: readStorage(sessionStorage, 'battery-agent-api-token'),
       backendConnected: localMode
@@ -386,10 +387,21 @@
     }
     window.openWos = openWos;
     function paperTagPills(p) {
-      return (p.display_tags || []).map(tag => {
+      const ordinary = (p.display_tags || []).map(tag => {
         const kind = ['方法论文','进展论文','综述'].includes(tag) ? 'kind' : 'method';
         return `<span class="paper-tag ${kind}">${escapeHtml(tag)}</span>`;
       }).join('');
+      const routeMap = state.learningRoute?.papers?.[p.id];
+      if (!routeMap) return ordinary;
+      const stage = state.learningRoute.stages?.find(item => item.id === routeMap.stage);
+      const stagePill = stage
+        ? `<a class="paper-tag route" href="./learning-route.html#stage-${encodeURIComponent(stage.id)}">路线 · ${escapeHtml(stage.label)}</a>`
+        : '';
+      const frontierPills = (routeMap.frontiers || []).map(frontierId => {
+        const frontier = (state.learningRoute.frontiers || []).find(item => item.id === frontierId);
+        return frontier ? `<a class="paper-tag route" href="./learning-route.html#frontier-${encodeURIComponent(frontier.id)}">前沿 · ${escapeHtml(frontier.label)}</a>` : '';
+      }).join('');
+      return ordinary + stagePill + frontierPills;
     }
     function paperCard(p) {
       return `<article class="e-card"><span class="year">${p.year} · ${escapeHtml(p.journal)}</span><div class="paper-tags">${paperTagPills(p)}</div><h4>${escapeHtml(p.role)}</h4><p>${escapeHtml(p.summary)}</p>${linkButtons(p)}</article>`;
@@ -556,6 +568,21 @@
       } catch (_) { state.paperTags = {}; }
       state.papers = state.papers.map(p => ({...p, ...(state.paperTags[p.id] || {})}));
       try {
+        const routeResponse = await fetch('./data/learning_route.json', {cache:'no-store'});
+        if (!routeResponse.ok) throw new Error(`route HTTP ${routeResponse.status}`);
+        const routePayload = await routeResponse.json();
+        state.learningRoute = routePayload && typeof routePayload === 'object' ? routePayload : null;
+        if (state.learningRoute?.papers) {
+          const stages = Object.fromEntries((state.learningRoute.stages || []).map(item => [item.id, item]));
+          const frontiers = Object.fromEntries((state.learningRoute.frontiers || []).map(item => [item.id, item]));
+          state.papers = state.papers.map(p => {
+            const route = state.learningRoute.papers[p.id];
+            if (!route) return p;
+            return {...p, learning_route_stage: stages[route.stage]?.label || route.stage, learning_route_frontiers: (route.frontiers || []).map(id => frontiers[id]?.label || id).join(' ')};
+          });
+        }
+      } catch (_) { state.learningRoute = null; }
+      try {
         state.searchConfig = hasBackend()
           ? await apiFetch('/api/search-config', {cache:'no-store'}).then(r => r.json())
           : await fetch('./data/search_config.json', {cache:'no-store'}).then(r => r.json());
@@ -600,6 +627,11 @@
         : `Zotero ${zoteroRows.length} · PDF ${zoteroRows.filter(row => row.attachment_key).length}`;
       updateApiStat();
       renderList();
+      const requestedPaper = new URLSearchParams(location.search).get('paper');
+      if (requestedPaper) {
+        if (state.papers.some(p => p.id === requestedPaper)) showPaper(requestedPaper);
+        else setServiceMessage(`未找到论文：${requestedPaper}`, 'bad');
+      }
     }
     loadData();
   </script>

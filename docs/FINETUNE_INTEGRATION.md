@@ -10,7 +10,7 @@
 `evidence` 生成事实、流程、边界和方法并列问题；不读取 PDF 或全文索引。
 
 ```bash
-cd /mnt/e/MSul/battery_materials_agent
+cd <project-root>
 python training/expand_dataset.py --dry-run
 python training/expand_dataset.py
 python training/validate_dataset.py --train training/expanded_train.jsonl --eval training/expanded_eval.jsonl --test training/expanded_test.jsonl
@@ -32,11 +32,11 @@ python training/validate_dataset.py --train training/expanded_train.jsonl --eval
 先用 5 步检查依赖和显存，再进行正式训练：
 
 ```bash
-source /home/invalid_index/venvs/battery-lora/bin/activate
+source <venv>/bin/activate
 export HF_HUB_OFFLINE=1                 # 基础模型已在本地时使用
-python finetune/train_qlora.py --model /mnt/e/MSul/models/Qwen2.5-1.5B-Instruct \
+python finetune/train_qlora.py --model <local-model-path>/Qwen2.5-1.5B-Instruct \
   --max-steps 5 --precision auto --output finetune/outputs/qwen25-battery-lora-20261008-smoke
-python finetune/train_qlora.py --model /mnt/e/MSul/models/Qwen2.5-1.5B-Instruct \
+python finetune/train_qlora.py --model <local-model-path>/Qwen2.5-1.5B-Instruct \
   --precision auto --output finetune/outputs/qwen25-battery-lora-20261008
 ```
 
@@ -56,10 +56,10 @@ python finetune/train_qlora.py --model /mnt/e/MSul/models/Qwen2.5-1.5B-Instruct 
 `GET /health` 与 `POST /v1/chat/completions`：
 
 ```bash
-cd /mnt/e/MSul/battery_materials_agent
-source /home/invalid_index/venvs/battery-lora/bin/activate
+cd <project-root>
+source <venv>/bin/activate
 python finetune/serve_adapter.py \
-  --base-model /mnt/e/MSul/models/Qwen2.5-1.5B-Instruct \
+  --base-model <local-model-path>/Qwen2.5-1.5B-Instruct \
   --adapter finetune/outputs/qwen25-battery-lora-20261008 \
   --host 127.0.0.1 --port 8766 --max-input-tokens 4096 --max-new-tokens 512
 ```

@@ -79,7 +79,6 @@ def build_record(row: dict[str, Any]) -> dict[str, Any]:
             "doi": "verified_publisher_2026-09-20",
             "publisher": "verified_2026-09-20",
             "wos": "not_checked",
-            "fulltext": "not_downloaded",
             "sources": [f"https://doi.org/{doi}"],
         },
     }
@@ -114,8 +113,6 @@ def main() -> None:
                     refreshed = build_record(row)
                     refreshed["id"] = current["id"]
                     refreshed["wos_uid"] = current.get("wos_uid", "")
-                    old_verification = current.get("verification", {})
-                    refreshed["verification"]["fulltext"] = old_verification.get("fulltext", refreshed["verification"].get("fulltext", "not_downloaded"))
                     papers[index] = refreshed
             continue
         record = build_record(row)

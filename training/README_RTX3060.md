@@ -26,7 +26,7 @@
 ## 先验证，再训练
 
 ```powershell
-cd E:\MSul\battery_materials_agent
+cd <project-root>
 python training\train_qlora.py --dry-run
 python training\evaluate_model.py
 ```
