@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "as_of": "2026-10-14",
-  "policy": "176 篇各有一个主阶段，科研常备参考和前沿分支允许交叉引用。baseline 在本页指科研中反复查验的经典方法、规范与基本素养，不表示课程难度或模型对照；分类是教学/查阅用途，不是质量或行业标准认证。前沿问题为待验证推断，不保证新颖性或发表。实验按主张与资源选择。补充清单尚未纳入这 176 篇，不冒充已取得全文。公开页仅有书目与教学，不含个人附件或本机记录。",
+  "policy": "baseline 是科研中反复查验的常备参考。每篇论文有唯一主阶段，也可被多个专题引用。分类用于学习和查阅，不代表质量排名、工业标准认证或保证发表；实验按研究主张选择。公开页面仅含书目与教学资料，不公开私人全文或附件信息。",
   "stages": [
     {
       "id": "baseline",
@@ -2719,118 +2719,7 @@
       "evidence_basis": "依据已核验目录的题名、方法字段和人工摘要做教学性归类；不等同逐篇全文难度评价或完整科学结论。"
     }
   },
-  "candidates": [
-    {
-      "id": "grossfield2018_sampling_uncertainty",
-      "title": "Best Practices for Quantification of Uncertainty and Sampling Quality in Molecular Simulations [Article v1.0]",
-      "doi": "10.33011/livecoms.1.1.5067",
-      "year": 2018,
-      "purpose": "做 MD 结果分析时查采样质量、相关性、有效样本和误差条；帮助写结果可信度与局限。",
-      "priority": "现在优先下载",
-      "source_url": "https://livecomsjournal.org/index.php/livecoms/article/view/v1i1e5067",
-      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
-    },
-    {
-      "id": "chodera2016_equilibration_detection",
-      "title": "A Simple Method for Automated Equilibration Detection in Molecular Simulations",
-      "doi": "10.1021/acs.jctc.5b00784",
-      "year": 2016,
-      "purpose": "确定丢弃哪段平衡数据、选生产区间和评估有效样本；帮助写 MD 数据处理方法。",
-      "priority": "现在优先下载",
-      "source_url": "https://pubs.acs.org/doi/10.1021/acs.jctc.5b00784",
-      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
-    },
-    {
-      "id": "flyvbjerg1989_correlated_data_errors",
-      "title": "Error estimates on averages of correlated data",
-      "doi": "10.1063/1.457480",
-      "year": 1989,
-      "purpose": "解释为什么轨迹帧不是独立样本，查分块平均与相关数据的误差估计。",
-      "priority": "现在优先下载",
-      "source_url": "https://doi.org/10.1063/1.457480",
-      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
-    },
-    {
-      "id": "lejaeghere2016_dft_reproducibility",
-      "title": "Reproducibility in density functional theory calculations of solids",
-      "doi": "10.1126/science.aad3000",
-      "year": 2016,
-      "purpose": "检查不同代码/赝势之间的数值可复现性，区分数值精度与物理准确性。",
-      "priority": "现在优先下载",
-      "source_url": "https://www.science.org/doi/10.1126/science.aad3000",
-      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
-    },
-    {
-      "id": "bosoni2023_dft_verification_workflows",
-      "title": "How to verify the precision of density-functional-theory implementations via reproducible and universal workflows",
-      "doi": "10.1038/s42254-023-00655-3",
-      "year": 2024,
-      "purpose": "用专家建议整理 DFT 精度核验、参考数据、统一工作流与适用范围；卷年 2024，线上发表于 2023。",
-      "priority": "现在优先下载",
-      "source_url": "https://www.nature.com/articles/s42254-023-00655-3",
-      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
-    },
-    {
-      "id": "wilkinson2016_fair_principles",
-      "title": "The FAIR Guiding Principles for scientific data management and stewardship",
-      "doi": "10.1038/sdata.2016.18",
-      "year": 2016,
-      "purpose": "检查数据/代码如何可查找、可获取、可互操作与可复用；FAIR 不等于所有资源都必须无限公开。",
-      "priority": "现在优先下载",
-      "source_url": "https://www.nature.com/articles/sdata201618",
-      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
-    },
-    {
-      "id": "hohenberg1964_inhomogeneous_electron_gas",
-      "title": "Inhomogeneous Electron Gas",
-      "doi": "10.1103/PhysRev.136.B864",
-      "year": 1964,
-      "purpose": "DFT 的基础定理出处；写电子结构理论背景或查基态密度与能量泛函的基本假设。",
-      "priority": "理论出处，按需查阅",
-      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.136.B864",
-      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
-    },
-    {
-      "id": "kohnsham1965_self_consistent_equations",
-      "title": "Self-Consistent Equations Including Exchange and Correlation Effects",
-      "doi": "10.1103/PhysRev.140.A1133",
-      "year": 1965,
-      "purpose": "查 Kohn–Sham 体系、自洽求解与交换关联处理的理论来源；不替代现代软件手册。",
-      "priority": "理论出处，按需查阅",
-      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.140.A1133",
-      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
-    },
-    {
-      "id": "verlet1967_computer_experiments",
-      "title": "Computer ‘Experiments’ on Classical Fluids. I. Thermodynamical Properties of Lennard-Jones Molecules",
-      "doi": "10.1103/PhysRev.159.98",
-      "year": 1967,
-      "purpose": "查经典 MD 数值推进与 Lennard-Jones 计算实验出处；实际积分实现需核对所用软件。",
-      "priority": "理论出处，按需查阅",
-      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.159.98",
-      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
-    },
-    {
-      "id": "nose1984_constant_temperature_md",
-      "title": "A unified formulation of the constant temperature molecular dynamics methods",
-      "doi": "10.1063/1.447334",
-      "year": 1984,
-      "purpose": "查恒温 MD 的理论与系综假设，写所用恒温方法的出处；不是所有恒温器的通用引用。",
-      "priority": "理论出处，按需查阅",
-      "source_url": "https://doi.org/10.1063/1.447334",
-      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
-    },
-    {
-      "id": "hoover1985_canonical_dynamics",
-      "title": "Canonical dynamics: Equilibrium phase-space distributions",
-      "doi": "10.1103/PhysRevA.31.1695",
-      "year": 1985,
-      "purpose": "查 Nosé–Hoover 动力学与采样假设；仍须检查目标体系的温度分布与采样表现。",
-      "priority": "理论出处，按需查阅",
-      "source_url": "https://journals.aps.org/pra/abstract/10.1103/PhysRevA.31.1695",
-      "pending_note": "未纳入现有 176 篇精选目录；全文保存情况未核验，由用户按合法权限自行下载。"
-    }
-  ],
+  "candidates": [],
   "sources": [
     {
       "title": "量子基础：Caltech 官方费曼讲义",

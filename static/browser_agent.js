@@ -123,7 +123,7 @@
   }
   function fields(p) {
     return {
-      title: flatten(p.title).toLowerCase(), role: flatten(p.role).toLowerCase(), methods: flatten(p.methods).toLowerCase(),
+      title: flatten([p.title, p.title_zh]).toLowerCase(), role: flatten(p.role).toLowerCase(), methods: flatten(p.methods).toLowerCase(),
       tags: flatten([p.tags_zh, p.display_tags]).toLowerCase(), systems_properties: flatten([p.systems, p.properties]).toLowerCase(),
       summary_evidence: flatten([p.summary,p.evidence,p.protocol_steps,p.scope_note]).toLowerCase()
     };

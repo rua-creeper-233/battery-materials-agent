@@ -28,18 +28,13 @@
     const referenceNodes = [...document.querySelectorAll('.reference-paper-card[data-paper-id]')];
     [...allPaperNodes, ...referenceNodes].forEach((node) => { node.hidden = Boolean(query && !normalize(`${node.textContent} ${node.dataset.search}`).includes(query)); });
     document.querySelectorAll('.citations, .reference-group').forEach((section) => { section.hidden = ![...section.querySelectorAll('.paper-card, .reference-paper-card')].some((node) => !node.hidden); });
-    const candidateNodes = [...document.querySelectorAll('.candidate-card')];
-    candidateNodes.forEach((node) => { node.hidden = Boolean(query && !normalize(`${node.textContent} ${node.dataset.search}`).includes(query)); });
-    const matchedCandidates = candidateNodes.filter((node) => !node.hidden).length;
-    const candidateSection = document.querySelector('.candidates');
-    if (candidateSection) candidateSection.hidden = matchedCandidates === 0;
     const uniquePaperIds = new Set(allPaperNodes.map((node) => node.dataset.paperId));
     const visibleNodes = [...allPaperNodes, ...referenceNodes].filter((node) => !node.hidden && !node.closest('details[hidden]'));
     const visiblePaperIds = new Set(visibleNodes.map((node) => node.dataset.paperId));
     const visibleRefs = visibleNodes.length;
     const overlapRefs = allPaperNodes.length - uniquePaperIds.size;
-    count.textContent = `显示 ${visible} / ${cards.length} 个路线分支 · 论文 ${visiblePaperIds.size}/${uniquePaperIds.size} 篇 · 匹配引用 ${visibleRefs} 条 · 前沿交叉 ${overlapRefs} 条 · 常备交叉 ${referenceNodes.length} 条` + (candidateNodes.length ? ` · 补充清单 ${matchedCandidates}/${candidateNodes.length} 篇` : '');
-    empty.hidden = visible !== 0 || matchedCandidates !== 0;
+    count.textContent = `显示 ${visible} / ${cards.length} 个路线分支 · 论文 ${visiblePaperIds.size}/${uniquePaperIds.size} 篇 · 匹配引用 ${visibleRefs} 条`;
+    empty.hidden = visible !== 0;
   };
   const readHash = () => { const encoded = location.hash.slice(1); if (!encoded) return null; try { return decodeURIComponent(encoded); } catch (_) { return null; } };
   const openHashTarget = () => {

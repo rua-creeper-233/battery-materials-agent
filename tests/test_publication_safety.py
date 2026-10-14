@@ -77,13 +77,13 @@ class PublicationSafetyTests(unittest.TestCase):
         import build_learning_route
 
         root = Path(__file__).resolve().parents[1]
-        assets = ("index.html", "future-directions.html", "ai-battery-applications.html", "foundations.html", "learning-route.css", "learning-route.js", "browser_agent.js", "tutorials.js", "tutorials.css", "dft_lessons.js", "beginner_lessons.js", "md_lessons.js")
+        assets = ("index.html", "future-directions.html", "ai-battery-applications.html", "foundations.html", "learning-route.css", "learning-route.js", "lab-ui.css", "lab-ui.js", "browser_agent.js", "tutorials.js", "tutorials.css", "dft_lessons.js", "beginner_lessons.js", "md_lessons.js")
         sources = [root / "static" / name for name in assets]
         sources += [root / "guides" / name for name in build_pages.GUIDE_NAMES]
         sources += [root / "FINETUNE_INTEGRATION.md", root / "static/data/zotero-links.json"]
         sources += [root / "examples/ai_battery" / name for name in ("relax_mace.py", "msd_from_csv.py", "example_trajectory.csv")]
-        sources += [root / "data" / name for name in ("papers.json", "learning_route.json", "paper_tags.json", "search_config.json", "project_status.json", "method_evidence.auto.json")]
-        for kind in ("zotero", "method", "catalog", "route", "guide"):
+        sources += [root / "data" / name for name in ("papers.json", "learning_route.json", "paper_tags.json", "search_config.json", "project_status.json", "paper_titles_zh.json", "method_evidence.auto.json")]
+        for kind in ("zotero", "method", "catalog", "titles", "shared_asset", "route", "guide"):
             with self.subTest(source=kind), tempfile.TemporaryDirectory() as folder:
                 target_root = Path(folder)
                 for source in sources:
@@ -108,6 +108,15 @@ class PublicationSafetyTests(unittest.TestCase):
                     target = target_root / "data/learning_route.json"
                     value = json.loads(target.read_text(encoding="utf-8"))
                     value["stages"][0]["summary"] += " sk-proj-" + "a" * 24
+                elif kind == "titles":
+                    target = target_root / "data/paper_titles_zh.json"
+                    value = json.loads(target.read_text(encoding="utf-8"))
+                    first = next(iter(value["papers"]))
+                    value["papers"][first]["title"] += " C:/" + "Users/" + "fixture-person/file"
+                elif kind == "shared_asset":
+                    target = target_root / "static/lab-ui.js"
+                    target.write_text("const leaked = 'sk-proj-" + "a" * 24 + "';", encoding="utf-8")
+                    value = None
                 else:
                     target = target_root / "guides" / build_pages.GUIDE_NAMES[0]
                     target.write_text("contact=" + "fixture" + "@" + "example.invalid", encoding="utf-8")

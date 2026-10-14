@@ -6,7 +6,8 @@ const code = fs.readFileSync(new URL('../static/browser_agent.js', import.meta.u
 const papers = JSON.parse(fs.readFileSync(new URL('../data/papers.json', import.meta.url), 'utf8'));
 const tags = JSON.parse(fs.readFileSync(new URL('../data/paper_tags.json', import.meta.url), 'utf8')).papers;
 const config = JSON.parse(fs.readFileSync(new URL('../data/search_config.json', import.meta.url), 'utf8'));
-const merged = papers.map(paper => ({display_tags: [], ...paper, ...(tags[paper.id] || {})}));
+const titles = JSON.parse(fs.readFileSync(new URL('../data/paper_titles_zh.json', import.meta.url), 'utf8')).papers;
+const merged = papers.map(paper => ({display_tags: [], ...paper, ...(tags[paper.id] || {}), title_zh: titles[paper.id]?.title_zh || ''}));
 const context = vm.createContext({window:{}});
 vm.runInContext(code, context);
 const agent = context.window.BatteryBrowserAgent;
@@ -17,6 +18,7 @@ assert.ok(vasp.results.every(paper => paper.display_tags.includes('VASP')));
 assert.match(vasp.results[0].retrieval.reason, /VASP/);
 assert.equal(agent.search('zzzz-not-a-real-material-token', merged, 5, config).length, 0);
 assert.deepEqual(Array.from(agent.search('DOI: https://doi.org/10.1038/S41524-020-00406-3.', merged, 5, config), p => p.id), ['dunn2020_matbench']);
+assert.ok(agent.search('固态聚合物电解质', merged, 5, config).some(p => p.id === 'tan2026_pemd'));
 assert.equal(agent.search('10.1038/s41524-020-00406-30', merged, 5, config).length, 0);
 assert.match(agent.answer('10.3390/ma17081810', merged, config).answer_markdown, /元数据入口（待核验）/);
 for (const query of ['文献', '开路电压', '聚合物电解质']) {

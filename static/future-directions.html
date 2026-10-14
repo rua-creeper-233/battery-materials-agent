@@ -46,8 +46,11 @@
     .roadmap-note { margin:15px 0 0; padding-top:13px; border-top:1px solid #cadbc9; color:#526158; font-size:12px; line-height:1.7; }
     @media(max-width:720px) { .shell{padding:18px}.site-nav{align-items:flex-start;flex-direction:column}.site-nav-links{justify-content:flex-start}.future-section{padding:22px 18px}.future-grid{grid-template-columns:1fr}.future-card.featured{grid-column:auto}.roadmap{padding:18px}.roadmap-grid{grid-template-columns:1fr}.future-bottom{align-items:flex-start;flex-direction:column} }
   </style>
+  <link rel="stylesheet" href="./lab-ui.css">
+  <script src="./lab-ui.js"></script>
 </head>
 <body>
+
   <div class="shell">
     <nav class="site-nav" aria-label="页面导航">
       <a class="brand" href="./index.html#top">Battery Evidence Lab</a>
@@ -63,6 +66,8 @@
       <div class="eyebrow">RESEARCH OUTLOOK · 综述证据 → 可做问题</div>
       <h1 id="futureTitle">电池材料计算的下一组问题</h1>
       <p class="future-lede">这里把近年综述和展望中的共同判断，压缩成可以在硕士阶段逐步验证的研究问题。卡片中的链接指向原始 DOI；“建议问题”和“验证路径”是本站基于综述的研究设计，不代表原文已经完成该课题。</p>
+      <p class="project-progress" data-project-progress>项目进度：读取中…</p>
+      <details class="route-shortcuts"><summary>按当前 176 篇论文查阅 8 个前沿专题</summary><p>本页概括研究切口；更细的论文分组、基础要求与验证清单见学习路线。分类是研究设计建议，不代表已完成复现。</p><div class="links"><a href="./learning-route.html#frontier-mlip_transport_and_sse">固态电解质与离子输运</a><a href="./learning-route.html#frontier-interfaces_sei_and_dendrites">界面与 SEI/CEI</a><a href="./learning-route.html#frontier-liquid_and_polymer_electrolytes">液态与聚合物电解质</a><a href="./learning-route.html#frontier-cathodes_defects_and_redox">正极、缺陷与氧化还原</a><a href="./learning-route.html#frontier-ai_screening_and_uq">AI 筛选与不确定性</a><a href="./learning-route.html#frontier-multiscale_and_validation">多尺度与实验验证</a><a href="./learning-route.html#frontier-mlip_reliability_and_data_efficiency">MLIP 可靠性与效率</a><a href="./learning-route.html#frontier-autonomous_workflows">可审计工作流与 AI 闭环</a></div></details>
       <div class="future-meta"><span>综述与展望优先</span><span>每个方向有最小可行验证</span><span>适合 DFT · AIMD · MLIP</span></div>
       <div class="future-grid">
         <article class="future-card featured">

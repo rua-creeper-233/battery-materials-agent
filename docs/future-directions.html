@@ -46,8 +46,68 @@
     .roadmap-note { margin:15px 0 0; padding-top:13px; border-top:1px solid #cadbc9; color:#526158; font-size:12px; line-height:1.7; }
     @media(max-width:720px) { .shell{padding:18px}.site-nav{align-items:flex-start;flex-direction:column}.site-nav-links{justify-content:flex-start}.future-section{padding:22px 18px}.future-grid{grid-template-columns:1fr}.future-card.featured{grid-column:auto}.roadmap{padding:18px}.roadmap-grid{grid-template-columns:1fr}.future-bottom{align-items:flex-start;flex-direction:column} }
   </style>
-</head>
+  <link rel="stylesheet" href="./lab-ui.css">
+  <script src="./lab-ui.js"></script>
+<style data-lab-ui-inline>/* Shared quiet visual baseline. Pages keep their existing structure/content. */
+:root {
+  --paper: #fafbf8;
+  --ink: #203029;
+  --muted: #68766f;
+  --card: #ffffff;
+  --line: #dbe3dc;
+  --green: #2e6b50;
+  --mint: #edf5ef;
+  --orange: #876e54;
+  --shadow: none;
+}
+body { background: var(--paper) !important; color: var(--ink) !important; }
+body::before { display: none !important; }
+.shell { max-width: 1200px !important; padding: 24px !important; }
+.panel, .card, .topic, .resource, .paper-card, .e-card, .future-section,
+.band, .code-section, .tutorials, .future-teaser, .modal-card { box-shadow: none !important; }
+.panel, .card, .topic, .resource, .paper-card, .e-card, .code-section,
+.tutorials, .future-teaser { border-radius: 8px !important; }
+.future-section, .band { border-radius: 8px !important; background: #f0f5f0 !important; color: var(--ink) !important; border-color: var(--line) !important; }
+.future-section h1, .future-section h2, .band h2, .future-section .eyebrow { color: var(--green) !important; }
+.future-lede, .band p { color: var(--muted) !important; }
+.future-card, .step { border: 1px solid var(--line); border-radius: 7px !important; background: #fff !important; }
+.future-card.featured { background: #f4f8f4 !important; }
+.future-card p, .step p { color: var(--muted) !important; }
+.site-nav-links a, .filter-chip, .chip { border-radius: 5px !important; }
+button { border-radius: 6px !important; }
+.stat, .future-meta span, .meta span { border-radius: 5px !important; }
+.future-meta span { color: var(--muted) !important; border-color: var(--line) !important; }
+.future-bottom { color: var(--muted) !important; }
+.future-bottom a { color: var(--green) !important; }
+.roadmap, .roadmap-item { border-radius: 8px !important; }
+.notice { background: #f3f7f3 !important; border-left-color: var(--green) !important; color: #52655b !important; }
+.paper-title-zh { display: block; margin-top: 3px; color: var(--muted); font-size: .86em; font-weight: 400; line-height: 1.45; }
+.paper-title-en { display: block; }
+.paper-title-zh { font-size: 11px; }
+.project-progress { margin: 10px 0 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
+.title-map-notice { margin: 5px 0 0; color: var(--muted); font-size: 11px; }
+header h1 { font-size: clamp(28px, 4vw, 36px) !important; }
+.future-section h1 { font-size: clamp(28px, 4vw, 36px) !important; }
+header { align-items: flex-start !important; }
+.service-details { max-width: 330px; color: var(--muted); font-size: 12px; text-align: right; }
+.service-details summary { cursor: pointer; padding: 3px 0; }
+.service-details .stats { margin-top: 10px; gap: 6px; }
+.stat { font-size: 11px !important; padding: 7px 9px !important; }
+.workspace .empty { min-height: 240px !important; }
+.workspace .empty .mark { transform: none !important; width: 52px !important; height: 52px !important; border-radius: 8px !important; }
+.examples { gap: 6px; }
+.agent-trace { max-height: 120px; overflow: auto; }
+.paper-tags { gap: 3px; }
+.scope-note { margin-top: 14px; color: var(--muted); font-size: 12px; }
+.scope-note summary { cursor: pointer; }
+.route-shortcuts { margin: 14px 0 0; padding: 12px 14px; border: 1px solid var(--line); background: #fff; border-radius: 8px; font-size: 12px; }
+.route-shortcuts summary { cursor: pointer; color: var(--green); }
+.route-shortcuts p { color: var(--muted); line-height: 1.6; }
+.route-shortcuts .links { display: flex; flex-wrap: wrap; gap: 9px 16px; }
+@media (max-width: 700px) { .shell { padding: 16px !important; } }
+</style></head>
 <body>
+
   <div class="shell">
     <nav class="site-nav" aria-label="页面导航">
       <a class="brand" href="./index.html#top">Battery Evidence Lab</a>
@@ -63,6 +123,8 @@
       <div class="eyebrow">RESEARCH OUTLOOK · 综述证据 → 可做问题</div>
       <h1 id="futureTitle">电池材料计算的下一组问题</h1>
       <p class="future-lede">这里把近年综述和展望中的共同判断，压缩成可以在硕士阶段逐步验证的研究问题。卡片中的链接指向原始 DOI；“建议问题”和“验证路径”是本站基于综述的研究设计，不代表原文已经完成该课题。</p>
+      <p class="project-progress" data-project-progress>项目更新 2026-10-14 · 176 篇论文 · 998 条问答数据 · 本版未重新训练模型</p>
+      <details class="route-shortcuts"><summary>按当前 176 篇论文查阅 8 个前沿专题</summary><p>本页概括研究切口；更细的论文分组、基础要求与验证清单见学习路线。分类是研究设计建议，不代表已完成复现。</p><div class="links"><a href="./learning-route.html#frontier-mlip_transport_and_sse">固态电解质与离子输运</a><a href="./learning-route.html#frontier-interfaces_sei_and_dendrites">界面与 SEI/CEI</a><a href="./learning-route.html#frontier-liquid_and_polymer_electrolytes">液态与聚合物电解质</a><a href="./learning-route.html#frontier-cathodes_defects_and_redox">正极、缺陷与氧化还原</a><a href="./learning-route.html#frontier-ai_screening_and_uq">AI 筛选与不确定性</a><a href="./learning-route.html#frontier-multiscale_and_validation">多尺度与实验验证</a><a href="./learning-route.html#frontier-mlip_reliability_and_data_efficiency">MLIP 可靠性与效率</a><a href="./learning-route.html#frontier-autonomous_workflows">可审计工作流与 AI 闭环</a></div></details>
       <div class="future-meta"><span>综述与展望优先</span><span>每个方向有最小可行验证</span><span>适合 DFT · AIMD · MLIP</span></div>
       <div class="future-grid">
         <article class="future-card featured">

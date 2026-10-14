@@ -1,0 +1,887 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-14",
+  "notice": "中文题名为参考译名，便于检索和阅读；引用请使用英文原题。",
+  "papers": {
+    "tan2026_pemd": {
+      "title": "PEMD: a high-throughput simulation and analysis framework for solid polymer electrolytes",
+      "title_zh": "PEMD：固态聚合物电解质的高通量模拟与分析框架",
+      "doi": "10.1039/d5dd00454c"
+    },
+    "kuhn2026_hitpoly": {
+      "title": "Computational discovery of polymer electrolytes with Bayesian optimization and high-throughput molecular dynamics simulations",
+      "title_zh": "利用贝叶斯优化和高通量分子动力学模拟进行聚合物电解质的计算发现",
+      "doi": "10.1016/j.matt.2026.102922"
+    },
+    "yang2026_oxygen_sei": {
+      "title": "Enhanced Ionic Conductivity at the Solid Electrolyte Interphase of Oxygen-Doped Li6PS5Cl",
+      "title_zh": "氧掺杂 Li6PS5Cl 固体电解质界面膜中的增强离子电导率",
+      "doi": "10.1002/advs.76563"
+    },
+    "zhong2025_les_response": {
+      "title": "Machine learning interatomic potential can infer electrical response",
+      "title_zh": "机器学习原子间势可推断电学响应",
+      "doi": "10.1038/s41524-025-01911-z"
+    },
+    "subramanyam2025_entropy_data": {
+      "title": "Information-entropy-driven generation of material-agnostic datasets for machine-learning interatomic potentials",
+      "title_zh": "信息熵驱动的材料无关机器学习原子间势数据集生成",
+      "doi": "10.1038/s41524-025-01602-9"
+    },
+    "butler2018_ml_materials_review": {
+      "title": "Machine learning for molecular and materials science",
+      "title_zh": "用于分子与材料科学的机器学习",
+      "doi": "10.1038/s41586-018-0337-2"
+    },
+    "takenaka2026_sei_mlff": {
+      "title": "Machine learning force field molecular dynamics simulation of SEI formation on lithium metal",
+      "title_zh": "利用机器学习力场分子动力学模拟锂金属上固体电解质界面膜的形成",
+      "doi": "10.1038/s41524-026-02271-y"
+    },
+    "xie2019_gdynet": {
+      "title": "Graph dynamical networks for unsupervised learning of atomic scale dynamics in materials",
+      "title_zh": "用于材料原子尺度动力学无监督学习的图动力学网络",
+      "doi": "10.1038/s41467-019-10663-6"
+    },
+    "xie2022_polymernet": {
+      "title": "Accelerating amorphous polymer electrolyte screening by learning to reduce errors in molecular dynamics simulated properties",
+      "title_zh": "通过学习降低分子动力学模拟性质的误差，加速无定形聚合物电解质筛选",
+      "doi": "10.1038/s41467-022-30994-1"
+    },
+    "wang2023_sodium_design": {
+      "title": "Design principles for sodium superionic conductors",
+      "title_zh": "钠超离子导体的设计原则",
+      "doi": "10.1038/s41467-023-43436-3"
+    },
+    "he2017_concerted_diffusion": {
+      "title": "Origin of fast ion diffusion in super-ionic conductors",
+      "title_zh": "超离子导体中快速离子扩散的起源",
+      "doi": "10.1038/ncomms15893"
+    },
+    "smith2020_paddlewheel_ms": {
+      "title": "Low-temperature paddlewheel effect in glassy solid electrolytes",
+      "title_zh": "玻璃态固体电解质中的低温桨轮效应",
+      "doi": "10.1038/s41467-020-15245-5"
+    },
+    "wang2023_nasicon_design": {
+      "title": "Design principles for NASICON super-ionic conductors",
+      "title_zh": "NASICON 超离子导体的设计原则",
+      "doi": "10.1038/s41467-023-40669-0"
+    },
+    "urban2016_computational_review": {
+      "title": "Computational understanding of Li-ion batteries",
+      "title_zh": "锂离子电池的计算理解",
+      "doi": "10.1038/npjcompumats.2016.2"
+    },
+    "aydinol1997_voltage": {
+      "title": "Ab initio study of lithium intercalation in metal oxides and metal dichalcogenides",
+      "title_zh": "金属氧化物和金属二硫族化物中锂嵌入的从头算研究",
+      "doi": "10.1103/PhysRevB.56.1354"
+    },
+    "ceder1998_cathode_design": {
+      "title": "Identification of cathode materials for lithium batteries guided by first-principles calculations",
+      "title_zh": "由第一性原理计算指导的锂电池正极材料鉴定",
+      "doi": "10.1038/33647"
+    },
+    "vanderven2001_diffusion": {
+      "title": "First-principles theory of ionic diffusion with nondilute carriers",
+      "title_zh": "具有非稀释载流子的离子扩散第一性原理理论",
+      "doi": "10.1103/PhysRevB.64.184307"
+    },
+    "ong2011_li_na": {
+      "title": "Voltage, stability and diffusion barrier differences between sodium-ion and lithium-ion intercalation materials",
+      "title_zh": "钠离子与锂离子嵌入材料之间的电压、稳定性和扩散势垒差异",
+      "doi": "10.1039/C1EE01782A"
+    },
+    "ong2013_lgps": {
+      "title": "Phase stability, electrochemical stability and ionic conductivity of the Li10±1MP2X12 family of superionic conductors",
+      "title_zh": "Li10±1MP2X12 超离子导体家族的相稳定性、电化学稳定性和离子电导率",
+      "doi": "10.1039/C2EE23355J"
+    },
+    "shi2013_sei_li2co3": {
+      "title": "Defect Thermodynamics and Diffusion Mechanisms in Li2CO3 and Implications for the Solid Electrolyte Interphase in Li-Ion Batteries",
+      "title_zh": "Li2CO3 中的缺陷热力学与扩散机制及其对锂离子电池固体电解质界面的影响",
+      "doi": "10.1021/jp310591u"
+    },
+    "sendek2017_sse_screening": {
+      "title": "Holistic computational structure screening of more than 12,000 candidates for solid lithium-ion conductor materials",
+      "title_zh": "对超过 12,000 种固态锂离子导体材料候选进行整体计算结构筛选",
+      "doi": "10.1039/C6EE02697D"
+    },
+    "baktash2020_argyrodite_aimd": {
+      "title": "Diffusion of lithium ions in Lithium-argyrodite solid-state electrolytes",
+      "title_zh": "硫银锗矿型锂固态电解质中的锂离子扩散",
+      "doi": "10.1038/s41524-020-00432-1"
+    },
+    "chen2022_m3gnet": {
+      "title": "A universal graph deep learning interatomic potential for the periodic table",
+      "title_zh": "适用于整个元素周期表的通用图深度学习原子间势",
+      "doi": "10.1038/s43588-022-00349-3"
+    },
+    "sawada2024_nnp_sse": {
+      "title": "High-throughput investigation of stability and Li diffusion of doped solid electrolytes via neural network potential without configurational knowledge",
+      "title_zh": "利用神经网络势在无需构型知识的情况下高通量研究掺杂固态电解质的稳定性和锂扩散",
+      "doi": "10.1038/s41598-024-62054-7"
+    },
+    "ling2022_battery_informatics": {
+      "title": "A review of the recent progress in battery informatics",
+      "title_zh": "电池信息学近期进展综述",
+      "doi": "10.1038/s41524-022-00713-x"
+    },
+    "henkelman2000_cineb": {
+      "title": "A climbing image nudged elastic band method for finding saddle points and minimum energy paths",
+      "title_zh": "用于寻找鞍点和最小能量路径的爬山图像弹性带（CI-NEB）方法",
+      "doi": "10.1063/1.1329672"
+    },
+    "leung2010_sei_aimd": {
+      "title": "Ab initio molecular dynamics simulations of the initial stages of solid-electrolyte interphase formation on lithium ion battery graphitic anodes",
+      "title_zh": "锂离子电池石墨负极上固体电解质界面膜形成初始阶段的从头算分子动力学模拟",
+      "doi": "10.1039/B925853A"
+    },
+    "mo2012_lgps_aimd": {
+      "title": "First Principles Study of the Li10GeP2S12 Lithium Super Ionic Conductor Material",
+      "title_zh": "Li10GeP2S12 锂超离子导体材料的第一性原理研究",
+      "doi": "10.1021/cm203303y"
+    },
+    "deng2023_chgnet": {
+      "title": "CHGNet as a pretrained universal neural network potential for charge-informed atomistic modelling",
+      "title_zh": "CHGNet：用于电荷感知原子级建模的预训练通用神经网络势",
+      "doi": "10.1038/s42256-023-00716-3"
+    },
+    "geng2025_vaspkit_protocol": {
+      "title": "Empowering materials science with VASPKIT: a toolkit for enhanced simulation and analysis",
+      "title_zh": "借助 VASPKIT 增强材料科学模拟与分析：一个工具包",
+      "doi": "10.1038/s41596-025-01160-w"
+    },
+    "wang2021_vaspkit": {
+      "title": "VASPKIT: A user-friendly interface facilitating high-throughput computing and analysis using VASP code",
+      "title_zh": "VASPKIT：便于使用 VASP 代码进行高通量计算与分析的用户友好界面",
+      "doi": "10.1016/j.cpc.2021.108033"
+    },
+    "ong2013_pymatgen": {
+      "title": "Python Materials Genomics (pymatgen): A robust, open-source python library for materials analysis",
+      "title_zh": "Python Materials Genomics（pymatgen）：稳健的开源 Python 材料分析库",
+      "doi": "10.1016/j.commatsci.2012.10.028"
+    },
+    "larsen2017_ase": {
+      "title": "The atomic simulation environment—a Python library for working with atoms",
+      "title_zh": "原子模拟环境：用于处理原子的 Python 库",
+      "doi": "10.1088/1361-648X/aa680e"
+    },
+    "ganose2025_atomate2": {
+      "title": "Atomate2: modular workflows for materials science",
+      "title_zh": "Atomate2：面向材料科学的模块化工作流",
+      "doi": "10.1039/D5DD00019J"
+    },
+    "jain2013_materials_project": {
+      "title": "Commentary: The Materials Project: A materials genome approach to accelerating materials innovation",
+      "title_zh": "评述：《材料项目》：加速材料创新的材料基因组方法",
+      "doi": "10.1063/1.4812323"
+    },
+    "smidstrup2014_idpp": {
+      "title": "Improved initial guess for minimum energy path calculations",
+      "title_zh": "改进最小能量路径计算的初始猜测",
+      "doi": "10.1063/1.4878664"
+    },
+    "he2018_aimd_statistics": {
+      "title": "Statistical variances of diffusional properties from ab initio molecular dynamics simulations",
+      "title_zh": "从头算分子动力学模拟中扩散性质的统计方差",
+      "doi": "10.1038/s41524-018-0074-y"
+    },
+    "zhou2004_dftu_voltage": {
+      "title": "First-principles prediction of redox potentials in transition-metal compounds with LDA+U",
+      "title_zh": "利用 LDA+U 进行过渡金属化合物氧化还原电势的第一性原理预测",
+      "doi": "10.1103/PhysRevB.70.235121"
+    },
+    "jacobs2025_mlip_guide": {
+      "title": "A practical guide to machine learning interatomic potentials – Status and future",
+      "title_zh": "机器学习原子间势实用指南——现状与未来",
+      "doi": "10.1016/j.cossms.2025.101214"
+    },
+    "togo2015_phonopy": {
+      "title": "First principles phonon calculations in materials science",
+      "title_zh": "材料科学中的第一性原理声子计算",
+      "doi": "10.1016/j.scriptamat.2015.07.021"
+    },
+    "ganose2018_sumo": {
+      "title": "sumo: Command-line tools for plotting and analysis of periodic ab initio calculations",
+      "title_zh": "sumo：用于周期性从头算计算绘图与分析的命令行工具",
+      "doi": "10.21105/joss.00717"
+    },
+    "wang2018_deepmdkit": {
+      "title": "DeePMD-kit: A deep learning package for many-body potential energy representation and molecular dynamics",
+      "title_zh": "DeePMD-kit：用于多体势能表示和分子动力学的深度学习软件包",
+      "doi": "10.1016/j.cpc.2018.03.016"
+    },
+    "zhang2020_dpgen": {
+      "title": "DP-GEN: A concurrent learning platform for the generation of reliable deep learning based potential energy models",
+      "title_zh": "DP-GEN：可靠深度学习势能模型生成的并发学习平台",
+      "doi": "10.1016/j.cpc.2020.107206"
+    },
+    "batzner2022_nequip": {
+      "title": "E(3)-equivariant graph neural networks for data-efficient and accurate interatomic potentials",
+      "title_zh": "E(3) 等变图神经网络：数据高效且准确的原子间势",
+      "doi": "10.1038/s41467-022-29939-5"
+    },
+    "musaelian2023_allegro": {
+      "title": "Learning local equivariant representations for large-scale atomistic dynamics",
+      "title_zh": "学习用于大规模原子动力学的局域等变表示",
+      "doi": "10.1038/s41467-023-36329-y"
+    },
+    "deringer2021_gpr_gap": {
+      "title": "Gaussian Process Regression for Materials and Molecules",
+      "title_zh": "材料与分子的高斯过程回归",
+      "doi": "10.1021/acs.chemrev.1c00022"
+    },
+    "thompson2022_lammps": {
+      "title": "LAMMPS - a flexible simulation tool for particle-based materials modeling at the atomic, meso, and continuum scales",
+      "title_zh": "LAMMPS——适用于原子、介观和连续尺度粒子材料建模的灵活模拟工具",
+      "doi": "10.1016/j.cpc.2021.108171"
+    },
+    "pizzi2016_aiida": {
+      "title": "AiiDA: automated interactive infrastructure and database for computational science",
+      "title_zh": "AiiDA：用于计算科学的自动化交互式基础设施与数据库",
+      "doi": "10.1016/j.commatsci.2015.09.013"
+    },
+    "himanen2020_dscribe": {
+      "title": "DScribe: Library of descriptors for machine learning in materials science",
+      "title_zh": "DScribe：材料科学机器学习描述符库",
+      "doi": "10.1016/j.cpc.2019.106949"
+    },
+    "xie2018_cgcnn": {
+      "title": "Crystal Graph Convolutional Neural Networks for an Accurate and Interpretable Prediction of Material Properties",
+      "title_zh": "晶体图卷积神经网络：准确且可解释的材料性质预测",
+      "doi": "10.1103/PhysRevLett.120.145301"
+    },
+    "dunn2020_matbench": {
+      "title": "Benchmarking materials property prediction methods: the Matbench test set and Automatminer reference algorithm",
+      "title_zh": "材料性质预测方法基准测试：Matbench 测试集与 Automatminer 参考算法",
+      "doi": "10.1038/s41524-020-00406-3"
+    },
+    "persson2010_graphite": {
+      "title": "Thermodynamic and kinetic properties of the Li-graphite system from first-principles calculations",
+      "title_zh": "锂-石墨体系的热力学和动力学性质：第一性原理计算",
+      "doi": "10.1103/PhysRevB.82.125416"
+    },
+    "shen2024_pymatgen_defects": {
+      "title": "pymatgen-analysis-defects: A Python package for analyzing point defects in crystalline materials",
+      "title_zh": "pymatgen-analysis-defects：用于分析晶体材料点缺陷的 Python 软件包",
+      "doi": "10.21105/joss.05941"
+    },
+    "batatia2025_mace_mp": {
+      "title": "A foundation model for atomistic materials chemistry",
+      "title_zh": "原子材料化学基础模型",
+      "doi": "10.1063/5.0297006"
+    },
+    "radova2025_frozen_transfer": {
+      "title": "Fine-tuning foundation models of materials interatomic potentials with frozen transfer learning",
+      "title_zh": "利用冻结迁移学习微调材料原子间势基础模型",
+      "doi": "10.1038/s41524-025-01727-x"
+    },
+    "bilbrey2025_uq": {
+      "title": "Uncertainty quantification for neural network potential foundation models",
+      "title_zh": "神经网络势基础模型的不确定性量化",
+      "doi": "10.1038/s41524-025-01572-y"
+    },
+    "wu2023_edl_ms": {
+      "title": "Effect of the Electric Double Layer (EDL) in Multicomponent Electrolyte Reduction and Solid Electrolyte Interphase (SEI) Formation in Lithium Batteries",
+      "title_zh": "多组分电解质还原和锂电池固体电解质界面膜形成中的电双层（EDL）效应",
+      "doi": "10.1021/jacs.2c11807"
+    },
+    "sheng2024_lipf6_hydrolysis_ms": {
+      "title": "Unraveling the Hydrolysis Mechanism of LiPF6 in Electrolyte of Lithium Ion Batteries",
+      "title_zh": "揭示锂离子电池电解液中 LiPF6 的水解机制",
+      "doi": "10.1021/acs.nanolett.3c01682"
+    },
+    "li2024_polymeric_asei_ms": {
+      "title": "A polymeric artificial solid electrolyte interface dramatically enhances lithium-ion transport",
+      "title_zh": "聚合物人工固体电解质界面膜显著增强锂离子传输",
+      "doi": "10.1039/d4cc03688c"
+    },
+    "wu2025_spe_aimd_ms": {
+      "title": "Reactivity of Carbonyl-Containing Solid Polymer Electrolytes in Lithium–Metal Batteries from First-Principles Molecular Dynamics",
+      "title_zh": "基于第一性原理分子动力学研究含羰基固态聚合物电解质在锂金属电池中的反应性",
+      "doi": "10.1021/acsapm.4c03883"
+    },
+    "zhang2025_sei_phasefield_ms": {
+      "title": "Simulating solid electrolyte interphase formation spanning 10^8 time scales with an atomically informed phase-field model",
+      "title_zh": "利用原子信息相场模型模拟跨越 10^8 时间尺度的固体电解质界面膜形成",
+      "doi": "10.1039/d5ee01030f"
+    },
+    "chen2025_heteroalkali_ms": {
+      "title": "De-solvation of heteroalkali cations enabling stable solid electrolyte interphase for dendrite-free lithium metal batteries",
+      "title_zh": "异种碱金属阳离子脱溶剂化，实现无枝晶锂金属电池中稳定的固体电解质界面膜",
+      "doi": "10.1038/s41467-025-66197-7"
+    },
+    "hossain2020_reaxff_electrolyte": {
+      "title": "Lithium-electrolyte solvation and reaction in the electrolyte of a lithium ion battery: A ReaxFF reactive force field study",
+      "title_zh": "锂离子电池电解液中的锂-电解液溶剂化与反应：ReaxFF 反应力场研究",
+      "doi": "10.1063/5.0003333"
+    },
+    "wang2018_sei_modeling_review": {
+      "title": "Review on modeling of the anode solid electrolyte interphase (SEI) for lithium-ion batteries",
+      "title_zh": "锂离子电池负极固体电解质界面膜建模综述",
+      "doi": "10.1038/s41524-018-0064-0"
+    },
+    "shi2021_reaxff_battery_review": {
+      "title": "Application of Reaction Force Field Molecular Dynamics in Lithium Batteries",
+      "title_zh": "反应力场分子动力学在锂电池中的应用",
+      "doi": "10.3389/fchem.2020.634379"
+    },
+    "kresse1993_liquid_metals": {
+      "title": "Ab initio molecular dynamics for liquid metals",
+      "title_zh": "液态金属的从头算分子动力学",
+      "doi": "10.1103/physrevb.47.558"
+    },
+    "kresse1994_ge_transition": {
+      "title": "Ab initio molecular-dynamics simulation of the liquid-metal–amorphous-semiconductor transition in germanium",
+      "title_zh": "锗中液态金属-非晶半导体转变的从头算分子动力学模拟",
+      "doi": "10.1103/physrevb.49.14251"
+    },
+    "kresse1996_vasp_efficiency": {
+      "title": "Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set",
+      "title_zh": "利用平面波基组提高金属和半导体从头算总能量计算的效率",
+      "doi": "10.1016/0927-0256(96)00008-0"
+    },
+    "blochl1994_paw": {
+      "title": "Projector-augmented-wave method",
+      "title_zh": "投影缀加波方法",
+      "doi": "10.1103/physrevb.50.17953"
+    },
+    "kresse1999_paw": {
+      "title": "From ultrasoft pseudopotentials to the projector augmented-wave method",
+      "title_zh": "从超软赝势到投影缀加波方法",
+      "doi": "10.1103/physrevb.59.1758"
+    },
+    "perdew1996_pbe": {
+      "title": "Generalized Gradient Approximation Made Simple",
+      "title_zh": "广义梯度近似的简明实现",
+      "doi": "10.1103/physrevlett.77.3865"
+    },
+    "dudarev1998_lsda_u": {
+      "title": "Electron-energy-loss spectra and the structural stability of nickel oxide: An LSDA+U study",
+      "title_zh": "氧化镍的电子能量损失谱与结构稳定性：LSDA+U 研究",
+      "doi": "10.1103/PhysRevB.57.1505"
+    },
+    "heyd2003_hse": {
+      "title": "Hybrid functionals based on a screened Coulomb potential",
+      "title_zh": "基于屏蔽库仑势的杂化泛函",
+      "doi": "10.1063/1.1564060"
+    },
+    "grimme2010_dftd": {
+      "title": "A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu",
+      "title_zh": "适用于 H-Pu 94 种元素的一致且准确的从头算密度泛函色散校正（DFT-D）参数化",
+      "doi": "10.1063/1.3382344"
+    },
+    "monkhorst1976_kpoints": {
+      "title": "Special points for Brillouin-zone integrations",
+      "title_zh": "布里渊区积分的特殊点",
+      "doi": "10.1103/physrevb.13.5188"
+    },
+    "methfessel1989_smearing": {
+      "title": "High-precision sampling for Brillouin-zone integration in metals",
+      "title_zh": "金属布里渊区积分的高精度采样",
+      "doi": "10.1103/physrevb.40.3616"
+    },
+    "henkelman2000_neb_tangent": {
+      "title": "Improved tangent estimate in the nudged elastic band method for finding minimum energy paths and saddle points",
+      "title_zh": "改进微扰弹性带方法中用于最小能量路径和鞍点的切线估计",
+      "doi": "10.1063/1.1323224"
+    },
+    "henkelman2006_bader": {
+      "title": "A fast and robust algorithm for Bader decomposition of charge density",
+      "title_zh": "一种快速稳健的电荷密度 Bader 分解算法",
+      "doi": "10.1016/j.commatsci.2005.04.010"
+    },
+    "marzari1997_wannier": {
+      "title": "Maximally localized generalized Wannier functions for composite energy bands",
+      "title_zh": "复合能带的最大局域化广义 Wannier 函数",
+      "doi": "10.1103/physrevb.56.12847"
+    },
+    "behler2007_nnp": {
+      "title": "Generalized neural-network representation of high-dimensional potential-energy surfaces",
+      "title_zh": "高维势能面的广义神经网络表示",
+      "doi": "10.1103/physrevlett.98.146401"
+    },
+    "behler2011_symmetry_functions": {
+      "title": "Atom-centered symmetry functions for constructing high-dimensional neural network potentials",
+      "title_zh": "用于构建高维神经网络势的原子中心对称函数",
+      "doi": "10.1063/1.3553717"
+    },
+    "bartok2010_gap": {
+      "title": "Gaussian Approximation Potentials: Accuracy of Quantum Mechanics, without the Electrons",
+      "title_zh": "高斯近似势：无需电子即可达到量子力学精度",
+      "doi": "10.1103/physrevlett.104.136403"
+    },
+    "thompson2015_snap": {
+      "title": "Spectral neighbor analysis method for automated generation of quantum-accurate interatomic potentials",
+      "title_zh": "谱邻域分析方法：用于自动生成量子精度原子间势",
+      "doi": "10.1016/j.jcp.2014.12.018"
+    },
+    "zhang2018_deep_potential": {
+      "title": "Deep Potential Molecular Dynamics: A Scalable Model with the Accuracy of Quantum Mechanics",
+      "title_zh": "深度势分子动力学：兼具量子力学精度的可扩展模型",
+      "doi": "10.1103/physrevlett.120.143001"
+    },
+    "podryabinkin2017_active_learning": {
+      "title": "Active learning of linearly parametrized interatomic potentials",
+      "title_zh": "线性参数化原子间势的主动学习",
+      "doi": "10.1016/j.commatsci.2017.08.031"
+    },
+    "vandermause2020_active_learning": {
+      "title": "On-the-fly active learning of interpretable Bayesian force fields for atomistic rare events",
+      "title_zh": "原子稀有事件中可解释贝叶斯力场的在线主动学习",
+      "doi": "10.1038/s41524-020-0283-z"
+    },
+    "jinnouchi2020_otf_mlff": {
+      "title": "On-the-Fly Active Learning of Interatomic Potentials for Large-Scale Atomistic Simulations",
+      "title_zh": "大规模原子模拟中原子间势的在线主动学习",
+      "doi": "10.1021/acs.jpclett.0c01061"
+    },
+    "jinnouchi2019_melting_mlff": {
+      "title": "On-the-fly Machine Learning Force Field Generation: Application to Melting Points",
+      "title_zh": "在线机器学习力场生成：熔点应用",
+      "doi": "10.1103/physrevb.100.014105"
+    },
+    "bernstein2019_self_guided": {
+      "title": "De Novo Exploration and Self-Guided Learning of Potential-Energy Surfaces",
+      "title_zh": "势能面的从头探索与自引导学习",
+      "doi": "10.1038/s41524-019-0236-6"
+    },
+    "deringer2019_mlip_review": {
+      "title": "Machine learning interatomic potentials as emerging tools for materials science",
+      "title_zh": "机器学习原子间势：材料科学中的新兴工具",
+      "doi": "10.1002/adma.201902765"
+    },
+    "mishin2021_mlip_review": {
+      "title": "Machine-learning interatomic potentials for materials science",
+      "title_zh": "用于材料科学的机器学习原子间势",
+      "doi": "10.1016/j.actamat.2021.116980"
+    },
+    "unke2021_mlff_review": {
+      "title": "Machine Learning Force Fields",
+      "title_zh": "机器学习力场",
+      "doi": "10.1021/acs.chemrev.0c01111"
+    },
+    "mueller2020_mlip_models": {
+      "title": "Machine learning for interatomic potential models",
+      "title_zh": "用于原子间势模型的机器学习",
+      "doi": "10.1063/1.5126336"
+    },
+    "kang2006_li_mobility": {
+      "title": "Factors that affect Li mobility in layered lithium transition metal oxides",
+      "title_zh": "影响层状锂过渡金属氧化物中锂迁移率的因素",
+      "doi": "10.1103/physrevb.74.094105"
+    },
+    "du2014_lgps_mobility": {
+      "title": "Structures, Thermodynamics, and Li+ Mobility of Li10GeP2S12: A First-Principles Analysis",
+      "title_zh": "Li10GeP2S12 的结构、热力学与 Li+ 迁移率：第一性原理分析",
+      "doi": "10.1021/jp5000039"
+    },
+    "bhandari2016_lgps_conduction": {
+      "title": "Origin of Fast Ion Conduction in Li10GeP2S12, a Superionic Conductor",
+      "title_zh": "Li10GeP2S12（超离子导体）中快速离子传导的起源",
+      "doi": "10.1021/acs.jpcc.6b10967"
+    },
+    "xu2012_stringlike_migration": {
+      "title": "One-dimensional stringlike cooperative migration of lithium ions in an ultrafast ionic conductor",
+      "title_zh": "超快离子导体中锂离子的一维链状协同迁移",
+      "doi": "10.1063/1.4737397"
+    },
+    "muy2015_high_throughput_sse": {
+      "title": "High-Throughput Screening of Solid-State Li-Ion Conductors Using Lattice-Dynamics Descriptors",
+      "title_zh": "利用晶格动力学描述符高通量筛选固态 Li 离子导体",
+      "doi": "10.1016/j.isci.2019.05.036"
+    },
+    "swift2019_space_charge": {
+      "title": "First-principles prediction of potentials and space-charge layers in all-solid-state batteries",
+      "title_zh": "全固态电池中电势与空间电荷层的第一性原理预测",
+      "doi": "10.1103/physrevlett.122.167701"
+    },
+    "qi2024_lgps_ml_aimd": {
+      "title": "Machine Learning-Accelerated First-Principles Study of Atomic Configuration and Ionic Diffusion in Li10GeP2S12 Solid Electrolyte",
+      "title_zh": "利用机器学习加速的第一性原理研究 Li10GeP2S12 固态电解质中的原子构型与离子扩散",
+      "doi": "10.3390/ma17081810"
+    },
+    "nachimuthu2022_se_doped_lgps": {
+      "title": "First-principles study on selenium-doped Li10GeP2S12 solid electrolyte: Effects of doping on moisture stability and Li-ion transport properties",
+      "title_zh": "硒掺杂 Li10GeP2S12 固态电解质的第一性原理研究：掺杂对耐湿性和锂离子传输性质的影响",
+      "doi": "10.1016/j.mtchem.2022.101223"
+    },
+    "stottmeister2023_sei_alkali": {
+      "title": "Toward the Formation of the Solid Electrolyte Interphase on Alkaline Metal Anodes: Ab Initio Simulations",
+      "title_zh": "迈向碱金属负极上固体电解质界面膜的形成：从头算模拟",
+      "doi": "10.1002/batt.202300156"
+    },
+    "qi2021_electrolyte_dataset": {
+      "title": "Quantum chemical calculations of lithium-ion battery electrolyte and interphase species",
+      "title_zh": "锂离子电池电解质与界面物种的量子化学计算",
+      "doi": "10.1038/s41597-021-00986-9"
+    },
+    "peled2017_sei_review": {
+      "title": "Review—SEI: Past, Present and Future",
+      "title_zh": "综述——SEI：过去、现在与未来",
+      "doi": "10.1149/2.1441707jes"
+    },
+    "fireworks2015_workflow": {
+      "title": "FireWorks: a dynamic workflow system designed for high-throughput applications",
+      "title_zh": "FireWorks：面向高通量应用的动态工作流系统",
+      "doi": "10.1002/cpe.3505"
+    },
+    "mathew2017_atomate": {
+      "title": "Atomate: A high-level interface to generate, execute, and analyze computational materials science workflows",
+      "title_zh": "Atomate：用于生成、执行和分析计算材料科学工作流的高级接口",
+      "doi": "10.1016/j.commatsci.2017.07.030"
+    },
+    "talirz2020_materials_cloud": {
+      "title": "Materials Cloud, a platform for open computational science",
+      "title_zh": "Materials Cloud：开放计算科学平台",
+      "doi": "10.1038/s41597-020-00637-5"
+    },
+    "ward2016_matminer": {
+      "title": "matminer: An open source toolkit for materials data mining",
+      "title_zh": "matminer：用于材料数据挖掘的开源工具包",
+      "doi": "10.1016/j.commatsci.2018.05.018"
+    },
+    "dutra2025_sse_atomistic_ml_review": {
+      "title": "Understanding solid-state battery electrolytes using atomistic modelling and machine learning",
+      "title_zh": "利用原子模拟与机器学习理解固态电池电解质",
+      "doi": "10.1038/s41578-025-00817-y"
+    },
+    "wang2025_ai_sse_interface": {
+      "title": "Toward AI ecosystems for electrolyte and interface engineering in solid-state batteries",
+      "title_zh": "迈向电解质与界面工程的 AI 生态系统：固态电池",
+      "doi": "10.1126/sciadv.aea0638"
+    },
+    "jain2026_ml_sse_pipelines": {
+      "title": "Machine learning pipelines for the design of solid-state electrolytes",
+      "title_zh": "用于固态电解质设计的机器学习流程",
+      "doi": "10.1039/d5mh01525a"
+    },
+    "yan2026_sse_mlff_training_perspective": {
+      "title": "A perspective on training machine learning force fields for solid-state electrolyte materials",
+      "title_zh": "关于固态电解质材料机器学习力场训练的观点",
+      "doi": "10.1038/s44456-026-00014-4"
+    },
+    "chen2026_mlips_assb_review": {
+      "title": "Redefining atomistic simulations of all-solid-state batteries through machine learning interatomic potentials",
+      "title_zh": "通过机器学习原子间势重新定义全固态电池的原子模拟",
+      "doi": "10.1016/j.jechem.2025.08.058"
+    },
+    "wang2025_battery_ml_paradigms": {
+      "title": "Application-oriented design of machine learning paradigms for battery science",
+      "title_zh": "面向应用的电池科学机器学习范式设计",
+      "doi": "10.1038/s41524-025-01575-9"
+    },
+    "wang2024_mlip_scaling_review": {
+      "title": "Machine learning interatomic potential: Bridge the gap between small-scale models and realistic device-scale simulations",
+      "title_zh": "机器学习原子间势：弥合小尺度模型与真实器件尺度模拟之间的鸿沟",
+      "doi": "10.1016/j.isci.2024.109673"
+    },
+    "li2025_sei_effective_mlips": {
+      "title": "Enabling accurate modelling of materials for a solid electrolyte interphase in lithium-ion batteries using effective machine learning interatomic potentials",
+      "title_zh": "利用有效机器学习原子间势实现锂离子电池固体电解质界面膜材料的准确建模",
+      "doi": "10.1039/d5mh01343g"
+    },
+    "wang2025_dpa_sse": {
+      "title": "A pre-trained deep potential model for sulfide solid electrolytes with broad coverage and high accuracy",
+      "title_zh": "用于硫化物固态电解质的预训练 Deep Potential 模型：广泛覆盖与高精度",
+      "doi": "10.1038/s41524-025-01764-6"
+    },
+    "you2024_llzo_pca_deepmd": {
+      "title": "Principal component analysis enables the design of deep learning potential precisely capturing LLZO phase transitions",
+      "title_zh": "主成分分析助力设计精确捕捉 LLZO 相变的深度学习势",
+      "doi": "10.1038/s41524-024-01240-7"
+    },
+    "kim2024_llzo_lco_interface_mlff": {
+      "title": "Probing degradation at solid-state battery interfaces using machine-learning interatomic potential",
+      "title_zh": "利用机器学习原子间势探测固态电池界面的退化",
+      "doi": "10.1016/j.ensm.2024.103842"
+    },
+    "zhang2024_mlmd_size_conductivity": {
+      "title": "Size dependent lithium-ion conductivity of solid electrolytes in machine learning molecular dynamics simulations",
+      "title_zh": "机器学习分子动力学模拟中固态电解质锂离子电导率的尺寸依赖性",
+      "doi": "10.1016/j.aichem.2024.100051"
+    },
+    "li2024_sse_property_prediction_review": {
+      "title": "Machine Learning-Assisted Property Prediction of Solid-State Electrolyte",
+      "title_zh": "机器学习辅助的固态电解质性质预测",
+      "doi": "10.1002/aenm.202304480"
+    },
+    "szymanski2024_computational_synthesis": {
+      "title": "Computationally Guided Synthesis of Battery Materials",
+      "title_zh": "电池材料的计算引导合成",
+      "doi": "10.1021/acsenergylett.4c00821"
+    },
+    "recent_10_1021_acs_jctc_4c00190": {
+      "title": "Scalable Parallel Algorithm for Graph Neural Network Interatomic Potentials in Molecular Dynamics Simulations",
+      "title_zh": "分子动力学模拟中图神经网络原子间势的可扩展并行算法",
+      "doi": "10.1021/acs.jctc.4c00190"
+    },
+    "recent_10_1021_jacs_4c14455": {
+      "title": "Data-Efficient Multifidelity Training for High-Fidelity Machine Learning Interatomic Potentials",
+      "title_zh": "面向高保真机器学习原子间势的数据高效多保真训练",
+      "doi": "10.1021/jacs.4c14455"
+    },
+    "recent_10_1021_acsmaterialslett_5c00093": {
+      "title": "CHIPS-FF: Evaluating Universal Machine Learning Force Fields for Material Properties",
+      "title_zh": "CHIPS-FF：评估用于材料性质的通用机器学习力场",
+      "doi": "10.1021/acsmaterialslett.5c00093"
+    },
+    "recent_10_1021_acsmaterialslett_5c00336": {
+      "title": "Assessment and Application of Universal Machine Learning Interatomic Potentials in Solid-State Electrolyte Research",
+      "title_zh": "通用机器学习原子间势在固态电解质研究中的评估与应用",
+      "doi": "10.1021/acsmaterialslett.5c00336"
+    },
+    "recent_10_1021_acs_chemmater_6c01051": {
+      "title": "Machine Learning Interatomic Potentials for Modeling Solid-State Batteries",
+      "title_zh": "用于固态电池建模的机器学习原子间势",
+      "doi": "10.1021/acs.chemmater.6c01051"
+    },
+    "recent_10_1557_s43579-026-00928-9": {
+      "title": "Machine-learning interatomic potentials for interfaces in all-solid-state batteries: Perspectives on training data, model selection, and validation",
+      "title_zh": "全固态电池界面的机器学习原子间势：训练数据、模型选择与验证的展望",
+      "doi": "10.1557/s43579-026-00928-9"
+    },
+    "recent_10_1038_s41524-026-02023-y": {
+      "title": "Constructing machine learning interatomic potentials with minimum amount of ab initio data",
+      "title_zh": "以最少量从头算数据构建机器学习原子间势",
+      "doi": "10.1038/s41524-026-02023-y"
+    },
+    "recent_10_1039_d4ta06675h": {
+      "title": "Computational prediction of solvation structures in calcium battery electrolytes",
+      "title_zh": "钙电池电解质中溶剂化结构的计算预测",
+      "doi": "10.1039/d4ta06675h"
+    },
+    "recent_10_1002_adfm_202313188": {
+      "title": "A Perspective on the Molecular Modeling of Electrolyte Decomposition Reactions for Solid Electrolyte Interphase Growth in Lithium‐Ion Batteries",
+      "title_zh": "锂离子电池固体电解质界面膜生长过程中电解质分解反应的分子建模展望",
+      "doi": "10.1002/adfm.202313188"
+    },
+    "recent_10_1038_s41467-025-65496-3": {
+      "title": "A foundation machine learning potential with polarizable long-range interactions for materials modelling",
+      "title_zh": "具有可极化长程相互作用的材料建模基础机器学习势",
+      "doi": "10.1038/s41467-025-65496-3"
+    },
+    "recent_10_1016_j_mechmat_2024_105237": {
+      "title": "Enhancing robustness in machine-learning-accelerated molecular dynamics: A multi-model nonparametric probabilistic approach",
+      "title_zh": "增强机器学习加速分子动力学的稳健性：多模型非参数概率方法",
+      "doi": "10.1016/j.mechmat.2024.105237"
+    },
+    "recent_10_1016_j_est_2026_121104": {
+      "title": "Machine learning interatomic potential enables interface-level insights into cathode/solid electrolyte adhesion in sodium-ion batteries",
+      "title_zh": "机器学习原子间势助力理解钠离子电池正极/固态电解质界面的黏附行为",
+      "doi": "10.1016/j.est.2026.121104"
+    },
+    "recent_10_1038_s41586-023-06735-9": {
+      "title": "Scaling deep learning for materials discovery",
+      "title_zh": "为材料发现扩展深度学习",
+      "doi": "10.1038/s41586-023-06735-9"
+    },
+    "recent_10_1038_s41467-025-56322-x": {
+      "title": "Disorder-induced enhancement of lithium-ion transport in solid-state electrolytes",
+      "title_zh": "无序诱导的固态电解质锂离子传输增强",
+      "doi": "10.1038/s41467-025-56322-x"
+    },
+    "recent_10_1016_j_jechem_2025_03_007": {
+      "title": "InterOptimus: An AI-assisted robust workflow for screening ground-state heterogeneous interface structures in lithium batteries",
+      "title_zh": "InterOptimus：用于筛选锂电池基态异质界面结构的 AI 辅助稳健工作流",
+      "doi": "10.1016/j.jechem.2025.03.007"
+    },
+    "recent_10_1016_j_mtener_2025_101841": {
+      "title": "Machine learning study on the structural evolution of high-nickel layered cathodes",
+      "title_zh": "高镍层状正极结构演化的机器学习研究",
+      "doi": "10.1016/j.mtener.2025.101841"
+    },
+    "recent_10_1038_s41524-025-01747-7": {
+      "title": "Machine-learning-accelerated mechanistic exploration of interface modification in lithium metal anode",
+      "title_zh": "机器学习加速的锂金属负极界面改性机理探索",
+      "doi": "10.1038/s41524-025-01747-7"
+    },
+    "recent_10_1038_s41524-025-01615-4": {
+      "title": "Unraveling charge effects on interface reactions and dendrite growth in lithium metal anode",
+      "title_zh": "揭示锂金属负极界面反应与枝晶生长中的电荷效应",
+      "doi": "10.1038/s41524-025-01615-4"
+    },
+    "recent_10_1038_s41467-025-62824-5": {
+      "title": "Observation of dendrite formation at Li metal-electrolyte interface by a machine-learning enhanced constant potential framework",
+      "title_zh": "利用机器学习增强的恒电势框架观测锂金属-电解质界面的枝晶形成",
+      "doi": "10.1038/s41467-025-62824-5"
+    },
+    "recent_10_1016_j_jpowsour_2025_237670": {
+      "title": "Surface orientation-dependent adhesion behavior in Na-cathode and solid-state electrolyte interfaces using machine learning interatomic potential",
+      "title_zh": "利用机器学习原子间势研究 Na 正极/固态电解质界面中表面取向依赖的黏附行为",
+      "doi": "10.1016/j.jpowsour.2025.237670"
+    },
+    "recent_10_1039_d5cc04921k": {
+      "title": "Data-driven atomistic modeling of crystalline and glassy solid-state electrolytes",
+      "title_zh": "晶态与玻璃态固态电解质的数据驱动原子建模",
+      "doi": "10.1039/d5cc04921k"
+    },
+    "recent_10_1039_d6eb00024j": {
+      "title": "Integrated machine learning-molecular dynamics framework for electrolyte property prediction",
+      "title_zh": "用于电解质性质预测的机器学习-分子动力学集成框架",
+      "doi": "10.1039/d6eb00024j"
+    },
+    "recent_10_1016_j_ensm_2025_104826": {
+      "title": "Electrolyte engineering for lithium-ion batteries: Mechanistic insights into the development of electrolyte from atomic-scale simulation",
+      "title_zh": "锂离子电池电解质工程：原子尺度模拟对电解质开发的机理认识",
+      "doi": "10.1016/j.ensm.2025.104826"
+    },
+    "recent_10_1039_d4ta03452j": {
+      "title": "Machine learning interatomic potentials in engineering perspective for developing cathode materials",
+      "title_zh": "从工程视角看用于正极材料开发的机器学习原子间势",
+      "doi": "10.1039/d4ta03452j"
+    },
+    "recent_10_1103_physrevmaterials_8_115407": {
+      "title": "Atomistic modeling of bulk and grain boundary diffusion in solid electrolyte Li6PS5Cl using machine-learning interatomic potentials",
+      "title_zh": "利用机器学习原子间势对固态电解质 Li6PS5Cl 中体相与晶界扩散进行原子建模",
+      "doi": "10.1103/physrevmaterials.8.115407"
+    },
+    "recent_10_1038_s41524-024-01332-4": {
+      "title": "Cartesian atomic cluster expansion for machine learning interatomic potentials",
+      "title_zh": "用于机器学习原子间势的笛卡尔原子簇展开",
+      "doi": "10.1038/s41524-024-01332-4"
+    },
+    "recent_10_1038_s41524-024-01227-4": {
+      "title": "Robust training of machine learning interatomic potentials with dimensionality reduction and stratified sampling",
+      "title_zh": "结合降维与分层采样的机器学习原子间势稳健训练",
+      "doi": "10.1038/s41524-024-01227-4"
+    },
+    "recent_10_1038_s41524-025-01623-4": {
+      "title": "Cartesian atomic moment machine learning interatomic potentials",
+      "title_zh": "笛卡尔原子矩机器学习原子间势",
+      "doi": "10.1038/s41524-025-01623-4"
+    },
+    "recent_10_1038_s41467-025-63852-x": {
+      "title": "Machine learning of charges and long-range interactions from energies and forces",
+      "title_zh": "从能量与力中机器学习电荷和长程相互作用",
+      "doi": "10.1038/s41467-025-63852-x"
+    },
+    "recent_10_1038_s41467-025-67663-y": {
+      "title": "Evidential deep learning for interatomic potentials",
+      "title_zh": "用于原子间势的证据深度学习",
+      "doi": "10.1038/s41467-025-67663-y"
+    },
+    "recent_10_1038_s41524-025-01735-x": {
+      "title": "Navigating chemical design spaces for metal-ion batteries via machine-learning-guided phase-field simulations",
+      "title_zh": "通过机器学习引导的相场模拟探索金属离子电池的化学设计空间",
+      "doi": "10.1038/s41524-025-01735-x"
+    },
+    "recent_10_1038_s41524-024-01222-9": {
+      "title": "Electronic Moment Tensor Potentials include both electronic and vibrational degrees of freedom",
+      "title_zh": "电子矩张量势同时纳入电子与振动自由度",
+      "doi": "10.1038/s41524-024-01222-9"
+    },
+    "recent_10_1038_s41524-025-01650-1": {
+      "title": "Universal machine learning interatomic potentials are ready for phonons",
+      "title_zh": "通用机器学习原子间势已可用于声子研究",
+      "doi": "10.1038/s41524-025-01650-1"
+    },
+    "recent_10_1038_s41524-025-01714-2": {
+      "title": "Dynamic oxygen-redox evolution of cathode reactions based on the multistate equilibrium potential model",
+      "title_zh": "基于多态平衡电势模型的正极反应动态氧氧化还原演化",
+      "doi": "10.1038/s41524-025-01714-2"
+    },
+    "recent_10_1021_jacsau_5c00526": {
+      "title": "A Universal Machine Learning Framework Driven by Artificial Intelligence for Ion Battery Cathode Material Design",
+      "title_zh": "由人工智能驱动的通用机器学习框架用于离子电池正极材料设计",
+      "doi": "10.1021/jacsau.5c00526"
+    },
+    "recent_10_1021_acsenergylett_5c02723": {
+      "title": "Machine-Learning-Accelerated Development of High-Nickel NCM Cathodes via Multivariable Co-optimization",
+      "title_zh": "通过多变量协同优化加速高镍 NCM 正极的机器学习开发",
+      "doi": "10.1021/acsenergylett.5c02723"
+    },
+    "recent_10_1016_j_cej_2025_163801": {
+      "title": "Combined machine learning and computational protocols to predict electrolyte behavior and SEI formation in Li-metal batteries",
+      "title_zh": "结合机器学习与计算流程预测锂金属电池中的电解质行为和 SEI 形成",
+      "doi": "10.1016/j.cej.2025.163801"
+    },
+    "recent_10_1002_adsu_202500413": {
+      "title": "Data‐Driven Lithium Salt Design for Long‐Cycle Lithium Metal Battery",
+      "title_zh": "数据驱动的锂盐设计用于长循环锂金属电池",
+      "doi": "10.1002/adsu.202500413"
+    },
+    "recent_10_1038_s41586-025-09951-7": {
+      "title": "Discovery Learning predicts battery cycle life from minimal experiments",
+      "title_zh": "Discovery Learning 通过最少实验预测电池循环寿命",
+      "doi": "10.1038/s41586-025-09951-7"
+    },
+    "recent_10_1039_d5cp02726h": {
+      "title": "Screening of potential candidates for solid electrolyte interphase materials for lithium-ion batteries through a data-driven approach",
+      "title_zh": "通过数据驱动方法筛选锂离子电池固体电解质界面膜材料候选物",
+      "doi": "10.1039/d5cp02726h"
+    },
+    "recent_10_1016_j_rser_2025_116633": {
+      "title": "AI-driven exploration and design of inorganic battery materials",
+      "title_zh": "AI 驱动的无机电池材料探索与设计",
+      "doi": "10.1016/j.rser.2025.116633"
+    },
+    "recent_10_1021_acs_chemmater_5c02352": {
+      "title": "Performance-Based Selection of Machine Learning Interatomic Potentials for Studying Solid-State Electrolytes",
+      "title_zh": "基于性能的机器学习原子间势选择用于研究固态电解质",
+      "doi": "10.1021/acs.chemmater.5c02352"
+    },
+    "recent_10_1038_s41524-025-01905-x": {
+      "title": "Heterogeneous ensemble enables a universal uncertainty metric for atomistic foundation models",
+      "title_zh": "异质集成模型为原子基础模型提供通用不确定性度量",
+      "doi": "10.1038/s41524-025-01905-x"
+    },
+    "recent_10_1038_s41524-024-01451-y": {
+      "title": "Machine learning interatomic potential with DFT accuracy for general grain boundaries in α-Fe",
+      "title_zh": "具有 DFT 精度的机器学习原子间势用于通用 α-Fe 晶界",
+      "doi": "10.1038/s41524-024-01451-y"
+    },
+    "recent_10_1016_j_jpowsour_2025_239008": {
+      "title": "Molecular dynamics study on effect of crystal defects in NCM811 cathode structure based on machine learning potential",
+      "title_zh": "基于机器学习势研究 NCM811 正极结构中晶体缺陷影响的分子动力学",
+      "doi": "10.1016/j.jpowsour.2025.239008"
+    },
+    "recent_10_1021_acsami_5c11818": {
+      "title": "Probing Surface Degradation Pathways of Charged Nickel-Oxide Cathode Materials Using Machine-Learning Interatomic Potentials",
+      "title_zh": "利用机器学习原子间势探测充电态镍氧化物正极材料的表面退化路径",
+      "doi": "10.1021/acsami.5c11818"
+    },
+    "recent_10_1002_aenm_202201497": {
+      "title": "Al‐Doping Driven Suppression of Capacity and Voltage Fadings in 4d‐Element Containing Li‐Ion‐Battery Cathode Materials: Machine Learning and Density Functional Theory",
+      "title_zh": "Al 掺杂驱动含 4d 元素锂离子电池正极材料容量与电压衰减的抑制：机器学习与密度泛函理论",
+      "doi": "10.1002/aenm.202201497"
+    },
+    "recent_10_1038_s41597-020-00602-2": {
+      "title": "A database of battery materials auto-generated using ChemDataExtractor",
+      "title_zh": "利用 ChemDataExtractor 自动生成的电池材料数据库",
+      "doi": "10.1038/s41597-020-00602-2"
+    },
+    "recent_10_1073_pnas_2214357120": {
+      "title": "Data-driven electrolyte design for lithium metal anodes",
+      "title_zh": "锂金属负极的电解质数据驱动设计",
+      "doi": "10.1073/pnas.2214357120"
+    },
+    "recent_10_1016_j_commatsci_2024_113074": {
+      "title": "Active learning for SNAP interatomic potentials via Bayesian predictive uncertainty",
+      "title_zh": "通过贝叶斯预测不确定性对 SNAP 原子间势进行主动学习",
+      "doi": "10.1016/j.commatsci.2024.113074"
+    },
+    "recent_10_1021_acs_jpcb_6c02837": {
+      "title": "Benchmarking on-the-Fly Machine Learning Force Fields for Ion Hydration: Structure, Coordination, and Exchange Dynamics across Monovalent and Divalent Cations",
+      "title_zh": "离子水合的在线机器学习力场基准测试：单价与二价阳离子的结构、配位与交换动力学",
+      "doi": "10.1021/acs.jpcb.6c02837"
+    },
+    "recent_10_1038_s41524-025-01571-z": {
+      "title": "Benchmarking machine learning models for predicting lithium ion migration",
+      "title_zh": "预测锂离子迁移的机器学习模型基准测试",
+      "doi": "10.1038/s41524-025-01571-z"
+    },
+    "recent_10_1039_d5dd00025d": {
+      "title": "Application of pretrained universal machine-learning interatomic potential for physicochemical simulation of liquid electrolytes in Li-ion batteries",
+      "title_zh": "预训练通用机器学习原子间势在锂离子电池液态电解质物理化学模拟中的应用",
+      "doi": "10.1039/d5dd00025d"
+    },
+    "recent_10_1038_s41467-025-67982-0": {
+      "title": "Domain oriented universal machine learning potential enables fast exploration of chemical space of battery electrolytes",
+      "title_zh": "面向领域的通用机器学习势实现电池电解质化学空间的快速探索",
+      "doi": "10.1038/s41467-025-67982-0"
+    }
+  }
+}

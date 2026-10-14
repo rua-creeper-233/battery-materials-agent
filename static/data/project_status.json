@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-14",
+  "papers": 176,
+  "recent_2023_onward": 92,
+  "publication_years": {
+    "1976": 1,
+    "1989": 1,
+    "1993": 1,
+    "1994": 2,
+    "1996": 2,
+    "1997": 2,
+    "1998": 2,
+    "1999": 1,
+    "2000": 2,
+    "2001": 1,
+    "2003": 1,
+    "2004": 1,
+    "2006": 2,
+    "2007": 1,
+    "2010": 4,
+    "2011": 2,
+    "2012": 2,
+    "2013": 4,
+    "2014": 2,
+    "2015": 3,
+    "2016": 3,
+    "2017": 6,
+    "2018": 8,
+    "2019": 6,
+    "2020": 11,
+    "2021": 6,
+    "2022": 7,
+    "2023": 8,
+    "2024": 21,
+    "2025": 44,
+    "2026": 19
+  },
+  "publication_types": {
+    "Article": 42,
+    "Commentary": 1,
+    "Letter": 1,
+    "Mini Review": 1,
+    "Paper": 94,
+    "Perspective": 5,
+    "Protocol": 1,
+    "Review": 17,
+    "Review Article": 2,
+    "Software Article": 11,
+    "Viewpoint": 1
+  },
+  "wos_records": 16,
+  "tags": {
+    "DFT": 81,
+    "MD": 65,
+    "MS": 7,
+    "VASP": 25,
+    "方法论文": 58,
+    "综述": 20,
+    "观点": 5,
+    "进展论文": 118
+  },
+  "datasets": {
+    "train": {
+      "rows": 793,
+      "exists": true,
+      "sha256": "5ec187c0ca65e447d301c13b7529c56381794cd066df32efff3cd90c2bbde6ab",
+      "categories": {
+        "comparison": 69,
+        "evidence_insufficient": 140,
+        "factual": 211,
+        "limitation": 140,
+        "source_access": 93,
+        "workflow": 140
+      }
+    },
+    "validation": {
+      "rows": 78,
+      "exists": true,
+      "sha256": "d7efcdaf0f96965c82ae064df05bbef9319d7ca7aa80955ef8545ff3d0b637ac",
+      "categories": {
+        "comparison": 7,
+        "evidence_insufficient": 14,
+        "factual": 19,
+        "limitation": 14,
+        "source_access": 10,
+        "workflow": 14
+      }
+    },
+    "test": {
+      "rows": 127,
+      "exists": true,
+      "sha256": "4df02e19bad31c4abc51923b845037a4428a3c7cab641eb7d18182bad01018de",
+      "categories": {
+        "comparison": 11,
+        "evidence_insufficient": 22,
+        "factual": 32,
+        "limitation": 22,
+        "source_access": 18,
+        "workflow": 22
+      }
+    }
+  },
+  "dataset_rows": 998,
+  "training_smoke": null,
+  "model_status": "New datasets prepared; no model retraining performed for this release.",
+  "scope": "Counts refer to the curated catalog, educational metadata, and dataset rows; local full-text holdings and indexing remain private."
+}

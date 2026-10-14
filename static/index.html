@@ -145,6 +145,8 @@
     @media (max-width: 720px) { .site-nav { align-items: flex-start; flex-direction: column; } .site-nav-links { justify-content: flex-start; } .future-section { padding: 22px 18px; } .future-grid { grid-template-columns: 1fr; } .future-card.featured { grid-column: auto; } .future-bottom { align-items: flex-start; flex-direction: column; } .future-teaser { align-items: flex-start; flex-direction: column; padding: 21px 18px; } }
   </style>
   <link rel="stylesheet" href="./tutorials.css" />
+  <link rel="stylesheet" href="./lab-ui.css" />
+  <script src="./lab-ui.js"></script>
 </head>
 <body>
   <div class="shell">
@@ -162,21 +164,21 @@
       <div>
         <div class="eyebrow">Computational Battery Materials · Evidence First</div>
         <h1>Battery Evidence Lab</h1>
-        <div class="sub">面向 DFT、VASP、NEB、AIMD 与机器学习势的材料科研子智能体。回答必须能追到论文和 DOI，计算建议必须带质量检查。</div>
-        <div class="hero-note">把文献证据变成可复现的下一步</div>
+        <div class="sub">查论文、看方法、规划计算。覆盖 DFT、MD 与机器学习势，回答附证据与适用边界。</div>
+        <p class="title-map-notice">中文题名为参考译名，引用请使用英文原题。</p>
+        <p class="project-progress" data-project-progress>项目进度：读取中…</p>
       </div>
       <div class="header-actions">
-        <div class="stats">
+        <div class="header-buttons">
           <span class="stat"><b id="paperCount">—</b> 篇论文</span>
+          <button class="outline-btn" id="openUpload" type="button">＋ 上传文献</button>
+        </div>
+        <details class="service-details"><summary>服务与连接</summary><div class="stats">
           <span class="stat" id="starterStat">方法路线 · 检测中</span>
           <span class="stat" id="zoteroStat">Zotero 深链 · 检测中</span>
           <span class="stat" id="apiStat">本地服务 · 未连接</span>
           <span class="stat" id="ragStat">RAG · 未配置</span>
-          <span class="stat">DFT → MD → AI4S</span>
-        </div>
-        <div class="header-buttons">
-          <button class="outline-btn" id="openUpload" type="button">＋ 上传文献</button>
-        </div>
+        </div></details>
       </div>
     </header>
 
@@ -225,7 +227,7 @@
       <div>
         <div class="eyebrow">RESEARCH OUTLOOK · 综述证据 → 可做问题</div>
         <h2 id="futureTitle">电池材料计算的下一组问题</h2>
-        <p>进入独立研究备忘录，查看五个方向、对应 DOI、学生规模的问题以及复现和验证清单。</p>
+        <p>查看研究切口、对应 DOI、复现与验证清单。学习路线页另按当前论文库整理了 8 个前沿专题。</p>
       </div>
       <a class="future-teaser-link" href="./future-directions.html">打开未来方向页 <span aria-hidden="true">↗</span></a>
     </section>
@@ -314,7 +316,7 @@
       papers: [], zotero: {}, literature: {}, methods: {}, paperTags: {}, searchConfig: {}, learningRoute: null, activeTag: '',
       apiBase: readStorage(localStorage, 'battery-agent-api-base'),
       apiToken: readStorage(sessionStorage, 'battery-agent-api-token'),
-      backendConnected: localMode
+      backendConnected: false
     };
     const normalizeApiBase = value => String(value || '').trim().replace(/\/+$/, '');
     function saveConnection() {
@@ -404,7 +406,8 @@
       return ordinary + stagePill + frontierPills;
     }
     function paperCard(p) {
-      return `<article class="e-card"><span class="year">${p.year} · ${escapeHtml(p.journal)}</span><div class="paper-tags">${paperTagPills(p)}</div><h4>${escapeHtml(p.role)}</h4><p>${escapeHtml(p.summary)}</p>${linkButtons(p)}</article>`;
+      const titleHtml = window.LabUI?.paperTitleHtml ? window.LabUI.paperTitleHtml(p, p.title || p.role) : `<span class="paper-title-en">${escapeHtml(p.title || p.role)}</span>`;
+      return `<article class="e-card" data-paper-id="${escapeHtml(p.id)}"><span class="year">${p.year} · ${escapeHtml(p.journal)}</span><div class="paper-tags">${paperTagPills(p)}</div><h4>${titleHtml}</h4><p>${escapeHtml(p.role)} · ${escapeHtml(p.summary)}</p>${linkButtons(p)}</article>`;
     }
     function renderList(filter='') {
       const typed = String(filter || '').trim();
@@ -415,12 +418,13 @@
       const papers = query
         ? window.BatteryBrowserAgent.searchDetailed(query, state.papers, state.papers.length, state.searchConfig).results
         : state.papers;
-      document.querySelector('#paperList').innerHTML = papers.map(p => `<div class="paper" data-id="${escapeHtml(p.id)}"><span class="meta">${p.year} · ${escapeHtml(p.journal)}</span>${p.difficulty ? `<span class="level">${escapeHtml(p.difficulty)}</span>` : ''}<div class="paper-tags">${paperTagPills(p)}</div><h3>${escapeHtml(p.title)}</h3><p>${escapeHtml(p.role)}</p></div>`).join('') || '<div class="notice">没有满足当前关键词和标签的论文。</div>';
+      document.querySelector('#paperList').innerHTML = papers.map(p => { const titleHtml = window.LabUI?.paperTitleHtml ? window.LabUI.paperTitleHtml(p) : `<span class="paper-title-en">${escapeHtml(p.title)}</span>`; return `<div class="paper" data-id="${escapeHtml(p.id)}"><span class="meta">${p.year} · ${escapeHtml(p.journal)}</span>${p.difficulty ? `<span class="level">${escapeHtml(p.difficulty)}</span>` : ''}<div class="paper-tags">${paperTagPills(p)}</div><h3>${titleHtml}</h3><p>${escapeHtml(p.role)}</p></div>`; }).join('') || '<div class="notice">没有满足当前关键词和标签的论文。</div>';
       document.querySelector('#listCount').textContent = `当前 ${papers.length}/${state.papers.length} 篇`;
       document.querySelectorAll('.paper').forEach(el => el.onclick = () => showPaper(el.dataset.id));
     }
     function showPaper(id) {
       const p = state.papers.find(item => item.id === id); if (!p) return;
+      state.openPaperId = id;
       const authorNames = p.authors || [];
       const authorLine = authorNames.length > 12
         ? `${authorNames.slice(0, 12).join('；')}；等（共 ${authorNames.length} 位，完整名单见出版社页面）`
@@ -449,7 +453,8 @@
         ? `<h3>自动方法证据（待人工核对）</h3><ul>${methods}</ul><div class="notice">这里只显示前 12 条定位信号。用于 INCAR、KPOINTS、分子动力学设置、论文或汇报前，必须回到标注页核对上下文。</div>`
         : `<h3>自动方法证据（待人工核对）</h3><p>当前没有可显示的本地正文方法信号。</p>`;
       const verification = p.wos_uid ? `WOS：${p.wos_uid}` : `书目核验：${p.verification?.doi || '待核验'}；WOS：${p.verification?.wos || '未记录'}`;
-      document.querySelector('#detail').innerHTML = `<div class="eyebrow">${p.year} · ${escapeHtml(p.journal)} · ${escapeHtml(p.document_type)}${p.difficulty ? ` · ${escapeHtml(p.difficulty)}` : ''}</div><h2>${escapeHtml(p.title)}</h2><p>${escapeHtml(authorLine)}</p><p>${escapeHtml(p.summary)}</p><div>${tags}</div>${linkButtons(p)}${learningBlock}${protocolBlock}<h3>已抽取证据</h3><ul>${evidence}</ul><h3>知识关系</h3>${relations}${methodBlock}<div class="notice">${escapeHtml(verification)}；${escapeHtml(localStatus)}。论文级证据与全文自动命中仍需回到原文人工核对。</div>`;
+      const titleHtml = window.LabUI?.paperTitleHtml ? window.LabUI.paperTitleHtml(p) : `<span class="paper-title-en">${escapeHtml(p.title)}</span>`;
+      document.querySelector('#detail').innerHTML = `<div class="eyebrow">${p.year} · ${escapeHtml(p.journal)} · ${escapeHtml(p.document_type)}${p.difficulty ? ` · ${escapeHtml(p.difficulty)}` : ''}</div><h2>${titleHtml}</h2><p>${escapeHtml(authorLine)}</p><p>${escapeHtml(p.summary)}</p><div>${tags}</div>${linkButtons(p)}${learningBlock}${protocolBlock}<h3>已抽取证据</h3><ul>${evidence}</ul><h3>知识关系</h3>${relations}${methodBlock}<div class="notice">${escapeHtml(verification)}；${escapeHtml(localStatus)}。论文级证据与全文自动命中仍需回到原文人工核对。</div>`;
       document.querySelector('#modal').classList.add('open');
     }
     async function ask() {
@@ -525,7 +530,8 @@
         const response = await apiFetch('/api/upload', {method:'POST', body:form});
         const payload = await response.json();
         const keywords = (payload.keywords || []).map(row => `<span class="tag">${escapeHtml(row.term)}</span>`).join('');
-        resultBox.innerHTML = `<strong>${payload.created ? '已新增论文' : '已补充现有条目'}</strong><br>${escapeHtml(payload.paper.title)}<br>${payload.paper.doi ? `DOI：${escapeHtml(payload.paper.doi)}<br>` : ''}PDF：${payload.pdf.pages} 页，已加入全文索引。<div style="margin-top:8px">${keywords || '未提取到关键词'}</div>`;
+        const titleHtml = window.LabUI?.paperTitleHtml ? window.LabUI.paperTitleHtml(payload.paper) : `<span class="paper-title-en">${escapeHtml(payload.paper.title)}</span>`;
+        resultBox.innerHTML = `<strong>${payload.created ? '已新增论文' : '已补充现有条目'}</strong><br>${titleHtml}<br>${payload.paper.doi ? `DOI：${escapeHtml(payload.paper.doi)}<br>` : ''}PDF：${payload.pdf.pages} 页，已加入全文索引。<div style="margin-top:8px">${keywords || '未提取到关键词'}</div>`;
         state.backendConnected = true;
         updateApiStat();
         await loadData();
@@ -558,15 +564,15 @@
         state.backendConnected = true;
       } catch (_) {
         state.papers = await fetch('./data/papers.json').then(r => r.json());
-        state.backendConnected = localMode;
+        state.backendConnected = false;
       }
       try {
-        const tagPayload = hasBackend()
+        const tagPayload = state.backendConnected
           ? await apiFetch('/api/paper-tags', {cache:'no-store'}).then(r => r.json())
           : await fetch('./data/paper_tags.json', {cache:'no-store'}).then(r => r.json());
         state.paperTags = tagPayload.papers || {};
       } catch (_) { state.paperTags = {}; }
-      state.papers = state.papers.map(p => ({...p, ...(state.paperTags[p.id] || {})}));
+      state.papers = state.papers.map(p => ({...p, ...(state.paperTags[p.id] || {}), title_zh: window.LabUI?.titleZh ? window.LabUI.titleZh(p) : ''}));
       try {
         const routeResponse = await fetch('./data/learning_route.json', {cache:'no-store'});
         if (!routeResponse.ok) throw new Error(`route HTTP ${routeResponse.status}`);
@@ -583,30 +589,30 @@
         }
       } catch (_) { state.learningRoute = null; }
       try {
-        state.searchConfig = hasBackend()
+        state.searchConfig = state.backendConnected
           ? await apiFetch('/api/search-config', {cache:'no-store'}).then(r => r.json())
           : await fetch('./data/search_config.json', {cache:'no-store'}).then(r => r.json());
       } catch (_) { state.searchConfig = {}; }
       try {
-        const health = hasBackend() ? await apiFetch('/api/health', {cache:'no-store'}).then(r => r.json()) : null;
+        const health = state.backendConnected ? await apiFetch('/api/health', {cache:'no-store'}).then(r => r.json()) : null;
         const rag = health?.rag || {};
         const ragStat = document.querySelector('#ragStat');
         ragStat.textContent = rag.enabled ? `RAG · ${rag.model || '已连接'}` : 'RAG · 未配置';
         ragStat.classList.toggle('connected', Boolean(rag.enabled));
       } catch (_) { document.querySelector('#ragStat').textContent = 'RAG · 未配置'; }
       try {
-        const zoteroPayload = localMode
+        const zoteroPayload = localMode && state.backendConnected
           ? await apiFetch('/api/zotero-links', {cache:'no-store'}).then(r => r.json())
           : await fetch('./data/zotero-links.json', {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
         state.zotero = zoteroPayload.items || zoteroPayload;
       } catch (_) { state.zotero = {}; }
       try {
-        const methodPayload = hasBackend()
+        const methodPayload = state.backendConnected
           ? await apiFetch('/api/methods', {cache:'no-store'}).then(r => r.json())
           : await fetch('./data/method_evidence.auto.json', {cache:'no-store'}).then(r => r.ok ? r.json() : ({}));
         state.methods = methodPayload.papers || {};
       } catch (_) { state.methods = {}; }
-      if (hasBackend()) {
+      if (state.backendConnected) {
         try {
           const literaturePayload = await apiFetch('/api/literature', {cache:'no-store'}).then(r => r.json());
           state.literature = literaturePayload.papers || {};
@@ -632,6 +638,13 @@
         if (state.papers.some(p => p.id === requestedPaper)) showPaper(requestedPaper);
         else setServiceMessage(`未找到论文：${requestedPaper}`, 'bad');
       }
+      // Optional translations must never block the canonical English catalog.
+      window.LabUI?.ready?.then(() => {
+        if (!window.LabUI?.titleZh || state.papers.every(p => p.title_zh === window.LabUI.titleZh(p))) return;
+        state.papers = state.papers.map(p => ({...p, title_zh: window.LabUI.titleZh(p)}));
+        renderList(document.querySelector('#filter').value);
+        if (state.openPaperId && document.querySelector('#modal').classList.contains('open')) showPaper(state.openPaperId);
+      }).catch(() => {});
     }
     loadData();
   </script>

@@ -45,7 +45,7 @@ class _IdsAndLinks(HTMLParser):
 
 
 class LearningRouteTests(unittest.TestCase):
-  def test_baseline_reference_groups_and_candidates_are_separate_from_primary_catalog(self):
+  def test_baseline_reference_groups_and_public_route_has_no_pending_candidates(self):
     baseline = next(s for s in ROUTE["stages"] if s["id"] == "baseline")
     self.assertTrue(baseline["label"].lower().startswith("baseline"))
     groups = baseline.get("reference_groups", [])
@@ -56,16 +56,7 @@ class LearningRouteTests(unittest.TestCase):
     self.assertEqual(len({str(pid) for g in groups for pid in g["paper_ids"]}), 48)
     for group in groups:
       self.assertTrue(set(str(pid) for pid in group["paper_ids"]) <= set(CATALOG))
-    candidates = ROUTE.get("candidates", [])
-    self.assertEqual(len(candidates), 11)
-    dois = [str(c.get("doi", "")).lower() for c in candidates]
-    self.assertEqual(len(dois), len(set(dois)))
-    catalog_dois = {str(p.get("doi", "")).lower() for p in CATALOG.values() if p.get("doi")}
-    self.assertTrue(all(doi and doi not in catalog_dois for doi in dois))
-    for candidate in candidates:
-      self.assertTrue(candidate.get("id") and candidate.get("title") and candidate.get("pending_note"))
-      self.assertTrue(route_builder.safe_url(candidate.get("source_url")) == candidate.get("source_url"))
-      self.assertNotIn(str(candidate["id"]), {str(pid) for s in ROUTE["stages"] for pid in s["paper_ids"]})
+    self.assertEqual(ROUTE.get("candidates", []), [])
 
   def test_catalog_stage_and_primary_frontier_counts_are_exact(self):
     assert len(CATALOG) == 176
@@ -109,7 +100,8 @@ class LearningRouteTests(unittest.TestCase):
 
 
   def test_built_html_has_unique_primary_bibliography_and_safe_links(self):
-    html_text = route_builder.build(ROUTE, CATALOG)
+    title_records = {next(iter(CATALOG)): {"title_zh": '<img src=x onerror="alert(1)">'}}
+    html_text = route_builder.build(ROUTE, CATALOG, title_records=title_records)
     parsed = _IdsAndLinks()
     parsed.feed(html_text)
     assert len(parsed.ids) == len(set(parsed.ids))
@@ -120,7 +112,9 @@ class LearningRouteTests(unittest.TestCase):
     assert len(parsed.paper_ids) == 176 + sum(len(f["paper_ids"]) for f in ROUTE["frontiers"]) == 283
     assert len(parsed.reference_ids) == expected_refs - sum(len(f["paper_ids"]) for f in ROUTE["frontiers"]) == 51
     assert len(set(parsed.paper_ids)) == 176
-    assert parsed.candidate_cards == len(ROUTE.get("candidates", [])) == 11
+    assert parsed.candidate_cards == len(ROUTE.get("candidates", [])) == 0
+    assert "paper-title-zh" in html_text
+    assert "&lt;img src=x onerror=&quot;alert(1)&quot;&gt;" in html_text
     assert all(pid in CATALOG for pid in parsed.paper_ids)
     assert all(f"?paper={pid}" in html_text for pid in CATALOG)
     assert all(f"https://doi.org/{quote(str(p['doi']).strip(), safe='/')}" in html_text for p in CATALOG.values() if p.get("doi"))
@@ -160,16 +154,7 @@ class LearningRouteTests(unittest.TestCase):
     bad["stages"][0]["reference_groups"].append(copy.deepcopy(bad["stages"][0]["reference_groups"][0]))
     cases.append(bad)
     bad = copy.deepcopy(ROUTE)
-    bad["candidates"].append(copy.deepcopy(bad["candidates"][0]))
-    cases.append(bad)
-    bad = copy.deepcopy(ROUTE)
-    bad["candidates"][0]["doi"] = next(iter(CATALOG.values()))["doi"]
-    cases.append(bad)
-    bad = copy.deepcopy(ROUTE)
-    bad["candidates"][0]["source_url"] = "javascript:alert(1)"
-    cases.append(bad)
-    bad = copy.deepcopy(ROUTE)
-    del bad["candidates"][0]["pending_note"]
+    bad["candidates"] = [{"id": "pending", "title": "Pending"}]
     cases.append(bad)
     for corrupted in cases:
       with self.assertRaises(ValueError):
